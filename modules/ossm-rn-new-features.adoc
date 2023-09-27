@@ -15,6 +15,31 @@ Module included in the following assemblies:
 
 This release adds improvements related to the following components and concepts.
 
+== New features {SMProductName} version 2.4.4
+
+This release of {SMProductName} addresses Common Vulnerabilities and Exposures (CVEs), contains bug fixes, and is supported on {product-title} 4.10 and later versions.
+
+=== Component versions included in {SMProductName} version 2.4.4
+//THESE MAY NEED TO BE UPDATED FOR 2.4.4
+//Kiali updated to 1.65.8 on 09/06/2023
+//09/06/2023: According to distributed tracing release notes, Jaeger component version remains unchanged.
+|===
+|Component |Version
+
+|Istio
+|1.16.7
+
+|Envoy Proxy
+|1.24.10
+
+|Jaeger
+|1.42.0
+
+|Kiali
+|1.65.8
+|===
+//COMPONENTS ABOVE MAY NEED TO BE UPDATED FOR 2.4.4
+
 == New features {SMProductName} version 2.4.3
 
 * The {SMProductName} Operator is now available on ARM-based clusters as a Technology Preview feature.
