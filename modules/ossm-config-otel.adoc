@@ -1,0 +1,118 @@
+// Module included in the following assemblies:
+//
+// * service-mesh-docs-main/traces/ossm-distr-tracing-assembly.adoc
+
+:_mod-docs-content-type: PROCEDURE
+[id="ossm-config-otel_{context}"]
+= Configuring {OTELName} with Service Mesh
+
+You can integrate {SMProductName} with {OTELName} to instrument, generate, collect, and export telemetry traces, metrics, and logs to analyze and understand your software's performance and behavior.
+
+.Prerequisites
+
+* {TempoOperator} is installed. See: link:https://docs.redhat.com/en/documentation/openshift_container_platform/4.16/html/distributed_tracing/distributed-tracing-platform-tempo#distr-tracing-tempo-install-web-console_dist-tracing-tempo-installing[Installing the Tempo Operator].
+* {OTELOperator} is installed. See: link:https://docs.redhat.com/en/documentation/openshift_container_platform/4.16/html/red_hat_build_of_opentelemetry/install-otel[Installing the Red Hat build of OpenTelemetry]
+* A TempoStack is installed and configured in a `tempo` namespace. See: link:https://docs.redhat.com/en/documentation/openshift_container_platform/4.16/html/distributed_tracing/distributed-tracing-platform-tempo#installing-a-tempostack-instance[Installing a TempoStack instance].
+* An Istio instance is created in the `Istio` resource.
+* An Istio CNI instance is created in the `Istio` resource.
+
+.Procedure
+
+. Navigate to the {OTELOperator} and install the `OpenTelemetryCollector` resource in the `istio-system` namespace:
++
+.Example OpenTelemetry Collector in `istio-system` namespace
+[source, yaml]
+----
+kind: OpenTelemetryCollector
+apiVersion: opentelemetry.io/v1beta1
+metadata:
+  name: otel
+  namespace: istio-system
+spec:
+  observability:
+    metrics: {}
+  deploymentUpdateStrategy: {}
+  config:
+    exporters:
+      otlp:
+        endpoint: 'tempo-sample-distributor.tempo.svc.cluster.local:4317'
+        tls:
+          insecure: true
+    receivers:
+      otlp:
+        protocols:
+          grpc:
+            endpoint: '0.0.0.0:4317'
+          http: {}
+    service:
+      pipelines:
+        traces:
+          exporters:
+            - otlp
+          receivers:
+            - otlp
+----
+
+. Configure {SMProductName} to enable tracing, and define the {OTELShortName} tracing providers in your `meshConfig`:
++
+.Example enabling tracing and defining tracing providers
+[source,yaml]
+----
+apiVersion: sailoperator.io/v1alpha1
+kind: Istio
+metadata:
+  ...
+  name: default
+spec:
+  namespace: istio-system
+  ...
+  values:
+    meshConfig:
+      enableTracing: true
+      extensionProviders:
+      - name: otel-tracing
+        opentelemetry:
+          port: 4317
+          service: otel-collector.istio-system.svc.cluster.local #<1>
+----
+<1> The `service` field is the `OpenTelemetry` collector service in the `istio-system` namespace.
+
+. Create an Istio Telemetry resource to enable tracers defined in `spec.values.meshConfig.ExtensionProviders`:
++
+.Example Istio Telemetry resource
+[source,yaml]
+----
+apiVersion: telemetry.istio.io/v1
+kind: Telemetry
+metadata:
+  name: otel-demo
+  namespace: istio-system
+spec:
+  tracing:
+    - providers:
+        - name: otel-tracing
+      randomSamplingPercentage: 100
+----
+
+. Deploy `bookinfo`:
++
+[source, terminal]
+----
+oc create ns bookinfo
+oc label ns bookinfo istio-injection=enabled
+oc apply -f https://raw.githubusercontent.com/istio/istio/release-1.23/samples/bookinfo/platform/kube/bookinfo.yaml -n bookinfo
+----
+
+. Generate traffic to the `productpage` pod to generate traces:
++
+[source,terminal]
+----
+oc exec -it -n bookinfo deployments/productpage-v1 -c istio-proxy -- curl localhost:9080/productpage
+----
+
+. Validate the integration by running the following command to see traces in the UI:
++
+[source,terminal]
+----
+kubectl get routes -n tempo tempo-sample-query-frontend
+----
