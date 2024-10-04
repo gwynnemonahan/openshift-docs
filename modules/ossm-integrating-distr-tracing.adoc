@@ -2,7 +2,7 @@
 //
 // * service-mesh-docs-main/traces/ossm-distr-tracing-assembly.adoc
 
-:_mod-docs-content-type: PROCEDURE
+:_mod-docs-content-type: CONCEPT
 [id="ossm-integrating-distr-tracing_{context}"]
 = Integrating {DTProductName} with Service Mesh
 
