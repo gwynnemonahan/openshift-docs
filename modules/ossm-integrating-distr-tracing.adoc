@@ -4,7 +4,7 @@
 
 :_mod-docs-content-type: CONCEPT
 [id="ossm-integrating-distr-tracing_{context}"]
-= Integrating {DTProductName} with Service Mesh
+== Integrating {DTProductName} with Service Mesh
 
 Integrating {DTProductName} with {SMProductName} is made of up two parts: {TempoName} and {OTELName}.
 
