@@ -4,7 +4,7 @@
 
 :_mod-docs-content-type: CONCEPT
 [id="ossm-integrating-kiali-otel_{context}"]
-= Integrating {DTProductName} with {KialiProduct}"
+= Integrating {DTProductName} with {KialiProduct}
 
 You can integrate {DTProductName} with {KialiProduct}, which enables the following features:
 
