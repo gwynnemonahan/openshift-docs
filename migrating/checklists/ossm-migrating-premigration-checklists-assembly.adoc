@@ -188,7 +188,8 @@ For multitenant deployments, follow this procedure:
 
 For cluster-wide deployments, follow this procedure:
 
-* xref:../cluster-wide/ossm-migrating-cluster-wide-assembly.adoc[Migrating cluster-wide deployment]
+* <insert exref>[Migrating cluster-wide deployment]
+//update <insert exref> when cluster-wide PR has ben merged
 
 == Check if you are using cert-manager with your deployment
 
