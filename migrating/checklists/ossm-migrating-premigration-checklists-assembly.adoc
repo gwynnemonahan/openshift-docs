@@ -33,9 +33,10 @@ If you upgrade {SMProduct} Operator 2 operator _after_ you install {SMProduct} O
 After you have installed {SMProduct} Operator 3, you need to disable and configure a replacement another option for the following add ons in your `ServiceMeshControlPlane` in {SMProduct} 2:
 
 * [ ] Disable network policy management: `spec.security.manageNetworkPolicy=false`. If you want to keep the Network Policies created by the 2.6 `ServiceMeshControlPlane`, you will need to recreate and manage these manually.
+//network policies exref will be added last
 * [ ] Disable Prometheus: `spec.addons.prometheus.enabled=false`
 ** [ ] Configure the `ServiceMeshControlPlane` with OpenShift Monitoring as the replacement. These instructions also include installing a standalone `Kiali` resource. Both can be done at the same time. link:https://docs.redhat.com/en/documentation/openshift_container_platform/4.17/html/service_mesh/service-mesh-2-x#ossm-integrating-with-user-workload-monitoring_observability[Integration user-workload monitoring]
-** [ ] Configure a replacement f you are using a different Prometheus solution. link:https://docs.redhat.com/en/documentation/red_hat_openshift_service_on_aws/4/html/service_mesh/[OpenShift AWS]
+** [ ] If you are not using OpenShift monitoring, see: link:https://docs.redhat.com/en/documentation/red_hat_openshift_service_on_aws/4/html/service_mesh/service-mesh-2-x#integration-with-external-prometheus-installation[Integration with external Prometheus installation]
 * [ ] Disable Tracing: `spec.tracing.type=None`
 ** [ ] Configure the `ServiceMeshControlPlane` with OpenShift Distributed Tracing as the replacement. link:https://docs.redhat.com/en/documentation/openshift_container_platform/4.17/html/service_mesh/service-mesh-2-x#ossm-configuring-distr-tracing-tempo_observability[Configuring Distributed Tracing Tempo]
 * [ ] Disable Kiali: `spec.addons.kiali.enabled=false`
@@ -49,7 +50,7 @@ Remember that automatic route creation, also known as Istio OpenShift Routing (I
 
 * [ ] Migrate from Istio OpenShift Routing (IOR) to to explicitly-managed routes. link:https://docs.redhat.com/en/documentation/openshift_container_platform/4.17/html/service_mesh/service-mesh-2-x#ossm-route-migration[Service Mesh Route Migration]
 
-Remember also that deploying ingress and egress gateways with a `Deployment` resource using gateway injection provides greater flexibility and control. This deployment approach is a better practice because it allows you to manage gateways alongside the corresponding applications rather than in the control plane resource. Therefore, to move from {SMProduct} 2 to {SMProduct} 3, you need to disable the default gateways, move away from the Service Mesh Control Plane declaration, and begin to use gateway injection.
+Since the {SMProduct} 3 controle plane does not manage gateways, you must manage them yourself. To do so, and move move from {SMProduct} 2 to {SMProduct} 3, you need to disable the default gateways, move away from the Service Mesh Control Plane declaration, and begin to use gateway injection.
 
 * [ ] Migrate to gateway injection link:https://docs.redhat.com/en/documentation/openshift_container_platform/4.17/html/service_mesh/service-mesh-2-x#ossm-gateway-migration[Service Mesh Gateway Migration] to migrate off of the default ingress/egress gateways.
 
@@ -61,7 +62,7 @@ Grafana is not supported in {SMProduct} 3, and must be disabled in your {SMProdu
 
 == Check your resource files
 
-By the end of this checklist, you {SMProduct} 2 resource files will look like the following:
+By the end of this checklist, you {SMProduct} 2 resource files may look like the following examples:
 
 === `ServiceMeshControlPlane` resource
 
@@ -229,7 +230,7 @@ oc get smcp <smcp-name> -n <smcp-namespace> -o jsonpath='{.spec.security.certifi
 
 [source,yaml]
 ----
-`cert-manager`
+cert-manager
 ----
 
 .Next steps for cert-manager
