@@ -8,13 +8,15 @@ toc::[]
 
 The checklists make the following assumptions:
 
-1. You have read "Important information to know before migrating" and understand the differences between {SMProduct} 2 and {SMProduct} 3
-2. You have read through the migration recommendations
-3. You want to migrate from {SMProduct} 2 to {SMProduct} 3
-4. You are running {SMProduct} {SMv2Version}
-5. You have upgraded your `ServiceMeshControlPlane` to the latest version
-6. If you are using {KialiProduct}, you are running the latest version
-7. You have installed {SMProduct} Operator 3
+1. You have read "Important information to know before migrating" and understand the differences between {SMProduct} 2 and {SMProduct} 3.
+2. You have read through the migration recommendations.
+3. You want to migrate from {SMProduct} 2 to {SMProduct} 3.
+4. You are running {SMProduct} {SMv2Version}.
+5. You have upgraded your `ServiceMeshControlPlane` to the latest version.
+6. If you are using {KialiProduct}, you are running the latest version.
+7. You have installed the {SMProduct} Operator 3.
+
+To install the {SMProduct} 3 Operator, see: xref:../installing/ossm-installing-service-mesh#ossm-about-deploying-istio-using-service-mesh-operator_ossm-installing-openshift-service-mesh[Installing the Service Mesh Operator]
 
 [WARNING]
 ====
@@ -28,7 +30,7 @@ If you upgrade {SMProduct} Operator 2 operator _after_ you install {SMProduct} O
 
 == Checklist for configuring add on replacements in Service Mesh 2
 
-After you have installed {SMProduct} Operator 3, you need to disable and either configure a replacement or migrate to another option for the following add ons in your `ServiceMeshControlPlane` in {SMProduct} 2:
+After you have installed {SMProduct} Operator 3, you need to disable and configure a replacement another option for the following add ons in your `ServiceMeshControlPlane` in {SMProduct} 2:
 
 * [ ] Disable network policy management: `spec.security.manageNetworkPolicy=false`. If you want to keep the Network Policies created by the 2.6 `ServiceMeshControlPlane`, you will need to recreate and manage these manually.
 * [ ] Disable Prometheus: `spec.addons.prometheus.enabled=false`
@@ -38,8 +40,18 @@ After you have installed {SMProduct} Operator 3, you need to disable and either 
 ** [ ] Configure the `ServiceMeshControlPlane` with OpenShift Distributed Tracing as the replacement. link:https://docs.redhat.com/en/documentation/openshift_container_platform/4.17/html/service_mesh/service-mesh-2-x#ossm-configuring-distr-tracing-tempo_observability[Configuring Distributed Tracing Tempo]
 * [ ] Disable Kiali: `spec.addons.kiali.enabled=false`
 ** [ ] Create a standalone `Kiali` resource as the replacement. If you haven't already done this as part of the previous items for Prometheus or Tracing, follow link:https://docs.redhat.com/en/documentation/red_hat_openshift_service_mesh/3.0.0tp1/html/observability/kiali-operator-provided-by-red-hat#ossm-install-kiali-operator_ossm-kiali-assembly[Kiali Operator provided by Red Hat] on how to install and configure Kiali as a standalone resource.
-* [ ] Istio OpenShift Routing (IOR) is disabled. Follow link:https://docs.redhat.com/en/documentation/openshift_container_platform/4.17/html/service_mesh/service-mesh-2-x#ossm-route-migration[Service Mesh Route Migration] to migrate off of IOR.
-* [ ] Default ingress/egress gateways are disabled. Follow link:https://docs.redhat.com/en/documentation/openshift_container_platform/4.17/html/service_mesh/service-mesh-2-x#ossm-gateway-migration[Service Mesh Gateway Migration] to migrate off of the default ingress/egress gateways.
+
+== Checklist for migrating {SMProduct} 2 routing and gateways
+
+This section applies if you have not already moved to explicitly-managed routes and gateway injection.
+
+Remember that automatic route creation, also known as Istio OpenShift Routing (IOR), is a deprecated feature that is disabled by default for any `ServiceMeshControlPlane` resource that was created using {SMProduct} 2.5 and later. To move from {SMProduct} 2 to {SMProduct} 3, you need to migrate from IOR to explicitly-managed routes.
+
+* [ ] Migrate from Istio OpenShift Routing (IOR) to to explicitly-managed routes. link:https://docs.redhat.com/en/documentation/openshift_container_platform/4.17/html/service_mesh/service-mesh-2-x#ossm-route-migration[Service Mesh Route Migration]
+
+Remember also that deploying ingress and egress gateways with a `Deployment` resource using gateway injection provides greater flexibility and control. This deployment approach is a better practice because it allows you to manage gateways alongside the corresponding applications rather than in the control plane resource. Therefore, to move from {SMProduct} 2 to {SMProduct} 3, you need to disable the default gateways, move away from the Service Mesh Control Plane declaration, and begin to use gateway injection.
+
+* [ ] Migrate to gateway injection link:https://docs.redhat.com/en/documentation/openshift_container_platform/4.17/html/service_mesh/service-mesh-2-x#ossm-gateway-migration[Service Mesh Gateway Migration] to migrate off of the default ingress/egress gateways.
 
 == Checklist for disabling Grafana in {SMProduct} 2
 
