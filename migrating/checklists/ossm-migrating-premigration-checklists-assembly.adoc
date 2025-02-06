@@ -6,5 +6,235 @@ include::_attributes/common-attributes.adoc[]
 
 toc::[]
 
+The checklists make the following assumptions:
 
+1. You have read "Important information to know before migrating" and understand the differences between {SMProduct} 2 and {SMProduct} 3
+2. You have read through the migration recommendations
+3. You want to migrate from {SMProduct} 2 to {SMProduct} 3
+4. You are running {SMProduct} {SMv2Version}
+5. You have upgraded your `ServiceMeshControlPlane` to the latest version
+6. If you are using {KialiProduct}, you are running the latest version
+7. You have installed {SMProduct} Operator 3
 
+[WARNING]
+====
+You must upgrade your {SMProduct} Operator 2 to the latest release **before** you install {SMProduct} Operator 3.
+
+If you upgrade {SMProduct} Operator 2 operator _after_ you install {SMProduct} Operator 3, you will need to uninstall and reinstall {SMProduct} Operator 3 to ensure the included custom resource definitions (CRDs) are up-to-date.
+====
+//Content is taken from here: https://github.com/openshift-service-mesh/sail-operator/blob/main/docs/ossm/ossm2-migration/README.md
+
+//check for updates at https://github.com/openshift-service-mesh/sail-operator/blob/main/docs/ossm/ossm2-migration/README.md
+
+== Checklist for configuring add on replacements in Service Mesh 2
+
+After you have installed {SMProduct} Operator 3, you need to disable and either configure a replacement or migrate to another option for the following add ons in your `ServiceMeshControlPlane` in {SMProduct} 2:
+
+* [ ] Disable network policy management: `spec.security.manageNetworkPolicy=false`. If you want to keep the Network Policies created by the 2.6 `ServiceMeshControlPlane`, you will need to recreate and manage these manually.
+* [ ] Disable Prometheus: `spec.addons.prometheus.enabled=false`
+** [ ] Configure the `ServiceMeshControlPlane` with OpenShift Monitoring as the replacement. These instructions also include installing a standalone `Kiali` resource. Both can be done at the same time. link:https://docs.redhat.com/en/documentation/openshift_container_platform/4.17/html/service_mesh/service-mesh-2-x#ossm-integrating-with-user-workload-monitoring_observability[Integration user-workload monitoring]
+** [ ] Configure a replacement f you are using a different Prometheus solution. link:https://docs.redhat.com/en/documentation/red_hat_openshift_service_on_aws/4/html/service_mesh/[OpenShift AWS]
+* [ ] Disable Tracing: `spec.tracing.type=None`
+** [ ] Configure the `ServiceMeshControlPlane` with OpenShift Distributed Tracing as the replacement. link:https://docs.redhat.com/en/documentation/openshift_container_platform/4.17/html/service_mesh/service-mesh-2-x#ossm-configuring-distr-tracing-tempo_observability[Configuring Distributed Tracing Tempo]
+* [ ] Disable Kiali: `spec.addons.kiali.enabled=false`
+** [ ] Create a standalone `Kiali` resource as the replacement. If you haven't already done this as part of the previous items for Prometheus or Tracing, follow link:https://docs.redhat.com/en/documentation/red_hat_openshift_service_mesh/3.0.0tp1/html/observability/kiali-operator-provided-by-red-hat#ossm-install-kiali-operator_ossm-kiali-assembly[Kiali Operator provided by Red Hat] on how to install and configure Kiali as a standalone resource.
+* [ ] Istio OpenShift Routing (IOR) is disabled. Follow link:https://docs.redhat.com/en/documentation/openshift_container_platform/4.17/html/service_mesh/service-mesh-2-x#ossm-route-migration[Service Mesh Route Migration] to migrate off of IOR.
+* [ ] Default ingress/egress gateways are disabled. Follow link:https://docs.redhat.com/en/documentation/openshift_container_platform/4.17/html/service_mesh/service-mesh-2-x#ossm-gateway-migration[Service Mesh Gateway Migration] to migrate off of the default ingress/egress gateways.
+
+== Checklist for disabling Grafana in {SMProduct} 2
+
+Grafana is not supported in {SMProduct} 3, and must be disabled in your {SMProduct} 2 `ServiceMeshControlPlane`:
+
+  * [ ] Disable Grafana: `spec.addons.grafana.enabled=false`.
+
+== Check your resource files
+
+By the end of this checklist, you {SMProduct} 2 resource files will look like the following:
+
+=== `ServiceMeshControlPlane`resource
+
+[source, yaml]
+----
+apiVersion: maistra.io/v2
+kind: ServiceMeshControlPlane
+metadata:
+  name: basic
+  namespace: istio-system
+spec:
+  version: v2.6 <1>
+  security: <2>
+    manageNetworkPolicy: false
+  addons: #<3>
+    grafana:
+      enabled: false
+    kiali:
+      enabled: false
+    prometheus:
+      enabled: false
+  meshConfig: <4>
+    extensionProviders:
+      - name: prometheus
+        prometheus: {}
+      - name: otel
+        opentelemetry:
+          port: 4317
+          service: otel-collector.istio-system.svc.cluster.local
+  gateways: <5>
+    enabled: false
+    openshiftRoute:
+      enabled: false
+  mode: MultiTenant <6>
+  tracing: <3>
+    type: None
+----
+
+<1> Your `ServiceMeshControlPlane` has been updated to the latest {SMv2Version} version.
+<2> Network policy management has been disabled.
+<3> Addons and tracing have all been disabled.
+<4> Your `ServiceMeshControlPlane` is configured to use external metrics and tracing providers.
+<5> Managed gateways are disabled.
+<6> Either `MultiTenant` or `ClusterWide`.
+
+=== Telemetry resource
+
+You will also have a `Telemetry` resource in your root namespace e.g. `istio-system` that looks roughly like this:
+
+[source,yaml]
+----
+apiVersion: telemetry.istio.io/v1
+kind: Telemetry
+metadata:
+  name: mesh-default
+  namespace: istio-system
+spec:
+  metrics: <1>
+    - providers:
+        - name: prometheus
+  tracing: <2>
+    - providers:
+        - name: otel
+----
+
+<1> Your metrics provider is specified. The `name` should match what is specified on your `ServiceMeshControlPlane` in the `spec.meshConfig.extensionProviders` field.
+<2> Your tracing provider is specified. The `name` should match what is specified on your `ServiceMeshControlPlane` in the `spec.meshConfig.extensionProviders` field.
+
+=== Kiali resource
+
+And a `Kiali` resource that looks roughly like this:
+
+[source,yaml]
+----
+apiVersion: kiali.io/v1alpha1
+kind: Kiali
+metadata:
+  name: kiali
+  namespace: istio-system
+spec:
+  version: default <1>
+  external_services:
+    prometheus: <2>
+      auth:
+        type: bearer
+        use_kiali_token: true
+      thanos_proxy:
+        enabled: true
+      url: https://thanos-querier.openshift-monitoring.svc.cluster.local:9091
+    tracing: <3>
+      enabled: true
+      provider: tempo
+      use_grpc: false
+      internal_url: http://tempo-sample-query-frontend.tempo:3200
+      external_url: https://tempo-sample-query-frontend-tempo.apps-crc.testing
+    grafana: <4>
+      enabled: false
+----
+
+<1> You are using the latest version of `Kiali`. As long as you install the 3.0 Service Mesh operator before upgrading Kiali, this version is compatible with both the 2.6 and 3.0 controlplanes.
+<2> Kiali is configured to use the external prometheus.
+<3> Kiali is configured to use the external tracing store.
+<4> Grafana configuration is disabled. Grafana is not supported with {SMProduct} 3.0.
+
+== Final check before migrating your deployment and workloads
+
+Once you have configured your `ServiceMeshControlPlane` according to the checklists, you can run the following script to detect any issues with your environment:
+
+* [ ] Run the [migration-checker script](migration-checker.sh) to detect any issues with your environment.
+
+//01/23/2025: migration-checker script will be a specific GitHub link. Link to be determined just prior to release, so this checkbox will need to be updated accordingly. Check with Nick Fox for the URL to use. Nick is an engineer on Service Mesh.
+
+== Check your deployment model
+
+If the migration checker shows no errors, you are now you are ready to migrate.
+
+Your deployment model determines your migration path. Run the following command to determine if you are running a `MultiTenant` or a `ClusterWide` mesh:
+
+[source,terminal]
+----
+oc get smcp <smcp-name> -n <smcp-namespace> -o jsonpath='{.spec.mode}'
+----
+
+If you are not using cert-manager, then continue to the appropriate next step for your deployment model.
+
+.Next steps for multitenant deployments
+
+For multitenant deployments, follow this procedure:
+
+* <insert exref later>[Migrating multitenant deployment]
+
+//Applicable PR: https://github.com/openshift/openshift-docs/pull/86917
+//update <insert exref later> once PR 86917 has been merged
+
+.Next steps for cluster-wide deployments
+
+For cluster-wide deployments, follow this procedure:
+
+* xref:../cluster-wide/ossm-migrating-cluster-wide-assembly.adoc[Migrating cluster-wide deployment]
+
+== Check if you are using cert-manager with your deployment
+
+There are two ways you can check if you are using cert-manager:
+
+1. Inspect your `ServiceMeshControlPlane` resource:
++
+[source,yaml]
+----
+spec:
+  security:
+    certificateAuthority:
+      ...
+      type: cert-manager
+----
+
+2. Run the following command:
++
+[source,yaml]
+----
+oc get smcp <smcp-name> -n <smcp-namespace> -o jsonpath='{.spec.security.certificateAuthority.type}'
+----
++
+.Output
+
+[source,yaml]
+----
+`cert-manager`
+----
+
+.Next steps for cert-manager
+
+If you are using cert-manager, there are some configurations you must complete first before you can start migrating your deployments. These configurations are the same for both mulitenant and cluster-wide deployments.
+
+<insert exref whenever this is figured out>
+
+//COMMENT OUT for simplicity in case Additional resources are needed
+//[role="_additional-resources"]
+//[id="additional-resources_{context}"]
+//== Additional resources
+
+//* link:https://docs.redhat.com/en/documentation/openshift_container_platform/4.17/html/monitoring/index[User workload monitoring]
+//* link:https://docs.redhat.com/en/documentation/openshift_container_platform/4.17/html/distributed_tracing/index[{DTProductName}]
+//* link:https://docs.redhat.com/en/documentation/red_hat_openshift_service_mesh/3.0.0tp1/html/observability/kiali-operator-provided-by-red-hat[Kiali Operator provided by Red Hat]
+
+//influx. Will be part of larger content strategy/IA effort to bridge 2.x users on their way to moving to 3.x
+//Start of an overall Migrating section.
+//Section is most likely to be reworked/restructured with OSSM 2 to OSSM 3 migration guides for GA. Unknown how many migration guides there are at this time (11/11/2024). It would be beneficial to be able to link from differences to the relevent migration guide so that users A) understand the change, esp significant changes like new operator, installing tracing and Kiali separately, gateways, etc.
+//Migration likely to resemble https://docs.openshift.com/container-platform/4.17/migrating_from_ocp_3_to_4/about-migrating-from-3-to-4.html#about-migrating-from-3-to-4 when done for OSSM 3.0 GA.
