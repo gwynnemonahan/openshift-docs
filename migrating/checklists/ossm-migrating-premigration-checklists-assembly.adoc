@@ -63,7 +63,7 @@ Grafana is not supported in {SMProduct} 3, and must be disabled in your {SMProdu
 
 By the end of this checklist, you {SMProduct} 2 resource files will look like the following:
 
-=== `ServiceMeshControlPlane`resource
+=== `ServiceMeshControlPlane` resource
 
 [source, yaml]
 ----
