@@ -16,7 +16,7 @@ The checklists make the following assumptions:
 6. If you are using {KialiProduct}, you are running the latest version.
 7. You have installed the {SMProduct} Operator 3.
 
-To install the {SMProduct} 3 Operator, see: xref:../installing/ossm-installing-service-mesh#ossm-about-deploying-istio-using-service-mesh-operator_ossm-installing-openshift-service-mesh[Installing the Service Mesh Operator]
+To install the {SMProduct} 3 Operator, see: xref:../install/ossm-installing-service-mesh#ossm-about-deploying-istio-using-service-mesh-operator_ossm-installing-openshift-service-mesh[Installing the Service Mesh Operator]
 
 [WARNING]
 ====
