@@ -65,7 +65,7 @@ Grafana is not supported in {SMProduct} 3, and must be disabled in your {SMProdu
 
 By the end of this checklist, you {SMProduct} 2 resource files may look like the following examples:
 
-=== `ServiceMeshControlPlane` resource
+.Example `ServiceMeshControlPlane` resource
 
 [source, yaml]
 ----
@@ -102,16 +102,16 @@ spec:
     type: None
 ----
 
-<1> Your `ServiceMeshControlPlane` has been updated to the latest {SMv2Version} version.
-<2> Network policy management has been disabled.
-<3> Addons and tracing have all been disabled.
+<1> Your `ServiceMeshControlPlane` is updated to the latest {SMProduct} version.
+<2> Network policy management is disabled.
+<3> Addons and tracing are disabled.
 <4> Your `ServiceMeshControlPlane` is configured to use external metrics and tracing providers.
 <5> Managed gateways are disabled.
 <6> Either `MultiTenant` or `ClusterWide`.
 
-=== Telemetry resource
+.Example Telemetry resource
 
-You will also have a `Telemetry` resource in your root namespace e.g. `istio-system` that looks roughly like this:
+The `Telemetry` resource is in your root namespace, like `istio-system`:
 
 [source,yaml]
 ----
@@ -132,9 +132,7 @@ spec:
 <1> Your metrics provider is specified. The `name` should match what is specified on your `ServiceMeshControlPlane` in the `spec.meshConfig.extensionProviders` field.
 <2> Your tracing provider is specified. The `name` should match what is specified on your `ServiceMeshControlPlane` in the `spec.meshConfig.extensionProviders` field.
 
-=== Kiali resource
-
-And a `Kiali` resource that looks roughly like this:
+.Example Kiali resource
 
 [source,yaml]
 ----
