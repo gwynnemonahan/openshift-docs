@@ -10,30 +10,25 @@ The checklists make the following assumptions:
 
 1. You have read "Important information to know before migrating" and understand the differences between {SMProduct} 2 and {SMProduct} 3.
 2. You have read through the migration recommendations.
-3. You want to migrate from {SMProduct} 2 to {SMProduct} 3.
-4. You are running {SMProduct} {SMv2Version}.
-5. You have upgraded your `ServiceMeshControlPlane` to the latest version.
-6. If you are using {KialiProduct}, you are running the latest version.
-7. You have installed the {SMProduct} Operator 3.
+3. You are familiar with the `ServiceMeshControlPlane` resources no longer found in the `istio` resource.
+//may need an Additional Resources section to link to migration recommendations, and resource differences
+4. You want to migrate from {SMProduct} 2 to {SMProduct} 3.
+5. You are running {SMProduct} {SMv2Version}.
+6. You have upgraded your `ServiceMeshControlPlane` to the latest version.
+7. If you are using {KialiProduct}, you are running the latest version.
+8. You have installed the {SMProduct} Operator 3.
 
 To install the {SMProduct} 3 Operator, see: xref:../../install/ossm-installing-openshift-service-mesh.adoc[Installing OpenShift Service Mesh]
 
-[WARNING]
-====
-You must upgrade your {SMProduct} Operator 2 to the latest release **before** you install {SMProduct} Operator 3.
-
-If you upgrade {SMProduct} Operator 2 operator _after_ you install {SMProduct} Operator 3, you will need to uninstall and reinstall {SMProduct} Operator 3 to ensure the included custom resource definitions (CRDs) are up-to-date.
-====
 //Content is taken from here: https://github.com/openshift-service-mesh/sail-operator/blob/main/docs/ossm/ossm2-migration/README.md
 
 //check for updates at https://github.com/openshift-service-mesh/sail-operator/blob/main/docs/ossm/ossm2-migration/README.md
 
 == Checklist for configuring add on replacements in Service Mesh 2
 
-After you have installed {SMProduct} Operator 3, you need to disable and configure a replacement another option for the following add ons in your `ServiceMeshControlPlane` in {SMProduct} 2:
+Before you migrate, you need to disable and configure a replacement for the following add ons in your `ServiceMeshControlPlane` in {SMProduct} 2:
 
-* [ ] Disable network policy management: `spec.security.manageNetworkPolicy=false`. If you want to keep the Network Policies created by the 2.6 `ServiceMeshControlPlane`, you will need to recreate and manage these manually.
-//network policies exref will be added last
+
 * [ ] Disable Prometheus: `spec.addons.prometheus.enabled=false`
 ** [ ] Configure the `ServiceMeshControlPlane` with OpenShift Monitoring as the replacement. These instructions also include installing a standalone `Kiali` resource. Both can be done at the same time. link:https://docs.redhat.com/en/documentation/openshift_container_platform/4.17/html/service_mesh/service-mesh-2-x#ossm-integrating-with-user-workload-monitoring_observability[Integration user-workload monitoring]
 ** [ ] If you are not using OpenShift monitoring, see: link:https://docs.redhat.com/en/documentation/red_hat_openshift_service_on_aws/4/html/service_mesh/service-mesh-2-x#integration-with-external-prometheus-installation[Integration with external Prometheus installation]
@@ -50,15 +45,21 @@ Remember that automatic route creation, also known as Istio OpenShift Routing (I
 
 * [ ] Migrate from Istio OpenShift Routing (IOR) to to explicitly-managed routes. link:https://docs.redhat.com/en/documentation/openshift_container_platform/4.17/html/service_mesh/service-mesh-2-x#ossm-route-migration[Service Mesh Route Migration]
 
-Since the {SMProduct} 3 controle plane does not manage gateways, you must manage them yourself. To do so, and move move from {SMProduct} 2 to {SMProduct} 3, you need to disable the default gateways, move away from the Service Mesh Control Plane declaration, and begin to use gateway injection.
+Since the {SMProduct} 3 control plane does not manage gateways, you must manage them yourself. To do so, and move from {SMProduct} 2 to {SMProduct} 3, you need to disable the default gateways, move away from the Service Mesh Control Plane declaration, and begin to use gateway injection.
 
 * [ ] Migrate to gateway injection link:https://docs.redhat.com/en/documentation/openshift_container_platform/4.17/html/service_mesh/service-mesh-2-x#ossm-gateway-migration[Service Mesh Gateway Migration] to migrate off of the default ingress/egress gateways.
 
-== Checklist for disabling Grafana in {SMProduct} 2
+== Checklist for disabling network policy management and Grafana in {SMProduct} 2
+
+  * [ ] Disable network policy management: `spec.security.manageNetworkPolicy=false`.
+
+If you want to keep the Network Policies created by the {SMProduct} 2.6 `ServiceMeshControlPlane`, you will need to recreate and manage these manually. See <INSERT NAME of network policies file that will be listed in Additional Resources>
 
 Grafana is not supported in {SMProduct} 3, and must be disabled in your {SMProduct} 2 `ServiceMeshControlPlane`:
 
   * [ ] Disable Grafana: `spec.addons.grafana.enabled=false`.
+
+//network policies exref will be added last
 
 == Check your resource files
 
@@ -162,7 +163,7 @@ spec:
       enabled: false
 ----
 
-<1> You are using the latest version of `Kiali`. As long as you install the 3.0 Service Mesh operator before upgrading Kiali, this version is compatible with both the 2.6 and 3.0 controlplanes.
+<1> As long as you install {SMProduct} Operator 3 before upgrading Kiali, this version is compatible with both {SMProduct }2.6 and {SMProduct} 3.0 controlplanes.
 <2> Kiali is configured to use the external prometheus.
 <3> Kiali is configured to use the external tracing store.
 <4> Grafana configuration is disabled. Grafana is not supported with {SMProduct} 3.0.
@@ -239,10 +240,13 @@ If you are using cert-manager, there are some configurations you must complete f
 
 <insert exref whenever this is figured out>
 
-//COMMENT OUT for simplicity in case Additional resources are needed
-//[role="_additional-resources"]
-//[id="additional-resources_{context}"]
-//== Additional resources
+
+[role="_additional-resources"]
+[id="additional-resources_{context}"]
+== Additional resources
+
+* <exref for recommendations>[recommendations]
+* <exref for resource differences>[resource differences]
 
 //* link:https://docs.redhat.com/en/documentation/openshift_container_platform/4.17/html/monitoring/index[User workload monitoring]
 //* link:https://docs.redhat.com/en/documentation/openshift_container_platform/4.17/html/distributed_tracing/index[{DTProductName}]
