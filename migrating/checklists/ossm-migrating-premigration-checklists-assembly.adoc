@@ -20,6 +20,11 @@ The checklists make the following assumptions:
 
 To install the {SMProduct} 3 Operator, see: xref:../../install/ossm-installing-openshift-service-mesh.adoc[Installing OpenShift Service Mesh]
 
+[NOTE]
+====
+You must complete each checklist before you can begin migrating.
+====
+
 //Content is taken from here: https://github.com/openshift-service-mesh/sail-operator/blob/main/docs/ossm/ossm2-migration/README.md
 
 //check for updates at https://github.com/openshift-service-mesh/sail-operator/blob/main/docs/ossm/ossm2-migration/README.md
