@@ -26,7 +26,7 @@ To install the {SMProduct} 3 Operator, see: xref:../../install/ossm-installing-o
 
 == Checklist for configuring add on replacements in Service Mesh 2
 
-After you have installed {SMProduct} Operator 3, you need to disable and configure a replacement for the following add ons in your `ServiceMeshControlPlane` in {SMProduct} 2:
+After you have installed {SMProduct} Operator 3, if you have not already done so when you upgrade from {SMProduct} 2.5 to {SMProduct} 2.6, you need to disable and configure a replacement for the following add ons in your `ServiceMeshControlPlane` in {SMProduct} 2:
 
 * [ ] Disable Prometheus: `spec.addons.prometheus.enabled=false`
 ** [ ] Configure the `ServiceMeshControlPlane` with OpenShift Monitoring as the replacement. These instructions also include installing a standalone `Kiali` resource. Both can be done at the same time. link:https://docs.redhat.com/en/documentation/openshift_container_platform/4.17/html/service_mesh/service-mesh-2-x#ossm-integrating-with-user-workload-monitoring_observability[Integration user-workload monitoring]
@@ -52,7 +52,9 @@ Since the {SMProduct} 3 control plane does not manage gateways, you must manage 
 
   * [ ] Disable network policy management: `spec.security.manageNetworkPolicy=false`.
 
-If you want to keep the Network Policies created by the {SMProduct} 2.6 `ServiceMeshControlPlane`, you will need to recreate and manage these manually. See <INSERT NAME of network policies file that will be listed in Additional Resources>
+If you cannot disable network policies and go without them for the duration of the migration for security reasons, see: <insert exref>[Migrating network policies for security purposes]
+
+Otherwise, if you want to keep the Network Policies created by the {SMProduct} 2.6 `ServiceMeshControlPlane`, you will need to recreate and manage these manually. See <exreft>[migrating network policies]
 
 Grafana is not supported in {SMProduct} 3, and must be disabled in your {SMProduct} 2 `ServiceMeshControlPlane`:
 
