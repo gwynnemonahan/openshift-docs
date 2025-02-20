@@ -3,7 +3,7 @@
 // * service-mesh-docs-main/migrating/checklists/ossm-migrating-premigration-checklists-assembly.adoc
 
 :_mod-docs-content-type: PROCEDURE
-[id="ossm-migrating-checklists-cert-manager_{context}"]
+[id="ossm-migrating-premigration-checklists-using-cert-manager_{context}"]
 = Check if you are using the cert-manager tool with your deployment
 
 It is important to know if you are using the cert-manager tool with {SMProduct} 2. There are a series of configuration steps you will need to perform before you can start migrating your deployments and workloads.
@@ -36,9 +36,3 @@ oc get smcp <smcp-name> -n <smcp-namespace> -o jsonpath='{.spec.security.certifi
 ----
 cert-manager
 ----
-
-.Next steps for cert-manager
-
-If you are using cert-manager, there are some configurations you must complete first before you can start migrating your deployments. These configurations are the same for both mulitenant and cluster-wide deployments.
-
-<insert exref whenever this is figured out>

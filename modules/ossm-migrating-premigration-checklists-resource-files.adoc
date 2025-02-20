@@ -3,7 +3,7 @@
 // * service-mesh-docs-main/migrating/checklists/ossm-migrating-premigration-checklists-assembly.adoc
 
 :_mod-docs-content-type: PROCEDURE
-[id="ossm-migrating-checklists-resource-files_{context}"]
+[id="ossm-migrating-premigration-checklists-resource-files_{context}"]
 = Check your resource files
 
 By the end of the checklists, you {SMProduct} 2 resource files may look like the following examples:
@@ -44,7 +44,6 @@ spec:
   tracing: <7>
     type: None
 ----
-
 <1> Your `ServiceMeshControlPlane` is updated to the latest {SMProduct} version.
 <2> Network policy management is disabled.
 <3> Addons are disabled.
@@ -103,7 +102,6 @@ spec:
     grafana: <4>
       enabled: false
 ----
-
 <1> As long as you install {SMProduct} Operator 3 before upgrading Kiali, this version is compatible with both {SMProduct } 2.6 and {SMProduct} 3.0 control planes.
 <2> Kiali is configured to use the external prometheus.
 <3> Kiali is configured to use the external tracing store.

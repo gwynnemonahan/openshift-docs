@@ -6,28 +6,31 @@ include::_attributes/common-attributes.adoc[]
 
 toc::[]
 
+//suggested I try to follow this: https://github.com/openshift/openshift-docs/blob/enterprise-4.18/migrating_from_ocp_3_to_4/premigration-checklists-3-4.adoc?plain=1
+
+
 These checklists make the following assumptions:
 
 1. You have read "Important information to know before migrating" and understand the differences between {SMProduct} 2 and {SMProduct} 3.
 2. You have read through the migration recommendations.
 //migrating/ossm-migrating-from-2-to-3-assembly.html#recommendations_ossm-migrating-from-2-to-3-assembly
-3. You are familiar with the `ServiceMeshControlPlane` resources no longer found in the `istio` resource.
+3. You have reviewed the "`ServiceMeshControlPlane` resource to `Istio` resource fields mapping" reference material.
 4. You want to migrate from {SMProduct} 2 to {SMProduct} 3.
 5. You are running {SMProduct} {SMv2Version}.
 6. You have upgraded your `ServiceMeshControlPlane` resource to the latest version.
-7. If you are using {KialiProduct}, you are running the latest version.
+7. If you are using the {KialiProduct}, you are running the latest version.
 8. You have installed the {SMProduct} Operator 3.
 
 To install the {SMProduct} 3 Operator, see: xref:../../install/ossm-installing-openshift-service-mesh.adoc[Installing OpenShift Service Mesh]
 
-[NOTE]
+[IMPORTANT]
 ====
-You must complete each checklist before you can begin migrating.
+You must complete each checklist item before you can begin migrating.
 ====
 
 == Checklist for configuring add on replacements in Service Mesh 2
 
-After you have installed {SMProduct} Operator 3, if you have not already done so when you upgraded from {SMProduct} 2.5 to {SMProduct} 2.6, you need to disable and configure a replacement for the following add ons in your `ServiceMeshControlPlane` resource in {SMProduct} 2:
+After you have installed {SMProduct} Operator 3, if you have not already done so when you upgraded from {SMProduct} 2.5 to {SMProduct} 2.6, you must disable and configure a replacement for the following add ons in your `ServiceMeshControlPlane` resource in {SMProduct} 2:
 
 * [ ] Disable Prometheus: `spec.addons.prometheus.enabled=false`
 ** [ ] Configure the `ServiceMeshControlPlane` with OpenShift Monitoring as the replacement. These instructions also include installing a standalone `Kiali` resource. Both can be done at the same time. link:https://docs.redhat.com/en/documentation/openshift_container_platform/4.17/html/service_mesh/service-mesh-2-x#ossm-integrating-with-user-workload-monitoring_observability[Integration user-workload monitoring,window=_blank]
@@ -43,19 +46,19 @@ This section applies if you have not already moved to explicitly-managed routes 
 
 Remember that automatic route creation, also known as Istio OpenShift Routing (IOR), is a deprecated feature that is disabled by default for any `ServiceMeshControlPlane` resource that was created using {SMProduct} 2.5 and later. To move from {SMProduct} 2 to {SMProduct} 3, you need to migrate from IOR to explicitly-managed routes.
 
-* [ ] Migrate from Istio OpenShift Routing (IOR) to to explicitly-managed routes. link:https://docs.redhat.com/en/documentation/openshift_container_platform/4.17/html/service_mesh/service-mesh-2-x#ossm-route-migration[Service Mesh Route Migration]
+* [ ] Migrate from Istio OpenShift Routing (IOR) to to explicitly-managed routes by following this procedure: link:https://docs.redhat.com/en/documentation/openshift_container_platform/4.17/html/service_mesh/service-mesh-2-x#ossm-route-migration[Service Mesh Route Migration].
 
-Since the {SMProduct} 3 control plane does not manage gateways, you must manage them yourself. To do so, and move from {SMProduct} 2 to {SMProduct} 3, you need to disable the default gateways, move away from the Service Mesh Control Plane declaration, and begin to use gateway injection.
+Since the {SMProduct} 3 control plane does not manage gateways, you must manage them yourself. To do so, and move from {SMProduct} 2 to {SMProduct} 3, you must disable the default gateways, move away from the Service Mesh Control Plane declaration, and begin to use gateway injection.
 
-* [ ] Migrate to gateway injection link:https://docs.redhat.com/en/documentation/openshift_container_platform/4.17/html/service_mesh/service-mesh-2-x#ossm-gateway-migration[Service Mesh Gateway Migration] to migrate off of the default ingress/egress gateways.
+* [ ] Migrate to gateway injection by following this procedure: link:https://docs.redhat.com/en/documentation/openshift_container_platform/4.17/html/service_mesh/service-mesh-2-x#ossm-gateway-migration[Service Mesh Gateway Migration].
 
 == Checklist for disabling network policy management and Grafana in {SMProduct} 2
 
-It is recommended to disable network policies management in the {SMProduct} 2 `ServiceMeshControlPlane` resource before you start your migration, and recreate the network policies after you have migrate your deployment and workloads.
+It is recommended to disable network policy management in the {SMProduct} 2 `ServiceMeshControlPlane` resource before you start your migration, and recreate the network policies after you have migrated your deployment and workloads.
 
-However, if you cannot recreate your network policies after migrating due to security concerns, you must recreate your network policies first, and then set `spec.security.manageNetworkPolicy` to `false`. <insert exref>[Migrating network policies for security purposes]
+ * [ ] Disable network policy management: `spec.security.manageNetworkPolicy=false`.
 
-  * [ ] Disable network policy management: `spec.security.manageNetworkPolicy=false`.
+However, if you cannot recreate your network policies after migrating due to security concerns, you must recreate your network policies first. Follow this guide to recreate your network policies first: <insert exref>[Migrating network policies for security purposes].
 
 Grafana is not supported in {SMProduct} 3, and must be disabled in your {SMProduct} 2 `ServiceMeshControlPlane`:
 
@@ -63,7 +66,30 @@ Grafana is not supported in {SMProduct} 3, and must be disabled in your {SMProdu
 
 //exrefs for all Migration Guides handled by OSSM-8852
 
-include::modules/ossm-migrating-checklists-resource-files.adoc[leveloffset=+1]
+include::modules/ossm-migrating-premigration-checklists-resource-files.adoc[leveloffset=+1]
+include::modules/ossm-migrating-premigration-checklist-model-deployment.adoc[leveloffset=+1]
+
+.Next step
+
+* Mulitenant migration guide
+* Cluster-wide migration guide
+
+//exrefs for all migration guide content is being handed by OSSM-8852
+//there will be 3 ways to migrate a cluster-wide deployment
+
+include::modules/ossm-migrating-premigration-checklists-using-cert-manager.adoc[leveloffset=+1]
+
+.Next step
+
+.Next steps for migrating with the cert-manager tool
+
+There are some configurations you must complete first before you can start migrating your deployments. Continue to the appropriate migration guide for your deployment with the cert-manager tool.
+
+* Migrating a mulitenant deployment with the cert-manager tool
+* Migrating a cluster-wide deployment with the cert-manager tool
+
+//there are 3 options to migrate a cluster-wide deployment
+//exrefs for all Migration Guide content are being handled by OSSM-8852
 
 //Per engineering, uncomment Final check after GA
 //move to module when uncommenting
@@ -72,43 +98,6 @@ include::modules/ossm-migrating-checklists-resource-files.adoc[leveloffset=+1]
 //Once you have configured your `ServiceMeshControlPlane` according to the checklists, you can run the following script to detect any issues with your environment:
 
 //* [ ] Run the [migration-checker script](migration-checker.sh) to detect any issues with your environment.
-
-== Check your deployment model
-
-Your deployment model determines your migration path. Run the following command to determine if you are running a `MultiTenant` or a `ClusterWide` mesh:
-
-[source,terminal]
-----
-oc get smcp <smcp-name> -n <smcp-namespace> -o jsonpath='{.spec.mode}'
-----
-
-If you are not using cert-manager, then continue to the appropriate next step for your deployment model.
-
-.Next steps for multitenant deployments
-
-For multitenant deployments, follow this procedure:
-
-* <insert exref later>[Migrating multitenant deployment]
-
-//Applicable PR: https://github.com/openshift/openshift-docs/pull/86917
-//update <insert exref later> once PR 86917 has been merged
-
-.Next steps for cluster-wide deployments
-
-For cluster-wide deployments, follow this procedure:
-
-* <insert exref>[Migrating cluster-wide deployment]
-//update <insert exref> when cluster-wide PR has ben merged
-
-include::modules/ossm-migrating-checklists-using-cert-manager.adoc[leveloffset=+1]
-
-.Next steps for cert-manager
-
-If you are using cert-manager, there are some configurations you must complete first before you can start migrating your deployments. These configurations are the same for both mulitenant and cluster-wide deployments.
-
-<insert exref>
-//exrefs for all Migration Guide content are being handled by OSSM-8852
-
 
 [role="_additional-resources"]
 [id="additional-resources_{context}"]
