@@ -52,7 +52,7 @@ Since the {SMProduct} 3 control plane does not manage gateways, you must manage 
 
 * [ ] Migrate to gateway injection by following this procedure: link:https://docs.redhat.com/en/documentation/openshift_container_platform/4.17/html/service_mesh/service-mesh-2-x#ossm-gateway-migration[Service Mesh Gateway Migration].
 
-== Checklist for disabling network policy management and Grafana in {SMProduct} 2
+== Checklist for disabling network policy management in {SMProduct} 2
 
 It is recommended to disable network policy management in the {SMProduct} 2 `ServiceMeshControlPlane` resource before you start your migration, and recreate the network policies after you have migrated your deployment and workloads.
 
@@ -60,7 +60,9 @@ It is recommended to disable network policy management in the {SMProduct} 2 `Ser
 
 However, if you cannot recreate your network policies after migrating due to security concerns, you must recreate your network policies first. Follow this guide to recreate your network policies first: <insert exref>[Migrating network policies for security purposes].
 
-Grafana is not supported in {SMProduct} 3, and must be disabled in your {SMProduct} 2 `ServiceMeshControlPlane`:
+== Checklist for disabling and Grafana in {SMProduct} 2
+
+Grafana is not supported in {SMProduct} 3, and must be disabled in your {SMProduct} 2 `ServiceMeshControlPlane`.
 
   * [ ] Disable Grafana: `spec.addons.grafana.enabled=false`.
 
