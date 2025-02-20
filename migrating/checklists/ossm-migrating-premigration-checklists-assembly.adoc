@@ -6,15 +6,15 @@ include::_attributes/common-attributes.adoc[]
 
 toc::[]
 
-The checklists make the following assumptions:
+These checklists make the following assumptions:
 
 1. You have read "Important information to know before migrating" and understand the differences between {SMProduct} 2 and {SMProduct} 3.
 2. You have read through the migration recommendations.
+//migrating/ossm-migrating-from-2-to-3-assembly.html#recommendations_ossm-migrating-from-2-to-3-assembly
 3. You are familiar with the `ServiceMeshControlPlane` resources no longer found in the `istio` resource.
-//may need an Additional Resources section to link to migration recommendations, and resource differences
 4. You want to migrate from {SMProduct} 2 to {SMProduct} 3.
 5. You are running {SMProduct} {SMv2Version}.
-6. You have upgraded your `ServiceMeshControlPlane` to the latest version.
+6. You have upgraded your `ServiceMeshControlPlane` resource to the latest version.
 7. If you are using {KialiProduct}, you are running the latest version.
 8. You have installed the {SMProduct} Operator 3.
 
@@ -25,13 +25,9 @@ To install the {SMProduct} 3 Operator, see: xref:../../install/ossm-installing-o
 You must complete each checklist before you can begin migrating.
 ====
 
-//Content is taken from here: https://github.com/openshift-service-mesh/sail-operator/blob/main/docs/ossm/ossm2-migration/README.md
-
-//check for updates at https://github.com/openshift-service-mesh/sail-operator/blob/main/docs/ossm/ossm2-migration/README.md
-
 == Checklist for configuring add on replacements in Service Mesh 2
 
-After you have installed {SMProduct} Operator 3, if you have not already done so when you upgraded from {SMProduct} 2.5 to {SMProduct} 2.6, you need to disable and configure a replacement for the following add ons in your `ServiceMeshControlPlane` in {SMProduct} 2:
+After you have installed {SMProduct} Operator 3, if you have not already done so when you upgraded from {SMProduct} 2.5 to {SMProduct} 2.6, you need to disable and configure a replacement for the following add ons in your `ServiceMeshControlPlane` resource in {SMProduct} 2:
 
 * [ ] Disable Prometheus: `spec.addons.prometheus.enabled=false`
 ** [ ] Configure the `ServiceMeshControlPlane` with OpenShift Monitoring as the replacement. These instructions also include installing a standalone `Kiali` resource. Both can be done at the same time. link:https://docs.redhat.com/en/documentation/openshift_container_platform/4.17/html/service_mesh/service-mesh-2-x#ossm-integrating-with-user-workload-monitoring_observability[Integration user-workload monitoring,window=_blank]
@@ -55,134 +51,29 @@ Since the {SMProduct} 3 control plane does not manage gateways, you must manage 
 
 == Checklist for disabling network policy management and Grafana in {SMProduct} 2
 
+It is recommended to disable network policies management in the {SMProduct} 2 `ServiceMeshControlPlane` resource before you start your migration, and recreate the network policies after you have migrate your deployment and workloads.
+
+However, if you cannot recreate your network policies after migrating due to security concerns, you must recreate your network policies first, and then set `spec.security.manageNetworkPolicy` to `false`. <insert exref>[Migrating network policies for security purposes]
+
   * [ ] Disable network policy management: `spec.security.manageNetworkPolicy=false`.
-
-If you cannot disable network policies and go without them for the duration of the migration for security reasons, see: <insert exref>[Migrating network policies for security purposes]
-
-Otherwise, if you want to keep the Network Policies created by the {SMProduct} 2.6 `ServiceMeshControlPlane`, you will need to recreate and manage these manually. See <exreft>[migrating network policies]
 
 Grafana is not supported in {SMProduct} 3, and must be disabled in your {SMProduct} 2 `ServiceMeshControlPlane`:
 
   * [ ] Disable Grafana: `spec.addons.grafana.enabled=false`.
 
-//network policies exref will be added last
+//exrefs for all Migration Guides handled by OSSM-8852
 
-== Check your resource files
+include::modules/ossm-migrating-checklists-resource-files.adoc[leveloffset=+1]
 
-By the end of this checklist, you {SMProduct} 2 resource files may look like the following examples:
+//Per engineering, uncomment Final check after GA
+//move to module when uncommenting
+//== Final check before migrating your deployment and workloads
 
-.Example `ServiceMeshControlPlane` resource
+//Once you have configured your `ServiceMeshControlPlane` according to the checklists, you can run the following script to detect any issues with your environment:
 
-[source, yaml]
-----
-apiVersion: maistra.io/v2
-kind: ServiceMeshControlPlane
-metadata:
-  name: basic
-  namespace: istio-system
-spec:
-  version: v2.6 <1>
-  security: <2>
-    manageNetworkPolicy: false
-  addons: #<3>
-    grafana:
-      enabled: false
-    kiali:
-      enabled: false
-    prometheus:
-      enabled: false
-  meshConfig: <4>
-    extensionProviders:
-      - name: prometheus
-        prometheus: {}
-      - name: otel
-        opentelemetry:
-          port: 4317
-          service: otel-collector.istio-system.svc.cluster.local
-  gateways: <5>
-    enabled: false
-    openshiftRoute:
-      enabled: false
-  mode: MultiTenant <6>
-  tracing: <3>
-    type: None
-----
-
-<1> Your `ServiceMeshControlPlane` is updated to the latest {SMProduct} version.
-<2> Network policy management is disabled.
-<3> Addons and tracing are disabled.
-<4> Your `ServiceMeshControlPlane` is configured to use external metrics and tracing providers.
-<5> Managed gateways are disabled.
-<6> Either `MultiTenant` or `ClusterWide`.
-
-.Example Telemetry resource
-
-The `Telemetry` resource is in your root namespace, like `istio-system`:
-
-[source,yaml]
-----
-apiVersion: telemetry.istio.io/v1
-kind: Telemetry
-metadata:
-  name: mesh-default
-  namespace: istio-system
-spec:
-  metrics: <1>
-    - providers:
-        - name: prometheus
-  tracing: <2>
-    - providers:
-        - name: otel
-----
-
-<1> Your metrics provider is specified. The `name` should match what is specified on your `ServiceMeshControlPlane` in the `spec.meshConfig.extensionProviders` field.
-<2> Your tracing provider is specified. The `name` should match what is specified on your `ServiceMeshControlPlane` in the `spec.meshConfig.extensionProviders` field.
-
-.Example Kiali resource
-
-[source,yaml]
-----
-apiVersion: kiali.io/v1alpha1
-kind: Kiali
-metadata:
-  name: kiali
-  namespace: istio-system
-spec:
-  version: default <1>
-  external_services:
-    prometheus: <2>
-      auth:
-        type: bearer
-        use_kiali_token: true
-      thanos_proxy:
-        enabled: true
-      url: https://thanos-querier.openshift-monitoring.svc.cluster.local:9091
-    tracing: <3>
-      enabled: true
-      provider: tempo
-      use_grpc: false
-      internal_url: http://tempo-sample-query-frontend.tempo:3200
-      external_url: https://tempo-sample-query-frontend-tempo.apps-crc.testing
-    grafana: <4>
-      enabled: false
-----
-
-<1> As long as you install {SMProduct} Operator 3 before upgrading Kiali, this version is compatible with both {SMProduct }2.6 and {SMProduct} 3.0 controlplanes.
-<2> Kiali is configured to use the external prometheus.
-<3> Kiali is configured to use the external tracing store.
-<4> Grafana configuration is disabled. Grafana is not supported with {SMProduct} 3.0.
-
-== Final check before migrating your deployment and workloads
-
-Once you have configured your `ServiceMeshControlPlane` according to the checklists, you can run the following script to detect any issues with your environment:
-
-* [ ] Run the [migration-checker script](migration-checker.sh) to detect any issues with your environment.
-
-//01/23/2025: migration-checker script will be a specific GitHub link. Link to be determined just prior to release, so this checkbox will need to be updated accordingly. Check with Nick Fox for the URL to use. Nick is an engineer on Service Mesh.
+//* [ ] Run the [migration-checker script](migration-checker.sh) to detect any issues with your environment.
 
 == Check your deployment model
-
-If the migration checker shows no errors, you are now you are ready to migrate.
 
 Your deployment model determines your migration path. Run the following command to determine if you are running a `MultiTenant` or a `ClusterWide` mesh:
 
@@ -209,40 +100,14 @@ For cluster-wide deployments, follow this procedure:
 * <insert exref>[Migrating cluster-wide deployment]
 //update <insert exref> when cluster-wide PR has ben merged
 
-== Check if you are using cert-manager with your deployment
-
-There are two ways you can check if you are using cert-manager:
-
-1. Inspect your `ServiceMeshControlPlane` resource:
-+
-[source,yaml]
-----
-spec:
-  security:
-    certificateAuthority:
-      ...
-      type: cert-manager
-----
-
-2. Run the following command:
-+
-[source,yaml]
-----
-oc get smcp <smcp-name> -n <smcp-namespace> -o jsonpath='{.spec.security.certificateAuthority.type}'
-----
-+
-.Output
-
-[source,yaml]
-----
-cert-manager
-----
+include::modules/ossm-migrating-checklists-using-cert-manager.adoc[leveloffset=+1]
 
 .Next steps for cert-manager
 
 If you are using cert-manager, there are some configurations you must complete first before you can start migrating your deployments. These configurations are the same for both mulitenant and cluster-wide deployments.
 
-<insert exref whenever this is figured out>
+<insert exref>
+//exrefs for all Migration Guide content are being handled by OSSM-8852
 
 
 [role="_additional-resources"]
