@@ -50,8 +50,8 @@ spec:
             cidr: 172.30.0.0/16
             pktDrops: true <5>
 ----
-<1> The `spec.agent.ebpf.privileged` specification value must be true for packet drop tracking.
-<2> You must set `spec.agent.ebpf.flowFilter.enable` to `true` to enable this feature.
+<1> You must set `spec.agent.ebpf.privileged` to `true` for the packet drop feature.
+<2> You must set `spec.agent.ebpf.flowFilter.enable` to `true` to enable eBPF flow filtering.
 <3> The required `action` parameter describes the action that is taken for the flow filter rule. Possible values are `Accept` or `Reject`.
 <4> The required `cidr` parameter provides the IP address and CIDR mask for the flow filter rule and supports IPv4 and IPv6 address formats. If you want to match against any IP address, you can use `0.0.0.0/0` for IPv4 or `::/0` for IPv6.
 <5> By default, all other flows are rejected.
@@ -82,8 +82,8 @@ spec:
           sourcePort: 100
           peerIP: 192.168.127.12 <4>
 ----
-<1> You must set `spec.agent.ebpf.flowFilter.enable` to `true` to enable the feature.
-<2> You can `Accept` flows based on the criteria in the `flowFilter` specification.
+<1> You must set `spec.agent.ebpf.flowFilter.enable` to `true` to enable eBPF flow filtering.
+<2> The required `action` parameter describes the action that is taken for the flow filter rule. Possible values are `Accept` or `Reject`.
 <3> The `cidr` value of `0.0.0.0/0` matches against any IP address.
-<4> See flows after `peerIP` is configured with `192.168.127.12`.
+<4> See flows after `peerIP` is configured with `192.168.127.12`. By default, all other flows are rejected.
 ====
