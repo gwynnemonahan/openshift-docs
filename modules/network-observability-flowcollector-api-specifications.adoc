@@ -481,7 +481,7 @@ Type::
 Description::
 +
 --
-`EBPFFlowFilterRule` defines the desired eBPF agent configuration regarding flow filtering rule.
+`EBPFFlowFilterRules` defines the desired eBPF agent configuration regarding flow filtering rules.
 --
 
 Type::
