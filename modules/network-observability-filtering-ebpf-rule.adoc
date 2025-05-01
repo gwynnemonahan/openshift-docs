@@ -11,7 +11,7 @@ You can configure the `FlowCollector` to filter eBPF flows using multiple rules 
 . In the web console, navigate to *Operators* -> *Installed Operators*.
 . Under the *Provided APIs* heading for *Network Observability*, select *Flow Collector*.
 . Select *cluster*, then select the *YAML* tab.
-. Configure the `FlowCollector` custom resource, similar to the following sample configuration:
+. Configure the `FlowCollector` custom resource, similar to the following sample configurations:
 
 [IMPORTANT]
 ====
