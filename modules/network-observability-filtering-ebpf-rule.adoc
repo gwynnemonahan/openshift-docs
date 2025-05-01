@@ -18,7 +18,7 @@ You can configure the `FlowCollector` to filter eBPF flows using multiple rules 
 You cannot use duplicate CIDRs in filter rules.
 ====
 
-.Example YAML for EastWest and NorthSouth traffic
+.Example YAML to filer `EastWest` and `NorthSouth` flows
 +
 [source, yaml]
 ----
@@ -54,7 +54,7 @@ spec:
 <2> The required `action` parameter describes the action that is taken for the flow filter rule. Possible values are `Accept` or `Reject`.
 <3> The required `cidr` parameter provides the IP address and CIDR mask for the flow filter rule and supports IPv4 and IPv6 address formats. If you want to match against any IP address, you can use `0.0.0.0/0` for IPv4 or `::/0` for IPv6. By default, all other flows are rejected.
 
-.Example YAML for packet drops
+.Example YAML to filter flows with packet drops
 +
 [source, yaml]
 ----
