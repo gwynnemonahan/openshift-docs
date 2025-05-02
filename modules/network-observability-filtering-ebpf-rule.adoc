@@ -7,6 +7,11 @@
 = Filtering eBPF flow data using multiple rules
 You can configure the `FlowCollector` to filter eBPF flows using multiple rules to control the flow of packets cached in the eBPF flow table.
 
+[IMPORTANT]
+====
+You cannot use duplicate CIDRs in filter rules.
+====
+
 .Procedure
 . In the web console, navigate to *Operators* -> *Installed Operators*.
 . Under the *Provided APIs* heading for *Network Observability*, select *Flow Collector*.
@@ -15,8 +20,11 @@ You can configure the `FlowCollector` to filter eBPF flows using multiple rules 
 
 [IMPORTANT]
 ====
-You cannot use duplicate CIDRs in filter rules.
+If an IP matches several rules, only the IP with the longest CIDR prefix is evaluated.
 ====
+
+//Delete comments prior to merging PR
+//05/02/2025: Per style guides, can't stack admonitions. Wonder if there should be a Prereq section to include no duplicate CIDRs, and IP matching several rules then only longest CIDR prefix is evaluated. Saving and pushing for now to get a visual.
 
 .Example YAML to sample all North-South traffic, and 1:50 East-West traffic
 +
