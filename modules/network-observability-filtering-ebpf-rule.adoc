@@ -9,7 +9,8 @@ You can configure the `FlowCollector` to filter eBPF flows using multiple rules 
 
 [IMPORTANT]
 ====
-You cannot use duplicate CIDRs in filter rules.
+* You cannot use duplicate CIDRs in filter rules.
+* If an IP matches several rules, only the IP with the longest CIDR prefix is evaluated.
 ====
 
 .Procedure
@@ -17,17 +18,10 @@ You cannot use duplicate CIDRs in filter rules.
 . Under the *Provided APIs* heading for *Network Observability*, select *Flow Collector*.
 . Select *cluster*, then select the *YAML* tab.
 . Configure the `FlowCollector` custom resource, similar to the following sample configurations:
-
-[IMPORTANT]
-====
-If an IP matches several rules, only the IP with the longest CIDR prefix is evaluated.
-====
-
-//Delete comments prior to merging PR
-//05/02/2025: Per style guides, can't stack admonitions. Wonder if there should be a Prereq section to include no duplicate CIDRs, and IP matching several rules then only longest CIDR prefix is evaluated. Saving and pushing for now to get a visual.
++
 
 .Example YAML to sample all North-South traffic, and 1:50 East-West traffic
-+
+====
 [source, yaml]
 ----
 apiVersion: flows.netobserv.io/v1beta2
@@ -57,12 +51,15 @@ agent:
 ----
 <1> You must set `spec.agent.ebpf.flowFilter.enable` to `true` to enable eBPF flow filtering.
 <2> The required `action` parameter describes the action that is taken for the flow filter rule. Possible values are `Accept` or `Reject`.
-<3> The required `cidr` parameter provides the IP address and CIDR mask for the flow filter rule and supports IPv4 and IPv6 address formats. If you want to match against any IP address, you can use `0.0.0.0/0` for IPv4 or `::/0` for IPv6. By default, all other flows are rejected.
+<3> The required `cidr` parameter provides the IP address and CIDR mask for the flow filter rule and supports IPv4 and IPv6 address formats. If you want to match against any IP address, you can use `0.0.0.0/0` for IPv4 or `::/0` for IPv6.
 <4> Sampling rate for the matched flows, overriding the global sampling defined at `spec.agent.ebpf.sampling`.
 <5> The Peer IP CIDR to filter flows by.
-
-.Example YAML to filter flows with packet drops
 +
+By default, all other flows are rejected.
+====
++
+.Example YAML to filter flows with packet drops
+====
 [source, yaml]
 ----
 apiVersion: flows.netobserv.io/v1beta2
@@ -84,13 +81,12 @@ spec:
         - action: Accept <4>
           cidr: 172.30.0.0/16
           pktDrops: true
-        - action: Reject <5>
-          cidr: 0.0.0.0/0
 ----
 <1> You must set `spec.agent.ebpf.privileged` to `true` for the packet drop feature.
 <2> You can start reporting the packet drops of each network flow by listing the `PacketDrop` parameter in the `spec.agent.ebpf.features` specification list.
 <3> You must set `spec.agent.ebpf.flowFilter.enable` to `true` to enable eBPF flow filtering.
 <4> The required `action` parameter describes the action that is taken for the flow filter rule. Possible values are `Accept` or `Reject`.
-<5> By default, all other flows are rejected.
 
+By default, all other flows are rejected.
+====
 //05/01/2025: %collapsible is not supported in PV1, and may not be supported in AEM, so removed. This comment can be deleted when OSDOCS-14479 is closed.
