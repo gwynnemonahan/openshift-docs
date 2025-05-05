@@ -10,7 +10,7 @@ You can configure the `FlowCollector` to filter eBPF flows using multiple rules 
 [IMPORTANT]
 ====
 * You cannot use duplicate CIDRs in filter rules.
-* If an IP matches several rules, only the IP with the longest CIDR prefix is evaluated.
+* If an IP matches several rules, only the rule with the longest CIDR prefix is evaluated.
 ====
 
 .Procedure
