@@ -77,9 +77,9 @@ spec:
       flowFilter:
         enable: true <3>
         rules:
-          - action: Accept <4>
-            cidr: 172.30.0.0/16
-            pktDrops: true <5>
+        - action: Accept <4>
+          cidr: 172.30.0.0/16
+          pktDrops: true <5>
 ----
 <1> You must set `spec.agent.ebpf.privileged` to `true` for the packet drop feature.
 <2> You can start reporting the packet drops of each network flow by listing the `PacketDrop` parameter in the `spec.agent.ebpf.features` specification list.
