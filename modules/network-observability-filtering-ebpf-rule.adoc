@@ -31,22 +31,22 @@ metadata:
 spec:
   namespace: netobserv
   deploymentModel: Direct
-agent:
-  type: eBPF
-  ebpf:
-    flowFilter:
-      enable: true <1>
-      rules:
-        - action: Accept <2>
-          cidr: 0.0.0.0/0 <3>
-          sampling: 1 <4>
-        - action: Accept
-          cidr: 10.128.0.0/14
-          peerCIDR: 10.128.0.0/14 <5>
-        - action: Accept
-          cidr: 172.30.0.0/16
-          peerCIDR: 10.128.0.0/14
-          sampling: 50
+  agent:
+    type: eBPF
+    ebpf:
+      flowFilter:
+        enable: true <1>
+        rules:
+         - action: Accept <2>
+           cidr: 0.0.0.0/0 <3>
+           sampling: 1 <4>
+         - action: Accept
+           cidr: 10.128.0.0/14
+           peerCIDR: 10.128.0.0/14 <5>
+         - action: Accept
+           cidr: 172.30.0.0/16
+           peerCIDR: 10.128.0.0/14
+           sampling: 50
 ----
 <1> You must set `spec.agent.ebpf.flowFilter.enable` to `true` to enable eBPF flow filtering.
 <2> The required `action` parameter describes the action that is taken for the flow filter rule. Possible values are `Accept` or `Reject`.
