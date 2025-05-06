@@ -43,7 +43,6 @@ agent:
         - action: Accept
           cidr: 10.128.0.0/14
           peerCIDR: 10.128.0.0/14 <5>
-          sampling: 50
         - action: Accept
           cidr: 172.30.0.0/16
           peerCIDR: 10.128.0.0/14
@@ -80,12 +79,13 @@ spec:
       rules:
         - action: Accept <4>
           cidr: 172.30.0.0/16
-          pktDrops: true
+          pktDrops: true <5>
 ----
 <1> You must set `spec.agent.ebpf.privileged` to `true` for the packet drop feature.
 <2> You can start reporting the packet drops of each network flow by listing the `PacketDrop` parameter in the `spec.agent.ebpf.features` specification list.
 <3> You must set `spec.agent.ebpf.flowFilter.enable` to `true` to enable eBPF flow filtering.
 <4> The required `action` parameter describes the action that is taken for the flow filter rule. Possible values are `Accept` or `Reject`.
+<5> Set `pktDrops` to `true` to filter flows containing drops.
 
 By default, all other flows are rejected.
 ====
