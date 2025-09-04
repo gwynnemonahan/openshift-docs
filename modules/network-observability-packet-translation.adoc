@@ -17,8 +17,6 @@ You can use network observability and eBPF to enrich network flows from a Kubern
 . Select *cluster*, and then select the *YAML* tab.
 . Configure the `FlowCollector` custom resource for `PacketTranslation`, for example:
 +
-[id="network-observability-flowcollector-configuring-packet-translation_{context}"]
-.Example `FlowCollector` configuration
 [source, yaml]
 ----
 apiVersion: flows.netobserv.io/v1beta2
@@ -31,16 +29,20 @@ spec:
     type: eBPF
     ebpf:
       features:
-       - PacketTranslation   <1>
+       - PacketTranslation
 ----
-<1> You can start enriching network flows with translated packet information by listing the `PacketTranslation` parameter in the `spec.agent.ebpf.features` specification list.
 +
-. Refresh the *Network Traffic* page to filter for information about translated packets:
-.. Filter the network flow data based on *Destination kind: Service*.
-.. You can see the *xlat* column, which distinguishes where translated information is displayed, and the following default columns:
+where:
 
+`spec.agent.ebpf.features.PacketTranslation`:: Specifies enriching network flows with translated packet information.
+
+. Click *Save*.
+
+.Verification
+. Refresh the *Network Traffic* page.
+. In the *Traffic flows* view, filter the data by selecting *Service* from the *Destination kind* drop-down menu.
+. Verify that the following columns are visible in the table:
 * *Xlat Zone ID*
 * *Xlat Src Kubernetes Object*
 * *Xlat Dst Kubernetes Object*
-
-.. You can manage the display of additional *xlat* columns in *Manage columns*.
+. Optional: To display more fields, click *Manage columns* and select the required *xlat* columns.

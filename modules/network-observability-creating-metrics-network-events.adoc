@@ -11,12 +11,13 @@ Create a `FlowMetric` custom resource to generate metrics for nested or array fi
 
 :FeatureName: OVN Observability / Viewing `NetworkEvents`
 include::snippets/technology-preview.adoc[]
+
+You can create a `FlowMetric` resource to generate metrics for nested or array fields in the *Traffic flows* table, such as *Network events* or *Interfaces*. The following example shows how to generate metrics from the *Network events* field for network policy events.
+
 [IMPORTANT]
 ====
 OVN Observability and the ability to view and track network events is available only in {product-title} 4.17 and 4.18.
 ====
-
-The following example shows how to generate metrics from the *Network events* field for network policy events.
 
 .Prerequisites
 * Enable `NetworkEvents feature`. See the Additional resources for how to do this.
