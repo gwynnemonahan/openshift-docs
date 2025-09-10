@@ -3273,8 +3273,9 @@ Topics:
       File: network-observability-operator-release-notes-1-1-0
   - Name: Network Observability archived release notes
     Dir: release_notes_archive
-    - Name: Network Observability Operator archive release notes
-      File: network-obseravability-operator-archive-release-notes
+    Topics:
+    - Name: Network Observability Operator archived release notes
+      File: network-obseravability-operator-archived-release-notes
   - Name: Network observability overview
     File: network-observability-overview
   - Name: Installing the Network Observability Operator
