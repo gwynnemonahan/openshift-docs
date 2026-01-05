@@ -23,6 +23,21 @@ You can enable user-workload monitoring by applying the `ConfigMap` change for m
 
 .Procedure
 
+. Create a `Telemetry` resource in the {istio} control plane namespace to ensure that Prometheus is a metrics provider, similar to the following example:
++
+[source,yaml]
+----
+apiVersion: telemetry.istio.io/v1
+kind: Telemetry
+metadata:
+  name: enable-prometheus-metrics
+  namespace: istio-system
+spec:
+  metrics:
+  - providers:
+    - name: prometheus
+----
+
 . Create a `ServiceMonitor` resource that monitors the {istio} control plane, similar to the following example:
 +
 [source,yaml]
