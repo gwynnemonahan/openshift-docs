@@ -17,6 +17,21 @@ If you do not use Loki, you can generate metrics with Prometheus. Those metrics 
 
 image::network-observability-architecture.png[Network Observability eBPF export architecture]
 
+[id="service-deployment-model_{context}"]
+== Service deployment model
+When using the operator with `FlowCollector` `spec.deploymentModel` set to `Service`, agents are deployed per node (as `DaemonSets`), and `flowlogs-pipeline` is a standard `Deployment with a Service`. The `flowlogs-pipeline` can be scaled using `spec.processor.consumerReplicas`.
+
+Note that Loki isn't managed by the Network Observability Operator and must be installed separately using the {lok-op}. Same goes with Prometheus and any custom receiver.
+
+[id="direct-deployment-model_{context}"]
+== Direct deployment model
+When using the operator with `FlowCollector` `spec.deploymentModel` set to `Direct`, agents and the `flowlogs-pipeline` are both deployed per node (as `DaemonSets). This is perfect for an assessment of the technology, suitable on small clusters, but isn't very memory efficient in large clusters as every instance of `flowlogs-pipeline` ends up caching the same cluster information, which can be huge.
+
+Like in other modes, data stores aren't managed by the Network Observability Operator.
+
+
+[id="kafak-deployment-model_{context}"]
+== Kafka deployment model (optional)
 If you are using the Kafka option, the eBPF agent sends the network flow data to Kafka, and the `flowlogs-pipeline` reads from the Kafka topic before sending to Loki, as shown in the following diagram.
 
 image::network-observability-arch-kafka-FLP.png[Network Observability using Kafka]
