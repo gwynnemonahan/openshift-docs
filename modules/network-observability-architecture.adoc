@@ -17,21 +17,19 @@ If you do not use Loki, you can generate metrics with Prometheus. Those metrics 
 
 image::network-observability-architecture.png[Network Observability eBPF export architecture]
 
-[id="service-deployment-model_{context}"]
-== Service deployment model
-When using the operator with `FlowCollector` `spec.deploymentModel` set to `Service`, agents are deployed per node (as `DaemonSets`), and `flowlogs-pipeline` is a standard `Deployment with a Service`. The `flowlogs-pipeline` can be scaled using `spec.processor.consumerReplicas`.
+There are three deployment model options for the Network Observability Operator:
 
-Note that Loki isn't managed by the Network Observability Operator and must be installed separately using the {lok-op}. Same goes with Prometheus and any custom receiver.
+Service deployment model::
+When the `spec.deploymentModel` field in the `FlowCollector` resource is set to `Service`, agents are deployed per node as daemon sets. The `flowlogs-pipeline` is a standard deployment with a service. You can scale the `flowlogs-pipeline` component by using the `spec.processor.consumerReplicas` field.
 
-[id="direct-deployment-model_{context}"]
-== Direct deployment model
-When using the operator with `FlowCollector` `spec.deploymentModel` set to `Direct`, agents and the `flowlogs-pipeline` are both deployed per node (as `DaemonSets). This is perfect for an assessment of the technology, suitable on small clusters, but isn't very memory efficient in large clusters as every instance of `flowlogs-pipeline` ends up caching the same cluster information, which can be huge.
+The Network Observability Operator does not manage Loki; you must install it separately by using the {loki-op}. Similarly, you must manage Prometheus or any custom receivers independently.
 
-Like in other modes, data stores aren't managed by the Network Observability Operator.
+Direct deployment model::
+When the `spec.deploymentModel` field is set to `Direct`, agents and the `flowlogs-pipeline` are both deployed per node as daemon sets. This model is suitable for technology assessments and small clusters. However, it is less memory-efficient in large clusters because each instance of `flowlogs-pipeline` caches the same cluster information.
 
+As with other deployment models, the Network Observability Operator does not manage the data stores.
 
-[id="kafak-deployment-model_{context}"]
-== Kafka deployment model (optional)
-If you are using the Kafka option, the eBPF agent sends the network flow data to Kafka, and the `flowlogs-pipeline` reads from the Kafka topic before sending to Loki, as shown in the following diagram.
+Kafka deployment model (optional)::
+If you use the Kafka option, the `eBPF agent` sends the network flow data to Kafka. The `flowlogs-pipeline` component reads from the Kafka topic before sending data to Loki, as shown in the following diagram.
 
 image::network-observability-arch-kafka-FLP.png[Network Observability using Kafka]
