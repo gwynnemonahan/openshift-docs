@@ -43,7 +43,7 @@ spec:
 oc apply -f flowcollectorslice.yaml
 ----
 
-.Verify
+.Verification
 
 . Retrieve the FlowCollectorSlice resource by running the following command:
 +
