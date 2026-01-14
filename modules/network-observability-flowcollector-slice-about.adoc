@@ -48,7 +48,7 @@ AllowList::
 * Only traffic matching at least one FlowCollectorSlice is collected.
 * An optional namespace allow list can be used to always include selected namespaces.
 
-[id="flowcollection-slice-status_{context}"]
+[id="flowcollector-slice-status_{context}"]
 == FlowCollectorSlice status
 
 Each FlowCollectorSlice resource exposes a status `subresource` that reports:
@@ -72,15 +72,15 @@ Traditional flow collection operates at cluster scope, which can lead to:
 
 The FlowCollectorSlice API addresses these limitations by:
 
-* Allowing *explicit opt-in* to flow collection for selected namespaces or traffic classes
-* Supporting *multiple concurrent collection policies*
-* Enabling *future extensions* such as per-slice sampling rates, labeling, or processing
+* Allowing explicit opt-in to flow collection for selected namespaces or traffic classes
+* Supporting multiple concurrent collection policies
+* Enabling future extensions such as per-slice sampling rates, labeling, or processing
 
 
 == Relationship Between FlowCollector and FlowCollectorSlice
 
-* *FlowCollector* remains the _global controller_ for flow collection behavior.
-* *FlowCollectorSlice* resources define _what traffic is included or excluded_ when slice-based collection is enabled.
+* `FlowCollector` remains the global controller for flow collection behavior.
+* `FlowCollectorSlice` resources define what traffic is included or excluded when slice-based collection is enabled.
 * A new `slicesConfig` field in the FlowCollector custom resource controls:
 ** Whether slice-based collection is enabled
 ** How slices affect the overall collection mode
