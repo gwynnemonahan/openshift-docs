@@ -31,5 +31,5 @@ spec:
 ----
 
 . Save the changes.
-
++
 Flow collection resumes for all traffic, and existing `FlowCollectorSlice` resources remain available for future use.
