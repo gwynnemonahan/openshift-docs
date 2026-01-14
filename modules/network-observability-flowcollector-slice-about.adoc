@@ -4,17 +4,18 @@
 
 :_mod-docs-content-type: CONCEPT
 [id="network-observability-flowcollector-slice-about_{context}"]
-= About Network Observability Operator FlowCollectorSlice
+= About the Network Observability Operator FlowCollectorSlice
 
 [role="_abstract"]
 <insert content>
 
-`FlowCollectorSlice` is a Network Observability Opertar custom resource (CR) that allows you to define logical slices of network flow collection in a cluster. Each slice represents a scoped subset of network traffic selected by namespace, subnet, or label-based criteria. It can optionally apply custom sampling behavior
+`FlowCollectorSlice` is a Network Observability Operator custom resource (CR) that allows you to define logical slices of network flow collection in a cluster. Each slice represents a scoped subset of network traffic selected by namespace, subnet, or label-based criteria. It can optionally apply custom sampling behavior
 
 This mechanism complements the existing `FlowCollector` custom resource by enabling granular, selective, and multi-tenant-aware flow collection, instead of a single global configuration that applies uniformly to all traffic.
 
 When slice-based collection is enabled, only traffic that matches at least one `FlowCollectorSlice` is collected, allowing administrators to precisely control which network flows are observed.
 
+[id="benefits-of-flowcollector-slice_{context}"]
 == Benefits of FlowCollectorSlice
 
 By default, network flow collection applies uniformly to all traffic in the cluster. This can result in excessive data volume and limited flexibility.
@@ -26,27 +27,28 @@ Using `FlowCollectorSlice` provides the following benefits:
 * Reduces storage and processing costs by filtering irrelevant traffic
 * Preserves backward compatibility through opt-in configuration
 
+[id="reletionship-flowcollector-flowcollector-slice_{context}"]
 == Relationship between FlowCollector and FlowCollectorSlice
 
-* `FlowCollector` defines *global flow collection behavior* for the cluster.
-* `FlowCollectorSlice` defines *which traffic is eligible for collection* when slice-based filtering is enabled.
-* The `FlowCollector.spec.slicesConfig` field controls how slice definitions are applied.
+While the `FlowCollector` resource defines global flow collection behavior for the cluster, the `FlowCollectorSlice` resource defines which traffic is eligible for collection when slice-based filtering is enabled.
 
+The `FlowCollector.spec.slicesConfig` field controls how slice definitions are applied.
+
+[id="collection-modes_{context}"]
 == Collection modes
 
-Slice-based collection behavior is controlled by the `collectionMode` field.
+Slice behavior is governed by `FlowCollector.spec.slicesConfig.collectionMode` field:
 
-[cols="1,3",options="header"]
-|===
-| Mode | Description
+AlwaysCollect::
+* FlowCollectorSlice resources are ignored.
+* All traffic continues to be collected.
+* This mode preserves backward compatibility.
 
-| `AlwaysCollect`
-| Collects all traffic and ignores FlowCollectorSlice resources.
+AllowList::
+* Only traffic matching at least one FlowCollectorSlice is collected.
+* An optional namespace allow list can be used to always include selected namespaces.
 
-| `AllowList`
-| Collects only traffic that matches at least one FlowCollectorSlice or an explicitly allowed namespace.
-|===
-
+[id="flowcollection-slice-status_{context}"]
 == FlowCollectorSlice status
 
 Each FlowCollectorSlice resource exposes a status `subresource` that reports:
@@ -55,10 +57,12 @@ Each FlowCollectorSlice resource exposes a status `subresource` that reports:
 * Reconciliation state
 * Whether the slice is successfully applied
 
+This ensures visibility into how slice definitions affect actual flow collection.
+
 This status allows administrators to verify that slice definitions are active and functioning as expected.
 
-
-=== Motivation
+////
+== Motivation
 
 Traditional flow collection operates at cluster scope, which can lead to:
 
@@ -72,7 +76,8 @@ The FlowCollectorSlice API addresses these limitations by:
 * Supporting *multiple concurrent collection policies*
 * Enabling *future extensions* such as per-slice sampling rates, labeling, or processing
 
-=== Relationship Between FlowCollector and FlowCollectorSlice
+
+== Relationship Between FlowCollector and FlowCollectorSlice
 
 * *FlowCollector* remains the _global controller_ for flow collection behavior.
 * *FlowCollectorSlice* resources define _what traffic is included or excluded_ when slice-based collection is enabled.
@@ -82,22 +87,9 @@ The FlowCollectorSlice API addresses these limitations by:
 
 The operator reconciles FlowCollectorSlice resources and translates them into runtime configuration for flow collection components.
 
-=== Collection Modes
-
-Slice behavior is governed by `FlowCollector.spec.slicesConfig.collectionMode`:
-
-* *AlwaysCollect*
-** FlowCollectorSlice resources are ignored.
-** All traffic continues to be collected.
-** This mode preserves backward compatibility.
-
-* *AllowList*
-** Only traffic matching at least one FlowCollectorSlice is collected.
-** An optional namespace allow list can be used to always include selected namespaces.
-
 This design allows administrators to progressively adopt slice-based collection without disrupting existing deployments.
 
-=== Status and Observability
+== Status and Observability
 
 Each FlowCollectorSlice exposes a status subresource that reports:
 
@@ -106,3 +98,4 @@ Each FlowCollectorSlice exposes a status subresource that reports:
 * Any errors related to filter resolution
 
 This ensures visibility into how slice definitions affect actual flow collection.
+////
