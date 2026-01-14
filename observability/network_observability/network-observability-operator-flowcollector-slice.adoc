@@ -1,0 +1,32 @@
+:_mod-docs-content-type: ASSEMBLY
+[id="network-observability-flowcollector-slice_{context}"]
+= Network observability FlowCollectorSlice
+:context: network-observability-flowcollector-slice
+include::_attributes/common-attributes.adoc[]
+
+toc::[]
+
+[role="_abstract"]
+<insert text on FlowCollectorSlice>
+
+include::modules/network-observability-flowcollector-slice-about.adoc[leveloffset=+1]
+
+include::modules/network-observability-flowcollector-slice-enable.adoc[leveloffset=+1]
+
+include::modules/network-observability-flowcollector-slice-configure.adoc[leveloffset=+1]
+
+include::modules/network-observability-flowcollector-slice-disable.adoc[leveloffset=+1]
+
+////
+* drafty draft to get words on the page and an overall sense of new feature.
+* may not stay own assembly; may need to be slotted somewhere. but it also might make sense to keep it as its own assembly so as not to make the observing-network-traffic.adoc assembly even larger.
+* worth considering collecting FlowCollector info and putting it all together, except for the API since that is auto-generated.
+* should enable, configure, disable be leveloffset=+2?
+* fix titles and URLs once content is structured/organized
+////
+
+
+
+
+
+

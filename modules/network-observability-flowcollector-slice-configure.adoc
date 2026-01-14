@@ -1,0 +1,55 @@
+//Module included in the following assemblies:
+//
+// network_observability/network-observability-operator-flowcollector-slice.adoc
+
+:_mod-docs-content-type: PROCEDURE
+[id="network-observability-flowcollector-slice-configure_{context}"]
+= Configuring the Network Observability Operator FlowCollectorSlice
+
+[role="_abstract"]
+<insert text>
+
+Define one or more `FlowCollectorSlice` resources to specify which traffic is collected.
+
+.Prerequisites
+
+* The Network Observability Operator is installed.
+* A `FlowCollector` custom resource exists in the cluster.
+* The `slicesConfig` field has been configured in the `FlowCollector` custom resource.
+* You have cluster-admin privileges.
+
+.Procedure
+
+. Create a YAML file for the `FlowCollectorSlice` resource:
++
+[source,yaml]
+----
+apiVersion: flows.netobserv.io/v1alpha1
+kind: FlowCollectorSlice
+metadata:
+  name: payments-traffic
+spec:
+  namespaces:
+    - payments
+    - billing
+  subnetLabels:
+    environment: production
+----
+
+. Apply the resource by running the following command:
++
+[source,bash]
+----
+oc apply -f flowcollectorslice.yaml
+----
+
+.Verify
+
+. Retrieve the FlowCollectorSlice resource by running the following command:
++
+[source,bash]
+----
+oc get flowcollectorslice payments-traffic -o yaml
+----
+
+. Verify that the status conditions indicate the slice is ready and error-free.

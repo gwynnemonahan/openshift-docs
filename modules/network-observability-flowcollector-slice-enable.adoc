@@ -1,0 +1,42 @@
+//Module included in the following assemblies:
+//
+// network_observability/network-observability-operator-flowcollector-slice.adoc
+
+:_mod-docs-content-type: PROCEDURE
+[id="network-observability-flowcollector-slice-enable_{context}"]
+= Enable the Network Observability Operator FlowCollectorSlice
+
+[role="_abstract"]
+<insert text>
+
+.Prerequisites
+
+* The Network Observability Operator is installed.
+* A `FlowCollector` custom resource exists in the cluster.
+* You have cluster-admin privileges.
+
+.Procedure
+. Edit the `FlowCollector` custom resource by running the following command:
++
+[source,bash]
+----
+oc edit flowcollector cluster
+----
+
+. Configure the `slicesConfig` field:
++
+[source,yaml]
+----
+apiVersion: flows.netobserv.io/v1beta2
+kind: FlowCollector
+metadata:
+  name: cluster
+spec:
+  slicesConfig:
+    collectionMode: AllowList
+    namespacesAllowList:
+      - kube-system
+      - openshift-*
+----
+
+. Save the changes and exit the editor.

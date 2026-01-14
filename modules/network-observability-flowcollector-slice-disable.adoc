@@ -1,0 +1,35 @@
+//Module included in the following assemblies:
+//
+// network_observability/network-observability-operator-flowcollector-slice.adoc
+
+:_mod-docs-content-type: PROCEDURE
+[id="network-observability-flowcollector-slice-disable_{context}"]
+= Disable the Network Observability Operator FlowCollectorSlice
+
+[role="_abstract"]
+<insert text>
+
+
+You can disable slice-based filtering without deleting FlowCollectorSlice resources.
+
+.Procedure
+
+. Edit the `FlowCollector` resource by running the following command:
++
+[source,bash]
+----
+oc edit flowcollector cluster
+----
+
+. Set the collection mode to `AlwaysCollect`:
++
+[source,yaml]
+----
+spec:
+  slicesConfig:
+    collectionMode: AlwaysCollect
+----
+
+. Save the changes.
+
+Flow collection resumes for all traffic, and existing `FlowCollectorSlice` resources remain available for future use.
