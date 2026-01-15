@@ -21,7 +21,7 @@ There are three deployment model options for the Network Observability Operator.
 
 [NOTE]
 ====
-The Network Observability Operator does not manage Loki or other data stores. You must install Loki separately by using the {loki-op}. If you use Kafka, you must install it separately by using the {kafka-op}. Similarly, you must manage Prometheus or any custom receivers independently.
+The Network Observability Operator does not manage Loki or other data stores. You must install Loki separately by using the {loki-op}. If you use Kafka, you must install it separately by using the Kafka Operator. Similarly, you must manage Prometheus or any custom receivers independently.
 ====
 
 Service deployment model::
