@@ -3231,7 +3231,7 @@ Topics:
   - Name: Configuring the Network Observability Operator
     File: configuring-operator
   - Name: Network observability FlowCollectorSlice
-    File: network-observability-flowcollector-slice
+    File: network-observability-operator-flowcollector-slice
   - Name: Network Policy
     File: network-observability-network-policy
   - Name: Observing the network traffic
