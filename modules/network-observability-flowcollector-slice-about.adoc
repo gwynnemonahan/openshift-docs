@@ -7,7 +7,7 @@
 = About the Network Observability Operator FlowCollectorSlice
 
 [role="_abstract"]
-<insert content>
+<insert content to summarize FlowCollectorSlice>
 
 The `FlowCollectorSlice` is a Network Observability Operator custom resource (CR) that allows you to define logical slices of network flow collection in a cluster. Each slice represents a scoped subset of network traffic selected by namespace, subnet, or label-based criteria. It can optionally apply custom sampling behavior
 
