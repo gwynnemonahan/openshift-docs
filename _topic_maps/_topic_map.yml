@@ -3318,6 +3318,8 @@ Topics:
     File: configuring-operator
   - Name: Network Policy
     File: network-observability-network-policy
+  - Name: Network observability DNS resolution analysis
+    File: network-observability-dns-resolution-analysis
   - Name: Observing the network traffic
     File: observing-network-traffic
   - Name: Network observability health rules
