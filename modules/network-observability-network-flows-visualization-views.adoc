@@ -3,7 +3,7 @@
 // * networking/network_observability/network-flow-table.adoc
 
 :_mod-docs-content-type: CONCEPT
-[id="network-observability-network-flows-ui-overview_{context}"]
+[id="network-observability-network-flows-visualization-views_{context}"]
 = Network flows visualization views
 
 [role="_abstract"]
