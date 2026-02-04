@@ -1,0 +1,21 @@
+:_mod-docs-content-type: ASSEMBLY
+[id="network-observability-gateway-api_{context}"]
+= Integrate network observability with Gateway API
+include::_attributes/common-attributes.adoc[]
+:context: network-observability-gateway-api
+
+toc::[]
+
+[role="_abstract"]
+Automatic integration between the Network Observability Operator and the Gateway API provides high-level traffic attribution without manual configuration of the `FlowCollector` resource.
+
+include::modules/network-observability-gateway-api-visibility.adoc[leveloffset=+1]
+
+include::modules/network-observability-gateway-api-viewing-traffic.adoc[leveloffset=+1]
+
+include::modules/network-observability-gateway-api-metadata-reference.adoc[leveloffset=+1]
+
+[id="network-observability-gateway-api-additional-resource_{context}"]
+== Additional resources
+* xref:../../networking/ingress_load_balancing/configuring_ingress_cluster_traffic/ingress-gateway-api.adoc#ingress-gateway-api[Overview of Gateway API]
+* xref:../../networking/ingress_load_balancing/configuring_ingress_cluster_traffic/ingress-gateway-api.adoc#nw-ingress-gateway-api-enable_ingress-gateway-api[Getting started with Gateway API for the Ingress Operator]

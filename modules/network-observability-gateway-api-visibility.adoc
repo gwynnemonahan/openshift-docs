@@ -1,0 +1,18 @@
+// Module included in the following assemblies:
+//
+// * network_observability/network-observability-gateway-api.adoc
+
+:_mod-docs-content-type: CONCEPT
+[id="network-observability-gateway-api-visibility_{context}"]
+= Network observability automated Gateway API visibility
+
+[role="_abstract"]
+Automated Gateway API visibility uses the Network Observability Operator to correlate eBPF-captured flows with logical routing resources to provide visibility into cluster ingress and egress traffic.
+
+By using automated parent tracking, the Network Observability Operator traverses the resource ownership hierarchy. Traffic flowing through ingress proxies, such as Envoy, is linked to the high-level Gateway API objects.
+
+Key benefits include:
+
+* Proxy observability: Identifies the logical route that handled a request through the proxy layer.
+* Automatic correlation: Correlates standard Gateway API implementations without manual configuration of tracking depth.
+* Troubleshooting: Identifies performance bottlenecks or packet drops at the route level.

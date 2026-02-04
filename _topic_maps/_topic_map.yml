@@ -3268,6 +3268,8 @@ Topics:
     File: network-observability-alerts
   - Name: Using metrics with dashboards and alerts
     File: metrics-alerts-dashboards
+  - Name: Integrate network observability with Gateway API
+    File: network-observability-gateway-api
   - Name: Monitoring the Network Observability Operator
     File: network-observability-operator-monitoring
   - Name: Scheduling resources

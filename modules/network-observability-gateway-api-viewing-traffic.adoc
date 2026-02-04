@@ -1,0 +1,20 @@
+// Module included in the following assemblies:
+//
+// * network_observability/network-observability-gateway-api.adoc
+
+:_mod-docs-content-type: PROCEDURE
+[id="network-observability-gateway-api-viewing-traffic_{context}"]
+= Viewing Gateway API traffic
+
+[role="_abstract"]
+Verify the automated mapping of network flows to Gateway API resources and access linked configuration pages in the {product-title} console.
+
+.Prerequisites
+* Network Observability Operator is installed.
+* A `GatewayClass` resource is created. See "Getting started with the Gateway API for the Ingress Operator".
+
+.Procedure
+. Navigate to *Observe* → *Network Traffic*.
+. In the *Traffic flows* view, locate a flow originating from a Gateway.
+. Verify that the *Owner* column displays the Gateway name.
+. Click the Gateway link to navigate the Gateway resource page.

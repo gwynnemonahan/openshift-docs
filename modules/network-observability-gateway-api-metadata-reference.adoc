@@ -1,0 +1,24 @@
+// Module included in the following assemblies:
+//
+// * network_observability/network-observability-gateway-api.adoc
+
+:_mod-docs-content-type: REFERENCE
+[id="network-observability-gateway-api-metadata-reference_{context}"]
+= Network observability Gateway API metadata reference
+
+[role="_abstract"]
+This reference provides technical details for Gateway API fields and configuration parameters within the Network Observability Operator.
+
+.Gateway API metadata fields
+[cols="1,3", options="header"]
+|===
+| Field | Description
+| `SrcK8S_OwnerType`
+| The resource type of the source parent (e.g., `Gateway`).
+| `DstK8S_OwnerType`
+| The resource type of the destination parent.
+| `SrcK8S_OwnerName`
+| The name of the Gateway API resource originating the traffic.
+| `DstK8S_OwnerName`
+| The name of the Gateway API resource receiving the traffic.
+|===
