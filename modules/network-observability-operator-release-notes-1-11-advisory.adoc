@@ -8,5 +8,4 @@
 [role="_abstract"]
 You can review the advisory for Network Observability Operator 1.11 release.
 
-//add when available, likely just before or immediately after release day.
-//* link: [RHEA- Network Observability Operator 1.11]
+* link:https://access.redhat.com/errata/RHSA-2026:2900[RHSA-2026:2900 Network Observability Operator 1.11]
