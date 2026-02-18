@@ -25,7 +25,7 @@ link:https://issues.redhat.com/browse/NETOBSERV-2494[NETOBSERV-2494]
 Unenriched OVN IPs::
 Before this update, some IPs declared by OVN-Kubernetes were not enriched, causing unenriched IPs like `100.64.0.x` to not appear in `Machines` network. As a consequence, IPs not enriched caused the wrong network visibility for users.
 +
-With this release, missing IPs in OVN-Kubernetes are now enriched, appearing in `Machines` network. As a result, IPs declared by OVN-Kubernetes are correctly enriched, improving the visibility of network traffic sources in `Machines` network.
+With this release, missing IPs in OVN-Kubernetes are now enriched. As a result, IPs declared by OVN-Kubernetes are correctly enriched and appear in the `Machines` network improving the visibility of network traffic sources in the `Machines` network.
 +
 link:https://issues.redhat.com/browse/NETOBSERV-2484[NETOBSERV-2484]
 
@@ -58,7 +58,7 @@ With this release, the user interface now includes a specific icon for VM resour
 link:https://issues.redhat.com/browse/NETOBSERV-2487[NETOBSERV-2487]
 
 DNS optimization, update DNS Alerts::
-Before this update, many DNS "NXDOMAIN" code were returned due to ambiguous URL being used in network observability.
+Before this update, many DNS "NXDOMAIN" errors were returned due to ambiguous URLs being used in network observability.
 +
 With this release, these URLs have been disambiguated, resulting in a more optimal use of DNS.
 
