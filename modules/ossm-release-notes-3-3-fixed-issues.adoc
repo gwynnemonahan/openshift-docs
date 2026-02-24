@@ -1,0 +1,21 @@
+// Module included in the following assemblies:
+//
+// * service-mesh-docs-main/ossm-release-notes/ossm-release-notes.adoc
+
+:_mod-docs-content-type: REFERENCE
+[id="ossm-release-3-3-fixed-issues_{context}"]
+= {SMProductName} version 3.3 fixed issues
+
+[role="_abstract"]
+
+This release addresses enhancements, fixed issues, and Common Vulnerabilities and Exposures (CVEs).
+
+Halting unnecessary {ossmc-full} pod redeployments::
+
+Before this update, {KialiProduct} was incorrectly reconciling {ossmc-full} every ten hours due to a misconfigured watches setup. As a consequence, Kiali operator triggered unnecessary pod redeployment for {ossmc-full}, affecting application stability in production. With this release, the Kiali Operator reconciliation period is changed to zero, halting periodic console pod redeployment. As a result, the Kiali Operator no longer triggers console pod redeployment every 10 hours, improving production environment stability.
++
+link:https://issues.redhat.com/browse/OSSM-12420[OSSM-12420]
+
+Removed false warnings for unmanaged namespaces in Kiali logs::
+
+Before this update, Kiali logged warnings for namespaces without the required sidecar label. As a consequence, users experienced excessive warnings in Kiali logs for namespaces not managed by {istio} control plane due to incorrect `GetRootNamespace` determination. With this release, the false warnings in Kiali logs for namespaces not managed by {istio} control plane are removed. As a result, user experience is improved by reducing unnecessary log messages.

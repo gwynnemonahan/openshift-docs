@@ -1,0 +1,62 @@
+// Module included in the following assemblies:
+//
+// * service-mesh-docs-main/ossm-release-notes/ossm-release-notes.adoc
+
+:_mod-docs-content-type: REFERENCE
+[id="ossm-release-3-3-new-features-enhancements_{context}"]
+= {SMProductName} version 3.3 new features and enhancements
+
+[role="_abstract"]
+
+This release makes {SMProductName} 3.3 generally available, adds new features, addresses Common Vulnerabilities and Exposures (CVEs), and is supported on {ocp-product-title} 4.18 and later.
+
+For a list of supported component versions and support features, see "Service Mesh feature support tables".
+
+When upgrading from {SMProduct} 2.x, first you must migrate to version 3.0. Then, you can upgrade to version 3.1 and incrementally to version 3.3. For more information see, https://docs.redhat.com/en/documentation/red_hat_openshift_service_mesh/3.0/html/migrating_from_service_mesh_2_to_service_mesh_3/ossm-migrating-from-service-mesh-2-to-3[Migrating from Service Mesh 2 to Service Mesh 3] in the {SMProduct} 3.0 documentation and https://docs.redhat.com/en/documentation/red_hat_openshift_service_mesh/latest/html/updating/index[Updating] in the {SMProduct} 3.3 documentation.
+
+Support for post-quantum cryptography (PQC)::
+
+With this update, {SMProductName} adds support for post-quantum cryptography (PQC) encryption algorithm `X25519MLKEM768` with both {istio} gateways and in-mesh traffic (for both sidecar and ambient modes).
++
+[NOTE]
+====
+The PQC `X25519MLKEM768` algorithm is not available in FIPS-enabled clusters.
+====
++
+link:https://issues.redhat.com/browse/OSSM-11488[OSSM-11488]
+
+Support for FIPS 140-2 Compliance for ztunnel in ambient mode::
+
+With this release, ztunnel supports FIPS 140-2 compliant clusters in ambient mode. This release adds TLS 1.2 support for secure communications with the existing TLS 1.3 support that enables `ztunnel` and `Istiod` to communicate. As a result, the ambient mode functions correctly on FIPS-enabled clusters, ensuring a secure and compliant environment for end users.
++
+link:https://issues.redhat.com/browse/OSSM-11068[OSSM-11068]
+
+Support for Gateway API 1.4.0 and Gateway API Inference Extensions 1.1::
+
+This update introduces support for Gateway API 1.4.0 and Gateway API Inference Extensions 1.1 to provide users with the latest networking standards and advanced traffic management capabilities.
++
+link:https://issues.redhat.com/browse/OSSM-10819[OSSM-10819]
+
+Health status pre-compute and caching in Kiali::
+
+Kiali now features health status pre-compute and caching by default to optimize performance as production mesh sizes grow. This enhancement shifts health status calculations from an on-demand model to a background process that pre-calculates data by using a configurable duration (five minutes by default). 
++
+As a result, users experience significantly faster render times and increased responsiveness on the *Overview* and *List* pages, where the *Duration* dropdown selector is now removed. Other pages, such as the *Traffic graph* and *Detail* pages continue to calculate health status on-demand, and based on the user's selected duration.
++
+Kiali introduces a background health status pre-compute and caching mechanism that functions independently of user sessions. The `Kiali` custom resource (CR) now includes the following new fields:
++
+* `spec.health_config.compute.duration`
+* `spec.health_config.compute.refresh_interval`
+* `spec.health_config.compute.TIMEOUT`
+* `spec.kiali_internal.health_cache.enabled` (Keep the health cache enabled as not all the features fall back to on-demand calculation.)
+
++
+link:https://issues.redhat.com/browse/OSSM-12036[OSSM-12036]
+
+Kiali traffic graph caching::
+
+Kiali now introduces traffic graph caching enabled by default to optimize the performance of the {SMProductShortName} visualization. This enhancement allows Kiali to periodically regenerate and cache the traffic graph in the background based on the UI's refresh interval. As a result, users experience significantly faster re-render times when navigating back to the traffic graph or during automatic refreshes, particularly within large and complex meshes.
++
+The backend resource utilization might get affected, although it does not change significantly. The caching can be disabled in the `Kiali` CR by setting the `spec.kiali_internal.traffic_cache.enabled` field to `false`.
++
+link:https://issues.redhat.com/browse/OSSM-12035[OSSM-12035]
