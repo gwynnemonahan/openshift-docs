@@ -21,9 +21,9 @@ spec:
   namespace: netobserv
   deploymentModel: Service
   agent:
-    type: eBPF                                <1>
+    type: eBPF
     ebpf:
-      sampling: 50                            <2>
+      sampling: 50
       logLevel: info
       privileged: false
       resources:
@@ -32,7 +32,7 @@ spec:
           cpu: 100m
         limits:
           memory: 800Mi
-  processor:               <3>
+  processor:
     logLevel: info
     resources:
       requests:
@@ -44,8 +44,8 @@ spec:
     advanced:
       conversationEndTimeout: 10s
       conversationHeartbeatInterval: 30s
-  loki:                     <4>
-    mode: LokiStack         <5>
+  loki:
+    mode: LokiStack
   consolePlugin:
     register: true
     logLevel: info
@@ -53,7 +53,7 @@ spec:
       enable: true
       portNames:
         "3100": loki
-    quickFilters:            <6>
+    quickFilters:
     - name: Applications
       filter:
         src_namespace!: 'openshift-,netobserv'
@@ -72,9 +72,12 @@ spec:
       filter:
         dst_kind: 'Service'
 ----
-<1> The Agent specification, `spec.agent.type`, must be `EBPF`. eBPF is the only {product-title} supported option.
-<2> You can set the Sampling specification, `spec.agent.ebpf.sampling`, to manage resources. By default, eBPF sampling is set to `50`, so a flow has a 1 in 50 chance of being sampled. A lower sampling interval value requires more computational, memory, and storage resources. A value of `0` or `1` means all flows are sampled. It is recommended to start with the default value and refine it empirically to determine the optimal setting for your cluster.
-<3> The Processor specification `spec.processor.` can be set to enable conversation tracking. When enabled, conversation events are queryable in the web console. The `spec.processor.logTypes` value is `Flows`. The `spec.processor.advanced` values are `Conversations`, `EndedConversations`, or `ALL`. Storage requirements are highest for `All` and lowest for `EndedConversations`.
-<4> The Loki specification, `spec.loki`, specifies the Loki client. The default values match the Loki install paths mentioned in the Installing the Loki Operator section. If you used another installation method for Loki, specify the appropriate client information for your install.
-<5> The `LokiStack` mode automatically sets a few configurations: `querierUrl`, `ingesterUrl` and `statusUrl`, `tenantID`, and corresponding TLS configuration. Cluster roles and a cluster role binding are created for reading and writing logs to Loki. And `authToken` is set to `Forward`. You can set these manually using the `Manual` mode.
-<6> The `spec.quickFilters` specification defines filters that show up in the web console. The `Application` filter keys,`src_namespace` and `dst_namespace`, are negated (`!`), so the `Application` filter shows all traffic that _does not_ originate from, or have a destination to, any `openshift-` or `netobserv` namespaces. For more information, see Configuring quick filters below.
+
+where:
+
+`spec.agent.type`:: Must be `eBPF` as eBPF is the only {product-title} supported option.
+`spec.agent.ebpf.sampling`:: Specifies resource management. By default, eBPF sampling is set to `50`, so a flow has a 1 in 50 chance of being sampled. A lower sampling interval value requires more computational, memory, and storage resources. A value of `0` or `1` means all flows are sampled. It is recommended to start with the default value and refine it empirically to determine the optimal setting for your cluster.
+`spec.processor`:: Specifies conversation tracking. When enabled, conversation events are queryable in the web console. The `spec.processor.logTypes` value is `Flows`. The `spec.processor.advanced` values are `Conversations`, `EndedConversations`, or `ALL`. Storage requirements are highest for `All` and lowest for `EndedConversations`.
+`spec.loki`:: Specifies the Loki client. The default values match the Loki install paths mentioned in the Installing the Loki Operator section. If you used another installation method for Loki, specify the appropriate client information for your install.
+`spec.loki.mode`:: Specifies the Loki mode. It automatically sets a few configurations: `querierUrl`, `ingesterUrl` and `statusUrl`, `tenantID`, and corresponding TLS configuration. Cluster roles and a cluster role binding are created for reading and writing logs to Loki. And `authToken` is set to `Forward`. You can set these manually using the `Manual` mode.
+`spec.consolePlugin.quickFilters`:: Specifies filters that show up in the web console. The `Application` filter keys, `src_namespace` and `dst_namespace`, are negated (`!`), so the `Application` filter shows all traffic that _does not_ originate from, or have a destination to, any `openshift-` or `netobserv` namespaces. For more information, see Configuring quick filters below.

@@ -25,9 +25,9 @@ apiVersion: loki.grafana.com/v1
 kind: LokiStack
 metadata:
   name: loki
-  namespace: netobserv # <1>
+  namespace: netobserv
 spec:
-  size: 1x.small # <2>
+  size: 1x.small
   storage:
     schemas:
     - version: v12
@@ -35,18 +35,19 @@ spec:
     secret:
       name: loki-s3
       type: s3
-  storageClassName: gp3 # <3>
+  storageClassName: gp3
   tenants:
     mode: openshift-network
 ----
-<1> The installation examples in this documentation use the same namespace, `netobserv`, across all components. You can optionally use a different namespace.
-<2> Specify the deployment size. In the {loki-op} 5.8 and later versions, the supported size options for production instances of Loki are `1x.extra-small`, `1x.small`, or `1x.medium`.
++
+** The installation examples in this documentation use the same namespace, `netobserv`, across all components. You can optionally use a different namespace.
+** Specify the deployment size. In the {loki-op} 5.8 and later versions, the supported size options for production instances of Loki are `1x.extra-small`, `1x.small`, or `1x.medium`.
 +
 [IMPORTANT]
 ====
 It is not possible to change the number `1x` for the deployment size.
 ====
-<3> Use a storage class name that is available on the cluster for `ReadWriteOnce` access mode. For best performance, specify a storage class that allocates block storage. You can use `oc get storageclasses` to see what is available on your cluster.
+** Use a storage class name that is available on the cluster for `ReadWriteOnce` access mode. For best performance, specify a storage class that allocates block storage. You can use `oc get storageclasses` to see what is available on your cluster.
 +
 [IMPORTANT]
 ====
