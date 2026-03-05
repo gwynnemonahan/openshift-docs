@@ -6,7 +6,12 @@
 [id="power-monitoring-monitoring-kepler-status_{context}"]
 = Monitoring the {PM-kepler} status
 
+<<<<<<< HEAD
 You can monitor the state of the {PM-kepler} exporter with the `status` field of the `{PM-kepler}` resource. 
+=======
+[role="_abstract"]
+The `PowerMonitor` resource status field provides real-time information about Kepler pod deployment state and health across nodes.
+>>>>>>> 7976eadb9e (CCSINTL-3095 [POWERMON] Module short descriptions)
 
 The `status.exporter` field includes information, such as the following:
 
