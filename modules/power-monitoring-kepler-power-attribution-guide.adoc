@@ -1,6 +1,6 @@
 :_mod-docs-content-type: CONCEPT
 [id="power-monitoring-kepler-power-attribution-guide_{context}"]
-== Power monitoring Kepler power attribution guide
+= Power monitoring Kepler power attribution guide
 
 [role="_abstract"]
 Kepler attributes hardware energy consumption proportionally to individual workloads using CPU-time-based distribution for practical power monitoring.
