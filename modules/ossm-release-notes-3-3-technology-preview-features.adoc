@@ -1,0 +1,19 @@
+// Module included in the following assemblies:
+//
+// * service-mesh-docs-main/ossm-release-notes/ossm-release-notes.adoc
+
+:_mod-docs-content-type: REFERENCE
+[id="ossm-release-3-3-technology-preview-features_{context}"]
+= {SMProductName} version 3.3 Technology Preview features
+
+[role="_abstract"]
+
+This release includes some features that are currently in Technology Preview. These experimental features are not intended for production use.
+
+For more information about the support scope of Red Hat Technology Preview features, see link:https://access.redhat.com/support/offerings/techpreview/[Technology Preview Features Support Scope].
+
+Technology Preview for multi-cluster support in {istio} ambient mode::
+
+{SMProductName} introduces the Technology Preview (TP) of multi-cluster support for {istio}'s ambient mode. The multi-cluster support provides the capability to manage and deploy applications across multiple clusters, focusing on multi-primary topologies. It is designed for testing and feedback to help identify potential limitations in experimental settings. Use the feature only in non-production environments. This feature is only available as a Technology Preview.
++
+link:https://issues.redhat.com/browse/OSSM-11236[OSSM-11236]
