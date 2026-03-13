@@ -20,6 +20,10 @@ include::modules/network-observability-health-rules-and-performance.adoc[levelof
 
 include::modules/network-observability-health-rules-monitoring-and-alerting.adoc[leveloffset=+2]
 
+[role="_additional-resources_{context}"]
+.Additional resources
+* link:https://github.com/openshift/runbooks/tree/master/alerts/network-observability-operator[Network Observability Operator runbooks].
+
 include::modules/network-observability-health-rules-recording-rules-performance-optimization.adoc[leveloffset=+1]
 
 include::modules/network-observability-health-rule-structure-customization.adoc[leveloffset=+1]

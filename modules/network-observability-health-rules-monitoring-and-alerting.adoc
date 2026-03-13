@@ -41,7 +41,7 @@ Operational alerts for the Network Observability Operator:
 `NetObservNoFlows`:: Triggers when the pipeline is active but no flows are observed.
 `NetObservLokiError`:: Triggers when flows are dropped because of Loki errors.
 
-For a complete list of rules and runbooks, see the link:https://github.com/openshift/runbooks/tree/master/alerts/network-observability-operator[Network Observability Operator runbooks].
+For a complete list of rules and runbooks, see the "Network Observability Operator runbooks".
 
 [id="network-observability-rule-dependencies_{context}"]
 == Rule dependencies and feature requirements
