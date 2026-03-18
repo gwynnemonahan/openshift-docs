@@ -1,0 +1,17 @@
+:_mod-docs-content-type: ASSEMBLY
+[id="power-monitoring-release-notes"]
+= {product-title} release notes
+include::_attributes/common-attributes.adoc[]
+:context: power-monitoring-release-notes
+
+toc::[]
+
+[role="_abstract"]
+{product-title} enables you to monitor the power usage of workloads and identify the most power-consuming namespaces running in an {ocp} cluster with key power consumption metrics, such as CPU or DRAM, measured at container level.
+
+:FeatureName: Power monitoring
+include::snippets/technology-preview.adoc[leveloffset=+2]
+
+These release notes track the development of {PM-title} in the {ocp}.
+
+//this file may be able to be removed. Will test after Vale fix PRs are merged.
