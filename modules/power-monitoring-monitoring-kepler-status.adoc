@@ -4,7 +4,7 @@
 
 :_mod-docs-content-type: CONCEPT
 [id="power-monitoring-monitoring-kepler-status_{context}"]
-= Monitoring the {PM-kepler} status
+= {PM-kepler} resource status
 
 [role="_abstract"]
 The `PowerMonitor` resource status field provides real-time information about Kepler pod deployment state and health across nodes.
