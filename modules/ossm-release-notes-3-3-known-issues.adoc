@@ -1,0 +1,27 @@
+// Module included in the following assemblies:
+//
+// * service-mesh-docs-main/ossm-release-notes.adoc
+
+:_mod-docs-content-type: REFERENCE
+[id="ossm-release-3-3-known-issues_{context}"]
+= {SMProductName} 3.3 known issues
+
+[role="_abstract"]
+
+This release has the following known issues:
+
+Performance issues when applying configuration changes in large FIPS clusters::
+
+There is currently a known issue where applying configuration changes takes longer than expected in environments with a large number of services and pods when FIPS mode is enabled. This delay occurs because Envoy performs additional certificate checks to maintain FIPS compliance.
++
+There is currently no workaround for this issue. Wait for the configuration changes to complete; the process eventually succeeds.
++
+link:https://issues.redhat.com/browse/OSSM-12930[OSSM-12930]
+
+Increased Envoy validation time impacts OSSM proxy readiness::
+
+In the {SMProductName} 3.3 FIPS release, a known issue arises due to extended validation time for `ISTIO_MUTUAL` TLS keys within Envoy, leading to a delay. The issue particularly affects the readiness time of Envoy proxies in {SMProductName} 3.3 FIPS clusters, potentially increasing performance impact on the affected cluster. 
++
+There is currently no workaround for this issue.
++
+link:https://issues.redhat.com/browse/OSSM-12929[OSSM-12929]
