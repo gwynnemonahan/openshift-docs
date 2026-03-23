@@ -6,5 +6,3 @@
 Kepler attributes hardware energy consumption proportionally to individual workloads using CPU-time-based distribution for practical power monitoring.
 
 Although CPU-time-based attribution has inherent limitations due to modern CPU complexity, it offers a good balance between accuracy, simplicity, and performance overhead for most monitoring and optimization use cases.
-
-For more information about power attribution, see link:http://sustainable-computing.io/kepler/usage/power-attribution[Kepler Power Attribution Guide].

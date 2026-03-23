@@ -13,3 +13,5 @@ toc::[]
 include::snippets/technology-preview.adoc[leveloffset=+2]
 
 These release notes track the development of {PM-title} in the {ocp}.
+
+//this file may be able to be removed. Will test after Vale fix PRs are merged.
