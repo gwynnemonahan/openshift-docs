@@ -6,7 +6,8 @@
 [id="power-monitoring-kepler-configuration_{context}"]
 = The {PM-kepler} configuration
 
-You can configure {PM-kepler} with the `spec` field of the `PowerMonitor` resource.
+[role="_abstract"]
+Customize Kepler deployment, security, logging, and metric collection using configuration options in the `PowerMonitor` custom resource.
 
 [IMPORTANT]
 ====

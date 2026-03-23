@@ -6,7 +6,8 @@
 [id="power-monitoring-accessing-dashboards-admin_{context}"]
 = Accessing {PM-shortname} dashboards as a cluster administrator
 
-You can access {PM-shortname} dashboards of the {ocp} web console.
+[role="_abstract"]
+Access power monitoring dashboards in the {ocp} web console to visualize energy consumption and resource utilization across your cluster.
 
 .Prerequisites
 
