@@ -8,7 +8,7 @@
 
 [role="_abstract"]
 
-This release addresses enhancements, fixed issues, and Common Vulnerabilities and Exposures (CVEs).
+This release addresses the following fixed issues:
 
 Halting unnecessary {ossmc-full} pod redeployments::
 
@@ -18,4 +18,6 @@ link:https://issues.redhat.com/browse/OSSM-12420[OSSM-12420]
 
 Removed false warnings for unmanaged namespaces in Kiali logs::
 
-Before this update, Kiali logged warnings for namespaces without the required sidecar label. As a consequence, users experienced excessive warnings in Kiali logs for namespaces not managed by {istio} control plane due to incorrect `GetRootNamespace` determination. With this release, the false warnings in Kiali logs for namespaces not managed by {istio} control plane are removed. As a result, user experience is improved by reducing unnecessary log messages.
+Before this update, Kiali logged warnings for namespaces without the required sidecar label. As a consequence, users experienced excessive warnings in Kiali logs for namespaces not managed by the {istio} control plane due to incorrect `GetRootNamespace` determination. With this release, the false warnings in Kiali logs for namespaces not managed by the {istio} control plane are removed. As a result, user experience is improved by reducing unnecessary log messages.
++
+link:https://issues.redhat.com/browse/OSSM-12581[OSSM-12581]
