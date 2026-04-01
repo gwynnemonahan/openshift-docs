@@ -57,10 +57,10 @@ metadata:
   name: default
 spec:
   namespace: istio-system
+  profile: ambient
   values:
     pilot:
       trustedZtunnelNamespace: ztunnel
-    profile: ambient
     meshConfig:
       discoverySelectors:
       - matchLabels:
