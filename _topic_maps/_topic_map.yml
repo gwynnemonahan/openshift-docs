@@ -3276,6 +3276,8 @@ Topics:
     File: network-observability-network-policy
   - Name: Network observability DNS resolution analysis
     File: network-observability-dns-resolution-analysis
+  - Name: Network observability scaling
+    File: network-observability-scaling
   - Name: Observing the network traffic
     File: observing-network-traffic
   - Name: Network observability health rules
