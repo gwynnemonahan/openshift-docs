@@ -1,0 +1,45 @@
+// Module included in the following assemblies:
+//
+// * observability/network_observability/monitoring-tls-traffic.adoc
+
+:_mod-docs-content-type: CONCEPT
+[id="tls-monitoring-overview_{context}"]
+= TLS traffic monitoring overview
+
+[role="_abstract"]
+TLS traffic monitoring identifies security risks and maintains compliance by analyzing encrypted traffic metadata without decryption.
+
+Network administrators and security practitioners must verify that encrypted traffic uses secure protocols and cipher suites. Monitoring TLS usage identifies security risks, such as workloads using deprecated TLS versions, and assists in maintaining compliance with security policies.
+
+[id="benefits-tls-monitoring_{context}"]
+== Benefits of TLS monitoring
+
+TLS monitoring provides the following advantages:
+
+* Security risk detection: Identifies workloads using deprecated TLS versions (1.0, 1.1) or weak cipher suites.
+* Compliance auditing: Audits TLS configurations to meet regulatory requirements and security policies.
+* Security posture assessment: Visualizes encrypted network traffic and identifies unencrypted communications.
+* Remediation prioritization: Targets workloads using deprecated protocols for updates.
+
+[id="tls-monitoring-capabilities_{context}"]
+== Network Observability TLS monitoring capabilities
+
+The Network Observability Operator provides TLS tracking through the eBPF agent, which captures TLS metadata from handshake messages without decrypting traffic. This approach provides visibility into encryption protocols while maintaining data privacy.
+
+Key capabilities include:
+
+* Protocol and cipher suite identification: Captures the TLS version, cipher suite, and elliptic curve information from handshake messages.
+* Traffic visualization: Displays encrypted connections with a lock icon in the topology view.
+* Metric aggregation: Analyzes TLS usage patterns through dashboard charts and overview panels.
+* Filtering and analysis: Filters flows by TLS fields to isolate specific protocol versions or cipher suites.
+* Alerting: Configures Prometheus alerts to report deprecated TLS configurations.
+
+[id="monitoring-tls-traffic-workflow_{context}"]
+== TLS traffic monitoring workflow
+
+Monitoring TLS traffic involves the following phases:
+
+* Enabling the TLS tracking feature in the eBPF agent configuration.
+* Analyzing TLS traffic details in the *Network Traffic* view.
+* Visualizing secure connections in the *Topology* view.
+* Configuring alerts to detect deprecated TLS usage.
