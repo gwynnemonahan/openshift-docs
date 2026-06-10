@@ -39,7 +39,7 @@ include::modules/network-observability-lokistack-create.adoc[leveloffset=+2]
 
 include::modules/logging-creating-new-group-cluster-admin-user-role.adoc[leveloffset=+2]
 
-include::modules/logging-loki-log-access.adoc[leveloffset=+1,tags=CustomAdmin;NetObservMode;!LokiMode]
+//include::modules/logging-loki-log-access.adoc[leveloffset=+1,tags=CustomAdmin;NetObservMode;!LokiMode]
 
 include::modules/loki-deployment-sizing.adoc[leveloffset=+2]
 
