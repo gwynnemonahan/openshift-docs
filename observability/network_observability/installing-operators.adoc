@@ -24,31 +24,6 @@ include::modules/network-observability-without-loki.adoc[leveloffset=+1]
 .Additional resources
 * xref:../../observability/network_observability/configuring-operator.adoc#network-observability-enriched-flows_network_observability[Export enriched network flow data]
 
-include::modules/network-observability-loki-install.adoc[leveloffset=+1]
-
-include::modules/network-observability-loki-secret.adoc[leveloffset=+2]
-
-[role="_additional-resources"]
-.Additional resources
-* xref:../../observability/network_observability/installing-operators.adoc#network-observability-lokistack-create_network_observability[Creating a LokiStack custom resource]
-* xref:../../observability/network_observability/flowcollector-api.adoc#network-observability-flowcollector-api-specifications_network_observability[Flow Collector API Reference]
-* xref:../../observability/network_observability/configuring-operator.adoc#network-observability-flowcollector-view_network_observability[Flow Collector sample resource]
-//* xref :../../observability/logging/log_storage/installing-log-storage.adoc#logging-loki-storage_installing-log-storage[Loki object storage]
-
-include::modules/network-observability-lokistack-create.adoc[leveloffset=+2]
-
-include::modules/logging-creating-new-group-cluster-admin-user-role.adoc[leveloffset=+2]
-
-//include::modules/logging-loki-log-access.adoc[leveloffset=+1,tags=CustomAdmin;NetObservMode;!LokiMode]
-
-include::modules/loki-deployment-sizing.adoc[leveloffset=+2]
-
-include::modules/network-observability-lokistack-ingestion-query.adoc[leveloffset=+2]
-
-[role="_additional-resources"]
-.Additional resources
-* link:https://loki-operator.dev/docs/api.md/#loki-grafana-com-v1-IngestionLimitSpec[LokiStack API reference]
-
 include::modules/network-observability-operator-install.adoc[leveloffset=+1]
 
 include::modules/network-observability-important-flowcollector-considerations.adoc[leveloffset=+2]
@@ -67,6 +42,31 @@ include::modules/network-observability-important-flowcollector-considerations.ad
 * xref:../../observability/network_observability/troubleshooting-network-observability.adoc#controller-manager-pod-runs-out-of-memory_network-observability-troubleshooting[Troubleshooting network observability controller manager pod runs out of memory]
 * xref:../../observability/network_observability/understanding-network-observability-operator.adoc#network-observability-architecture_nw-network-observability-operator[Network observability architecture]
 
+include::modules/network-observability-loki-install.adoc[leveloffset=+1]
+
+include::modules/network-observability-loki-secret.adoc[leveloffset=+2]
+
+[role="_additional-resources"]
+.Additional resources
+* xref:../../observability/network_observability/installing-operators.adoc#network-observability-lokistack-create_network_observability[Creating a LokiStack custom resource]
+* xref:../../observability/network_observability/flowcollector-api.adoc#network-observability-flowcollector-api-specifications_network_observability[Flow Collector API Reference]
+* xref:../../observability/network_observability/configuring-operator.adoc#network-observability-flowcollector-view_network_observability[Flow Collector sample resource]
+//* xref :../../observability/logging/log_storage/installing-log-storage.adoc#logging-loki-storage_installing-log-storage[Loki object storage]
+
+include::modules/network-observability-lokistack-create.adoc[leveloffset=+2]
+
+include::modules/logging-creating-new-group-cluster-admin-user-role.adoc[leveloffset=+2]
+
+include::modules/logging-loki-log-access.adoc[leveloffset=+1,tags=CustomAdmin;NetObservMode;!LokiMode]
+
+include::modules/loki-deployment-sizing.adoc[leveloffset=+2]
+
+include::modules/network-observability-lokistack-ingestion-query.adoc[leveloffset=+2]
+
+[role="_additional-resources"]
+.Additional resources
+* link:https://loki-operator.dev/docs/api.md/#loki-grafana-com-v1-IngestionLimitSpec[LokiStack API reference]
+
 include::modules/network-observability-updating-migrating.adoc[leveloffset=+2]
 
 include::modules/network-observability-multitenancy.adoc[leveloffset=+1]
@@ -74,7 +74,6 @@ include::modules/network-observability-multitenancy.adoc[leveloffset=+1]
 [role="_additional-resources"]
 .Additional resources
 * xref:../../operators/operator-reference.adoc#cluster-kube-storage-version-migrator-operator_operator-reference[Kubernetes Storage Version Migrator Operator]
-
 
 [role="_additional-resources"]
 .Additional resources
