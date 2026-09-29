@@ -2,17 +2,18 @@
 
 = Observe
 
+<<<<<<< HEAD
 // Moved to networking.adoc (network-observability.adoc)
 //include::ocp-jobs/dependency-discovery-61-map-which-services-communicate-with-each-other.adoc[leveloffset=+1]
+=======
+include::ocp-jobs/dependency-discovery-61-map-which-services-communicate-with-each-other.adoc[leveloffset=+1]
+>>>>>>> 00b6ba241c (Add job maps for 41 uncaptured OCP jobs)
 
 include::ocp-jobs/monitor-machine-config-daemon-metrics.adoc[leveloffset=+1]
 
 include::ocp-jobs/monitor-network-performance.adoc[leveloffset=+1]
 
-include::ocp-jobs/size-monitoring-infrastructure.adoc[leveloffset=+1]
-
-// Moved to networking.adoc
-//include::ocp-jobs/network-observability-deployment-and-management-113-control-automatic-installation-during-cluster-creation.adoc[leveloffset=+1]
+include::ocp-jobs/network-observability-deployment-and-management-113-control-automatic-installation-during-cluster-creation.adoc[leveloffset=+1]
 
 include::ocp-jobs/observe-audit-and-review-policy-enforcement.adoc[leveloffset=+1]
 

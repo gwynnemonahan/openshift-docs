@@ -2,9 +2,12 @@
 
 = Troubleshoot
 
+<<<<<<< HEAD
 // Moved from install.adoc
 include::ocp-jobs/troubleshoot-installation-issues.adoc[leveloffset=+1]
 
+=======
+>>>>>>> 00b6ba241c (Add job maps for 41 uncaptured OCP jobs)
 include::ocp-jobs/allow-the-configuration-drift-to-remain-and-return-the-node-to-ready-state.adoc[leveloffset=+1]
 
 include::ocp-jobs/escalate-an-unresolved-issue-to-red-hat.adoc[leveloffset=+1]
@@ -13,6 +16,7 @@ include::ocp-jobs/incident-investigation-71-compare-traffic-patterns-before-and-
 
 include::ocp-jobs/remediate-node-configuration-drift-to-return-the-node-to-ready.adoc[leveloffset=+1]
 
+<<<<<<< HEAD
 include::ocp-jobs/gather-information-and-debugging-data-for-windows.adoc[leveloffset=+1]
 
 include::ocp-jobs/restart-hosted-control-plane-components-and-pause-reconciliation.adoc[leveloffset=+1]
@@ -48,6 +52,15 @@ include::ocp-jobs/backup-and-restore-for-hosted-control-planes-on-azure.adoc[lev
 include::ocp-jobs/disaster-recovery-for-hosted-control-planes-using-oadp.adoc[leveloffset=+1]
 
 include::ocp-jobs/automated-disaster-recovery-for-hosted-control-planes-using-oadp.adoc[leveloffset=+1]
+=======
+include::ocp-jobs/restart-hosted-control-plane-components-and-pause-reconciliation.adoc[leveloffset=+1]
+
+include::ocp-jobs/troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-bare-metal.adoc[leveloffset=+1]
+
+include::ocp-jobs/troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-openshift-virtualization.adoc[leveloffset=+1]
+
+include::ocp-jobs/troubleshoot-hosted-clusters-by-platform.adoc[leveloffset=+1]
+>>>>>>> 00b6ba241c (Add job maps for 41 uncaptured OCP jobs)
 
 include::ocp-jobs/troubleshoot-node-performance-issues.adoc[leveloffset=+1]
 
