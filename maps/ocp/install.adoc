@@ -54,4 +54,3 @@ include::ocp-jobs/prepare-your-cluster-for-workloads.adoc[leveloffset=+1]
 // Troubleshoot installation issues moved to troubleshoot.adoc
 // Day-2 bare metal scaling moved to administer.adoc
 // understand-disconnected-environment-update-considerations removed — lives in Disconnected environments
-

@@ -21,4 +21,3 @@ include::modules/hcp-ts-vm-nodes.adoc[leveloffset=+1]
 include::modules/hcp-ts-rhcos.adoc[leveloffset=+1]
 
 include::modules/hcp-ts-non-bm.adoc[leveloffset=+1]
-
