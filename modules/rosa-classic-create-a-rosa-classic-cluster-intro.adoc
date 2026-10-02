@@ -4,7 +4,7 @@
 
 :_mod-docs-content-type: CONCEPT
 [id="rosa-classic-create-a-rosa-classic-cluster-intro_{context}"]
-= Create a ROSA classic cluster
+= Create a {product-title} cluster
 
 [role="_abstract"]
-Create a ROSA classic cluster by completing the tasks in this section. Review each step to prepare, configure, and verify your {product-title} environment.
+Create a {product-title} cluster by completing the tasks in this section. Review each step to prepare, configure, and verify your {product-title} environment.
