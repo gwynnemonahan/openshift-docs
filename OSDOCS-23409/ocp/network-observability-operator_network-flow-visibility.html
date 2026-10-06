@@ -1261,8 +1261,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="network-observability-operator_network-flow-visibility.html"><span class="toc-current">Network Observability Operator</span></a>
 </li>
-<li><a href="network-observability-api-specifications-reference_reference-network-observability-api-specifications.html">Network Observability API specifications</a>
-</li>
 </ul>
 </li>
 <li><a href="_storage.html">Storage</a>
@@ -1801,7 +1799,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#network-observability-openshift-console-integration_network-flow-visibility">Red Hat OpenShift Container Platform console integration</a></li><li class="level-5"><a href="#network-observability-dashboards_network-flow-visibility">Network observability metrics dashboards</a></li><li class="level-5"><a href="#network-observability-topology-views_network-flow-visibility">Network observability topology views</a></li><li class="level-5"><a href="#traffic-flow-tables_network-flow-visibility">Traffic flow tables</a></li><li class="level-4"><a href="#network-observability-network-traffic-overview-view_network-flow-visibility">Observe the network traffic from the Overview view</a></li><li class="level-5"><a href="#network-observability-working-with-overview_network-flow-visibility">Work with the Overview view</a></li><li class="level-4"><a href="#network-observability-trafficflow_network-flow-visibility">Observe the network traffic from the Traffic flows view</a></li><li class="level-5"><a href="#network-observability-working-with-trafficflow_network-flow-visibility">Work with the Traffic flows view</a></li><li class="level-4"><a href="#network-observability-topology_network-flow-visibility">Observe the network traffic from the Topology view</a></li><li class="level-5"><a href="#network-observability-working-with-topology_network-flow-visibility">Work with the Topology view</a></li><li class="level-5"><a href="#network-observability-configuring-options-topology_network-flow-visibility">Configure the advanced options for the Topology view</a></li><li class="level-6"><a href="#network-observability-cao-export-topology_network-flow-visibility">Exporting the topology view</a></li><li class="level-5"><a href="#network-observability-working-with-conversations_network-flow-visibility">Work with conversation tracking</a></li><li class="level-4"><a href="#network-observability-quickfilter_network-flow-visibility">Filter the network traffic</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#network-observability-openshift-console-integration_network-flow-visibility">Red Hat OpenShift Container Platform console integration</a></li><li class="level-5"><a href="#network-observability-dashboards_network-flow-visibility">Network observability metrics dashboards</a></li><li class="level-5"><a href="#network-observability-topology-views_network-flow-visibility">Network observability topology views</a></li><li class="level-5"><a href="#traffic-flow-tables_network-flow-visibility">Traffic flow tables</a></li><li class="level-4"><a href="#network-observability-network-traffic-overview-view_network-flow-visibility">Observe the network traffic from the Overview view</a></li><li class="level-5"><a href="#network-observability-working-with-overview_network-flow-visibility">Work with the Overview view</a></li><li class="level-4"><a href="#network-observability-trafficflow_network-flow-visibility">Observe the network traffic from the Traffic flows view</a></li><li class="level-5"><a href="#network-observability-working-with-trafficflow_network-flow-visibility">Work with the Traffic flows view</a></li><li class="level-4"><a href="#network-observability-topology_network-flow-visibility">Observe the network traffic from the Topology view</a></li><li class="level-5"><a href="#network-observability-working-with-topology_network-flow-visibility">Work with the Topology view</a></li><li class="level-5"><a href="#network-observability-configuring-options-topology_network-flow-visibility">Configure the advanced options for the Topology view</a></li><li class="level-6"><a href="#network-observability-cao-export-topology_network-flow-visibility">Exporting the topology view</a></li><li class="level-5"><a href="#network-observability-working-with-conversations_network-flow-visibility">Work with conversation tracking</a></li><li class="level-4"><a href="#network-observability-quickfilter_network-flow-visibility">Filter the network traffic</a></li><li class="level-4"><a href="#network-observability-api-specifications-reference_network-flow-visibility">Network observability API specifications</a></li><li class="level-5"><a href="#flowcollector-api_network-flow-visibility">FlowCollector API</a></li><li class="level-5"><a href="#flowmetric-api_network-flow-visibility">FlowMetric API</a></li><li class="level-5"><a href="#flowcollector-slice-api_network-flow-visibility">FlowCollectorSlice API</a></li><li class="level-5"><a href="#network-flows-format_network-flow-visibility">Network flows format</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="network-observability-operator_network-flow-visibility">Network Observability Operator</h3>
@@ -2231,14 +2229,81 @@ spec:
 </table>
 </div>
 </div>
+<div class="sect3">
+<h4 id="network-observability-api-specifications-reference_network-flow-visibility">Network observability API specifications</h4>
+<div class="paragraph _abstract">
+<p>Reference documentation for Network Observability custom resources and flow data formats.</p>
+</div>
+<div class="sect4">
+<h5 id="flowcollector-api_network-flow-visibility">FlowCollector API</h5>
+<div class="paragraph">
+<p>The <code>FlowCollector</code> resource configures the Network Observability Operator.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/openshift/network-observability-operator/blob/release-2.0/docs/FlowCollector.md">FlowCollector API for network observability 2.0</a></p>
+</li>
+<li>
+<p><a href="https://github.com/openshift/network-observability-operator/blob/release-1.12/docs/FlowCollector.md">FlowCollector API for network observability 1.12</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="flowmetric-api_network-flow-visibility">FlowMetric API</h5>
+<div class="paragraph">
+<p>The <code>FlowMetric</code> resource creates custom metrics from collected flow logs.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/openshift/network-observability-operator/blob/release-2.0/docs/FlowMetric.md">FlowMetric API for network observability 2.0</a></p>
+</li>
+<li>
+<p><a href="https://github.com/openshift/network-observability-operator/blob/release-1.12/docs/FlowMetric.md">FlowMetric API for network observability 1.12</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="flowcollector-slice-api_network-flow-visibility">FlowCollectorSlice API</h5>
+<div class="paragraph">
+<p>The <code>FlowCollectorSlice`</code> resource enables per-tenant flow collection configuration.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/openshift/network-observability-operator/blob/release-2.0/docs/FlowCollectorSlice.md">FlowCollectorSlice API for network observability 2.0</a></p>
+</li>
+<li>
+<p><a href="https://github.com/openshift/network-observability-operator/blob/release-1.12/docs/FlowCollectorSlice.md">FlowCollectorSlice API for network observability 1.12</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="network-flows-format_network-flow-visibility">Network flows format</h5>
+<div class="paragraph">
+<p>The network flows format reference describes the structure and fields of flow data.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/netobserv/netobserv-operator/blob/main/docs/flows-format.adoc">Network flows format reference</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="configure-high-performance-networking-con_configure-high-performance-networking.html">Configure high-performance networking</a> | ↑ Up: <a href="_networking.html">Networking</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="network-observability-api-specifications-reference_reference-network-observability-api-specifications.html">Network Observability API specifications</a> →</p>
+<p>← Previous: <a href="configure-high-performance-networking-con_configure-high-performance-networking.html">Configure high-performance networking</a> | ↑ Up: <a href="_networking.html">Networking</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="_storage.html">Storage</a> →</p>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-06 14:10:53 -0500
+Last updated 2026-10-06 14:15:13 -0500
 </div>
 </div>
 <style>
