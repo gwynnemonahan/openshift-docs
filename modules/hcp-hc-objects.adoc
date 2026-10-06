@@ -196,7 +196,7 @@ status:
 * `disableAllDefaultSources` is `true` if you want to disable all default OLM catalog resources. The default value is `false`, which enables all default OLM catalog resources.
 * `imageContentSources` contains mirror references for user workloads within the hosted cluster.
 * `<dns.base.domain.name>` is the DNS base domain name.
-* `<bhm_infraenv_namespace>` is the namespace where the Bare Metal Host (BMH) and `InfraEnv` resources are created. 
+* `<bhm_infraenv_namespace>` is the namespace where the Bare Metal Host (BMH) and `InfraEnv` resources are created.
 * `<4.x.y>` is the supported {product-title} version you want to use.
 
 . Create all of the objects that you defined in the YAML files by concatenating them into a file and applying them against the management cluster. To do so, enter the following command:
