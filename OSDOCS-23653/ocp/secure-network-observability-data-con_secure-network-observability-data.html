@@ -479,44 +479,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 
 </style>
 <!-- navmap-right-toc-end -->
-<!-- navmap-preview-warning-start -->
-<style>
-  .navmap-preview-warning {
-    background: #fff1f1;
-    border: 2px solid #c9190b;
-    border-radius: 4px;
-    color: #3b0a0a;
-    font-family: "Open Sans", "DejaVu Sans", sans-serif;
-    margin: 1em auto;
-    max-width: 70em;
-    padding: 1em 1.25em;
-  }
-  .navmap-preview-warning strong { color: #a30000; }
-  .navmap-preview-warning details { margin-top: .75em; }
-  .navmap-preview-warning pre {
-    background: #fff;
-    border: 1px solid #d7d7d7;
-    max-height: 20em;
-    overflow: auto;
-    padding: .75em;
-    white-space: pre-wrap;
-  }
-</style>
-<!-- navmap-preview-warning-end -->
 </head>
-<body id="machine-mgmt-intro-managing-compute_scale-the-number-of-compute-machines-that-use-a-specific-configuration" class="book toc2 toc-left navmap-has-right-toc">
-<div class="navmap-preview-warning" role="alert"><strong>Preview warning: this preview is incomplete.</strong><p>One or more AsciiDoc includes are missing. Content may be absent from this page or from related pages.</p><details><summary>Show missing-include report</summary><pre>Include preflight failed for maps/ocp/navigation.adoc
-
-Missing include targets:
-  maps/ocp/troubleshoot.adoc:53
-    include::ocp-jobs/use-the-vsphere-problem-detector-operator.adoc[leveloffset=+1]
-    expected: maps/ocp/ocp-jobs/use-the-vsphere-problem-detector-operator.adoc
-
-How to fix these errors:
-  1. Restore or create the expected .adoc file, preserving the path relative to the referring map; or
-  2. Change the include directive to the path of the existing source file if the topic was renamed or moved.
-  Then rerun this audit and the preview. Do not ignore the error: Asciidoctor can otherwise generate incomplete HTML.
-</pre></details><details><summary>How to remediate missing content</summary><ol><li>Restore or create the expected <code>.adoc</code> file at the reported path, including its required content and attributes.</li><li>If the topic was renamed or moved, update the reported <code>include::</code> directive to point to the existing file. The path is relative to the file containing the directive.</li><li>If the topic is intentionally not ready, remove the include from the map and track the content gap separately.</li></ol><p>After fixing the includes, rebuild the preview with <code>./preview-map &lt;distro&gt;</code>.</p></details></div>
+<body id="secure-network-observability-data-con_secure-network-observability-data" class="book toc2 toc-left navmap-has-right-toc">
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -526,6 +490,8 @@ How to fix these errors:
 
 <ul class="sectlevel2">
 <li><a href="about-kmm_review-kmm-releases-and-updates.html">About the Kernel Module Management Operator</a>
+</li>
+<li><a href="hosted-control-planes-release-notes_hosted-control-planes-release-notes.html">Hosted control planes release notes</a>
 </li>
 </ul>
 </li>
@@ -561,10 +527,6 @@ How to fix these errors:
 <li><a href="coreos-layering-configuring-on_understand-the-on-cluster-mode-of-the-image-mode-for-openshift-feature.html">About on-cluster image mode</a>
 </li>
 <li><a href="coreos-layering-updating_understand-how-to-update-a-cluster-that-uses-the-image-mode-for-openshift.html">Update with a RHCOS custom layered image</a>
-</li>
-<li><a href="network-observability-operator_understand-network-observability-netobserv.html">Network Observability Operator</a>
-</li>
-<li><a href="network-observability-deployment-and-management-con_network-observability-deployment-and-management.html">Network Observability deployment and management</a>
 </li>
 <li><a href="understanding-openshift_evaluate-openshift-platform-capabilities.html">Understand Red&#160;Hat OpenShift Container Platform</a>
 </li>
@@ -909,29 +871,29 @@ How to fix these errors:
 <li><a href="_disconnected_environments.html">Disconnected environments</a>
 
 <ul class="sectlevel2">
-<li><a href="understand-disconnected-environments-intro_understand-disconnected-environments.html">Understand disconnected environments</a>
+<li><a href="understand-disconnected-environments-intro_understand-disconnected-environments.html">Disconnected environment concepts</a>
 </li>
-<li><a href="installing-agent_install-a-cluster-in-a-disconnected-environment.html">Installing a cluster with the Agent-based Installer</a>
+<li><a href="plan-a-disconnected-installation-intro_plan-a-disconnected-installation.html">Plan a disconnected installation</a>
 </li>
-<li><a href="prerequisites_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift.html">Prerequisites</a>
+<li><a href="installing-agent_install-a-cluster-in-a-disconnected-environment.html">Install a cluster with the Agent-based Installer</a>
 </li>
-<li><a href="installation-oc-mirror-v2-about_mirror-images-to-a-mirror-registry-using-oc-mirror-v2.html">About oc-mirror plugin v2</a>
+<li><a href="create-mirror-registry-intro_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift.html">Create a mirror registry with mirror registry for Red Hat OpenShift</a>
 </li>
-<li><a href="prerequisites_mirror-images-to-a-mirror-registry-using-the-oc-adm-release-mirror-command.html">Prerequisites</a>
+<li><a href="installation-oc-mirror-v2-about_mirror-images-to-a-mirror-registry-using-oc-mirror-v2.html">Mirror images to a mirror registry using oc-mirror v2</a>
 </li>
-<li><a href="oc-mirror-migration-differences_migrate-from-oc-mirror-v1-to-v2.html">Changes from oc-mirror plugin v1 to v2</a>
-</li>
-<li><a href="olm-restricted-network-prereqs_manage-olm-operators-in-a-disconnected-environment.html">Prerequisites</a>
+<li><a href="manage-olm-operators-disconnected-intro_manage-olm-operators-in-a-disconnected-environment.html">Manage OLM Operators in a disconnected environment</a>
 </li>
 <li><a href="mirror-images-for-a-cluster-update-in-a-disconnected-environment-intro_mirror-images-for-a-cluster-update-in-a-disconnected-environment.html">Mirror images for a cluster update in a disconnected environment</a>
 </li>
-<li><a href="update-service-overview_update-a-cluster-in-a-disconnected-environment-using-osus.html">Using the OpenShift Update Service in a disconnected environment</a>
+<li><a href="update-service-overview_update-a-cluster-in-a-disconnected-environment-using-osus.html">Use the OpenShift Update Service in a disconnected environment</a>
 </li>
-<li><a href="updating-cli-prereqs_update-a-cluster-in-a-disconnected-environment-without-using-osus.html">Prerequisites for a cluster update</a>
+<li><a href="update-disconnected_update-a-cluster-in-a-disconnected-environment-without-using-osus.html">Updating the disconnected cluster</a>
 </li>
-<li><a href="about-disconnected-updates-uninstalling-osus_uninstall-osus-from-a-cluster.html">Uninstalling the OpenShift Update Service from a cluster</a>
+<li><a href="about-disconnected-updates-uninstalling-osus_uninstall-osus-from-a-cluster.html">Uninstall the OpenShift Update Service from a cluster</a>
 </li>
-<li><a href="installation-about-mirror-registry_convert-a-connected-cluster-to-disconnected.html">About the mirror registry</a>
+<li><a href="configure-trust-and-mirroring-con_configure-trust-and-mirroring.html">Configure trust and mirroring</a>
+</li>
+<li><a href="convert-connected-to-disconnected-intro_convert-a-connected-cluster-to-disconnected.html">Convert a connected cluster to disconnected</a>
 </li>
 <li><a href="deploying-hosted-control-planes-in-a-disconnected-environment-intro_deploying-hosted-control-planes-in-a-disconnected-environment.html">Deploying hosted control planes in a disconnected environment</a>
 </li>
@@ -989,7 +951,7 @@ How to fix these errors:
 </li>
 <li><a href="core-user-password_change-the-core-user-password-for-node-access.html">Change the core user password for node access</a>
 </li>
-<li><a href="configure-control-plane-failure-domains-con_configure-control-plane-failure-domains.html">Configure control plane failure domains</a>
+<li><a href="spread-the-control-plane-across-failure-domains-con_spread-the-control-plane-across-failure-domains.html">Spread the control plane across failure domains</a>
 </li>
 <li><a href="multi-architecture-configuring-your-cluster_configure-multi-architecture-node-workload-deployments.html">Configuring your cluster with multi-architecture compute machines</a>
 </li>
@@ -1029,6 +991,12 @@ How to fix these errors:
 </li>
 <li><a href="manage-the-configuration-and-lifecycle-of-control-plane-machines-con_manage-the-configuration-and-lifecycle-of-control-plane-machines.html">Manage the configuration and lifecycle of control plane machines</a>
 </li>
+<li><a href="manage-the-configuration-and-lifecycle-of-compute-machines-con_manage-the-configuration-and-lifecycle-of-compute-machines.html">Manage the configuration and lifecycle of compute machines</a>
+</li>
+<li><a href="identify-and-group-compute-machines-con_identify-and-group-compute-machines.html">Identify and group compute machines</a>
+</li>
+<li><a href="identify-and-group-control-plane-machines-con_identify-and-group-control-plane-machines.html">Identify and group control plane machines</a>
+</li>
 <li><a href="multi-architecture-scheduling_manage-workloads-on-multi-architecture-clusters.html">Scheduled workloads on clusters with multi-architecture compute machines</a>
 </li>
 <li><a href="hcp-import-intro_manually-import-a-hosted-cluster.html">Manually importing a hosted cluster</a>
@@ -1063,7 +1031,7 @@ How to fix these errors:
 </li>
 <li><a href="machine-health-checks-about_understand-machine-health-check-behavior.html">About machine health checks</a>
 </li>
-<li><a href="machine-about-phases_understand-the-machine-lifecycle.html">Machine phases</a>
+<li><a href="understand-the-machine-lifecycle-con_understand-the-machine-lifecycle.html">Understand the machine lifecycle</a>
 </li>
 <li><a href="understand-the-out-of-cluster-mode-of-the-image-mode-for-openshift-feature-con_understand-the-out-of-cluster-mode-of-the-image-mode-for-openshift-feature.html">Understand the out-of-cluster mode of the Image Mode for OpenShift feature</a>
 </li>
@@ -1127,8 +1095,6 @@ How to fix these errors:
 </li>
 <li><a href="configure-multi-tenant-namespace-isolation-con_configure-multi-tenant-namespace-isolation.html">Configure multi-tenant namespace isolation</a>
 </li>
-<li><a href="configure-the-network-observability-operator-flowcollector-con_configure-the-network-observability-operator-flowcollector.html">Configure the Network Observability Operator FlowCollector</a>
-</li>
 <li><a href="define-how-much-disk-space-a-single-container-on-my-nodes-can-use-for-its-files-and-layers-con_define-how-much-disk-space-a-single-container-on-my-nodes-can-use-for-its-files-and-layers.html">Define how much disk space a single container can use</a>
 </li>
 <li><a href="define-the-maximum-size-of-the-container-log-file-before-it-is-rotated-con_define-the-maximum-size-of-the-container-log-file-before-it-is-rotated.html">Define the maximum size of the container log file before it is rotated</a>
@@ -1185,7 +1151,7 @@ How to fix these errors:
 </li>
 <li><a href="about-kmm_manage-kernel-modules-across-cluster-nodes.html">About the Kernel Module Management Operator</a>
 </li>
-<li><a href="installation-oc-mirror-v2-about_mirror-container-images-to-a-local-registry.html">About oc-mirror plugin v2</a>
+<li><a href="installation-oc-mirror-v2-about_mirror-container-images-to-a-local-registry.html">Mirror images to a mirror registry using oc-mirror v2</a>
 </li>
 <li><a href="organize-image-versions-with-tags-con_organize-image-versions-with-tags.html">Organize image versions with tags</a>
 </li>
@@ -1211,11 +1177,13 @@ How to fix these errors:
 </li>
 <li><a href="cpmso-feat-auto-update_apply-configuration-changes-to-control-plane-machines-with-automation.html">Automatic updates to the control plane configuration</a>
 </li>
-<li><a href="change-the-configuration-of-compute-machines-by-updating-a-compute-machine-set-con_change-the-configuration-of-compute-machines-by-updating-a-compute-machine-set.html">Change the configuration of compute machines by updating a compute machine set</a>
+<li><a href="change-the-configuration-of-compute-machines-by-updating-compute-machine-resources-con_change-the-configuration-of-compute-machines-by-updating-compute-machine-resources.html">Change the configuration of compute machines by updating compute machine resources</a>
+</li>
+<li><a href="enable-automated-machine-management-on-user-provisioned-infrastructure-con_enable-automated-machine-management-on-user-provisioned-infrastructure.html">Enable automated machine management on user-provisioned infrastructure</a>
 </li>
 <li><a href="apply-configuration-changes-to-compute-machines-with-automation-con_apply-configuration-changes-to-compute-machines-with-automation.html">Apply configuration changes to compute machines with automation</a>
 </li>
-<li><a href="mapi-to-capi-migration-overview_change-the-authoritative-api-for-machine-management-resources.html">Machine API to Cluster API resource migration</a>
+<li><a href="change-the-authoritative-api-for-machine-management-resources-con_change-the-authoritative-api-for-machine-management-resources.html">Change the authoritative API for machine management resources</a>
 </li>
 <li><a href="private-clusters-about_configure-a-private-cluster.html">About private clusters</a>
 </li>
@@ -1288,7 +1256,6 @@ How to fix these errors:
 </ul>
 </li>
 <li><a href="_networking.html">Networking</a>
-
 <ul class="sectlevel2">
 <li><a href="configure-and-maintain-the-pod-network-cni-con_configure-and-maintain-the-pod-network-cni.html">Configure and maintain the pod network</a>
 </li>
@@ -1304,7 +1271,31 @@ How to fix these errors:
 </li>
 <li><a href="configure-high-performance-networking-con_configure-high-performance-networking.html">Configure high-performance networking</a>
 </li>
+<li><a href="network-observability-operator_understand-network-observability-netobserv.html">Network Observability Operator</a>
+</li>
+<li><a href="evaluate-network-observability-prerequisites-and-requirements-con_evaluate-network-observability-prerequisites-and-requirements.html">Evaluate network observability prerequisites and requirements</a>
+</li>
+<li><a href="network-observability-deployment-and-management-con_network-observability-deployment-and-management.html">Network Observability deployment and management</a>
+</li>
+<li><a href="verify-network-observability-installation-intro_verify-network-observability-installation.html">Verify Network Observability installation</a>
+</li>
+<li><a href="configure-the-network-observability-operator-flowcollector-con_configure-the-network-observability-operator-flowcollector.html">Configure the Network Observability Operator FlowCollector</a>
+</li>
+<li><a href="control-network-policies-and-access-for-network-observability-operator-con_control-network-policies-and-access-for-network-observability-operator.html">Control network policies and access for the Network Observability Operator</a>
+</li>
+<li><a href="secure-network-observability-data-con_secure-network-observability-data.html"><span class="toc-current">Secure network observability data</span></a>
+</li>
 <li><a href="network-observability-operator_network-flow-visibility.html">Network Observability Operator</a>
+</li>
+<li><a href="network-observability-network-traffic-overview-view_monitor-network-traffic-with-network-observability.html">Observe the network traffic from the Overview view</a>
+</li>
+<li><a href="network-observability-health-dashboard-overview_verify-security-and-network-observability-operator-health.html">Health dashboards</a>
+</li>
+<li><a href="configure-network-traffic-flowlogs-pipeline-kafka_troubleshoot-network-issues-136-diagnose-network-flow-issues-netobserv.html">Flowlogs-Pipeline does not consume network flows after installing Kafka</a>
+</li>
+<li><a href="network-observability-integration-intro_network-observability-integration.html">Network Observability integration</a>
+</li>
+<li><a href="upgrade-network-observability-operator-version-con_upgrade-network-observability-operator-version.html">Upgrade the Network Observability Operator version</a>
 </li>
 </ul>
 </li>
@@ -1462,6 +1453,18 @@ How to fix these errors:
 </li>
 <li><a href="configure-confidential-vms-con_configure-confidential-vms.html">Configure confidential VMs</a>
 </li>
+<li><a href="isolate-compute-machines-from-other-tenants-con_isolate-compute-machines-from-other-tenants.html">Isolate compute machines from other tenants</a>
+</li>
+<li><a href="protect-the-instance-metadata-endpoint-for-compute-machines-con_protect-the-instance-metadata-endpoint-for-compute-machines.html">Protect the instance metadata endpoint for compute machines</a>
+</li>
+<li><a href="harden-boot-integrity-for-compute-machines-con_harden-boot-integrity-for-compute-machines.html">Harden boot integrity for compute machines</a>
+</li>
+<li><a href="isolate-control-plane-machines-from-other-tenants-con_isolate-control-plane-machines-from-other-tenants.html">Isolate control plane machines from other tenants</a>
+</li>
+<li><a href="protect-the-instance-metadata-endpoint-for-control-plane-machines-con_protect-the-instance-metadata-endpoint-for-control-plane-machines.html">Protect the instance metadata endpoint for control plane machines</a>
+</li>
+<li><a href="harden-boot-integrity-for-control-plane-machines-con_harden-boot-integrity-for-control-plane-machines.html">Harden boot integrity for control plane machines</a>
+</li>
 <li><a href="connect-workloads-to-additional-networks-con_connect-workloads-to-additional-networks.html">Connect workloads to additional networks</a>
 </li>
 <li><a href="nw-multi-network-policy-differences_control-traffic-on-secondary-networks.html">Differences between multi-network policy and network policy</a>
@@ -1496,8 +1499,6 @@ How to fix these errors:
 <li><a href="monitor-machine-config-daemon-metrics-con_monitor-machine-config-daemon-metrics.html">Monitor Machine Config Daemon metrics</a>
 </li>
 <li><a href="monitor-network-performance-con_monitor-network-performance.html">Monitor network performance</a>
-</li>
-<li><a href="network-observability-deployment-and-management-113-control-automatic-installation-during-cluster-creation-con_network-observability-deployment-and-management-113-control-automatic-installation-during-cluster-creation.html">Control automatic installation during cluster creation</a>
 </li>
 <li><a href="nw-networkpolicy-audit-concept_observe-audit-and-review-policy-enforcement.html">Audit logging</a>
 </li>
@@ -1534,11 +1535,10 @@ How to fix these errors:
 </li>
 <li><a href="automate-cicd-with-image-streams-intro_automate-cicd-with-image-streams.html">Automate CI/CD with image streams</a>
 </li>
-<li><a href="network-observability-deployment-and-management-con_network-observability-deployment-and-management.html">Network Observability deployment and management</a>
-</li>
 </ul>
 </li>
 <li><a href="_optimize.html">Optimize</a>
+
 <ul class="sectlevel2">
 <li><a href="about-node-tuning-operator_node-tuning-operator.html">Node Tuning Operator</a>
 </li>
@@ -1574,7 +1574,7 @@ How to fix these errors:
 </li>
 <li><a href="nodes-nodes-managing-max-pods-proc_adjust-maximum-number-of-pods-on-a-node.html">Configure the maximum number of pods per node</a>
 </li>
-<li><a href="machineset-manually-scaling_scale-compute-resources.html">Scale a compute machine set manually</a>
+<li><a href="scale-compute-resources-con_scale-compute-resources.html">Scale workloads to match demand</a>
 </li>
 <li><a href="nodes-cluster-resource-configure-about_configure-cluster-memory-to-meet-container-memory-and-risk-requirements.html">Understanding how to manage application memory</a>
 </li>
@@ -1614,7 +1614,7 @@ How to fix these errors:
 </li>
 <li><a href="infrastructure-components_separate-infrastructure-machines-from-machines-that-run-workloads.html">Red&#160;Hat OpenShift Container Platform infrastructure components</a>
 </li>
-<li><a href="machine-mgmt-intro-managing-compute_scale-the-number-of-compute-machines-that-use-a-specific-configuration.html"><span class="toc-current">Compute machine management</span></a>
+<li><a href="scale-compute-capacity-con_scale-compute-capacity.html">Scale compute capacity</a>
 </li>
 <li><a href="machine-mgmt-intro-add-for-upi_add-compute-machines-manually.html">Compute machine creation on user-provisioned infrastructure</a>
 </li>
@@ -1622,11 +1622,25 @@ How to fix these errors:
 </li>
 <li><a href="machineset-label-gpu-autoscaler_label-gpu-machine-sets-for-autoscaler.html">Label GPU machine sets for the cluster autoscaler</a>
 </li>
-<li><a href="machineset-non-guaranteed-instance_creating-machineset-aws.html">Machine sets that deploy machines as Spot Instances</a>
+<li><a href="use-interruptible-capacity-for-lower-cost-machines-con_use-interruptible-capacity-for-lower-cost-machines.html">Use interruptible capacity for lower-cost machines</a>
 </li>
-<li><a href="machineset-capacity-reservation_creating-machineset-aws.html">Configure Capacity Reservations by using machine sets</a>
+<li><a href="reserve-capacity-for-planned-workloads-con_reserve-capacity-for-planned-workloads.html">Reserve capacity for planned workloads</a>
 </li>
-<li><a href="nvidia-gpu-aws-adding-a-gpu-node_add-gpu-nodes-to-machine-sets.html">Add a GPU node to an existing Red&#160;Hat OpenShift Container Platform cluster</a>
+<li><a href="reserve-capacity-for-planned-control-plane-workloads-con_reserve-capacity-for-planned-control-plane-workloads.html">Reserve capacity for planned control plane workloads</a>
+</li>
+<li><a href="accelerate-workloads-with-gpus-con_accelerate-workloads-with-gpus.html">Accelerate workloads with GPUs</a>
+</li>
+<li><a href="improve-network-performance-for-compute-machines-con_improve-network-performance-for-compute-machines.html">Improve network performance for compute machines</a>
+</li>
+<li><a href="improve-network-performance-for-control-plane-machines-con_improve-network-performance-for-control-plane-machines.html">Improve network performance for control plane machines</a>
+</li>
+<li><a href="improve-storage-performance-for-compute-machines-con_improve-storage-performance-for-compute-machines.html">Improve storage performance for compute machines</a>
+</li>
+<li><a href="improve-storage-performance-for-control-plane-machines-con_improve-storage-performance-for-control-plane-machines.html">Improve storage performance for control plane machines</a>
+</li>
+<li><a href="keep-data-off-the-root-volume-for-compute-machines-con_keep-data-off-the-root-volume-for-compute-machines.html">Keep data off the root volume for compute machines</a>
+</li>
+<li><a href="keep-data-off-the-root-volume-for-control-plane-machines-con_keep-data-off-the-root-volume-for-control-plane-machines.html">Keep data off the root volume for control plane machines</a>
 </li>
 </ul>
 </li>
@@ -1672,8 +1686,6 @@ How to fix these errors:
 </li>
 <li><a href="cnf-measuring-latency_validate-node-performance-with-latency-tests.html">Measuring latency</a>
 </li>
-<li><a href="verify-network-observability-installation-intro_verify-network-observability-installation.html">Verify Network Observability installation</a>
-</li>
 </ul>
 </li>
 <li><a href="_troubleshoot.html">Troubleshoot</a>
@@ -1690,6 +1702,8 @@ How to fix these errors:
 <li><a href="restart-hosted-control-plane-components-and-pause-reconciliation-con_restart-hosted-control-plane-components-and-pause-reconciliation.html">Restart hosted control plane components and pause reconciliation</a>
 </li>
 <li><a href="troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-bare-metal-con_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-bare-metal.html">Troubleshoot hosted clusters on bare metal</a>
+</li>
+<li><a href="troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-ibmz-con_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-ibmz.html">Troubleshoot hosted clusters on IBM Z</a>
 </li>
 <li><a href="troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-openshift-virtualization-con_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-openshift-virtualization.html">Troubleshoot hosted clusters on OpenShift Virtualization</a>
 </li>
@@ -1708,6 +1722,8 @@ How to fix these errors:
 <li><a href="hcp-backup-etcd-snapshot-restore_control-plane-disaster-recovery.html">Restoring etcd data by using the etcd snapshot method</a>
 </li>
 <li><a href="nw-pod-network-connectivity-checks_troubleshoot-network-issues.html">Connection health checks that are performed</a>
+</li>
+<li><a href="troubleshoot-network-issues-diagnose-node-networking-and-ovs-con_troubleshoot-network-issues-diagnose-node-networking-and-ovs.html">Diagnose node networking and Open vSwitch</a>
 </li>
 <li><a href="restore-replace-unhealthy-etcd-member_replace-unhealthy-etcd-members.html">Replacing the unhealthy etcd member</a>
 </li>
@@ -1737,7 +1753,7 @@ How to fix these errors:
 </li>
 <li><a href="nw-pod-network-connectivity-checks_troubleshoot-connectivity-and-internal-subnets.html">Connection health checks that are performed</a>
 </li>
-<li><a href="investigating-why-windows-machine-compute-node_troubleshoot-machine-management.html">Investigating why Windows Machine does not become compute node</a>
+<li><a href="troubleshoot-machine-management-con_troubleshoot-machine-management.html">Troubleshoot machine management</a>
 </li>
 <li><a href="control-plane-backup-restore-operations-overview_investigate-an-active-cluster-issue.html">Control plane backup and restore operations</a>
 </li>
@@ -1747,21 +1763,15 @@ How to fix these errors:
 </li>
 <li><a href="oadp-performance-network-requirements_troubleshoot-node-performance-issues-collect-node-profiling-data.html">OADP network requirements</a>
 </li>
-<li><a href="network-observability-operator-stub_troubleshoot-network-issues-1362-execute-localized-network-diagnostics-using-the-oc-netobserv-cli.html">Network Observability Operator features</a>
-</li>
 <li><a href="adminnetworkpolicy_troubleshoot-network-issues-132-troubleshoot-network-policies.html">AdminNetworkPolicy</a>
 </li>
 <li><a href="nw-ingress-sharding-route-labels_troubleshoot-network-issues-133-troubleshoot-ingress-and-routes.html">Configure Ingress Controller sharding by using route labels</a>
-</li>
-<li><a href="configure-network-traffic-flowlogs-pipeline-kafka_troubleshoot-network-issues-136-diagnose-network-flow-issues-netobserv.html">Flowlogs-Pipeline does not consume network flows after installing Kafka</a>
 </li>
 <li><a href="investigating-master-node-installation-issues_troubleshoot-network-issues-131-access-cluster-nodes-for-diagnostics.html">Investigating control plane node installation issues</a>
 </li>
 <li><a href="troubleshoot-ovn-kubernetes-networking-issues-con_troubleshoot-ovn-kubernetes-networking-issues.html">Troubleshoot OVN-Kubernetes networking issues</a>
 </li>
 <li><a href="adding-network-attachment-definition-to-pods_troubleshoot-network-issues-135-trace-openflow-with-ovnkube-trace.html">Add the network attachment definition to your pods</a>
-</li>
-<li><a href="network-observability-health-rules-and-performance_troubleshoot-network-issues-1361-investigate-packet-drops-netobserv.html">Identify network issues with automated health rules</a>
 </li>
 <li><a href="nw-pod-network-connectivity-checks_configure-and-maintain-the-pod-network-cni-225-diagnose-and-resolve-node-network-configuration-errors.html">Connection health checks that are performed</a>
 </li>
@@ -1772,6 +1782,8 @@ How to fix these errors:
 <li><a href="control-plane-backup-restore-operations-overview_high-availability-and-disaster-recovery-for-hosted-control-planes-automated-disaster-recovery-for-a-hosted-cluster-by-using-oadp.html">Control plane backup and restore operations</a>
 </li>
 <li><a href="investigating-master-node-installation-issues_manage-kernel-modules-across-cluster-nodes-troubleshoot-kernel-module-loading-issues.html">Investigating control plane node installation issues</a>
+</li>
+<li><a href="troubleshoot-operating-system-issues-con_troubleshoot-operating-system-issues.html">Troubleshoot operating system issues</a>
 </li>
 <li><a href="nw-ovn-kubernetes-pod-connectivity-checks_connectivity-troubleshooting-11-diagnose-failed-connections-between-pods-and-services.html">Checking the OVN-Kubernetes pod network connectivity</a>
 </li>
@@ -1799,7 +1811,13 @@ How to fix these errors:
 </li>
 <li><a href="gathering-operator-logs_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools.html">Gathering Operator logs</a>
 </li>
-<li><a href="oadp-running-must-gather_investigate-an-active-cluster-issue-collect-comprehensive-data-for-vendor-support.html">Using the must-gather tool</a>
+<li><a href="collect-comprehensive-data-for-vendor-support-con_investigate-an-active-cluster-issue-collect-comprehensive-data-for-vendor-support.html">Collect comprehensive data for vendor support</a>
+</li>
+<li><a href="collect-host-sosreports-and-journal-logs-con_investigate-an-active-cluster-issue-collect-host-sosreports-and-journal-logs.html">Collect host sosreports and journal logs</a>
+</li>
+<li><a href="capture-network-traces-for-support-con_investigate-an-active-cluster-issue-capture-network-traces-for-support.html">Capture network traces for support</a>
+</li>
+<li><a href="use-host-toolbox-for-diagnostics-con_investigate-an-active-cluster-issue-use-host-toolbox-for-diagnostics.html">Use the host toolbox for diagnostics</a>
 </li>
 <li><a href="understanding-oc-log-levels_investigate-an-active-cluster-issue-summarize-cluster-specifications.html">Understanding OpenShift CLI (<code>oc</code>) log levels</a>
 </li>
@@ -1829,6 +1847,12 @@ How to fix these errors:
 </li>
 <li><a href="control-plane-backup-restore-operations-overview_encrypt-etcd-test-restore-procedures.html">Control plane backup and restore operations</a>
 </li>
+<li><a href="troubleshoot-clusters-that-use-the-cluster-api-con_troubleshoot-clusters-that-use-the-cluster-api.html">Troubleshoot clusters that use the Cluster API</a>
+</li>
+<li><a href="troubleshoot-the-control-plane-machine-set-con_troubleshoot-the-control-plane-machine-set.html">Troubleshoot the control plane machine set</a>
+</li>
+<li><a href="collect-console-logs-from-machines-that-fail-to-boot-con_collect-console-logs-from-machines-that-fail-to-boot.html">Collect console logs from machines that fail to boot</a>
+</li>
 </ul>
 </li>
 <li><a href="_reference.html">Reference</a>
@@ -1843,194 +1867,80 @@ How to fix these errors:
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#machineset-manually-scaling_scale-the-number-of-compute-machines-that-use-a-specific-configuration">Scale a compute machine set manually</a></li><li class="level-4"><a href="#machineset-delete-policy_scale-the-number-of-compute-machines-that-use-a-specific-configuration">The compute machine set deletion policy</a></li><li class="level-4"><a href="#machineset-modifying_scale-the-number-of-compute-machines-that-use-a-specific-configuration">Modify a compute machine set by using the CLI</a></li><li class="level-4"><a href="#machineset-creating_scale-the-number-of-compute-machines-that-use-a-specific-configuration">Create a compute machine set</a></li><li class="level-4"><a href="#machineset-yaml-aws_scale-the-number-of-compute-machines-that-use-a-specific-configuration">Sample YAML for a compute machine set custom resource on AWS</a></li><li class="level-4"><a href="#machineset-yaml-azure_scale-the-number-of-compute-machines-that-use-a-specific-configuration">Sample YAML for a compute machine set custom resource on Azure</a></li><li class="level-4"><a href="#machineset-yaml-azure-stack-hub_scale-the-number-of-compute-machines-that-use-a-specific-configuration">Sample YAML for a compute machine set custom resource on Azure Stack Hub</a></li><li class="level-4"><a href="#machineset-yaml-baremetal_scale-the-number-of-compute-machines-that-use-a-specific-configuration">Sample YAML for a compute machine set custom resource on bare metal</a></li><li class="level-4"><a href="#machineset-yaml-gcp_scale-the-number-of-compute-machines-that-use-a-specific-configuration">Sample YAML for a compute machine set custom resource on Google Cloud</a></li><li class="level-5"><a href="#cpmso-yaml-provider-spec-gcp-oc_scale-the-number-of-compute-machines-that-use-a-specific-configuration">Values obtained by using the OpenShift CLI</a></li><li class="level-4"><a href="#machineset-yaml-ibm-cloud_scale-the-number-of-compute-machines-that-use-a-specific-configuration">Sample YAML for a compute machine set custom resource on IBM Cloud</a></li><li class="level-4"><a href="#machineset-yaml-ibm-power-vs_scale-the-number-of-compute-machines-that-use-a-specific-configuration">Sample YAML for a compute machine set custom resource on IBM Power Virtual Server</a></li><li class="level-4"><a href="#machineset-yaml-nutanix_scale-the-number-of-compute-machines-that-use-a-specific-configuration">Sample YAML for a compute machine set custom resource on Nutanix</a></li><li class="level-5"><a href="#machineset-yaml-nutanix-oc_scale-the-number-of-compute-machines-that-use-a-specific-configuration">Values obtained by using the OpenShift CLI</a></li><li class="level-4"><a href="#machineset-yaml-osp_scale-the-number-of-compute-machines-that-use-a-specific-configuration">Sample YAML for a compute machine set custom resource on RHOSP</a></li><li class="level-4"><a href="#machineset-yaml-vsphere_scale-the-number-of-compute-machines-that-use-a-specific-configuration">Sample YAML for a compute machine set custom resource on vSphere</a></li><li class="level-5"><a href="#capi-creating-machine-template_scale-the-number-of-compute-machines-that-use-a-specific-configuration">Create a Cluster API machine template</a></li><li class="level-5"><a href="#capi-creating-machine-set_scale-the-number-of-compute-machines-that-use-a-specific-configuration">Create a Cluster API compute machine set</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#network-observability-loki-secret_secure-network-observability-data">Create a secret for Loki storage</a></li><li class="level-5"><a href="#network-observability-role-based-access-control-for-loki-logs_secure-network-observability-data">Role-based access control for Loki logs</a></li><li class="level-6"><a href="#grant-non-admin-users-cluster-wide-log-access_secure-network-observability-data">Grant non-admin users cluster-wide log access</a></li><li class="level-4"><a href="#network-observability-multi-tenancy_secure-network-observability-data">Enable multi-tenancy in network observability</a></li><li class="level-5"><a href="#network-observability-grant-access-lokistack-secrets_secure-network-observability-data">Grant access to LokiStack secrets</a></li><li class="level-5"><a href="#network-observability-grant-access-kafka-secrets_secure-network-observability-data">Grant access to Kafka secrets</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
-<h3 id="machine-mgmt-intro-managing-compute_scale-the-number-of-compute-machines-that-use-a-specific-configuration">Compute machine management</h3>
+<h3 id="secure-network-observability-data-con_secure-network-observability-data">Secure network observability data</h3>
 <div class="paragraph _abstract">
-<p>As a cluster administrator, you can manage the compute machines in your Red&#160;Hat OpenShift Container Platform cluster.</p>
-</div>
-<div class="paragraph">
-<p>For example, you can perform the following actions:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Create a compute machine set for the following cloud providers:</p>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="../machine_management/creating_machinesets/creating-machineset-aws.html#creating-machineset-aws">AWS</a></p>
-</li>
-<li>
-<p><a href="../machine_management/creating_machinesets/creating-machineset-azure.html#creating-machineset-azure">Azure</a></p>
-</li>
-<li>
-<p><a href="../machine_management/creating_machinesets/creating-machineset-azure-stack-hub.html#creating-machineset-azure-stack-hub">Azure Stack Hub</a></p>
-</li>
-<li>
-<p><a href="../machine_management/creating_machinesets/creating-machineset-gcp.html#creating-machineset-gcp">Google Cloud</a></p>
-</li>
-<li>
-<p><a href="../machine_management/creating_machinesets/creating-machineset-ibm-cloud.html#creating-machineset-ibm-cloud">IBM Cloud</a></p>
-</li>
-<li>
-<p><a href="../machine_management/creating_machinesets/creating-machineset-ibm-power-vs.html#creating-machineset-ibm-power-vs">IBM Power Virtual Server</a></p>
-</li>
-<li>
-<p><a href="../machine_management/creating_machinesets/creating-machineset-nutanix.html#creating-machineset-nutanix">Nutanix</a></p>
-</li>
-<li>
-<p><a href="../machine_management/creating_machinesets/creating-machineset-osp.html#creating-machineset-osp">RHOSP</a></p>
-</li>
-<li>
-<p><a href="../machine_management/creating_machinesets/creating-machineset-vsphere.html#creating-machineset-vsphere">vSphere</a></p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Create a machine set for a bare metal deployment: <a href="../machine_management/creating_machinesets/creating-machineset-bare-metal.html#creating-machineset-bare-metal">Creating a compute machine set on bare metal</a></p>
-</li>
-<li>
-<p><a href="../machine_management/manually-scaling-machineset.html#manually-scaling-machineset">Manually scale a compute machine set</a> by adding or removing a machine from the compute machine set.</p>
-</li>
-<li>
-<p><a href="../machine_management/modifying-machineset.html#modifying-machineset">Modify a compute machine set</a> through the <code>MachineSet</code> YAML configuration file.</p>
-</li>
-<li>
-<p><a href="../machine_management/deleting-machine.html#deleting-machine">Delete</a> a machine.</p>
-</li>
-<li>
-<p><a href="../machine_management/creating-infrastructure-machinesets.html#creating-infrastructure-machinesets">Create infrastructure compute machine sets</a>.</p>
-</li>
-<li>
-<p>Configure and deploy a <a href="../machine_management/deploying-machine-health-checks.html#deploying-machine-health-checks">machine health check</a> to automatically fix damaged machines in a machine pool.</p>
-</li>
-</ul>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>When creating a new machine set, you should specify the latest image to use for the boot image. For more information about updating the boot image on your cluster, see "Manually updating the boot image" and "Boot image management". The method to update or specify the image varies by platform.</p>
-</div>
-</td>
-</tr>
-</table>
+<p>Network flow data can reveal sensitive information about the workloads running in a cluster. Protecting it means controlling who can read stored flows, isolating tenants from one another, and securing the credentials that the collection pipeline uses to reach its storage backend.</p>
 </div>
 <div class="sect3">
-<h4 id="machineset-manually-scaling_scale-the-number-of-compute-machines-that-use-a-specific-configuration">Scale a compute machine set manually</h4>
+<h4 id="network-observability-loki-secret_secure-network-observability-data">Create a secret for Loki storage</h4>
 <div class="paragraph _abstract">
-<p>To add or remove an instance of a machine in a compute machine set, you can manually scale the compute machine set.</p>
+<p>Create a secret with cloud storage credentials, such as for Amazon Web Services (AWS), to allow the Loki Operator to access the necessary object store for log persistence.</p>
 </div>
 <div class="paragraph">
-<p>This guidance is relevant to fully automated, installer-provisioned infrastructure installations. Customized, user-provisioned infrastructure installations do not have compute machine sets.</p>
-</div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>Install an Red&#160;Hat OpenShift Container Platform cluster and the <code>oc</code> command line.</p>
-</li>
-<li>
-<p>Log in to  <code>oc</code> as a user with <code>cluster-admin</code> permission.</p>
-</li>
-</ul>
+<p>The Loki Operator supports a few log storage options, such as AWS S3, Google Cloud Storage, Azure, Swift, Minio, OpenShift Data Foundation. The following example shows how to create a secret for AWS S3 storage. The secret created in this example, <code>loki-s3</code>, is referenced in "Creating a LokiStack custom resource". You can create this secret in the web console or CLI.</p>
 </div>
 <div class="olist arabic">
 <div class="title">Procedure</div>
 <ol class="arabic">
 <li>
-<p>View the compute machine sets that are in the cluster by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get machinesets.machine.openshift.io -n openshift-machine-api</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The compute machine sets are listed in the form of <code>&lt;clusterid&gt;-worker-&lt;aws-region-az&gt;</code>.</p>
-</div>
+<p>Using the web console, navigate to the <strong>Project</strong> &#8594; <strong>All Projects</strong> dropdown and select <strong>Create Project</strong>.</p>
 </li>
 <li>
-<p>View the compute machines that are in the cluster by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get machines.machine.openshift.io -n openshift-machine-api</code></pre>
-</div>
-</div>
+<p>Name the project <code>netobserv-loki</code> and click <strong>Create</strong>.</p>
 </li>
 <li>
-<p>Set the annotation on the compute machine that you want to delete by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc annotate machines.machine.openshift.io/&lt;machine_name&gt; -n openshift-machine-api machine.openshift.io/delete-machine="true"</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Scale the compute machine set by running one of the following commands:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc scale --replicas=2 machinesets.machine.openshift.io &lt;machineset&gt; -n openshift-machine-api</code></pre>
-</div>
-</div>
+<p>Navigate to the Import icon, <strong>+</strong>, in the top right corner. Paste your YAML file into the editor.</p>
 <div class="paragraph">
-<p>Or:</p>
+<p>The following shows an example secret YAML file for S3 storage:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc edit machinesets.machine.openshift.io &lt;machineset&gt; -n openshift-machine-api</code></pre>
-</div>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Tip">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>You can alternatively apply the following YAML to scale the compute machine set:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: machine.openshift.io/v1beta1
-kind: MachineSet
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: v1
+kind: Secret
 metadata:
-  name: &lt;machineset&gt;
-  namespace: openshift-machine-api
-spec:
-  replicas: 2</code></pre>
+  name: loki-s3
+  namespace: netobserv-loki
+stringData:
+  access_key_id: QUtJQUlPU0ZPRE5ON0VYQU1QTEUK
+  access_key_secret: d0phbHJYVXRuRkVNSS9LN01ERU5HL2JQeFJmaUNZRVhBTVBMRUtFWQo=
+  bucketnames: s3-bucket-name
+  endpoint: https://s3.eu-central-1.amazonaws.com
+  region: eu-central-1</code></pre>
 </div>
-</div>
-</td>
-</tr>
-</table>
 </div>
 <div class="paragraph">
-<p>You can scale the compute machine set up or down. It takes several minutes for the new machines to be available.</p>
+<p>where:</p>
 </div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Important">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>By default, the machine controller tries to drain the node that is backed by the machine until it succeeds. In some situations, such as with a misconfigured pod disruption budget, the drain operation might not be able to succeed. If the drain operation fails, the machine controller cannot proceed removing the machine.</p>
-</div>
-<div class="paragraph">
-<p>You can skip draining the node by annotating <code>machine.openshift.io/exclude-node-draining</code> in a specific machine.</p>
-</div>
-</td>
-</tr>
-</table>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>metadata.namespace</code></dt>
+<dd>
+<p>Specifies the namespace for the Loki S3 secret. While this example uses <code>netobserv-loki</code>, you can use a different namespace for different components.</p>
+</dd>
+<dt class="hdlist1"><code>stringData.access_key_id</code></dt>
+<dd>
+<p>Specifies the access key ID for the S3 bucket.</p>
+</dd>
+<dt class="hdlist1"><code>stringData.access_key_secret</code></dt>
+<dd>
+<p>Specifies the secret access key for the S3 bucket.</p>
+</dd>
+<dt class="hdlist1"><code>stringData.bucketnames</code></dt>
+<dd>
+<p>Specifies the name of the S3 bucket.</p>
+</dd>
+<dt class="hdlist1"><code>stringData.endpoint</code></dt>
+<dd>
+<p>Specifies the endpoint URL for the S3 service.</p>
+</dd>
+<dt class="hdlist1"><code>stringData.region</code></dt>
+<dd>
+<p>Specifies the AWS region where the bucket is located.</p>
+</dd>
+</dl>
 </div>
 </li>
 </ol>
@@ -2039,572 +1949,138 @@ spec:
 <div class="title">Verification</div>
 <ul>
 <li>
-<p>Verify the deletion of the intended machine by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get machines.machine.openshift.io</code></pre>
-</div>
-</div>
+<p>After you create the secret, you view the secret listed under <strong>Workloads</strong> &#8594; <strong>Secrets</strong> in the web console.</p>
 </li>
 </ul>
 </div>
-</div>
-<div class="sect3">
-<h4 id="machineset-delete-policy_scale-the-number-of-compute-machines-that-use-a-specific-configuration">The compute machine set deletion policy</h4>
+<div class="sect4">
+<h5 id="network-observability-role-based-access-control-for-loki-logs_secure-network-observability-data">Role-based access control for Loki logs</h5>
 <div class="paragraph _abstract">
-<p>Compute machine sets can be configured to use the <code>Random</code>, <code>Newest</code>, and <code>Oldest</code> deletion options. The default is <code>Random</code>, meaning that random machines are chosen and deleted when scaling compute machine sets down.</p>
+<p>Configure role-based access control to grant users permission to view application, infrastructure, or audit logs in Loki.</p>
 </div>
 <div class="paragraph">
-<p>The deletion policy can be set according to the use case by modifying the particular compute machine set as in the following example:</p>
+<p>By default, logging 5.8 and later does not grant users access to logs. You must configure role-based access control to grant users permission to view specific log types.</p>
+</div>
+<div class="paragraph">
+<p>For more information on access control for Loki logs, see: "Fine grained access for Loki logs" in the Red Hat OpenShift Logging Operator documentation.</p>
+</div>
+<div class="sect5">
+<h6 id="grant-non-admin-users-cluster-wide-log-access_secure-network-observability-data">Grant non-admin users cluster-wide log access</h6>
+<div class="paragraph">
+<p>Add users to a custom admin group to grant cluster-wide log access without making them cluster administrators. This is useful for senior engineers who need full log visibility but should not have cluster modification privileges.</p>
+</div>
+<div class="paragraph">
+<p>Users who are members of any group specified in the <code>adminGroups</code> field of the <code>LokiStack</code> custom resource (CR) have the same read access to logs as administrators.</p>
 </div>
 <div class="listingblock">
+<div class="title">Example LokiStack CR</div>
 <div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">spec:
-  deletePolicy: &lt;delete_policy&gt;
-  replicas: &lt;desired_replica_count&gt;</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Specific machines can also be prioritized for deletion by adding the annotation <code>machine.openshift.io/delete-machine=true</code> to the machine of interest, regardless of the deletion policy.</p>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Important">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>By default, the Red&#160;Hat OpenShift Container Platform router pods are deployed on workers. Because the router is required to access some cluster resources, including the web console, do not scale the worker compute machine set to <code>0</code> unless you first relocate the router pods.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Custom compute machine sets can be used for use cases requiring that services run on specific nodes and that those services are ignored by the controller when the worker compute machine sets are scaling down. This prevents service disruption.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</div>
-<div class="sect3">
-<h4 id="machineset-modifying_scale-the-number-of-compute-machines-that-use-a-specific-configuration">Modify a compute machine set by using the CLI</h4>
-<div class="paragraph _abstract">
-<p>To enable features or change the properties of machines, you can modify the configuration of a compute machine set using the CLI. You can then propagate the changes to the machines in your cluster.</p>
-</div>
-<div class="paragraph">
-<p>When you modify a compute machine set, your changes only apply to compute machines that are created after you save the updated <code>MachineSet</code> custom resource (CR).
-The changes do not affect existing machines.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Changes made in the underlying cloud provider are not reflected in the <code>Machine</code> or <code>MachineSet</code> CRs.
-To adjust instance configuration in cluster-managed infrastructure, use the cluster-side resources.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>You can replace the existing machines with new ones that reflect the updated configuration by scaling the compute machine set to create twice the number of replicas and then scaling it down to the original number of replicas.</p>
-</div>
-<div class="paragraph">
-<p>If you need to scale a compute machine set without making other changes, you do not need to delete the machines.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>By default, the Red&#160;Hat OpenShift Container Platform router pods are deployed on compute machines.
-Because the router is required to access some cluster resources, including the web console, do not scale the compute machine set to <code>0</code> unless you first relocate the router pods.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>The output examples in this procedure use the values for an AWS cluster.</p>
-</div>
-<div class="paragraph">
-<div class="title">Prerequisites</div>
-<p>tag::CAPI[]
-* Your Red&#160;Hat OpenShift Container Platform cluster uses the Cluster API.
-end::CAPI[]
-tag::MAPI[]
-* Your Red&#160;Hat OpenShift Container Platform cluster uses the Machine API.
-end::MAPI[]
-* You are logged in to the cluster as an administrator by using the OpenShift CLI (<code>oc</code>).</p>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>List the compute machine sets in your cluster by running the following command:</p>
-<div class="paragraph">
-<p>tag::CAPI[]</p>
-</div>
-</li>
-</ol>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>$ oc get machinesets.cluster.x-k8s.io -n openshift-cluster-api</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>+
-.Example output</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-text" data-lang="text">NAME                          CLUSTER             REPLICAS   READY   AVAILABLE   AGE   VERSION
-&lt;compute_machine_set_name_1&gt;  &lt;cluster_name&gt;      1          1       1           26m
-&lt;compute_machine_set_name_2&gt;  &lt;cluster_name&gt;      1          1       1           26m</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>end::CAPI[]
-tag::MAPI[]</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get machinesets.machine.openshift.io -n openshift-machine-api</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>+
-.Example output</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-text" data-lang="text">NAME                           DESIRED   CURRENT   READY   AVAILABLE   AGE
-&lt;compute_machine_set_name_1&gt;   1         1         1       1           55m
-&lt;compute_machine_set_name_2&gt;   1         1         1       1           55m</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>end::MAPI[]</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Edit a compute machine set by running the following command:</p>
-<div class="paragraph">
-<p>tag::CAPI[]</p>
-</div>
-</li>
-</ol>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>$ oc edit machinesets.cluster.x-k8s.io &lt;machine_set_name&gt; \
-  -n openshift-cluster-api</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>end::CAPI[]
-tag::MAPI[]</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc edit machinesets.machine.openshift.io &lt;machine_set_name&gt; \
-  -n openshift-machine-api</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>end::MAPI[]</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Note the value of the <code>spec.replicas</code> field, because you need it when scaling the machine set to apply the changes.</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">#tag::CAPI[]
-apiVersion: cluster.x-k8s.io/v1beta1
-#end::CAPI[]
-#tag::MAPI[]
-apiVersion: machine.openshift.io/v1beta1
-#end::MAPI[]
-kind: MachineSet
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: loki.grafana.com/v1
+kind: LokiStack
 metadata:
-  name: &lt;machine_set_name&gt;
-#tag::CAPI[]
-  namespace: openshift-cluster-api
-#end::CAPI[]
-#tag::MAPI[]
-  namespace: openshift-machine-api
-#end::MAPI[]
+  name: loki
+  namespace: netobserv-loki
 spec:
-  replicas: 2
-# ...</code></pre>
+  tenants:
+    mode: openshift-network
+    openshift:
+      adminGroups:
+      - cluster-admin
+      - custom-admin-group</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>The examples in this procedure show a compute machine set that has a <code>replicas</code> value of <code>2</code>.</p>
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>spec.tenants.mode</code></dt>
+<dd>
+<p>Specifies the tenant mode. Must be <code>openshift-network</code> for network observability.</p>
+</dd>
+<dt class="hdlist1"><code>spec.tenants.openshift.adminGroups</code></dt>
+<dd>
+<p>Specifies the list of groups whose members have cluster-wide log access. Defaults to <code>system:cluster-admins</code>, <code>cluster-admin</code>, and <code>dedicated-admin</code>. Set to <code>[]</code> to disable.</p>
+</dd>
+</dl>
 </div>
-</li>
-<li>
-<p>Update the compute machine set CR with the configuration options that you want and save your changes.</p>
-</li>
-<li>
-<p>List the machines that are managed by the updated compute machine set by running the following command:</p>
-<div class="paragraph">
-<p>tag::CAPI[]</p>
 </div>
-</li>
-</ol>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>$ oc get machines.cluster.x-k8s.io \
-  -n openshift-cluster-api \
-  -l cluster.x-k8s.io/set-name=&lt;machine_set_name&gt;</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>+
-.Example output for an AWS cluster</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-text" data-lang="text">NAME                        CLUSTER          NODENAME                                    PROVIDERID                              PHASE           AGE     VERSION
-&lt;machine_name_original_1&gt;   &lt;cluster_name&gt;   &lt;original_1_ip&gt;.&lt;region&gt;.compute.internal   aws:///us-east-2a/i-04e7b2cbd61fd2075   Running         4h
-&lt;machine_name_original_2&gt;   &lt;cluster_name&gt;   &lt;original_2_ip&gt;.&lt;region&gt;.compute.internal   aws:///us-east-2a/i-04e7b2cbd61fd2075   Running         4h</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>end::CAPI[]
-tag::MAPI[]</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get machines.machine.openshift.io \
-  -n openshift-machine-api \
-  -l machine.openshift.io/cluster-api-machineset=&lt;machine_set_name&gt;</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>+
-.Example output for an AWS cluster</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-text" data-lang="text">NAME                        PHASE     TYPE         REGION      ZONE         AGE
-&lt;machine_name_original_1&gt;   Running   m6i.xlarge   us-west-1   us-west-1a   4h
-&lt;machine_name_original_2&gt;   Running   m6i.xlarge   us-west-1   us-west-1a   4h</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>end::MAPI[]</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>For each machine that is managed by the updated compute machine set, set the <code>delete</code> annotation by running the following command:</p>
-<div class="paragraph">
-<p>tag::CAPI[]</p>
-</div>
-</li>
-</ol>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>$ oc annotate machines.cluster.x-k8s.io/&lt;machine_name_original_1&gt; \
-  -n openshift-cluster-api \
-  cluster.x-k8s.io/delete-machine="true"</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>end::CAPI[]
-tag::MAPI[]</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc annotate machine.machine.openshift.io/&lt;machine_name_original_1&gt; \
-  -n openshift-machine-api \
-  machine.openshift.io/delete-machine="true"</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>end::MAPI[]</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>To create replacement machines with the new configuration, scale the compute machine set to twice the number of replicas by running the following command:</p>
-<div class="paragraph">
-<p>tag::CAPI[]</p>
-</div>
-</li>
-</ol>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>$ oc scale --replicas=4 \
-  machinesets.cluster.x-k8s.io &lt;machine_set_name&gt; \
-  -n openshift-cluster-api</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>end::CAPI[]
-tag::MAPI[]</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc scale --replicas=4 \
-  machineset.machine.openshift.io &lt;machine_set_name&gt; \
-  -n openshift-machine-api</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>end::MAPI[]</p>
-</div>
-<div class="paragraph">
-<p>+
-The original example value of <code>2</code> is doubled to <code>4</code>.</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>List the machines that are managed by the updated compute machine set by running the following command:</p>
-<div class="paragraph">
-<p>tag::CAPI[]</p>
-</div>
-</li>
-</ol>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>$ oc get machines.cluster.x-k8s.io \
-  -n openshift-cluster-api \
-  -l cluster.x-k8s.io/set-name=&lt;machine_set_name&gt;</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>+
-.Example output for an AWS cluster</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-text" data-lang="text">NAME                        CLUSTER          NODENAME                                    PROVIDERID                              PHASE           AGE     VERSION
-&lt;machine_name_original_1&gt;   &lt;cluster_name&gt;   &lt;original_1_ip&gt;.&lt;region&gt;.compute.internal   aws:///us-east-2a/i-04e7b2cbd61fd2075   Running         4h
-&lt;machine_name_original_2&gt;   &lt;cluster_name&gt;   &lt;original_2_ip&gt;.&lt;region&gt;.compute.internal   aws:///us-east-2a/i-04e7b2cbd61fd2075   Running         4h
-&lt;machine_name_updated_1&gt;    &lt;cluster_name&gt;   &lt;updated_1_ip&gt;.&lt;region&gt;.compute.internal    aws:///us-east-2a/i-04e7b2cbd61fd2075   Provisioned     55s
-&lt;machine_name_updated_2&gt;    &lt;cluster_name&gt;   &lt;updated_2_ip&gt;.&lt;region&gt;.compute.internal    aws:///us-east-2a/i-04e7b2cbd61fd2075   Provisioning    55s</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>end::CAPI[]
-tag::MAPI[]</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get machines.machine.openshift.io \
-  -n openshift-machine-api \
-  -l machine.openshift.io/cluster-api-machineset=&lt;machine_set_name&gt;</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>+
-.Example output for an AWS cluster</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-text" data-lang="text">NAME                        PHASE          TYPE         REGION      ZONE         AGE
-&lt;machine_name_original_1&gt;   Running        m6i.xlarge   us-west-1   us-west-1a   4h
-&lt;machine_name_original_2&gt;   Running        m6i.xlarge   us-west-1   us-west-1a   4h
-&lt;machine_name_updated_1&gt;    Provisioned    m6i.xlarge   us-west-1   us-west-1a   55s
-&lt;machine_name_updated_2&gt;    Provisioning   m6i.xlarge   us-west-1   us-west-1a   55s</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>end::MAPI[]</p>
-</div>
-<div class="paragraph">
-<p>+
-When the new machines are in the <code>Running</code> phase, you can scale the compute machine set to the original number of replicas.</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>To remove the machines that were created with the old configuration, scale the compute machine set to the original number of replicas by running the following command:</p>
-<div class="paragraph">
-<p>tag::CAPI[]</p>
-</div>
-</li>
-</ol>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>$ oc scale --replicas=2 \
-  machinesets.cluster.x-k8s.io &lt;machine_set_name&gt; \
-  -n openshift-cluster-api</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>end::CAPI[]
-tag::MAPI[]</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc scale --replicas=2 \
-  machineset.machine.openshift.io &lt;machine_set_name&gt; \
-  -n openshift-machine-api</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>end::MAPI[]</p>
-</div>
-<div class="paragraph">
-<p>+
-The <code>replicas</code> parameter is set to the original example value of <code>2</code>.</p>
-</div>
-<div class="ulist">
-<div class="title">Verification</div>
-<ul>
-<li>
-<p>To verify that a machine created by the updated machine set has the correct configuration, examine the relevant fields in the CR for one of the new machines by running the following command:</p>
-<div class="paragraph">
-<p>tag::CAPI[]</p>
-</div>
-</li>
-</ul>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>$ oc describe machines.cluster.x-k8s.io &lt;machine_name_updated_1&gt; \
-  -n openshift-cluster-api</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>end::CAPI[]
-tag::MAPI[]</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc describe machine.machine.openshift.io &lt;machine_name_updated_1&gt; \
-  -n openshift-machine-api</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>end::MAPI[]</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>To verify that the compute machines without the updated configuration are deleted, list the machines that are managed by the updated compute machine set by running the following command:</p>
-<div class="paragraph">
-<p>tag::CAPI[]</p>
-</div>
-</li>
-</ul>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>$ oc get machines.cluster.x-k8s.io \
-  -n openshift-cluster-api \
-  cluster.x-k8s.io/set-name=&lt;machine_set_name&gt;</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>+
-.Example output while deletion is in progress for an AWS cluster</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-text" data-lang="text">NAME                        CLUSTER          NODENAME                                    PROVIDERID                              PHASE      AGE     VERSION
-&lt;machine_name_original_1&gt;   &lt;cluster_name&gt;   &lt;original_1_ip&gt;.&lt;region&gt;.compute.internal   aws:///us-east-2a/i-04e7b2cbd61fd2075   Running    18m
-&lt;machine_name_original_2&gt;   &lt;cluster_name&gt;   &lt;original_2_ip&gt;.&lt;region&gt;.compute.internal   aws:///us-east-2a/i-04e7b2cbd61fd2075   Running    18m
-&lt;machine_name_updated_1&gt;    &lt;cluster_name&gt;   &lt;updated_1_ip&gt;.&lt;region&gt;.compute.internal    aws:///us-east-2a/i-04e7b2cbd61fd2075   Running    18m
-&lt;machine_name_updated_2&gt;    &lt;cluster_name&gt;   &lt;updated_2_ip&gt;.&lt;region&gt;.compute.internal    aws:///us-east-2a/i-04e7b2cbd61fd2075   Running    18m</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>+
-.Example output when deletion is complete for an AWS cluster</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-text" data-lang="text">NAME                        CLUSTER          NODENAME                                    PROVIDERID                              PHASE      AGE     VERSION
-&lt;machine_name_updated_1&gt;    &lt;cluster_name&gt;   &lt;updated_1_ip&gt;.&lt;region&gt;.compute.internal    aws:///us-east-2a/i-04e7b2cbd61fd2075   Running    18m
-&lt;machine_name_updated_2&gt;    &lt;cluster_name&gt;   &lt;updated_2_ip&gt;.&lt;region&gt;.compute.internal    aws:///us-east-2a/i-04e7b2cbd61fd2075   Running    18m</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>end::CAPI[]
-tag::MAPI[]</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get machines.machine.openshift.io \
-  -n openshift-machine-api \
-  -l machine.openshift.io/cluster-api-machineset=&lt;machine_set_name&gt;</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>+
-.Example output while deletion is in progress for an AWS cluster</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-text" data-lang="text">NAME                        PHASE           TYPE         REGION      ZONE         AGE
-&lt;machine_name_original_1&gt;   Deleting        m6i.xlarge   us-west-1   us-west-1a   4h
-&lt;machine_name_original_2&gt;   Deleting        m6i.xlarge   us-west-1   us-west-1a   4h
-&lt;machine_name_updated_1&gt;    Running         m6i.xlarge   us-west-1   us-west-1a   5m41s
-&lt;machine_name_updated_2&gt;    Running         m6i.xlarge   us-west-1   us-west-1a   5m41s</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>+
-.Example output when deletion is complete for an AWS cluster</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-text" data-lang="text">NAME                        PHASE           TYPE         REGION      ZONE         AGE
-&lt;machine_name_updated_1&gt;    Running         m6i.xlarge   us-west-1   us-west-1a   6m30s
-&lt;machine_name_updated_2&gt;    Running         m6i.xlarge   us-west-1   us-west-1a   6m30s</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>end::MAPI[]</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="machineset-creating_scale-the-number-of-compute-machines-that-use-a-specific-configuration">Create a compute machine set</h4>
+<h4 id="network-observability-multi-tenancy_secure-network-observability-data">Enable multi-tenancy in network observability</h4>
 <div class="paragraph _abstract">
-<p>To dynamically manage machine compute resources, you can create your own compute machine sets in addition to the compute machine sets created by the installation program. Use the Red&#160;Hat OpenShift Container Platform CLI to automate node provisioning.</p>
+<p>Enable multi-tenancy in network observability by configuring cluster roles and namespace roles to grant project administrators and developers granular, restricted access to flows and metrics in Loki and Prometheus.</p>
+</div>
+<div class="paragraph">
+<p>Access is enabled for project administrators. Project administrators who have limited access to some namespaces can access flows for only those namespaces.</p>
+</div>
+<div class="paragraph">
+<p>For Developers, multi-tenancy is available for both Loki and Prometheus but requires different access rights.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisite</div>
+<ul>
+<li>
+<p>If you are using Loki, you have installed at least <a href="https://catalog.redhat.com/software/containers/openshift-logging/loki-rhel8-operator/622b46bcae289285d6fcda39">Loki Operator version 5.7</a>.</p>
+</li>
+<li>
+<p>You must be logged in as a project administrator.</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">Procedure</div>
+<ul>
+<li>
+<p>For per-tenant access, you must have the <code>netobserv-loki-reader</code> cluster role and the <code>netobserv-metrics-reader</code> namespace role to use the developer perspective. Run the following commands for this level of access:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc adm policy add-cluster-role-to-user netobserv-loki-reader &lt;user_group_or_name&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc adm policy add-role-to-user netobserv-metrics-reader &lt;user_group_or_name&gt; -n &lt;namespace&gt;</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>For cluster-wide access, non-cluster-administrators must have the <code>netobserv-loki-reader</code>, <code>cluster-monitoring-view</code>, and <code>netobserv-metrics-reader</code> cluster roles. In this scenario, you can use either the admin perspective or the developer perspective. Run the following commands for this level of access:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc adm policy add-cluster-role-to-user netobserv-loki-reader &lt;user_group_or_name&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc adm policy add-cluster-role-to-user cluster-monitoring-view &lt;user_group_or_name&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc adm policy add-cluster-role-to-user netobserv-metrics-reader &lt;user_group_or_name&gt;</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="sect4">
+<h5 id="network-observability-grant-access-lokistack-secrets_secure-network-observability-data">Grant access to LokiStack secrets</h5>
+<div class="paragraph _abstract">
+<p>Grant the Network Observability Operator permission to access the <code>LokiStack</code> secret when <code>LokiStack</code> is installed in a namespace other than <code>netobserv</code>.</p>
 </div>
 <div class="ulist">
 <div class="title">Prerequisites</div>
 <ul>
 <li>
-<p>Deploy an Red&#160;Hat OpenShift Container Platform cluster.</p>
+<p>The Network Observability Operator is installed.</p>
 </li>
 <li>
-<p>Install the OpenShift CLI (<code>oc</code>).</p>
+<p>You have <code>cluster-admin</code> privileges.</p>
 </li>
 <li>
-<p>Log in to <code>oc</code> as a user with <code>cluster-admin</code> permission.</p>
+<p>You use the Loki Operator with <code>LokiStack</code> installed in a namespace other than <code>netobserv</code>.</p>
 </li>
 </ul>
 </div>
@@ -2612,258 +2088,49 @@ tag::MAPI[]</p>
 <div class="title">Procedure</div>
 <ol class="arabic">
 <li>
-<p>Create a new YAML file that contains the compute machine set custom resource (CR) sample and is named <code>&lt;file_name&gt;.yaml</code>.</p>
-<div class="paragraph">
-<p>Ensure that you set the <code>&lt;clusterID&gt;</code> and <code>&lt;role&gt;</code> parameter values.</p>
-</div>
-</li>
-<li>
-<p>Optional: If you are not sure which value to set for a specific field, you can check an existing compute machine set from your cluster.</p>
+<p>Replace <code>&lt;lokistack_namespace&gt;</code> with the namespace where <code>LokiStack</code> is installed and <code>&lt;namespace&gt;</code> with the namespace configured in <code>spec.namespace</code> of the <code>FlowCollector</code> resource.</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>To list the compute machine sets in your cluster, run the following command:</p>
+<p>Create the <code>secret-watcher</code> role binding in the LokiStack namespace by running the following command:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get machinesets -n openshift-machine-api</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The following is example output:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">NAME                                DESIRED   CURRENT   READY   AVAILABLE   AGE
-agl030519-vplxk-worker-us-east-1a   1         1         1       1           55m
-agl030519-vplxk-worker-us-east-1b   1         1         1       1           55m
-agl030519-vplxk-worker-us-east-1c   1         1         1       1           55m
-agl030519-vplxk-worker-us-east-1d   0         0                             55m
-agl030519-vplxk-worker-us-east-1e   0         0                             55m
-agl030519-vplxk-worker-us-east-1f   0         0                             55m</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create rolebinding secret-watcher \
+  -n &lt;lokistack_namespace&gt; \
+  --clusterrole=netobserv-secret-watcher \
+  --serviceaccount=openshift-netobserv-operator:netobserv-controller-manager</code></pre>
 </div>
 </div>
 </li>
 <li>
-<p>To view values of a specific compute machine set custom resource (CR), run the following command:</p>
+<p>Create the <code>secret-creator</code> role binding by running the following command:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get machineset &lt;machineset_name&gt; \
-  -n openshift-machine-api -o yaml</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create rolebinding secret-creator \
+  -n &lt;namespace&gt; \
+  --clusterrole=netobserv-secret-creator \
+  --serviceaccount=openshift-netobserv-operator:netobserv-controller-manager</code></pre>
 </div>
-</div>
-<div class="paragraph">
-<p>The following is example output:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: machine.openshift.io/v1beta1
-kind: MachineSet
-metadata:
-  labels:
-    machine.openshift.io/cluster-api-cluster: &lt;infrastructure_id&gt;
-  name: &lt;infrastructure_id&gt;-&lt;role&gt;
-  namespace: openshift-machine-api
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      machine.openshift.io/cluster-api-cluster: &lt;infrastructure_id&gt;
-      machine.openshift.io/cluster-api-machineset: &lt;infrastructure_id&gt;-&lt;role&gt;
-  template:
-    metadata:
-      labels:
-        machine.openshift.io/cluster-api-cluster: &lt;infrastructure_id&gt;
-        machine.openshift.io/cluster-api-machine-role: &lt;role&gt;
-        machine.openshift.io/cluster-api-machine-type: &lt;role&gt;
-        machine.openshift.io/cluster-api-machineset: &lt;infrastructure_id&gt;-&lt;role&gt;
-    spec:
-      providerSpec:
-        ...</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>where:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>metadata.labels.machine.openshift.io/cluster-api-cluster</code></dt>
-<dd>
-<p>Specifies the cluster infrastructure ID.</p>
-</dd>
-<dt class="hdlist1"><code>metadata.labels.name</code></dt>
-<dd>
-<p>Specifies a default node label.</p>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>For clusters that have user-provisioned infrastructure, a compute machine set can only create <code>worker</code> and <code>infra</code> type machines.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</dd>
-<dt class="hdlist1"><code>spec.template.metadata.spec.providerSpec</code></dt>
-<dd>
-<p>Specifies the values of the compute machine set CR. The values are platform-specific. For more information about <code>&lt;providerSpec&gt;</code> parameters in the CR, see the sample compute machine set CR configuration for your provider.</p>
-</dd>
-</dl>
 </div>
 </li>
 </ol>
 </div>
 </li>
-<li>
-<p>Create a <code>MachineSet</code> CR by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create -f &lt;file_name&gt;.yaml</code></pre>
-</div>
-</div>
-</li>
 </ol>
 </div>
-<div class="ulist">
+<div class="olist arabic">
 <div class="title">Verification</div>
-<ul>
+<ol class="arabic">
 <li>
-<p>View the list of compute machine sets by running the following command:</p>
+<p>Check the <code>FlowCollector</code> status for errors by running the following command:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get machineset -n openshift-machine-api</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get flowcollector cluster -o jsonpath='{.status.conditions}'</code></pre>
 </div>
-</div>
-<div class="paragraph">
-<p>The following is example output:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">NAME                                DESIRED   CURRENT   READY   AVAILABLE   AGE
-agl030519-vplxk-infra-us-east-1a    1         1         1       1           11m
-agl030519-vplxk-worker-us-east-1a   1         1         1       1           55m
-agl030519-vplxk-worker-us-east-1b   1         1         1       1           55m
-agl030519-vplxk-worker-us-east-1c   1         1         1       1           55m
-agl030519-vplxk-worker-us-east-1d   0         0                             55m
-agl030519-vplxk-worker-us-east-1e   0         0                             55m
-agl030519-vplxk-worker-us-east-1f   0         0                             55m</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>When the new compute machine set is available, the <code>DESIRED</code> and <code>CURRENT</code> values match. If the compute machine set is not available, wait a few minutes and run the command again.</p>
 </div>
 </li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="machineset-yaml-aws_scale-the-number-of-compute-machines-that-use-a-specific-configuration">Sample YAML for a compute machine set custom resource on AWS</h4>
-<div class="paragraph _abstract">
-<p>The sample YAML defines a compute machine set that runs in the <code>us-east-1a</code> Amazon Web Services (AWS) Local Zone and creates nodes that are labeled with
-<code>node-role.kubernetes.io/&lt;role&gt;: ""</code>.</p>
-</div>
-<div class="paragraph">
-<p>In this sample, <code>&lt;infrastructure_id&gt;</code> is the infrastructure ID label that is based on the cluster ID that you set when you provisioned the cluster, and
-<code>&lt;role&gt;</code>
-is the node label to add.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: machine.openshift.io/v1beta1
-kind: MachineSet
-metadata:
-  labels:
-    machine.openshift.io/cluster-api-cluster: &lt;infrastructure_id&gt;
-  name: &lt;infrastructure_id&gt;-&lt;role&gt;-&lt;zone&gt;
-  namespace: openshift-machine-api
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      machine.openshift.io/cluster-api-cluster: &lt;infrastructure_id&gt;
-      machine.openshift.io/cluster-api-machineset: &lt;infrastructure_id&gt;-&lt;role&gt;-&lt;zone&gt;
-  template:
-    metadata:
-      labels:
-        machine.openshift.io/cluster-api-cluster: &lt;infrastructure_id&gt;
-        machine.openshift.io/cluster-api-machine-role: &lt;role&gt;
-        machine.openshift.io/cluster-api-machine-type: &lt;role&gt;
-        machine.openshift.io/cluster-api-machineset: &lt;infrastructure_id&gt;-&lt;role&gt;-&lt;zone&gt;
-    spec:
-      metadata:
-        labels:
-          node-role.kubernetes.io/&lt;role&gt;: ""
-      providerSpec:
-        value:
-          ami:
-            id: ami-046fe691f52a953f9
-          apiVersion: machine.openshift.io/v1beta1
-          blockDevices:
-            - ebs:
-                iops: 0
-                volumeSize: 120
-                volumeType: gp2
-          credentialsSecret:
-            name: aws-cloud-credentials
-          deviceIndex: 0
-          iamInstanceProfile:
-            id: &lt;infrastructure_id&gt;-worker-profile
-          instanceType: m6i.large
-          kind: AWSMachineProviderConfig
-          placement:
-            availabilityZone: &lt;zone&gt;
-            region: &lt;region&gt;
-          securityGroups:
-            - filters:
-                - name: tag:Name
-                  values:
-                    - &lt;infrastructure_id&gt;-node
-            - filters:
-                - name: tag:Name
-                  values:
-                    - &lt;infrastructure_id&gt;-lb
-          subnet:
-            filters:
-              - name: tag:Name
-                values:
-                  - &lt;infrastructure_id&gt;-subnet-private-&lt;zone&gt;
-          tags:
-            - name: kubernetes.io/cluster/&lt;infrastructure_id&gt;
-              value: owned
-            - name: &lt;custom_tag_name&gt;
-              value: &lt;custom_tag_value&gt;
-          userDataSecret:
-            name: worker-user-data</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>where:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>&lt;infrastructure_id&gt;</code></dt>
-<dd>
-<p>Specifies the infrastructure ID that is based on the cluster ID that you set when you provisioned the cluster. If you have the OpenShift CLI installed, you can obtain the infrastructure ID by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get -o jsonpath='{.status.infrastructureName}{"\n"}' infrastructure cluster</code></pre>
-</div>
-</div>
-</dd>
-<dt class="hdlist1"><code>&lt;infrastructure_id&gt;-&lt;role&gt;-&lt;zone&gt;</code></dt>
-<dd>
-<p>Specifies the infrastructure ID, role node label, and zone.</p>
-</dd>
-<dt class="hdlist1"><code>&lt;role&gt;</code></dt>
-<dd>
-<p>Specifies the role node label to add.</p>
-</dd>
-</dl>
-</div>
+<li>
+<p>Verify that no conditions report permission-related errors.</p>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -2872,1346 +2139,37 @@ spec:
 </td>
 <td class="content">
 <div class="paragraph">
-<p>The <code>spec.template.spec.providerSpec.value.ami.id</code> stanza specifies a valid Red Hat Enterprise Linux CoreOS (RHCOS) Amazon Machine Image (AMI) for your AWS zone for your Red&#160;Hat OpenShift Container Platform nodes. If you want to use an AWS Machine Image (AMI) for your AWS zone as a boot image for your Red&#160;Hat OpenShift Container Platform nodes, you should use the latest image when adding a new machine set. If you want to use an AWS Marketplace image, you must complete the Red&#160;Hat OpenShift Container Platform subscription from the <a href="https://aws.amazon.com/marketplace/fulfillment?productId=59ead7de-2540-4653-a8b0-fa7926d5c845">AWS Marketplace</a> to obtain an AMI ID for your region.</p>
+<p>If the <code>FlowCollector</code> status continues to show permission errors after you grant the required permissions, restart the Network Observability Operator pod for faster reconciliation:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc -n openshift-machine-api \
-    -o jsonpath='{.spec.template.spec.providerSpec.value.ami.id}{"\n"}' \
-    get machineset/&lt;infrastructure_id&gt;-&lt;role&gt;-&lt;zone&gt;</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc delete pods -n openshift-netobserv-operator -l app=netobserv-operator</code></pre>
 </div>
 </div>
 </td>
 </tr>
 </table>
 </div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>&lt;zone&gt;</code></dt>
-<dd>
-<p>Specifies the zone name, for example, <code>us-east-1a</code>.</p>
-</dd>
-<dt class="hdlist1"><code>&lt;region&gt;</code></dt>
-<dd>
-<p>Specifies the region, for example, <code>us-east-1</code>.</p>
-</dd>
-<dt class="hdlist1"><code>&lt;infrastructure_id&gt;-subnet-private-&lt;zone&gt;</code></dt>
-<dd>
-<p>Specifies the infrastructure ID and zone.</p>
-</dd>
-<dt class="hdlist1"><code>&lt;custom_tag_name&gt;</code></dt>
-<dd>
-<p>Optional: Specifies custom tag data for your cluster. For example, you might add an admin contact email address by specifying a <code>name:value</code> pair of <code>Email:admin-email@example.com</code>.</p>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Custom tags can also be specified during installation in the <code>install-config.yaml</code> file. If the <code>install-config.yaml</code> file and the machine set include a tag with the same <code>name</code> data, the value for the tag from the machine set takes priority over the value for the tag in the <code>install-config.yaml</code> file.</p>
+</li>
+</ol>
 </div>
-</td>
-</tr>
-</table>
-</div>
-</dd>
-</dl>
-</div>
-</div>
-<div class="sect3">
-<h4 id="machineset-yaml-azure_scale-the-number-of-compute-machines-that-use-a-specific-configuration">Sample YAML for a compute machine set custom resource on Azure</h4>
-<div class="paragraph _abstract">
-<p>You can define a machine set YAML to provision nodes by specifying parameters such as <code>vmSize</code> and <code>image</code>. You can use this to automate and scale infrastructure consistently, to ensure compute nodes meet specific workload requirements within the cluster.</p>
-</div>
-<div class="paragraph">
-<p>The sample YAML defines a compute machine set that runs in the <code>1</code> Microsoft Azure zone in a region and creates nodes that are labeled with
-<code>node-role.kubernetes.io/&lt;role&gt;: ""</code>.
-ifdef::infra[<code>node-role.kubernetes.io/infra: ""</code>. The YAML specifies a taint to prevent user workloads from being scheduled on infra nodes. After adding the <code>NoSchedule</code> taint on the infrastructure node, existing DNS pods running on that node are marked as <code>misscheduled</code>. You must either delete or <a href="https://access.redhat.com/solutions/6592171">add toleration on <code>misscheduled</code> DNS pods</a>.</p>
-</div>
-<div class="paragraph">
-<p>In the sample, <code>&lt;infrastructure_id&gt;</code> is the infrastructure ID label that is based on the cluster ID that you set when you provisioned the cluster, and
-<code>&lt;role&gt;</code>
-is the node label to add.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: machine.openshift.io/v1beta1
-kind: MachineSet
-metadata:
-  labels:
-    machine.openshift.io/cluster-api-cluster: &lt;infrastructure_id&gt;
-    machine.openshift.io/cluster-api-machine-role: &lt;role&gt;
-    machine.openshift.io/cluster-api-machine-type: &lt;role&gt;
-  name: &lt;infrastructure_id&gt;-&lt;role&gt;-&lt;region&gt;
-  namespace: openshift-machine-api
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      machine.openshift.io/cluster-api-cluster: &lt;infrastructure_id&gt;
-      machine.openshift.io/cluster-api-machineset: &lt;infrastructure_id&gt;-&lt;role&gt;-&lt;region&gt;
-  template:
-    metadata:
-      creationTimestamp: null
-      labels:
-        machine.openshift.io/cluster-api-cluster: &lt;infrastructure_id&gt;
-        machine.openshift.io/cluster-api-machine-role: &lt;role&gt;
-        machine.openshift.io/cluster-api-machine-type: &lt;role&gt;
-        machine.openshift.io/cluster-api-machineset: &lt;infrastructure_id&gt;-&lt;role&gt;-&lt;region&gt;
-    spec:
-      metadata:
-        creationTimestamp: null
-        labels:
-          machine.openshift.io/cluster-api-machineset: &lt;machineset_name&gt;
-          node-role.kubernetes.io/&lt;role&gt;: ""
-      providerSpec:
-        value:
-          apiVersion: machine.openshift.io/v1beta1
-          credentialsSecret:
-            name: azure-cloud-credentials
-            namespace: openshift-machine-api
-          image:
-            offer: ""
-            publisher: ""
-            resourceID: /resourceGroups/&lt;infrastructure_id&gt;-rg/providers/Microsoft.Compute/galleries/gallery_&lt;infrastructure_id&gt;/images/&lt;infrastructure_id&gt;-gen2/versions/latest
-            sku: ""
-            version: ""
-          internalLoadBalancer: ""
-          kind: AzureMachineProviderSpec
-          location: &lt;region&gt;
-          managedIdentity: &lt;infrastructure_id&gt;-identity
-          metadata:
-            creationTimestamp: null
-          natRule: null
-          networkResourceGroup: ""
-          osDisk:
-            diskSizeGB: 128
-            managedDisk:
-              storageAccountType: Premium_LRS
-            osType: Linux
-          publicIP: false
-          publicLoadBalancer: ""
-          resourceGroup: &lt;infrastructure_id&gt;-rg
-          sshPrivateKey: ""
-          sshPublicKey: ""
-          tags:
-            &lt;custom_tag_name_1&gt;: &lt;custom_tag_value_1&gt;
-            &lt;custom_tag_name_2&gt;: &lt;custom_tag_value_2&gt;
-          subnet: &lt;infrastructure_id&gt;-&lt;role&gt;-subnet
-          userDataSecret:
-            name: worker-user-data
-          vmSize: Standard_D4s_v3
-          vnet: &lt;infrastructure_id&gt;-vnet
-          zone: "1"</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>where:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>&lt;infrastructure_id&gt;</code></dt>
-<dd>
-<p>Specifies the infrastructure ID that is based on the cluster ID that you set when you provisioned the cluster. If you have the OpenShift CLI (<code>oc</code>) installed, you can obtain the infrastructure ID by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get -o jsonpath='{.status.infrastructureName}{"\n"}' infrastructure cluster</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>You can obtain the subnet by running the following command:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$  oc -n openshift-machine-api \
-    -o jsonpath='{.spec.template.spec.providerSpec.value.subnet}{"\n"}' \
-    get machineset/&lt;infrastructure_id&gt;-worker-centralus1</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>You can obtain the vnet by running the following command:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$  oc -n openshift-machine-api \
-    -o jsonpath='{.spec.template.spec.providerSpec.value.vnet}{"\n"}' \
-    get machineset/&lt;infrastructure_id&gt;-worker-centralus1</code></pre>
-</div>
-</div>
-</dd>
-<dt class="hdlist1"><code>&lt;role&gt;</code></dt>
-<dd>
-<p>Specifies the node label to add.</p>
-</dd>
-<dt class="hdlist1"><code>&lt;infrastructure_id&gt;-&lt;role&gt;-&lt;region&gt;</code></dt>
-<dd>
-<p>Specifies the infrastructure ID, node label, and region.</p>
-</dd>
-</dl>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>The value of the <code>spec.template.spec.providerSpec.value.image</code> parameter specifies the image details for your compute machine set. If you want to use an Azure Marketplace image, see "Using the Azure Marketplace offering".</p>
-</div>
-<div class="paragraph">
-<p>The value of the <code>spec.template.spec.providerSpec.value.image.resourceID</code> parameter specifies an image that is compatible with your instance type. The Hyper-V generation V2 images created by the installation program have a <code>-gen2</code> suffix, while V1 images have the same name without the suffix.</p>
-</div>
-<div class="paragraph">
-<p>The value of the <code>spec.template.spec.providerSpec.value.location</code> parameter specifies the region to place machines on.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>&lt;custom_tag_name_1&gt;</code></dt>
-<dd>
-<p>Optional: Specifies custom tags in your machine set. Provide the tag name in <code>&lt;custom_tag_name&gt;</code> field and the corresponding tag value in <code>&lt;custom_tag_value&gt;</code> field.</p>
-</dd>
-</dl>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>The value of the <code>spec.template.spec.providerSpec.value.zone</code> parameter specifies the zone within your region to place machines on. Ensure that your region supports the zone that you specify. If your region supports availability zones, you must specify the zone. Specifying the zone avoids volume node affinity failure when a pod requires a persistent volume attachment. To do this, you can create a compute machine set for each zone in the same region.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</div>
-<div class="sect3">
-<h4 id="machineset-yaml-azure-stack-hub_scale-the-number-of-compute-machines-that-use-a-specific-configuration">Sample YAML for a compute machine set custom resource on Azure Stack Hub</h4>
-<div class="paragraph _abstract">
-<p>You can create a machine set on Microsoft Azure Stack Hub. By defining a YAML configuration with specific cluster IDs and provider details, you can automate the provisioning of specialized nodes.</p>
-</div>
-<div class="paragraph">
-<p>The Microsoft Azure sample YAML defines a compute machine set that runs in the <code>1</code> Azure zone in a region and creates nodes that are labeled with
-<code>node-role.kubernetes.io/&lt;role&gt;: ""</code>.</p>
-</div>
-<div class="paragraph">
-<p>In the sample, <code>&lt;infrastructure_id&gt;</code> is the infrastructure ID label that is based on the cluster ID that you set when you provisioned the cluster, and
-<code>&lt;role&gt;</code>
-is the node label to add.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: machine.openshift.io/v1beta1
-kind: MachineSet
-metadata:
-  labels:
-    machine.openshift.io/cluster-api-cluster: &lt;infrastructure_id&gt;
-    machine.openshift.io/cluster-api-machine-role: &lt;role&gt;
-    machine.openshift.io/cluster-api-machine-type: &lt;role&gt;
-  name: &lt;infrastructure_id&gt;-&lt;role&gt;-&lt;region&gt;
-  namespace: openshift-machine-api
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      machine.openshift.io/cluster-api-cluster: &lt;infrastructure_id&gt;
-      machine.openshift.io/cluster-api-machineset: &lt;infrastructure_id&gt;-&lt;role&gt;-&lt;region&gt;
-  template:
-    metadata:
-      creationTimestamp: null
-      labels:
-        machine.openshift.io/cluster-api-cluster: &lt;infrastructure_id&gt;
-        machine.openshift.io/cluster-api-machine-role: &lt;role&gt;
-        machine.openshift.io/cluster-api-machine-type: &lt;role&gt;
-        machine.openshift.io/cluster-api-machineset: &lt;infrastructure_id&gt;-&lt;role&gt;-&lt;region&gt;
-    spec:
-      metadata:
-        creationTimestamp: null
-        labels:
-          node-role.kubernetes.io/&lt;role&gt;: ""
-      providerSpec:
-        value:
-          apiVersion: machine.openshift.io/v1beta1
-          availabilitySet: &lt;availability_set&gt;
-          credentialsSecret:
-            name: azure-cloud-credentials
-            namespace: openshift-machine-api
-          image:
-            offer: ""
-            publisher: ""
-            resourceID: /resourceGroups/&lt;infrastructure_id&gt;-rg/providers/Microsoft.Compute/images/&lt;infrastructure_id&gt;
-            sku: ""
-            version: ""
-          internalLoadBalancer: ""
-          kind: AzureMachineProviderSpec
-          location: &lt;region&gt;
-          managedIdentity: &lt;infrastructure_id&gt;-identity
-          metadata:
-            creationTimestamp: null
-          natRule: null
-          networkResourceGroup: ""
-          osDisk:
-            diskSizeGB: 128
-            managedDisk:
-              storageAccountType: Premium_LRS
-            osType: Linux
-          publicIP: false
-          publicLoadBalancer: ""
-          resourceGroup: &lt;infrastructure_id&gt;-rg
-          sshPrivateKey: ""
-          sshPublicKey: ""
-          subnet: &lt;infrastructure_id&gt;-&lt;role&gt;-subnet
-          userDataSecret:
-            name: worker-user-data
-          vmSize: Standard_DS4_v2
-          vnet: &lt;infrastructure_id&gt;-vnet
-          zone: "1"</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>where:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>&lt;infrastructure_id&gt;</code></dt>
-<dd>
-<p>Specifies the infrastructure ID that is based on the cluster ID that you set when you provisioned the cluster. If you have the Red&#160;Hat OpenShift Container Platform CLI installed, you can obtain the infrastructure ID by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get -o jsonpath='{.status.infrastructureName}{"\n"}' infrastructure cluster</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>You can obtain the subnet by running the following command:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$  oc -n openshift-machine-api \
-    -o jsonpath='{.spec.template.spec.providerSpec.value.subnet}{"\n"}' \
-    get machineset/&lt;infrastructure_id&gt;-worker-centralus1</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>You can obtain the vnet by running the following command:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$  oc -n openshift-machine-api \
-    -o jsonpath='{.spec.template.spec.providerSpec.value.vnet}{"\n"}' \
-    get machineset/&lt;infrastructure_id&gt;-worker-centralus1</code></pre>
-</div>
-</div>
-</dd>
-<dt class="hdlist1"><code>&lt;role&gt;</code></dt>
-<dd>
-<p>Specifies the node label to add.</p>
-</dd>
-<dt class="hdlist1"><code>&lt;infrastructure_id&gt;-&lt;role&gt;-&lt;region&gt;</code></dt>
-<dd>
-<p>Specifies the infrastructure ID, node label, and region.</p>
-</dd>
-<dt class="hdlist1"><code>&lt;region&gt;</code></dt>
-<dd>
-<p>Specifies the region to place machines on.</p>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>The <code>spec.template.spec.providerSpec.value.zone</code> specifies the zone within your region to place machines on. Be sure that your region supports the zone that you specify.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</dd>
-<dt class="hdlist1"><code>&lt;availability_set&gt;</code></dt>
-<dd>
-<p>Specifies the availability set for the cluster.</p>
-</dd>
-<dt class="hdlist1"><code>&lt;image&gt;</code></dt>
-<dd>
-<p>Specifies the boot image to use. You should use the use the latest image when adding a new machine set.</p>
-</dd>
-</dl>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Machine sets running on Azure Stack Hub do not support non-guaranteed Spot VMs.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</div>
-<div class="sect3">
-<h4 id="machineset-yaml-baremetal_scale-the-number-of-compute-machines-that-use-a-specific-configuration">Sample YAML for a compute machine set custom resource on bare metal</h4>
-<div class="paragraph _abstract">
-<p>You can define and apply a compute machine set on bare-metal infrastructure to automate node provisioning.</p>
-</div>
-<div class="paragraph">
-<p>The sample bare metal YAML defines a compute machine set that runs on bare-metal infrastructure and creates nodes that are labeled with <code>node-role.kubernetes.io/&lt;role&gt;: ""</code>.</p>
-</div>
-<div class="paragraph">
-<p>In the sample, <code>&lt;infrastructure_id&gt;</code> is the infrastructure ID label that is based on the cluster ID that you set when you provisioned the cluster, and <code>&lt;role&gt;</code> is the node label to add.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: machine.openshift.io/v1beta1
-kind: MachineSet
-metadata:
-  creationTimestamp: null
-  labels:
-    machine.openshift.io/cluster-api-cluster: &lt;infrastructure_id&gt;
-  name: &lt;infrastructure_id&gt;-&lt;role&gt;
-  namespace: openshift-machine-api
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      machine.openshift.io/cluster-api-cluster: &lt;infrastructure_id&gt;
-      machine.openshift.io/cluster-api-machineset: &lt;infrastructure_id&gt;-&lt;role&gt;
-  template:
-    metadata:
-      creationTimestamp: null
-      labels:
-        machine.openshift.io/cluster-api-cluster: &lt;infrastructure_id&gt;
-        machine.openshift.io/cluster-api-machine-role: &lt;role&gt;
-        machine.openshift.io/cluster-api-machine-type: &lt;role&gt;
-        machine.openshift.io/cluster-api-machineset: &lt;infrastructure_id&gt;-&lt;role&gt;
-    spec:
-      metadata:
-        creationTimestamp: null
-        labels:
-          node-role.kubernetes.io/&lt;role&gt;: ""
-      providerSpec:
-        value:
-          apiVersion: baremetal.cluster.k8s.io/v1alpha1
-          hostSelector: {}
-          image:
-            checksum: &lt;image_checksum&gt;
-            url: &lt;image_url&gt;
-          kind: BareMetalMachineProviderSpec
-          metadata:
-            creationTimestamp: null
-          userData:
-            name: worker-user-data-managed</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>where:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>&lt;infrastructure_id&gt;</code></dt>
-<dd>
-<p>Specifies the infrastructure ID that is based on the cluster ID that you set when you provisioned the cluster. If you have the OpenShift CLI (<code>oc</code>) installed, you can obtain the infrastructure ID by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get -o jsonpath='{.status.infrastructureName}{"\n"}' infrastructure cluster</code></pre>
-</div>
-</div>
-</dd>
-<dt class="hdlist1"><code>&lt;infrastructure_id&gt;-&lt;role&gt;</code></dt>
-<dd>
-<p>Specifies the infrastructure ID and <code>&lt;role&gt;</code> node label.</p>
-</dd>
-<dt class="hdlist1"><code>&lt;role&gt;</code></dt>
-<dd>
-<p>Specifies the node label to add.</p>
-</dd>
-</dl>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>&lt;image_checksum&gt;</code></dt>
-<dd>
-<p>Specifies the image checksum, the URL that you edit to use the API VIP address, in the following format:  <code>http://172.22.0.3:6181/images/rhcos-&lt;version&gt;.&lt;architecture&gt;.qcow2.&lt;md5sum&gt;</code>.</p>
-</dd>
-<dt class="hdlist1"><code>&lt;image_url&gt;</code></dt>
-<dd>
-<p>Specifies the image URL, the URL that you edit to use the API VIP address, in the following format: <code>http://172.22.0.3:6181/images/rhcos-&lt;version&gt;.&lt;architecture&gt;.qcow2</code>.</p>
-</dd>
-</dl>
-</div>
-<div class="paragraph">
-<p>You should use the latest image when adding a new machine set.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</div>
-<div class="sect3">
-<h4 id="machineset-yaml-gcp_scale-the-number-of-compute-machines-that-use-a-specific-configuration">Sample YAML for a compute machine set custom resource on Google Cloud</h4>
-<div class="paragraph _abstract">
-<p>The sample YAML defines a compute machine set for Google Cloud, enabling the automated provisioning of nodes within a specific VPC.</p>
-</div>
-<div class="paragraph">
-<p>When you apply this configuration by using the Red&#160;Hat OpenShift Container Platform CLI, you can ensure consistent scaling, scheduling, and infrastructure ID labeling for compute resources in your cluster.</p>
-</div>
-<div class="paragraph">
-<p>The sample YAML defines a compute machine set that runs in Google Cloud and creates nodes that are labeled with
-<code>node-role.kubernetes.io/&lt;role&gt;: ""</code>,
-where
-<code>&lt;role&gt;</code>
-is the node label to add.</p>
 </div>
 <div class="sect4">
-<h5 id="cpmso-yaml-provider-spec-gcp-oc_scale-the-number-of-compute-machines-that-use-a-specific-configuration">Values obtained by using the  OpenShift CLI</h5>
-<div class="paragraph">
-<p>In the following example, you can obtain some of the values for your cluster by using the Red&#160;Hat OpenShift Container Platform CLI.</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Infrastructure ID</dt>
-<dd>
-<p>The <code>&lt;infrastructure_id&gt;</code> string is the infrastructure ID that is based on the cluster ID that you set when you provisioned the cluster. If you have the OpenShift CLI installed, you can obtain the infrastructure ID by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ oc get -o jsonpath='{.status.infrastructureName}{"\n"}' infrastructure cluster</code></pre>
-</div>
-</div>
-</dd>
-<dt class="hdlist1">Image path</dt>
-<dd>
-<p>The <code>&lt;path_to_image&gt;</code> string is the path to the image that was used to create the disk. If you have the OpenShift CLI installed, you can obtain the path to the image by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ oc -n openshift-machine-api \
-  -o jsonpath='{.spec.template.spec.providerSpec.value.disks[0].image}{"\n"}' \
-  get machineset/&lt;infrastructure_id&gt;-worker-a</code></pre>
-</div>
-</div>
-</dd>
-</dl>
-</div>
-<div class="listingblock">
-<div class="title">Sample Google Cloud <code>MachineSet</code> values</div>
-<div class="content">
-<pre class="highlight nowrap"><code class="language-yaml" data-lang="yaml">apiVersion: machine.openshift.io/v1beta1
-kind: MachineSet
-metadata:
-  labels:
-    machine.openshift.io/cluster-api-cluster: &lt;infrastructure_id&gt;
-  name: &lt;infrastructure_id&gt;-w-a
-  namespace: openshift-machine-api
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      machine.openshift.io/cluster-api-cluster: &lt;infrastructure_id&gt;
-      machine.openshift.io/cluster-api-machineset: &lt;infrastructure_id&gt;-w-a
-  template:
-    metadata:
-      creationTimestamp: null
-      labels:
-        machine.openshift.io/cluster-api-cluster: &lt;infrastructure_id&gt;
-        machine.openshift.io/cluster-api-machine-role: &lt;role&gt;
-        machine.openshift.io/cluster-api-machine-type: &lt;role&gt;
-        machine.openshift.io/cluster-api-machineset: &lt;infrastructure_id&gt;-w-a
-    spec:
-      metadata:
-        labels:
-          node-role.kubernetes.io/&lt;role&gt;: ""
-      providerSpec:
-        value:
-          apiVersion: machine.openshift.io/v1beta1
-          canIPForward: false
-          credentialsSecret:
-            name: gcp-cloud-credentials
-          deletionProtection: false
-          disks:
-          - autoDelete: true
-            boot: true
-            image: &lt;path_to_image&gt;
-            labels: null
-            sizeGb: 128
-            type: pd-ssd
-          gcpMetadata:
-          - key: &lt;custom_metadata_key&gt;
-            value: &lt;custom_metadata_value&gt;
-          kind: GCPMachineProviderSpec
-          machineType: n1-standard-4
-          metadata:
-            creationTimestamp: null
-          networkInterfaces:
-          - network: &lt;infrastructure_id&gt;-network
-            subnetwork: &lt;infrastructure_id&gt;-worker-subnet
-          projectID: &lt;project_name&gt;
-          region: us-central1
-          serviceAccounts:
-          - email: &lt;infrastructure_id&gt;-w@&lt;project_name&gt;.iam.gserviceaccount.com
-            scopes:
-            - https://www.googleapis.com/auth/cloud-platform
-          tags:
-            - &lt;infrastructure_id&gt;-worker
-          userDataSecret:
-            name: worker-user-data
-          zone: us-central1-a</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>where:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>&lt;infrastructure_id&gt;</code></dt>
-<dd>
-<p>Specifies the infrastructure ID that is based on the cluster ID that you set when you provisioned the cluster.</p>
-</dd>
-<dt class="hdlist1"><code>&lt;role&gt;</code></dt>
-<dd>
-<p>Specifies the node label to add.</p>
-</dd>
-<dt class="hdlist1"><code>&lt;path_to_image&gt;</code></dt>
-<dd>
-<p>Specifies the path to the image that is used as a boot image in current compute machine sets. You should use the use the latest image when adding a new machine set. To use a Google Cloud Marketplace image, specify the offer to use:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Red&#160;Hat OpenShift Container Platform: <code>https://www.googleapis.com/compute/v1/projects/redhat-marketplace-public/global/images/redhat-coreos-ocp-413-x86-64-202305021736</code></p>
-</li>
-<li>
-<p>OpenShift Platform Plus: <code>https://www.googleapis.com/compute/v1/projects/redhat-marketplace-public/global/images/redhat-coreos-opp-413-x86-64-202305021736</code></p>
-</li>
-<li>
-<p>OpenShift Kubernetes Engine: <code>https://www.googleapis.com/compute/v1/projects/redhat-marketplace-public/global/images/redhat-coreos-oke-413-x86-64-202305021736</code></p>
-</li>
-</ul>
-</div>
-</dd>
-<dt class="hdlist1"><code>&lt;gcpMetadata&gt;</code></dt>
-<dd>
-<p>Optional: Specifies the custom metadata in the form of a <code>key:value</code> pair. For example use cases, see the Google Cloud documentation for <a href="https://cloud.google.com/compute/docs/metadata/setting-custom-metadata">setting custom metadata</a>.</p>
-</dd>
-<dt class="hdlist1"><code>&lt;project_name&gt;</code></dt>
-<dd>
-<p>Specifies the name of the Google Cloud project that you use for your cluster.</p>
-</dd>
-<dt class="hdlist1"><code>&lt;serviceAccounts&gt;</code></dt>
-<dd>
-<p>Specifies a single service account. Multiple service accounts are not supported.</p>
-</dd>
-</dl>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="machineset-yaml-ibm-cloud_scale-the-number-of-compute-machines-that-use-a-specific-configuration">Sample YAML for a compute machine set custom resource on IBM Cloud</h4>
+<h5 id="network-observability-grant-access-kafka-secrets_secure-network-observability-data">Grant access to Kafka secrets</h5>
 <div class="paragraph _abstract">
-<p>You can use the sample YAML file to automate the provisioning of compute or infrastructure nodes within a specific Virtual Private Cloud (VPC).</p>
-</div>
-<div class="paragraph">
-<p>The sample YAML defines a compute machine set that runs in a specified IBM Cloud&#174; zone in a region and creates nodes that are labeled with
-<code>node-role.kubernetes.io/&lt;role&gt;: ""</code>.</p>
-</div>
-<div class="paragraph">
-<p>In the sample, <code>&lt;infrastructure_id&gt;</code> is the infrastructure ID label that is based on the cluster ID that you set when you provisioned the cluster, and
-<code>&lt;role&gt;</code>
-is the node label to add.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight nowrap"><code class="language-yaml" data-lang="yaml">apiVersion: machine.openshift.io/v1beta1
-kind: MachineSet
-metadata:
-  labels:
-    machine.openshift.io/cluster-api-cluster: &lt;infrastructure_id&gt;
-    machine.openshift.io/cluster-api-machine-role: &lt;role&gt;
-    machine.openshift.io/cluster-api-machine-type: &lt;role&gt;
-  name: &lt;infrastructure_id&gt;-&lt;role&gt;-&lt;region&gt;
-  namespace: openshift-machine-api
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      machine.openshift.io/cluster-api-cluster: &lt;infrastructure_id&gt;
-      machine.openshift.io/cluster-api-machineset: &lt;infrastructure_id&gt;-&lt;role&gt;-&lt;region&gt;
-  template:
-    metadata:
-      labels:
-        machine.openshift.io/cluster-api-cluster: &lt;infrastructure_id&gt;
-        machine.openshift.io/cluster-api-machine-role: &lt;role&gt;
-        machine.openshift.io/cluster-api-machine-type: &lt;role&gt;
-        machine.openshift.io/cluster-api-machineset: &lt;infrastructure_id&gt;-&lt;role&gt;-&lt;region&gt;
-    spec:
-      metadata:
-        labels:
-          node-role.kubernetes.io/&lt;role&gt;: ""
-      providerSpec:
-        value:
-          apiVersion: ibmcloudproviderconfig.openshift.io/v1beta1
-          credentialsSecret:
-            name: ibmcloud-credentials
-          image: &lt;infrastructure_id&gt;-rhcos
-          kind: IBMCloudMachineProviderSpec
-          primaryNetworkInterface:
-              securityGroups:
-              - &lt;infrastructure_id&gt;-sg-cluster-wide
-              - &lt;infrastructure_id&gt;-sg-openshift-net
-              subnet: &lt;infrastructure_id&gt;-subnet-compute-&lt;zone&gt;
-          profile: &lt;instance_profile&gt;
-          region: &lt;region&gt;
-          resourceGroup: &lt;resource_group&gt;
-          userDataSecret:
-              name: &lt;role&gt;-user-data
-          vpc: &lt;vpc_name&gt;
-          zone: &lt;zone&gt;</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>where:</p>
-</div>
-<div class="openblock">
-<div class="content">
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>&lt;infrastructure_id&gt;</code></dt>
-<dd>
-<p>Specifies the infrastructure ID that is based on the cluster ID that you set when you provisioned the cluster. If you have the OpenShift CLI installed, you can obtain the infrastructure ID by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ oc get -o jsonpath='{.status.infrastructureName}{"\n"}' infrastructure cluster</code></pre>
-</div>
-</div>
-</dd>
-<dt class="hdlist1"><code>&lt;role&gt;</code></dt>
-<dd>
-<p>Specifies the node label to add.</p>
-</dd>
-<dt class="hdlist1"><code>&lt;infrastructure_id&gt;-&lt;role&gt;-&lt;region&gt;</code></dt>
-<dd>
-<p>Specifies the infrastructure ID, node label, and region.</p>
-</dd>
-<dt class="hdlist1"><code>&lt;infrastructure_id&gt;-rhcos</code></dt>
-<dd>
-<p>Specifies the custom Red&#160;Hat Enterprise Linux CoreOS (RHCOS) image to use as a boot image for your nodes. You should use the use the latest image when adding a new machine set.</p>
-</dd>
-<dt class="hdlist1"><code>&lt;infrastructure_id&gt;-subnet-compute-&lt;zone&gt;</code></dt>
-<dd>
-<p>Specifies the infrastructure ID and zone within your region to place machines on. Be sure that your region supports the zone that you specify.</p>
-</dd>
-<dt class="hdlist1"><code>&lt;instance_profile&gt;</code></dt>
-<dd>
-<p>Specifies the <a href="https://cloud.ibm.com/docs/vpc?topic=vpc-profiles&amp;interface=ui">IBM Cloud&#174; instance profile</a>.</p>
-</dd>
-<dt class="hdlist1"><code>&lt;region&gt;</code></dt>
-<dd>
-<p>Specifies the region to place machines on.</p>
-</dd>
-<dt class="hdlist1"><code>&lt;resource_group&gt;</code></dt>
-<dd>
-<p>Specifies the resource group that machine resources are placed in. This is either an existing resource group specified at installation time, or an installer-created resource group named based on the infrastructure ID.</p>
-</dd>
-<dt class="hdlist1"><code>&lt;vpc_name&gt;</code></dt>
-<dd>
-<p>Specifies the VPC name.</p>
-</dd>
-<dt class="hdlist1"><code>&lt;zone&gt;</code></dt>
-<dd>
-<p>Specifies the zone within your region to place machines on. Be sure that your region supports the zone that you specify.</p>
-</dd>
-</dl>
-</div>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="machineset-yaml-ibm-power-vs_scale-the-number-of-compute-machines-that-use-a-specific-configuration">Sample YAML for a compute machine set custom resource on IBM Power Virtual Server</h4>
-<div class="paragraph _abstract">
-<p>You can use the sample YAML file to help automate provisioning and to ensure scaling and scheduling work, as required.</p>
-</div>
-<div class="paragraph">
-<p>The sample YAML file defines a compute machine set that runs in a specified IBM Power&#174; Virtual Server zone in a region and creates nodes that are labeled with <code>node-role.kubernetes.io/&lt;role&gt;: ""</code>.</p>
-</div>
-<div class="paragraph">
-<p>In the sample, <code>&lt;infrastructure_id&gt;</code> is the infrastructure ID label that is based on the cluster ID that you set when you provisioned the cluster, and <code>&lt;role&gt;</code> is the node label to add.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight nowrap"><code class="language-yaml" data-lang="yaml">apiVersion: machine.openshift.io/v1beta1
-kind: MachineSet
-metadata:
-  labels:
-    machine.openshift.io/cluster-api-cluster: &lt;infrastructure_id&gt;
-    machine.openshift.io/cluster-api-machine-role: &lt;role&gt;
-    machine.openshift.io/cluster-api-machine-type: &lt;role&gt;
-  name: &lt;infrastructure_id&gt;-&lt;role&gt;-&lt;region&gt;
-  namespace: openshift-machine-api
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      machine.openshift.io/cluster-api-cluster: &lt;infrastructure_id&gt;
-      machine.openshift.io/cluster-api-machineset: &lt;infrastructure_id&gt;-&lt;role&gt;-&lt;region&gt;
-  template:
-    metadata:
-      labels:
-        machine.openshift.io/cluster-api-cluster: &lt;infrastructure_id&gt;
-        machine.openshift.io/cluster-api-machine-role: &lt;role&gt;
-        machine.openshift.io/cluster-api-machine-type: &lt;role&gt;
-        machine.openshift.io/cluster-api-machineset: &lt;infrastructure_id&gt;-&lt;role&gt;-&lt;region&gt;
-    spec:
-      metadata:
-        labels:
-          node-role.kubernetes.io/&lt;role&gt;: ""
-      providerSpec:
-        value:
-          apiVersion: machine.openshift.io/v1
-          credentialsSecret:
-            name: powervs-credentials
-          image:
-            name: rhcos-&lt;infrastructure_id&gt;
-            type: Name
-          keyPairName: &lt;infrastructure_id&gt;-key
-          kind: PowerVSMachineProviderConfig
-          memoryGiB: 32
-          network:
-            regex: ^DHCPSERVER[0-9a-z]{32}_Private$
-            type: RegEx
-          processorType: Shared
-          processors: "0.5"
-          serviceInstance:
-            id: &lt;ibm_power_vs_service_instance_id&gt;
-            type: ID
-          systemType: s922
-          userDataSecret:
-            name: &lt;role&gt;-user-data</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>where:</p>
-</div>
-<div class="openblock">
-<div class="content">
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>&lt;infrastructure_id&gt;</code></dt>
-<dd>
-<p>Specifies the infrastructure ID that is based on the cluster ID that you set when you provisioned the cluster. If you have the OpenShift CLI installed, you can obtain the infrastructure ID by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ oc get -o jsonpath='{.status.infrastructureName}{"\n"}' infrastructure cluster</code></pre>
-</div>
-</div>
-</dd>
-<dt class="hdlist1"><code>&lt;role&gt;</code></dt>
-<dd>
-<p>Specifies the node label to add.</p>
-</dd>
-<dt class="hdlist1"><code>&lt;infrastructure_id&gt;-&lt;role&gt;-&lt;region&gt;</code></dt>
-<dd>
-<p>Specifies the infrastructure ID, node label, and region.</p>
-</dd>
-<dt class="hdlist1"><code>rhcos-&lt;infrastructure_id&gt;</code></dt>
-<dd>
-<p>Specifies the custom Red&#160;Hat Enterprise Linux CoreOS (RHCOS) image to use as a boot image for your nodes. You should use the use the latest image when adding a new machine set.</p>
-</dd>
-<dt class="hdlist1"><code>&lt;ibm_power_vs_service_instance_id&gt;</code></dt>
-<dd>
-<p>Specifies the infrastructure ID within your region to place machines on.</p>
-</dd>
-</dl>
-</div>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="machineset-yaml-nutanix_scale-the-number-of-compute-machines-that-use-a-specific-configuration">Sample YAML for a compute machine set custom resource on Nutanix</h4>
-<div class="paragraph _abstract">
-<p>You can use a YAML file to automate node provisioning and ensure workloads are scheduled correctly based on role and infrastructure requirements.</p>
-</div>
-<div class="paragraph">
-<p>The sample YAML shows how to define a Nutanix compute MachineSet for your cluster. It explains how to configure roles, labels, sizing, networking, and boot settings so new nodes are created consistently.</p>
-</div>
-<div class="paragraph">
-<p>The sample YAML defines a Nutanix compute machine set that creates nodes that are labeled with
-<code>node-role.kubernetes.io/&lt;role&gt;: ""</code>.</p>
-</div>
-<div class="paragraph">
-<p>In the sample, <code>&lt;infrastructure_id&gt;</code> is the infrastructure ID label that is based on the cluster ID that you set when you provisioned the cluster, and
-<code>&lt;role&gt;</code>
-is the node label to add.</p>
-</div>
-<div class="sect4">
-<h5 id="machineset-yaml-nutanix-oc_scale-the-number-of-compute-machines-that-use-a-specific-configuration">Values obtained by using the OpenShift CLI</h5>
-<div class="paragraph">
-<p>In the following example, you can obtain some of the values for your cluster by using the OpenShift CLI (<code>oc</code>).</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Infrastructure ID</dt>
-<dd>
-<p>The <code>&lt;infrastructure_id&gt;</code> string is the infrastructure ID that is based on the cluster ID that you set when you provisioned the cluster. If you have the OpenShift CLI installed, you can obtain the infrastructure ID by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ oc get -o jsonpath='{.status.infrastructureName}{"\n"}' infrastructure cluster</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight nowrap"><code class="language-yaml" data-lang="yaml">apiVersion: machine.openshift.io/v1beta1
-kind: MachineSet
-metadata:
-  labels:
-    machine.openshift.io/cluster-api-cluster: &lt;infrastructure_id&gt;
-    machine.openshift.io/cluster-api-machine-role: &lt;role&gt;
-    machine.openshift.io/cluster-api-machine-type: &lt;role&gt;
-  name: &lt;infrastructure_id&gt;-&lt;role&gt;-&lt;zone&gt;
-  namespace: openshift-machine-api
-  annotations:
-    machine.openshift.io/memoryMb: "16384"
-    machine.openshift.io/vCPU: "4"
-spec:
-  replicas: 3
-  selector:
-    matchLabels:
-      machine.openshift.io/cluster-api-cluster: &lt;infrastructure_id&gt;
-      machine.openshift.io/cluster-api-machineset: &lt;infrastructure_id&gt;-&lt;role&gt;-&lt;zone&gt;
-  template:
-    metadata:
-      labels:
-        machine.openshift.io/cluster-api-cluster: &lt;infrastructure_id&gt;
-        machine.openshift.io/cluster-api-machine-role: &lt;role&gt;
-        machine.openshift.io/cluster-api-machine-type: &lt;role&gt;
-        machine.openshift.io/cluster-api-machineset: &lt;infrastructure_id&gt;-&lt;role&gt;-&lt;zone&gt;
-    spec:
-      metadata:
-        labels:
-          node-role.kubernetes.io/&lt;role&gt;: ""
-      providerSpec:
-        value:
-          apiVersion: machine.openshift.io/v1
-          bootType: ""
-          categories:
-          - key: &lt;category_name&gt;
-            value: &lt;category_value&gt;
-          cluster:
-            type: uuid
-            uuid: &lt;cluster_uuid&gt;
-          credentialsSecret:
-            name: nutanix-credentials
-          image:
-            name: &lt;infrastructure_id&gt;-rhcos
-            type: name
-          kind: NutanixMachineProviderConfig
-          memorySize: 16Gi
-          project:
-            type: name
-            name: &lt;project_name&gt;
-          subnets:
-          - type: uuid
-            uuid: &lt;subnet_uuid&gt;
-          systemDiskSize: 120Gi
-          userDataSecret:
-            name: &lt;user_data_secret&gt;
-          vcpuSockets: 4
-          vcpusPerSocket: 1</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>where:</p>
-</div>
-<div class="openblock">
-<div class="content">
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>&lt;infrastructure_id&gt;</code></dt>
-<dd>
-<p>Specifies the infrastructure ID that is based on the cluster ID that you set when you provisioned the cluster.</p>
-</dd>
-<dt class="hdlist1"><code>&lt;role&gt;</code></dt>
-<dd>
-<p>Specifies the node label to add.</p>
-</dd>
-<dt class="hdlist1"><code>&lt;infrastructure_id&gt;-&lt;infra&gt;-&lt;region&gt;</code></dt>
-<dd>
-<p>Specifies the infrastructure ID, node label, and zone.</p>
-</dd>
-<dt class="hdlist1"><code>annotations</code></dt>
-<dd>
-<p>Specifies annotations for the cluster autoscaler.</p>
-</dd>
-<dt class="hdlist1"><code>bootType</code></dt>
-<dd>
-<p>Specifies the boot type that the compute machines use. For more information about boot types, see <a href="https://portal.nutanix.com/page/documents/kbs/details?targetId=kA07V000000H3K9SAK">Understanding UEFI, Secure Boot, and TPM in the Virtualized Environment</a>. Valid values are <code>Legacy</code>, <code>SecureBoot</code>, or <code>UEFI</code>. The default is <code>Legacy</code>.</p>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>You must use the <code>Legacy</code> boot type in Red&#160;Hat OpenShift Container Platform {product-version}.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</dd>
-<dt class="hdlist1"><code>&lt;categories&gt;</code></dt>
-<dd>
-<p>Specifies one or more Nutanix Prism categories to apply to compute machines. This stanza requires <code>key</code> and <code>value</code> parameters for a category key-value pair that exists in Prism Central. For more information about categories, see <a href="https://portal.nutanix.com/page/documents/details?targetId=Prism-Central-Guide-vpc_2022_6:ssp-ssp-categories-manage-pc-c.html">Category management</a>.</p>
-</dd>
-<dt class="hdlist1"><code>&lt;cluster&gt;</code></dt>
-<dd>
-<p>Specifies a Nutanix Prism Element cluster configuration. In this example, the cluster type is <code>uuid</code>, so there is a <code>uuid</code> stanza.</p>
-</dd>
-<dt class="hdlist1"><code>&lt;infrastructure_id&gt;-rhcos</code></dt>
-<dd>
-<p>Specifies the image to use as a boot image for your nodes. You should use the use the latest image when adding a new machine set.</p>
-</dd>
-<dt class="hdlist1"><code>16Gi</code></dt>
-<dd>
-<p>Specifies the amount of memory for the cluster in Gi.</p>
-</dd>
-<dt class="hdlist1"><code>project</code></dt>
-<dd>
-<p>Specifies the Nutanix project that you use for your cluster. In this example, the project type is <code>name</code>, so there is a <code>name</code> stanza.</p>
-</dd>
-<dt class="hdlist1"><code>subnets</code></dt>
-<dd>
-<p>Specifies one or more UUID for the Prism Element subnet object.
-The CIDR IP address prefix for one of the specified subnets must contain the virtual IP addresses that the Red&#160;Hat OpenShift Container Platform cluster uses.
-A maximum of 32 subnets for each Prism Element failure domain in the cluster is supported.
-All subnet UUID values must be unique.</p>
-</dd>
-<dt class="hdlist1"><code>120Gi</code></dt>
-<dd>
-<p>Specifies the size of the system disk in Gi.</p>
-</dd>
-<dt class="hdlist1"><code>&lt;user_data_secret&gt;</code></dt>
-<dd>
-<p>Specifies the name of the secret in the user data YAML file that is in the <code>openshift-machine-api</code> namespace. Use the value that installation program populates in the default compute machine set.</p>
-</dd>
-<dt class="hdlist1"><code>4</code></dt>
-<dd>
-<p>Specifies the number of vCPU sockets.</p>
-</dd>
-<dt class="hdlist1"><code>1</code></dt>
-<dd>
-<p>Specifies the number of vCPUs per socket.</p>
-</dd>
-</dl>
-</div>
-</div>
-</div>
-</dd>
-</dl>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="machineset-yaml-osp_scale-the-number-of-compute-machines-that-use-a-specific-configuration">Sample YAML for a compute machine set custom resource on RHOSP</h4>
-<div class="paragraph _abstract">
-<p>To enable the Machine API to automate the scaling and management of compute nodes, define a <code>MachineSet</code> resource with Red&#160;Hat OpenStack Platform (RHOSP) parameters, for example, image and network IDs.</p>
-</div>
-<div class="paragraph">
-<p>The sample YAML defines a compute machine set that runs on Red&#160;Hat OpenStack Platform (RHOSP) and creates nodes that are labeled with
-<code>node-role.kubernetes.io/&lt;role&gt;: ""</code>.</p>
-</div>
-<div class="paragraph">
-<p>In the sample, <code>&lt;infrastructure_id&gt;</code> is the infrastructure ID label that is based on the cluster ID that you set when you provisioned the cluster, and
-<code>&lt;role&gt;</code>
-is the node label to add.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight nowrap"><code class="language-yaml" data-lang="yaml">apiVersion: machine.openshift.io/v1beta1
-kind: MachineSet
-metadata:
-  labels:
-    machine.openshift.io/cluster-api-cluster: &lt;infrastructure_id&gt;
-    machine.openshift.io/cluster-api-machine-role: &lt;role&gt;
-    machine.openshift.io/cluster-api-machine-type: &lt;role&gt;
-  name: &lt;infrastructure_id&gt;-&lt;role&gt;
-  namespace: openshift-machine-api
-spec:
-  replicas: &lt;number_of_replicas&gt;
-  selector:
-    matchLabels:
-      machine.openshift.io/cluster-api-cluster: &lt;infrastructure_id&gt;
-      machine.openshift.io/cluster-api-machineset: &lt;infrastructure_id&gt;-&lt;role&gt;
-  template:
-    metadata:
-      labels:
-        machine.openshift.io/cluster-api-cluster: &lt;infrastructure_id&gt;
-        machine.openshift.io/cluster-api-machine-role: &lt;role&gt;
-        machine.openshift.io/cluster-api-machine-type: &lt;role&gt;
-        machine.openshift.io/cluster-api-machineset: &lt;infrastructure_id&gt;-&lt;role&gt;
-    spec:
-      providerSpec:
-        value:
-          apiVersion: machine.openshift.io/v1alpha1
-          cloudName: openstack
-          cloudsSecret:
-            name: openstack-cloud-credentials
-            namespace: openshift-machine-api
-          flavor: &lt;nova_flavor&gt;
-          image: &lt;glance_image_name_or_location&gt;
-          serverGroupID: &lt;optional_UUID_of_server_group&gt;
-          kind: OpenstackProviderSpec
-          networks:
-          - filter: {}
-            subnets:
-            - filter:
-                name: &lt;subnet_name&gt;
-                tags: openshiftClusterID=&lt;infrastructure_id&gt;
-          primarySubnet: &lt;rhosp_subnet_UUID&gt;
-          securityGroups:
-          - filter: {}
-            name: &lt;infrastructure_id&gt;-worker
-          serverMetadata:
-            Name: &lt;infrastructure_id&gt;-worker
-            openshiftClusterID: &lt;infrastructure_id&gt;
-          tags:
-          - openshiftClusterID=&lt;infrastructure_id&gt;
-          trunk: true
-          userDataSecret:
-            name: worker-user-data
-          availabilityZone: &lt;optional_openstack_availability_zone&gt;</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>where:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>&lt;infrastructure_id&gt;</code></dt>
-<dd>
-<p>Specifies the infrastructure ID that is based on the cluster ID that you set when you provisioned the cluster. If you have the Red&#160;Hat OpenShift Container Platform CLI installed, you can obtain the infrastructure ID by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ oc get -o jsonpath='{.status.infrastructureName}{"\n"}' infrastructure cluster</code></pre>
-</div>
-</div>
-</dd>
-<dt class="hdlist1"><code>&lt;role&gt;</code></dt>
-<dd>
-<p>Specifies the node label to add.</p>
-</dd>
-<dt class="hdlist1"><code>&lt;infrastructure_id&gt;-&lt;role&gt;</code></dt>
-<dd>
-<p>Specifies the infrastructure ID and node label.</p>
-</dd>
-<dt class="hdlist1"><code>&lt;glance_image_name_or_location&gt;</code></dt>
-<dd>
-<p>Specifies the image to use as a boot image for your nodes. You should use the latest image when adding a new machine set.</p>
-</dd>
-<dt class="hdlist1"><code>&lt;optional_UUID_of_server_group&gt;</code></dt>
-<dd>
-<p>Sets a server group policy for the <code>MachineSet</code> YAML by entering the value that is returned from
-<a href="https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/16.0/html/command_line_interface_reference/server#server_group_create">creating a server group</a>. For most deployments, <code>anti-affinity</code> or <code>soft-anti-affinity</code> policies are recommended.</p>
-</dd>
-<dt class="hdlist1"><code>&lt;subnet_name&gt;</code></dt>
-<dd>
-<p>Specifies a subnet to use.</p>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>The <code>spec.template.spec.providerSpec.value.networks</code> stanza is required for deployments to multiple networks. If deploying to multiple networks, this list must include the network that is used as the <code>primarySubnet</code> value.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</dd>
-<dt class="hdlist1"><code>&lt;rhosp_subnet_UUID&gt;</code></dt>
-<dd>
-<p>Specifies the RHOSP subnet that you want the endpoints of nodes to be published on. Usually, this is the same subnet that is used as the value of <code>machinesSubnet</code> in the <code>install-config.yaml</code> file.</p>
-</dd>
-</dl>
-</div>
-</div>
-<div class="sect3">
-<h4 id="machineset-yaml-vsphere_scale-the-number-of-compute-machines-that-use-a-specific-configuration">Sample YAML for a compute machine set custom resource on vSphere</h4>
-<div class="paragraph _abstract">
-<p>To enable the Machine API to automate node provisioning on VMware vSphere infrastructure, define a <code>MachineSet</code> resource with parameters that are specific to vSphere, for example data center, resource pool, and template.</p>
-</div>
-<div class="paragraph">
-<p>The sample YAML file defines a compute machine set that runs on vSphere and creates nodes that are labeled with
-<code>node-role.kubernetes.io/&lt;role&gt;: ""</code>.</p>
-</div>
-<div class="paragraph">
-<p>In this sample, <code>&lt;infrastructure_id&gt;</code> is the infrastructure ID label that is based on the cluster ID that you set when you provisioned the cluster, and
-<code>&lt;role&gt;</code>
-is the node label to add.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight nowrap"><code class="language-yaml" data-lang="yaml">apiVersion: machine.openshift.io/v1beta1
-kind: MachineSet
-metadata:
-  creationTimestamp: null
-  labels:
-    machine.openshift.io/cluster-api-cluster: &lt;infrastructure_id&gt;
-  name: &lt;infrastructure_id&gt;-&lt;role&gt;
-  namespace: openshift-machine-api
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      machine.openshift.io/cluster-api-cluster: &lt;infrastructure_id&gt;
-      machine.openshift.io/cluster-api-machineset: &lt;infrastructure_id&gt;-&lt;role&gt;
-  template:
-    metadata:
-      creationTimestamp: null
-      labels:
-        machine.openshift.io/cluster-api-cluster: &lt;infrastructure_id&gt;
-        machine.openshift.io/cluster-api-machine-role: &lt;role&gt;
-        machine.openshift.io/cluster-api-machine-type: &lt;role&gt;
-        machine.openshift.io/cluster-api-machineset: &lt;infrastructure_id&gt;-&lt;role&gt;
-    spec:
-      metadata:
-        creationTimestamp: null
-        labels:
-          node-role.kubernetes.io/&lt;role&gt;: ""
-      providerSpec:
-        value:
-          apiVersion: machine.openshift.io/v1beta1
-          credentialsSecret:
-            name: vsphere-cloud-credentials
-          dataDisks:
-          - name: "&lt;disk_name&gt;"
-            provisioningMode: "&lt;mode&gt;"
-            sizeGiB: 20
-          diskGiB: 120
-          kind: VSphereMachineProviderSpec
-          memoryMiB: 8192
-          metadata:
-            creationTimestamp: null
-          network:
-            devices:
-            - networkName: "&lt;vm_network_name&gt;"
-          numCPUs: 4
-          numCoresPerSocket: 1
-          snapshot: ""
-          template: &lt;vm_template_name&gt;
-          userDataSecret:
-            name: worker-user-data
-          workspace:
-            datacenter: &lt;vcenter_data_center_name&gt;
-            datastore: &lt;vcenter_datastore_name&gt;
-            folder: &lt;vcenter_vm_folder_path&gt;
-            resourcepool: &lt;vsphere_resource_pool&gt;
-            server: &lt;vcenter_server_ip&gt;</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>where</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>&lt;infrastructure_id&gt;</code></dt>
-<dd>
-<p>Specifies the infrastructure ID that is based on the cluster ID that you set when you provisioned the cluster. If you have the OpenShift CLI (<code>oc</code>) installed, you can obtain the infrastructure ID by running the following command:</p>
-</dd>
-</dl>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ oc get -o jsonpath='{.status.infrastructureName}{"\n"}' infrastructure cluster</code></pre>
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>&lt;infrastructure_id&gt;-&lt;role&gt;</code></dt>
-<dd>
-<p>Specifies the infrastructure ID and node label.</p>
-</dd>
-<dt class="hdlist1"><code>&lt;role&gt;</code></dt>
-<dd>
-<p>Specifies the node label to add.</p>
-</dd>
-<dt class="hdlist1"><code>&lt;disk_name&gt;</code></dt>
-<dd>
-<p>Specifies one or more data disk definitions. For more information, see "Configuring data disks by using machine sets".</p>
-</dd>
-<dt class="hdlist1"><code>&lt;image_name&gt;</code></dt>
-<dd>
-<p>Specifies the image to use as a boot image for your nodes.</p>
-</dd>
-<dt class="hdlist1"><code>&lt;vm_network_name&gt;</code></dt>
-<dd>
-<p>Specifies the vSphere VM network to deploy the compute machine set to. This VM network must be where other compute machines reside in the cluster.</p>
-</dd>
-<dt class="hdlist1"><code>&lt;vm_template_name&gt;</code></dt>
-<dd>
-<p>Specifies the vSphere VM template to use as a boot image for your nodes, such as <code>user-5ddjd-rhcos</code>. You should use a template with the latest Red&#160;Hat OpenShift Container Platform image when adding a new machine set.</p>
-</dd>
-<dt class="hdlist1"><code>&lt;vcenter_data_center_name&gt;</code></dt>
-<dd>
-<p>Specifies the vCenter datacenter to deploy the compute machine set on.</p>
-</dd>
-<dt class="hdlist1"><code>&lt;vcenter_datastore_name&gt;</code></dt>
-<dd>
-<p>Specifies the vCenter datastore to deploy the compute machine set on.</p>
-</dd>
-<dt class="hdlist1"><code>&lt;vcenter_vm_folder_path&gt;</code></dt>
-<dd>
-<p>Specifies the path to the vSphere VM folder in vCenter, such as <code>/dc1/vm/user-inst-5ddjd</code>.</p>
-</dd>
-<dt class="hdlist1"><code>&lt;vsphere_resource_pool&gt;</code></dt>
-<dd>
-<p>Specifies the vSphere resource pool for your VMs.</p>
-</dd>
-<dt class="hdlist1"><code>&lt;vcenter_server_ip&gt;</code></dt>
-<dd>
-<p>Specifies the vCenter server IP or fully qualified domain name.</p>
-</dd>
-</dl>
-</div>
-<div class="sect4">
-<h5 id="capi-creating-machine-template_scale-the-number-of-compute-machines-that-use-a-specific-configuration">Create a Cluster API machine template</h5>
-<div class="paragraph _abstract">
-<p>You can create a provider-specific machine template resource by creating a YAML manifest file and applying it with the OpenShift CLI (<code>oc</code>).</p>
+<p>Grant the Network Observability Operator permission to access Kafka secrets when you use the Kafka deployment model with TLS or mTLS enabled.</p>
 </div>
 <div class="ulist">
 <div class="title">Prerequisites</div>
 <ul>
 <li>
-<p>You have deployed an Red&#160;Hat OpenShift Container Platform cluster.</p>
+<p>The Network Observability Operator is installed.</p>
 </li>
 <li>
-<p>You have enabled the use of the Cluster API.</p>
+<p>You have <code>cluster-admin</code> privileges.</p>
 </li>
 <li>
-<p>You have access to the cluster using an account with <code>cluster-admin</code> permissions.</p>
-</li>
-<li>
-<p>You have installed the OpenShift CLI (<code>oc</code>).</p>
+<p>You configured the <code>FlowCollector</code> resource with <code>spec.deploymentModel: Kafka</code> and TLS or mTLS enabled.</p>
 </li>
 </ul>
 </div>
@@ -4219,292 +2177,121 @@ spec:
 <div class="title">Procedure</div>
 <ol class="arabic">
 <li>
-<p>Create a YAML file similar to the following example. This procedure uses <code>&lt;machine_template_resource_file&gt;.yaml</code> as an example file name.</p>
-<div class="openblock">
-<div class="content">
+<p>Replace <code>&lt;namespace&gt;</code> with the namespace configured in <code>spec.namespace</code> of the <code>FlowCollector</code> resource. The default value is <code>netobserv</code>.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>If Kafka is installed in the same namespace as the Network Observability components, create the secret watcher role binding by running the following command:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight nowrap"><code class="language-yaml" data-lang="yaml">apiVersion: infrastructure.cluster.x-k8s.io/v1beta1
-kind: &lt;machine_template_kind&gt;
-metadata:
-  name: &lt;template_name&gt;
-  namespace: openshift-cluster-api
-spec:
-  template:
-    spec:</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>where:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>kind</code></dt>
-<dd>
-<p>Specifies the machine template kind. This value must match the value for your platform.</p>
-</dd>
-</dl>
-</div>
-<div class="paragraph">
-<p>The following values are valid:</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Cluster infrastructure provider</th>
-<th class="tableblock halign-left valign-top">Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Amazon Web Services (AWS)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>AWSMachineTemplate</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Google Cloud</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>GCPMachineTemplate</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Microsoft Azure</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>AzureMachineTemplate</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Red&#160;Hat OpenStack Platform (RHOSP)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>OpenStackMachineTemplate</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">VMware vSphere</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>VSphereMachineTemplate</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Bare metal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Metal3MachineTemplate</code></p></td>
-</tr>
-</tbody>
-</table>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>metadata.name</code></dt>
-<dd>
-<p>Specifies a name for the machine template.</p>
-</dd>
-<dt class="hdlist1"><code>spec.template.spec</code></dt>
-<dd>
-<p>Specifies the details for your environment. These parameters are provider specific.
-For more information, see the sample Cluster API machine template YAML for your provider.</p>
-</dd>
-</dl>
-</div>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create rolebinding secret-watcher \
+  -n &lt;namespace&gt; \
+  --clusterrole=netobserv-secret-watcher \
+  --serviceaccount=openshift-netobserv-operator:netobserv-controller-manager</code></pre>
 </div>
 </div>
 </li>
 <li>
-<p>Create the machine template CR by running the following command:</p>
+<p>Create the secret creator role binding in the privileged namespace by running the following command:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ oc create -f &lt;machine_template_resource_file&gt;.yaml</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create rolebinding secret-creator \
+  -n &lt;namespace&gt;-privileged \
+  --clusterrole=netobserv-secret-creator \
+  --serviceaccount=openshift-netobserv-operator:netobserv-controller-manager</code></pre>
 </div>
 </div>
 </li>
 </ol>
 </div>
-<div class="ulist">
-<div class="title">Verification</div>
-<ul>
+</li>
 <li>
-<p>Confirm that the machine template CR is created by running the following command:</p>
+<p>If Kafka is installed in a different namespace, create the secret watcher role binding in the Kafka namespace.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Replace <code>&lt;kafka_namespace&gt;</code> with the namespace where Kafka is installed by running the following command:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ oc get &lt;machine_template_kind&gt; -n openshift-cluster-api</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create rolebinding secret-watcher \
+  -n &lt;kafka_namespace&gt; \
+  --clusterrole=netobserv-secret-watcher \
+  --serviceaccount=openshift-netobserv-operator:netobserv-controller-manager</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>Replace <code>&lt;machine_template_kind&gt;</code> with the value that corresponds to your platform.</p>
-</div>
+</li>
+<li>
+<p>Create the secret creator role binding by running the following command:</p>
 <div class="listingblock">
-<div class="title">Example output</div>
 <div class="content">
-<pre class="highlight nowrap"><code class="language-text" data-lang="text">NAME              AGE
-&lt;template_name&gt;   77m</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create rolebinding secret-creator \
+  -n &lt;namespace&gt; \
+  --clusterrole=netobserv-secret-creator \
+  --serviceaccount=openshift-netobserv-operator:netobserv-controller-manager</code></pre>
 </div>
 </div>
 </li>
-</ul>
+<li>
+<p>Create the secret creator role binding in the privileged namespace by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create rolebinding secret-creator \
+  -n &lt;namespace&gt;-privileged \
+  --clusterrole=netobserv-secret-creator \
+  --serviceaccount=openshift-netobserv-operator:netobserv-controller-manager</code></pre>
 </div>
 </div>
-<div class="sect4">
-<h5 id="capi-creating-machine-set_scale-the-number-of-compute-machines-that-use-a-specific-configuration">Create a Cluster API compute machine set</h5>
-<div class="paragraph _abstract">
-<p>You can create compute machine sets that use the Cluster API to dynamically manage the machine compute resources for specific workloads of your choice.</p>
+</li>
+</ol>
 </div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>You have deployed an Red&#160;Hat OpenShift Container Platform cluster.</p>
 </li>
-<li>
-<p>You have enabled the use of the Cluster API.</p>
-</li>
-<li>
-<p>You have access to the cluster using an account with <code>cluster-admin</code> permissions.</p>
-</li>
-<li>
-<p>You have installed the OpenShift CLI (<code>oc</code>).</p>
-</li>
-<li>
-<p>You have created the machine template resource.</p>
-</li>
-</ul>
+</ol>
 </div>
 <div class="olist arabic">
-<div class="title">Procedure</div>
+<div class="title">Verification</div>
 <ol class="arabic">
 <li>
-<p>Create a YAML file similar to the following. This procedure uses <code>&lt;machine_set_resource_file&gt;.yaml</code> as an example file name.</p>
-<div class="openblock">
-<div class="content">
+<p>Check the <code>FlowCollector</code> status for errors by running the following command:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight nowrap"><code class="language-yaml" data-lang="yaml">apiVersion: cluster.x-k8s.io/v1beta1
-kind: MachineSet
-metadata:
-  name: &lt;machine_set_name&gt;
-  namespace: openshift-cluster-api
-spec:
-  clusterName: &lt;cluster_name&gt;
-  replicas: 1
-  selector:
-    matchLabels:
-      test: example
-  template:
-    metadata:
-      labels:
-        test: example
-    spec:
-# ...</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>where:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>metadata.name</code></dt>
-<dd>
-<p>Specifies a name for the compute machine set.
-The cluster ID, machine role, and region form a typical pattern for this value in the following format: <code>&lt;cluster_name&gt;-&lt;role&gt;-&lt;region&gt;</code>.</p>
-</dd>
-<dt class="hdlist1"><code>spec.clusterName</code></dt>
-<dd>
-<p>Specifies the name of the cluster.
-Obtain the value of the cluster ID by running the following command:</p>
-</dd>
-</dl>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$  oc get infrastructure cluster \
-   -o jsonpath='{.status.infrastructureName}'</code></pre>
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>spec.template.spec</code></dt>
-<dd>
-<p>Specifies the details for your environment. These parameters are provider specific. For more information, see the sample Cluster API compute machine set YAML for your provider.</p>
-</dd>
-</dl>
-</div>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get flowcollector cluster -o jsonpath='{.status.conditions}'</code></pre>
 </div>
 </div>
 </li>
 <li>
-<p>Create the compute machine set CR by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ oc create -f &lt;machine_set_resource_file&gt;.yaml</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Confirm that the compute machine set CR is created by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ oc get machineset.cluster.x-k8s.io -n openshift-cluster-api</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight nowrap"><code class="language-text" data-lang="text">NAME                 CLUSTER          REPLICAS   READY   AVAILABLE   AGE   VERSION
-&lt;machine_set_name&gt;   &lt;cluster_name&gt;   1          1       1           17m</code></pre>
-</div>
-</div>
+<p>Verify that no conditions report permission-related errors.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
 <div class="paragraph">
-<p>When the new compute machine set is available, the <code>REPLICAS</code> and <code>AVAILABLE</code> values match. If the compute machine set is not available, wait a few minutes and run the command again.</p>
+<p>If the <code>FlowCollector</code> status continues to show permission errors after you grant the required permissions, restart the Network Observability Operator pod for faster reconciliation:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc delete pods -n openshift-netobserv-operator -l app=netobserv-operator</code></pre>
+</div>
+</div>
+</td>
+</tr>
+</table>
 </div>
 </li>
 </ol>
-</div>
-<div class="ulist">
-<div class="title">Verification</div>
-<ul>
-<li>
-<p>To verify that the compute machine set is creating machines according to your required configuration, review the lists of machines and nodes in the cluster by running the following commands:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>View the list of Cluster API machines:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ oc get machine.cluster.x-k8s.io -n openshift-cluster-api</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight nowrap"><code class="language-text" data-lang="text">NAME                             CLUSTER          NODENAME                                 PROVIDERID      PHASE     AGE     VERSION
-&lt;machine_set_name&gt;-&lt;string_id&gt;   &lt;cluster_name&gt;   &lt;ip_address&gt;.&lt;region&gt;.compute.internal   &lt;provider_id&gt;   Running   8m23s</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>View the list of nodes:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ oc get node</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight nowrap"><code class="language-text" data-lang="text">NAME                                       STATUS   ROLES    AGE     VERSION
-&lt;ip_address_1&gt;.&lt;region&gt;.compute.internal   Ready    worker   5h14m   v1.28.5
-&lt;ip_address_2&gt;.&lt;region&gt;.compute.internal   Ready    master   5h19m   v1.28.5
-&lt;ip_address_3&gt;.&lt;region&gt;.compute.internal   Ready    worker   7m      v1.28.5</code></pre>
-</div>
-</div>
-</li>
-</ul>
-</div>
-</li>
-</ul>
 </div>
 </div>
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="infrastructure-components_separate-infrastructure-machines-from-machines-that-run-workloads.html">Red&#160;Hat OpenShift Container Platform infrastructure components</a> | ↑ Up: <a href="_optimize.html">Optimize</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="machine-mgmt-intro-add-for-upi_add-compute-machines-manually.html">Compute machine creation on user-provisioned infrastructure</a> →</p>
+<p>← Previous: <a href="control-network-policies-and-access-for-network-observability-operator-con_control-network-policies-and-access-for-network-observability-operator.html">Control network policies and access for the Network Observability Operator</a> | ↑ Up: <a href="_networking.html">Networking</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="network-observability-operator_network-flow-visibility.html">Network Observability Operator</a> →</p>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-06 15:08:32 -0500
+Last updated 2026-10-08 18:28:01 -0500
 </div>
 </div>
 <style>

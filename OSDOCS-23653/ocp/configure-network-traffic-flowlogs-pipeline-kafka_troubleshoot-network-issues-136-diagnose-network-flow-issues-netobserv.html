@@ -479,44 +479,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 
 </style>
 <!-- navmap-right-toc-end -->
-<!-- navmap-preview-warning-start -->
-<style>
-  .navmap-preview-warning {
-    background: #fff1f1;
-    border: 2px solid #c9190b;
-    border-radius: 4px;
-    color: #3b0a0a;
-    font-family: "Open Sans", "DejaVu Sans", sans-serif;
-    margin: 1em auto;
-    max-width: 70em;
-    padding: 1em 1.25em;
-  }
-  .navmap-preview-warning strong { color: #a30000; }
-  .navmap-preview-warning details { margin-top: .75em; }
-  .navmap-preview-warning pre {
-    background: #fff;
-    border: 1px solid #d7d7d7;
-    max-height: 20em;
-    overflow: auto;
-    padding: .75em;
-    white-space: pre-wrap;
-  }
-</style>
-<!-- navmap-preview-warning-end -->
 </head>
 <body id="configure-network-traffic-flowlogs-pipeline-kafka_troubleshoot-network-issues-136-diagnose-network-flow-issues-netobserv" class="book toc2 toc-left navmap-has-right-toc">
-<div class="navmap-preview-warning" role="alert"><strong>Preview warning: this preview is incomplete.</strong><p>One or more AsciiDoc includes are missing. Content may be absent from this page or from related pages.</p><details><summary>Show missing-include report</summary><pre>Include preflight failed for maps/ocp/navigation.adoc
-
-Missing include targets:
-  maps/ocp/troubleshoot.adoc:53
-    include::ocp-jobs/use-the-vsphere-problem-detector-operator.adoc[leveloffset=+1]
-    expected: maps/ocp/ocp-jobs/use-the-vsphere-problem-detector-operator.adoc
-
-How to fix these errors:
-  1. Restore or create the expected .adoc file, preserving the path relative to the referring map; or
-  2. Change the include directive to the path of the existing source file if the topic was renamed or moved.
-  Then rerun this audit and the preview. Do not ignore the error: Asciidoctor can otherwise generate incomplete HTML.
-</pre></details><details><summary>How to remediate missing content</summary><ol><li>Restore or create the expected <code>.adoc</code> file at the reported path, including its required content and attributes.</li><li>If the topic was renamed or moved, update the reported <code>include::</code> directive to point to the existing file. The path is relative to the file containing the directive.</li><li>If the topic is intentionally not ready, remove the include from the map and track the content gap separately.</li></ol><p>After fixing the includes, rebuild the preview with <code>./preview-map &lt;distro&gt;</code>.</p></details></div>
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -526,6 +490,8 @@ How to fix these errors:
 
 <ul class="sectlevel2">
 <li><a href="about-kmm_review-kmm-releases-and-updates.html">About the Kernel Module Management Operator</a>
+</li>
+<li><a href="hosted-control-planes-release-notes_hosted-control-planes-release-notes.html">Hosted control planes release notes</a>
 </li>
 </ul>
 </li>
@@ -561,10 +527,6 @@ How to fix these errors:
 <li><a href="coreos-layering-configuring-on_understand-the-on-cluster-mode-of-the-image-mode-for-openshift-feature.html">About on-cluster image mode</a>
 </li>
 <li><a href="coreos-layering-updating_understand-how-to-update-a-cluster-that-uses-the-image-mode-for-openshift.html">Update with a RHCOS custom layered image</a>
-</li>
-<li><a href="network-observability-operator_understand-network-observability-netobserv.html">Network Observability Operator</a>
-</li>
-<li><a href="network-observability-deployment-and-management-con_network-observability-deployment-and-management.html">Network Observability deployment and management</a>
 </li>
 <li><a href="understanding-openshift_evaluate-openshift-platform-capabilities.html">Understand Red&#160;Hat OpenShift Container Platform</a>
 </li>
@@ -909,29 +871,29 @@ How to fix these errors:
 <li><a href="_disconnected_environments.html">Disconnected environments</a>
 
 <ul class="sectlevel2">
-<li><a href="understand-disconnected-environments-intro_understand-disconnected-environments.html">Understand disconnected environments</a>
+<li><a href="understand-disconnected-environments-intro_understand-disconnected-environments.html">Disconnected environment concepts</a>
 </li>
-<li><a href="installing-agent_install-a-cluster-in-a-disconnected-environment.html">Installing a cluster with the Agent-based Installer</a>
+<li><a href="plan-a-disconnected-installation-intro_plan-a-disconnected-installation.html">Plan a disconnected installation</a>
 </li>
-<li><a href="prerequisites_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift.html">Prerequisites</a>
+<li><a href="installing-agent_install-a-cluster-in-a-disconnected-environment.html">Install a cluster with the Agent-based Installer</a>
 </li>
-<li><a href="installation-oc-mirror-v2-about_mirror-images-to-a-mirror-registry-using-oc-mirror-v2.html">About oc-mirror plugin v2</a>
+<li><a href="create-mirror-registry-intro_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift.html">Create a mirror registry with mirror registry for Red Hat OpenShift</a>
 </li>
-<li><a href="prerequisites_mirror-images-to-a-mirror-registry-using-the-oc-adm-release-mirror-command.html">Prerequisites</a>
+<li><a href="installation-oc-mirror-v2-about_mirror-images-to-a-mirror-registry-using-oc-mirror-v2.html">Mirror images to a mirror registry using oc-mirror v2</a>
 </li>
-<li><a href="oc-mirror-migration-differences_migrate-from-oc-mirror-v1-to-v2.html">Changes from oc-mirror plugin v1 to v2</a>
-</li>
-<li><a href="olm-restricted-network-prereqs_manage-olm-operators-in-a-disconnected-environment.html">Prerequisites</a>
+<li><a href="manage-olm-operators-disconnected-intro_manage-olm-operators-in-a-disconnected-environment.html">Manage OLM Operators in a disconnected environment</a>
 </li>
 <li><a href="mirror-images-for-a-cluster-update-in-a-disconnected-environment-intro_mirror-images-for-a-cluster-update-in-a-disconnected-environment.html">Mirror images for a cluster update in a disconnected environment</a>
 </li>
-<li><a href="update-service-overview_update-a-cluster-in-a-disconnected-environment-using-osus.html">Using the OpenShift Update Service in a disconnected environment</a>
+<li><a href="update-service-overview_update-a-cluster-in-a-disconnected-environment-using-osus.html">Use the OpenShift Update Service in a disconnected environment</a>
 </li>
-<li><a href="updating-cli-prereqs_update-a-cluster-in-a-disconnected-environment-without-using-osus.html">Prerequisites for a cluster update</a>
+<li><a href="update-disconnected_update-a-cluster-in-a-disconnected-environment-without-using-osus.html">Updating the disconnected cluster</a>
 </li>
-<li><a href="about-disconnected-updates-uninstalling-osus_uninstall-osus-from-a-cluster.html">Uninstalling the OpenShift Update Service from a cluster</a>
+<li><a href="about-disconnected-updates-uninstalling-osus_uninstall-osus-from-a-cluster.html">Uninstall the OpenShift Update Service from a cluster</a>
 </li>
-<li><a href="installation-about-mirror-registry_convert-a-connected-cluster-to-disconnected.html">About the mirror registry</a>
+<li><a href="configure-trust-and-mirroring-con_configure-trust-and-mirroring.html">Configure trust and mirroring</a>
+</li>
+<li><a href="convert-connected-to-disconnected-intro_convert-a-connected-cluster-to-disconnected.html">Convert a connected cluster to disconnected</a>
 </li>
 <li><a href="deploying-hosted-control-planes-in-a-disconnected-environment-intro_deploying-hosted-control-planes-in-a-disconnected-environment.html">Deploying hosted control planes in a disconnected environment</a>
 </li>
@@ -989,7 +951,7 @@ How to fix these errors:
 </li>
 <li><a href="core-user-password_change-the-core-user-password-for-node-access.html">Change the core user password for node access</a>
 </li>
-<li><a href="configure-control-plane-failure-domains-con_configure-control-plane-failure-domains.html">Configure control plane failure domains</a>
+<li><a href="spread-the-control-plane-across-failure-domains-con_spread-the-control-plane-across-failure-domains.html">Spread the control plane across failure domains</a>
 </li>
 <li><a href="multi-architecture-configuring-your-cluster_configure-multi-architecture-node-workload-deployments.html">Configuring your cluster with multi-architecture compute machines</a>
 </li>
@@ -1029,6 +991,12 @@ How to fix these errors:
 </li>
 <li><a href="manage-the-configuration-and-lifecycle-of-control-plane-machines-con_manage-the-configuration-and-lifecycle-of-control-plane-machines.html">Manage the configuration and lifecycle of control plane machines</a>
 </li>
+<li><a href="manage-the-configuration-and-lifecycle-of-compute-machines-con_manage-the-configuration-and-lifecycle-of-compute-machines.html">Manage the configuration and lifecycle of compute machines</a>
+</li>
+<li><a href="identify-and-group-compute-machines-con_identify-and-group-compute-machines.html">Identify and group compute machines</a>
+</li>
+<li><a href="identify-and-group-control-plane-machines-con_identify-and-group-control-plane-machines.html">Identify and group control plane machines</a>
+</li>
 <li><a href="multi-architecture-scheduling_manage-workloads-on-multi-architecture-clusters.html">Scheduled workloads on clusters with multi-architecture compute machines</a>
 </li>
 <li><a href="hcp-import-intro_manually-import-a-hosted-cluster.html">Manually importing a hosted cluster</a>
@@ -1063,7 +1031,7 @@ How to fix these errors:
 </li>
 <li><a href="machine-health-checks-about_understand-machine-health-check-behavior.html">About machine health checks</a>
 </li>
-<li><a href="machine-about-phases_understand-the-machine-lifecycle.html">Machine phases</a>
+<li><a href="understand-the-machine-lifecycle-con_understand-the-machine-lifecycle.html">Understand the machine lifecycle</a>
 </li>
 <li><a href="understand-the-out-of-cluster-mode-of-the-image-mode-for-openshift-feature-con_understand-the-out-of-cluster-mode-of-the-image-mode-for-openshift-feature.html">Understand the out-of-cluster mode of the Image Mode for OpenShift feature</a>
 </li>
@@ -1127,8 +1095,6 @@ How to fix these errors:
 </li>
 <li><a href="configure-multi-tenant-namespace-isolation-con_configure-multi-tenant-namespace-isolation.html">Configure multi-tenant namespace isolation</a>
 </li>
-<li><a href="configure-the-network-observability-operator-flowcollector-con_configure-the-network-observability-operator-flowcollector.html">Configure the Network Observability Operator FlowCollector</a>
-</li>
 <li><a href="define-how-much-disk-space-a-single-container-on-my-nodes-can-use-for-its-files-and-layers-con_define-how-much-disk-space-a-single-container-on-my-nodes-can-use-for-its-files-and-layers.html">Define how much disk space a single container can use</a>
 </li>
 <li><a href="define-the-maximum-size-of-the-container-log-file-before-it-is-rotated-con_define-the-maximum-size-of-the-container-log-file-before-it-is-rotated.html">Define the maximum size of the container log file before it is rotated</a>
@@ -1185,7 +1151,7 @@ How to fix these errors:
 </li>
 <li><a href="about-kmm_manage-kernel-modules-across-cluster-nodes.html">About the Kernel Module Management Operator</a>
 </li>
-<li><a href="installation-oc-mirror-v2-about_mirror-container-images-to-a-local-registry.html">About oc-mirror plugin v2</a>
+<li><a href="installation-oc-mirror-v2-about_mirror-container-images-to-a-local-registry.html">Mirror images to a mirror registry using oc-mirror v2</a>
 </li>
 <li><a href="organize-image-versions-with-tags-con_organize-image-versions-with-tags.html">Organize image versions with tags</a>
 </li>
@@ -1211,11 +1177,13 @@ How to fix these errors:
 </li>
 <li><a href="cpmso-feat-auto-update_apply-configuration-changes-to-control-plane-machines-with-automation.html">Automatic updates to the control plane configuration</a>
 </li>
-<li><a href="change-the-configuration-of-compute-machines-by-updating-a-compute-machine-set-con_change-the-configuration-of-compute-machines-by-updating-a-compute-machine-set.html">Change the configuration of compute machines by updating a compute machine set</a>
+<li><a href="change-the-configuration-of-compute-machines-by-updating-compute-machine-resources-con_change-the-configuration-of-compute-machines-by-updating-compute-machine-resources.html">Change the configuration of compute machines by updating compute machine resources</a>
+</li>
+<li><a href="enable-automated-machine-management-on-user-provisioned-infrastructure-con_enable-automated-machine-management-on-user-provisioned-infrastructure.html">Enable automated machine management on user-provisioned infrastructure</a>
 </li>
 <li><a href="apply-configuration-changes-to-compute-machines-with-automation-con_apply-configuration-changes-to-compute-machines-with-automation.html">Apply configuration changes to compute machines with automation</a>
 </li>
-<li><a href="mapi-to-capi-migration-overview_change-the-authoritative-api-for-machine-management-resources.html">Machine API to Cluster API resource migration</a>
+<li><a href="change-the-authoritative-api-for-machine-management-resources-con_change-the-authoritative-api-for-machine-management-resources.html">Change the authoritative API for machine management resources</a>
 </li>
 <li><a href="private-clusters-about_configure-a-private-cluster.html">About private clusters</a>
 </li>
@@ -1288,7 +1256,6 @@ How to fix these errors:
 </ul>
 </li>
 <li><a href="_networking.html">Networking</a>
-
 <ul class="sectlevel2">
 <li><a href="configure-and-maintain-the-pod-network-cni-con_configure-and-maintain-the-pod-network-cni.html">Configure and maintain the pod network</a>
 </li>
@@ -1304,7 +1271,31 @@ How to fix these errors:
 </li>
 <li><a href="configure-high-performance-networking-con_configure-high-performance-networking.html">Configure high-performance networking</a>
 </li>
+<li><a href="network-observability-operator_understand-network-observability-netobserv.html">Network Observability Operator</a>
+</li>
+<li><a href="evaluate-network-observability-prerequisites-and-requirements-con_evaluate-network-observability-prerequisites-and-requirements.html">Evaluate network observability prerequisites and requirements</a>
+</li>
+<li><a href="network-observability-deployment-and-management-con_network-observability-deployment-and-management.html">Network Observability deployment and management</a>
+</li>
+<li><a href="verify-network-observability-installation-intro_verify-network-observability-installation.html">Verify Network Observability installation</a>
+</li>
+<li><a href="configure-the-network-observability-operator-flowcollector-con_configure-the-network-observability-operator-flowcollector.html">Configure the Network Observability Operator FlowCollector</a>
+</li>
+<li><a href="control-network-policies-and-access-for-network-observability-operator-con_control-network-policies-and-access-for-network-observability-operator.html">Control network policies and access for the Network Observability Operator</a>
+</li>
+<li><a href="secure-network-observability-data-con_secure-network-observability-data.html">Secure network observability data</a>
+</li>
 <li><a href="network-observability-operator_network-flow-visibility.html">Network Observability Operator</a>
+</li>
+<li><a href="network-observability-network-traffic-overview-view_monitor-network-traffic-with-network-observability.html">Observe the network traffic from the Overview view</a>
+</li>
+<li><a href="network-observability-health-dashboard-overview_verify-security-and-network-observability-operator-health.html">Health dashboards</a>
+</li>
+<li><a href="configure-network-traffic-flowlogs-pipeline-kafka_troubleshoot-network-issues-136-diagnose-network-flow-issues-netobserv.html"><span class="toc-current">Flowlogs-Pipeline does not consume network flows after installing Kafka</span></a>
+</li>
+<li><a href="network-observability-integration-intro_network-observability-integration.html">Network Observability integration</a>
+</li>
+<li><a href="upgrade-network-observability-operator-version-con_upgrade-network-observability-operator-version.html">Upgrade the Network Observability Operator version</a>
 </li>
 </ul>
 </li>
@@ -1462,6 +1453,18 @@ How to fix these errors:
 </li>
 <li><a href="configure-confidential-vms-con_configure-confidential-vms.html">Configure confidential VMs</a>
 </li>
+<li><a href="isolate-compute-machines-from-other-tenants-con_isolate-compute-machines-from-other-tenants.html">Isolate compute machines from other tenants</a>
+</li>
+<li><a href="protect-the-instance-metadata-endpoint-for-compute-machines-con_protect-the-instance-metadata-endpoint-for-compute-machines.html">Protect the instance metadata endpoint for compute machines</a>
+</li>
+<li><a href="harden-boot-integrity-for-compute-machines-con_harden-boot-integrity-for-compute-machines.html">Harden boot integrity for compute machines</a>
+</li>
+<li><a href="isolate-control-plane-machines-from-other-tenants-con_isolate-control-plane-machines-from-other-tenants.html">Isolate control plane machines from other tenants</a>
+</li>
+<li><a href="protect-the-instance-metadata-endpoint-for-control-plane-machines-con_protect-the-instance-metadata-endpoint-for-control-plane-machines.html">Protect the instance metadata endpoint for control plane machines</a>
+</li>
+<li><a href="harden-boot-integrity-for-control-plane-machines-con_harden-boot-integrity-for-control-plane-machines.html">Harden boot integrity for control plane machines</a>
+</li>
 <li><a href="connect-workloads-to-additional-networks-con_connect-workloads-to-additional-networks.html">Connect workloads to additional networks</a>
 </li>
 <li><a href="nw-multi-network-policy-differences_control-traffic-on-secondary-networks.html">Differences between multi-network policy and network policy</a>
@@ -1497,8 +1500,6 @@ How to fix these errors:
 </li>
 <li><a href="monitor-network-performance-con_monitor-network-performance.html">Monitor network performance</a>
 </li>
-<li><a href="network-observability-deployment-and-management-113-control-automatic-installation-during-cluster-creation-con_network-observability-deployment-and-management-113-control-automatic-installation-during-cluster-creation.html">Control automatic installation during cluster creation</a>
-</li>
 <li><a href="nw-networkpolicy-audit-concept_observe-audit-and-review-policy-enforcement.html">Audit logging</a>
 </li>
 <li><a href="performance-investigation-con_performance-investigation.html">Performance investigation</a>
@@ -1533,8 +1534,6 @@ How to fix these errors:
 <li><a href="configure-external-dns-integration-con_configure-external-dns-integration.html">Configure External DNS integration</a>
 </li>
 <li><a href="automate-cicd-with-image-streams-intro_automate-cicd-with-image-streams.html">Automate CI/CD with image streams</a>
-</li>
-<li><a href="network-observability-deployment-and-management-con_network-observability-deployment-and-management.html">Network Observability deployment and management</a>
 </li>
 </ul>
 </li>
@@ -1575,7 +1574,7 @@ How to fix these errors:
 </li>
 <li><a href="nodes-nodes-managing-max-pods-proc_adjust-maximum-number-of-pods-on-a-node.html">Configure the maximum number of pods per node</a>
 </li>
-<li><a href="machineset-manually-scaling_scale-compute-resources.html">Scale a compute machine set manually</a>
+<li><a href="scale-compute-resources-con_scale-compute-resources.html">Scale workloads to match demand</a>
 </li>
 <li><a href="nodes-cluster-resource-configure-about_configure-cluster-memory-to-meet-container-memory-and-risk-requirements.html">Understanding how to manage application memory</a>
 </li>
@@ -1615,7 +1614,7 @@ How to fix these errors:
 </li>
 <li><a href="infrastructure-components_separate-infrastructure-machines-from-machines-that-run-workloads.html">Red&#160;Hat OpenShift Container Platform infrastructure components</a>
 </li>
-<li><a href="machine-mgmt-intro-managing-compute_scale-the-number-of-compute-machines-that-use-a-specific-configuration.html">Compute machine management</a>
+<li><a href="scale-compute-capacity-con_scale-compute-capacity.html">Scale compute capacity</a>
 </li>
 <li><a href="machine-mgmt-intro-add-for-upi_add-compute-machines-manually.html">Compute machine creation on user-provisioned infrastructure</a>
 </li>
@@ -1623,11 +1622,25 @@ How to fix these errors:
 </li>
 <li><a href="machineset-label-gpu-autoscaler_label-gpu-machine-sets-for-autoscaler.html">Label GPU machine sets for the cluster autoscaler</a>
 </li>
-<li><a href="machineset-non-guaranteed-instance_creating-machineset-aws.html">Machine sets that deploy machines as Spot Instances</a>
+<li><a href="use-interruptible-capacity-for-lower-cost-machines-con_use-interruptible-capacity-for-lower-cost-machines.html">Use interruptible capacity for lower-cost machines</a>
 </li>
-<li><a href="machineset-capacity-reservation_creating-machineset-aws.html">Configure Capacity Reservations by using machine sets</a>
+<li><a href="reserve-capacity-for-planned-workloads-con_reserve-capacity-for-planned-workloads.html">Reserve capacity for planned workloads</a>
 </li>
-<li><a href="nvidia-gpu-aws-adding-a-gpu-node_add-gpu-nodes-to-machine-sets.html">Add a GPU node to an existing Red&#160;Hat OpenShift Container Platform cluster</a>
+<li><a href="reserve-capacity-for-planned-control-plane-workloads-con_reserve-capacity-for-planned-control-plane-workloads.html">Reserve capacity for planned control plane workloads</a>
+</li>
+<li><a href="accelerate-workloads-with-gpus-con_accelerate-workloads-with-gpus.html">Accelerate workloads with GPUs</a>
+</li>
+<li><a href="improve-network-performance-for-compute-machines-con_improve-network-performance-for-compute-machines.html">Improve network performance for compute machines</a>
+</li>
+<li><a href="improve-network-performance-for-control-plane-machines-con_improve-network-performance-for-control-plane-machines.html">Improve network performance for control plane machines</a>
+</li>
+<li><a href="improve-storage-performance-for-compute-machines-con_improve-storage-performance-for-compute-machines.html">Improve storage performance for compute machines</a>
+</li>
+<li><a href="improve-storage-performance-for-control-plane-machines-con_improve-storage-performance-for-control-plane-machines.html">Improve storage performance for control plane machines</a>
+</li>
+<li><a href="keep-data-off-the-root-volume-for-compute-machines-con_keep-data-off-the-root-volume-for-compute-machines.html">Keep data off the root volume for compute machines</a>
+</li>
+<li><a href="keep-data-off-the-root-volume-for-control-plane-machines-con_keep-data-off-the-root-volume-for-control-plane-machines.html">Keep data off the root volume for control plane machines</a>
 </li>
 </ul>
 </li>
@@ -1673,11 +1686,10 @@ How to fix these errors:
 </li>
 <li><a href="cnf-measuring-latency_validate-node-performance-with-latency-tests.html">Measuring latency</a>
 </li>
-<li><a href="verify-network-observability-installation-intro_verify-network-observability-installation.html">Verify Network Observability installation</a>
-</li>
 </ul>
 </li>
 <li><a href="_troubleshoot.html">Troubleshoot</a>
+
 <ul class="sectlevel2">
 <li><a href="allow-the-configuration-drift-to-remain-and-return-the-node-to-ready-state-con_allow-the-configuration-drift-to-remain-and-return-the-node-to-ready-state.html">Allow the configuration drift to remain and return the node to ready state</a>
 </li>
@@ -1690,6 +1702,8 @@ How to fix these errors:
 <li><a href="restart-hosted-control-plane-components-and-pause-reconciliation-con_restart-hosted-control-plane-components-and-pause-reconciliation.html">Restart hosted control plane components and pause reconciliation</a>
 </li>
 <li><a href="troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-bare-metal-con_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-bare-metal.html">Troubleshoot hosted clusters on bare metal</a>
+</li>
+<li><a href="troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-ibmz-con_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-ibmz.html">Troubleshoot hosted clusters on IBM Z</a>
 </li>
 <li><a href="troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-openshift-virtualization-con_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-openshift-virtualization.html">Troubleshoot hosted clusters on OpenShift Virtualization</a>
 </li>
@@ -1708,6 +1722,8 @@ How to fix these errors:
 <li><a href="hcp-backup-etcd-snapshot-restore_control-plane-disaster-recovery.html">Restoring etcd data by using the etcd snapshot method</a>
 </li>
 <li><a href="nw-pod-network-connectivity-checks_troubleshoot-network-issues.html">Connection health checks that are performed</a>
+</li>
+<li><a href="troubleshoot-network-issues-diagnose-node-networking-and-ovs-con_troubleshoot-network-issues-diagnose-node-networking-and-ovs.html">Diagnose node networking and Open vSwitch</a>
 </li>
 <li><a href="restore-replace-unhealthy-etcd-member_replace-unhealthy-etcd-members.html">Replacing the unhealthy etcd member</a>
 </li>
@@ -1737,7 +1753,7 @@ How to fix these errors:
 </li>
 <li><a href="nw-pod-network-connectivity-checks_troubleshoot-connectivity-and-internal-subnets.html">Connection health checks that are performed</a>
 </li>
-<li><a href="investigating-why-windows-machine-compute-node_troubleshoot-machine-management.html">Investigating why Windows Machine does not become compute node</a>
+<li><a href="troubleshoot-machine-management-con_troubleshoot-machine-management.html">Troubleshoot machine management</a>
 </li>
 <li><a href="control-plane-backup-restore-operations-overview_investigate-an-active-cluster-issue.html">Control plane backup and restore operations</a>
 </li>
@@ -1747,21 +1763,15 @@ How to fix these errors:
 </li>
 <li><a href="oadp-performance-network-requirements_troubleshoot-node-performance-issues-collect-node-profiling-data.html">OADP network requirements</a>
 </li>
-<li><a href="network-observability-operator-stub_troubleshoot-network-issues-1362-execute-localized-network-diagnostics-using-the-oc-netobserv-cli.html">Network Observability Operator features</a>
-</li>
 <li><a href="adminnetworkpolicy_troubleshoot-network-issues-132-troubleshoot-network-policies.html">AdminNetworkPolicy</a>
 </li>
 <li><a href="nw-ingress-sharding-route-labels_troubleshoot-network-issues-133-troubleshoot-ingress-and-routes.html">Configure Ingress Controller sharding by using route labels</a>
-</li>
-<li><a href="configure-network-traffic-flowlogs-pipeline-kafka_troubleshoot-network-issues-136-diagnose-network-flow-issues-netobserv.html"><span class="toc-current">Flowlogs-Pipeline does not consume network flows after installing Kafka</span></a>
 </li>
 <li><a href="investigating-master-node-installation-issues_troubleshoot-network-issues-131-access-cluster-nodes-for-diagnostics.html">Investigating control plane node installation issues</a>
 </li>
 <li><a href="troubleshoot-ovn-kubernetes-networking-issues-con_troubleshoot-ovn-kubernetes-networking-issues.html">Troubleshoot OVN-Kubernetes networking issues</a>
 </li>
 <li><a href="adding-network-attachment-definition-to-pods_troubleshoot-network-issues-135-trace-openflow-with-ovnkube-trace.html">Add the network attachment definition to your pods</a>
-</li>
-<li><a href="network-observability-health-rules-and-performance_troubleshoot-network-issues-1361-investigate-packet-drops-netobserv.html">Identify network issues with automated health rules</a>
 </li>
 <li><a href="nw-pod-network-connectivity-checks_configure-and-maintain-the-pod-network-cni-225-diagnose-and-resolve-node-network-configuration-errors.html">Connection health checks that are performed</a>
 </li>
@@ -1772,6 +1782,8 @@ How to fix these errors:
 <li><a href="control-plane-backup-restore-operations-overview_high-availability-and-disaster-recovery-for-hosted-control-planes-automated-disaster-recovery-for-a-hosted-cluster-by-using-oadp.html">Control plane backup and restore operations</a>
 </li>
 <li><a href="investigating-master-node-installation-issues_manage-kernel-modules-across-cluster-nodes-troubleshoot-kernel-module-loading-issues.html">Investigating control plane node installation issues</a>
+</li>
+<li><a href="troubleshoot-operating-system-issues-con_troubleshoot-operating-system-issues.html">Troubleshoot operating system issues</a>
 </li>
 <li><a href="nw-ovn-kubernetes-pod-connectivity-checks_connectivity-troubleshooting-11-diagnose-failed-connections-between-pods-and-services.html">Checking the OVN-Kubernetes pod network connectivity</a>
 </li>
@@ -1799,7 +1811,13 @@ How to fix these errors:
 </li>
 <li><a href="gathering-operator-logs_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools.html">Gathering Operator logs</a>
 </li>
-<li><a href="oadp-running-must-gather_investigate-an-active-cluster-issue-collect-comprehensive-data-for-vendor-support.html">Using the must-gather tool</a>
+<li><a href="collect-comprehensive-data-for-vendor-support-con_investigate-an-active-cluster-issue-collect-comprehensive-data-for-vendor-support.html">Collect comprehensive data for vendor support</a>
+</li>
+<li><a href="collect-host-sosreports-and-journal-logs-con_investigate-an-active-cluster-issue-collect-host-sosreports-and-journal-logs.html">Collect host sosreports and journal logs</a>
+</li>
+<li><a href="capture-network-traces-for-support-con_investigate-an-active-cluster-issue-capture-network-traces-for-support.html">Capture network traces for support</a>
+</li>
+<li><a href="use-host-toolbox-for-diagnostics-con_investigate-an-active-cluster-issue-use-host-toolbox-for-diagnostics.html">Use the host toolbox for diagnostics</a>
 </li>
 <li><a href="understanding-oc-log-levels_investigate-an-active-cluster-issue-summarize-cluster-specifications.html">Understanding OpenShift CLI (<code>oc</code>) log levels</a>
 </li>
@@ -1829,6 +1847,12 @@ How to fix these errors:
 </li>
 <li><a href="control-plane-backup-restore-operations-overview_encrypt-etcd-test-restore-procedures.html">Control plane backup and restore operations</a>
 </li>
+<li><a href="troubleshoot-clusters-that-use-the-cluster-api-con_troubleshoot-clusters-that-use-the-cluster-api.html">Troubleshoot clusters that use the Cluster API</a>
+</li>
+<li><a href="troubleshoot-the-control-plane-machine-set-con_troubleshoot-the-control-plane-machine-set.html">Troubleshoot the control plane machine set</a>
+</li>
+<li><a href="collect-console-logs-from-machines-that-fail-to-boot-con_collect-console-logs-from-machines-that-fail-to-boot.html">Collect console logs from machines that fail to boot</a>
+</li>
 </ul>
 </li>
 <li><a href="_reference.html">Reference</a>
@@ -1843,7 +1867,7 @@ How to fix these errors:
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#configure-network-traffic-interfaces_troubleshoot-network-issues-136-diagnose-network-flow-issues-netobserv">Failing to see network flows from both br-int and br-ex interfaces</a></li><li class="level-4"><a href="#network-observability-health-rules-and-performance_troubleshoot-network-issues-136-diagnose-network-flow-issues-netobserv">Identify network issues with automated health rules</a></li><li class="level-5"><a href="#importance-of-network-health-monitoring_troubleshoot-network-issues-136-diagnose-network-flow-issues-netobserv">Importance of network health monitoring</a></li><li class="level-5"><a href="#detection-of-network-issues_troubleshoot-network-issues-136-diagnose-network-flow-issues-netobserv">Automated health monitoring</a></li><li class="level-5"><a href="#network-health-monitoring-workflow_troubleshoot-network-issues-136-diagnose-network-flow-issues-netobserv">Network health monitoring workflow</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#configure-network-traffic-interfaces_troubleshoot-network-issues-136-diagnose-network-flow-issues-netobserv">Failing to see network flows from both br-int and br-ex interfaces</a></li><li class="level-4"><a href="#network-observability-health-rules-and-performance_troubleshoot-network-issues-136-diagnose-network-flow-issues-netobserv">Identify network issues with automated health rules</a></li><li class="level-5"><a href="#importance-of-network-health-monitoring_troubleshoot-network-issues-136-diagnose-network-flow-issues-netobserv">Importance of network health monitoring</a></li><li class="level-5"><a href="#detection-of-network-issues_troubleshoot-network-issues-136-diagnose-network-flow-issues-netobserv">Automated health monitoring</a></li><li class="level-5"><a href="#network-health-monitoring-workflow_troubleshoot-network-issues-136-diagnose-network-flow-issues-netobserv">Network health monitoring workflow</a></li><li class="level-4"><a href="#network-observability-health-rules-and-performance_troubleshoot-network-issues-1361-investigate-packet-drops-netobserv">Identify network issues with automated health rules</a></li><li class="level-5"><a href="#importance-of-network-health-monitoring_troubleshoot-network-issues-1361-investigate-packet-drops-netobserv">Importance of network health monitoring</a></li><li class="level-5"><a href="#detection-of-network-issues_troubleshoot-network-issues-1361-investigate-packet-drops-netobserv">Automated health monitoring</a></li><li class="level-5"><a href="#network-health-monitoring-workflow_troubleshoot-network-issues-1361-investigate-packet-drops-netobserv">Network health monitoring workflow</a></li><li class="level-5"><a href="#network-observability-health-rules-monitoring-and-alerting_troubleshoot-network-issues-1361-investigate-packet-drops-netobserv">Detect network issues with automated health rules</a></li><li class="level-6"><a href="#network-observability-health-outcomes_troubleshoot-network-issues-1361-investigate-packet-drops-netobserv">Monitoring outcomes</a></li><li class="level-6"><a href="#network-observability-default-rules_troubleshoot-network-issues-1361-investigate-packet-drops-netobserv">Predefined health rules</a></li><li class="level-6"><a href="#network-observability-enabling-features-for-health-monitoring_troubleshoot-network-issues-1361-investigate-packet-drops-netobserv">Enabling features for health monitoring</a></li><li class="level-5"><a href="#oadp-performance-network-requirements_troubleshoot-network-issues-1361-investigate-packet-drops-netobserv">OADP network requirements</a></li><li class="level-4"><a href="#network-observability-operator-stub_troubleshoot-network-issues-1362-execute-localized-network-diagnostics-using-the-oc-netobserv-cli">Network Observability Operator features</a></li><li class="level-5"><a href="#network-observability-operator-release-notes-1-12-2-fixed-issues_troubleshoot-network-issues-1362-execute-localized-network-diagnostics-using-the-oc-netobserv-cli">Network Observability Operator 1.12.2 fixed issues</a></li><li class="level-5"><a href="#network-observability-operator-release-notes-1-12-fixed-issues_troubleshoot-network-issues-1362-execute-localized-network-diagnostics-using-the-oc-netobserv-cli">Network Observability Operator 1.12 fixed issues</a></li><li class="level-5"><a href="#network-observability-netoberv-cli-about_troubleshoot-network-issues-1362-execute-localized-network-diagnostics-using-the-oc-netobserv-cli">About the Network Observability CLI</a></li><li class="level-5"><a href="#network-observability-cli-install_troubleshoot-network-issues-1362-execute-localized-network-diagnostics-using-the-oc-netobserv-cli">Install the Network Observability CLI</a></li><li class="level-5"><a href="#network-observability-cli-capturing-flows_troubleshoot-network-issues-1362-execute-localized-network-diagnostics-using-the-oc-netobserv-cli">Capture flows</a></li><li class="level-5"><a href="#network-observability-cli-capturing-metrics_troubleshoot-network-issues-1362-execute-localized-network-diagnostics-using-the-oc-netobserv-cli">Capture metrics</a></li><li class="level-5"><a href="#network-observability-cli-capturing-packets_troubleshoot-network-issues-1362-execute-localized-network-diagnostics-using-the-oc-netobserv-cli">Capture packets</a></li><li class="level-5"><a href="#network-observability-netobserv-cli-reference_troubleshoot-network-issues-1362-execute-localized-network-diagnostics-using-the-oc-netobserv-cli">Network Observability CLI usage</a></li><li class="level-6"><a href="#cli-syntax_troubleshoot-network-issues-1362-execute-localized-network-diagnostics-using-the-oc-netobserv-cli">Syntax</a></li><li class="level-6"><a href="#cli-basic-commands_troubleshoot-network-issues-1362-execute-localized-network-diagnostics-using-the-oc-netobserv-cli">Basic commands</a></li><li class="level-6"><a href="#cli-reference-flows-capture-options_troubleshoot-network-issues-1362-execute-localized-network-diagnostics-using-the-oc-netobserv-cli">Flows capture options</a></li><li class="level-6"><a href="#cli-reference-packet-capture-options_troubleshoot-network-issues-1362-execute-localized-network-diagnostics-using-the-oc-netobserv-cli">Packets capture options</a></li><li class="level-6"><a href="#cli-reference-metrics-capture-options_troubleshoot-network-issues-1362-execute-localized-network-diagnostics-using-the-oc-netobserv-cli">Metrics capture options</a></li><li class="level-5"><a href="#network-observability-cli-uninstall_troubleshoot-network-issues-1362-execute-localized-network-diagnostics-using-the-oc-netobserv-cli">Clean the Network Observability CLI</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="configure-network-traffic-flowlogs-pipeline-kafka_troubleshoot-network-issues-136-diagnose-network-flow-issues-netobserv">Flowlogs-Pipeline does not consume network flows after installing Kafka</h3>
@@ -2020,14 +2044,1726 @@ spec:
 </div>
 </div>
 </div>
+<div class="sect3">
+<h4 id="network-observability-health-rules-and-performance_troubleshoot-network-issues-1361-investigate-packet-drops-netobserv">Identify network issues with automated health rules</h4>
+<div class="paragraph _abstract">
+<p>Network observability identifies network issues by using automated health rules to monitor metrics. These rules trigger alerts when anomalies occur, which assists in maintaining connectivity and responding to network degradation.</p>
+</div>
+<div class="paragraph">
+<p>The Network Observability Operator manages a system of Prometheus-based rules that detect network problems, and converts these rules into <code>PrometheusRule</code> resources. It supports the following rule types:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Alerting rules</dt>
+<dd>
+<p>Trigger notifications through the Prometheus <code>Alertmanager</code> when network anomalies or infrastructure failures are detected.</p>
+</dd>
+<dt class="hdlist1">Recording rules</dt>
+<dd>
+<p>Pre-compute complex Prometheus Query Language (PromQL) expressions into new time series to improve dashboard performance.</p>
+</dd>
+</dl>
+</div>
+<div class="sect4">
+<h5 id="importance-of-network-health-monitoring_troubleshoot-network-issues-1361-investigate-packet-drops-netobserv">Importance of network health monitoring</h5>
+<div class="paragraph">
+<p>Maintaining reliable and secure network connectivity is critical for cluster administrators and security teams. Unresolved network issues can result in the following consequences:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Application downtime caused by packet drops or DNS failures.</p>
+</li>
+<li>
+<p>Security risks from undetected network policy violations.</p>
+</li>
+<li>
+<p>Performance degradation caused by latency spikes or bandwidth saturation.</p>
+</li>
+<li>
+<p>Compliance issues from unmonitored network traffic.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Early detection of these issues allows for resolution before service level objectives (SLOs) are affected.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="detection-of-network-issues_troubleshoot-network-issues-1361-investigate-packet-drops-netobserv">Automated health monitoring</h5>
+<div class="paragraph">
+<p>The Network Observability Operator provides automated health monitoring through the following features:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Pre-configured health rules: Detect common network problems by using default thresholds.</p>
+</li>
+<li>
+<p>Automated alerting: Integrates with the Red&#160;Hat OpenShift Container Platform monitoring stack.</p>
+</li>
+<li>
+<p>Health dashboards: Displays health status for clusters, nodes, namespaces, and workloads.</p>
+</li>
+<li>
+<p>Custom rules: Supports the creation of organization-specific monitoring rules.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Health rules monitor network flow metrics and trigger alerts when defined thresholds are exceeded. For example, the <code>PacketDropsByKernel</code> rule reports an alert when kernel packet drop rates exceed defined levels.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="network-health-monitoring-workflow_troubleshoot-network-issues-1361-investigate-packet-drops-netobserv">Network health monitoring workflow</h5>
+<div class="paragraph">
+<p>Monitoring network health involves the following phases:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Configuring the Network Observability Operator to collect required network health data for monitoring, such as packet drops or DNS tracking.</p>
+</li>
+<li>
+<p>Reviewing and customizing default health rules and thresholds in the <code>FlowCollector</code> custom resource.</p>
+</li>
+<li>
+<p>Monitoring alerts in the Red&#160;Hat OpenShift Container Platform web console in the <strong>Observe</strong> → <strong>Alerting</strong> and <strong>Observe</strong> → <strong>Network Health</strong> views.</p>
+</li>
+<li>
+<p>Creating custom health rules for specific requirements.</p>
+</li>
+<li>
+<p>Configuring recording rules to optimize performance for large-scale deployments.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The <code>PrometheusRule</code> resource in the <code>netobserv</code> namespace can be viewed by running the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get prometheusrules -n netobserv -o yaml</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="network-observability-health-rules-monitoring-and-alerting_troubleshoot-network-issues-1361-investigate-packet-drops-netobserv">Detect network issues with automated health rules</h5>
+<div class="paragraph _abstract">
+<p>The Network Observability Operator includes a rule-based system to detect network anomalies and infrastructure failures. By converting configurations into alerting rules, the Operator provides automated monitoring and troubleshooting through the Red&#160;Hat OpenShift Container Platform web console.</p>
+</div>
+<div class="sect5">
+<h6 id="network-observability-health-outcomes_troubleshoot-network-issues-1361-investigate-packet-drops-netobserv">Monitoring outcomes</h6>
+<div class="paragraph">
+<p>The Network Observability Operator displays network status in the following views:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>Alerting</strong> UI</dt>
+<dd>
+<p>Specific alerts appear in <strong>Observe</strong> → <strong>Alerting</strong>. Notifications are managed through the Prometheus <code>Alertmanager</code>.</p>
+</dd>
+<dt class="hdlist1"><strong>Network Health</strong> dashboard</dt>
+<dd>
+<p>A specialized dashboard in <strong>Observe</strong> → <strong>Network Health</strong> provides a summary of cluster network status.</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>The <strong>Network Health</strong> dashboard categorizes violations into tabs to isolate the scope of an issue:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Global</strong>: Aggregate health of the cluster.</p>
+</li>
+<li>
+<p><strong>Nodes</strong>: Violations specific to infrastructure nodes.</p>
+</li>
+<li>
+<p><strong>Namespaces</strong>: Violations specific to individual namespaces.</p>
+</li>
+<li>
+<p><strong>Workloads</strong>: Violations specific to resources, such as <code>Deployments</code> or <code>DaemonSets</code>.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect5">
+<h6 id="network-observability-default-rules_troubleshoot-network-issues-1361-investigate-packet-drops-netobserv">Predefined health rules</h6>
+<div class="paragraph">
+<p>The Network Observability Operator provides default rules for common networking scenarios. These rules are active only if the corresponding feature is enabled in the <code>FlowCollector</code> custom resource (CR).</p>
+</div>
+<div class="paragraph">
+<p>The following list contains a subset of available default rules:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>PacketDropsByDevice</code></dt>
+<dd>
+<p>Reports a high percentage of packet drops from network devices. This rule is based on node-exporter metrics and does not require the <code>PacketDrop</code> agent feature.</p>
+</dd>
+<dt class="hdlist1"><code>PacketDropsByKernel</code></dt>
+<dd>
+<p>Reports a high percentage of packet drops by the kernel. This rule requires the <code>PacketDrop</code> agent feature.</p>
+</dd>
+<dt class="hdlist1"><code>IPsecErrors</code></dt>
+<dd>
+<p>Reports IPsec encryption errors. This rule requires the <code>IPSec</code> agent feature.</p>
+</dd>
+<dt class="hdlist1"><code>NetpolDenied</code></dt>
+<dd>
+<p>Reports traffic denied by network policies. This rule requires the <code>NetworkEvents</code> agent feature.</p>
+</dd>
+<dt class="hdlist1"><code>LatencyHighTrend</code></dt>
+<dd>
+<p>Reports a significant increase in TCP latency. This rule requires the <code>FlowRTT</code> agent feature.</p>
+</dd>
+<dt class="hdlist1"><code>DNSErrors</code></dt>
+<dd>
+<p>Reports DNS errors. This rule requires the <code>DNSTracking</code> agent feature.</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>The following operational alerts apply to the Network Observability Operator:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>NetObservNoFlows</code></dt>
+<dd>
+<p>Reports when the pipeline is active but no flows are observed.</p>
+</dd>
+<dt class="hdlist1"><code>NetObservLokiError</code></dt>
+<dd>
+<p>Reports when flows are dropped because of Loki errors.</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>For a complete list of rules and runbooks, see the <a href="https://github.com/openshift/runbooks/tree/master/alerts/network-observability-operator">Network Observability Operator runbooks</a>.</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="network-observability-enabling-features-for-health-monitoring_troubleshoot-network-issues-1361-investigate-packet-drops-netobserv">Enabling features for health monitoring</h6>
+<div class="paragraph">
+<p>The Network Observability Operator creates rules based on the features enabled in the <code>FlowCollector</code> CR.</p>
+</div>
+<div class="paragraph">
+<p>For example, packet drop rules are created only if the <code>PacketDrop</code> agent feature is enabled. Rules depend on metrics; if the required metrics are unavailable, configuration warnings might appear. Configure metrics in the <code>spec.processor.metrics.includeList</code> field of the <code>FlowCollector</code> resource.</p>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="oadp-performance-network-requirements_troubleshoot-network-issues-1361-investigate-packet-drops-netobserv">OADP network requirements</h5>
+<div class="paragraph _abstract">
+<p>For a supported experience with OpenShift API for Data Protection (OADP), you should have a stable and resilient network across OpenShift nodes, AWS Simple Storage Service (S3)-compatible object storage, and in supported cloud environments that meet OpenShift network requirements.</p>
+</div>
+<div class="paragraph">
+<p>For deployments that use remote S3 buckets located off-cluster with suboptimal data paths, such as high-latency or geographically distant locations, successful backup and restore operations require specific configurations. Ensure your network settings meet the following minimum requirements:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Bandwidth (network upload speed to object storage): Greater than 2 Mbps for small backups and 10-100 Mbps depending on the data volume for larger backups.</p>
+</li>
+<li>
+<p>Packet loss: 1%</p>
+</li>
+<li>
+<p>Packet corruption: 1%</p>
+</li>
+<li>
+<p>Latency: 100 ms</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Ensure that your Red&#160;Hat OpenShift Container Platform network performs optimally and meets Red&#160;Hat OpenShift Container Platform network requirements.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Although Red Hat provides support for standard backup and restore failures, it does not provide support for failures caused by network settings that do not meet the recommended thresholds.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="network-observability-operator-stub_troubleshoot-network-issues-1362-execute-localized-network-diagnostics-using-the-oc-netobserv-cli">Network Observability Operator features</h4>
+<div class="paragraph _abstract">
+<p>With the Network Observability Operator, you can monitor ingress, egress, and internal network traffic flows between pods, services, and nodes in your cluster.</p>
+</div>
+<div class="paragraph">
+<p>Use this network flow data to troubleshoot connectivity issues, analyze traffic patterns, detect security threats, and optimize overall network performance.</p>
+</div>
+<div class="paragraph">
+<p>You can perform the following tasks with this Operator:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Collect network flow data by using eBPF technology.</p>
+</li>
+<li>
+<p>Visualize traffic flows inside the Red&#160;Hat OpenShift Container Platform web console.</p>
+</li>
+<li>
+<p>Filter and analyze flows by namespace, pod, service, or port attributes.</p>
+</li>
+<li>
+<p>Export flow data to external analysis tools for long-term storage or processing.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>For complete documentation about installing, configuring, and using the Network Observability Operator, see <a href="../../observability/network_observability/network-observability-overview.html#network-observability-overview">Network Observability overview</a> in the Observability section.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect4">
+<h5 id="network-observability-operator-release-notes-1-12-2-fixed-issues_troubleshoot-network-issues-1362-execute-localized-network-diagnostics-using-the-oc-netobserv-cli">Network Observability Operator 1.12.2 fixed issues</h5>
+<div class="paragraph _abstract">
+<p>The Network Observability Operator 1.12.2 release contains several fixed issues that improve system status reporting and user experience.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Narrowed Operator ClusterRole to least-privilege RBAC permissions</dt>
+<dd>
+<p>Before this update, the Network Observability Operator&#8217;s generated <code>ClusterRole</code> granted cluster-wide write access to core resources such as secrets and namespaces, and allowed creating <code>SecurityContextConstraints</code> and <code>ClusterRoleBindings</code> without resource-name scoping. As a consequence, the Network Observability Operator service account held broader permissions than required to manage its operands.</p>
+<div class="paragraph">
+<p>With this release, the Network Observability Operator&#8217;s RBAC permissions are scoped to only the namespaces it manages, the <code>securitycontextconstraints</code> rule is restricted by resource name, and <code>ClusterRoleBinding</code> permissions are constrained to the specific bindings the Operator creates. As a result, the Operator follows the principle of least privilege and reduces the attack surface of the service account.</p>
+</div>
+<div class="paragraph">
+<p>After upgrading to Network Observability Operator 1.12.2, you must manually grant RBAC permissions if any of the following conditions apply:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>You configured <code>spec.namespace</code> in the <code>FlowCollector</code> resource to a namespace other than <code>netobserv</code>.</p>
+</li>
+<li>
+<p>You configured the <code>FlowCollector</code> resource with <code>spec.deploymentModel: Kafka</code> and TLS or mTLS enabled.</p>
+</li>
+<li>
+<p>You use the Loki Operator with <code>LokiStack</code> installed in a namespace other than <code>netobserv</code>.</p>
+<div class="paragraph">
+<p>For instructions, see "Granting permissions for custom namespace and secret access".</p>
+</div>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Inherited scheduling configuration for the console plugin static deployment</dt>
+<dd>
+<p>Before this update, the <code>netobserv-plugin-static</code> deployment in the <code>openshift-netobserv-operator</code> namespace did not inherit <code>nodeSelector</code> and <code>tolerations</code> settings from the Operator Subscription. As a consequence, you could not schedule the static console plugin pod onto infrastructure nodes alongside the controller manager.</p>
+<div class="paragraph">
+<p>With this release, the <code>netobserv-plugin-static</code> deployment inherits the scheduling configuration set on the Operator Subscription. As a result, node placement for the static console plugin is consistent with the controller manager.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://redhat.atlassian.net/browse/NETOBSERV-2575">NETOBSERV-2575</a></p>
+</div>
+</dd>
+<dt class="hdlist1">Resolved Operator startup failure with custom console logos</dt>
+<dd>
+<p>Before this update, the Network Observability Operator failed to start when the <code>Console.operator.openshift.io</code> resource had the <code>spec.customization.logos</code> field configured. The Operator incorrectly reported a validation conflict between <code>logos</code> and the deprecated <code>customLogoFile</code> field, even when only <code>logos</code> was set.</p>
+<div class="paragraph">
+<p>With this release, the Network Observability Operator correctly handles web console configurations that use the <code>spec.customization.logos</code> field. As a result, the Operator starts successfully on clusters with custom console branding.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://redhat.atlassian.net/browse/NETOBSERV-2767">NETOBSERV-2767</a></p>
+</div>
+</dd>
+<dt class="hdlist1">Fixed controller crash when FlowCollector is on hold and ServiceAccount is absent</dt>
+<dd>
+<p>Before this update, the Operator controller panicked with a nil pointer dereference when the <code>FlowCollector</code> resource was in <code>OnHold</code> mode and the eBPF agent <code>ServiceAccount</code> did not exist. As a consequence, the controller manager pod entered a <code>CrashLoopBackOff</code> state and all reconciliation stopped.</p>
+<div class="paragraph">
+<p>With this release, the Network Observability Operator gracefully skips the deletion step when the <code>ServiceAccount</code> is absent during an <code>OnHold</code> reconciliation. As a result, the controller manager no longer crashes in this scenario.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://redhat.atlassian.net/browse/NETOBSERV-2839">NETOBSERV-2839</a></p>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect4">
+<h5 id="network-observability-operator-release-notes-1-12-fixed-issues_troubleshoot-network-issues-1362-execute-localized-network-diagnostics-using-the-oc-netobserv-cli">Network Observability Operator 1.12 fixed issues</h5>
+<div class="paragraph _abstract">
+<p>The Network Observability Operator 1.12 release contains several fixed issues that improve performance, system status reporting, and user experience.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Consistent FlowCollector pipeline status</dt>
+<dd>
+<p>Before this update, changes to the sampling field caused an inconsistency in the <code>FlowCollector</code> resource status. As a consequence, you could see conflicting statuses across pipeline components.</p>
+<div class="paragraph">
+<p>With this release, status reporting is made consistent across all components. As a result, the reliability of the pipeline status indicator is improved.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://issues.redhat.com/browse/NETOBSERV-2375">NETOBSERV-2375</a></p>
+</div>
+</dd>
+<dt class="hdlist1">Fixed <code>--help</code> flag processing in netobserv-cli</dt>
+<dd>
+<p>Before this update, the <code>--help</code> flag was ignored when placed after other command flags in the Network Observability CLI. As a consequence, running commands such as <code>oc netobserv flows --interfaces=br-ex --max-time=10s --help</code> executed the flow collection instead of displaying the help page.</p>
+<div class="paragraph">
+<p>With this release, the <code>--help</code> flag is recognized regardless of its position in the command. As a result, you can now display help information by placing the <code>--help</code> flag anywhere in your command arguments.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://issues.redhat.com/browse/NETOBSERV-2617">NETOBSERV-2617</a></p>
+</div>
+</dd>
+<dt class="hdlist1">Improved visibility of DNS names warning messages</dt>
+<dd>
+<p>Before this update, the <strong>DNS names</strong> graph repeatedly displayed a warning message on every refresh when running in a Prometheus-only configuration. As a consequence, the persistent warning message covered other dashboard elements.</p>
+<div class="paragraph">
+<p>With this release, the warning message is only displayed during the initial data load and does not overlay other content. As a result, interface clarity is improved when navigating the dashboard.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://issues.redhat.com/browse/NETOBSERV-2618">NETOBSERV-2618</a></p>
+</div>
+</dd>
+<dt class="hdlist1">Prometheus enabled by default in FlowCollector configurations</dt>
+<dd>
+<p>Before this update, the default setting for Prometheus metrics was unassigned during <code>FlowCollector</code> custom resource creation. As a consequence, you had to manually ensure that metrics collection was active to query accurate flow data.</p>
+<div class="paragraph">
+<p>With this release, the default value for Prometheus metrics collection in the <code>FlowCollector</code> configuration is set to <code>true</code>. As a result, the deployment process is simplified and flow metrics are collected automatically.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://issues.redhat.com/browse/NETOBSERV-2620">NETOBSERV-2620</a></p>
+</div>
+</dd>
+<dt class="hdlist1">Usage examples added to CLI subcommand help text</dt>
+<dd>
+<p>Before this update, the <code>help</code> subcommands for the Network Observability CLI lacked syntax examples. As a consequence, understanding how to construct complex filtering and capture commands required additional research.</p>
+<div class="paragraph">
+<p>With this release, clear examples are included in the subcommand help outputs. As a result, the usability and discoverability of the CLI features are enhanced.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://issues.redhat.com/browse/NETOBSERV-2646">NETOBSERV-2646</a></p>
+</div>
+</dd>
+<dt class="hdlist1">Corrected latency formatting for values above one second</dt>
+<dd>
+<p>Before this update, flow durations and network latencies greater than one second were improperly formatted as milliseconds. As a consequence, donut graphs and latency metrics displayed confusing or inaccurate time designations.</p>
+<div class="paragraph">
+<p>With this release, the duration formatting function handles values greater than one millisecond accurately using decimal seconds. As a result, you can view precise network latency values in console charts.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://issues.redhat.com/browse/NETOBSERV-2669">NETOBSERV-2669</a></p>
+</div>
+</dd>
+<dt class="hdlist1">Improved FlowCollector status reporting when eBPF pods are absent</dt>
+<dd>
+<p>Before this update, the <code>FlowCollector</code> resource reported a status of <code>Ready</code> even when a restrictive <code>nodeSelector</code> prevented any eBPF agent pods from deploying. As a consequence, the system status misrepresented the health of the agent layer.</p>
+<div class="paragraph">
+<p>With this release, the Operator checks for a zero-pod deployment count. As a result, the <code>FlowCollector</code> CR now correctly identifies when zero eBPF pods are active, improving cluster error diagnostics.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://issues.redhat.com/browse/NETOBSERV-2674">NETOBSERV-2674</a></p>
+</div>
+</dd>
+<dt class="hdlist1">Optimized field exports for OpenTelemetry exporters</dt>
+<dd>
+<p>Before this update, the OpenTelemetry exporter processed missing or null keys as non-null data. As a consequence, unpopulated <code>metadata</code> fields were exported to log streams, which increased storage usage and cluttered telemetry files.</p>
+<div class="paragraph">
+<p>With this release, the OpenTelemetry exporter filters out null or unrelated fields, exporting only keys that belong to explicitly enabled features. As a result, exported log sizes are reduced and data efficiency is improved.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://issues.redhat.com/browse/NETOBSERV-2705">NETOBSERV-2705</a></p>
+</div>
+</dd>
+<dt class="hdlist1">Added sampling probability fields to IPFIX exports</dt>
+<dd>
+<p>Before this update, Internet Protocol Flow Information Export (IPFIX) record exports omitted per-flow sampling information. As a consequence, data exports failed to comply with the standard IPFIX specifications for <code>samplingProbability</code> usage.</p>
+<div class="paragraph">
+<p>With this release, the exporter includes sampling probability details within the IPFIX packet metadata. As a result, exported OpenTelemetry data matches industry compliance standards.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://issues.redhat.com/browse/NETOBSERV-2706">NETOBSERV-2706</a></p>
+</div>
+</dd>
+<dt class="hdlist1">Fixed TLS volume name conflicts on OpenTelemetry exporters</dt>
+<dd>
+<p>Before this update, configuring TLS certificates on OpenTelemetry exporters generated an invalid volume name format. As a consequence, the <code>apiserver</code> rejected the underlying Flow-logs Pipeline deployment specification, causing the pipeline pod to fail during initialization.</p>
+<div class="paragraph">
+<p>With this release, the Operator ensures valid volume names are generated when handling TLS attributes. As a result, enabling TLS on your OpenTelemetry exporters no longer interferes with pipeline pod lifecycles.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://issues.redhat.com/browse/NETOBSERV-2707">NETOBSERV-2707</a></p>
+</div>
+</dd>
+<dt class="hdlist1">Improved pod-to-pod flow filter rule matching for asymmetric CIDR rules</dt>
+<dd>
+<p>Before this update, the default flow filter action was not enforced when a network flow failed to match both a CIDR rule and its corresponding <code>peerCIDR</code> rule identically. As a consequence, unexpected acknowledgment-only, <code>ACK</code>, flows bypass filtering restrictions inside the pod network.</p>
+<div class="paragraph">
+<p>With this release, when a network flow matches a designated CIDR rule but fails the <code>peerCIDR</code> pairing, the default filtering action is correctly applied. As a result, traffic blocking and network rule isolation are handled more securely.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://issues.redhat.com/browse/NETOBSERV-2755">NETOBSERV-2755</a></p>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect4">
+<h5 id="network-observability-netoberv-cli-about_troubleshoot-network-issues-1362-execute-localized-network-diagnostics-using-the-oc-netobserv-cli">About the Network Observability CLI</h5>
+<div class="paragraph _abstract">
+<p>Use the Network Observability CLI (<code>oc netobserv</code>) to quickly debug and troubleshoot networking issues. This tool provides instant, live insight into flows and packets without installing the Network Observability Operator.</p>
+</div>
+<div class="paragraph">
+<p>The Network Observability CLI is a flow and packet visualization tool that relies on eBPF agents to stream collected data to an ephemeral collector pod. It requires no persistent storage during the capture. After the run, the output is transferred to your local machine.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>CLI capture is meant to run only for short durations, such as 8-10 minutes. If it runs for too long, it can be difficult to delete the running process.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect4">
+<h5 id="network-observability-cli-install_troubleshoot-network-issues-1362-execute-localized-network-diagnostics-using-the-oc-netobserv-cli">Install the Network Observability CLI</h5>
+<div class="paragraph _abstract">
+<p>The Network Observability CLI gives you a lightweight way to quickly debug and troubleshoot network observability. It must be installed separately.</p>
+</div>
+<div class="paragraph">
+<p>Installing the Network Observability CLI (<code>oc netobserv</code>) is a separate procedure from the Network Observability Operator installation. This means that, even if the Operator is installed from the software catalog, the <code>CLI</code> must be installed separately.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Users can optionally use Krew to install the <code>netobserv</code> CLI plugin. For more information, see "Installing a CLI plugin with Krew".</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You must install the OpenShift CLI (<code>oc</code>).</p>
+</li>
+<li>
+<p>You must have a macOS or Linux operating system.</p>
+</li>
+<li>
+<p>You must install either <code>docker</code> or <code>podman</code>.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>You can use <code>podman</code> or <code>docker</code> to run the installation commands. This procedure uses <code>podman</code>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Log in to the <strong>Red Hat registry</strong> by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ podman login registry.redhat.io</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Extract the <code>oc-netobserv</code> file from the image by running the following commands:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ podman create --name netobserv-cli registry.redhat.io/network-observability/network-observability-cli-rhel9:1.11
+$ podman cp netobserv-cli:/oc-netobserv .
+$ podman rm netobserv-cli</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Move the extracted file to a directory that is on the system&#8217;s <code>PATH</code>, such as <code>/usr/local/bin/</code>, by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ sudo mv oc-netobserv /usr/local/bin/</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<div class="title">Verification</div>
+<ol class="arabic">
+<li>
+<p>Verify that <code>oc netobserv</code> is available:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc netobserv version</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This command should produce an outcome similar to the following example:</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>Netobserv CLI version &lt;version&gt;</pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="network-observability-cli-capturing-flows_troubleshoot-network-issues-1362-execute-localized-network-diagnostics-using-the-oc-netobserv-cli">Capture flows</h5>
+<div class="paragraph _abstract">
+<p>Capture network flows and apply filters based on resources or zones directly in the CLI. This helps you solve complex use cases, such as visualizing the Round-Trip Time (RTT) between two different zones.</p>
+</div>
+<div class="paragraph">
+<p>Table visualization in the CLI provides viewing and flow search capabilities.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>Install the OpenShift CLI (<code>oc</code>).</p>
+</li>
+<li>
+<p>Install the Network Observability CLI (<code>oc netobserv</code>) plugin.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Capture flows with filters enabled by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc netobserv flows --enable_filter=true --action=Accept --cidr=0.0.0.0/0 --protocol=TCP --port=49051</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Add filters to the <code>live table filter</code> prompt in the terminal to further refine the incoming flows. For example:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">live table filter: [SrcK8S_Zone:us-west-1b] press enter to match multiple regular expressions at once</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Use the <strong>PageUp</strong> and <strong>PageDown</strong> keys to toggle between <strong>None</strong>, <strong>Resource</strong>, <strong>Zone</strong>, <strong>Host</strong>, <strong>Owner</strong> and <strong>all of the above</strong>.</p>
+</li>
+<li>
+<p>To stop capturing, press <span class="keyseq"><kbd>Ctrl</kbd>+<kbd>C</kbd></span>. The data that was captured is written to two separate files in an <code>./output</code> directory located in the same path used to install the CLI.</p>
+</li>
+<li>
+<p>View the captured data in the <code>./output/flow/&lt;capture_date_time&gt;.json</code> JSON file, which contains JSON arrays of the captured data.</p>
+<div class="listingblock">
+<div class="title">Example JSON file</div>
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">{
+  "AgentIP": "10.0.1.76",
+  "Bytes": 561,
+  "DnsErrno": 0,
+  "Dscp": 20,
+  "DstAddr": "f904:ece9:ba63:6ac7:8018:1e5:7130:0",
+  "DstMac": "0A:58:0A:80:00:37",
+  "DstPort": 9999,
+  "Duplicate": false,
+  "Etype": 2048,
+  "Flags": 16,
+  "FlowDirection": 0,
+  "IfDirection": 0,
+  "Interface": "ens5",
+  "K8S_FlowLayer": "infra",
+  "Packets": 1,
+  "Proto": 6,
+  "SrcAddr": "3e06:6c10:6440:2:a80:37:b756:270f",
+  "SrcMac": "0A:58:0A:80:00:01",
+  "SrcPort": 46934,
+  "TimeFlowEndMs": 1709741962111,
+  "TimeFlowRttNs": 121000,
+  "TimeFlowStartMs": 1709741962111,
+  "TimeReceived": 1709741964
+}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>You can use SQLite to inspect the <code>./output/flow/&lt;capture_date_time&gt;.db</code> database file. For example:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Open the file by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ sqlite3 ./output/flow/&lt;capture_date_time&gt;.db</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Query the data by running a SQLite <code>SELECT</code> statement, for example:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">sqlite&gt; SELECT DnsLatencyMs, DnsFlagsResponseCode, DnsId, DstAddr, DstPort, Interface, Proto, SrcAddr, SrcPort, Bytes, Packets FROM flow WHERE DnsLatencyMs &gt;10 LIMIT 10;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">12|NoError|58747|10.128.0.63|57856||17|172.30.0.10|53|284|1
+11|NoError|20486|10.128.0.52|56575||17|169.254.169.254|53|225|1
+11|NoError|59544|10.128.0.103|51089||17|172.30.0.10|53|307|1
+13|NoError|32519|10.128.0.52|55241||17|169.254.169.254|53|254|1
+12|NoError|32519|10.0.0.3|55241||17|169.254.169.254|53|254|1
+15|NoError|57673|10.128.0.19|59051||17|172.30.0.10|53|313|1
+13|NoError|35652|10.0.0.3|46532||17|169.254.169.254|53|183|1
+32|NoError|37326|10.0.0.3|52718||17|169.254.169.254|53|169|1
+14|NoError|14530|10.0.0.3|58203||17|169.254.169.254|53|246|1
+15|NoError|40548|10.0.0.3|45933||17|169.254.169.254|53|174|1</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="network-observability-cli-capturing-metrics_troubleshoot-network-issues-1362-execute-localized-network-diagnostics-using-the-oc-netobserv-cli">Capture metrics</h5>
+<div class="paragraph _abstract">
+<p>Generate on-demand network observability dashboards in Prometheus using a service monitor. This allows you to quickly view and analyze network metrics.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>Install the OpenShift CLI (<code>oc</code>).</p>
+</li>
+<li>
+<p>Install the Network Observability CLI (<code>oc netobserv</code>) plugin.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Capture metrics with filters enabled by running the following command:</p>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc netobserv metrics --enable_filter=true --cidr=0.0.0.0/0 --protocol=TCP --port=49051</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Open the link provided in the terminal to view the <strong>NetObserv / On-Demand</strong> dashboard:</p>
+<div class="listingblock">
+<div class="title">Example URL</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">https://console-openshift-console.apps.rosa...openshiftapps.com/monitoring/dashboards/netobserv-cli</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Features that are not enabled present as empty graphs.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="network-observability-cli-capturing-packets_troubleshoot-network-issues-1362-execute-localized-network-diagnostics-using-the-oc-netobserv-cli">Capture packets</h5>
+<div class="paragraph _abstract">
+<p>Use the Network Observability CLI to capture network packets. You can apply filters and refine them live in the terminal for accurate, real-time debugging.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>Install the OpenShift CLI (<code>oc</code>).</p>
+</li>
+<li>
+<p>Install the Network Observability CLI (<code>oc netobserv</code>) plugin.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Run the packet capture with filters enabled:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc netobserv packets --action=Accept --cidr=0.0.0.0/0 --protocol=TCP --port=49051</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Add filters to the <code>live table filter</code> prompt in the terminal to refine the incoming packets. An example filter is as follows:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">live table filter: [SrcK8S_Zone:us-west-1b] press enter to match multiple regular expressions at once</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Use the <strong>PageUp</strong> and <strong>PageDown</strong> keys to toggle between <strong>None</strong>, <strong>Resource</strong>, <strong>Zone</strong>, <strong>Host</strong>, <strong>Owner</strong> and <strong>all of the above</strong>.</p>
+</li>
+<li>
+<p>To stop capturing, press <span class="keyseq"><kbd>Ctrl</kbd>+<kbd>C</kbd></span>.</p>
+</li>
+<li>
+<p>View the captured data, which is written to a single file in an <code>./output/pcap</code> directory located in the same path that was used to install the CLI:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>The <code>./output/pcap/&lt;capture_date_time&gt;.pcap</code> file can be opened with Wireshark.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="network-observability-netobserv-cli-reference_troubleshoot-network-issues-1362-execute-localized-network-diagnostics-using-the-oc-netobserv-cli">Network Observability CLI usage</h5>
+<div class="paragraph">
+<p>You can use the Network Observability CLI (<code>oc netobserv</code>) to pass command line arguments to capture flows data, packets data, and metrics for further analysis and enable features supported by the Network Observability Operator.</p>
+</div>
+<div class="sect5">
+<h6 id="cli-syntax_troubleshoot-network-issues-1362-execute-localized-network-diagnostics-using-the-oc-netobserv-cli">Syntax</h6>
+<div class="paragraph">
+<p>The basic syntax for <code>oc netobserv</code> commands:</p>
+</div>
+<div class="listingblock">
+<div class="title"><code>oc netobserv</code> syntax</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc netobserv [&lt;command&gt;] [&lt;feature_option&gt;] [&lt;command_options&gt;] <img src="data:image/png;base64," alt="1"></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><img src="data:image/png;base64," alt="1"></td>
+<td>Feature options can only be used with the <code>oc netobserv flows</code> command. They cannot be used with the <code>oc netobserv packets</code> command.</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect5">
+<h6 id="cli-basic-commands_troubleshoot-network-issues-1362-execute-localized-network-diagnostics-using-the-oc-netobserv-cli">Basic commands</h6>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 611. Basic commands</caption>
+<colgroup>
+<col style="width: 27.2727%;">
+<col style="width: 72.7273%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Command</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>flows</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="nw-ingress-sharding-route-labels_troubleshoot-network-issues-133-troubleshoot-ingress-and-routes.html">Configure Ingress Controller sharding by using route labels</a> | ↑ Up: <a href="_troubleshoot.html">Troubleshoot</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="investigating-master-node-installation-issues_troubleshoot-network-issues-131-access-cluster-nodes-for-diagnostics.html">Investigating control plane node installation issues</a> →</p>
+<p></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Capture flows information. For subcommands, see the "Flows capture options" table.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>packets</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Capture packets data. For subcommands, see the "Packets capture options" table.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>metrics</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Capture metrics data. For subcommands, see the "Metrics capture options" table.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>follow</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Follow collector logs when running in background.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>stop</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Stop collection by removing agent daemonset.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>copy</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Copy collector generated files locally.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>cleanup</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Remove the Network Observability CLI components.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>version</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Print the software version.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>help</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Show help.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect5">
+<h6 id="cli-reference-flows-capture-options_troubleshoot-network-issues-1362-execute-localized-network-diagnostics-using-the-oc-netobserv-cli">Flows capture options</h6>
+<div class="paragraph">
+<p>Flows capture has mandatory commands as well as additional options, such as enabling extra features about packet drops, DNS latencies, Round-trip time, and filtering.</p>
+</div>
+<div class="listingblock">
+<div class="title"><code>oc netobserv flows</code> syntax</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc netobserv flows [&lt;feature_option&gt;] [&lt;command_options&gt;]</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Option</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--enable_all</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enable all eBPF features</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--enable_dns</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enable DNS tracking</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--enable_ipsec</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enable IPsec tracking</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--enable_network_events</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enable network events monitoring</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--enable_pkt_translation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enable packet translation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--enable_pkt_drop</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enable packet drop</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--enable_rtt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enable RTT tracking</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--enable_udn_mapping</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enable User Defined Network mapping</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--get-subnets</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">get subnets information</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--privileged</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">force eBPF agent privileged mode</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">auto</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--sampling</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">packets sampling interval</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--background</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">run in background</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--copy</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">copy the output files locally</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">prompt</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--log-level</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">components logs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--max-time</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">maximum capture time</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5m</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--max-bytes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">maximum capture bytes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">50000000 = 50MB</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--action</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filter action</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Accept</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--cidr</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filter CIDR</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.0.0.0/0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--direction</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filter direction</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--dport</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filter destination port</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--dport_range</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filter destination port range</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--dports</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filter on either of two destination ports</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--drops</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filter flows with only dropped packets</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--icmp_code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filter ICMP code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--icmp_type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filter ICMP type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--node-selector</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">capture on specific nodes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--peer_ip</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filter peer IP</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--peer_cidr</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filter peer CIDR</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--port_range</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filter port range</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--port</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filter port</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--ports</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filter on either of two ports</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--protocol</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filter protocol</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--query</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filter flows using a custom query</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--sport_range</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filter source port range</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--sport</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filter source port</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--sports</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filter on either of two source ports</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--tcp_flags</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filter TCP flags</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--interfaces</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">list of interfaces to monitor, comma separated</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--exclude_interfaces</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">list of interfaces to exclude, comma separated</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">lo</p></td>
+</tr>
+</tbody>
+</table>
+<div class="listingblock">
+<div class="title">Example running flows capture on TCP protocol and port 49051 with PacketDrop and RTT features enabled:</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc netobserv flows --enable_pkt_drop  --enable_rtt --action=Accept --cidr=0.0.0.0/0 --protocol=TCP --port=49051</code></pre>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="cli-reference-packet-capture-options_troubleshoot-network-issues-1362-execute-localized-network-diagnostics-using-the-oc-netobserv-cli">Packets capture options</h6>
+<div class="paragraph">
+<p>You can filter packets capture data the as same as flows capture by using the filters.
+Certain features, such as packets drop, DNS, RTT, and network events, are only available for flows and metrics capture.</p>
+</div>
+<div class="listingblock">
+<div class="title"><code>oc netobserv packets</code> syntax</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc netobserv packets [&lt;option&gt;]</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Option</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--background</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">run in background</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--copy</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">copy the output files locally</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">prompt</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--log-level</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">components logs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--max-time</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">maximum capture time</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5m</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--max-bytes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">maximum capture bytes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">50000000 = 50MB</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--action</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filter action</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Accept</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--cidr</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filter CIDR</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.0.0.0/0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--direction</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filter direction</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--dport</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filter destination port</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--dport_range</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filter destination port range</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--dports</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filter on either of two destination ports</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--drops</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filter flows with only dropped packets</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--icmp_code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filter ICMP code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--icmp_type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filter ICMP type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--node-selector</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">capture on specific nodes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--peer_ip</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filter peer IP</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--peer_cidr</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filter peer CIDR</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--port_range</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filter port range</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--port</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filter port</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--ports</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filter on either of two ports</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--protocol</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filter protocol</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--query</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filter flows using a custom query</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--sport_range</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filter source port range</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--sport</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filter source port</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--sports</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filter on either of two source ports</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--tcp_flags</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filter TCP flags</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+</tbody>
+</table>
+<div class="listingblock">
+<div class="title">Example running packets capture on TCP protocol and port 49051:</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc netobserv packets --action=Accept --cidr=0.0.0.0/0 --protocol=TCP --port=49051</code></pre>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="cli-reference-metrics-capture-options_troubleshoot-network-issues-1362-execute-localized-network-diagnostics-using-the-oc-netobserv-cli">Metrics capture options</h6>
+<div class="paragraph">
+<p>You can enable features and use filters on metrics capture, the same as flows capture. The generated graphs fill accordingly in the dashboard.</p>
+</div>
+<div class="listingblock">
+<div class="title"><code>oc netobserv metrics</code> syntax</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc netobserv metrics [&lt;option&gt;]</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Option</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--enable_all</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enable all eBPF features</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--enable_dns</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enable DNS tracking</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--enable_ipsec</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enable IPsec tracking</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--enable_network_events</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enable network events monitoring</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--enable_pkt_translation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enable packet translation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--enable_pkt_drop</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enable packet drop</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--enable_rtt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enable RTT tracking</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--enable_udn_mapping</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enable User Defined Network mapping</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--get-subnets</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">get subnets information</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--privileged</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">force eBPF agent privileged mode</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">auto</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--sampling</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">packets sampling interval</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--background</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">run in background</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--log-level</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">components logs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--max-time</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">maximum capture time</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1h</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--action</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filter action</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Accept</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--cidr</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filter CIDR</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.0.0.0/0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--direction</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filter direction</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--dport</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filter destination port</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--dport_range</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filter destination port range</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--dports</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filter on either of two destination ports</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--drops</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filter flows with only dropped packets</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--icmp_code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filter ICMP code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--icmp_type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filter ICMP type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--node-selector</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">capture on specific nodes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--peer_ip</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filter peer IP</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--peer_cidr</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filter peer CIDR</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--port_range</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filter port range</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--port</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filter port</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--ports</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filter on either of two ports</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--protocol</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filter protocol</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--query</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filter flows using a custom query</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--sport_range</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filter source port range</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--sport</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filter source port</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--sports</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filter on either of two source ports</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--tcp_flags</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filter TCP flags</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--include_list</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">list of metric names to generate, comma separated</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">namespace_flows_total,node_ingress_bytes_total,node_egress_bytes_total,workload_ingress_bytes_total</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--interfaces</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">list of interfaces to monitor, comma separated</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--exclude_interfaces</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">list of interfaces to exclude, comma separated</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">lo</p></td>
+</tr>
+</tbody>
+</table>
+<div class="listingblock">
+<div class="title">Example running metrics capture for TCP drops</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc netobserv metrics --enable_pkt_drop --protocol=TCP</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="network-observability-cli-uninstall_troubleshoot-network-issues-1362-execute-localized-network-diagnostics-using-the-oc-netobserv-cli">Clean the Network Observability CLI</h5>
+<div class="paragraph _abstract">
+<p>Use <code>oc netobserv cleanup</code> to manually remove all components installed by the Network Observability CLI from your cluster. While the client runs this command automatically after a capture, you may need to run it manually if you face connectivity issues.</p>
+</div>
+<div class="ulist">
+<div class="title">Procedure</div>
+<ul>
+<li>
+<p>Run the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc netobserv cleanup</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph nav-footer">
+<p>← Previous: <a href="network-observability-health-dashboard-overview_verify-security-and-network-observability-operator-health.html">Health dashboards</a> | ↑ Up: <a href="_networking.html">Networking</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="network-observability-integration-intro_network-observability-integration.html">Network Observability integration</a> →</p>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-06 15:08:32 -0500
+Last updated 2026-10-08 18:28:01 -0500
 </div>
 </div>
 <style>

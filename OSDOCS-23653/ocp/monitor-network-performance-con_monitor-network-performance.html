@@ -479,44 +479,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 
 </style>
 <!-- navmap-right-toc-end -->
-<!-- navmap-preview-warning-start -->
-<style>
-  .navmap-preview-warning {
-    background: #fff1f1;
-    border: 2px solid #c9190b;
-    border-radius: 4px;
-    color: #3b0a0a;
-    font-family: "Open Sans", "DejaVu Sans", sans-serif;
-    margin: 1em auto;
-    max-width: 70em;
-    padding: 1em 1.25em;
-  }
-  .navmap-preview-warning strong { color: #a30000; }
-  .navmap-preview-warning details { margin-top: .75em; }
-  .navmap-preview-warning pre {
-    background: #fff;
-    border: 1px solid #d7d7d7;
-    max-height: 20em;
-    overflow: auto;
-    padding: .75em;
-    white-space: pre-wrap;
-  }
-</style>
-<!-- navmap-preview-warning-end -->
 </head>
 <body id="monitor-network-performance-con_monitor-network-performance" class="book toc2 toc-left navmap-has-right-toc">
-<div class="navmap-preview-warning" role="alert"><strong>Preview warning: this preview is incomplete.</strong><p>One or more AsciiDoc includes are missing. Content may be absent from this page or from related pages.</p><details><summary>Show missing-include report</summary><pre>Include preflight failed for maps/ocp/navigation.adoc
-
-Missing include targets:
-  maps/ocp/troubleshoot.adoc:53
-    include::ocp-jobs/use-the-vsphere-problem-detector-operator.adoc[leveloffset=+1]
-    expected: maps/ocp/ocp-jobs/use-the-vsphere-problem-detector-operator.adoc
-
-How to fix these errors:
-  1. Restore or create the expected .adoc file, preserving the path relative to the referring map; or
-  2. Change the include directive to the path of the existing source file if the topic was renamed or moved.
-  Then rerun this audit and the preview. Do not ignore the error: Asciidoctor can otherwise generate incomplete HTML.
-</pre></details><details><summary>How to remediate missing content</summary><ol><li>Restore or create the expected <code>.adoc</code> file at the reported path, including its required content and attributes.</li><li>If the topic was renamed or moved, update the reported <code>include::</code> directive to point to the existing file. The path is relative to the file containing the directive.</li><li>If the topic is intentionally not ready, remove the include from the map and track the content gap separately.</li></ol><p>After fixing the includes, rebuild the preview with <code>./preview-map &lt;distro&gt;</code>.</p></details></div>
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -526,6 +490,8 @@ How to fix these errors:
 
 <ul class="sectlevel2">
 <li><a href="about-kmm_review-kmm-releases-and-updates.html">About the Kernel Module Management Operator</a>
+</li>
+<li><a href="hosted-control-planes-release-notes_hosted-control-planes-release-notes.html">Hosted control planes release notes</a>
 </li>
 </ul>
 </li>
@@ -561,10 +527,6 @@ How to fix these errors:
 <li><a href="coreos-layering-configuring-on_understand-the-on-cluster-mode-of-the-image-mode-for-openshift-feature.html">About on-cluster image mode</a>
 </li>
 <li><a href="coreos-layering-updating_understand-how-to-update-a-cluster-that-uses-the-image-mode-for-openshift.html">Update with a RHCOS custom layered image</a>
-</li>
-<li><a href="network-observability-operator_understand-network-observability-netobserv.html">Network Observability Operator</a>
-</li>
-<li><a href="network-observability-deployment-and-management-con_network-observability-deployment-and-management.html">Network Observability deployment and management</a>
 </li>
 <li><a href="understanding-openshift_evaluate-openshift-platform-capabilities.html">Understand Red&#160;Hat OpenShift Container Platform</a>
 </li>
@@ -909,29 +871,29 @@ How to fix these errors:
 <li><a href="_disconnected_environments.html">Disconnected environments</a>
 
 <ul class="sectlevel2">
-<li><a href="understand-disconnected-environments-intro_understand-disconnected-environments.html">Understand disconnected environments</a>
+<li><a href="understand-disconnected-environments-intro_understand-disconnected-environments.html">Disconnected environment concepts</a>
 </li>
-<li><a href="installing-agent_install-a-cluster-in-a-disconnected-environment.html">Installing a cluster with the Agent-based Installer</a>
+<li><a href="plan-a-disconnected-installation-intro_plan-a-disconnected-installation.html">Plan a disconnected installation</a>
 </li>
-<li><a href="prerequisites_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift.html">Prerequisites</a>
+<li><a href="installing-agent_install-a-cluster-in-a-disconnected-environment.html">Install a cluster with the Agent-based Installer</a>
 </li>
-<li><a href="installation-oc-mirror-v2-about_mirror-images-to-a-mirror-registry-using-oc-mirror-v2.html">About oc-mirror plugin v2</a>
+<li><a href="create-mirror-registry-intro_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift.html">Create a mirror registry with mirror registry for Red Hat OpenShift</a>
 </li>
-<li><a href="prerequisites_mirror-images-to-a-mirror-registry-using-the-oc-adm-release-mirror-command.html">Prerequisites</a>
+<li><a href="installation-oc-mirror-v2-about_mirror-images-to-a-mirror-registry-using-oc-mirror-v2.html">Mirror images to a mirror registry using oc-mirror v2</a>
 </li>
-<li><a href="oc-mirror-migration-differences_migrate-from-oc-mirror-v1-to-v2.html">Changes from oc-mirror plugin v1 to v2</a>
-</li>
-<li><a href="olm-restricted-network-prereqs_manage-olm-operators-in-a-disconnected-environment.html">Prerequisites</a>
+<li><a href="manage-olm-operators-disconnected-intro_manage-olm-operators-in-a-disconnected-environment.html">Manage OLM Operators in a disconnected environment</a>
 </li>
 <li><a href="mirror-images-for-a-cluster-update-in-a-disconnected-environment-intro_mirror-images-for-a-cluster-update-in-a-disconnected-environment.html">Mirror images for a cluster update in a disconnected environment</a>
 </li>
-<li><a href="update-service-overview_update-a-cluster-in-a-disconnected-environment-using-osus.html">Using the OpenShift Update Service in a disconnected environment</a>
+<li><a href="update-service-overview_update-a-cluster-in-a-disconnected-environment-using-osus.html">Use the OpenShift Update Service in a disconnected environment</a>
 </li>
-<li><a href="updating-cli-prereqs_update-a-cluster-in-a-disconnected-environment-without-using-osus.html">Prerequisites for a cluster update</a>
+<li><a href="update-disconnected_update-a-cluster-in-a-disconnected-environment-without-using-osus.html">Updating the disconnected cluster</a>
 </li>
-<li><a href="about-disconnected-updates-uninstalling-osus_uninstall-osus-from-a-cluster.html">Uninstalling the OpenShift Update Service from a cluster</a>
+<li><a href="about-disconnected-updates-uninstalling-osus_uninstall-osus-from-a-cluster.html">Uninstall the OpenShift Update Service from a cluster</a>
 </li>
-<li><a href="installation-about-mirror-registry_convert-a-connected-cluster-to-disconnected.html">About the mirror registry</a>
+<li><a href="configure-trust-and-mirroring-con_configure-trust-and-mirroring.html">Configure trust and mirroring</a>
+</li>
+<li><a href="convert-connected-to-disconnected-intro_convert-a-connected-cluster-to-disconnected.html">Convert a connected cluster to disconnected</a>
 </li>
 <li><a href="deploying-hosted-control-planes-in-a-disconnected-environment-intro_deploying-hosted-control-planes-in-a-disconnected-environment.html">Deploying hosted control planes in a disconnected environment</a>
 </li>
@@ -989,7 +951,7 @@ How to fix these errors:
 </li>
 <li><a href="core-user-password_change-the-core-user-password-for-node-access.html">Change the core user password for node access</a>
 </li>
-<li><a href="configure-control-plane-failure-domains-con_configure-control-plane-failure-domains.html">Configure control plane failure domains</a>
+<li><a href="spread-the-control-plane-across-failure-domains-con_spread-the-control-plane-across-failure-domains.html">Spread the control plane across failure domains</a>
 </li>
 <li><a href="multi-architecture-configuring-your-cluster_configure-multi-architecture-node-workload-deployments.html">Configuring your cluster with multi-architecture compute machines</a>
 </li>
@@ -1029,6 +991,12 @@ How to fix these errors:
 </li>
 <li><a href="manage-the-configuration-and-lifecycle-of-control-plane-machines-con_manage-the-configuration-and-lifecycle-of-control-plane-machines.html">Manage the configuration and lifecycle of control plane machines</a>
 </li>
+<li><a href="manage-the-configuration-and-lifecycle-of-compute-machines-con_manage-the-configuration-and-lifecycle-of-compute-machines.html">Manage the configuration and lifecycle of compute machines</a>
+</li>
+<li><a href="identify-and-group-compute-machines-con_identify-and-group-compute-machines.html">Identify and group compute machines</a>
+</li>
+<li><a href="identify-and-group-control-plane-machines-con_identify-and-group-control-plane-machines.html">Identify and group control plane machines</a>
+</li>
 <li><a href="multi-architecture-scheduling_manage-workloads-on-multi-architecture-clusters.html">Scheduled workloads on clusters with multi-architecture compute machines</a>
 </li>
 <li><a href="hcp-import-intro_manually-import-a-hosted-cluster.html">Manually importing a hosted cluster</a>
@@ -1063,7 +1031,7 @@ How to fix these errors:
 </li>
 <li><a href="machine-health-checks-about_understand-machine-health-check-behavior.html">About machine health checks</a>
 </li>
-<li><a href="machine-about-phases_understand-the-machine-lifecycle.html">Machine phases</a>
+<li><a href="understand-the-machine-lifecycle-con_understand-the-machine-lifecycle.html">Understand the machine lifecycle</a>
 </li>
 <li><a href="understand-the-out-of-cluster-mode-of-the-image-mode-for-openshift-feature-con_understand-the-out-of-cluster-mode-of-the-image-mode-for-openshift-feature.html">Understand the out-of-cluster mode of the Image Mode for OpenShift feature</a>
 </li>
@@ -1127,8 +1095,6 @@ How to fix these errors:
 </li>
 <li><a href="configure-multi-tenant-namespace-isolation-con_configure-multi-tenant-namespace-isolation.html">Configure multi-tenant namespace isolation</a>
 </li>
-<li><a href="configure-the-network-observability-operator-flowcollector-con_configure-the-network-observability-operator-flowcollector.html">Configure the Network Observability Operator FlowCollector</a>
-</li>
 <li><a href="define-how-much-disk-space-a-single-container-on-my-nodes-can-use-for-its-files-and-layers-con_define-how-much-disk-space-a-single-container-on-my-nodes-can-use-for-its-files-and-layers.html">Define how much disk space a single container can use</a>
 </li>
 <li><a href="define-the-maximum-size-of-the-container-log-file-before-it-is-rotated-con_define-the-maximum-size-of-the-container-log-file-before-it-is-rotated.html">Define the maximum size of the container log file before it is rotated</a>
@@ -1185,7 +1151,7 @@ How to fix these errors:
 </li>
 <li><a href="about-kmm_manage-kernel-modules-across-cluster-nodes.html">About the Kernel Module Management Operator</a>
 </li>
-<li><a href="installation-oc-mirror-v2-about_mirror-container-images-to-a-local-registry.html">About oc-mirror plugin v2</a>
+<li><a href="installation-oc-mirror-v2-about_mirror-container-images-to-a-local-registry.html">Mirror images to a mirror registry using oc-mirror v2</a>
 </li>
 <li><a href="organize-image-versions-with-tags-con_organize-image-versions-with-tags.html">Organize image versions with tags</a>
 </li>
@@ -1211,11 +1177,13 @@ How to fix these errors:
 </li>
 <li><a href="cpmso-feat-auto-update_apply-configuration-changes-to-control-plane-machines-with-automation.html">Automatic updates to the control plane configuration</a>
 </li>
-<li><a href="change-the-configuration-of-compute-machines-by-updating-a-compute-machine-set-con_change-the-configuration-of-compute-machines-by-updating-a-compute-machine-set.html">Change the configuration of compute machines by updating a compute machine set</a>
+<li><a href="change-the-configuration-of-compute-machines-by-updating-compute-machine-resources-con_change-the-configuration-of-compute-machines-by-updating-compute-machine-resources.html">Change the configuration of compute machines by updating compute machine resources</a>
+</li>
+<li><a href="enable-automated-machine-management-on-user-provisioned-infrastructure-con_enable-automated-machine-management-on-user-provisioned-infrastructure.html">Enable automated machine management on user-provisioned infrastructure</a>
 </li>
 <li><a href="apply-configuration-changes-to-compute-machines-with-automation-con_apply-configuration-changes-to-compute-machines-with-automation.html">Apply configuration changes to compute machines with automation</a>
 </li>
-<li><a href="mapi-to-capi-migration-overview_change-the-authoritative-api-for-machine-management-resources.html">Machine API to Cluster API resource migration</a>
+<li><a href="change-the-authoritative-api-for-machine-management-resources-con_change-the-authoritative-api-for-machine-management-resources.html">Change the authoritative API for machine management resources</a>
 </li>
 <li><a href="private-clusters-about_configure-a-private-cluster.html">About private clusters</a>
 </li>
@@ -1304,7 +1272,31 @@ How to fix these errors:
 </li>
 <li><a href="configure-high-performance-networking-con_configure-high-performance-networking.html">Configure high-performance networking</a>
 </li>
+<li><a href="network-observability-operator_understand-network-observability-netobserv.html">Network Observability Operator</a>
+</li>
+<li><a href="evaluate-network-observability-prerequisites-and-requirements-con_evaluate-network-observability-prerequisites-and-requirements.html">Evaluate network observability prerequisites and requirements</a>
+</li>
+<li><a href="network-observability-deployment-and-management-con_network-observability-deployment-and-management.html">Network Observability deployment and management</a>
+</li>
+<li><a href="verify-network-observability-installation-intro_verify-network-observability-installation.html">Verify Network Observability installation</a>
+</li>
+<li><a href="configure-the-network-observability-operator-flowcollector-con_configure-the-network-observability-operator-flowcollector.html">Configure the Network Observability Operator FlowCollector</a>
+</li>
+<li><a href="control-network-policies-and-access-for-network-observability-operator-con_control-network-policies-and-access-for-network-observability-operator.html">Control network policies and access for the Network Observability Operator</a>
+</li>
+<li><a href="secure-network-observability-data-con_secure-network-observability-data.html">Secure network observability data</a>
+</li>
 <li><a href="network-observability-operator_network-flow-visibility.html">Network Observability Operator</a>
+</li>
+<li><a href="network-observability-network-traffic-overview-view_monitor-network-traffic-with-network-observability.html">Observe the network traffic from the Overview view</a>
+</li>
+<li><a href="network-observability-health-dashboard-overview_verify-security-and-network-observability-operator-health.html">Health dashboards</a>
+</li>
+<li><a href="configure-network-traffic-flowlogs-pipeline-kafka_troubleshoot-network-issues-136-diagnose-network-flow-issues-netobserv.html">Flowlogs-Pipeline does not consume network flows after installing Kafka</a>
+</li>
+<li><a href="network-observability-integration-intro_network-observability-integration.html">Network Observability integration</a>
+</li>
+<li><a href="upgrade-network-observability-operator-version-con_upgrade-network-observability-operator-version.html">Upgrade the Network Observability Operator version</a>
 </li>
 </ul>
 </li>
@@ -1462,6 +1454,18 @@ How to fix these errors:
 </li>
 <li><a href="configure-confidential-vms-con_configure-confidential-vms.html">Configure confidential VMs</a>
 </li>
+<li><a href="isolate-compute-machines-from-other-tenants-con_isolate-compute-machines-from-other-tenants.html">Isolate compute machines from other tenants</a>
+</li>
+<li><a href="protect-the-instance-metadata-endpoint-for-compute-machines-con_protect-the-instance-metadata-endpoint-for-compute-machines.html">Protect the instance metadata endpoint for compute machines</a>
+</li>
+<li><a href="harden-boot-integrity-for-compute-machines-con_harden-boot-integrity-for-compute-machines.html">Harden boot integrity for compute machines</a>
+</li>
+<li><a href="isolate-control-plane-machines-from-other-tenants-con_isolate-control-plane-machines-from-other-tenants.html">Isolate control plane machines from other tenants</a>
+</li>
+<li><a href="protect-the-instance-metadata-endpoint-for-control-plane-machines-con_protect-the-instance-metadata-endpoint-for-control-plane-machines.html">Protect the instance metadata endpoint for control plane machines</a>
+</li>
+<li><a href="harden-boot-integrity-for-control-plane-machines-con_harden-boot-integrity-for-control-plane-machines.html">Harden boot integrity for control plane machines</a>
+</li>
 <li><a href="connect-workloads-to-additional-networks-con_connect-workloads-to-additional-networks.html">Connect workloads to additional networks</a>
 </li>
 <li><a href="nw-multi-network-policy-differences_control-traffic-on-secondary-networks.html">Differences between multi-network policy and network policy</a>
@@ -1495,8 +1499,6 @@ How to fix these errors:
 <li><a href="monitor-machine-config-daemon-metrics-con_monitor-machine-config-daemon-metrics.html">Monitor Machine Config Daemon metrics</a>
 </li>
 <li><a href="monitor-network-performance-con_monitor-network-performance.html"><span class="toc-current">Monitor network performance</span></a>
-</li>
-<li><a href="network-observability-deployment-and-management-113-control-automatic-installation-during-cluster-creation-con_network-observability-deployment-and-management-113-control-automatic-installation-during-cluster-creation.html">Control automatic installation during cluster creation</a>
 </li>
 <li><a href="nw-networkpolicy-audit-concept_observe-audit-and-review-policy-enforcement.html">Audit logging</a>
 </li>
@@ -1532,8 +1534,6 @@ How to fix these errors:
 <li><a href="configure-external-dns-integration-con_configure-external-dns-integration.html">Configure External DNS integration</a>
 </li>
 <li><a href="automate-cicd-with-image-streams-intro_automate-cicd-with-image-streams.html">Automate CI/CD with image streams</a>
-</li>
-<li><a href="network-observability-deployment-and-management-con_network-observability-deployment-and-management.html">Network Observability deployment and management</a>
 </li>
 </ul>
 </li>
@@ -1574,7 +1574,7 @@ How to fix these errors:
 </li>
 <li><a href="nodes-nodes-managing-max-pods-proc_adjust-maximum-number-of-pods-on-a-node.html">Configure the maximum number of pods per node</a>
 </li>
-<li><a href="machineset-manually-scaling_scale-compute-resources.html">Scale a compute machine set manually</a>
+<li><a href="scale-compute-resources-con_scale-compute-resources.html">Scale workloads to match demand</a>
 </li>
 <li><a href="nodes-cluster-resource-configure-about_configure-cluster-memory-to-meet-container-memory-and-risk-requirements.html">Understanding how to manage application memory</a>
 </li>
@@ -1614,7 +1614,7 @@ How to fix these errors:
 </li>
 <li><a href="infrastructure-components_separate-infrastructure-machines-from-machines-that-run-workloads.html">Red&#160;Hat OpenShift Container Platform infrastructure components</a>
 </li>
-<li><a href="machine-mgmt-intro-managing-compute_scale-the-number-of-compute-machines-that-use-a-specific-configuration.html">Compute machine management</a>
+<li><a href="scale-compute-capacity-con_scale-compute-capacity.html">Scale compute capacity</a>
 </li>
 <li><a href="machine-mgmt-intro-add-for-upi_add-compute-machines-manually.html">Compute machine creation on user-provisioned infrastructure</a>
 </li>
@@ -1622,11 +1622,25 @@ How to fix these errors:
 </li>
 <li><a href="machineset-label-gpu-autoscaler_label-gpu-machine-sets-for-autoscaler.html">Label GPU machine sets for the cluster autoscaler</a>
 </li>
-<li><a href="machineset-non-guaranteed-instance_creating-machineset-aws.html">Machine sets that deploy machines as Spot Instances</a>
+<li><a href="use-interruptible-capacity-for-lower-cost-machines-con_use-interruptible-capacity-for-lower-cost-machines.html">Use interruptible capacity for lower-cost machines</a>
 </li>
-<li><a href="machineset-capacity-reservation_creating-machineset-aws.html">Configure Capacity Reservations by using machine sets</a>
+<li><a href="reserve-capacity-for-planned-workloads-con_reserve-capacity-for-planned-workloads.html">Reserve capacity for planned workloads</a>
 </li>
-<li><a href="nvidia-gpu-aws-adding-a-gpu-node_add-gpu-nodes-to-machine-sets.html">Add a GPU node to an existing Red&#160;Hat OpenShift Container Platform cluster</a>
+<li><a href="reserve-capacity-for-planned-control-plane-workloads-con_reserve-capacity-for-planned-control-plane-workloads.html">Reserve capacity for planned control plane workloads</a>
+</li>
+<li><a href="accelerate-workloads-with-gpus-con_accelerate-workloads-with-gpus.html">Accelerate workloads with GPUs</a>
+</li>
+<li><a href="improve-network-performance-for-compute-machines-con_improve-network-performance-for-compute-machines.html">Improve network performance for compute machines</a>
+</li>
+<li><a href="improve-network-performance-for-control-plane-machines-con_improve-network-performance-for-control-plane-machines.html">Improve network performance for control plane machines</a>
+</li>
+<li><a href="improve-storage-performance-for-compute-machines-con_improve-storage-performance-for-compute-machines.html">Improve storage performance for compute machines</a>
+</li>
+<li><a href="improve-storage-performance-for-control-plane-machines-con_improve-storage-performance-for-control-plane-machines.html">Improve storage performance for control plane machines</a>
+</li>
+<li><a href="keep-data-off-the-root-volume-for-compute-machines-con_keep-data-off-the-root-volume-for-compute-machines.html">Keep data off the root volume for compute machines</a>
+</li>
+<li><a href="keep-data-off-the-root-volume-for-control-plane-machines-con_keep-data-off-the-root-volume-for-control-plane-machines.html">Keep data off the root volume for control plane machines</a>
 </li>
 </ul>
 </li>
@@ -1672,8 +1686,6 @@ How to fix these errors:
 </li>
 <li><a href="cnf-measuring-latency_validate-node-performance-with-latency-tests.html">Measuring latency</a>
 </li>
-<li><a href="verify-network-observability-installation-intro_verify-network-observability-installation.html">Verify Network Observability installation</a>
-</li>
 </ul>
 </li>
 <li><a href="_troubleshoot.html">Troubleshoot</a>
@@ -1690,6 +1702,8 @@ How to fix these errors:
 <li><a href="restart-hosted-control-plane-components-and-pause-reconciliation-con_restart-hosted-control-plane-components-and-pause-reconciliation.html">Restart hosted control plane components and pause reconciliation</a>
 </li>
 <li><a href="troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-bare-metal-con_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-bare-metal.html">Troubleshoot hosted clusters on bare metal</a>
+</li>
+<li><a href="troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-ibmz-con_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-ibmz.html">Troubleshoot hosted clusters on IBM Z</a>
 </li>
 <li><a href="troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-openshift-virtualization-con_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-openshift-virtualization.html">Troubleshoot hosted clusters on OpenShift Virtualization</a>
 </li>
@@ -1708,6 +1722,8 @@ How to fix these errors:
 <li><a href="hcp-backup-etcd-snapshot-restore_control-plane-disaster-recovery.html">Restoring etcd data by using the etcd snapshot method</a>
 </li>
 <li><a href="nw-pod-network-connectivity-checks_troubleshoot-network-issues.html">Connection health checks that are performed</a>
+</li>
+<li><a href="troubleshoot-network-issues-diagnose-node-networking-and-ovs-con_troubleshoot-network-issues-diagnose-node-networking-and-ovs.html">Diagnose node networking and Open vSwitch</a>
 </li>
 <li><a href="restore-replace-unhealthy-etcd-member_replace-unhealthy-etcd-members.html">Replacing the unhealthy etcd member</a>
 </li>
@@ -1737,7 +1753,7 @@ How to fix these errors:
 </li>
 <li><a href="nw-pod-network-connectivity-checks_troubleshoot-connectivity-and-internal-subnets.html">Connection health checks that are performed</a>
 </li>
-<li><a href="investigating-why-windows-machine-compute-node_troubleshoot-machine-management.html">Investigating why Windows Machine does not become compute node</a>
+<li><a href="troubleshoot-machine-management-con_troubleshoot-machine-management.html">Troubleshoot machine management</a>
 </li>
 <li><a href="control-plane-backup-restore-operations-overview_investigate-an-active-cluster-issue.html">Control plane backup and restore operations</a>
 </li>
@@ -1747,21 +1763,15 @@ How to fix these errors:
 </li>
 <li><a href="oadp-performance-network-requirements_troubleshoot-node-performance-issues-collect-node-profiling-data.html">OADP network requirements</a>
 </li>
-<li><a href="network-observability-operator-stub_troubleshoot-network-issues-1362-execute-localized-network-diagnostics-using-the-oc-netobserv-cli.html">Network Observability Operator features</a>
-</li>
 <li><a href="adminnetworkpolicy_troubleshoot-network-issues-132-troubleshoot-network-policies.html">AdminNetworkPolicy</a>
 </li>
 <li><a href="nw-ingress-sharding-route-labels_troubleshoot-network-issues-133-troubleshoot-ingress-and-routes.html">Configure Ingress Controller sharding by using route labels</a>
-</li>
-<li><a href="configure-network-traffic-flowlogs-pipeline-kafka_troubleshoot-network-issues-136-diagnose-network-flow-issues-netobserv.html">Flowlogs-Pipeline does not consume network flows after installing Kafka</a>
 </li>
 <li><a href="investigating-master-node-installation-issues_troubleshoot-network-issues-131-access-cluster-nodes-for-diagnostics.html">Investigating control plane node installation issues</a>
 </li>
 <li><a href="troubleshoot-ovn-kubernetes-networking-issues-con_troubleshoot-ovn-kubernetes-networking-issues.html">Troubleshoot OVN-Kubernetes networking issues</a>
 </li>
 <li><a href="adding-network-attachment-definition-to-pods_troubleshoot-network-issues-135-trace-openflow-with-ovnkube-trace.html">Add the network attachment definition to your pods</a>
-</li>
-<li><a href="network-observability-health-rules-and-performance_troubleshoot-network-issues-1361-investigate-packet-drops-netobserv.html">Identify network issues with automated health rules</a>
 </li>
 <li><a href="nw-pod-network-connectivity-checks_configure-and-maintain-the-pod-network-cni-225-diagnose-and-resolve-node-network-configuration-errors.html">Connection health checks that are performed</a>
 </li>
@@ -1772,6 +1782,8 @@ How to fix these errors:
 <li><a href="control-plane-backup-restore-operations-overview_high-availability-and-disaster-recovery-for-hosted-control-planes-automated-disaster-recovery-for-a-hosted-cluster-by-using-oadp.html">Control plane backup and restore operations</a>
 </li>
 <li><a href="investigating-master-node-installation-issues_manage-kernel-modules-across-cluster-nodes-troubleshoot-kernel-module-loading-issues.html">Investigating control plane node installation issues</a>
+</li>
+<li><a href="troubleshoot-operating-system-issues-con_troubleshoot-operating-system-issues.html">Troubleshoot operating system issues</a>
 </li>
 <li><a href="nw-ovn-kubernetes-pod-connectivity-checks_connectivity-troubleshooting-11-diagnose-failed-connections-between-pods-and-services.html">Checking the OVN-Kubernetes pod network connectivity</a>
 </li>
@@ -1799,7 +1811,13 @@ How to fix these errors:
 </li>
 <li><a href="gathering-operator-logs_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools.html">Gathering Operator logs</a>
 </li>
-<li><a href="oadp-running-must-gather_investigate-an-active-cluster-issue-collect-comprehensive-data-for-vendor-support.html">Using the must-gather tool</a>
+<li><a href="collect-comprehensive-data-for-vendor-support-con_investigate-an-active-cluster-issue-collect-comprehensive-data-for-vendor-support.html">Collect comprehensive data for vendor support</a>
+</li>
+<li><a href="collect-host-sosreports-and-journal-logs-con_investigate-an-active-cluster-issue-collect-host-sosreports-and-journal-logs.html">Collect host sosreports and journal logs</a>
+</li>
+<li><a href="capture-network-traces-for-support-con_investigate-an-active-cluster-issue-capture-network-traces-for-support.html">Capture network traces for support</a>
+</li>
+<li><a href="use-host-toolbox-for-diagnostics-con_investigate-an-active-cluster-issue-use-host-toolbox-for-diagnostics.html">Use the host toolbox for diagnostics</a>
 </li>
 <li><a href="understanding-oc-log-levels_investigate-an-active-cluster-issue-summarize-cluster-specifications.html">Understanding OpenShift CLI (<code>oc</code>) log levels</a>
 </li>
@@ -1829,6 +1847,12 @@ How to fix these errors:
 </li>
 <li><a href="control-plane-backup-restore-operations-overview_encrypt-etcd-test-restore-procedures.html">Control plane backup and restore operations</a>
 </li>
+<li><a href="troubleshoot-clusters-that-use-the-cluster-api-con_troubleshoot-clusters-that-use-the-cluster-api.html">Troubleshoot clusters that use the Cluster API</a>
+</li>
+<li><a href="troubleshoot-the-control-plane-machine-set-con_troubleshoot-the-control-plane-machine-set.html">Troubleshoot the control plane machine set</a>
+</li>
+<li><a href="collect-console-logs-from-machines-that-fail-to-boot-con_collect-console-logs-from-machines-that-fail-to-boot.html">Collect console logs from machines that fail to boot</a>
+</li>
 </ul>
 </li>
 <li><a href="_reference.html">Reference</a>
@@ -1843,7 +1867,7 @@ How to fix these errors:
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#view-networking-dashboards-con_view-networking-dashboards">View networking dashboards</a></li><li class="level-5"><a href="#reviewing-monitoring-dashboards-admin_view-networking-dashboards">Review monitoring dashboards as a cluster administrator</a></li><li class="level-5"><a href="#network-observability-viewing-dashboards_view-networking-dashboards">View network observability metrics dashboards</a></li><li class="level-5"><a href="#network-observability-dashboards_view-networking-dashboards">Network observability metrics dashboards</a></li><li class="level-4"><a href="#view-operator-metrics-con_view-operator-metrics">View operator metrics</a></li><li class="level-5"><a href="#anp-banp-metrics_view-operator-metrics">Metrics for AdminNetworkPolicy</a></li><li class="level-5"><a href="#nw-metallb-metrics_view-operator-metrics">MetalLB metrics for BGP and BFD</a></li><li class="level-5"><a href="#nw-exposing-router-metrics_view-operator-metrics">Expose router metrics</a></li><li class="level-5"><a href="#cnf-network-metrics-daemon_view-operator-metrics">Network Metrics Daemon</a></li><li class="level-6"><a href="#_additional_resources_10">Additional resources</a></li><li class="level-4"><a href="#view-operator-logs-con_view-operator-logs">View operator logs</a></li><li class="level-5"><a href="#nw-cno-logs_view-operator-logs">View Cluster Network Operator logs</a></li><li class="level-5"><a href="#nw-dns-operator-logs_view-operator-logs">View DNS Operator logs</a></li><li class="level-5"><a href="#nw-ingress-operator-logs_view-operator-logs">View Ingress Controller logs</a></li><li class="level-5"><a href="#nw-ovn-kubernetes-logs-cli_view-operator-logs">View the OVN-Kubernetes logs using the CLI</a></li><li class="level-5"><a href="#nw-ovn-kubernetes-logs-console_view-operator-logs">View the OVN-Kubernetes logs using the web console</a></li><li class="level-6"><a href="#nw-ovn-kubernetes-change-log-levels_view-operator-logs">Changing the OVN-Kubernetes log levels</a></li><li class="level-4"><a href="#monitor-cluster-network-operator-status-con_monitor-cluster-network-operator-status">Monitor Cluster Network Operator status</a></li><li class="level-5"><a href="#nw-cluster-network-operator_monitor-cluster-network-operator-status">Cluster Network Operator</a></li><li class="level-5"><a href="#nw-cno-view_monitor-cluster-network-operator-status">View the cluster network configuration</a></li><li class="level-5"><a href="#nw-cno-status_monitor-cluster-network-operator-status">View Cluster Network Operator status</a></li><li class="level-5"><a href="#nw-dns-operator-status_monitor-cluster-network-operator-status">Check DNS Operator status</a></li><li class="level-4"><a href="#network-observability-network-traffic-overview-view_monitor-network-traffic-with-network-observability">Observe the network traffic from the Overview view</a></li><li class="level-5"><a href="#network-observability-working-with-overview_monitor-network-traffic-with-network-observability">Work with the Overview view</a></li><li class="level-5"><a href="#network-observability-configuring-options-overview_monitor-network-traffic-with-network-observability">Configure advanced options for the Overview view</a></li><li class="level-6"><a href="#network-observability-cao-managing-panels-overview_monitor-network-traffic-with-network-observability">Managing panels and display</a></li><li class="level-5"><a href="#network-observability-trafficflow_monitor-network-traffic-with-network-observability">Observe the network traffic from the Traffic flows view</a></li><li class="level-5"><a href="#network-observability-working-with-trafficflow_monitor-network-traffic-with-network-observability">Work with the Traffic flows view</a></li><li class="level-5"><a href="#network-observability-configuring-options-trafficflow_monitor-network-traffic-with-network-observability">Traffic flow display settings</a></li><li class="level-6"><a href="#display-options_monitor-network-traffic-with-network-observability">Display options</a></li><li class="level-5"><a href="#network-observability-topology_monitor-network-traffic-with-network-observability">Observe the network traffic from the Topology view</a></li><li class="level-5"><a href="#network-observability-working-with-topology_monitor-network-traffic-with-network-observability">Work with the Topology view</a></li><li class="level-5"><a href="#network-observability-configuring-options-topology_monitor-network-traffic-with-network-observability">Configure the advanced options for the Topology view</a></li><li class="level-6"><a href="#network-observability-cao-export-topology_monitor-network-traffic-with-network-observability">Exporting the topology view</a></li><li class="level-5"><a href="#network-observability-quickfilter_monitor-network-traffic-with-network-observability">Filter the network traffic</a></li><li class="level-5"><a href="#network-observability-health-dashboard-overview_monitor-network-observability-operator-health">Health dashboards</a></li><li class="level-6"><a href="#network-observability-health-alert-overview_monitor-network-observability-operator-health">Health alerts</a></li><li class="level-6"><a href="#network-observability-dashboard-view_monitor-network-observability-operator-health">View health information</a></li><li class="level-6"><a href="#network-observability-disable-alerts_monitor-network-observability-operator-health">Disable health alerts</a></li><li class="level-6"><a href="#network-observability-netobserv-dashboard-rate-limit-alerts_monitor-network-observability-operator-health">Create Loki rate limit alerts for the NetObserv dashboard</a></li><li class="level-6"><a href="#network-observability-netobserv-dashboard-ebpf-agent-alerts_monitor-network-observability-operator-health">Use the eBPF agent alert</a></li><li class="level-6"><a href="#nw-status-configuration-network-observability-operator_monitor-network-observability-operator-health">View Network Observability Operator status and configuration</a></li><li class="level-5"><a href="#detect-and-investigate-network-observability-issues-con_detect-and-investigate-network-observability-issues">Detect and investigate Network Observability issues</a></li><li class="level-6"><a href="#network-observability-must-gather_detect-and-investigate-network-observability-issues">Use the must-gather tool</a></li><li class="level-6"><a href="#configure-network-traffic-console_detect-and-investigate-network-observability-issues">Configure network traffic menu entry in the Red Hat OpenShift Container Platform console</a></li><li class="level-6"><a href="#configure-network-traffic-flowlogs-pipeline-kafka_detect-and-investigate-network-observability-issues">Flowlogs-Pipeline does not consume network flows after installing Kafka</a></li><li class="level-6"><a href="#configure-network-traffic-interfaces_detect-and-investigate-network-observability-issues">Failing to see network flows from both br-int and br-ex interfaces</a></li><li class="level-6"><a href="#controller-manager-pod-runs-out-of-memory_detect-and-investigate-network-observability-issues">Network observability controller manager pod runs out of memory</a></li><li class="level-6"><a href="#troubleshooting-query-loki-manually_detect-and-investigate-network-observability-issues">Run custom queries to Loki</a></li><li class="level-6"><a href="#network-observability-troubleshooting-loki-resource-exhausted_detect-and-investigate-network-observability-issues">Troubleshoot Loki ResourceExhausted error</a></li><li class="level-6"><a href="#network-observability-troubleshooting-loki-empty-ring_detect-and-investigate-network-observability-issues">Loki empty ring error</a></li><li class="level-6"><a href="#network-observability-troubleshooting-loki-tenant-rate-limit_detect-and-investigate-network-observability-issues">LokiStack rate limit errors</a></li><li class="level-6"><a href="#network-observability-troubleshooting-large-query-timeout_detect-and-investigate-network-observability-issues">Running a large query results in Loki errors</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#view-networking-dashboards-con_view-networking-dashboards">View networking dashboards</a></li><li class="level-5"><a href="#reviewing-monitoring-dashboards-admin_view-networking-dashboards">Review monitoring dashboards as a cluster administrator</a></li><li class="level-5"><a href="#network-observability-viewing-dashboards_view-networking-dashboards">View network observability metrics dashboards</a></li><li class="level-5"><a href="#network-observability-dashboards_view-networking-dashboards">Network observability metrics dashboards</a></li><li class="level-4"><a href="#view-operator-metrics-con_view-operator-metrics">View operator metrics</a></li><li class="level-5"><a href="#anp-banp-metrics_view-operator-metrics">Metrics for AdminNetworkPolicy</a></li><li class="level-5"><a href="#nw-metallb-metrics_view-operator-metrics">MetalLB metrics for BGP and BFD</a></li><li class="level-5"><a href="#nw-exposing-router-metrics_view-operator-metrics">Expose router metrics</a></li><li class="level-5"><a href="#cnf-network-metrics-daemon_view-operator-metrics">Network Metrics Daemon</a></li><li class="level-6"><a href="#_additional_resources_11">Additional resources</a></li><li class="level-4"><a href="#view-operator-logs-con_view-operator-logs">View operator logs</a></li><li class="level-5"><a href="#nw-cno-logs_view-operator-logs">View Cluster Network Operator logs</a></li><li class="level-5"><a href="#nw-dns-operator-logs_view-operator-logs">View DNS Operator logs</a></li><li class="level-5"><a href="#nw-ingress-operator-logs_view-operator-logs">View Ingress Controller logs</a></li><li class="level-5"><a href="#nw-ovn-kubernetes-logs-cli_view-operator-logs">View the OVN-Kubernetes logs using the CLI</a></li><li class="level-5"><a href="#nw-ovn-kubernetes-logs-console_view-operator-logs">View the OVN-Kubernetes logs using the web console</a></li><li class="level-6"><a href="#nw-ovn-kubernetes-change-log-levels_view-operator-logs">Changing the OVN-Kubernetes log levels</a></li><li class="level-4"><a href="#monitor-cluster-network-operator-status-con_monitor-cluster-network-operator-status">Monitor Cluster Network Operator status</a></li><li class="level-5"><a href="#nw-cluster-network-operator_monitor-cluster-network-operator-status">Cluster Network Operator</a></li><li class="level-5"><a href="#nw-cno-view_monitor-cluster-network-operator-status">View the cluster network configuration</a></li><li class="level-5"><a href="#nw-cno-status_monitor-cluster-network-operator-status">View Cluster Network Operator status</a></li><li class="level-5"><a href="#nw-dns-operator-status_monitor-cluster-network-operator-status">Check DNS Operator status</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="monitor-network-performance-con_monitor-network-performance">Monitor network performance</h3>
@@ -2140,7 +2164,7 @@ How to fix these errors:
 <p>To monitor network connectivity and diagnose routing states, refer to the Prometheus metrics for MetalLB. These metrics provide visibility into the status of BGP peers and BFD profiles so that you can ensure stable external communication.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 722. MetalLB BFD metrics</caption>
+<caption class="title">Table 729. MetalLB BFD metrics</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 70%;">
@@ -2187,7 +2211,7 @@ How to fix these errors:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 723. MetalLB BGP metrics</caption>
+<caption class="title">Table 730. MetalLB BGP metrics</caption>
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 70%;">
@@ -2429,7 +2453,7 @@ haproxy_max_connections 50000
 <p>This is addressed by introducing the new <code>pod_network_name_info</code> described in the following section.</p>
 </div>
 <div class="sect5 _additional-resources">
-<h6 id="_additional_resources_10">Additional resources</h6>
+<h6 id="_additional_resources_11">Additional resources</h6>
 <div class="ulist">
 <ul>
 <li>
@@ -3013,1193 +3037,14 @@ Events:  &lt;none&gt;</code></pre>
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="network-observability-network-traffic-overview-view_monitor-network-traffic-with-network-observability">Observe the network traffic from the Overview view</h4>
-<div class="paragraph _abstract">
-<p>Use the Network Traffic <strong>Overview</strong> view to monitor aggregated flow metrics, troubleshoot cluster connectivity, and detect unusual traffic patterns.</p>
-</div>
-<div class="paragraph">
-<p>The <strong>Overview</strong> view shows aggregate network traffic in your Red&#160;Hat OpenShift Container Platform cluster, allowing you to see which applications are communicating and the volume of data being transferred. It provides detailed insights by source, destination, and flow type, along with the top traffic flows and average byte rates.</p>
-</div>
-<div class="paragraph">
-<p>As an administrator, you can troubleshoot connectivity issues, detect unusual traffic patterns, and optimize application performance. It provides a quick overview of network behavior, making it easier to prioritize actions and ensure efficient resource usage.</p>
-</div>
-<div class="sect4">
-<h5 id="network-observability-working-with-overview_monitor-network-traffic-with-network-observability">Work with the Overview view</h5>
-<div class="paragraph _abstract">
-<p>Navigate to the network traffic <strong>Overview</strong> view in the Red&#160;Hat OpenShift Container Platform console to visualize flow rate statistics and customize the display scope for monitoring cluster network activity.</p>
-</div>
-<div class="ulist">
-<div class="title">Prerequisite</div>
-<ul>
-<li>
-<p>Access to the cluster with administrator rights.</p>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Navigate to <strong>Observe</strong> → <strong>Network Traffic</strong>.</p>
-</li>
-<li>
-<p>In the <strong>Network Traffic</strong> page, click the <strong>Overview</strong> tab.</p>
-</li>
-<li>
-<p>Click the menu icon to configure the scope of each flow rate data.</p>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect4">
-<h5 id="network-observability-configuring-options-overview_monitor-network-traffic-with-network-observability">Configure advanced options for the Overview view</h5>
-<div class="paragraph _abstract">
-<p>Customize the network traffic <strong>Overview</strong> view by configuring advanced options, such as graph scope, label truncation, and panel management, to refine the display of flow rate statistics and traffic data.</p>
-</div>
-<div class="paragraph">
-<p>To access the advanced options, click <strong>Show advanced options</strong>. You can configure the details in the graph by using the <strong>Display options</strong> drop-down menu. The options available are as follows:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Scope</strong>: Select to view the components that network traffic flows between. You can set the scope to <strong>Node</strong>, <strong>Namespace</strong>, <strong>Owner</strong>, <strong>Zones</strong>, <strong>Cluster</strong> or <strong>Resource</strong>. <strong>Owner</strong> is an aggregation of resources. <strong>Resource</strong> can be a pod, service, node, in case of host-network traffic, or an unknown IP address. The default value is <strong>Namespace</strong>.</p>
-</li>
-<li>
-<p><strong>Truncate labels</strong>: Select the required width of the label from the drop-down list. The default value is <strong>M</strong>.</p>
-</li>
-</ul>
-</div>
-<div class="sect5">
-<h6 id="network-observability-cao-managing-panels-overview_monitor-network-traffic-with-network-observability">Managing panels and display</h6>
-<div class="paragraph">
-<p>You can select the required panels to be displayed, reorder them, and focus on a specific panel. To add or remove panels, click <strong>Manage panels</strong>.</p>
-</div>
-<div class="paragraph">
-<p>The following panels are shown by default:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Top X average bytes rates</strong></p>
-</li>
-<li>
-<p><strong>Top X bytes rates stacked with total</strong></p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Other panels can be added in <strong>Manage panels</strong>:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Top X average packets rates</strong></p>
-</li>
-<li>
-<p><strong>Top X packets rates stacked with total</strong></p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><strong>Query options</strong> allows you to choose whether to show the <strong>Top 5</strong>, <strong>Top 10</strong>, or <strong>Top 15</strong> rates.</p>
-</div>
-</div>
-</div>
-<div class="sect4">
-<h5 id="network-observability-trafficflow_monitor-network-traffic-with-network-observability">Observe the network traffic from the Traffic flows view</h5>
-<div class="paragraph _abstract">
-<p>Use the <strong>Traffic flows</strong> view to monitor cluster network communication, audit eBPF flow data, validate network policies, and export metrics for external analysis.</p>
-</div>
-<div class="paragraph">
-<p>The <strong>Traffic flows</strong> view in the Network Observability Operator provides a granular, tabular representation of network activity across a Red&#160;Hat OpenShift Container Platform cluster. By leveraging eBPF technology to collect flow data, this view allows administrators to monitor real-time and historical communication between pods, services, and nodes. This visibility is essential for auditing network traffic, validating network policies, and identifying unexpected communication patterns within the cluster infrastructure.</p>
-</div>
-<div class="paragraph">
-<p>In the <strong>Traffic flows</strong> interface, you can analyze specific connection details by interacting with individual rows to retrieve detailed flow information. The view supports advanced customization through the <strong>Display options</strong> menu, where you can adjust row density and manage columns. By selecting and reordering specific columns, you can tailor the table to highlight the most relevant data points for your environment, such as source and destination endpoints or traffic volume.</p>
-</div>
-<div class="paragraph">
-<p>To support external analysis and reporting, the <strong>Traffic flows</strong> view includes data export capabilities. You can export the entire dataset or select specific fields to generate a targeted report of network activity. This functionality ensures that network flow data is accessible for long-term auditing or for use in third-party monitoring tools, providing a flexible way to document and analyze the network health of your Red&#160;Hat OpenShift Container Platform environment.</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="network-observability-working-with-trafficflow_monitor-network-traffic-with-network-observability">Work with the Traffic flows view</h5>
-<div class="paragraph _abstract">
-<p>View and analyze detailed network flow information in the <strong>Traffic flows</strong> table to troubleshoot connectivity issues and monitor traffic patterns between cluster components.</p>
-</div>
-<div class="paragraph">
-<p>As an administrator, you can navigate to <strong>Traffic flows</strong> table to see network flow information.</p>
-</div>
-<div class="ulist">
-<div class="title">Prerequisite</div>
-<ul>
-<li>
-<p>You have administrator access.</p>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Navigate to <strong>Observe</strong> → <strong>Network Traffic</strong>.</p>
-</li>
-<li>
-<p>In the <strong>Network Traffic</strong> page, click the <strong>Traffic flows</strong> tab.</p>
-</li>
-<li>
-<p>Click on each row to get the corresponding flow information.</p>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect4">
-<h5 id="network-observability-configuring-options-trafficflow_monitor-network-traffic-with-network-observability">Traffic flow display settings</h5>
-<div class="paragraph _abstract">
-<p>The <strong>Traffic flows</strong> view contains settings to customize the display density, data columns, and data export options.</p>
-</div>
-<div class="sect5">
-<h6 id="display-options_monitor-network-traffic-with-network-observability">Display options</h6>
-<div class="paragraph">
-<p>The following elements are available in the <strong>Traffic flows</strong> view:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><strong>Show advanced options</strong></dt>
-<dd>
-<p>Specifies a menu to customize and export the current view.</p>
-</dd>
-<dt class="hdlist1"><strong>Display options</strong> drop-down</dt>
-<dd>
-<p>Specifies the row size for the data table. The default value is <strong>Normal</strong>.</p>
-</dd>
-<dt class="hdlist1"><strong>Manage columns</strong></dt>
-<dd>
-<p>Specifies a dialog to select and reorder the columns displayed in the <strong>Traffic flows</strong> table.</p>
-</dd>
-</dl>
-</div>
-</div>
-</div>
-<div class="sect4">
-<h5 id="network-observability-topology_monitor-network-traffic-with-network-observability">Observe the network traffic from the Topology view</h5>
-<div class="paragraph _abstract">
-<p>Use the <strong>Topology</strong> view in the <strong>Network Traffic</strong> page to visualize network flows, track traffic volume, and monitor relationships across cluster components.</p>
-</div>
-<div class="paragraph">
-<p>The visualization represents network entities as nodes and traffic flows as edges. By selecting individual components within the graph, you can access a side panel containing specific metrics and health details for that resource. This interactive approach allows for rapid identification of traffic patterns and connectivity issues within the cluster.</p>
-</div>
-<div class="paragraph">
-<p>To manage complex environments, the <strong>Topology</strong> view includes advanced configuration options that allow you to customize the layout and data density. You can adjust the <strong>Scope</strong> of the view, apply <strong>Groups</strong> to represent resource ownership, and choose different <strong>Layout</strong> algorithms to optimize the graphical display. Additionally, you can enable <strong>Edge labels</strong> to show real-time measurements, such as the average byte rate, directly on the flow lines.</p>
-</div>
-<div class="paragraph">
-<p>For reporting or external analysis, the <strong>Topology</strong> view provides an export feature. You can download the current graphical representation as a PNG image or generate a direct link to the specific view configuration to share with other administrators. These tools ensure that network insights are both accessible and easily documented.</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="network-observability-working-with-topology_monitor-network-traffic-with-network-observability">Work with the Topology view</h5>
-<div class="paragraph _abstract">
-<p>Access the <strong>Topology</strong> view to visually inspect cluster network relationships and select individual components to view detailed traffic metrics and metadata.</p>
-</div>
-<div class="paragraph">
-<p>As an administrator, you can navigate to the <strong>Topology</strong> view to see the details and metrics of the component.</p>
-</div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>You have administrator access.</p>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Navigate to <strong>Observe</strong> → <strong>Network Traffic</strong>.</p>
-</li>
-<li>
-<p>In the <strong>Network Traffic</strong> page, click the <strong>Topology</strong> tab.</p>
-</li>
-<li>
-<p>Click each component in the <strong>Topology</strong> tab to view its details and metrics.</p>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect4">
-<h5 id="network-observability-configuring-options-topology_monitor-network-traffic-with-network-observability">Configure the advanced options for the Topology view</h5>
-<div class="paragraph _abstract">
-<p>The <strong>Topology</strong> view provides advanced options that let you customize display settings, configure component grouping and layouts, and export the network graph as an image.</p>
-</div>
-<div class="paragraph">
-<p>You can customize and export the view by using <strong>Show advanced options</strong>. The advanced options view has the following features:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Find in view</strong>: To search the required components in the view.</p>
-</li>
-<li>
-<p><strong>Display options</strong>: To configure the following options:</p>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Edge labels</strong>: To show the specified measurements as edge labels. The default is to show the <strong>Average rate</strong> in <strong>Bytes</strong>.</p>
-</li>
-<li>
-<p><strong>Scope</strong>: To select the scope of components between which the network traffic flows. The default value is <strong>Namespace</strong>.</p>
-</li>
-<li>
-<p><strong>Groups</strong>: To enhance the understanding of ownership by grouping the components. The default value is <strong>None</strong>.</p>
-</li>
-<li>
-<p><strong>Layout</strong>: To select the layout of the graphical representation. The default value is <strong>ColaNoForce</strong>.</p>
-</li>
-<li>
-<p><strong>Show</strong>: To select the details that need to be displayed. All the options are checked by default. The options available are: <strong>Edges</strong>, <strong>Edges label</strong>, and <strong>Badges</strong>.</p>
-</li>
-<li>
-<p><strong>Truncate labels</strong>: To select the required width of the label from the drop-down list. The default value is <strong>M</strong>.</p>
-</li>
-<li>
-<p><strong>Collapse groups</strong>: To expand or collapse the groups. The groups are expanded by default. This option is disabled if <strong>Groups</strong> has the value of <strong>None</strong>.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="sect5">
-<h6 id="network-observability-cao-export-topology_monitor-network-traffic-with-network-observability">Exporting the topology view</h6>
-<div class="paragraph">
-<p>To export the view, click <strong>Export topology view</strong>. The view is downloaded in PNG format.</p>
-</div>
-</div>
-</div>
-<div class="sect4">
-<h5 id="network-observability-quickfilter_monitor-network-traffic-with-network-observability">Filter the network traffic</h5>
-<div class="paragraph _abstract">
-<p>The <strong>Network Traffic</strong> view provides query options and filtering parameters that let you optimize data searches, analyze specific log types, and manage directional traffic visibility.</p>
-</div>
-<div class="paragraph">
-<p>By default, the <strong>Network Traffic</strong> page displays the traffic flow data in the cluster based on the default filters configured in the <code>FlowCollector</code> instance. You can use the filter options to observe the required data by changing the preset filter.</p>
-</div>
-<div class="paragraph">
-<p>Alternatively, you can access the traffic flow data in the <strong>Network Traffic</strong> tab of the <strong>Namespaces</strong>, <strong>Services</strong>, <strong>Routes</strong>, <strong>Nodes</strong>, and <strong>Workloads</strong> pages which provide the filtered data of the corresponding aggregations.</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Query Options</dt>
-<dd>
-<p>You can use <strong>Query Options</strong> to optimize the search results, as listed below:</p>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Log Type</strong>: The available options <strong>Conversation</strong> and <strong>Flows</strong> provide the ability to query flows by log type, such as flow log, new conversation, completed conversation, and a heartbeat, which is a periodic record with updates for long conversations. A conversation is an aggregation of flows between the same peers.</p>
-</li>
-<li>
-<p><strong>Match filters</strong>: You can determine the relation between different filter parameters selected in the advanced filter. The available options are <strong>Match all</strong> and <strong>Match any</strong>. <strong>Match all</strong>  provides results that match all the values, and <strong>Match any</strong> provides results that match any of the values entered. The default value is <strong>Match all</strong>.</p>
-</li>
-<li>
-<p><strong>Datasource</strong>: You can choose the datasource to use for queries: <strong>Loki</strong>, <strong>Prometheus</strong>, or <strong>Auto</strong>. Notable performance improvements can be realized when using Prometheus as a datasource rather than Loki, but Prometheus supports a limited set of filters and aggregations. The default datasource is <strong>Auto</strong>, which uses Prometheus on supported queries or uses Loki if the query does not support Prometheus.</p>
-</li>
-<li>
-<p><strong>Drops filter</strong>: You can view different levels of dropped packets with the following query options:</p>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Fully dropped</strong> shows flow records with fully dropped packets.</p>
-</li>
-<li>
-<p><strong>Containing drops</strong> shows flow records that contain drops but can be sent.</p>
-</li>
-<li>
-<p><strong>Without drops</strong> shows records that contain sent packets.</p>
-</li>
-<li>
-<p><strong>All</strong> shows all the aforementioned records.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><strong>Limit</strong>: The data limit for internal backend queries. Depending upon the matching and the filter settings, the number of traffic flow data is displayed within the specified limit.</p>
-</li>
-</ul>
-</div>
-</dd>
-<dt class="hdlist1">Quick filters</dt>
-<dd>
-<p>The default values in <strong>Quick filters</strong> drop-down menu are defined in the <code>FlowCollector</code> configuration. You can modify the options from console.</p>
-</dd>
-<dt class="hdlist1">Advanced filters</dt>
-<dd>
-<p>You can set the advanced filters, <strong>Common</strong>, <strong>Source</strong>, or <strong>Destination</strong>, by selecting the parameter to be filtered from the dropdown list. The flow data is filtered based on the selection. To enable or disable the applied filter, you can click on the applied filter listed below the filter options.</p>
-</dd>
-</dl>
-</div>
-<div class="paragraph">
-<p>You can toggle between <span class="image"><img src="data:image/png;base64," alt="arrow up long solid" width="10"></span> <strong>One way</strong> and <span class="image"><img src="data:image/png;base64," alt="arrow up long solid" width="10"></span> <span class="image"><img src="data:image/png;base64," alt="arrow down long solid" width="10"></span> <strong>Back and forth</strong> filtering. The <span class="image"><img src="data:image/png;base64," alt="arrow up long solid" width="10"></span> <strong>One way</strong> filter shows only <strong>Source</strong> and <strong>Destination</strong> traffic according to your filter selections. You can use <strong>Swap</strong> to change the directional view of the <strong>Source</strong> and <strong>Destination</strong> traffic. The <span class="image"><img src="data:image/png;base64," alt="arrow up long solid" width="10"></span> <span class="image"><img src="data:image/png;base64," alt="arrow down long solid" width="10"></span> <strong>Back and forth</strong> filter includes return traffic with the <strong>Source</strong> and <strong>Destination</strong> filters. The directional flow of network traffic is shown in the <strong>Direction</strong> column in the Traffic flows table as <code>Ingress`or `Egress</code> for inter-node traffic and `Inner`for traffic inside a single node.</p>
-</div>
-<div class="paragraph">
-<p>You can click <strong>Reset defaults</strong> to remove the existing filters, and apply the filter defined in <code>FlowCollector</code> configuration.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>To understand the rules of specifying the text value, click <strong>Learn More</strong>.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</div>
-<div class="sect4">
-<h5 id="network-observability-health-dashboard-overview_monitor-network-observability-operator-health">Health dashboards</h5>
-<div class="paragraph _abstract">
-<p>View the Network Observability Operator health dashboards in the Red&#160;Hat OpenShift Container Platform web console to monitor the health status, resource usage, and internal statistics of the operator and its components.</p>
-</div>
-<div class="paragraph">
-<p>Metrics are located in the <strong>Observe</strong> &#8594; <strong>Dashboards</strong> page in the Red&#160;Hat OpenShift Container Platform web console. You can view metrics about the health of the Network Observability Operator in the following categories:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Flows per second</strong></p>
-</li>
-<li>
-<p><strong>Sampling</strong></p>
-</li>
-<li>
-<p><strong>Errors last minute</strong></p>
-</li>
-<li>
-<p><strong>Dropped flows per second</strong></p>
-</li>
-<li>
-<p><strong>Flowlogs-pipeline statistics</strong></p>
-</li>
-<li>
-<p><strong>Flowlogs-pipleine statistics views</strong></p>
-</li>
-<li>
-<p><strong>eBPF agent statistics views</strong></p>
-</li>
-<li>
-<p><strong>Operator statistics</strong></p>
-</li>
-<li>
-<p><strong>Resource usage</strong></p>
-</li>
-</ul>
-</div>
-<div class="sect5">
-<h6 id="network-observability-health-alert-overview_monitor-network-observability-operator-health">Health alerts</h6>
-<div class="paragraph _abstract">
-<p>Understand the health alerts generated by the Network Observability Operator, which trigger banners when conditions like Loki ingestion errors, zero flow ingestion, or dropped eBPF flows occur.</p>
-</div>
-<div class="paragraph">
-<p>A health alert banner that directs you to the dashboard can appear on the <strong>Network Traffic</strong> and <strong>Home</strong> pages if an alert is triggered. Alerts are generated in the following cases:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>The <code>NetObservLokiError</code> alert occurs if the <code>flowlogs-pipeline</code> workload is dropping flows because of Loki errors, such as if the Loki ingestion rate limit has been reached.</p>
-</li>
-<li>
-<p>The <code>NetObservNoFlows</code> alert occurs if no flows are ingested for a certain amount of time.</p>
-</li>
-<li>
-<p>The <code>NetObservFlowsDropped</code> alert occurs if the Network Observability eBPF agent hashmap table is full, and the eBPF agent processes flows with degraded performance, or when the capacity limiter is triggered.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect5">
-<h6 id="network-observability-dashboard-view_monitor-network-observability-operator-health">View health information</h6>
-<div class="paragraph _abstract">
-<p>View the <strong>Netobserv/Health</strong> dashboard within the Red&#160;Hat OpenShift Container Platform web console to monitor the health status and resource usage of the Network Observability Operator and its components.</p>
-</div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>You have the Network Observability Operator installed.</p>
-</li>
-<li>
-<p>You have access to the cluster as a user with the <code>cluster-admin</code> role or with view permissions for all projects.</p>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>From the <strong>Administrator</strong> perspective in the web console, navigate to <strong>Observe</strong> → <strong>Dashboards</strong>.</p>
-</li>
-<li>
-<p>From the <strong>Dashboards</strong> dropdown, select <strong>Netobserv/Health</strong>.</p>
-</li>
-<li>
-<p>View the metrics about the health of the Operator that are displayed on the page.</p>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect5">
-<h6 id="network-observability-disable-alerts_monitor-network-observability-operator-health">Disable health alerts</h6>
-<div class="paragraph _abstract">
-<p>Disable specific health alerts, such as <code>NetObservLokiError</code> or <code>NetObservNoFlows</code>, by editing the <code>FlowCollector</code> resource and using the <code>spec.processor.metrics.disableAlerts</code> specification.</p>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>In the web console, navigate to <strong>Ecosystem</strong> &#8594; <strong>Installed Operators</strong>.</p>
-</li>
-<li>
-<p>Under the <strong>Provided APIs</strong> heading for the <strong>NetObserv Operator</strong>, select <strong>Flow Collector</strong>.</p>
-</li>
-<li>
-<p>Select <strong>cluster</strong> then select the <strong>YAML</strong> tab.</p>
-</li>
-<li>
-<p>Add <code>spec.processor.metrics.disableAlerts</code> to disable health alerts, as in the following YAML sample:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: flows.netobserv.io/v1beta2
-kind: FlowCollector
-metadata:
-  name: cluster
-spec:
-  processor:
-    metrics:
-      disableAlerts: [NetObservLokiError, NetObservNoFlows]</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>where:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>spec.processor.metrics.disableAlerts</code></dt>
-<dd>
-<p>Specifies one or more types of alerts to disable.</p>
-</dd>
-</dl>
-</div>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect5">
-<h6 id="network-observability-netobserv-dashboard-rate-limit-alerts_monitor-network-observability-operator-health">Create Loki rate limit alerts for the NetObserv dashboard</h6>
-<div class="paragraph _abstract">
-<p>Create a custom <code>AlertingRule</code> resource based on Loki metrics to monitor for and trigger alerts when the Loki ingestion rate limits are reached, indicated by HTTP 429 errors.</p>
-</div>
-<div class="paragraph">
-<p>You can create custom alerting rules for the <strong>Netobserv</strong> dashboard metrics to trigger alerts when Loki rate limits have been reached.</p>
-</div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>You have access to the cluster as a user with the cluster-admin role or with view permissions for all projects.</p>
-</li>
-<li>
-<p>You have the Network Observability Operator installed.</p>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Create a YAML file by clicking the import icon, <strong>+</strong>.</p>
-</li>
-<li>
-<p>Add an alerting rule configuration to the YAML file. In the YAML sample that follows, an alert is created for when Loki rate limits have been reached:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: monitoring.openshift.io/v1
-kind: AlertingRule
-metadata:
-  name: loki-alerts
-  namespace: openshift-monitoring
-spec:
-  groups:
-  - name: LokiRateLimitAlerts
-    rules:
-    - alert: LokiTenantRateLimit
-      annotations:
-        message: |-
-          {{ $labels.job }} {{ $labels.route }} is experiencing 429 errors.
-        summary: "At any number of requests are responded with the rate limit error code."
-      expr: sum(irate(loki_request_duration_seconds_count{status_code="429"}[1m])) by (job, namespace, route) / sum(irate(loki_request_duration_seconds_count[1m])) by (job, namespace, route) * 100 &gt; 0
-      for: 10s
-      labels:
-        severity: warning</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Click <strong>Create</strong> to apply the configuration file to the cluster.</p>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect5">
-<h6 id="network-observability-netobserv-dashboard-ebpf-agent-alerts_monitor-network-observability-operator-health">Use the eBPF agent alert</h6>
-<div class="paragraph _abstract">
-<p>Resolve the <code>NetObservAgentFlowsDropped</code> alert, which occurs when the eBPF agent hashmap is full, by increasing the <code>spec.agent.ebpf.cacheMaxFlows</code> value in the <code>FlowCollector</code> custom resource.</p>
-</div>
-<div class="paragraph">
-<p>An alert, <code>NetObservAgentFlowsDropped</code>, is also triggered when the capacity limiter is triggered. If you see this alert, consider increasing the <code>cacheMaxFlows</code> in the <code>FlowCollector</code>, as shown in the following example.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Increasing the <code>cacheMaxFlows</code> might increase the memory usage of the eBPF agent.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>In the web console, navigate to <strong>Ecosystem</strong> &#8594; <strong>Installed Operators</strong>.</p>
-</li>
-<li>
-<p>Under the <strong>Provided APIs</strong> heading for the <strong>Network Observability Operator</strong>, select <strong>Flow Collector</strong>.</p>
-</li>
-<li>
-<p>Select <strong>cluster</strong>, and then select the <strong>YAML</strong> tab.</p>
-</li>
-<li>
-<p>Increase the <code>spec.agent.ebpf.cacheMaxFlows</code> value, as shown in the following YAML sample:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: flows.netobserv.io/v1beta2
-kind: FlowCollector
-metadata:
-  name: cluster
-spec:
-  namespace: netobserv
-  deploymentModel: Service
-  agent:
-    type: eBPF
-    ebpf:
-      cacheMaxFlows: 200000</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>where:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>spec.agent.ebpf.cacheMaxFlows</code></dt>
-<dd>
-<p>Specifies the maximum number of flows to cache. If a <code>NetObservAgentFlowsDropped</code> alert occurs, increase this value from its current level.</p>
-</dd>
-</dl>
-</div>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect5">
-<h6 id="nw-status-configuration-network-observability-operator_monitor-network-observability-operator-health">View Network Observability Operator status and configuration</h6>
-<div class="paragraph _abstract">
-<p>Inspect the current status, configuration details, and generated resources of the Network Observability Operator by using the <code>oc describe flowcollector/cluster</code> command.</p>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Run the following command to view the status and configuration of the Network Observability Operator:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc describe flowcollector/cluster</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</div>
-</div>
-<div class="sect4">
-<h5 id="detect-and-investigate-network-observability-issues-con_detect-and-investigate-network-observability-issues">Detect and investigate Network Observability issues</h5>
-<div class="paragraph _abstract">
-<p>When the Network Observability Operator stops collecting or displaying flows, the cause is usually in the eBPF agent, the flowlogs pipeline, or Loki. Work through the symptoms to isolate which component failed.</p>
-</div>
-<div class="sect5">
-<h6 id="network-observability-must-gather_detect-and-investigate-network-observability-issues">Use the must-gather tool</h6>
-<div class="paragraph _abstract">
-<p>Use the must-gather tool to collect diagnostic information about Network Observability Operator resources, including pod logs and configuration details, to assist in troubleshooting cluster issues.</p>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Navigate to the directory where you want to store the must-gather data.</p>
-</li>
-<li>
-<p>Run the following command to collect cluster-wide must-gather resources:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc adm must-gather
- --image-stream=openshift/must-gather \
- --image=quay.io/netobserv/must-gather</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect5">
-<h6 id="configure-network-traffic-console_detect-and-investigate-network-observability-issues">Configure network traffic menu entry in the Red&#160;Hat OpenShift Container Platform console</h6>
-<div class="paragraph _abstract">
-<p>Restore a missing network traffic menu entry in the <strong>Observe</strong> menu of the Red&#160;Hat OpenShift Container Platform console by manually registering the console plugin in the <code>FlowCollector</code> resource and the console operator configuration.</p>
-</div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>You have installed Red&#160;Hat OpenShift Container Platform version 4.10 or newer.</p>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Check if the <code>spec.consolePlugin.register</code> field is set to <code>true</code> by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc -n netobserv get flowcollector cluster -o yaml</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre>apiVersion: flows.netobserv.io/v1alpha1
-kind: FlowCollector
-metadata:
-  name: cluster
-spec:
-  consolePlugin:
-    register: false</pre>
-</div>
-</div>
-</li>
-<li>
-<p>Optional: Add the <code>netobserv-plugin</code> plugin by manually editing the Console Operator config:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc edit console.operator.openshift.io cluster</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre>...
-spec:
-  plugins:
-  - netobserv-plugin
-...</pre>
-</div>
-</div>
-</li>
-<li>
-<p>Optional: Set the <code>spec.consolePlugin.register</code> field to <code>true</code> by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc -n netobserv edit flowcollector cluster -o yaml</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre>apiVersion: flows.netobserv.io/v1alpha1
-kind: FlowCollector
-metadata:
-  name: cluster
-spec:
-  consolePlugin:
-    register: true</pre>
-</div>
-</div>
-</li>
-<li>
-<p>Ensure the status of console pods is <code>running</code> by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get pods -n openshift-console -l app=console</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Restart the console pods by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc delete pods -n openshift-console -l app=console</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Clear your browser cache and history.</p>
-</li>
-<li>
-<p>Check the status of network observability plugin pods by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get pods -n netobserv -l app=netobserv-plugin</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre>NAME                                READY   STATUS    RESTARTS   AGE
-netobserv-plugin-68c7bbb9bb-b69q6   1/1     Running   0          21s</pre>
-</div>
-</div>
-</li>
-<li>
-<p>Check the logs of the network observability plugin pods by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc logs -n netobserv -l app=netobserv-plugin</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">time="2022-12-13T12:06:49Z" level=info msg="Starting netobserv-console-plugin [build version: , build date: 2022-10-21 15:15] at log level info" module=main
-time="2022-12-13T12:06:49Z" level=info msg="listening on https://:9001" module=server</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect5">
-<h6 id="configure-network-traffic-flowlogs-pipeline-kafka_detect-and-investigate-network-observability-issues">Flowlogs-Pipeline does not consume network flows after installing Kafka</h6>
-<div class="paragraph _abstract">
-<p>Resolve issues where the flow-pipeline fails to consume network flows from Kafka by manually restarting the flow-pipeline pods to restore the connection between the flow collector and your Kafka deployment.</p>
-</div>
-<div class="paragraph">
-<p>If you deployed the flow collector first with <code>deploymentModel: KAFKA</code> and then deployed Kafka, the flow collector might not connect correctly to Kafka. Manually restart the flow-pipeline pods where Flowlogs-pipeline does not consume network flows from Kafka.</p>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Delete the flow-pipeline pods to restart them by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc delete pods -n netobserv -l app=flowlogs-pipeline-transformer</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect5">
-<h6 id="configure-network-traffic-interfaces_detect-and-investigate-network-observability-issues">Failing to see network flows from both br-int and br-ex interfaces</h6>
-<div class="paragraph _abstract">
-<p>Resolve issues with missing network flows by removing interface restrictions on virtual bridge devices like <code>br-int</code> and <code>br-ex</code>, ensuring the eBPF agent can attach to the appropriate Layer 3 interfaces.</p>
-</div>
-<div class="paragraph">
-<p><code>br-ex</code> and <code>br-int</code> are virtual bridge devices operated at OSI layer 2. The eBPF agent works at the IP and TCP levels, layers 3 and 4 respectively. You can expect that the eBPF agent captures the network traffic passing through <code>br-ex</code> and <code>br-int</code>, when the network traffic is processed by other interfaces such as physical host or virtual pod interfaces. If you restrict the eBPF agent network interfaces to attach only to <code>br-ex</code> and <code>br-int</code>, you do not see any network flow.</p>
-</div>
-<div class="paragraph">
-<p>Manually remove the part in the <code>interfaces</code> or <code>excludeInterfaces</code> that restricts the network interfaces to <code>br-int</code> and <code>br-ex</code>.</p>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Remove the <code>interfaces: [ 'br-int', 'br-ex' ]</code> field. This allows the agent to fetch information from all the interfaces. Alternatively, you can specify the Layer-3 interface for example, <code>eth0</code>. Run the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc edit -n netobserv flowcollector.yaml -o yaml</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre>apiVersion: flows.netobserv.io/v1alpha1
-kind: FlowCollector
-metadata:
-  name: cluster
-spec:
-  agent:
-    type: EBPF
-    ebpf:
-      interfaces: [ 'br-int', 'br-ex' ]</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>where:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>spec.agent.ebpf.interfaces</code></dt>
-<dd>
-<p>Specifies the network interfaces.</p>
-</dd>
-</dl>
-</div>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect5">
-<h6 id="controller-manager-pod-runs-out-of-memory_detect-and-investigate-network-observability-issues">Network observability controller manager pod runs out of memory</h6>
-<div class="paragraph _abstract">
-<p>Resolve memory issues with the Network Observability Operator by increasing the memory limits in the <code>Subscription</code> object to prevent the controller manager pod from running out of memory.</p>
-</div>
-<div class="paragraph">
-<p>You can increase memory limits for the Network Observability Operator by editing the <code>spec.config.resources.limits.memory</code> specification in the <code>Subscription</code> object.</p>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>In the web console, navigate to <strong>Ecosystem</strong> &#8594; <strong>Installed Operators</strong></p>
-</li>
-<li>
-<p>Click <strong>Network Observability</strong> and then select <strong>Subscription</strong>.</p>
-</li>
-<li>
-<p>From the <strong>Actions</strong> menu, click <strong>Edit Subscription</strong>.</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Alternatively, you can use the CLI to open the YAML configuration for the <code>Subscription</code> object by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc edit subscription netobserv-operator -n openshift-netobserv-operator</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>Edit the <code>Subscription</code> object to add the <code>config.resources.limits.memory</code> specification and set the value to account for your memory requirements. See the Additional resources for more information about resource considerations:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: operators.coreos.com/v1alpha1
-kind: Subscription
-metadata:
-  name: netobserv-operator
-  namespace: openshift-netobserv-operator
-spec:
-  channel: stable
-  config:
-    resources:
-      limits:
-        memory: 800Mi
-      requests:
-        cpu: 100m
-        memory: 100Mi
-  installPlanApproval: Automatic
-  name: netobserv-operator
-  source: redhat-operators
-  sourceNamespace: openshift-marketplace
-  startingCSV: &lt;network_observability_operator_latest_version&gt;</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>where:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>spec.config.resources.limits.memory</code></dt>
-<dd>
-<p>Specifies the memory limit. For example, you can increase the memory limit to <code>800Mi</code>.</p>
-</dd>
-<dt class="hdlist1"><code>spec.startingCSV</code></dt>
-<dd>
-<p>Specifies the starting CSV. This value should not be edited, but note that it changes depending on the most current release of the Operator.</p>
-</dd>
-</dl>
-</div>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect5">
-<h6 id="troubleshooting-query-loki-manually_detect-and-investigate-network-observability-issues">Run custom queries to Loki</h6>
-<div class="paragraph _abstract">
-<p>Troubleshoot network flow data by running custom Loki queries to retrieve available labels or filter logs by specific criteria, such as source namespaces, using the command-line interface.</p>
-</div>
-<div class="paragraph">
-<p>There are two examples of ways to do this, which you can adapt according to your needs by replacing the &lt;api_token&gt; with your own.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>These examples use the <code>netobserv</code> namespace for the Network Observability Operator and Loki deployments. Additionally, the examples assume that the LokiStack is named <code>loki</code>. You can optionally use a different namespace and naming by adapting the examples, specifically the <code>-n netobserv</code> or the <code>loki-gateway</code> URL.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>Installed Loki Operator for use with Network Observability Operator.</p>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>To get all available labels, run the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc exec deployment/netobserv-plugin -n netobserv -- curl -G -s -H 'X-Scope-OrgID:network' -H 'Authorization: Bearer &lt;api_token&gt;' -k https://loki-gateway-http.netobserv.svc:8080/api/logs/v1/network/loki/api/v1/labels | jq</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>To get all flows from the source namespace, <code>my-namespace</code>, run the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc exec deployment/netobserv-plugin -n netobserv -- curl -G -s -H 'X-Scope-OrgID:network' -H 'Authorization: Bearer &lt;api_token&gt;' -k https://loki-gateway-http.netobserv.svc:8080/api/logs/v1/network/loki/api/v1/query --data-urlencode 'query={SrcK8S_Namespace="my-namespace"}' | jq</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect5">
-<h6 id="network-observability-troubleshooting-loki-resource-exhausted_detect-and-investigate-network-observability-issues">Troubleshoot Loki ResourceExhausted error</h6>
-<div class="paragraph _abstract">
-<p>Resolve Loki <code>ResourceExhausted</code> errors by adjusting the <code>batchSize</code> in the <code>FlowCollector</code> resource or the maximum message size settings in your Loki configuration to ensure flow data stays within memory limits.</p>
-</div>
-<div class="paragraph">
-<p>Loki may return a <code>ResourceExhausted</code> error when network flow data sent by network observability exceeds the configured maximum message size. If you are using the Red&#160;Hat Loki Operator, this maximum message size is configured to 100 MiB.</p>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Navigate to <strong>Ecosystem</strong> &#8594; <strong>Installed Operators</strong>, viewing <strong>All projects</strong> from the <strong>Project</strong> drop-down menu.</p>
-</li>
-<li>
-<p>In the <strong>Provided APIs</strong> list, select the Network Observability Operator.</p>
-</li>
-<li>
-<p>Click the <strong>Flow Collector</strong> then the <strong>YAML view</strong> tab.</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>If you are using the Loki Operator, check that the <code>spec.loki.batchSize</code> value does not exceed 98 MiB.</p>
-</li>
-<li>
-<p>If you are using a Loki installation method that is different from the Red&#160;Hat Loki Operator, such as Grafana Loki, verify that the <code>grpc_server_max_recv_msg_size</code> <a href="https://grafana.com/docs/loki/latest/configure/#server">Grafana Loki server setting</a> is higher than the <code>FlowCollector</code> resource <code>spec.loki.batchSize</code> value. If it is not, you must either increase the <code>grpc_server_max_recv_msg_size</code> value, or decrease the <code>spec.loki.batchSize</code> value so that it is lower than the limit.</p>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>Click <strong>Save</strong> if you edited the <strong>FlowCollector</strong>.</p>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect5">
-<h6 id="network-observability-troubleshooting-loki-empty-ring_detect-and-investigate-network-observability-issues">Loki empty ring error</h6>
-<div class="paragraph _abstract">
-<p>Investigate and resolve Loki "empty ring" errors by checking pod health, clearing old persistent volume claims, or restarting pods to restore connectivity and ensure network flows are properly stored and displayed.</p>
-</div>
-<div class="paragraph">
-<p>The Loki "empty ring" error results in flows not being stored in Loki and not showing up in the web console. This error might happen in various situations. A single workaround to address them all does not exist. There are some actions you can take to investigate the logs in your Loki pods, and verify that the <code>LokiStack</code> is healthy and ready.</p>
-</div>
-<div class="paragraph">
-<p>Some of the situations where this error is observed are as follows:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>After a <code>LokiStack</code> is uninstalled and reinstalled in the same namespace, old PVCs are not removed, which can cause this error.</p>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Action</strong>: You can try removing the <code>LokiStack</code> again, removing the PVC, then reinstalling the <code>LokiStack</code>.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>After a certificate rotation, this error can prevent communication with the <code>flowlogs-pipeline</code> and <code>console-plugin</code> pods.</p>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Action</strong>: You can restart the pods to restore the connectivity.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect5">
-<h6 id="network-observability-troubleshooting-loki-tenant-rate-limit_detect-and-investigate-network-observability-issues">LokiStack rate limit errors</h6>
-<div class="paragraph _abstract">
-<p>Resolve Loki rate limit errors and prevent data loss by updating the <code>LokiStack</code> resource to increase the ingestion rate and burst limits for your network observability data streams.</p>
-</div>
-<div class="paragraph">
-<p>A rate-limit placed on the Loki tenant can result in potential temporary loss of data and a 429 error: <code>Per stream rate limit exceeded (limit:xMB/sec) while attempting to ingest for stream</code>. You might consider having an alert set to notify you of this error. For more information, see "Creating Loki rate limit alerts for the NetObserv dashboard" in the Additional resources of this section.</p>
-</div>
-<div class="paragraph">
-<p>You can update the LokiStack CRD with the <code>perStreamRateLimit</code> and <code>perStreamRateLimitBurst</code> specifications, as shown in the following procedure.</p>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Navigate to <strong>Ecosystem</strong> &#8594; <strong>Installed Operators</strong>, viewing <strong>All projects</strong> from the <strong>Project</strong> dropdown.</p>
-</li>
-<li>
-<p>Look for <strong>Loki Operator</strong>, and select the <strong>LokiStack</strong> tab.</p>
-</li>
-<li>
-<p>Create or edit an existing <strong>LokiStack</strong> instance using the <strong>YAML view</strong> to add the <code>perStreamRateLimit</code> and <code>perStreamRateLimitBurst</code> specifications:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: loki.grafana.com/v1
-kind: LokiStack
-metadata:
-  name: loki
-  namespace: netobserv
-spec:
-  limits:
-    global:
-      ingestion:
-        perStreamRateLimit: 6
-        perStreamRateLimitBurst: 30
-  tenants:
-    mode: openshift-network
-  managementState: Managed</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>where:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>spec.limits.global.ingestion.perStreamRateLimit</code></dt>
-<dd>
-<p>Specifies the ingestion rate limit. The default value is <code>3</code>.</p>
-</dd>
-<dt class="hdlist1"><code>spec.limits.global.ingestion.perStreamRateLimitBurst</code></dt>
-<dd>
-<p>Specifies the ingestion rate limit burst. The default value is <code>15</code>.</p>
-</dd>
-</dl>
-</div>
-</li>
-<li>
-<p>Click <strong>Save</strong>.</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<div class="title">Verification</div>
-<p>Once you update the <code>perStreamRateLimit</code> and <code>perStreamRateLimitBurst</code> specifications, the pods in your cluster restart and the 429 rate-limit error no longer occurs.</p>
-</div>
-</div>
-<div class="sect5">
-<h6 id="network-observability-troubleshooting-large-query-timeout_detect-and-investigate-network-observability-issues">Running a large query results in Loki errors</h6>
-<div class="paragraph _abstract">
-<p>Understand how you can mitigate Loki timeout and request errors when running large queries by using indexed filters, leveraging Prometheus for long time ranges, creating custom metrics, or adjusting Loki and FlowCollector performance settings.</p>
-</div>
-<div class="paragraph">
-<p>When running large queries for a long time, Loki errors can occur, such as a <code>timeout</code> or <code>too many outstanding requests</code>. There is no complete corrective for this issue, but there are several ways to mitigate it:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Adapt your query to add an indexed filter</dt>
-<dd>
-<div class="paragraph">
-<p>With Loki queries, you can query on both indexed and non-indexed fields or labels. Queries that contain filters on labels perform better. For example, if you query for a particular Pod, which is not an indexed field, you can add its Namespace to the query. The list of indexed fields can be found in the "Network flows format reference", in the <code>Loki label</code> column.</p>
-</div>
-</dd>
-<dt class="hdlist1">Consider querying Prometheus rather than Loki</dt>
-<dd>
-<div class="paragraph">
-<p>Prometheus is a better fit than Loki to query on large time ranges. However, whether or not you can use Prometheus instead of Loki depends on the use case. For example, queries on Prometheus are much faster than on Loki, and large time ranges do not impact performance. But Prometheus metrics do not contain as much information as flow logs in Loki. The Network Observability OpenShift web console automatically favors Prometheus over Loki if the query is compatible; otherwise, it defaults to Loki. If your query does not run against Prometheus, you can change some filters or aggregations to make the switch. In the OpenShift web console, you can force the use of Prometheus. An error message is displayed when incompatible queries fail, which can help you figure out which labels to change to make the query compatible. For example, changing a filter or an aggregation from <strong>Resource</strong> or <strong>Pods</strong> to <strong>Owner</strong>.</p>
-</div>
-</dd>
-<dt class="hdlist1">Consider using the FlowMetrics API to create your own metric</dt>
-<dd>
-<p>If the data that you need isn&#8217;t available as a Prometheus metric, you can use the FlowMetrics API to create your own metric. For more information, see "FlowMetrics API Reference" and "Configuring custom metrics by using FlowMetric API".</p>
-</dd>
-<dt class="hdlist1">Configure Loki to improve the query performance</dt>
-<dd>
-<div class="paragraph">
-<p>If the problem persists, you can consider configuring Loki to improve the query performance. Some options depend on the installation mode you used for Loki, such as using the Operator and <code>LokiStack</code>, or <code>Monolithic</code> mode, or <code>Microservices</code> mode.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>In <code>LokiStack</code> or <code>Microservices</code> modes, try increasing the number of querier replicas. For more information, see "LokiComponentSpec".</p>
-</li>
-<li>
-<p>Increase the query timeout. You must also increase the Network Observability read timeout to Loki in the <code>FlowCollector</code> <code>spec.loki.readTimeout</code>. For more information, see "QueryLimitSpec".</p>
-</li>
-</ul>
-</div>
-</dd>
-</dl>
-</div>
-<div class="sect6 _additional-resources">
-<h7 id="_additional_resources_11">Additional resources</h7>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://loki-operator.dev/docs/api.md/#loki-grafana-com-v1-LokiComponentSpec">LokiComponentSpec</a></p>
-</li>
-<li>
-<p><a href="https://loki-operator.dev/docs/api.md/#loki-grafana-com-v1-QueryLimitSpec">QueryLimitSpec</a></p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="monitor-machine-config-daemon-metrics-con_monitor-machine-config-daemon-metrics.html">Monitor Machine Config Daemon metrics</a> | ↑ Up: <a href="_observe.html">Observe</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="network-observability-deployment-and-management-113-control-automatic-installation-during-cluster-creation-con_network-observability-deployment-and-management-113-control-automatic-installation-during-cluster-creation.html">Control automatic installation during cluster creation</a> →</p>
+<p>← Previous: <a href="monitor-machine-config-daemon-metrics-con_monitor-machine-config-daemon-metrics.html">Monitor Machine Config Daemon metrics</a> | ↑ Up: <a href="_observe.html">Observe</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="nw-networkpolicy-audit-concept_observe-audit-and-review-policy-enforcement.html">Audit logging</a> →</p>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-06 15:08:32 -0500
+Last updated 2026-10-08 18:28:01 -0500
 </div>
 </div>
 <style>

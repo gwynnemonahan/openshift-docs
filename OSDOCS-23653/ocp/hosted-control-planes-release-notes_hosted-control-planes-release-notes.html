@@ -479,53 +479,18 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 
 </style>
 <!-- navmap-right-toc-end -->
-<!-- navmap-preview-warning-start -->
-<style>
-  .navmap-preview-warning {
-    background: #fff1f1;
-    border: 2px solid #c9190b;
-    border-radius: 4px;
-    color: #3b0a0a;
-    font-family: "Open Sans", "DejaVu Sans", sans-serif;
-    margin: 1em auto;
-    max-width: 70em;
-    padding: 1em 1.25em;
-  }
-  .navmap-preview-warning strong { color: #a30000; }
-  .navmap-preview-warning details { margin-top: .75em; }
-  .navmap-preview-warning pre {
-    background: #fff;
-    border: 1px solid #d7d7d7;
-    max-height: 20em;
-    overflow: auto;
-    padding: .75em;
-    white-space: pre-wrap;
-  }
-</style>
-<!-- navmap-preview-warning-end -->
 </head>
-<body id="network-observability-deployment-and-management-113-control-automatic-installation-during-cluster-creation-con_network-observability-deployment-and-management-113-control-automatic-installation-during-cluster-creation" class="book toc2 toc-left navmap-has-right-toc">
-<div class="navmap-preview-warning" role="alert"><strong>Preview warning: this preview is incomplete.</strong><p>One or more AsciiDoc includes are missing. Content may be absent from this page or from related pages.</p><details><summary>Show missing-include report</summary><pre>Include preflight failed for maps/ocp/navigation.adoc
-
-Missing include targets:
-  maps/ocp/troubleshoot.adoc:53
-    include::ocp-jobs/use-the-vsphere-problem-detector-operator.adoc[leveloffset=+1]
-    expected: maps/ocp/ocp-jobs/use-the-vsphere-problem-detector-operator.adoc
-
-How to fix these errors:
-  1. Restore or create the expected .adoc file, preserving the path relative to the referring map; or
-  2. Change the include directive to the path of the existing source file if the topic was renamed or moved.
-  Then rerun this audit and the preview. Do not ignore the error: Asciidoctor can otherwise generate incomplete HTML.
-</pre></details><details><summary>How to remediate missing content</summary><ol><li>Restore or create the expected <code>.adoc</code> file at the reported path, including its required content and attributes.</li><li>If the topic was renamed or moved, update the reported <code>include::</code> directive to point to the existing file. The path is relative to the file containing the directive.</li><li>If the topic is intentionally not ready, remove the include from the map and track the content gap separately.</li></ol><p>After fixing the includes, rebuild the preview with <code>./preview-map &lt;distro&gt;</code>.</p></details></div>
+<body id="hosted-control-planes-release-notes_hosted-control-planes-release-notes" class="book toc2 toc-left navmap-has-right-toc">
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
 <div id="toctitle"></div>
 <p><span class="toc-root"><a href="navigation.html">Red Hat OpenShift Container Platform</a></span></p><ul class="sectlevel1">
 <li><a href="_whats_new.html">What&#8217;s new</a>
-
 <ul class="sectlevel2">
 <li><a href="about-kmm_review-kmm-releases-and-updates.html">About the Kernel Module Management Operator</a>
+</li>
+<li><a href="hosted-control-planes-release-notes_hosted-control-planes-release-notes.html"><span class="toc-current">Hosted control planes release notes</span></a>
 </li>
 </ul>
 </li>
@@ -561,10 +526,6 @@ How to fix these errors:
 <li><a href="coreos-layering-configuring-on_understand-the-on-cluster-mode-of-the-image-mode-for-openshift-feature.html">About on-cluster image mode</a>
 </li>
 <li><a href="coreos-layering-updating_understand-how-to-update-a-cluster-that-uses-the-image-mode-for-openshift.html">Update with a RHCOS custom layered image</a>
-</li>
-<li><a href="network-observability-operator_understand-network-observability-netobserv.html">Network Observability Operator</a>
-</li>
-<li><a href="network-observability-deployment-and-management-con_network-observability-deployment-and-management.html">Network Observability deployment and management</a>
 </li>
 <li><a href="understanding-openshift_evaluate-openshift-platform-capabilities.html">Understand Red&#160;Hat OpenShift Container Platform</a>
 </li>
@@ -909,29 +870,29 @@ How to fix these errors:
 <li><a href="_disconnected_environments.html">Disconnected environments</a>
 
 <ul class="sectlevel2">
-<li><a href="understand-disconnected-environments-intro_understand-disconnected-environments.html">Understand disconnected environments</a>
+<li><a href="understand-disconnected-environments-intro_understand-disconnected-environments.html">Disconnected environment concepts</a>
 </li>
-<li><a href="installing-agent_install-a-cluster-in-a-disconnected-environment.html">Installing a cluster with the Agent-based Installer</a>
+<li><a href="plan-a-disconnected-installation-intro_plan-a-disconnected-installation.html">Plan a disconnected installation</a>
 </li>
-<li><a href="prerequisites_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift.html">Prerequisites</a>
+<li><a href="installing-agent_install-a-cluster-in-a-disconnected-environment.html">Install a cluster with the Agent-based Installer</a>
 </li>
-<li><a href="installation-oc-mirror-v2-about_mirror-images-to-a-mirror-registry-using-oc-mirror-v2.html">About oc-mirror plugin v2</a>
+<li><a href="create-mirror-registry-intro_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift.html">Create a mirror registry with mirror registry for Red Hat OpenShift</a>
 </li>
-<li><a href="prerequisites_mirror-images-to-a-mirror-registry-using-the-oc-adm-release-mirror-command.html">Prerequisites</a>
+<li><a href="installation-oc-mirror-v2-about_mirror-images-to-a-mirror-registry-using-oc-mirror-v2.html">Mirror images to a mirror registry using oc-mirror v2</a>
 </li>
-<li><a href="oc-mirror-migration-differences_migrate-from-oc-mirror-v1-to-v2.html">Changes from oc-mirror plugin v1 to v2</a>
-</li>
-<li><a href="olm-restricted-network-prereqs_manage-olm-operators-in-a-disconnected-environment.html">Prerequisites</a>
+<li><a href="manage-olm-operators-disconnected-intro_manage-olm-operators-in-a-disconnected-environment.html">Manage OLM Operators in a disconnected environment</a>
 </li>
 <li><a href="mirror-images-for-a-cluster-update-in-a-disconnected-environment-intro_mirror-images-for-a-cluster-update-in-a-disconnected-environment.html">Mirror images for a cluster update in a disconnected environment</a>
 </li>
-<li><a href="update-service-overview_update-a-cluster-in-a-disconnected-environment-using-osus.html">Using the OpenShift Update Service in a disconnected environment</a>
+<li><a href="update-service-overview_update-a-cluster-in-a-disconnected-environment-using-osus.html">Use the OpenShift Update Service in a disconnected environment</a>
 </li>
-<li><a href="updating-cli-prereqs_update-a-cluster-in-a-disconnected-environment-without-using-osus.html">Prerequisites for a cluster update</a>
+<li><a href="update-disconnected_update-a-cluster-in-a-disconnected-environment-without-using-osus.html">Updating the disconnected cluster</a>
 </li>
-<li><a href="about-disconnected-updates-uninstalling-osus_uninstall-osus-from-a-cluster.html">Uninstalling the OpenShift Update Service from a cluster</a>
+<li><a href="about-disconnected-updates-uninstalling-osus_uninstall-osus-from-a-cluster.html">Uninstall the OpenShift Update Service from a cluster</a>
 </li>
-<li><a href="installation-about-mirror-registry_convert-a-connected-cluster-to-disconnected.html">About the mirror registry</a>
+<li><a href="configure-trust-and-mirroring-con_configure-trust-and-mirroring.html">Configure trust and mirroring</a>
+</li>
+<li><a href="convert-connected-to-disconnected-intro_convert-a-connected-cluster-to-disconnected.html">Convert a connected cluster to disconnected</a>
 </li>
 <li><a href="deploying-hosted-control-planes-in-a-disconnected-environment-intro_deploying-hosted-control-planes-in-a-disconnected-environment.html">Deploying hosted control planes in a disconnected environment</a>
 </li>
@@ -989,7 +950,7 @@ How to fix these errors:
 </li>
 <li><a href="core-user-password_change-the-core-user-password-for-node-access.html">Change the core user password for node access</a>
 </li>
-<li><a href="configure-control-plane-failure-domains-con_configure-control-plane-failure-domains.html">Configure control plane failure domains</a>
+<li><a href="spread-the-control-plane-across-failure-domains-con_spread-the-control-plane-across-failure-domains.html">Spread the control plane across failure domains</a>
 </li>
 <li><a href="multi-architecture-configuring-your-cluster_configure-multi-architecture-node-workload-deployments.html">Configuring your cluster with multi-architecture compute machines</a>
 </li>
@@ -1029,6 +990,12 @@ How to fix these errors:
 </li>
 <li><a href="manage-the-configuration-and-lifecycle-of-control-plane-machines-con_manage-the-configuration-and-lifecycle-of-control-plane-machines.html">Manage the configuration and lifecycle of control plane machines</a>
 </li>
+<li><a href="manage-the-configuration-and-lifecycle-of-compute-machines-con_manage-the-configuration-and-lifecycle-of-compute-machines.html">Manage the configuration and lifecycle of compute machines</a>
+</li>
+<li><a href="identify-and-group-compute-machines-con_identify-and-group-compute-machines.html">Identify and group compute machines</a>
+</li>
+<li><a href="identify-and-group-control-plane-machines-con_identify-and-group-control-plane-machines.html">Identify and group control plane machines</a>
+</li>
 <li><a href="multi-architecture-scheduling_manage-workloads-on-multi-architecture-clusters.html">Scheduled workloads on clusters with multi-architecture compute machines</a>
 </li>
 <li><a href="hcp-import-intro_manually-import-a-hosted-cluster.html">Manually importing a hosted cluster</a>
@@ -1063,7 +1030,7 @@ How to fix these errors:
 </li>
 <li><a href="machine-health-checks-about_understand-machine-health-check-behavior.html">About machine health checks</a>
 </li>
-<li><a href="machine-about-phases_understand-the-machine-lifecycle.html">Machine phases</a>
+<li><a href="understand-the-machine-lifecycle-con_understand-the-machine-lifecycle.html">Understand the machine lifecycle</a>
 </li>
 <li><a href="understand-the-out-of-cluster-mode-of-the-image-mode-for-openshift-feature-con_understand-the-out-of-cluster-mode-of-the-image-mode-for-openshift-feature.html">Understand the out-of-cluster mode of the Image Mode for OpenShift feature</a>
 </li>
@@ -1127,8 +1094,6 @@ How to fix these errors:
 </li>
 <li><a href="configure-multi-tenant-namespace-isolation-con_configure-multi-tenant-namespace-isolation.html">Configure multi-tenant namespace isolation</a>
 </li>
-<li><a href="configure-the-network-observability-operator-flowcollector-con_configure-the-network-observability-operator-flowcollector.html">Configure the Network Observability Operator FlowCollector</a>
-</li>
 <li><a href="define-how-much-disk-space-a-single-container-on-my-nodes-can-use-for-its-files-and-layers-con_define-how-much-disk-space-a-single-container-on-my-nodes-can-use-for-its-files-and-layers.html">Define how much disk space a single container can use</a>
 </li>
 <li><a href="define-the-maximum-size-of-the-container-log-file-before-it-is-rotated-con_define-the-maximum-size-of-the-container-log-file-before-it-is-rotated.html">Define the maximum size of the container log file before it is rotated</a>
@@ -1185,7 +1150,7 @@ How to fix these errors:
 </li>
 <li><a href="about-kmm_manage-kernel-modules-across-cluster-nodes.html">About the Kernel Module Management Operator</a>
 </li>
-<li><a href="installation-oc-mirror-v2-about_mirror-container-images-to-a-local-registry.html">About oc-mirror plugin v2</a>
+<li><a href="installation-oc-mirror-v2-about_mirror-container-images-to-a-local-registry.html">Mirror images to a mirror registry using oc-mirror v2</a>
 </li>
 <li><a href="organize-image-versions-with-tags-con_organize-image-versions-with-tags.html">Organize image versions with tags</a>
 </li>
@@ -1211,11 +1176,13 @@ How to fix these errors:
 </li>
 <li><a href="cpmso-feat-auto-update_apply-configuration-changes-to-control-plane-machines-with-automation.html">Automatic updates to the control plane configuration</a>
 </li>
-<li><a href="change-the-configuration-of-compute-machines-by-updating-a-compute-machine-set-con_change-the-configuration-of-compute-machines-by-updating-a-compute-machine-set.html">Change the configuration of compute machines by updating a compute machine set</a>
+<li><a href="change-the-configuration-of-compute-machines-by-updating-compute-machine-resources-con_change-the-configuration-of-compute-machines-by-updating-compute-machine-resources.html">Change the configuration of compute machines by updating compute machine resources</a>
+</li>
+<li><a href="enable-automated-machine-management-on-user-provisioned-infrastructure-con_enable-automated-machine-management-on-user-provisioned-infrastructure.html">Enable automated machine management on user-provisioned infrastructure</a>
 </li>
 <li><a href="apply-configuration-changes-to-compute-machines-with-automation-con_apply-configuration-changes-to-compute-machines-with-automation.html">Apply configuration changes to compute machines with automation</a>
 </li>
-<li><a href="mapi-to-capi-migration-overview_change-the-authoritative-api-for-machine-management-resources.html">Machine API to Cluster API resource migration</a>
+<li><a href="change-the-authoritative-api-for-machine-management-resources-con_change-the-authoritative-api-for-machine-management-resources.html">Change the authoritative API for machine management resources</a>
 </li>
 <li><a href="private-clusters-about_configure-a-private-cluster.html">About private clusters</a>
 </li>
@@ -1304,7 +1271,31 @@ How to fix these errors:
 </li>
 <li><a href="configure-high-performance-networking-con_configure-high-performance-networking.html">Configure high-performance networking</a>
 </li>
+<li><a href="network-observability-operator_understand-network-observability-netobserv.html">Network Observability Operator</a>
+</li>
+<li><a href="evaluate-network-observability-prerequisites-and-requirements-con_evaluate-network-observability-prerequisites-and-requirements.html">Evaluate network observability prerequisites and requirements</a>
+</li>
+<li><a href="network-observability-deployment-and-management-con_network-observability-deployment-and-management.html">Network Observability deployment and management</a>
+</li>
+<li><a href="verify-network-observability-installation-intro_verify-network-observability-installation.html">Verify Network Observability installation</a>
+</li>
+<li><a href="configure-the-network-observability-operator-flowcollector-con_configure-the-network-observability-operator-flowcollector.html">Configure the Network Observability Operator FlowCollector</a>
+</li>
+<li><a href="control-network-policies-and-access-for-network-observability-operator-con_control-network-policies-and-access-for-network-observability-operator.html">Control network policies and access for the Network Observability Operator</a>
+</li>
+<li><a href="secure-network-observability-data-con_secure-network-observability-data.html">Secure network observability data</a>
+</li>
 <li><a href="network-observability-operator_network-flow-visibility.html">Network Observability Operator</a>
+</li>
+<li><a href="network-observability-network-traffic-overview-view_monitor-network-traffic-with-network-observability.html">Observe the network traffic from the Overview view</a>
+</li>
+<li><a href="network-observability-health-dashboard-overview_verify-security-and-network-observability-operator-health.html">Health dashboards</a>
+</li>
+<li><a href="configure-network-traffic-flowlogs-pipeline-kafka_troubleshoot-network-issues-136-diagnose-network-flow-issues-netobserv.html">Flowlogs-Pipeline does not consume network flows after installing Kafka</a>
+</li>
+<li><a href="network-observability-integration-intro_network-observability-integration.html">Network Observability integration</a>
+</li>
+<li><a href="upgrade-network-observability-operator-version-con_upgrade-network-observability-operator-version.html">Upgrade the Network Observability Operator version</a>
 </li>
 </ul>
 </li>
@@ -1462,6 +1453,18 @@ How to fix these errors:
 </li>
 <li><a href="configure-confidential-vms-con_configure-confidential-vms.html">Configure confidential VMs</a>
 </li>
+<li><a href="isolate-compute-machines-from-other-tenants-con_isolate-compute-machines-from-other-tenants.html">Isolate compute machines from other tenants</a>
+</li>
+<li><a href="protect-the-instance-metadata-endpoint-for-compute-machines-con_protect-the-instance-metadata-endpoint-for-compute-machines.html">Protect the instance metadata endpoint for compute machines</a>
+</li>
+<li><a href="harden-boot-integrity-for-compute-machines-con_harden-boot-integrity-for-compute-machines.html">Harden boot integrity for compute machines</a>
+</li>
+<li><a href="isolate-control-plane-machines-from-other-tenants-con_isolate-control-plane-machines-from-other-tenants.html">Isolate control plane machines from other tenants</a>
+</li>
+<li><a href="protect-the-instance-metadata-endpoint-for-control-plane-machines-con_protect-the-instance-metadata-endpoint-for-control-plane-machines.html">Protect the instance metadata endpoint for control plane machines</a>
+</li>
+<li><a href="harden-boot-integrity-for-control-plane-machines-con_harden-boot-integrity-for-control-plane-machines.html">Harden boot integrity for control plane machines</a>
+</li>
 <li><a href="connect-workloads-to-additional-networks-con_connect-workloads-to-additional-networks.html">Connect workloads to additional networks</a>
 </li>
 <li><a href="nw-multi-network-policy-differences_control-traffic-on-secondary-networks.html">Differences between multi-network policy and network policy</a>
@@ -1489,14 +1492,13 @@ How to fix these errors:
 </ul>
 </li>
 <li><a href="_observe.html">Observe</a>
+
 <ul class="sectlevel2">
 <li><a href="dependency-discovery-61-map-which-services-communicate-with-each-other-con_dependency-discovery-61-map-which-services-communicate-with-each-other.html">Map which services communicate with each other</a>
 </li>
 <li><a href="monitor-machine-config-daemon-metrics-con_monitor-machine-config-daemon-metrics.html">Monitor Machine Config Daemon metrics</a>
 </li>
 <li><a href="monitor-network-performance-con_monitor-network-performance.html">Monitor network performance</a>
-</li>
-<li><a href="network-observability-deployment-and-management-113-control-automatic-installation-during-cluster-creation-con_network-observability-deployment-and-management-113-control-automatic-installation-during-cluster-creation.html"><span class="toc-current">Control automatic installation during cluster creation</span></a>
 </li>
 <li><a href="nw-networkpolicy-audit-concept_observe-audit-and-review-policy-enforcement.html">Audit logging</a>
 </li>
@@ -1532,8 +1534,6 @@ How to fix these errors:
 <li><a href="configure-external-dns-integration-con_configure-external-dns-integration.html">Configure External DNS integration</a>
 </li>
 <li><a href="automate-cicd-with-image-streams-intro_automate-cicd-with-image-streams.html">Automate CI/CD with image streams</a>
-</li>
-<li><a href="network-observability-deployment-and-management-con_network-observability-deployment-and-management.html">Network Observability deployment and management</a>
 </li>
 </ul>
 </li>
@@ -1574,7 +1574,7 @@ How to fix these errors:
 </li>
 <li><a href="nodes-nodes-managing-max-pods-proc_adjust-maximum-number-of-pods-on-a-node.html">Configure the maximum number of pods per node</a>
 </li>
-<li><a href="machineset-manually-scaling_scale-compute-resources.html">Scale a compute machine set manually</a>
+<li><a href="scale-compute-resources-con_scale-compute-resources.html">Scale workloads to match demand</a>
 </li>
 <li><a href="nodes-cluster-resource-configure-about_configure-cluster-memory-to-meet-container-memory-and-risk-requirements.html">Understanding how to manage application memory</a>
 </li>
@@ -1614,7 +1614,7 @@ How to fix these errors:
 </li>
 <li><a href="infrastructure-components_separate-infrastructure-machines-from-machines-that-run-workloads.html">Red&#160;Hat OpenShift Container Platform infrastructure components</a>
 </li>
-<li><a href="machine-mgmt-intro-managing-compute_scale-the-number-of-compute-machines-that-use-a-specific-configuration.html">Compute machine management</a>
+<li><a href="scale-compute-capacity-con_scale-compute-capacity.html">Scale compute capacity</a>
 </li>
 <li><a href="machine-mgmt-intro-add-for-upi_add-compute-machines-manually.html">Compute machine creation on user-provisioned infrastructure</a>
 </li>
@@ -1622,11 +1622,25 @@ How to fix these errors:
 </li>
 <li><a href="machineset-label-gpu-autoscaler_label-gpu-machine-sets-for-autoscaler.html">Label GPU machine sets for the cluster autoscaler</a>
 </li>
-<li><a href="machineset-non-guaranteed-instance_creating-machineset-aws.html">Machine sets that deploy machines as Spot Instances</a>
+<li><a href="use-interruptible-capacity-for-lower-cost-machines-con_use-interruptible-capacity-for-lower-cost-machines.html">Use interruptible capacity for lower-cost machines</a>
 </li>
-<li><a href="machineset-capacity-reservation_creating-machineset-aws.html">Configure Capacity Reservations by using machine sets</a>
+<li><a href="reserve-capacity-for-planned-workloads-con_reserve-capacity-for-planned-workloads.html">Reserve capacity for planned workloads</a>
 </li>
-<li><a href="nvidia-gpu-aws-adding-a-gpu-node_add-gpu-nodes-to-machine-sets.html">Add a GPU node to an existing Red&#160;Hat OpenShift Container Platform cluster</a>
+<li><a href="reserve-capacity-for-planned-control-plane-workloads-con_reserve-capacity-for-planned-control-plane-workloads.html">Reserve capacity for planned control plane workloads</a>
+</li>
+<li><a href="accelerate-workloads-with-gpus-con_accelerate-workloads-with-gpus.html">Accelerate workloads with GPUs</a>
+</li>
+<li><a href="improve-network-performance-for-compute-machines-con_improve-network-performance-for-compute-machines.html">Improve network performance for compute machines</a>
+</li>
+<li><a href="improve-network-performance-for-control-plane-machines-con_improve-network-performance-for-control-plane-machines.html">Improve network performance for control plane machines</a>
+</li>
+<li><a href="improve-storage-performance-for-compute-machines-con_improve-storage-performance-for-compute-machines.html">Improve storage performance for compute machines</a>
+</li>
+<li><a href="improve-storage-performance-for-control-plane-machines-con_improve-storage-performance-for-control-plane-machines.html">Improve storage performance for control plane machines</a>
+</li>
+<li><a href="keep-data-off-the-root-volume-for-compute-machines-con_keep-data-off-the-root-volume-for-compute-machines.html">Keep data off the root volume for compute machines</a>
+</li>
+<li><a href="keep-data-off-the-root-volume-for-control-plane-machines-con_keep-data-off-the-root-volume-for-control-plane-machines.html">Keep data off the root volume for control plane machines</a>
 </li>
 </ul>
 </li>
@@ -1672,8 +1686,6 @@ How to fix these errors:
 </li>
 <li><a href="cnf-measuring-latency_validate-node-performance-with-latency-tests.html">Measuring latency</a>
 </li>
-<li><a href="verify-network-observability-installation-intro_verify-network-observability-installation.html">Verify Network Observability installation</a>
-</li>
 </ul>
 </li>
 <li><a href="_troubleshoot.html">Troubleshoot</a>
@@ -1690,6 +1702,8 @@ How to fix these errors:
 <li><a href="restart-hosted-control-plane-components-and-pause-reconciliation-con_restart-hosted-control-plane-components-and-pause-reconciliation.html">Restart hosted control plane components and pause reconciliation</a>
 </li>
 <li><a href="troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-bare-metal-con_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-bare-metal.html">Troubleshoot hosted clusters on bare metal</a>
+</li>
+<li><a href="troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-ibmz-con_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-ibmz.html">Troubleshoot hosted clusters on IBM Z</a>
 </li>
 <li><a href="troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-openshift-virtualization-con_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-openshift-virtualization.html">Troubleshoot hosted clusters on OpenShift Virtualization</a>
 </li>
@@ -1708,6 +1722,8 @@ How to fix these errors:
 <li><a href="hcp-backup-etcd-snapshot-restore_control-plane-disaster-recovery.html">Restoring etcd data by using the etcd snapshot method</a>
 </li>
 <li><a href="nw-pod-network-connectivity-checks_troubleshoot-network-issues.html">Connection health checks that are performed</a>
+</li>
+<li><a href="troubleshoot-network-issues-diagnose-node-networking-and-ovs-con_troubleshoot-network-issues-diagnose-node-networking-and-ovs.html">Diagnose node networking and Open vSwitch</a>
 </li>
 <li><a href="restore-replace-unhealthy-etcd-member_replace-unhealthy-etcd-members.html">Replacing the unhealthy etcd member</a>
 </li>
@@ -1737,7 +1753,7 @@ How to fix these errors:
 </li>
 <li><a href="nw-pod-network-connectivity-checks_troubleshoot-connectivity-and-internal-subnets.html">Connection health checks that are performed</a>
 </li>
-<li><a href="investigating-why-windows-machine-compute-node_troubleshoot-machine-management.html">Investigating why Windows Machine does not become compute node</a>
+<li><a href="troubleshoot-machine-management-con_troubleshoot-machine-management.html">Troubleshoot machine management</a>
 </li>
 <li><a href="control-plane-backup-restore-operations-overview_investigate-an-active-cluster-issue.html">Control plane backup and restore operations</a>
 </li>
@@ -1747,21 +1763,15 @@ How to fix these errors:
 </li>
 <li><a href="oadp-performance-network-requirements_troubleshoot-node-performance-issues-collect-node-profiling-data.html">OADP network requirements</a>
 </li>
-<li><a href="network-observability-operator-stub_troubleshoot-network-issues-1362-execute-localized-network-diagnostics-using-the-oc-netobserv-cli.html">Network Observability Operator features</a>
-</li>
 <li><a href="adminnetworkpolicy_troubleshoot-network-issues-132-troubleshoot-network-policies.html">AdminNetworkPolicy</a>
 </li>
 <li><a href="nw-ingress-sharding-route-labels_troubleshoot-network-issues-133-troubleshoot-ingress-and-routes.html">Configure Ingress Controller sharding by using route labels</a>
-</li>
-<li><a href="configure-network-traffic-flowlogs-pipeline-kafka_troubleshoot-network-issues-136-diagnose-network-flow-issues-netobserv.html">Flowlogs-Pipeline does not consume network flows after installing Kafka</a>
 </li>
 <li><a href="investigating-master-node-installation-issues_troubleshoot-network-issues-131-access-cluster-nodes-for-diagnostics.html">Investigating control plane node installation issues</a>
 </li>
 <li><a href="troubleshoot-ovn-kubernetes-networking-issues-con_troubleshoot-ovn-kubernetes-networking-issues.html">Troubleshoot OVN-Kubernetes networking issues</a>
 </li>
 <li><a href="adding-network-attachment-definition-to-pods_troubleshoot-network-issues-135-trace-openflow-with-ovnkube-trace.html">Add the network attachment definition to your pods</a>
-</li>
-<li><a href="network-observability-health-rules-and-performance_troubleshoot-network-issues-1361-investigate-packet-drops-netobserv.html">Identify network issues with automated health rules</a>
 </li>
 <li><a href="nw-pod-network-connectivity-checks_configure-and-maintain-the-pod-network-cni-225-diagnose-and-resolve-node-network-configuration-errors.html">Connection health checks that are performed</a>
 </li>
@@ -1772,6 +1782,8 @@ How to fix these errors:
 <li><a href="control-plane-backup-restore-operations-overview_high-availability-and-disaster-recovery-for-hosted-control-planes-automated-disaster-recovery-for-a-hosted-cluster-by-using-oadp.html">Control plane backup and restore operations</a>
 </li>
 <li><a href="investigating-master-node-installation-issues_manage-kernel-modules-across-cluster-nodes-troubleshoot-kernel-module-loading-issues.html">Investigating control plane node installation issues</a>
+</li>
+<li><a href="troubleshoot-operating-system-issues-con_troubleshoot-operating-system-issues.html">Troubleshoot operating system issues</a>
 </li>
 <li><a href="nw-ovn-kubernetes-pod-connectivity-checks_connectivity-troubleshooting-11-diagnose-failed-connections-between-pods-and-services.html">Checking the OVN-Kubernetes pod network connectivity</a>
 </li>
@@ -1799,7 +1811,13 @@ How to fix these errors:
 </li>
 <li><a href="gathering-operator-logs_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools.html">Gathering Operator logs</a>
 </li>
-<li><a href="oadp-running-must-gather_investigate-an-active-cluster-issue-collect-comprehensive-data-for-vendor-support.html">Using the must-gather tool</a>
+<li><a href="collect-comprehensive-data-for-vendor-support-con_investigate-an-active-cluster-issue-collect-comprehensive-data-for-vendor-support.html">Collect comprehensive data for vendor support</a>
+</li>
+<li><a href="collect-host-sosreports-and-journal-logs-con_investigate-an-active-cluster-issue-collect-host-sosreports-and-journal-logs.html">Collect host sosreports and journal logs</a>
+</li>
+<li><a href="capture-network-traces-for-support-con_investigate-an-active-cluster-issue-capture-network-traces-for-support.html">Capture network traces for support</a>
+</li>
+<li><a href="use-host-toolbox-for-diagnostics-con_investigate-an-active-cluster-issue-use-host-toolbox-for-diagnostics.html">Use the host toolbox for diagnostics</a>
 </li>
 <li><a href="understanding-oc-log-levels_investigate-an-active-cluster-issue-summarize-cluster-specifications.html">Understanding OpenShift CLI (<code>oc</code>) log levels</a>
 </li>
@@ -1829,6 +1847,12 @@ How to fix these errors:
 </li>
 <li><a href="control-plane-backup-restore-operations-overview_encrypt-etcd-test-restore-procedures.html">Control plane backup and restore operations</a>
 </li>
+<li><a href="troubleshoot-clusters-that-use-the-cluster-api-con_troubleshoot-clusters-that-use-the-cluster-api.html">Troubleshoot clusters that use the Cluster API</a>
+</li>
+<li><a href="troubleshoot-the-control-plane-machine-set-con_troubleshoot-the-control-plane-machine-set.html">Troubleshoot the control plane machine set</a>
+</li>
+<li><a href="collect-console-logs-from-machines-that-fail-to-boot-con_collect-console-logs-from-machines-that-fail-to-boot.html">Collect console logs from machines that fail to boot</a>
+</li>
 </ul>
 </li>
 <li><a href="_reference.html">Reference</a>
@@ -1843,20 +1867,61 @@ How to fix these errors:
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#network-observability-operator-installation_network-observability-deployment-and-management-113-control-automatic-installation-during-cluster-creation">Install the Network Observability Operator</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#hcp-release-notes-new-features_hosted-control-planes-release-notes">New features and enhancements</a></li><li class="level-4"><a href="#hcp-release-notes-notable-technical-changes_hosted-control-planes-release-notes">Notable technical changes</a></li><li class="level-4"><a href="#hcp-release-notes-fixed-issues_hosted-control-planes-release-notes">Fixed issues</a></li><li class="level-4"><a href="#hcp-release-notes-technology-preview-tables_hosted-control-planes-release-notes">Technology Preview features status</a></li><li class="level-4"><a href="#hcp-release-notes-known-issues_hosted-control-planes-release-notes">Known issues</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
-<h3 id="network-observability-deployment-and-management-113-control-automatic-installation-during-cluster-creation-con_network-observability-deployment-and-management-113-control-automatic-installation-during-cluster-creation">Control automatic installation during cluster creation</h3>
+<h3 id="hosted-control-planes-release-notes_hosted-control-planes-release-notes">Hosted control planes release notes</h3>
 <div class="paragraph _abstract">
-<p>Network Observability is installed as an Operator after the cluster exists. Whether it is present at cluster creation depends on what the installation configuration or the cluster&#8217;s Operator policy includes.</p>
+<p>With this release, hosted control planes for Red&#160;Hat OpenShift Container Platform {product-version} is available. Hosted control planes for Red&#160;Hat OpenShift Container Platform {product-version} supports multicluster engine for Kubernetes Operator version {product-version}.</p>
 </div>
 <div class="sect3">
-<h4 id="network-observability-operator-installation_network-observability-deployment-and-management-113-control-automatic-installation-during-cluster-creation">Install the Network Observability Operator</h4>
+<h4 id="hcp-release-notes-new-features_hosted-control-planes-release-notes">New features and enhancements</h4>
+<div class="paragraph">
+<p>This release adds improvements related to the following components and concepts:</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="hcp-release-notes-notable-technical-changes_hosted-control-planes-release-notes">Notable technical changes</h4>
 <div class="paragraph _abstract">
-<p>Install the Network Observability Operator and use the setup wizard to create the <code>FlowCollector</code> custom resource definition (CRD) to complete the initial configuration.</p>
+<p>Review the following notable technical changes introduced in this release.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="hcp-release-notes-fixed-issues_hosted-control-planes-release-notes">Fixed issues</h4>
+
+</div>
+<div class="sect3">
+<h4 id="hcp-release-notes-technology-preview-tables_hosted-control-planes-release-notes">Technology Preview features status</h4>
+<div class="paragraph _abstract">
+<p>Some features in this release are currently in Technology Preview. These experimental features are not intended for production use.</p>
 </div>
 <div class="paragraph">
-<p>You can set specifications in the web console when you create the <code>FlowCollector</code>.</p>
+<p>Note the following scope of support on the Red&#160;Hat Customer Portal for these features:</p>
+</div>
+<div class="paragraph">
+<p><a href="https://access.redhat.com/support/offerings/techpreview">Technology Preview Features Support Scope</a></p>
+</div>
+<div class="paragraph">
+<p>In the following table, features are marked with the following statuses:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><em>Not Available</em></p>
+</li>
+<li>
+<p><em>Technology Preview</em></p>
+</li>
+<li>
+<p><em>General Availability</em></p>
+</li>
+<li>
+<p><em>Deprecated</em></p>
+</li>
+<li>
+<p><em>Removed</em></p>
+</li>
+</ul>
 </div>
 <div class="admonitionblock important">
 <table>
@@ -1866,32 +1931,95 @@ How to fix these errors:
 </td>
 <td class="content">
 <div class="paragraph">
-<p>The actual memory consumption of the Operator depends on your cluster size and the number of resources deployed. Memory consumption might need to be adjusted accordingly. For more information refer to "Network Observability controller manager pod runs out of memory" in the "Important Flow Collector configuration considerations" section.</p>
+<p>For IBM Power and IBM Z, the following exceptions apply:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>For version 4.20 and later, you must run the control plane on machine types that are based on 64-bit x86 architecture or s390x architecture, and node pools on IBM Power or IBM Z.</p>
+</li>
+<li>
+<p>For version 4.19 and earlier, you must run the control plane on machine types that are based on 64-bit x86 architecture, and node pools on IBM Power or IBM Z.</p>
+</li>
+</ul>
 </div>
 </td>
 </tr>
 </table>
 </div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>If you choose to use Loki, install the <a href="https://catalog.redhat.com/software/containers/openshift-logging/loki-rhel8-operator/622b46bcae289285d6fcda39">Loki Operator version 5.7+</a>.</p>
-</li>
-<li>
-<p>You must have <code>cluster-admin</code> privileges.</p>
-</li>
-<li>
-<p>One of the following supported architectures is required: <code>amd64</code>, <code>ppc64le</code>, <code>arm64</code>, or <code>s390x</code>.</p>
-</li>
-<li>
-<p>Any CPU supported by Red Hat Enterprise Linux (RHEL) 9.</p>
-</li>
-<li>
-<p>Must be configured with OVN-Kubernetes as the main network plugin, and optionally using secondary interfaces with Multus and SR-IOV.</p>
-</li>
-</ul>
-</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. Hosted control planes GA and TP tracker</caption>
+<colgroup>
+<col style="width: 57.1428%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2858%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Feature</th>
+<th class="tableblock halign-left valign-top">4.20</th>
+<th class="tableblock halign-left valign-top">4.21</th>
+<th class="tableblock halign-left valign-top">4.22</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hosted control planes for Red&#160;Hat OpenShift Container Platform using non-bare-metal agent machines</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Technology Preview</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Technology Preview</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Technology Preview</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hosted control planes for Red&#160;Hat OpenShift Container Platform on RHOSP</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Technology Preview</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Technology Preview</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Technology Preview</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Custom taints and tolerations</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Technology Preview</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Technology Preview</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Technology Preview</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NVIDIA GPU devices on hosted control planes for OpenShift Virtualization</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Technology Preview</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Technology Preview</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Technology Preview</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hosted control planes for OpenShift Virtualization on IBM Z</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Not Available</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Technology Preview</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">General Availability</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hosted control planes on IBM Z in a disconnected environment</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">General Availability</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">General Availability</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">General Availability</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hosted control planes for Red&#160;Hat OpenShift Container Platform on Microsoft Azure</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Not Available</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Not Available</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Technology Preview</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Backup and restore with the etcd snapshot method</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Not Available</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Not Available</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Technology Preview</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Restoring a hosted cluster to a new management cluster by using OADP</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Technology Preview</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Technology Preview</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Technology Preview</p></td>
+</tr>
+</tbody>
+</table>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -1900,51 +2028,116 @@ How to fix these errors:
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Additionally, this installation example uses the <code>netobserv</code> namespace, which is used across all components. You can optionally use a different namespace.</p>
+<p>Hosted control planes for OpenShift Virtualization on IBM Z is supported as Technology Preview starting with Red&#160;Hat OpenShift Container Platform 4.21, multicluster engine for Kubernetes Operator 2.11, and Red&#160;Hat Advanced Cluster Management (RHACM) 2.16. Creating hosted control planes with external infrastructure is not supported.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>In the Red&#160;Hat OpenShift Container Platform web console, click <strong>Ecosystem</strong> &#8594; <strong>Software Catalog</strong>.</p>
-</li>
-<li>
-<p>Choose  <strong>Network Observability Operator</strong> from the list of available Operators in the software catalog, and click <strong>Install</strong>.</p>
-</li>
-<li>
-<p>Select the checkbox <code>Enable Operator recommended cluster monitoring on this Namespace</code>.</p>
-</li>
-<li>
-<p>Navigate to <strong>Operators</strong> &#8594; <strong>Installed Operators</strong>. Under Provided APIs for Network Observability, select the <strong>Flow Collector</strong> link.</p>
-</li>
-<li>
-<p>Follow the <strong>Network Observability FlowCollector setup</strong> wizard.</p>
-</li>
-<li>
-<p>Click <strong>Create</strong>.</p>
-</li>
-</ol>
 </div>
+<div class="sect3">
+<h4 id="hcp-release-notes-known-issues_hosted-control-planes-release-notes">Known issues</h4>
 <div class="paragraph">
-<div class="title">Verification</div>
-<p>To confirm this was successful, when you navigate to <strong>Observe</strong> you should see <strong>Network Traffic</strong> listed in the options.</p>
+<p>This section includes several known issues for hosted control planes for Red&#160;Hat OpenShift Container Platform {product-version}.</p>
 </div>
-<div class="paragraph">
-<p>In the absence of <strong>Application Traffic</strong> within the Red&#160;Hat OpenShift Container Platform cluster, default filters might show that there are "No results", which results in no visual flow. Beside the filter selections, select <strong>Clear all filters</strong> to see the flow.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>If the annotation and the <code>ManagedCluster</code> resource name do not match, the multicluster engine for Kubernetes Operator console displays the cluster as <code>Pending import</code>. The cluster cannot be used by the multicluster engine Operator. The same issue happens when there is no annotation and the <code>ManagedCluster</code> name does not match the <code>Infra-ID</code> value of the <code>HostedCluster</code> resource.</p>
+</li>
+<li>
+<p>When you use the multicluster engine for Kubernetes Operator console to add a new node pool to an existing hosted cluster, the same version of Red&#160;Hat OpenShift Container Platform might appear more than once in the list of options. You can select any instance in the list for the version that you want.</p>
+</li>
+<li>
+<p>When a node pool is scaled down to 0 workers, the list of hosts in the console still shows nodes in a <code>Ready</code> state. You can verify the number of nodes in two ways:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>In the console, go to the node pool and verify that it has 0 nodes.</p>
+</li>
+<li>
+<p>On the command-line interface, run the following commands:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Verify that 0 nodes are in the node pool by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get nodepool -A</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Verify that 0 nodes are in the cluster by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get nodes --kubeconfig</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Verify that 0 agents are reported as bound to the cluster by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get agents -A</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>When you create a hosted cluster in an environment that uses the dual-stack network, you might encounter pods stuck in the <code>ContainerCreating</code> state. This issue occurs because the <code>openshift-service-ca-operator</code> resource cannot generate the <code>metrics-tls</code> secret that the DNS pods need for DNS resolution. As a result, the pods cannot resolve the Kubernetes API server. To resolve this issue, configure the DNS server settings for a dual stack network.</p>
+</li>
+<li>
+<p>If you created a hosted cluster in the same namespace as its managed cluster, detaching the managed hosted cluster deletes everything in the managed cluster namespace including the hosted cluster. The following situations can create a hosted cluster in the same namespace as its managed cluster:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>You created a hosted cluster on the Agent platform through the multicluster engine for Kubernetes Operator console by using the default hosted cluster cluster namespace.</p>
+</li>
+<li>
+<p>You created a hosted cluster through the command-line interface or API by specifying the hosted cluster namespace to be the same as the hosted cluster name.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>When you use the console or API to specify an IPv6 address for the <code>spec.services.servicePublishingStrategy.nodePort.address</code> field of a hosted cluster, a full IPv6 address with 8 hextets is required. For example, instead of specifying <code>2620:52:0:1306::30</code>, you need to specify <code>2620:52:0:1306:0:0:0:30</code>.</p>
+</li>
+<li>
+<p>In hosted control planes on OpenShift Virtualization, if you store all hosted cluster information in a shared namespace and then back up and restore a hosted cluster, you might unintentionally change other hosted clusters. To avoid this issue, back up and restore only hosted clusters that use labels, or avoid storing all hosted cluster information in a shared namespace.</p>
+</li>
+<li>
+<p>For version 4.21, hosted control planes pins all Cluster API images to the <code>4.20.10-multi</code> release image for compatibility reasons. Hosted control planes pins the images when Cluster API deployments are generated. The <code>4.20.10-multi</code> image must always be mirrored and available in order for the Cluster API to work with hosted control planes version 4.21.</p>
+</li>
+<li>
+<p>Intermittent egress IP outages occur when a hosted cluster uses the following combined settings:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The service publishing strategy for the <code>Konnectivity</code> service is set to <code>Route</code>.</p>
+</li>
+<li>
+<p>The management cluster uses Virtual Router Redundancy Protocol (VRRP) VIP for ingress.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
 </div>
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="monitor-network-performance-con_monitor-network-performance.html">Monitor network performance</a> | ↑ Up: <a href="_observe.html">Observe</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="nw-networkpolicy-audit-concept_observe-audit-and-review-policy-enforcement.html">Audit logging</a> →</p>
+<p>← Previous: <a href="about-kmm_review-kmm-releases-and-updates.html">About the Kernel Module Management Operator</a> | ↑ Up: <a href="_whats_new.html">What&#8217;s new</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="_discover.html">Discover</a> →</p>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-06 15:08:32 -0500
+Last updated 2026-10-08 18:28:01 -0500
 </div>
 </div>
 <style>

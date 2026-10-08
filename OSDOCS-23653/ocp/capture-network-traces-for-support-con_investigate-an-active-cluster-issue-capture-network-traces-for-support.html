@@ -479,44 +479,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 
 </style>
 <!-- navmap-right-toc-end -->
-<!-- navmap-preview-warning-start -->
-<style>
-  .navmap-preview-warning {
-    background: #fff1f1;
-    border: 2px solid #c9190b;
-    border-radius: 4px;
-    color: #3b0a0a;
-    font-family: "Open Sans", "DejaVu Sans", sans-serif;
-    margin: 1em auto;
-    max-width: 70em;
-    padding: 1em 1.25em;
-  }
-  .navmap-preview-warning strong { color: #a30000; }
-  .navmap-preview-warning details { margin-top: .75em; }
-  .navmap-preview-warning pre {
-    background: #fff;
-    border: 1px solid #d7d7d7;
-    max-height: 20em;
-    overflow: auto;
-    padding: .75em;
-    white-space: pre-wrap;
-  }
-</style>
-<!-- navmap-preview-warning-end -->
 </head>
-<body id="mapi-to-capi-migration-overview_change-the-authoritative-api-for-machine-management-resources" class="book toc2 toc-left navmap-has-right-toc">
-<div class="navmap-preview-warning" role="alert"><strong>Preview warning: this preview is incomplete.</strong><p>One or more AsciiDoc includes are missing. Content may be absent from this page or from related pages.</p><details><summary>Show missing-include report</summary><pre>Include preflight failed for maps/ocp/navigation.adoc
-
-Missing include targets:
-  maps/ocp/troubleshoot.adoc:53
-    include::ocp-jobs/use-the-vsphere-problem-detector-operator.adoc[leveloffset=+1]
-    expected: maps/ocp/ocp-jobs/use-the-vsphere-problem-detector-operator.adoc
-
-How to fix these errors:
-  1. Restore or create the expected .adoc file, preserving the path relative to the referring map; or
-  2. Change the include directive to the path of the existing source file if the topic was renamed or moved.
-  Then rerun this audit and the preview. Do not ignore the error: Asciidoctor can otherwise generate incomplete HTML.
-</pre></details><details><summary>How to remediate missing content</summary><ol><li>Restore or create the expected <code>.adoc</code> file at the reported path, including its required content and attributes.</li><li>If the topic was renamed or moved, update the reported <code>include::</code> directive to point to the existing file. The path is relative to the file containing the directive.</li><li>If the topic is intentionally not ready, remove the include from the map and track the content gap separately.</li></ol><p>After fixing the includes, rebuild the preview with <code>./preview-map &lt;distro&gt;</code>.</p></details></div>
+<body id="capture-network-traces-for-support-con_investigate-an-active-cluster-issue-capture-network-traces-for-support" class="book toc2 toc-left navmap-has-right-toc">
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -526,6 +490,8 @@ How to fix these errors:
 
 <ul class="sectlevel2">
 <li><a href="about-kmm_review-kmm-releases-and-updates.html">About the Kernel Module Management Operator</a>
+</li>
+<li><a href="hosted-control-planes-release-notes_hosted-control-planes-release-notes.html">Hosted control planes release notes</a>
 </li>
 </ul>
 </li>
@@ -561,10 +527,6 @@ How to fix these errors:
 <li><a href="coreos-layering-configuring-on_understand-the-on-cluster-mode-of-the-image-mode-for-openshift-feature.html">About on-cluster image mode</a>
 </li>
 <li><a href="coreos-layering-updating_understand-how-to-update-a-cluster-that-uses-the-image-mode-for-openshift.html">Update with a RHCOS custom layered image</a>
-</li>
-<li><a href="network-observability-operator_understand-network-observability-netobserv.html">Network Observability Operator</a>
-</li>
-<li><a href="network-observability-deployment-and-management-con_network-observability-deployment-and-management.html">Network Observability deployment and management</a>
 </li>
 <li><a href="understanding-openshift_evaluate-openshift-platform-capabilities.html">Understand Red&#160;Hat OpenShift Container Platform</a>
 </li>
@@ -909,29 +871,29 @@ How to fix these errors:
 <li><a href="_disconnected_environments.html">Disconnected environments</a>
 
 <ul class="sectlevel2">
-<li><a href="understand-disconnected-environments-intro_understand-disconnected-environments.html">Understand disconnected environments</a>
+<li><a href="understand-disconnected-environments-intro_understand-disconnected-environments.html">Disconnected environment concepts</a>
 </li>
-<li><a href="installing-agent_install-a-cluster-in-a-disconnected-environment.html">Installing a cluster with the Agent-based Installer</a>
+<li><a href="plan-a-disconnected-installation-intro_plan-a-disconnected-installation.html">Plan a disconnected installation</a>
 </li>
-<li><a href="prerequisites_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift.html">Prerequisites</a>
+<li><a href="installing-agent_install-a-cluster-in-a-disconnected-environment.html">Install a cluster with the Agent-based Installer</a>
 </li>
-<li><a href="installation-oc-mirror-v2-about_mirror-images-to-a-mirror-registry-using-oc-mirror-v2.html">About oc-mirror plugin v2</a>
+<li><a href="create-mirror-registry-intro_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift.html">Create a mirror registry with mirror registry for Red Hat OpenShift</a>
 </li>
-<li><a href="prerequisites_mirror-images-to-a-mirror-registry-using-the-oc-adm-release-mirror-command.html">Prerequisites</a>
+<li><a href="installation-oc-mirror-v2-about_mirror-images-to-a-mirror-registry-using-oc-mirror-v2.html">Mirror images to a mirror registry using oc-mirror v2</a>
 </li>
-<li><a href="oc-mirror-migration-differences_migrate-from-oc-mirror-v1-to-v2.html">Changes from oc-mirror plugin v1 to v2</a>
-</li>
-<li><a href="olm-restricted-network-prereqs_manage-olm-operators-in-a-disconnected-environment.html">Prerequisites</a>
+<li><a href="manage-olm-operators-disconnected-intro_manage-olm-operators-in-a-disconnected-environment.html">Manage OLM Operators in a disconnected environment</a>
 </li>
 <li><a href="mirror-images-for-a-cluster-update-in-a-disconnected-environment-intro_mirror-images-for-a-cluster-update-in-a-disconnected-environment.html">Mirror images for a cluster update in a disconnected environment</a>
 </li>
-<li><a href="update-service-overview_update-a-cluster-in-a-disconnected-environment-using-osus.html">Using the OpenShift Update Service in a disconnected environment</a>
+<li><a href="update-service-overview_update-a-cluster-in-a-disconnected-environment-using-osus.html">Use the OpenShift Update Service in a disconnected environment</a>
 </li>
-<li><a href="updating-cli-prereqs_update-a-cluster-in-a-disconnected-environment-without-using-osus.html">Prerequisites for a cluster update</a>
+<li><a href="update-disconnected_update-a-cluster-in-a-disconnected-environment-without-using-osus.html">Updating the disconnected cluster</a>
 </li>
-<li><a href="about-disconnected-updates-uninstalling-osus_uninstall-osus-from-a-cluster.html">Uninstalling the OpenShift Update Service from a cluster</a>
+<li><a href="about-disconnected-updates-uninstalling-osus_uninstall-osus-from-a-cluster.html">Uninstall the OpenShift Update Service from a cluster</a>
 </li>
-<li><a href="installation-about-mirror-registry_convert-a-connected-cluster-to-disconnected.html">About the mirror registry</a>
+<li><a href="configure-trust-and-mirroring-con_configure-trust-and-mirroring.html">Configure trust and mirroring</a>
+</li>
+<li><a href="convert-connected-to-disconnected-intro_convert-a-connected-cluster-to-disconnected.html">Convert a connected cluster to disconnected</a>
 </li>
 <li><a href="deploying-hosted-control-planes-in-a-disconnected-environment-intro_deploying-hosted-control-planes-in-a-disconnected-environment.html">Deploying hosted control planes in a disconnected environment</a>
 </li>
@@ -989,7 +951,7 @@ How to fix these errors:
 </li>
 <li><a href="core-user-password_change-the-core-user-password-for-node-access.html">Change the core user password for node access</a>
 </li>
-<li><a href="configure-control-plane-failure-domains-con_configure-control-plane-failure-domains.html">Configure control plane failure domains</a>
+<li><a href="spread-the-control-plane-across-failure-domains-con_spread-the-control-plane-across-failure-domains.html">Spread the control plane across failure domains</a>
 </li>
 <li><a href="multi-architecture-configuring-your-cluster_configure-multi-architecture-node-workload-deployments.html">Configuring your cluster with multi-architecture compute machines</a>
 </li>
@@ -1029,6 +991,12 @@ How to fix these errors:
 </li>
 <li><a href="manage-the-configuration-and-lifecycle-of-control-plane-machines-con_manage-the-configuration-and-lifecycle-of-control-plane-machines.html">Manage the configuration and lifecycle of control plane machines</a>
 </li>
+<li><a href="manage-the-configuration-and-lifecycle-of-compute-machines-con_manage-the-configuration-and-lifecycle-of-compute-machines.html">Manage the configuration and lifecycle of compute machines</a>
+</li>
+<li><a href="identify-and-group-compute-machines-con_identify-and-group-compute-machines.html">Identify and group compute machines</a>
+</li>
+<li><a href="identify-and-group-control-plane-machines-con_identify-and-group-control-plane-machines.html">Identify and group control plane machines</a>
+</li>
 <li><a href="multi-architecture-scheduling_manage-workloads-on-multi-architecture-clusters.html">Scheduled workloads on clusters with multi-architecture compute machines</a>
 </li>
 <li><a href="hcp-import-intro_manually-import-a-hosted-cluster.html">Manually importing a hosted cluster</a>
@@ -1063,7 +1031,7 @@ How to fix these errors:
 </li>
 <li><a href="machine-health-checks-about_understand-machine-health-check-behavior.html">About machine health checks</a>
 </li>
-<li><a href="machine-about-phases_understand-the-machine-lifecycle.html">Machine phases</a>
+<li><a href="understand-the-machine-lifecycle-con_understand-the-machine-lifecycle.html">Understand the machine lifecycle</a>
 </li>
 <li><a href="understand-the-out-of-cluster-mode-of-the-image-mode-for-openshift-feature-con_understand-the-out-of-cluster-mode-of-the-image-mode-for-openshift-feature.html">Understand the out-of-cluster mode of the Image Mode for OpenShift feature</a>
 </li>
@@ -1119,14 +1087,13 @@ How to fix these errors:
 </ul>
 </li>
 <li><a href="_configure.html">Configure</a>
+
 <ul class="sectlevel2">
 <li><a href="change-the-installed-disk-partition-schema-for-new-nodes-con_change-the-installed-disk-partition-schema-for-new-nodes.html">Change the installed disk-partition schema for new nodes</a>
 </li>
 <li><a href="configure-and-maintain-the-pod-network-cni-213-ensure-every-pod-gets-a-unique-ip-in-a-flat-network-con_configure-and-maintain-the-pod-network-cni-213-ensure-every-pod-gets-a-unique-ip-in-a-flat-network.html">Ensure every pod gets a unique IP in a flat network</a>
 </li>
 <li><a href="configure-multi-tenant-namespace-isolation-con_configure-multi-tenant-namespace-isolation.html">Configure multi-tenant namespace isolation</a>
-</li>
-<li><a href="configure-the-network-observability-operator-flowcollector-con_configure-the-network-observability-operator-flowcollector.html">Configure the Network Observability Operator FlowCollector</a>
 </li>
 <li><a href="define-how-much-disk-space-a-single-container-on-my-nodes-can-use-for-its-files-and-layers-con_define-how-much-disk-space-a-single-container-on-my-nodes-can-use-for-its-files-and-layers.html">Define how much disk space a single container can use</a>
 </li>
@@ -1184,7 +1151,7 @@ How to fix these errors:
 </li>
 <li><a href="about-kmm_manage-kernel-modules-across-cluster-nodes.html">About the Kernel Module Management Operator</a>
 </li>
-<li><a href="installation-oc-mirror-v2-about_mirror-container-images-to-a-local-registry.html">About oc-mirror plugin v2</a>
+<li><a href="installation-oc-mirror-v2-about_mirror-container-images-to-a-local-registry.html">Mirror images to a mirror registry using oc-mirror v2</a>
 </li>
 <li><a href="organize-image-versions-with-tags-con_organize-image-versions-with-tags.html">Organize image versions with tags</a>
 </li>
@@ -1210,11 +1177,13 @@ How to fix these errors:
 </li>
 <li><a href="cpmso-feat-auto-update_apply-configuration-changes-to-control-plane-machines-with-automation.html">Automatic updates to the control plane configuration</a>
 </li>
-<li><a href="change-the-configuration-of-compute-machines-by-updating-a-compute-machine-set-con_change-the-configuration-of-compute-machines-by-updating-a-compute-machine-set.html">Change the configuration of compute machines by updating a compute machine set</a>
+<li><a href="change-the-configuration-of-compute-machines-by-updating-compute-machine-resources-con_change-the-configuration-of-compute-machines-by-updating-compute-machine-resources.html">Change the configuration of compute machines by updating compute machine resources</a>
+</li>
+<li><a href="enable-automated-machine-management-on-user-provisioned-infrastructure-con_enable-automated-machine-management-on-user-provisioned-infrastructure.html">Enable automated machine management on user-provisioned infrastructure</a>
 </li>
 <li><a href="apply-configuration-changes-to-compute-machines-with-automation-con_apply-configuration-changes-to-compute-machines-with-automation.html">Apply configuration changes to compute machines with automation</a>
 </li>
-<li><a href="mapi-to-capi-migration-overview_change-the-authoritative-api-for-machine-management-resources.html"><span class="toc-current">Machine API to Cluster API resource migration</span></a>
+<li><a href="change-the-authoritative-api-for-machine-management-resources-con_change-the-authoritative-api-for-machine-management-resources.html">Change the authoritative API for machine management resources</a>
 </li>
 <li><a href="private-clusters-about_configure-a-private-cluster.html">About private clusters</a>
 </li>
@@ -1303,7 +1272,31 @@ How to fix these errors:
 </li>
 <li><a href="configure-high-performance-networking-con_configure-high-performance-networking.html">Configure high-performance networking</a>
 </li>
+<li><a href="network-observability-operator_understand-network-observability-netobserv.html">Network Observability Operator</a>
+</li>
+<li><a href="evaluate-network-observability-prerequisites-and-requirements-con_evaluate-network-observability-prerequisites-and-requirements.html">Evaluate network observability prerequisites and requirements</a>
+</li>
+<li><a href="network-observability-deployment-and-management-con_network-observability-deployment-and-management.html">Network Observability deployment and management</a>
+</li>
+<li><a href="verify-network-observability-installation-intro_verify-network-observability-installation.html">Verify Network Observability installation</a>
+</li>
+<li><a href="configure-the-network-observability-operator-flowcollector-con_configure-the-network-observability-operator-flowcollector.html">Configure the Network Observability Operator FlowCollector</a>
+</li>
+<li><a href="control-network-policies-and-access-for-network-observability-operator-con_control-network-policies-and-access-for-network-observability-operator.html">Control network policies and access for the Network Observability Operator</a>
+</li>
+<li><a href="secure-network-observability-data-con_secure-network-observability-data.html">Secure network observability data</a>
+</li>
 <li><a href="network-observability-operator_network-flow-visibility.html">Network Observability Operator</a>
+</li>
+<li><a href="network-observability-network-traffic-overview-view_monitor-network-traffic-with-network-observability.html">Observe the network traffic from the Overview view</a>
+</li>
+<li><a href="network-observability-health-dashboard-overview_verify-security-and-network-observability-operator-health.html">Health dashboards</a>
+</li>
+<li><a href="configure-network-traffic-flowlogs-pipeline-kafka_troubleshoot-network-issues-136-diagnose-network-flow-issues-netobserv.html">Flowlogs-Pipeline does not consume network flows after installing Kafka</a>
+</li>
+<li><a href="network-observability-integration-intro_network-observability-integration.html">Network Observability integration</a>
+</li>
+<li><a href="upgrade-network-observability-operator-version-con_upgrade-network-observability-operator-version.html">Upgrade the Network Observability Operator version</a>
 </li>
 </ul>
 </li>
@@ -1461,6 +1454,18 @@ How to fix these errors:
 </li>
 <li><a href="configure-confidential-vms-con_configure-confidential-vms.html">Configure confidential VMs</a>
 </li>
+<li><a href="isolate-compute-machines-from-other-tenants-con_isolate-compute-machines-from-other-tenants.html">Isolate compute machines from other tenants</a>
+</li>
+<li><a href="protect-the-instance-metadata-endpoint-for-compute-machines-con_protect-the-instance-metadata-endpoint-for-compute-machines.html">Protect the instance metadata endpoint for compute machines</a>
+</li>
+<li><a href="harden-boot-integrity-for-compute-machines-con_harden-boot-integrity-for-compute-machines.html">Harden boot integrity for compute machines</a>
+</li>
+<li><a href="isolate-control-plane-machines-from-other-tenants-con_isolate-control-plane-machines-from-other-tenants.html">Isolate control plane machines from other tenants</a>
+</li>
+<li><a href="protect-the-instance-metadata-endpoint-for-control-plane-machines-con_protect-the-instance-metadata-endpoint-for-control-plane-machines.html">Protect the instance metadata endpoint for control plane machines</a>
+</li>
+<li><a href="harden-boot-integrity-for-control-plane-machines-con_harden-boot-integrity-for-control-plane-machines.html">Harden boot integrity for control plane machines</a>
+</li>
 <li><a href="connect-workloads-to-additional-networks-con_connect-workloads-to-additional-networks.html">Connect workloads to additional networks</a>
 </li>
 <li><a href="nw-multi-network-policy-differences_control-traffic-on-secondary-networks.html">Differences between multi-network policy and network policy</a>
@@ -1496,8 +1501,6 @@ How to fix these errors:
 </li>
 <li><a href="monitor-network-performance-con_monitor-network-performance.html">Monitor network performance</a>
 </li>
-<li><a href="network-observability-deployment-and-management-113-control-automatic-installation-during-cluster-creation-con_network-observability-deployment-and-management-113-control-automatic-installation-during-cluster-creation.html">Control automatic installation during cluster creation</a>
-</li>
 <li><a href="nw-networkpolicy-audit-concept_observe-audit-and-review-policy-enforcement.html">Audit logging</a>
 </li>
 <li><a href="performance-investigation-con_performance-investigation.html">Performance investigation</a>
@@ -1532,8 +1535,6 @@ How to fix these errors:
 <li><a href="configure-external-dns-integration-con_configure-external-dns-integration.html">Configure External DNS integration</a>
 </li>
 <li><a href="automate-cicd-with-image-streams-intro_automate-cicd-with-image-streams.html">Automate CI/CD with image streams</a>
-</li>
-<li><a href="network-observability-deployment-and-management-con_network-observability-deployment-and-management.html">Network Observability deployment and management</a>
 </li>
 </ul>
 </li>
@@ -1574,7 +1575,7 @@ How to fix these errors:
 </li>
 <li><a href="nodes-nodes-managing-max-pods-proc_adjust-maximum-number-of-pods-on-a-node.html">Configure the maximum number of pods per node</a>
 </li>
-<li><a href="machineset-manually-scaling_scale-compute-resources.html">Scale a compute machine set manually</a>
+<li><a href="scale-compute-resources-con_scale-compute-resources.html">Scale workloads to match demand</a>
 </li>
 <li><a href="nodes-cluster-resource-configure-about_configure-cluster-memory-to-meet-container-memory-and-risk-requirements.html">Understanding how to manage application memory</a>
 </li>
@@ -1614,7 +1615,7 @@ How to fix these errors:
 </li>
 <li><a href="infrastructure-components_separate-infrastructure-machines-from-machines-that-run-workloads.html">Red&#160;Hat OpenShift Container Platform infrastructure components</a>
 </li>
-<li><a href="machine-mgmt-intro-managing-compute_scale-the-number-of-compute-machines-that-use-a-specific-configuration.html">Compute machine management</a>
+<li><a href="scale-compute-capacity-con_scale-compute-capacity.html">Scale compute capacity</a>
 </li>
 <li><a href="machine-mgmt-intro-add-for-upi_add-compute-machines-manually.html">Compute machine creation on user-provisioned infrastructure</a>
 </li>
@@ -1622,11 +1623,25 @@ How to fix these errors:
 </li>
 <li><a href="machineset-label-gpu-autoscaler_label-gpu-machine-sets-for-autoscaler.html">Label GPU machine sets for the cluster autoscaler</a>
 </li>
-<li><a href="machineset-non-guaranteed-instance_creating-machineset-aws.html">Machine sets that deploy machines as Spot Instances</a>
+<li><a href="use-interruptible-capacity-for-lower-cost-machines-con_use-interruptible-capacity-for-lower-cost-machines.html">Use interruptible capacity for lower-cost machines</a>
 </li>
-<li><a href="machineset-capacity-reservation_creating-machineset-aws.html">Configure Capacity Reservations by using machine sets</a>
+<li><a href="reserve-capacity-for-planned-workloads-con_reserve-capacity-for-planned-workloads.html">Reserve capacity for planned workloads</a>
 </li>
-<li><a href="nvidia-gpu-aws-adding-a-gpu-node_add-gpu-nodes-to-machine-sets.html">Add a GPU node to an existing Red&#160;Hat OpenShift Container Platform cluster</a>
+<li><a href="reserve-capacity-for-planned-control-plane-workloads-con_reserve-capacity-for-planned-control-plane-workloads.html">Reserve capacity for planned control plane workloads</a>
+</li>
+<li><a href="accelerate-workloads-with-gpus-con_accelerate-workloads-with-gpus.html">Accelerate workloads with GPUs</a>
+</li>
+<li><a href="improve-network-performance-for-compute-machines-con_improve-network-performance-for-compute-machines.html">Improve network performance for compute machines</a>
+</li>
+<li><a href="improve-network-performance-for-control-plane-machines-con_improve-network-performance-for-control-plane-machines.html">Improve network performance for control plane machines</a>
+</li>
+<li><a href="improve-storage-performance-for-compute-machines-con_improve-storage-performance-for-compute-machines.html">Improve storage performance for compute machines</a>
+</li>
+<li><a href="improve-storage-performance-for-control-plane-machines-con_improve-storage-performance-for-control-plane-machines.html">Improve storage performance for control plane machines</a>
+</li>
+<li><a href="keep-data-off-the-root-volume-for-compute-machines-con_keep-data-off-the-root-volume-for-compute-machines.html">Keep data off the root volume for compute machines</a>
+</li>
+<li><a href="keep-data-off-the-root-volume-for-control-plane-machines-con_keep-data-off-the-root-volume-for-control-plane-machines.html">Keep data off the root volume for control plane machines</a>
 </li>
 </ul>
 </li>
@@ -1672,12 +1687,9 @@ How to fix these errors:
 </li>
 <li><a href="cnf-measuring-latency_validate-node-performance-with-latency-tests.html">Measuring latency</a>
 </li>
-<li><a href="verify-network-observability-installation-intro_verify-network-observability-installation.html">Verify Network Observability installation</a>
-</li>
 </ul>
 </li>
 <li><a href="_troubleshoot.html">Troubleshoot</a>
-
 <ul class="sectlevel2">
 <li><a href="allow-the-configuration-drift-to-remain-and-return-the-node-to-ready-state-con_allow-the-configuration-drift-to-remain-and-return-the-node-to-ready-state.html">Allow the configuration drift to remain and return the node to ready state</a>
 </li>
@@ -1690,6 +1702,8 @@ How to fix these errors:
 <li><a href="restart-hosted-control-plane-components-and-pause-reconciliation-con_restart-hosted-control-plane-components-and-pause-reconciliation.html">Restart hosted control plane components and pause reconciliation</a>
 </li>
 <li><a href="troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-bare-metal-con_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-bare-metal.html">Troubleshoot hosted clusters on bare metal</a>
+</li>
+<li><a href="troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-ibmz-con_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-ibmz.html">Troubleshoot hosted clusters on IBM Z</a>
 </li>
 <li><a href="troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-openshift-virtualization-con_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-openshift-virtualization.html">Troubleshoot hosted clusters on OpenShift Virtualization</a>
 </li>
@@ -1708,6 +1722,8 @@ How to fix these errors:
 <li><a href="hcp-backup-etcd-snapshot-restore_control-plane-disaster-recovery.html">Restoring etcd data by using the etcd snapshot method</a>
 </li>
 <li><a href="nw-pod-network-connectivity-checks_troubleshoot-network-issues.html">Connection health checks that are performed</a>
+</li>
+<li><a href="troubleshoot-network-issues-diagnose-node-networking-and-ovs-con_troubleshoot-network-issues-diagnose-node-networking-and-ovs.html">Diagnose node networking and Open vSwitch</a>
 </li>
 <li><a href="restore-replace-unhealthy-etcd-member_replace-unhealthy-etcd-members.html">Replacing the unhealthy etcd member</a>
 </li>
@@ -1737,7 +1753,7 @@ How to fix these errors:
 </li>
 <li><a href="nw-pod-network-connectivity-checks_troubleshoot-connectivity-and-internal-subnets.html">Connection health checks that are performed</a>
 </li>
-<li><a href="investigating-why-windows-machine-compute-node_troubleshoot-machine-management.html">Investigating why Windows Machine does not become compute node</a>
+<li><a href="troubleshoot-machine-management-con_troubleshoot-machine-management.html">Troubleshoot machine management</a>
 </li>
 <li><a href="control-plane-backup-restore-operations-overview_investigate-an-active-cluster-issue.html">Control plane backup and restore operations</a>
 </li>
@@ -1747,21 +1763,15 @@ How to fix these errors:
 </li>
 <li><a href="oadp-performance-network-requirements_troubleshoot-node-performance-issues-collect-node-profiling-data.html">OADP network requirements</a>
 </li>
-<li><a href="network-observability-operator-stub_troubleshoot-network-issues-1362-execute-localized-network-diagnostics-using-the-oc-netobserv-cli.html">Network Observability Operator features</a>
-</li>
 <li><a href="adminnetworkpolicy_troubleshoot-network-issues-132-troubleshoot-network-policies.html">AdminNetworkPolicy</a>
 </li>
 <li><a href="nw-ingress-sharding-route-labels_troubleshoot-network-issues-133-troubleshoot-ingress-and-routes.html">Configure Ingress Controller sharding by using route labels</a>
-</li>
-<li><a href="configure-network-traffic-flowlogs-pipeline-kafka_troubleshoot-network-issues-136-diagnose-network-flow-issues-netobserv.html">Flowlogs-Pipeline does not consume network flows after installing Kafka</a>
 </li>
 <li><a href="investigating-master-node-installation-issues_troubleshoot-network-issues-131-access-cluster-nodes-for-diagnostics.html">Investigating control plane node installation issues</a>
 </li>
 <li><a href="troubleshoot-ovn-kubernetes-networking-issues-con_troubleshoot-ovn-kubernetes-networking-issues.html">Troubleshoot OVN-Kubernetes networking issues</a>
 </li>
 <li><a href="adding-network-attachment-definition-to-pods_troubleshoot-network-issues-135-trace-openflow-with-ovnkube-trace.html">Add the network attachment definition to your pods</a>
-</li>
-<li><a href="network-observability-health-rules-and-performance_troubleshoot-network-issues-1361-investigate-packet-drops-netobserv.html">Identify network issues with automated health rules</a>
 </li>
 <li><a href="nw-pod-network-connectivity-checks_configure-and-maintain-the-pod-network-cni-225-diagnose-and-resolve-node-network-configuration-errors.html">Connection health checks that are performed</a>
 </li>
@@ -1772,6 +1782,8 @@ How to fix these errors:
 <li><a href="control-plane-backup-restore-operations-overview_high-availability-and-disaster-recovery-for-hosted-control-planes-automated-disaster-recovery-for-a-hosted-cluster-by-using-oadp.html">Control plane backup and restore operations</a>
 </li>
 <li><a href="investigating-master-node-installation-issues_manage-kernel-modules-across-cluster-nodes-troubleshoot-kernel-module-loading-issues.html">Investigating control plane node installation issues</a>
+</li>
+<li><a href="troubleshoot-operating-system-issues-con_troubleshoot-operating-system-issues.html">Troubleshoot operating system issues</a>
 </li>
 <li><a href="nw-ovn-kubernetes-pod-connectivity-checks_connectivity-troubleshooting-11-diagnose-failed-connections-between-pods-and-services.html">Checking the OVN-Kubernetes pod network connectivity</a>
 </li>
@@ -1799,7 +1811,13 @@ How to fix these errors:
 </li>
 <li><a href="gathering-operator-logs_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools.html">Gathering Operator logs</a>
 </li>
-<li><a href="oadp-running-must-gather_investigate-an-active-cluster-issue-collect-comprehensive-data-for-vendor-support.html">Using the must-gather tool</a>
+<li><a href="collect-comprehensive-data-for-vendor-support-con_investigate-an-active-cluster-issue-collect-comprehensive-data-for-vendor-support.html">Collect comprehensive data for vendor support</a>
+</li>
+<li><a href="collect-host-sosreports-and-journal-logs-con_investigate-an-active-cluster-issue-collect-host-sosreports-and-journal-logs.html">Collect host sosreports and journal logs</a>
+</li>
+<li><a href="capture-network-traces-for-support-con_investigate-an-active-cluster-issue-capture-network-traces-for-support.html"><span class="toc-current">Capture network traces for support</span></a>
+</li>
+<li><a href="use-host-toolbox-for-diagnostics-con_investigate-an-active-cluster-issue-use-host-toolbox-for-diagnostics.html">Use the host toolbox for diagnostics</a>
 </li>
 <li><a href="understanding-oc-log-levels_investigate-an-active-cluster-issue-summarize-cluster-specifications.html">Understanding OpenShift CLI (<code>oc</code>) log levels</a>
 </li>
@@ -1829,6 +1847,12 @@ How to fix these errors:
 </li>
 <li><a href="control-plane-backup-restore-operations-overview_encrypt-etcd-test-restore-procedures.html">Control plane backup and restore operations</a>
 </li>
+<li><a href="troubleshoot-clusters-that-use-the-cluster-api-con_troubleshoot-clusters-that-use-the-cluster-api.html">Troubleshoot clusters that use the Cluster API</a>
+</li>
+<li><a href="troubleshoot-the-control-plane-machine-set-con_troubleshoot-the-control-plane-machine-set.html">Troubleshoot the control plane machine set</a>
+</li>
+<li><a href="collect-console-logs-from-machines-that-fail-to-boot-con_collect-console-logs-from-machines-that-fail-to-boot.html">Collect console logs from machines that fail to boot</a>
+</li>
 </ul>
 </li>
 <li><a href="_reference.html">Reference</a>
@@ -1843,187 +1867,99 @@ How to fix these errors:
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#machine-set-authoritative-api-machines_change-the-authoritative-api-for-machine-management-resources">Authoritative API types of compute machines</a></li><li class="level-5"><a href="#migrating-between-capi-mapi_cluster-api-getting-started">Migrating a Machine API resource to use the Cluster API</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#support-network-trace-methods_investigate-an-active-cluster-issue-capture-network-traces-for-support">Network trace methods</a></li><li class="level-4"><a href="#support-collecting-host-network-trace_investigate-an-active-cluster-issue-capture-network-traces-for-support">Collecting a host network trace</a></li><li class="level-4"><a href="#support-collecting-network-trace_investigate-an-active-cluster-issue-capture-network-traces-for-support">Collecting a network trace from an Red Hat OpenShift Container Platform node or container</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
-<h3 id="mapi-to-capi-migration-overview_change-the-authoritative-api-for-machine-management-resources">Machine API to Cluster API resource migration</h3>
+<h3 id="capture-network-traces-for-support-con_investigate-an-active-cluster-issue-capture-network-traces-for-support">Capture network traces for support</h3>
 <div class="paragraph _abstract">
-<p>On clusters that support migrating Machine API resources to Cluster API resources, a two-way synchronization controller creates the Cluster API resources in the <code>openshift-cluster-api</code> namespace.</p>
+<p>When a network problem is difficult to reproduce from logs alone, you capture live packet traces on the host network or on a pod interface. Red&#160;Hat OpenShift Container Platform supports two collection methods, and Red&#160;Hat support uses these packet capture records to analyze traffic patterns and identify the root cause.</p>
+</div>
+<div class="sect3">
+<h4 id="support-network-trace-methods_investigate-an-active-cluster-issue-capture-network-traces-for-support">Network trace methods</h4>
+<div class="paragraph _abstract">
+<p>Collecting network traces, in the form of packet capture records, can assist Red Hat Support with troubleshooting network issues.</p>
 </div>
 <div class="paragraph">
-<p>These Cluster API resources are listed as follows:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>One or more machine templates that correspond to compute machine sets.</p>
-</li>
-<li>
-<p>One or more compute machine sets that manage three compute machines.</p>
-</li>
-<li>
-<p>One or more Cluster API compute machines that correspond to each Machine API compute machine.</p>
-</li>
-</ul>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>The two-way synchronization controller only operates on clusters with the <code>MachineAPIMigration</code> feature gate in the <code>TechPreviewNoUpgrade</code> feature set enabled.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>These Cluster API resources correspond to the resources that the installation program provisions in the <code>openshift-machine-api</code> namespace for a cluster that uses the default configuration options.
-The Cluster API resources have the same names as their Machine API counterparts and appear in the output of commands, such as <code>oc get</code>, that list resources.
-The synchronization controller creates the Cluster API resources in an unprovisioned (<code>Paused</code>) state to prevent unintended reconciliation.</p>
-</div>
-<div class="paragraph">
-<p>For supported configurations, you can migrate a Machine API resource to the equivalent Cluster API resource by changing which API it considers authoritative.
-When you migrate a Machine API resources to the Cluster API, you transfer management of the resource to the Cluster API.</p>
-</div>
-<div class="paragraph">
-<p>By migrating a Machine API resource to use the Cluster API, you can verify that everything works as expected before deciding to use the Cluster API in production clusters.
-After migrating a Machine API resource to an equivalent Cluster API resource, you can examine the new resource to verify that the features and configuration match the original Machine API resource.</p>
-</div>
-<div class="paragraph">
-<p>When you change the authoritative API for a compute machine set, any existing compute machines that the compute machine set manages retain their original authoritative API.
-As a result, a compute machine set that manages machines that use different authoritative APIs is a valid and expected occurrence in clusters that support migrating between these API types.</p>
-</div>
-<div class="paragraph">
-<p>When you change the authoritative API for a compute machine, the instance on the underlying infrastructure that backs the machine is not recreated or reprovisioned.
-In-place changes, such as modifying labels, tags, taints, or annotations, are the only changes that the API group can make to the underlying instance that backs the machine.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>You can only migrate some resources on supported infrastructure types.</p>
-</div>
-</td>
-</tr>
-</table>
+<p>Red&#160;Hat OpenShift Container Platform supports two ways of performing a network trace.
+Review the following table and choose the method that meets your needs.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 537. Supported resource conversions</caption>
+<caption class="title">Table 811. Supported methods of collecting a network trace</caption>
 <colgroup>
-<col style="width: 16.6666%;">
-<col style="width: 16.6666%;">
-<col style="width: 16.6666%;">
-<col style="width: 16.6666%;">
-<col style="width: 16.6666%;">
-<col style="width: 16.667%;">
+<col style="width: 20%;">
+<col style="width: 80%;">
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">Infrastructure</th>
-<th class="tableblock halign-left valign-top">Compute machine</th>
-<th class="tableblock halign-left valign-top">Compute machine set</th>
-<th class="tableblock halign-left valign-top">Machine health check</th>
-<th class="tableblock halign-left valign-top">Control plane machine set</th>
-<th class="tableblock halign-left valign-top">Cluster autoscaler</th>
+<th class="tableblock halign-left valign-top">Method</th>
+<th class="tableblock halign-left valign-top">Benefits and capabilities</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">AWS</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Technology Preview</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Technology Preview</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Not Available</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Not Available</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Not Available</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Collecting a host network trace</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>You perform a packet capture for a duration that you specify on one or more nodes at the same time.
+The packet capture files are transferred from nodes to the client machine when the specified duration is met.</p>
+</div>
+<div class="paragraph">
+<p>You can troubleshoot why a specific action triggers network communication issues. Run the packet capture, perform the action that triggers the issue, and use the logs to diagnose the issue.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">All other infrastructure types</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Not Available</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Not Available</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Not Available</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Not Available</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Not Available</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Collecting a network trace from an Red&#160;Hat OpenShift Container Platform node or container</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>You perform a packet capture on one node or one container.
+You run the <code>tcpdump</code> command interactively, so you can control the duration of the packet capture.</p>
+</div>
+<div class="paragraph">
+<p>You can start the packet capture manually, trigger the network communication issue, and then stop the packet capture manually.</p>
+</div>
+<div class="paragraph">
+<p>This method uses the <code>cat</code> command and shell redirection to copy the packet capture data from the node or container to the client machine.</p>
+</div>
+<div class="ulist">
+<ul>
+</ul>
+</div>
+<div class="paragraph nav-footer">
+<p></p>
+</div></div></td>
 </tr>
 </tbody>
 </table>
+</div>
 <div class="sect3">
-<h4 id="machine-set-authoritative-api-machines_change-the-authoritative-api-for-machine-management-resources">Authoritative API types of compute machines</h4>
+<h4 id="support-collecting-host-network-trace_investigate-an-active-cluster-issue-capture-network-traces-for-support">Collecting a host network trace</h4>
 <div class="paragraph _abstract">
-<p>The values of the <code>.spec.authoritativeAPI</code> and <code>.spec.template.spec.authoritativeAPI</code> fields in a Machine API compute machine set determine the authoritative API of the compute machines.</p>
+<p>Sometimes, troubleshooting a network-related issue is simplified by tracing network communication and capturing packets on multiple nodes at the same time.</p>
 </div>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 538. Interaction of <code>authoritativeAPI</code> fields when creating compute machines</caption>
-<colgroup>
-<col style="width: 20%;">
-<col style="width: 20%;">
-<col style="width: 20%;">
-<col style="width: 20%;">
-<col style="width: 20%;">
-</colgroup>
-<tbody>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>.spec.authoritativeAPI</code> value</p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ClusterAPI</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ClusterAPI</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>MachineAPI</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>MachineAPI</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>.spec.template.spec.authoritativeAPI</code> value</p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ClusterAPI</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>MachineAPI</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>MachineAPI</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ClusterAPI</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>authoritativeAPI</code> value for new compute machines</p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ClusterAPI</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ClusterAPI</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>MachineAPI</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ClusterAPI</code></p></td>
-</tr>
-</tbody>
-</table>
-<div class="admonitionblock note">
+<div class="paragraph">
+<p>You can use a combination of the <code>oc adm must-gather</code> command and the <code>registry.redhat.io/openshift4/network-tools-rhel8</code> container image to gather packet captures from nodes.
+Analyzing packet captures can help you troubleshoot network communication issues.</p>
+</div>
+<div class="paragraph">
+<p>The <code>oc adm must-gather</code> command is used to run the <code>tcpdump</code> command in pods on specific nodes.
+The <code>tcpdump</code> command records the packet captures in the pods.
+When the <code>tcpdump</code> command exits, the <code>oc adm must-gather</code> command transfers the files with the packet captures from the pods to your client machine.</p>
+</div>
+<div class="admonitionblock tip">
 <table>
 <tr>
 <td class="icon">
-<img src="data:image/png;base64," alt="Note">
+<img src="data:image/png;base64," alt="Tip">
 </td>
 <td class="content">
 <div class="paragraph">
-<p>When the <code>.spec.authoritativeAPI</code> value is <code>ClusterAPI</code>, the Machine API machine set is not authoritative and the <code>.spec.template.spec.authoritativeAPI</code> value is not used.
-As a result, the only combination that creates a compute machine with the Machine API as authoritative is where the <code>.spec.authoritativeAPI</code> and <code>.spec.template.spec.authoritativeAPI</code> values are <code>MachineAPI</code>.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="sect4">
-<h5 id="migrating-between-capi-mapi_cluster-api-getting-started">Migrating a Machine API resource to use the Cluster API</h5>
-<div class="paragraph _abstract">
-<p>You can migrate individual Machine API objects to equivalent Cluster API objects.</p>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Important">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Migrating a Machine API resource to use the Cluster API is a Technology Preview feature only. Technology Preview features are not supported with Red&#160;Hat production service level agreements (SLAs) and might not be functionally complete. Red Hat does not recommend using them in production. These features provide early access to upcoming product features, enabling customers to test functionality and provide feedback during the development process.</p>
-</div>
-<div class="paragraph">
-<p>For more information about the support scope of Red Hat Technology Preview features, see <a href="https://access.redhat.com/support/offerings/techpreview/">Technology Preview Features Support Scope</a>.</p>
+<p>The sample command in the following procedure demonstrates performing a packet capture with the <code>tcpdump</code> command.
+However, you can run any command in the container image that is specified in the <code>--image</code> argument to gather troubleshooting information from multiple nodes at the same time.</p>
 </div>
 </td>
 </tr>
@@ -2033,16 +1969,7 @@ As a result, the only combination that creates a compute machine with the Machin
 <div class="title">Prerequisites</div>
 <ul>
 <li>
-<p>You have deployed an Red&#160;Hat OpenShift Container Platform cluster on a supported infrastructure type.</p>
-</li>
-<li>
-<p>You have enabled the use of the Cluster API.</p>
-</li>
-<li>
-<p>You have enabled the <code>MachineAPIMigration</code> feature gate in the <code>TechPreviewNoUpgrade</code> feature set.</p>
-</li>
-<li>
-<p>You have access to the cluster using an account with <code>cluster-admin</code> permissions.</p>
+<p>You are logged in to Red&#160;Hat OpenShift Container Platform as a user with the <code>cluster-admin</code> role.</p>
 </li>
 <li>
 <p>You have installed the OpenShift CLI (<code>oc</code>).</p>
@@ -2053,185 +1980,324 @@ As a result, the only combination that creates a compute machine with the Machin
 <div class="title">Procedure</div>
 <ol class="arabic">
 <li>
-<p>Identify the Machine API resource that you want to migrate to a Cluster API resource by running the following command:</p>
+<p>Run a packet capture from the host network on some nodes by running the following command:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get &lt;resource_kind&gt; -n openshift-machine-api</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc adm must-gather \
+    --dest-dir /tmp/captures \
+    --source-dir '/tmp/tcpdump/' \
+    --image registry.redhat.io/openshift4/network-tools-rhel8:latest \
+    --node-selector 'node-role.kubernetes.io/worker' \
+    --host-network=true \
+    --timeout 30s \
+    -- \
+    tcpdump -i any \
+    -w /tmp/tcpdump/%Y-%m-%dT%H:%M:%S.pcap -W 1 -G 300</code></pre>
 </div>
 </div>
-<div class="openblock">
-<div class="content">
-<div class="paragraph">
-<p>where <code>&lt;resource_kind&gt;</code> is one of the following values:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>machine.machine.openshift.io</code></dt>
-<dd>
-<p>The fully qualified name of the resource kind for a compute or control plane machine.</p>
-</dd>
-<dt class="hdlist1"><code>machineset.machine.openshift.io</code></dt>
-<dd>
-<p>The fully qualified name of the resource kind for a compute machine set.</p>
-</dd>
-</dl>
-</div>
-</div>
-</div>
-</li>
-<li>
-<p>Edit the resource specification by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc edit &lt;resource_kind&gt;/&lt;resource_name&gt; -n openshift-machine-api</code></pre>
-</div>
-</div>
-<div class="openblock">
-<div class="content">
 <div class="paragraph">
 <p>where:</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1"><code>&lt;resource_kind&gt;</code></dt>
+<dt class="hdlist1"><code>--dest-dir /tmp/captures</code></dt>
 <dd>
-<p>Specifies a compute machine with <code>machine.machine.openshift.io</code> or compute machine set with <code>machineset.machine.openshift.io</code>.</p>
+<p>The <code>--dest-dir</code> argument specifies that <code>oc adm must-gather</code> stores the packet captures in directories that are relative to <code>/tmp/captures</code> on the client machine. You can specify any writable directory.</p>
 </dd>
-<dt class="hdlist1"><code>&lt;resource_name&gt;</code></dt>
+<dt class="hdlist1"><code>--source-dir '/tmp/tcpdump/'</code></dt>
 <dd>
-<p>Specifies the name of the Machine API resource that you want to migrate to a Cluster API resource.</p>
+<p>When <code>tcpdump</code> is run in the debug pod that <code>oc adm must-gather</code> starts, the <code>--source-dir</code> argument specifies that the packet captures are temporarily stored in the <code>/tmp/tcpdump</code> directory on the pod.</p>
+</dd>
+<dt class="hdlist1"><code>--image registry.redhat.io/openshift4/network-tools-rhel8:latest</code></dt>
+<dd>
+<p>The <code>--image</code> argument specifies a container image that includes the <code>tcpdump</code> command.</p>
+</dd>
+<dt class="hdlist1"><code>--node-selector 'node-role.kubernetes.io/worker'</code></dt>
+<dd>
+<p>The <code>--node-selector</code> argument and example value specifies to perform the packet captures on the worker nodes. As an alternative, you can specify the <code>--node-name</code> argument instead to run the packet capture on a single node. If you omit both the <code>--node-selector</code> and the <code>--node-name</code> argument, the packet captures are performed on all nodes.</p>
+</dd>
+<dt class="hdlist1"><code>--host-network=true</code></dt>
+<dd>
+<p>The <code>--host-network=true</code> argument is required so that the packet captures are performed on the network interfaces of the node.</p>
+</dd>
+<dt class="hdlist1"><code>--timeout 30s</code></dt>
+<dd>
+<p>The <code>--timeout</code> argument and value specify to run the debug pod for 30 seconds. If you do not specify the <code>--timeout</code> argument and a duration, the debug pod runs for 10 minutes.</p>
+</dd>
+<dt class="hdlist1"><code>-i any</code></dt>
+<dd>
+<p>The <code>-i any</code> argument for the <code>tcpdump</code> command specifies to capture packets on all network interfaces. As an alternative, you can specify a network interface name.</p>
 </dd>
 </dl>
 </div>
-</div>
-</div>
 </li>
 <li>
-<p>In the resource specification, update the value of the <code>spec.authoritativeAPI</code> field:</p>
+<p>Perform the action, such as accessing a web application, that triggers the network communication issue while the network trace captures packets.</p>
+</li>
+<li>
+<p>Review the packet capture files that <code>oc adm must-gather</code> transferred from the pods to your client machine:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: machine.openshift.io/v1beta1
-kind: &lt;resource_kind&gt;
-metadata:
-  name: &lt;resource_name&gt;
-  [...]
-spec:
-  authoritativeAPI: ClusterAPI
-  [...]
-status:
-  authoritativeAPI: MachineAPI
-  [...]</code></pre>
+<pre class="highlight"><code class="language-text" data-lang="text">tmp/captures
+├── event-filter.html
+├── ip-10-0-192-217-ec2-internal
+│   └── registry-redhat-io-openshift4-network-tools-rhel8-sha256-bca...
+│       └── 2022-01-13T19:31:31.pcap
+├── ip-10-0-201-178-ec2-internal
+│   └── registry-redhat-io-openshift4-network-tools-rhel8-sha256-bca...
+│       └── 2022-01-13T19:31:30.pcap
+├── ip-...
+└── timestamp</code></pre>
 </div>
 </div>
-<div class="openblock">
-<div class="content">
 <div class="paragraph">
 <p>where:</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1"><code>kind</code></dt>
+<dt class="hdlist1"><code>ip-10-0-192-217-ec2-internal</code>, <code>ip-10-0-201-178-ec2-internal</code></dt>
 <dd>
-<p>Specifies the resource kind of the resource that you want to migrate.
-For example, the resource kind for a compute machine set is <code>MachineSet</code> and the resource kind for a compute machine is <code>Machine</code>.</p>
-</dd>
-<dt class="hdlist1"><code>metadata.name</code></dt>
-<dd>
-<p>Specifies the name of the resource that you want to migrate.</p>
-</dd>
-<dt class="hdlist1"><code>spec.authoritativeAPI</code></dt>
-<dd>
-<p>Specifies the authoritative API that you want this resource to use.
-For example, to start migrating a Machine API resource to the Cluster API, specify <code>ClusterAPI</code>.</p>
-</dd>
-<dt class="hdlist1"><code>status.authoritativeAPI</code></dt>
-<dd>
-<p>Specifies the value for the current authoritative API.
-This value indicates which API currently manages this resource.
-Do not change the value in this part of the specification.</p>
+<p>The packet captures are stored in directories that identify the hostname, container, and file name.
+If you did not specify the <code>--node-selector</code> argument, then the directory level for the hostname is not present.</p>
 </dd>
 </dl>
 </div>
+</li>
+</ol>
 </div>
 </div>
-<div class="admonitionblock important">
+<div class="sect3">
+<h4 id="support-collecting-network-trace_investigate-an-active-cluster-issue-capture-network-traces-for-support">Collecting a network trace from an Red&#160;Hat OpenShift Container Platform node or container</h4>
+<div class="paragraph _abstract">
+<p>When investigating potential network-related Red&#160;Hat OpenShift Container Platform issues, Red Hat Support might request a network packet trace from a specific Red&#160;Hat OpenShift Container Platform cluster node or from a specific container. The recommended method to capture a network trace in Red&#160;Hat OpenShift Container Platform is through a debug pod.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You have access to the cluster as a user with the <code>cluster-admin</code> role.</p>
+</li>
+<li>
+<p>You have installed the OpenShift CLI (<code>oc</code>).</p>
+</li>
+<li>
+<p>You have an existing Red Hat Support case ID.</p>
+</li>
+<li>
+<p>You have a Red Hat standard or premium Subscription.</p>
+</li>
+<li>
+<p>You have a Red Hat Customer Portal account.</p>
+</li>
+<li>
+<p>You have SSH access to your hosts.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Obtain a list of cluster nodes:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get nodes</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Enter into a debug session on the target node. This step instantiates a debug pod called <code>&lt;node_name&gt;-debug</code>:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc debug node/my-cluster-node</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
 <table>
 <tr>
 <td class="icon">
-<img src="data:image/png;base64," alt="Important">
+<img src="data:image/png;base64," alt="Note">
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Do not change other values when you update the value of the <code>spec.authoritativeAPI</code> field.
-Because other controllers might process updates to other values before the synchronization controller processes the <code>spec.authoritativeAPI</code> field update, changing other values can cause unexpected behavior.</p>
-</div>
-<div class="paragraph">
-<p>For more information, see "Unexpected behavior when changing resource configurations".</p>
+<p>Red&#160;Hat OpenShift Container Platform {product-version} cluster nodes running Red Hat Enterprise Linux CoreOS (RHCOS) are immutable and rely on Operators to apply cluster changes. Accessing cluster nodes by using SSH is not recommended. However, if the Red&#160;Hat OpenShift Container Platform API is not available, or the kubelet is not properly functioning on the target node, <code>oc</code> operations will be impacted. In such situations, it is possible to access nodes using <code>ssh core@&lt;node&gt;.&lt;cluster_name&gt;.&lt;base_domain&gt;</code> instead.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
 </li>
-</ol>
-</div>
+<li>
+<p>Start the <code>tcpdump</code> capture for the current node or a specific container on the node.</p>
 <div class="ulist">
-<div class="title">Verification</div>
 <ul>
 <li>
-<p>Check the status of the conversion by running the following command:</p>
+<p>Optionally, start a <code>tcpdump</code> capture for the node by running the following commands:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Access the host namespaces by using the following command:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc -n openshift-machine-api get &lt;resource_kind&gt;/&lt;resource_name&gt; -o json | jq .status.authoritativeAPI</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">sh-5.1# nsenter -a -t 1</code></pre>
 </div>
 </div>
-<div class="openblock">
+</li>
+<li>
+<p>Enter a Toolbx container to execute commands by running the following command:</p>
+<div class="listingblock">
 <div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">-sh-5.2# toolbox enter -y</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Obtain the node&#8217;s interface names by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">⬢ [root@toolbx /]# ip ad</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Initiate a <code>tcpdump</code> session on the cluster node and redirect output to a capture file. This example uses <code>ens5</code> as the interface name:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">⬢ [root@toolbx /]# tcpdump -nn -s 0 -i ens5 -w /host/var/tmp/my-cluster-node_$(date +%d_%m_%Y-%H_%M_%S-%Z).pcap</code></pre>
+</div>
+</div>
 <div class="paragraph">
 <p>where:</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1"><code>&lt;resource_kind&gt;</code></dt>
+<dt class="hdlist1"><code>/host/var/tmp/my-cluster-node_$(date +%d_%m_%Y-%H_%M_%S-%Z).pcap</code></dt>
 <dd>
-<p>Specifies a compute machine with <code>machine.machine.openshift.io</code> or compute machine set with <code>machineset.machine.openshift.io</code>.</p>
-</dd>
-<dt class="hdlist1"><code>&lt;resource_name&gt;</code></dt>
-<dd>
-<p>Specifies the name of the Machine API resource that you want to migrate to a Cluster API resource.</p>
+<p>The <code>tcpdump</code> capture file path is outside of the <code>chroot</code> environment.</p>
 </dd>
 </dl>
 </div>
+</li>
+</ol>
 </div>
-</div>
-<div class="openblock">
+</li>
+<li>
+<p>Optionally, start a <code>tcpdump</code> capture for a specific container on the node by running the following commands:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Determine the target container ID by running the following commandin:</p>
+<div class="listingblock">
 <div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">sh-5.1# chroot /host crictl ps</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Determine the container&#8217;s process ID. In this example, the container ID is <code>a7fe32346b120</code>:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">sh-5.1# chroot /host crictl inspect --output yaml a7fe32346b120 | grep 'pid' | awk '{print $2}'</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Obtain the node&#8217;s interface names by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">sh-5.1# ip ad</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Initiate a <code>tcpdump</code> session on the container and redirect output to a capture file. This example uses <code>49628</code> as the container&#8217;s process ID and <code>ens5</code> as the interface name. The <code>nsenter</code> command enters the namespace of a target process and runs a command in its namespace. because the target process in this example is a container&#8217;s process ID, the <code>tcpdump</code> command is run in the container&#8217;s namespace from the host:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">sh-5.1# nsenter -n -t 49628 -- tcpdump -nn -i ens5 -w /host/var/tmp/my-cluster-node-my-container_$(date +%d_%m_%Y-%H_%M_%S-%Z).pcap</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>/host/var/tmp/my-cluster-node-my-container_$(date +%d_%m_%Y-%H_%M_%S-%Z).pcap</code></dt>
+<dd>
+<p>The <code>tcpdump</code> capture file path is outside of the <code>chroot</code> environment.</p>
+</dd>
+</dl>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Provide the <code>tcpdump</code> capture file to Red Hat Support for analysis, using one of the following methods.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>While the conversion progresses, this command returns a value of <code>Migrating</code>.
-If this value persists for a long time, check the logs for the <code>cluster-capi-operator</code> deployment in the <code>openshift-cluster-api</code> namespace for more information and to identify potential issues.</p>
+<p>Upload the file to an existing Red Hat support case.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Concatenate the <code>sosreport</code> archive by running the <code>oc debug node/&lt;node_name&gt;</code> command and redirect the output to a file. This command assumes you have exited the previous <code>oc debug</code> session:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc debug node/my-cluster-node -- bash -c 'cat /host/var/tmp/my-tcpdump-capture-file.pcap' &gt; /tmp/my-tcpdump-capture-file.pcap</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>/host/var/tmp/my-tcpdump-capture-file.pcap</code></dt>
+<dd>
+<p>The debug container mounts the host&#8217;s root directory at <code>/host</code>. Reference the absolute path from the debug container&#8217;s root directory, including <code>/host</code>, when specifying target files for concatenation.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Red&#160;Hat OpenShift Container Platform {product-version} cluster nodes running Red Hat Enterprise Linux CoreOS (RHCOS) are immutable and rely on Operators to apply cluster changes. Transferring a <code>tcpdump</code> capture file from a cluster node by using <code>scp</code> is not recommended. However, if the Red&#160;Hat OpenShift Container Platform API is not available, or the kubelet is not properly functioning on the target node, <code>oc</code> operations will be impacted. In such situations, it is possible to copy a <code>tcpdump</code> capture file from a node by running <code>scp core@&lt;node&gt;.&lt;cluster_name&gt;.&lt;base_domain&gt;:&lt;file_path&gt; &lt;local_path&gt;</code>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</dd>
+</dl>
+</div>
 </li>
 <li>
-<p>When the conversion is complete, this command returns a value of <code>ClusterAPI</code>.</p>
+<p>Navigate to an existing support case within <a href="https://access.redhat.com/support/cases/#/case/list">the <strong>Customer Support</strong> page</a> of the Red Hat Customer Portal.</p>
+</li>
+<li>
+<p>Select <strong>Attach files</strong> and follow the prompts to upload the file.</p>
+</li>
+</ol>
+</div>
 </li>
 </ul>
 </div>
-</div>
-</div>
 </li>
-</ul>
-</div>
+</ol>
 </div>
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="apply-configuration-changes-to-compute-machines-with-automation-con_apply-configuration-changes-to-compute-machines-with-automation.html">Apply configuration changes to compute machines with automation</a> | ↑ Up: <a href="_configure.html">Configure</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="private-clusters-about_configure-a-private-cluster.html">About private clusters</a> →</p>
+<p>← Previous: <a href="collect-host-sosreports-and-journal-logs-con_investigate-an-active-cluster-issue-collect-host-sosreports-and-journal-logs.html">Collect host sosreports and journal logs</a> | ↑ Up: <a href="_troubleshoot.html">Troubleshoot</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="use-host-toolbox-for-diagnostics-con_investigate-an-active-cluster-issue-use-host-toolbox-for-diagnostics.html">Use the host toolbox for diagnostics</a> →</p>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-06 15:08:32 -0500
+Last updated 2026-10-08 18:28:01 -0500
 </div>
 </div>
 <style>

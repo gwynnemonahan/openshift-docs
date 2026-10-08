@@ -479,44 +479,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 
 </style>
 <!-- navmap-right-toc-end -->
-<!-- navmap-preview-warning-start -->
-<style>
-  .navmap-preview-warning {
-    background: #fff1f1;
-    border: 2px solid #c9190b;
-    border-radius: 4px;
-    color: #3b0a0a;
-    font-family: "Open Sans", "DejaVu Sans", sans-serif;
-    margin: 1em auto;
-    max-width: 70em;
-    padding: 1em 1.25em;
-  }
-  .navmap-preview-warning strong { color: #a30000; }
-  .navmap-preview-warning details { margin-top: .75em; }
-  .navmap-preview-warning pre {
-    background: #fff;
-    border: 1px solid #d7d7d7;
-    max-height: 20em;
-    overflow: auto;
-    padding: .75em;
-    white-space: pre-wrap;
-  }
-</style>
-<!-- navmap-preview-warning-end -->
 </head>
-<body id="installation-about-mirror-registry_convert-a-connected-cluster-to-disconnected" class="book toc2 toc-left navmap-has-right-toc">
-<div class="navmap-preview-warning" role="alert"><strong>Preview warning: this preview is incomplete.</strong><p>One or more AsciiDoc includes are missing. Content may be absent from this page or from related pages.</p><details><summary>Show missing-include report</summary><pre>Include preflight failed for maps/ocp/navigation.adoc
-
-Missing include targets:
-  maps/ocp/troubleshoot.adoc:53
-    include::ocp-jobs/use-the-vsphere-problem-detector-operator.adoc[leveloffset=+1]
-    expected: maps/ocp/ocp-jobs/use-the-vsphere-problem-detector-operator.adoc
-
-How to fix these errors:
-  1. Restore or create the expected .adoc file, preserving the path relative to the referring map; or
-  2. Change the include directive to the path of the existing source file if the topic was renamed or moved.
-  Then rerun this audit and the preview. Do not ignore the error: Asciidoctor can otherwise generate incomplete HTML.
-</pre></details><details><summary>How to remediate missing content</summary><ol><li>Restore or create the expected <code>.adoc</code> file at the reported path, including its required content and attributes.</li><li>If the topic was renamed or moved, update the reported <code>include::</code> directive to point to the existing file. The path is relative to the file containing the directive.</li><li>If the topic is intentionally not ready, remove the include from the map and track the content gap separately.</li></ol><p>After fixing the includes, rebuild the preview with <code>./preview-map &lt;distro&gt;</code>.</p></details></div>
+<body id="spread-the-control-plane-across-failure-domains-con_spread-the-control-plane-across-failure-domains" class="book toc2 toc-left navmap-has-right-toc">
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -526,6 +490,8 @@ How to fix these errors:
 
 <ul class="sectlevel2">
 <li><a href="about-kmm_review-kmm-releases-and-updates.html">About the Kernel Module Management Operator</a>
+</li>
+<li><a href="hosted-control-planes-release-notes_hosted-control-planes-release-notes.html">Hosted control planes release notes</a>
 </li>
 </ul>
 </li>
@@ -561,10 +527,6 @@ How to fix these errors:
 <li><a href="coreos-layering-configuring-on_understand-the-on-cluster-mode-of-the-image-mode-for-openshift-feature.html">About on-cluster image mode</a>
 </li>
 <li><a href="coreos-layering-updating_understand-how-to-update-a-cluster-that-uses-the-image-mode-for-openshift.html">Update with a RHCOS custom layered image</a>
-</li>
-<li><a href="network-observability-operator_understand-network-observability-netobserv.html">Network Observability Operator</a>
-</li>
-<li><a href="network-observability-deployment-and-management-con_network-observability-deployment-and-management.html">Network Observability deployment and management</a>
 </li>
 <li><a href="understanding-openshift_evaluate-openshift-platform-capabilities.html">Understand Red&#160;Hat OpenShift Container Platform</a>
 </li>
@@ -907,30 +869,31 @@ How to fix these errors:
 </ul>
 </li>
 <li><a href="_disconnected_environments.html">Disconnected environments</a>
+
 <ul class="sectlevel2">
-<li><a href="understand-disconnected-environments-intro_understand-disconnected-environments.html">Understand disconnected environments</a>
+<li><a href="understand-disconnected-environments-intro_understand-disconnected-environments.html">Disconnected environment concepts</a>
 </li>
-<li><a href="installing-agent_install-a-cluster-in-a-disconnected-environment.html">Installing a cluster with the Agent-based Installer</a>
+<li><a href="plan-a-disconnected-installation-intro_plan-a-disconnected-installation.html">Plan a disconnected installation</a>
 </li>
-<li><a href="prerequisites_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift.html">Prerequisites</a>
+<li><a href="installing-agent_install-a-cluster-in-a-disconnected-environment.html">Install a cluster with the Agent-based Installer</a>
 </li>
-<li><a href="installation-oc-mirror-v2-about_mirror-images-to-a-mirror-registry-using-oc-mirror-v2.html">About oc-mirror plugin v2</a>
+<li><a href="create-mirror-registry-intro_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift.html">Create a mirror registry with mirror registry for Red Hat OpenShift</a>
 </li>
-<li><a href="prerequisites_mirror-images-to-a-mirror-registry-using-the-oc-adm-release-mirror-command.html">Prerequisites</a>
+<li><a href="installation-oc-mirror-v2-about_mirror-images-to-a-mirror-registry-using-oc-mirror-v2.html">Mirror images to a mirror registry using oc-mirror v2</a>
 </li>
-<li><a href="oc-mirror-migration-differences_migrate-from-oc-mirror-v1-to-v2.html">Changes from oc-mirror plugin v1 to v2</a>
-</li>
-<li><a href="olm-restricted-network-prereqs_manage-olm-operators-in-a-disconnected-environment.html">Prerequisites</a>
+<li><a href="manage-olm-operators-disconnected-intro_manage-olm-operators-in-a-disconnected-environment.html">Manage OLM Operators in a disconnected environment</a>
 </li>
 <li><a href="mirror-images-for-a-cluster-update-in-a-disconnected-environment-intro_mirror-images-for-a-cluster-update-in-a-disconnected-environment.html">Mirror images for a cluster update in a disconnected environment</a>
 </li>
-<li><a href="update-service-overview_update-a-cluster-in-a-disconnected-environment-using-osus.html">Using the OpenShift Update Service in a disconnected environment</a>
+<li><a href="update-service-overview_update-a-cluster-in-a-disconnected-environment-using-osus.html">Use the OpenShift Update Service in a disconnected environment</a>
 </li>
-<li><a href="updating-cli-prereqs_update-a-cluster-in-a-disconnected-environment-without-using-osus.html">Prerequisites for a cluster update</a>
+<li><a href="update-disconnected_update-a-cluster-in-a-disconnected-environment-without-using-osus.html">Updating the disconnected cluster</a>
 </li>
-<li><a href="about-disconnected-updates-uninstalling-osus_uninstall-osus-from-a-cluster.html">Uninstalling the OpenShift Update Service from a cluster</a>
+<li><a href="about-disconnected-updates-uninstalling-osus_uninstall-osus-from-a-cluster.html">Uninstall the OpenShift Update Service from a cluster</a>
 </li>
-<li><a href="installation-about-mirror-registry_convert-a-connected-cluster-to-disconnected.html"><span class="toc-current">About the mirror registry</span></a>
+<li><a href="configure-trust-and-mirroring-con_configure-trust-and-mirroring.html">Configure trust and mirroring</a>
+</li>
+<li><a href="convert-connected-to-disconnected-intro_convert-a-connected-cluster-to-disconnected.html">Convert a connected cluster to disconnected</a>
 </li>
 <li><a href="deploying-hosted-control-planes-in-a-disconnected-environment-intro_deploying-hosted-control-planes-in-a-disconnected-environment.html">Deploying hosted control planes in a disconnected environment</a>
 </li>
@@ -978,7 +941,6 @@ How to fix these errors:
 <li><a href="_migrate.html">Migrate</a>
 </li>
 <li><a href="_administer.html">Administer</a>
-
 <ul class="sectlevel2">
 <li><a href="allocate-gpu-resources-to-pods-con_allocate-gpu-resources-to-pods.html">Allocate GPU resources to pods</a>
 </li>
@@ -988,7 +950,7 @@ How to fix these errors:
 </li>
 <li><a href="core-user-password_change-the-core-user-password-for-node-access.html">Change the core user password for node access</a>
 </li>
-<li><a href="configure-control-plane-failure-domains-con_configure-control-plane-failure-domains.html">Configure control plane failure domains</a>
+<li><a href="spread-the-control-plane-across-failure-domains-con_spread-the-control-plane-across-failure-domains.html"><span class="toc-current">Spread the control plane across failure domains</span></a>
 </li>
 <li><a href="multi-architecture-configuring-your-cluster_configure-multi-architecture-node-workload-deployments.html">Configuring your cluster with multi-architecture compute machines</a>
 </li>
@@ -1028,6 +990,12 @@ How to fix these errors:
 </li>
 <li><a href="manage-the-configuration-and-lifecycle-of-control-plane-machines-con_manage-the-configuration-and-lifecycle-of-control-plane-machines.html">Manage the configuration and lifecycle of control plane machines</a>
 </li>
+<li><a href="manage-the-configuration-and-lifecycle-of-compute-machines-con_manage-the-configuration-and-lifecycle-of-compute-machines.html">Manage the configuration and lifecycle of compute machines</a>
+</li>
+<li><a href="identify-and-group-compute-machines-con_identify-and-group-compute-machines.html">Identify and group compute machines</a>
+</li>
+<li><a href="identify-and-group-control-plane-machines-con_identify-and-group-control-plane-machines.html">Identify and group control plane machines</a>
+</li>
 <li><a href="multi-architecture-scheduling_manage-workloads-on-multi-architecture-clusters.html">Scheduled workloads on clusters with multi-architecture compute machines</a>
 </li>
 <li><a href="hcp-import-intro_manually-import-a-hosted-cluster.html">Manually importing a hosted cluster</a>
@@ -1062,7 +1030,7 @@ How to fix these errors:
 </li>
 <li><a href="machine-health-checks-about_understand-machine-health-check-behavior.html">About machine health checks</a>
 </li>
-<li><a href="machine-about-phases_understand-the-machine-lifecycle.html">Machine phases</a>
+<li><a href="understand-the-machine-lifecycle-con_understand-the-machine-lifecycle.html">Understand the machine lifecycle</a>
 </li>
 <li><a href="understand-the-out-of-cluster-mode-of-the-image-mode-for-openshift-feature-con_understand-the-out-of-cluster-mode-of-the-image-mode-for-openshift-feature.html">Understand the out-of-cluster mode of the Image Mode for OpenShift feature</a>
 </li>
@@ -1126,8 +1094,6 @@ How to fix these errors:
 </li>
 <li><a href="configure-multi-tenant-namespace-isolation-con_configure-multi-tenant-namespace-isolation.html">Configure multi-tenant namespace isolation</a>
 </li>
-<li><a href="configure-the-network-observability-operator-flowcollector-con_configure-the-network-observability-operator-flowcollector.html">Configure the Network Observability Operator FlowCollector</a>
-</li>
 <li><a href="define-how-much-disk-space-a-single-container-on-my-nodes-can-use-for-its-files-and-layers-con_define-how-much-disk-space-a-single-container-on-my-nodes-can-use-for-its-files-and-layers.html">Define how much disk space a single container can use</a>
 </li>
 <li><a href="define-the-maximum-size-of-the-container-log-file-before-it-is-rotated-con_define-the-maximum-size-of-the-container-log-file-before-it-is-rotated.html">Define the maximum size of the container log file before it is rotated</a>
@@ -1184,7 +1150,7 @@ How to fix these errors:
 </li>
 <li><a href="about-kmm_manage-kernel-modules-across-cluster-nodes.html">About the Kernel Module Management Operator</a>
 </li>
-<li><a href="installation-oc-mirror-v2-about_mirror-container-images-to-a-local-registry.html">About oc-mirror plugin v2</a>
+<li><a href="installation-oc-mirror-v2-about_mirror-container-images-to-a-local-registry.html">Mirror images to a mirror registry using oc-mirror v2</a>
 </li>
 <li><a href="organize-image-versions-with-tags-con_organize-image-versions-with-tags.html">Organize image versions with tags</a>
 </li>
@@ -1210,11 +1176,13 @@ How to fix these errors:
 </li>
 <li><a href="cpmso-feat-auto-update_apply-configuration-changes-to-control-plane-machines-with-automation.html">Automatic updates to the control plane configuration</a>
 </li>
-<li><a href="change-the-configuration-of-compute-machines-by-updating-a-compute-machine-set-con_change-the-configuration-of-compute-machines-by-updating-a-compute-machine-set.html">Change the configuration of compute machines by updating a compute machine set</a>
+<li><a href="change-the-configuration-of-compute-machines-by-updating-compute-machine-resources-con_change-the-configuration-of-compute-machines-by-updating-compute-machine-resources.html">Change the configuration of compute machines by updating compute machine resources</a>
+</li>
+<li><a href="enable-automated-machine-management-on-user-provisioned-infrastructure-con_enable-automated-machine-management-on-user-provisioned-infrastructure.html">Enable automated machine management on user-provisioned infrastructure</a>
 </li>
 <li><a href="apply-configuration-changes-to-compute-machines-with-automation-con_apply-configuration-changes-to-compute-machines-with-automation.html">Apply configuration changes to compute machines with automation</a>
 </li>
-<li><a href="mapi-to-capi-migration-overview_change-the-authoritative-api-for-machine-management-resources.html">Machine API to Cluster API resource migration</a>
+<li><a href="change-the-authoritative-api-for-machine-management-resources-con_change-the-authoritative-api-for-machine-management-resources.html">Change the authoritative API for machine management resources</a>
 </li>
 <li><a href="private-clusters-about_configure-a-private-cluster.html">About private clusters</a>
 </li>
@@ -1303,7 +1271,31 @@ How to fix these errors:
 </li>
 <li><a href="configure-high-performance-networking-con_configure-high-performance-networking.html">Configure high-performance networking</a>
 </li>
+<li><a href="network-observability-operator_understand-network-observability-netobserv.html">Network Observability Operator</a>
+</li>
+<li><a href="evaluate-network-observability-prerequisites-and-requirements-con_evaluate-network-observability-prerequisites-and-requirements.html">Evaluate network observability prerequisites and requirements</a>
+</li>
+<li><a href="network-observability-deployment-and-management-con_network-observability-deployment-and-management.html">Network Observability deployment and management</a>
+</li>
+<li><a href="verify-network-observability-installation-intro_verify-network-observability-installation.html">Verify Network Observability installation</a>
+</li>
+<li><a href="configure-the-network-observability-operator-flowcollector-con_configure-the-network-observability-operator-flowcollector.html">Configure the Network Observability Operator FlowCollector</a>
+</li>
+<li><a href="control-network-policies-and-access-for-network-observability-operator-con_control-network-policies-and-access-for-network-observability-operator.html">Control network policies and access for the Network Observability Operator</a>
+</li>
+<li><a href="secure-network-observability-data-con_secure-network-observability-data.html">Secure network observability data</a>
+</li>
 <li><a href="network-observability-operator_network-flow-visibility.html">Network Observability Operator</a>
+</li>
+<li><a href="network-observability-network-traffic-overview-view_monitor-network-traffic-with-network-observability.html">Observe the network traffic from the Overview view</a>
+</li>
+<li><a href="network-observability-health-dashboard-overview_verify-security-and-network-observability-operator-health.html">Health dashboards</a>
+</li>
+<li><a href="configure-network-traffic-flowlogs-pipeline-kafka_troubleshoot-network-issues-136-diagnose-network-flow-issues-netobserv.html">Flowlogs-Pipeline does not consume network flows after installing Kafka</a>
+</li>
+<li><a href="network-observability-integration-intro_network-observability-integration.html">Network Observability integration</a>
+</li>
+<li><a href="upgrade-network-observability-operator-version-con_upgrade-network-observability-operator-version.html">Upgrade the Network Observability Operator version</a>
 </li>
 </ul>
 </li>
@@ -1461,6 +1453,18 @@ How to fix these errors:
 </li>
 <li><a href="configure-confidential-vms-con_configure-confidential-vms.html">Configure confidential VMs</a>
 </li>
+<li><a href="isolate-compute-machines-from-other-tenants-con_isolate-compute-machines-from-other-tenants.html">Isolate compute machines from other tenants</a>
+</li>
+<li><a href="protect-the-instance-metadata-endpoint-for-compute-machines-con_protect-the-instance-metadata-endpoint-for-compute-machines.html">Protect the instance metadata endpoint for compute machines</a>
+</li>
+<li><a href="harden-boot-integrity-for-compute-machines-con_harden-boot-integrity-for-compute-machines.html">Harden boot integrity for compute machines</a>
+</li>
+<li><a href="isolate-control-plane-machines-from-other-tenants-con_isolate-control-plane-machines-from-other-tenants.html">Isolate control plane machines from other tenants</a>
+</li>
+<li><a href="protect-the-instance-metadata-endpoint-for-control-plane-machines-con_protect-the-instance-metadata-endpoint-for-control-plane-machines.html">Protect the instance metadata endpoint for control plane machines</a>
+</li>
+<li><a href="harden-boot-integrity-for-control-plane-machines-con_harden-boot-integrity-for-control-plane-machines.html">Harden boot integrity for control plane machines</a>
+</li>
 <li><a href="connect-workloads-to-additional-networks-con_connect-workloads-to-additional-networks.html">Connect workloads to additional networks</a>
 </li>
 <li><a href="nw-multi-network-policy-differences_control-traffic-on-secondary-networks.html">Differences between multi-network policy and network policy</a>
@@ -1496,8 +1500,6 @@ How to fix these errors:
 </li>
 <li><a href="monitor-network-performance-con_monitor-network-performance.html">Monitor network performance</a>
 </li>
-<li><a href="network-observability-deployment-and-management-113-control-automatic-installation-during-cluster-creation-con_network-observability-deployment-and-management-113-control-automatic-installation-during-cluster-creation.html">Control automatic installation during cluster creation</a>
-</li>
 <li><a href="nw-networkpolicy-audit-concept_observe-audit-and-review-policy-enforcement.html">Audit logging</a>
 </li>
 <li><a href="performance-investigation-con_performance-investigation.html">Performance investigation</a>
@@ -1532,8 +1534,6 @@ How to fix these errors:
 <li><a href="configure-external-dns-integration-con_configure-external-dns-integration.html">Configure External DNS integration</a>
 </li>
 <li><a href="automate-cicd-with-image-streams-intro_automate-cicd-with-image-streams.html">Automate CI/CD with image streams</a>
-</li>
-<li><a href="network-observability-deployment-and-management-con_network-observability-deployment-and-management.html">Network Observability deployment and management</a>
 </li>
 </ul>
 </li>
@@ -1574,7 +1574,7 @@ How to fix these errors:
 </li>
 <li><a href="nodes-nodes-managing-max-pods-proc_adjust-maximum-number-of-pods-on-a-node.html">Configure the maximum number of pods per node</a>
 </li>
-<li><a href="machineset-manually-scaling_scale-compute-resources.html">Scale a compute machine set manually</a>
+<li><a href="scale-compute-resources-con_scale-compute-resources.html">Scale workloads to match demand</a>
 </li>
 <li><a href="nodes-cluster-resource-configure-about_configure-cluster-memory-to-meet-container-memory-and-risk-requirements.html">Understanding how to manage application memory</a>
 </li>
@@ -1614,7 +1614,7 @@ How to fix these errors:
 </li>
 <li><a href="infrastructure-components_separate-infrastructure-machines-from-machines-that-run-workloads.html">Red&#160;Hat OpenShift Container Platform infrastructure components</a>
 </li>
-<li><a href="machine-mgmt-intro-managing-compute_scale-the-number-of-compute-machines-that-use-a-specific-configuration.html">Compute machine management</a>
+<li><a href="scale-compute-capacity-con_scale-compute-capacity.html">Scale compute capacity</a>
 </li>
 <li><a href="machine-mgmt-intro-add-for-upi_add-compute-machines-manually.html">Compute machine creation on user-provisioned infrastructure</a>
 </li>
@@ -1622,11 +1622,25 @@ How to fix these errors:
 </li>
 <li><a href="machineset-label-gpu-autoscaler_label-gpu-machine-sets-for-autoscaler.html">Label GPU machine sets for the cluster autoscaler</a>
 </li>
-<li><a href="machineset-non-guaranteed-instance_creating-machineset-aws.html">Machine sets that deploy machines as Spot Instances</a>
+<li><a href="use-interruptible-capacity-for-lower-cost-machines-con_use-interruptible-capacity-for-lower-cost-machines.html">Use interruptible capacity for lower-cost machines</a>
 </li>
-<li><a href="machineset-capacity-reservation_creating-machineset-aws.html">Configure Capacity Reservations by using machine sets</a>
+<li><a href="reserve-capacity-for-planned-workloads-con_reserve-capacity-for-planned-workloads.html">Reserve capacity for planned workloads</a>
 </li>
-<li><a href="nvidia-gpu-aws-adding-a-gpu-node_add-gpu-nodes-to-machine-sets.html">Add a GPU node to an existing Red&#160;Hat OpenShift Container Platform cluster</a>
+<li><a href="reserve-capacity-for-planned-control-plane-workloads-con_reserve-capacity-for-planned-control-plane-workloads.html">Reserve capacity for planned control plane workloads</a>
+</li>
+<li><a href="accelerate-workloads-with-gpus-con_accelerate-workloads-with-gpus.html">Accelerate workloads with GPUs</a>
+</li>
+<li><a href="improve-network-performance-for-compute-machines-con_improve-network-performance-for-compute-machines.html">Improve network performance for compute machines</a>
+</li>
+<li><a href="improve-network-performance-for-control-plane-machines-con_improve-network-performance-for-control-plane-machines.html">Improve network performance for control plane machines</a>
+</li>
+<li><a href="improve-storage-performance-for-compute-machines-con_improve-storage-performance-for-compute-machines.html">Improve storage performance for compute machines</a>
+</li>
+<li><a href="improve-storage-performance-for-control-plane-machines-con_improve-storage-performance-for-control-plane-machines.html">Improve storage performance for control plane machines</a>
+</li>
+<li><a href="keep-data-off-the-root-volume-for-compute-machines-con_keep-data-off-the-root-volume-for-compute-machines.html">Keep data off the root volume for compute machines</a>
+</li>
+<li><a href="keep-data-off-the-root-volume-for-control-plane-machines-con_keep-data-off-the-root-volume-for-control-plane-machines.html">Keep data off the root volume for control plane machines</a>
 </li>
 </ul>
 </li>
@@ -1672,8 +1686,6 @@ How to fix these errors:
 </li>
 <li><a href="cnf-measuring-latency_validate-node-performance-with-latency-tests.html">Measuring latency</a>
 </li>
-<li><a href="verify-network-observability-installation-intro_verify-network-observability-installation.html">Verify Network Observability installation</a>
-</li>
 </ul>
 </li>
 <li><a href="_troubleshoot.html">Troubleshoot</a>
@@ -1690,6 +1702,8 @@ How to fix these errors:
 <li><a href="restart-hosted-control-plane-components-and-pause-reconciliation-con_restart-hosted-control-plane-components-and-pause-reconciliation.html">Restart hosted control plane components and pause reconciliation</a>
 </li>
 <li><a href="troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-bare-metal-con_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-bare-metal.html">Troubleshoot hosted clusters on bare metal</a>
+</li>
+<li><a href="troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-ibmz-con_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-ibmz.html">Troubleshoot hosted clusters on IBM Z</a>
 </li>
 <li><a href="troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-openshift-virtualization-con_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-openshift-virtualization.html">Troubleshoot hosted clusters on OpenShift Virtualization</a>
 </li>
@@ -1708,6 +1722,8 @@ How to fix these errors:
 <li><a href="hcp-backup-etcd-snapshot-restore_control-plane-disaster-recovery.html">Restoring etcd data by using the etcd snapshot method</a>
 </li>
 <li><a href="nw-pod-network-connectivity-checks_troubleshoot-network-issues.html">Connection health checks that are performed</a>
+</li>
+<li><a href="troubleshoot-network-issues-diagnose-node-networking-and-ovs-con_troubleshoot-network-issues-diagnose-node-networking-and-ovs.html">Diagnose node networking and Open vSwitch</a>
 </li>
 <li><a href="restore-replace-unhealthy-etcd-member_replace-unhealthy-etcd-members.html">Replacing the unhealthy etcd member</a>
 </li>
@@ -1737,7 +1753,7 @@ How to fix these errors:
 </li>
 <li><a href="nw-pod-network-connectivity-checks_troubleshoot-connectivity-and-internal-subnets.html">Connection health checks that are performed</a>
 </li>
-<li><a href="investigating-why-windows-machine-compute-node_troubleshoot-machine-management.html">Investigating why Windows Machine does not become compute node</a>
+<li><a href="troubleshoot-machine-management-con_troubleshoot-machine-management.html">Troubleshoot machine management</a>
 </li>
 <li><a href="control-plane-backup-restore-operations-overview_investigate-an-active-cluster-issue.html">Control plane backup and restore operations</a>
 </li>
@@ -1747,21 +1763,15 @@ How to fix these errors:
 </li>
 <li><a href="oadp-performance-network-requirements_troubleshoot-node-performance-issues-collect-node-profiling-data.html">OADP network requirements</a>
 </li>
-<li><a href="network-observability-operator-stub_troubleshoot-network-issues-1362-execute-localized-network-diagnostics-using-the-oc-netobserv-cli.html">Network Observability Operator features</a>
-</li>
 <li><a href="adminnetworkpolicy_troubleshoot-network-issues-132-troubleshoot-network-policies.html">AdminNetworkPolicy</a>
 </li>
 <li><a href="nw-ingress-sharding-route-labels_troubleshoot-network-issues-133-troubleshoot-ingress-and-routes.html">Configure Ingress Controller sharding by using route labels</a>
-</li>
-<li><a href="configure-network-traffic-flowlogs-pipeline-kafka_troubleshoot-network-issues-136-diagnose-network-flow-issues-netobserv.html">Flowlogs-Pipeline does not consume network flows after installing Kafka</a>
 </li>
 <li><a href="investigating-master-node-installation-issues_troubleshoot-network-issues-131-access-cluster-nodes-for-diagnostics.html">Investigating control plane node installation issues</a>
 </li>
 <li><a href="troubleshoot-ovn-kubernetes-networking-issues-con_troubleshoot-ovn-kubernetes-networking-issues.html">Troubleshoot OVN-Kubernetes networking issues</a>
 </li>
 <li><a href="adding-network-attachment-definition-to-pods_troubleshoot-network-issues-135-trace-openflow-with-ovnkube-trace.html">Add the network attachment definition to your pods</a>
-</li>
-<li><a href="network-observability-health-rules-and-performance_troubleshoot-network-issues-1361-investigate-packet-drops-netobserv.html">Identify network issues with automated health rules</a>
 </li>
 <li><a href="nw-pod-network-connectivity-checks_configure-and-maintain-the-pod-network-cni-225-diagnose-and-resolve-node-network-configuration-errors.html">Connection health checks that are performed</a>
 </li>
@@ -1772,6 +1782,8 @@ How to fix these errors:
 <li><a href="control-plane-backup-restore-operations-overview_high-availability-and-disaster-recovery-for-hosted-control-planes-automated-disaster-recovery-for-a-hosted-cluster-by-using-oadp.html">Control plane backup and restore operations</a>
 </li>
 <li><a href="investigating-master-node-installation-issues_manage-kernel-modules-across-cluster-nodes-troubleshoot-kernel-module-loading-issues.html">Investigating control plane node installation issues</a>
+</li>
+<li><a href="troubleshoot-operating-system-issues-con_troubleshoot-operating-system-issues.html">Troubleshoot operating system issues</a>
 </li>
 <li><a href="nw-ovn-kubernetes-pod-connectivity-checks_connectivity-troubleshooting-11-diagnose-failed-connections-between-pods-and-services.html">Checking the OVN-Kubernetes pod network connectivity</a>
 </li>
@@ -1799,7 +1811,13 @@ How to fix these errors:
 </li>
 <li><a href="gathering-operator-logs_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools.html">Gathering Operator logs</a>
 </li>
-<li><a href="oadp-running-must-gather_investigate-an-active-cluster-issue-collect-comprehensive-data-for-vendor-support.html">Using the must-gather tool</a>
+<li><a href="collect-comprehensive-data-for-vendor-support-con_investigate-an-active-cluster-issue-collect-comprehensive-data-for-vendor-support.html">Collect comprehensive data for vendor support</a>
+</li>
+<li><a href="collect-host-sosreports-and-journal-logs-con_investigate-an-active-cluster-issue-collect-host-sosreports-and-journal-logs.html">Collect host sosreports and journal logs</a>
+</li>
+<li><a href="capture-network-traces-for-support-con_investigate-an-active-cluster-issue-capture-network-traces-for-support.html">Capture network traces for support</a>
+</li>
+<li><a href="use-host-toolbox-for-diagnostics-con_investigate-an-active-cluster-issue-use-host-toolbox-for-diagnostics.html">Use the host toolbox for diagnostics</a>
 </li>
 <li><a href="understanding-oc-log-levels_investigate-an-active-cluster-issue-summarize-cluster-specifications.html">Understanding OpenShift CLI (<code>oc</code>) log levels</a>
 </li>
@@ -1829,6 +1847,12 @@ How to fix these errors:
 </li>
 <li><a href="control-plane-backup-restore-operations-overview_encrypt-etcd-test-restore-procedures.html">Control plane backup and restore operations</a>
 </li>
+<li><a href="troubleshoot-clusters-that-use-the-cluster-api-con_troubleshoot-clusters-that-use-the-cluster-api.html">Troubleshoot clusters that use the Cluster API</a>
+</li>
+<li><a href="troubleshoot-the-control-plane-machine-set-con_troubleshoot-the-control-plane-machine-set.html">Troubleshoot the control plane machine set</a>
+</li>
+<li><a href="collect-console-logs-from-machines-that-fail-to-boot-con_collect-console-logs-from-machines-that-fail-to-boot.html">Collect console logs from machines that fail to boot</a>
+</li>
 </ul>
 </li>
 <li><a href="_reference.html">Reference</a>
@@ -1843,508 +1867,133 @@ How to fix these errors:
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#prerequisites_connected-to-disconnected_convert-a-connected-cluster-to-disconnected">Prerequisites for converting a connected cluster to a disconnected cluster</a></li><li class="level-4"><a href="#connected-to-disconnected-prepare-mirror_convert-a-connected-cluster-to-disconnected">Preparing the cluster for mirroring</a></li><li class="level-4"><a href="#connected-to-disconnected-mirror-images_convert-a-connected-cluster-to-disconnected">Mirroring the images</a></li><li class="level-4"><a href="#connected-to-disconnected-config-registry_convert-a-connected-cluster-to-disconnected">Configuring the cluster for the mirror registry</a></li><li class="level-4"><a href="#connected-to-disconnected-verify_convert-a-connected-cluster-to-disconnected">Ensure applications continue to work</a></li><li class="level-4"><a href="#connected-to-disconnected-disconnect_convert-a-connected-cluster-to-disconnected">Disconnect the cluster from the network</a></li><li class="level-4"><a href="#connected-to-disconnected-restore-insights_convert-a-connected-cluster-to-disconnected">Restoring a degraded Insights Operator</a></li><li class="level-4"><a href="#connected-to-disconnected-restore_convert-a-connected-cluster-to-disconnected">Restoring the network</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#cpmso-failure-domains-provider_spread-the-control-plane-across-failure-domains">Failure domain platform support and configuration</a></li><li class="level-4"><a href="#cpmso-failure-domains-balancing_spread-the-control-plane-across-failure-domains">Balancing control plane machines</a></li><li class="level-4"><a href="#cpmso-yaml-failure-domain-aws_spread-the-control-plane-across-failure-domains">Sample AWS failure domain configuration</a></li><li class="level-4"><a href="#cpmso-yaml-failure-domain-azure_spread-the-control-plane-across-failure-domains">Sample Azure failure domain configuration</a></li><li class="level-4"><a href="#cpmso-yaml-failure-domain-gcp_spread-the-control-plane-across-failure-domains">Sample Google Cloud failure domain configuration</a></li><li class="level-4"><a href="#cpmso-yaml-failure-domain-openstack_spread-the-control-plane-across-failure-domains">Sample RHOSP failure domain configuration</a></li><li class="level-4"><a href="#cpmso-yaml-failure-domain-vsphere_spread-the-control-plane-across-failure-domains">Sample VMware vSphere failure domain configuration</a></li><li class="level-4"><a href="#mapi-failure-domain-nutanix_spread-the-control-plane-across-failure-domains">Failure domains for Nutanix clusters</a></li><li class="level-5"><a href="#installation-nutanix-failure-domains-req_spread-the-control-plane-across-failure-domains">Failure domain requirements</a></li><li class="level-5"><a href="#post-installation-configuring-nutanix-failure-domains_spread-the-control-plane-across-failure-domains">Adding failure domains to the Infrastructure CR</a></li><li class="level-5"><a href="#post-installation-adding-nutanix-failure-domains-control-planes_spread-the-control-plane-across-failure-domains">Distributing control planes across failure domains</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
-<h3 id="installation-about-mirror-registry_convert-a-connected-cluster-to-disconnected">About the mirror registry</h3>
+<h3 id="spread-the-control-plane-across-failure-domains-con_spread-the-control-plane-across-failure-domains">Spread the control plane across failure domains</h3>
 <div class="paragraph _abstract">
-<p>You must have access to the internet to obtain the necessary container images. Using an alternative registry means that you place the mirror registry on a mirror host that has access to both your network and the internet.</p>
-</div>
-<div class="paragraph">
-<p>You can mirror the images that are required for Red&#160;Hat OpenShift Container Platform installation and subsequent product updates to a container mirror registry such as Red&#160;Hat Quay, JFrog Artifactory, Sonatype Nexus Repository, or Harbor. If you do not have access to a large-scale container registry, you can use the <em>mirror registry for Red&#160;Hat OpenShift</em>, a small-scale container registry included with Red&#160;Hat OpenShift Container Platform subscriptions.</p>
-</div>
-<div class="paragraph">
-<p>You can use any container registry that supports Docker v2-2, such as Red&#160;Hat Quay, the <em>mirror registry for Red&#160;Hat OpenShift</em>, Artifactory, Sonatype Nexus Repository, or Harbor. Regardless of your chosen registry, the procedure to mirror content from Red Hat hosted sites on the internet to an isolated image registry is the same. After you mirror the content, you configure each cluster to retrieve this content from your mirror registry.</p>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Important">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>The OpenShift image registry cannot be used as the target registry because it does not support pushing without a tag, which is required during the mirroring process.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>If choosing a container registry that is not the <em>mirror registry for Red&#160;Hat OpenShift</em>, it must be reachable by every machine in the clusters that you provision. If the registry is unreachable, installation, updating, or normal operations such as workload relocation might fail. For that reason, you must run mirror registries in a highly available way, and the mirror registries must at least match the production availability of your Red&#160;Hat OpenShift Container Platform clusters.</p>
-</div>
-<div class="paragraph">
-<p>When you populate your mirror registry with Red&#160;Hat OpenShift Container Platform images, you can follow two scenarios. If you have a host that can access both the internet and your mirror registry, but not your cluster nodes, you can directly mirror the content from that machine. This process is referred to as <em>connected mirroring</em>. If you have no such host, you must mirror the images to a file system and then bring that host or removable media into your restricted environment. This process is referred to as <em>disconnected mirroring</em>.</p>
-</div>
-<div class="paragraph">
-<p>For mirrored registries, to view the source of pulled images, you must review the <code>Trying to access</code> log entry in the CRI-O logs. Other methods to view the image pull source, such as using the <code>crictl images</code> command on a node, show the non-mirrored image name, even though the image is pulled from the mirrored location.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Red&#160;Hat does not test third party registries with Red&#160;Hat OpenShift Container Platform.</p>
-</div>
-</td>
-</tr>
-</table>
+<p>A failure domain tells the control plane machine set where it may place control plane machines, so that the three machines land in separate availability zones or hosts. The machine set balances machines across the domains you define.</p>
 </div>
 <div class="sect3">
-<h4 id="prerequisites_connected-to-disconnected_convert-a-connected-cluster-to-disconnected">Prerequisites for converting a connected cluster to a disconnected cluster</h4>
+<h4 id="cpmso-failure-domains-provider_spread-the-control-plane-across-failure-domains">Failure domain platform support and configuration</h4>
 <div class="paragraph _abstract">
-<p>You must meet several prerequisites before converting a connected cluster to a disconnected cluster.</p>
+<p>Review failure domain support for your cloud provider to determine how to configure high availability for your control plane.</p>
 </div>
-<div class="paragraph">
-<p>The following prerequisites must be met:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>The <code>oc</code> client is installed.</p>
-</li>
-<li>
-<p>A running cluster.</p>
-</li>
-<li>
-<p>An installed mirror registry, which is a container image registry that supports Docker v2-2 in the location that will host the Red&#160;Hat OpenShift Container Platform cluster, such as one of the following registries:</p>
-<div class="openblock">
-<div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>Red&#160;Hat Quay</p>
-</li>
-<li>
-<p>JFrog Artifactory</p>
-</li>
-<li>
-<p>Sonatype Nexus Repository</p>
-</li>
-<li>
-<p>Harbor</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>If you have a subscription to Red&#160;Hat Quay, see the documentation on "Deploying Red&#160;Hat Quay for proof-of-concept purposes" or "Deploying Red&#160;Hat Quay by using the Quay Operator".</p>
-</div>
-</li>
-<li>
-<p>The mirror repository must be configured to share images. For example, a Red&#160;Hat Quay repository requires organizations to share images. For more information, see the "Red&#160;Hat Quay documentation on organizations".</p>
-</li>
-<li>
-<p>Access to the internet to obtain the necessary container images.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="connected-to-disconnected-prepare-mirror_convert-a-connected-cluster-to-disconnected">Preparing the cluster for mirroring</h4>
-<div class="paragraph _abstract">
-<p>Before disconnecting your cluster, you must mirror, or copy, the images to a mirror registry that is reachable by every node in your disconnected cluster.</p>
-</div>
-<div class="paragraph">
-<p>To mirror the images, you must prepare your cluster by:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Adding the mirror registry certificates to the list of trusted CAs on your host.</p>
-</li>
-<li>
-<p>Creating a <code>.dockerconfigjson</code> file that contains your image pull secret, which is from the <code>cloud.openshift.com</code> token.</p>
-</li>
-</ul>
-</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 488. Failure domain support matrix</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-middle">Cloud provider</th>
+<th class="tableblock halign-center valign-middle">Support for failure domains</th>
+<th class="tableblock halign-center valign-middle">Provider nomenclature</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Amazon Web Services (AWS)</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">X</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock"><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-availability-zones">Availability Zone (AZ)</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Google Cloud</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">X</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock"><a href="https://cloud.google.com/compute/docs/regions-zones">zone</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Microsoft Azure</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">X</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock"><a href="https://learn.microsoft.com/en-us/azure/azure-web-pubsub/concept-availability-zones">Azure availability zone</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Nutanix</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">X</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock"><a href="https://portal.nutanix.com/page/documents/solutions/details?targetId=RA-2147-Nutanix-for-Enterprise-Edge:failure-domain-considerations.html">failure domain</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Red Hat OpenStack Platform (RHOSP)</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">X</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock"><a href="https://docs.openstack.org/nova/2023.2/admin/availability-zones.html">OpenStack Nova availability zones</a> and <a href="https://docs.openstack.org/cinder/2023.2/admin/availability-zone-type.html">OpenStack Cinder availability zones</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">VMware vSphere</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">X</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">failure domain mapped to a vSphere Zone <sup>[1]</sup></p></td>
+</tr>
+</tbody>
+</table>
 <div class="olist arabic">
-<div class="title">Procedure</div>
 <ol class="arabic">
 <li>
-<p>Configuring credentials that allow image mirroring:</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Add the CA certificate for the mirror registry, in the simple PEM or DER file formats, to the list of trusted CAs. For example:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ cp &lt;/path/to/cert.crt&gt; /usr/share/pki/ca-trust-source/anchors/</code></pre>
-</div>
-</div>
-<div class="openblock">
-<div class="content">
-<div class="paragraph">
-<p>where:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>&lt;/path/to/cert.crt&gt;</code></dt>
-<dd>
-<p>Specifies the path to the certificate on your local file system.</p>
-</dd>
-</dl>
-</div>
-</div>
-</div>
-</li>
-<li>
-<p>Update the CA trust. For example, in Linux:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ update-ca-trust</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Extract the <code>.dockerconfigjson</code> file from the global pull secret:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc extract secret/pull-secret -n openshift-config --confirm --to=.</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">.dockerconfigjson</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Edit the <code>.dockerconfigjson</code> file to add your mirror registry and authentication credentials and save it as a new file:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">{"auths":{"&lt;local_registry&gt;": {"auth": "&lt;credentials&gt;","email": "you@example.com"},"&lt;registry&gt;:&lt;port&gt;/&lt;namespace&gt;/":{"auth":"&lt;token&gt;"}}}</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>where:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>&lt;local_registry&gt;</code></dt>
-<dd>
-<p>Specifies the registry domain name, and optionally the port, that your mirror registry uses to serve content.</p>
-</dd>
-<dt class="hdlist1"><code>auth</code></dt>
-<dd>
-<p>Specifies the base64-encoded user name and password for your mirror registry.</p>
-</dd>
-<dt class="hdlist1"><code>&lt;registry&gt;:&lt;port&gt;/&lt;namespace&gt;</code></dt>
-<dd>
-<p>Specifies the mirror registry details.</p>
-</dd>
-<dt class="hdlist1"><code>&lt;token&gt;</code></dt>
-<dd>
-<p>Specifies  the base64-encoded <code>username:password</code> for your mirror registry.</p>
-<div class="paragraph">
-<p>For example:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ {"auths":{"cloud.openshift.com":{"auth":"b3BlbnNoaWZ0Y3UjhGOVZPT0lOMEFaUjdPUzRGTA==","email":"user@example.com"},
-"quay.io":{"auth":"b3BlbnNoaWZ0LXJlbGVhc2UtZGOVZPT0lOMEFaUGSTd4VGVGVUjdPUzRGTA==","email":"user@example.com"},
-"registry.connect.redhat.com"{"auth":"NTE3MTMwNDB8dWhjLTFEZlN3VHkxOSTd4VGVGVU1MdTpleUpoYkdjaUailA==","email":"user@example.com"},
-"registry.redhat.io":{"auth":"NTE3MTMwNDB8dWhjLTFEZlN3VH3BGSTd4VGVGVU1MdTpleUpoYkdjaU9fZw==","email":"user@example.com"},
-"registry.svc.ci.openshift.org":{"auth":"dXNlcjpyWjAwWVFjSEJiT2RKVW1pSmg4dW92dGp1SXRxQ3RGN1pwajJhN1ZXeTRV"},"my-registry:5000/my-namespace/":{"auth":"dXNlcm5hbWU6cGFzc3dvcmQ="}}}</code></pre>
-</div>
-</div>
-</dd>
-</dl>
-</div>
+<p>For more information, see "Regions and zones for a VMware vCenter".</p>
 </li>
 </ol>
 </div>
-</li>
-</ol>
+<div class="paragraph">
+<p>The failure domain configuration in the control plane machine set custom resource (CR) is platform-specific. For more information about failure domain parameters in the CR, see the sample failure domain configuration for your provider.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="connected-to-disconnected-mirror-images_convert-a-connected-cluster-to-disconnected">Mirroring the images</h4>
+<h4 id="cpmso-failure-domains-balancing_spread-the-control-plane-across-failure-domains">Balancing control plane machines</h4>
 <div class="paragraph _abstract">
-<p>After the cluster is properly configured, you can mirror the images from your external repositories to the mirror repository.</p>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Important">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>The <code>oc adm release mirror</code> command is deprecated as of Red&#160;Hat OpenShift Container Platform 4.22 and will be removed in a future release.</p>
+<p>The control plane machine set balances control plane machines across failure domains to ensure fault tolerance and high availability.</p>
 </div>
 <div class="paragraph">
-<p>As an alternative, use the oc-mirror plugin v2.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Mirror the Operator Lifecycle Manager (OLM) images:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc adm catalog mirror registry.redhat.io/redhat/redhat-operator-index:v{product-version} &lt;mirror_registry&gt;:&lt;port&gt;/olm -a &lt;reg_creds&gt;</code></pre>
-</div>
-</div>
-<div class="openblock">
-<div class="content">
-<div class="paragraph">
-<p>where:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>product-version</code></dt>
-<dd>
-<p>Specifies the tag that corresponds to the version of Red&#160;Hat OpenShift Container Platform to install, such as <code>4.8</code>.</p>
-</dd>
-<dt class="hdlist1"><code>mirror_registry</code></dt>
-<dd>
-<p>Specifies the fully qualified domain name (FQDN) for the target registry and namespace to mirror the Operator content to, where <code>&lt;namespace&gt;</code> is any existing namespace on the registry.</p>
-</dd>
-<dt class="hdlist1"><code>reg_creds</code></dt>
-<dd>
-<p>Specifies the location of your modified <code>.dockerconfigjson</code> file.</p>
-</dd>
-</dl>
-</div>
-</div>
+<p>When possible, the control plane machine set uses each failure domain equally to ensure appropriate fault tolerance. If there are fewer failure domains than control plane machines, failure domains are selected for reuse alphabetically by name. For clusters with no failure domains specified, all control plane machines are placed within a single failure domain.</p>
 </div>
 <div class="paragraph">
-<p>For example:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc adm catalog mirror registry.redhat.io/redhat/redhat-operator-index:v4.8 mirror.registry.com:443/olm -a ./.dockerconfigjson  --index-filter-by-os='.*'</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Mirror the content for any other Red Hat-provided Operator:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc adm catalog mirror &lt;index_image&gt; &lt;mirror_registry&gt;:&lt;port&gt;/&lt;namespace&gt; -a &lt;reg_creds&gt;</code></pre>
-</div>
-</div>
-<div class="openblock">
-<div class="content">
-<div class="paragraph">
-<p>where:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>index_image</code></dt>
-<dd>
-<p>Specifies the index image for the catalog that you want to mirror.</p>
-</dd>
-<dt class="hdlist1"><code>mirror_registry</code></dt>
-<dd>
-<p>Specifies the FQDN for the target registry and namespace to mirror the Operator content to, where <code>&lt;namespace&gt;</code> is any existing namespace on the registry.</p>
-</dd>
-<dt class="hdlist1"><code>reg_creds</code></dt>
-<dd>
-<p>Optional: Specifies the location of your registry credentials file, if required.</p>
-</dd>
-</dl>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>For example:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc adm catalog mirror registry.redhat.io/redhat/community-operator-index:v4.8 mirror.registry.com:443/olm -a ./.dockerconfigjson  --index-filter-by-os='.*'</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Mirror the Red&#160;Hat OpenShift Container Platform image repository:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc adm release mirror -a .dockerconfigjson --from=quay.io/openshift-release-dev/ocp-release:v&lt;product-version&gt;-&lt;architecture&gt; --to=&lt;local_registry&gt;/&lt;local_repository&gt; --to-release-image=&lt;local_registry&gt;/&lt;local_repository&gt;:v&lt;product-version&gt;-&lt;architecture&gt;</code></pre>
-</div>
-</div>
-<div class="openblock">
-<div class="content">
-<div class="paragraph">
-<p>where:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>product-version</code></dt>
-<dd>
-<p>Specifies the tag that corresponds to the version of Red&#160;Hat OpenShift Container Platform to install, such as <code>4.8.15-x86_64</code>.</p>
-</dd>
-<dt class="hdlist1"><code>architecture</code></dt>
-<dd>
-<p>Specifies the type of architecture for your server, such as <code>x86_64</code>.</p>
-</dd>
-<dt class="hdlist1"><code>local_registry</code></dt>
-<dd>
-<p>Specifies the registry domain name for your mirror repository.</p>
-</dd>
-<dt class="hdlist1"><code>local_repository</code></dt>
-<dd>
-<p>Specifies the name of the repository to create in your registry, such as <code>ocp4/openshift4</code>.</p>
-</dd>
-</dl>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>For example:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc adm release mirror -a .dockerconfigjson --from=quay.io/openshift-release-dev/ocp-release:4.8.15-x86_64 --to=mirror.registry.com:443/ocp/release --to-release-image=mirror.registry.com:443/ocp/release:4.8.15-x86_64</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">info: Mirroring 109 images to mirror.registry.com/ocp/release ...
-mirror.registry.com:443/
-  ocp/release
-	manifests:
-  	sha256:086224cadce475029065a0efc5244923f43fb9bb3bb47637e0aaf1f32b9cad47 -&gt; 4.8.15-x86_64-thanos
-  	sha256:0a214f12737cb1cfbec473cc301aa2c289d4837224c9603e99d1e90fc00328db -&gt; 4.8.15-x86_64-kuryr-controller
-  	sha256:0cf5fd36ac4b95f9de506623b902118a90ff17a07b663aad5d57c425ca44038c -&gt; 4.8.15-x86_64-pod
-  	sha256:0d1c356c26d6e5945a488ab2b050b75a8b838fc948a75c0fa13a9084974680cb -&gt; 4.8.15-x86_64-kube-client-agent
-
-…..
-sha256:66e37d2532607e6c91eedf23b9600b4db904ce68e92b43c43d5b417ca6c8e63c mirror.registry.com:443/ocp/release:4.5.41-multus-admission-controller
-sha256:d36efdbf8d5b2cbc4dcdbd64297107d88a31ef6b0ec4a39695915c10db4973f1 mirror.registry.com:443/ocp/release:4.5.41-cluster-kube-scheduler-operator
-sha256:bd1baa5c8239b23ecdf76819ddb63cd1cd6091119fecdbf1a0db1fb3760321a2 mirror.registry.com:443/ocp/release:4.5.41-aws-machine-controllers
-info: Mirroring completed in 2.02s (0B/s)
-
-Success
-Update image:  mirror.registry.com:443/ocp/release:4.5.41-x86_64
-Mirror prefix: mirror.registry.com:443/ocp/release</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Mirror any other registries, as needed:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc image mirror &lt;online_registry&gt;/my/image:latest &lt;mirror_registry&gt;</code></pre>
-</div>
-</div>
-</li>
-</ol>
+<p>Some changes to the failure domain configuration cause the control plane machine set to rebalance the control plane machines. For example, if you add failure domains to a cluster with fewer failure domains than control plane machines, the control plane machine set rebalances the machines across all available failure domains.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="connected-to-disconnected-config-registry_convert-a-connected-cluster-to-disconnected">Configuring the cluster for the mirror registry</h4>
+<h4 id="cpmso-yaml-failure-domain-aws_spread-the-control-plane-across-failure-domains">Sample AWS failure domain configuration</h4>
 <div class="paragraph _abstract">
-<p>After creating and mirroring the images to the mirror registry, you must modify your cluster so that pods can pull images from the mirror registry.</p>
+<p>To prevent downtime for your applications due to the failure of a single Amazon Web Services (AWS) region, you can configure failure domains in the control plane machine set by configuring appropriate values in the <code>failureDomains</code> section of the <code>ControlPlaneMachineSet</code> object.</p>
 </div>
 <div class="paragraph">
-<p>You must:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Add the mirror registry credentials to the global pull secret.</p>
-</li>
-<li>
-<p>Add the mirror registry server certificate to the cluster.</p>
-</li>
-<li>
-<p>Create an <code>ImageContentSourcePolicy</code> custom resource (ICSP), which associates the mirror registry with the source registry.</p>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Add mirror registry credential to the cluster global pull-secret:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc set data secret/pull-secret -n openshift-config --from-file=.dockerconfigjson=&lt;pull_secret_location&gt;</code></pre>
-</div>
+<p>The control plane machine set concept of a failure domain is analogous to the AWS concept of an <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-availability-zones"><em>Availability Zone (AZ)</em></a>.
+The <code>ControlPlaneMachineSet</code> CR spreads control plane machines across more than one failure domain when possible.</p>
 </div>
 <div class="paragraph">
-<p>For <code>&lt;pull_secret_location&gt;</code>, provide the path to the new pull secret file.</p>
-</div>
-<div class="paragraph">
-<p>For example:</p>
+<p>When configuring AWS failure domains in the control plane machine set, you must specify the availability zone name and the subnet to use.</p>
 </div>
 <div class="listingblock">
+<div class="title">Sample AWS failure domain values</div>
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc set data secret/pull-secret -n openshift-config --from-file=.dockerconfigjson=.mirrorsecretconfigjson</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Add the CA-signed mirror registry server certificate to the nodes in the cluster:</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Create a config map that includes the server certificate for the mirror registry:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create configmap &lt;config_map_name&gt; --from-file=&lt;mirror_address_host&gt;..&lt;port&gt;=$path/ca.crt -n openshift-config</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>For example:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create configmap registry-config --from-file=mirror.registry.com..443=/root/certs/ca-chain.cert.pem -n openshift-config</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Use the config map to update the <code>image.config.openshift.io/cluster</code> custom resource (CR). Red&#160;Hat OpenShift Container Platform applies the changes to this CR to all nodes in the cluster:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc patch image.config.openshift.io/cluster --patch '{"spec":{"additionalTrustedCA":{"name":"&lt;config_map_name&gt;"}}}' --type=merge</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>For example:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc patch image.config.openshift.io/cluster --patch '{"spec":{"additionalTrustedCA":{"name":"registry-config"}}}' --type=merge</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>Create an ICSP to redirect container pull requests from the online registries to the mirror registry:</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Create the <code>ImageContentSourcePolicy</code> custom resource:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: operator.openshift.io/v1alpha1
-kind: ImageContentSourcePolicy
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: machine.openshift.io/v1
+kind: ControlPlaneMachineSet
 metadata:
-  name: mirror-ocp
+  name: cluster
+  namespace: openshift-machine-api
 spec:
-  repositoryDigestMirrors:
-  - mirrors:
-    - mirror.registry.com:443/ocp/release
-    source: quay.io/openshift-release-dev/ocp-release
-  - mirrors:
-    - mirror.registry.com:443/ocp/release
-    source: quay.io/openshift-release-dev/ocp-v4.0-art-dev</code></pre>
+# ...
+  template:
+# ...
+    machines_v1beta1_machine_openshift_io:
+      failureDomains:
+        aws:
+        - placement:
+            availabilityZone: &lt;aws_zone_a&gt;
+          subnet:
+            filters:
+            - name: tag:Name
+              values:
+              - &lt;cluster_id&gt;-subnet-private-&lt;aws_zone_a&gt;
+            type: Filters
+        - placement:
+            availabilityZone: &lt;aws_zone_b&gt;
+          subnet:
+            filters:
+            - name: tag:Name
+              values:
+              - &lt;cluster_id&gt;-subnet-private-&lt;aws_zone_b&gt;
+            type: Filters
+        platform: AWS
+# ...</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2352,212 +2001,248 @@ spec:
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1"><code>spec.mirrors</code></dt>
+<dt class="hdlist1"><code>spec.template.machines_v1beta1_machine_openshift_io.failureDomains.aws.placement.availabilityZone: &lt;aws_zone_a&gt;</code></dt>
 <dd>
-<p>Specifies the name of the mirror image registry and repository.</p>
+<p>Specifies an AWS availability zone for the first failure domain.</p>
 </dd>
-<dt class="hdlist1"><code>spec.source</code></dt>
+<dt class="hdlist1"><code>spec.template.machines_v1beta1_machine_openshift_io.failureDomains.aws.subnet</code></dt>
 <dd>
-<p>Specifies the online registry and repository containing the content that is mirrored.</p>
+<p>Specifies a subnet configuration.
+In this example, the subnet type is <code>Filters</code>, so there is a <code>filters</code> stanza.</p>
+</dd>
+<dt class="hdlist1"><code>spec.template.machines_v1beta1_machine_openshift_io.failureDomains.aws.subnet.filters.values: &lt;cluster_id&gt;-subnet-private-&lt;aws_zone_a&gt;</code></dt>
+<dd>
+<p>Specifies the subnet name for the first failure domain, using the infrastructure ID and the AWS availability zone.</p>
+</dd>
+<dt class="hdlist1"><code>spec.template.machines_v1beta1_machine_openshift_io.failureDomains.aws.subnet.type</code></dt>
+<dd>
+<p>Specifies the subnet type.
+The following values are valid: <code>ARN</code>, <code>Filters</code> and <code>ID</code>.
+The default value is <code>Filters</code>.</p>
+</dd>
+<dt class="hdlist1"><code>spec.template.machines_v1beta1_machine_openshift_io.failureDomains.aws.placement.availabilityZone: &lt;aws_zone_b&gt;</code></dt>
+<dd>
+<p>Specifies an AWS availability zone for an additional failure domain.</p>
+</dd>
+<dt class="hdlist1"><code>spec.template.machines_v1beta1_machine_openshift_io.failureDomains.aws.subnet.filters.values: &lt;cluster_id&gt;-subnet-private-&lt;aws_zone_b&gt;</code></dt>
+<dd>
+<p>Specifies the subnet name for the additional failure domain, using the infrastructure ID and the AWS availability zone.</p>
+</dd>
+<dt class="hdlist1"><code>spec.template.machines_v1beta1_machine_openshift_io.failureDomains.platform</code></dt>
+<dd>
+<p>Specifies the cloud provider platform name.
+Do not change this value.</p>
 </dd>
 </dl>
 </div>
-</li>
-<li>
-<p>Create the ICSP object:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create -f registryrepomirror.yaml</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">imagecontentsourcepolicy.operator.openshift.io/mirror-ocp created</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Red&#160;Hat OpenShift Container Platform applies the changes to this CR to all nodes in the cluster.</p>
-</div>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>Verify that the credentials, CA, and ICSP for mirror registry are added:</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Log in to a node:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc debug node/&lt;node_name&gt;</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Set <code>/host</code> as the root directory within the debug shell:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">sh-4.4# chroot /host</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Check the <code>config.json</code> file for the credentials:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">sh-4.4# cat /var/lib/kubelet/config.json</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">{"auths":{"brew.registry.redhat.io":{"xx=="},"brewregistry.stage.redhat.io":{"auth":"xxx=="},"mirror.registry.com:443":{"auth":"xx="}}}</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Ensure that the mirror registry and credentials are present.</p>
-</div>
-</li>
-<li>
-<p>Change to the <code>certs.d</code> directory:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">sh-4.4# cd /etc/docker/certs.d/</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>List the certificates in the <code>certs.d</code> directory:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">sh-4.4# ls</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">image-registry.openshift-image-registry.svc.cluster.local:5000
-image-registry.openshift-image-registry.svc:5000
-mirror.registry.com:443</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>For <code>mirror.registry.com:443</code>, ensure that the mirror registry is in the list.</p>
-</div>
-</li>
-<li>
-<p>Check that the ICSP added the mirror registry to the <code>registries.conf</code> file:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">sh-4.4# cat /etc/containers/registries.conf</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">unqualified-search-registries = ["registry.access.redhat.com", "docker.io"]
-
-[[registry]]
-  prefix = ""
-  location = "quay.io/openshift-release-dev/ocp-release"
-  mirror-by-digest-only = true
-
-  [[registry.mirror]]
-    location = "mirror.registry.com:443/ocp/release"
-
-[[registry]]
-  prefix = ""
-  location = "quay.io/openshift-release-dev/ocp-v4.0-art-dev"
-  mirror-by-digest-only = true
-
-  [[registry.mirror]]
-    location = "mirror.registry.com:443/ocp/release"</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The <code>registry.mirror</code> parameters indicate that the mirror registry is searched before the original registry.</p>
-</div>
-</li>
-<li>
-<p>Exit the node.</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">sh-4.4# exit</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</li>
-</ol>
-</div>
 </div>
 <div class="sect3">
-<h4 id="connected-to-disconnected-verify_convert-a-connected-cluster-to-disconnected">Ensure applications continue to work</h4>
+<h4 id="cpmso-yaml-failure-domain-azure_spread-the-control-plane-across-failure-domains">Sample Azure failure domain configuration</h4>
 <div class="paragraph _abstract">
-<p>Before disconnecting the cluster from the network, ensure that your cluster is working as expected and all of your applications are working as expected.</p>
+<p>To prevent downtime for your applications due to the failure of a single Microsoft Azure region, you can configure failure domains in the control plane machine set by configuring appropriate values in the <code>failureDomains</code> section of the <code>ControlPlaneMachineSet</code> object.</p>
 </div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Use the following commands to check the status of your cluster:</p>
+<div class="paragraph">
+<p>The control plane machine set concept of a failure domain is analogous to the Azure concept of an <a href="https://learn.microsoft.com/en-us/azure/azure-web-pubsub/concept-availability-zones"><em>Azure availability zone</em></a>.
+The <code>ControlPlaneMachineSet</code> CR spreads control plane machines across more than one failure domain when possible.</p>
+</div>
+<div class="paragraph">
+<p>When configuring Azure failure domains in the control plane machine set, you must specify the availability zone name.
+An Azure cluster can use the following configurations:</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p>Ensure your pods are running:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get pods --all-namespaces</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">NAMESPACE                                          NAME                                                          READY   STATUS      RESTARTS   AGE
-kube-system                                        apiserver-watcher-ci-ln-47ltxtb-f76d1-mrffg-master-0          1/1     Running     0          39m
-kube-system                                        apiserver-watcher-ci-ln-47ltxtb-f76d1-mrffg-master-1          1/1     Running     0          39m
-kube-system                                        apiserver-watcher-ci-ln-47ltxtb-f76d1-mrffg-master-2          1/1     Running     0          39m
-openshift-apiserver-operator                       openshift-apiserver-operator-79c7c646fd-5rvr5                 1/1     Running     3          45m
-openshift-apiserver                                apiserver-b944c4645-q694g                                     2/2     Running     0          29m
-openshift-apiserver                                apiserver-b944c4645-shdxb                                     2/2     Running     0          31m
-openshift-apiserver                                apiserver-b944c4645-x7rf2                                     2/2     Running     0          33m
- ...</code></pre>
-</div>
-</div>
+<p>One subnet for each availability zone.</p>
 </li>
 <li>
-<p>Ensure your nodes are in the READY status:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get nodes</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">NAME                                       STATUS   ROLES    AGE   VERSION
-ci-ln-47ltxtb-f76d1-mrffg-master-0         Ready    master   42m   v1.36.3
-ci-ln-47ltxtb-f76d1-mrffg-master-1         Ready    master   42m   v1.36.3
-ci-ln-47ltxtb-f76d1-mrffg-master-2         Ready    master   42m   v1.36.3
-ci-ln-47ltxtb-f76d1-mrffg-worker-a-gsxbz   Ready    worker   35m   v1.36.3
-ci-ln-47ltxtb-f76d1-mrffg-worker-b-5qqdx   Ready    worker   35m   v1.36.3
-ci-ln-47ltxtb-f76d1-mrffg-worker-c-rjkpq   Ready    worker   34m   v1.36.3</code></pre>
-</div>
-</div>
+<p>One subnet that spans more than one availability zone.</p>
+</li>
+<li>
+<p>More than one subnet in more than one availability zone.</p>
 </li>
 </ul>
 </div>
-</li>
-</ol>
+<div class="listingblock">
+<div class="title">Sample Azure failure domain values</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: machine.openshift.io/v1
+kind: ControlPlaneMachineSet
+metadata:
+  name: cluster
+  namespace: openshift-machine-api
+spec:
+# ...
+  template:
+# ...
+    machines_v1beta1_machine_openshift_io:
+      failureDomains:
+        azure:
+        - zone: "1"
+          subnet: &lt;subnet_zone_1&gt;
+        - zone: "2"
+          subnet: &lt;subnet_zone_2&gt;
+        - zone: "3"
+          subnet: &lt;subnet_zone_3&gt;
+        platform: Azure
+# ...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>spec.template.machines_v1beta1_machine_openshift_io.failureDomains.azure.zone</code></dt>
+<dd>
+<p>Each instance of <code>zone</code> specifies an Azure availability zone for a failure domain.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If the cluster uses a single zone for all failure domains, the <code>zone</code> parameter is in the provider specification instead of in the failure domain configuration.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</dd>
+<dt class="hdlist1"><code>spec.template.machines_v1beta1_machine_openshift_io.failureDomains.azure.subnet</code></dt>
+<dd>
+<p>Optional: Specifies the network subnet in which to create the control plane VM.
+When omitted, the control plane machine set uses the <code>subnet</code> value from the machine <code>providerSpec</code> template.</p>
+</dd>
+<dt class="hdlist1"><code>spec.template.machines_v1beta1_machine_openshift_io.failureDomains.platform</code></dt>
+<dd>
+<p>Specifies the cloud provider platform name.
+Do not change this value.</p>
+</dd>
+</dl>
 </div>
 </div>
 <div class="sect3">
-<h4 id="connected-to-disconnected-disconnect_convert-a-connected-cluster-to-disconnected">Disconnect the cluster from the network</h4>
+<h4 id="cpmso-yaml-failure-domain-gcp_spread-the-control-plane-across-failure-domains">Sample Google Cloud failure domain configuration</h4>
 <div class="paragraph _abstract">
-<p>After mirroring all the required repositories and configuring your cluster to work as a disconnected cluster, you can disconnect the cluster from the network.</p>
+<p>To prevent downtime for your application due to the failure of a single Google Cloud region, you can configure failure domains in the control plane machine set by configuring appropriate values in the <code>failureDomains</code> section of the <code>ControlPlaneMachineSet</code> object.</p>
+</div>
+<div class="paragraph">
+<p>The control plane machine set concept of a failure domain is analogous to the existing Google Cloud concept of a <a href="https://cloud.google.com/compute/docs/regions-zones"><em>zone</em></a>.
+The <code>ControlPlaneMachineSet</code> CR spreads control plane machines across more than one failure domain when possible.</p>
+</div>
+<div class="paragraph">
+<p>When configuring Google Cloud failure domains in the control plane machine set, you must specify the zone name to use.</p>
+</div>
+<div class="listingblock">
+<div class="title">Sample Google Cloud failure domain values</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: machine.openshift.io/v1
+kind: ControlPlaneMachineSet
+metadata:
+  name: cluster
+  namespace: openshift-machine-api
+spec:
+# ...
+  template:
+# ...
+    machines_v1beta1_machine_openshift_io:
+      failureDomains:
+        gcp:
+        - zone: &lt;gcp_zone_a&gt;
+        - zone: &lt;gcp_zone_b&gt;
+        - zone: &lt;gcp_zone_c&gt;
+        - zone: &lt;gcp_zone_d&gt;
+        platform: GCP
+# ...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>spec.template.machines_v1beta1_machine_openshift_io.failureDomains.gcp.zone</code></dt>
+<dd>
+<p>Each instance of <code>zone</code> specifies a Google Cloud zone for a failure domain.</p>
+</dd>
+<dt class="hdlist1"><code>spec.template.machines_v1beta1_machine_openshift_io.failureDomains.platform</code></dt>
+<dd>
+<p>Specifies the cloud provider platform name.
+Do not change this value.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect3">
+<h4 id="cpmso-yaml-failure-domain-openstack_spread-the-control-plane-across-failure-domains">Sample RHOSP failure domain configuration</h4>
+<div class="paragraph _abstract">
+<p>To prevent downtime for your applications due to the failure of a single Red Hat OpenStack Platform (RHOSP) region, you can configure failure domains in the control plane machine set by configuring appropriate values in the <code>failureDomains</code> section of the <code>ControlPlaneMachineSet</code> object.</p>
+</div>
+<div class="paragraph">
+<p>The control plane machine set concept of a failure domain is analogous to the existing RHOSP concept of an <a href="https://docs.openstack.org/nova/latest/admin/availability-zones.html">availability zone</a>.
+The <code>ControlPlaneMachineSet</code> CR spreads control plane machines across more than one failure domain when possible.</p>
+</div>
+<div class="listingblock">
+<div class="title">Sample OpenStack failure domain values</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: machine.openshift.io/v1
+kind: ControlPlaneMachineSet
+metadata:
+  name: cluster
+  namespace: openshift-machine-api
+spec:
+# ...
+  template:
+# ...
+    machines_v1beta1_machine_openshift_io:
+      failureDomains:
+        openstack:
+        - availabilityZone: nova-az0
+          rootVolume:
+            availabilityZone: cinder-az0
+        - availabilityZone: nova-az1
+          rootVolume:
+            availabilityZone: cinder-az1
+        - availabilityZone: nova-az2
+          rootVolume:
+            availabilityZone: cinder-az2
+        platform: OpenStack
+# ...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>spec.template.machines_v1beta1_machine_openshift_io.failureDomains.openstack</code></dt>
+<dd>
+<p>Specifies the availability zones for the failure domains.
+This example demonstrates the use of more than one Nova availability zone and corresponding Cinder availability zones.</p>
+</dd>
+<dt class="hdlist1"><code>spec.template.machines_v1beta1_machine_openshift_io.failureDomains.platform</code></dt>
+<dd>
+<p>Specifies the cloud provider platform name.
+Do not change this value.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect3">
+<h4 id="cpmso-yaml-failure-domain-vsphere_spread-the-control-plane-across-failure-domains">Sample VMware vSphere failure domain configuration</h4>
+<div class="paragraph _abstract">
+<p>To prevent downtime for your applications due to the failure of a single VMware vSphere region, you can configure failure domains in the control plane machine set by configuring appropriate values in the <code>failureDomains</code> section of the <code>ControlPlaneMachineSet</code> object.</p>
+</div>
+<div class="paragraph">
+<p>On vSphere infrastructure, the cluster-wide infrastructure custom resource definition (CRD), <code>infrastructures.config.openshift.io</code>, defines failure domains for your cluster.
+A failure domain is an infrastructure resource made up of a control plane machine set, a vCenter data center, vCenter datastore, and a network.
+The <code>providerSpec</code> in the <code>ControlPlaneMachineSet</code> custom resource (CR) specifies names for failure domains that the control plane machine set uses to ensure control plane nodes deploy on the appropriate failure domain.</p>
+</div>
+<div class="paragraph">
+<p>By using a failure domain resource, you can use a control plane machine set to deploy control plane machines on separate clusters or data centers.
+A control plane machine set also balances control plane machines across defined failure domains to improve fault tolerance capabilities for your infrastructure.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -2567,164 +2252,316 @@ ci-ln-47ltxtb-f76d1-mrffg-worker-c-rjkpq   Ready    worker   34m   v1.36.3</code
 </td>
 <td class="content">
 <div class="paragraph">
-<p>The Insights Operator is degraded when the cluster loses its Internet connection. You can avoid this problem by temporarily disabling the Insights Operator until you can restore it. For more information, see "Disabling the Insights Operator".</p>
+<p>If you change the <code>ProviderSpec</code> configuration in the <code>ControlPlaneMachineSet</code> CR, the Control Plane Machine Set Operator updates the control plane machines according to your configured update strategy.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="title">Sample VMware vSphere failure domain values</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: machine.openshift.io/v1
+kind: ControlPlaneMachineSet
+metadata:
+  name: cluster
+  namespace: openshift-machine-api
+spec:
+# ...
+  template:
+# ...
+    machines_v1beta1_machine_openshift_io:
+      failureDomains:
+        vsphere:
+        - name: &lt;failure_domain_name_1&gt;
+        - name: &lt;failure_domain_name_2&gt;
+        platform: VSphere
+# ...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>spec.template.machines_v1beta1_machine_openshift_io.failureDomains.vsphere.name</code></dt>
+<dd>
+<p>Each instance of <code>name</code> specifies a failure domain.</p>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Each <code>name</code> field value in the stanza must match the corresponding value in the <code>failureDomains.name</code> field of the cluster-wide infrastructure CRD.
+You can find the value of the <code>failureDomains.name</code> field by running the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get infrastructure cluster -o=jsonpath={.spec.platformSpec.vsphere.failureDomains[0].name}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>name</code> field is the only supported failure domain field that you can specify in the <code>ControlPlaneMachineSet</code> CR.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>For an example of a cluster-wide infrastructure CRD that defines resources for each failure domain, see "Specifying multiple regions and zones for your cluster on vSphere."</p>
+</div>
+</dd>
+<dt class="hdlist1"><code>spec.template.machines_v1beta1_machine_openshift_io.failureDomains.platform</code></dt>
+<dd>
+<p>Specifies the cloud provider platform name.
+Do not change this value.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect3">
+<h4 id="mapi-failure-domain-nutanix_spread-the-control-plane-across-failure-domains">Failure domains for Nutanix clusters</h4>
+<div class="paragraph _abstract">
+<p>To modify failure domain configurations on a Nutanix cluster, you must modify the cluster infrastructure, control plane machine set, and compute machine set custom resources (CRs) to apply the new configuration.</p>
+</div>
+<div class="paragraph">
+<p>To add or update the failure domain configuration on a Nutanix cluster, you must make coordinated changes to several resources. The following actions are required:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Modify the cluster infrastructure custom resource (CR).</p>
+</li>
+<li>
+<p>Modify the cluster control plane machine set CR.</p>
+</li>
+<li>
+<p>Modify or replace the compute machine set CRs.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>For more information, see "Adding failure domains to an existing Nutanix cluster".</p>
+</div>
+<div class="sect4">
+<h5 id="installation-nutanix-failure-domains-req_spread-the-control-plane-across-failure-domains">Failure domain requirements</h5>
+<div class="paragraph _abstract">
+<p>When planning to use failure domains, you must meet several Nutanix Prism Central, networking, and subnet requirements.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>All Nutanix Prism Element instances must be managed by the same instance of Prism Central. A deployment that is comprised of multiple Prism Central instances is not supported.</p>
+</li>
+<li>
+<p>The machines that make up the Prism Element clusters must reside on the same Ethernet network for failure domains to be able to communicate with each other.</p>
+</li>
+<li>
+<p>A subnet is required in each Prism Element that will be used as a failure domain in the Red&#160;Hat OpenShift Container Platform cluster. When defining these subnets, they must share the same IP address prefix (CIDR) and should contain the virtual IP addresses that the Red&#160;Hat OpenShift Container Platform cluster uses.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="post-installation-configuring-nutanix-failure-domains_spread-the-control-plane-across-failure-domains">Adding failure domains to the Infrastructure CR</h5>
+<div class="paragraph _abstract">
+<p>You add failure domains to an existing Nutanix cluster by modifying its Infrastructure custom resource (CR) (<code>infrastructures.config.openshift.io</code>).</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Tip">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>To ensure high-availability, configure three failure domains.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Edit the Infrastructure CR by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc edit infrastructures.config.openshift.io cluster</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Configure the failure domains.</p>
+<div class="listingblock">
+<div class="title">Example Infrastructure CR with Nutanix failure domains</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">spec:
+  cloudConfig:
+    key: config
+    name: cloud-provider-config
+#...
+  platformSpec:
+    nutanix:
+      failureDomains:
+      - cluster:
+         type: UUID
+         uuid: &lt;uuid&gt;
+        name: &lt;failure_domain_name&gt;
+        subnets:
+        - type: UUID
+          uuid: &lt;network_uuid&gt;
+      - cluster:
+         type: UUID
+         uuid: &lt;uuid&gt;
+        name: &lt;failure_domain_name&gt;
+        subnets:
+        - type: UUID
+          uuid: &lt;network_uuid&gt;
+      - cluster:
+          type: UUID
+          uuid: &lt;uuid&gt;
+        name: &lt;failure_domain_name&gt;
+        subnets:
+        - type: UUID
+          uuid: &lt;network_uuid&gt;
+# ...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>&lt;uuid&gt;</code></dt>
+<dd>
+<p>Specifies the universally unique identifier (UUID) of the Prism Element.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;failure_domain_name&gt;</code></dt>
+<dd>
+<p>Specifies a unique name for the failure domain. The name is limited to 64 or fewer characters, which can include lower-case letters, digits, and a dash (<code>-</code>). The dash cannot be in the leading or ending position of the name.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;network_uuid&gt;</code></dt>
+<dd>
+<p>Specifies one or more UUID for the Prism Element subnet object.
+The CIDR IP address prefix for one of the specified subnets must contain the virtual IP addresses that the Red&#160;Hat OpenShift Container Platform cluster uses.</p>
+<div class="openblock">
+<div class="content">
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Configuring multiple subnets is a Technology Preview feature only. Technology Preview features are not supported with Red&#160;Hat production service level agreements (SLAs) and might not be functionally complete. Red Hat does not recommend using them in production. These features provide early access to upcoming product features, enabling customers to test functionality and provide feedback during the development process.</p>
+</div>
+<div class="paragraph">
+<p>For more information about the support scope of Red Hat Technology Preview features, see <a href="https://access.redhat.com/support/offerings/techpreview/">Technology Preview Features Support Scope</a>.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
 </div>
-<div class="sect3">
-<h4 id="connected-to-disconnected-restore-insights_convert-a-connected-cluster-to-disconnected">Restoring a degraded Insights Operator</h4>
+</div>
+<div class="paragraph">
+<p>To configure multiple subnets in the Infrastructure CR, you must enable the <code>NutanixMultiSubnets</code> feature gate.
+A maximum of 32 subnets for each failure domain (Prism Element) in an Red&#160;Hat OpenShift Container Platform cluster is supported.
+All subnet UUID values must be unique.</p>
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li>
+<p>Save the CR to apply the changes.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="post-installation-adding-nutanix-failure-domains-control-planes_spread-the-control-plane-across-failure-domains">Distributing control planes across failure domains</h5>
 <div class="paragraph _abstract">
-<p>Disconnecting the cluster from the network necessarily causes the cluster to lose the Internet connection. The Insights Operator becomes degraded because it requires access to Red&#160;Hat Lightspeed.</p>
+<p>You distribute control planes across Nutanix failure domains by modifying the control plane machine set custom resource (CR).</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You have configured the failure domains in the cluster&#8217;s Infrastructure custom resource (CR).</p>
+</li>
+<li>
+<p>The control plane machine set custom resource (CR) is in an active state.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>For more information, see documentation on "Red&#160;Hat Lightspeed".</p>
-</div>
-<div class="paragraph">
-<p>Use the following procedure to recover from a degraded Insights Operator.</p>
+<p>For more information on checking the control plane machine set custom resource state, see "Additional resources".</p>
 </div>
 <div class="olist arabic">
 <div class="title">Procedure</div>
 <ol class="arabic">
 <li>
-<p>Edit your <code>.dockerconfigjson</code> file to remove the <code>cloud.openshift.com</code> entry, for example:</p>
+<p>Edit the control plane machine set CR by running the following command:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">"cloud.openshift.com":{"auth":"&lt;hash&gt;","email":"user@example.com"}</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc edit controlplanemachineset.machine.openshift.io cluster -n openshift-machine-api</code></pre>
 </div>
 </div>
 </li>
 <li>
-<p>Save the file.</p>
+<p>Configure the control plane machine set to use failure domains by adding a <code>spec.template.machines_v1beta1_machine_openshift_io.failureDomains</code> stanza.</p>
+<div class="listingblock">
+<div class="title">Example control plane machine set with Nutanix failure domains</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: machine.openshift.io/v1
+kind: ControlPlaneMachineSet
+  metadata:
+    creationTimestamp: null
+    labels:
+      machine.openshift.io/cluster-api-cluster: &lt;cluster_name&gt;
+    name: cluster
+    namespace: openshift-machine-api
+spec:
+# ...
+  template:
+    machineType: machines_v1beta1_machine_openshift_io
+    machines_v1beta1_machine_openshift_io:
+      failureDomains:
+        platform: Nutanix
+        nutanix:
+        - name: &lt;failure_domain_name_1&gt;
+        - name: &lt;failure_domain_name_2&gt;
+        - name: &lt;failure_domain_name_3&gt;
+# ...</code></pre>
+</div>
+</div>
 </li>
 <li>
-<p>Update the cluster secret with the edited <code>.dockerconfigjson</code> file:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc set data secret/pull-secret -n openshift-config --from-file=.dockerconfigjson=./.dockerconfigjson</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Verify that the Insights Operator is no longer degraded:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get co insights</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">NAME       VERSION   AVAILABLE   PROGRESSING   DEGRADED   SINCE
-insights   4.5.41    True        False         False      3d</code></pre>
-</div>
-</div>
+<p>Save your changes.</p>
 </li>
 </ol>
-</div>
-</div>
-<div class="sect3">
-<h4 id="connected-to-disconnected-restore_convert-a-connected-cluster-to-disconnected">Restoring the network</h4>
-<div class="paragraph _abstract">
-<p>If you want to reconnect a disconnected cluster and pull images from online registries, delete the cluster&#8217;s ImageContentSourcePolicy (ICSP) objects. Without the ICSP, pull requests to external registries are no longer redirected to the mirror registry.</p>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>View the ICSP objects in your cluster:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get imagecontentsourcepolicy</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">NAME                 AGE
-mirror-ocp           6d20h
-ocp4-index-0         6d18h
-qe45-index-0         6d15h</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Delete all the ICSP objects you created when disconnecting your cluster:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc delete imagecontentsourcepolicy &lt;icsp_name&gt; &lt;icsp_name&gt; &lt;icsp_name&gt;</code></pre>
-</div>
 </div>
 <div class="paragraph">
-<p>For example:</p>
+<div class="title">Result</div>
+<p>By default, the control plane machine set propagates changes to your control plane configuration automatically. If the cluster is configured to use the <code>OnDelete</code> update strategy, you must replace your control planes manually.</p>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc delete imagecontentsourcepolicy mirror-ocp ocp4-index-0 qe45-index-0</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">imagecontentsourcepolicy.operator.openshift.io "mirror-ocp" deleted
-imagecontentsourcepolicy.operator.openshift.io "ocp4-index-0" deleted
-imagecontentsourcepolicy.operator.openshift.io "qe45-index-0" deleted</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Wait for all the nodes to restart and return to the READY status and verify that the <code>registries.conf</code> file is pointing to the original registries and not the mirror registries:</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Log in to a node:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc debug node/&lt;node_name&gt;</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Set <code>/host</code> as the root directory within the debug shell:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">sh-4.4# chroot /host</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Examine the <code>registries.conf</code> file:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">sh-4.4# cat /etc/containers/registries.conf</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">unqualified-search-registries = ["registry.access.redhat.com", "docker.io"]</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The <code>registry</code> and <code>registry.mirror</code> entries created by the ICSPs you deleted are removed.</p>
-</div>
-</li>
-</ol>
-</div>
-</li>
-</ol>
 </div>
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="about-disconnected-updates-uninstalling-osus_uninstall-osus-from-a-cluster.html">Uninstalling the OpenShift Update Service from a cluster</a> | ↑ Up: <a href="_disconnected_environments.html">Disconnected environments</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="deploying-hosted-control-planes-in-a-disconnected-environment-intro_deploying-hosted-control-planes-in-a-disconnected-environment.html">Deploying hosted control planes in a disconnected environment</a> →</p>
+<p>← Previous: <a href="core-user-password_change-the-core-user-password-for-node-access.html">Change the core user password for node access</a> | ↑ Up: <a href="_administer.html">Administer</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="multi-architecture-configuring-your-cluster_configure-multi-architecture-node-workload-deployments.html">Configuring your cluster with multi-architecture compute machines</a> →</p>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-06 15:08:32 -0500
+Last updated 2026-10-08 18:28:01 -0500
 </div>
 </div>
 <style>

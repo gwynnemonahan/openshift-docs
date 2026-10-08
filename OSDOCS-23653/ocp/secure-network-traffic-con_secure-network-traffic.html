@@ -479,44 +479,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 
 </style>
 <!-- navmap-right-toc-end -->
-<!-- navmap-preview-warning-start -->
-<style>
-  .navmap-preview-warning {
-    background: #fff1f1;
-    border: 2px solid #c9190b;
-    border-radius: 4px;
-    color: #3b0a0a;
-    font-family: "Open Sans", "DejaVu Sans", sans-serif;
-    margin: 1em auto;
-    max-width: 70em;
-    padding: 1em 1.25em;
-  }
-  .navmap-preview-warning strong { color: #a30000; }
-  .navmap-preview-warning details { margin-top: .75em; }
-  .navmap-preview-warning pre {
-    background: #fff;
-    border: 1px solid #d7d7d7;
-    max-height: 20em;
-    overflow: auto;
-    padding: .75em;
-    white-space: pre-wrap;
-  }
-</style>
-<!-- navmap-preview-warning-end -->
 </head>
 <body id="secure-network-traffic-con_secure-network-traffic" class="book toc2 toc-left navmap-has-right-toc">
-<div class="navmap-preview-warning" role="alert"><strong>Preview warning: this preview is incomplete.</strong><p>One or more AsciiDoc includes are missing. Content may be absent from this page or from related pages.</p><details><summary>Show missing-include report</summary><pre>Include preflight failed for maps/ocp/navigation.adoc
-
-Missing include targets:
-  maps/ocp/troubleshoot.adoc:53
-    include::ocp-jobs/use-the-vsphere-problem-detector-operator.adoc[leveloffset=+1]
-    expected: maps/ocp/ocp-jobs/use-the-vsphere-problem-detector-operator.adoc
-
-How to fix these errors:
-  1. Restore or create the expected .adoc file, preserving the path relative to the referring map; or
-  2. Change the include directive to the path of the existing source file if the topic was renamed or moved.
-  Then rerun this audit and the preview. Do not ignore the error: Asciidoctor can otherwise generate incomplete HTML.
-</pre></details><details><summary>How to remediate missing content</summary><ol><li>Restore or create the expected <code>.adoc</code> file at the reported path, including its required content and attributes.</li><li>If the topic was renamed or moved, update the reported <code>include::</code> directive to point to the existing file. The path is relative to the file containing the directive.</li><li>If the topic is intentionally not ready, remove the include from the map and track the content gap separately.</li></ol><p>After fixing the includes, rebuild the preview with <code>./preview-map &lt;distro&gt;</code>.</p></details></div>
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -526,6 +490,8 @@ How to fix these errors:
 
 <ul class="sectlevel2">
 <li><a href="about-kmm_review-kmm-releases-and-updates.html">About the Kernel Module Management Operator</a>
+</li>
+<li><a href="hosted-control-planes-release-notes_hosted-control-planes-release-notes.html">Hosted control planes release notes</a>
 </li>
 </ul>
 </li>
@@ -561,10 +527,6 @@ How to fix these errors:
 <li><a href="coreos-layering-configuring-on_understand-the-on-cluster-mode-of-the-image-mode-for-openshift-feature.html">About on-cluster image mode</a>
 </li>
 <li><a href="coreos-layering-updating_understand-how-to-update-a-cluster-that-uses-the-image-mode-for-openshift.html">Update with a RHCOS custom layered image</a>
-</li>
-<li><a href="network-observability-operator_understand-network-observability-netobserv.html">Network Observability Operator</a>
-</li>
-<li><a href="network-observability-deployment-and-management-con_network-observability-deployment-and-management.html">Network Observability deployment and management</a>
 </li>
 <li><a href="understanding-openshift_evaluate-openshift-platform-capabilities.html">Understand Red&#160;Hat OpenShift Container Platform</a>
 </li>
@@ -909,29 +871,29 @@ How to fix these errors:
 <li><a href="_disconnected_environments.html">Disconnected environments</a>
 
 <ul class="sectlevel2">
-<li><a href="understand-disconnected-environments-intro_understand-disconnected-environments.html">Understand disconnected environments</a>
+<li><a href="understand-disconnected-environments-intro_understand-disconnected-environments.html">Disconnected environment concepts</a>
 </li>
-<li><a href="installing-agent_install-a-cluster-in-a-disconnected-environment.html">Installing a cluster with the Agent-based Installer</a>
+<li><a href="plan-a-disconnected-installation-intro_plan-a-disconnected-installation.html">Plan a disconnected installation</a>
 </li>
-<li><a href="prerequisites_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift.html">Prerequisites</a>
+<li><a href="installing-agent_install-a-cluster-in-a-disconnected-environment.html">Install a cluster with the Agent-based Installer</a>
 </li>
-<li><a href="installation-oc-mirror-v2-about_mirror-images-to-a-mirror-registry-using-oc-mirror-v2.html">About oc-mirror plugin v2</a>
+<li><a href="create-mirror-registry-intro_create-a-mirror-registy-with-mirror-registy-for-red-hat-openshift.html">Create a mirror registry with mirror registry for Red Hat OpenShift</a>
 </li>
-<li><a href="prerequisites_mirror-images-to-a-mirror-registry-using-the-oc-adm-release-mirror-command.html">Prerequisites</a>
+<li><a href="installation-oc-mirror-v2-about_mirror-images-to-a-mirror-registry-using-oc-mirror-v2.html">Mirror images to a mirror registry using oc-mirror v2</a>
 </li>
-<li><a href="oc-mirror-migration-differences_migrate-from-oc-mirror-v1-to-v2.html">Changes from oc-mirror plugin v1 to v2</a>
-</li>
-<li><a href="olm-restricted-network-prereqs_manage-olm-operators-in-a-disconnected-environment.html">Prerequisites</a>
+<li><a href="manage-olm-operators-disconnected-intro_manage-olm-operators-in-a-disconnected-environment.html">Manage OLM Operators in a disconnected environment</a>
 </li>
 <li><a href="mirror-images-for-a-cluster-update-in-a-disconnected-environment-intro_mirror-images-for-a-cluster-update-in-a-disconnected-environment.html">Mirror images for a cluster update in a disconnected environment</a>
 </li>
-<li><a href="update-service-overview_update-a-cluster-in-a-disconnected-environment-using-osus.html">Using the OpenShift Update Service in a disconnected environment</a>
+<li><a href="update-service-overview_update-a-cluster-in-a-disconnected-environment-using-osus.html">Use the OpenShift Update Service in a disconnected environment</a>
 </li>
-<li><a href="updating-cli-prereqs_update-a-cluster-in-a-disconnected-environment-without-using-osus.html">Prerequisites for a cluster update</a>
+<li><a href="update-disconnected_update-a-cluster-in-a-disconnected-environment-without-using-osus.html">Updating the disconnected cluster</a>
 </li>
-<li><a href="about-disconnected-updates-uninstalling-osus_uninstall-osus-from-a-cluster.html">Uninstalling the OpenShift Update Service from a cluster</a>
+<li><a href="about-disconnected-updates-uninstalling-osus_uninstall-osus-from-a-cluster.html">Uninstall the OpenShift Update Service from a cluster</a>
 </li>
-<li><a href="installation-about-mirror-registry_convert-a-connected-cluster-to-disconnected.html">About the mirror registry</a>
+<li><a href="configure-trust-and-mirroring-con_configure-trust-and-mirroring.html">Configure trust and mirroring</a>
+</li>
+<li><a href="convert-connected-to-disconnected-intro_convert-a-connected-cluster-to-disconnected.html">Convert a connected cluster to disconnected</a>
 </li>
 <li><a href="deploying-hosted-control-planes-in-a-disconnected-environment-intro_deploying-hosted-control-planes-in-a-disconnected-environment.html">Deploying hosted control planes in a disconnected environment</a>
 </li>
@@ -989,7 +951,7 @@ How to fix these errors:
 </li>
 <li><a href="core-user-password_change-the-core-user-password-for-node-access.html">Change the core user password for node access</a>
 </li>
-<li><a href="configure-control-plane-failure-domains-con_configure-control-plane-failure-domains.html">Configure control plane failure domains</a>
+<li><a href="spread-the-control-plane-across-failure-domains-con_spread-the-control-plane-across-failure-domains.html">Spread the control plane across failure domains</a>
 </li>
 <li><a href="multi-architecture-configuring-your-cluster_configure-multi-architecture-node-workload-deployments.html">Configuring your cluster with multi-architecture compute machines</a>
 </li>
@@ -1029,6 +991,12 @@ How to fix these errors:
 </li>
 <li><a href="manage-the-configuration-and-lifecycle-of-control-plane-machines-con_manage-the-configuration-and-lifecycle-of-control-plane-machines.html">Manage the configuration and lifecycle of control plane machines</a>
 </li>
+<li><a href="manage-the-configuration-and-lifecycle-of-compute-machines-con_manage-the-configuration-and-lifecycle-of-compute-machines.html">Manage the configuration and lifecycle of compute machines</a>
+</li>
+<li><a href="identify-and-group-compute-machines-con_identify-and-group-compute-machines.html">Identify and group compute machines</a>
+</li>
+<li><a href="identify-and-group-control-plane-machines-con_identify-and-group-control-plane-machines.html">Identify and group control plane machines</a>
+</li>
 <li><a href="multi-architecture-scheduling_manage-workloads-on-multi-architecture-clusters.html">Scheduled workloads on clusters with multi-architecture compute machines</a>
 </li>
 <li><a href="hcp-import-intro_manually-import-a-hosted-cluster.html">Manually importing a hosted cluster</a>
@@ -1063,7 +1031,7 @@ How to fix these errors:
 </li>
 <li><a href="machine-health-checks-about_understand-machine-health-check-behavior.html">About machine health checks</a>
 </li>
-<li><a href="machine-about-phases_understand-the-machine-lifecycle.html">Machine phases</a>
+<li><a href="understand-the-machine-lifecycle-con_understand-the-machine-lifecycle.html">Understand the machine lifecycle</a>
 </li>
 <li><a href="understand-the-out-of-cluster-mode-of-the-image-mode-for-openshift-feature-con_understand-the-out-of-cluster-mode-of-the-image-mode-for-openshift-feature.html">Understand the out-of-cluster mode of the Image Mode for OpenShift feature</a>
 </li>
@@ -1127,8 +1095,6 @@ How to fix these errors:
 </li>
 <li><a href="configure-multi-tenant-namespace-isolation-con_configure-multi-tenant-namespace-isolation.html">Configure multi-tenant namespace isolation</a>
 </li>
-<li><a href="configure-the-network-observability-operator-flowcollector-con_configure-the-network-observability-operator-flowcollector.html">Configure the Network Observability Operator FlowCollector</a>
-</li>
 <li><a href="define-how-much-disk-space-a-single-container-on-my-nodes-can-use-for-its-files-and-layers-con_define-how-much-disk-space-a-single-container-on-my-nodes-can-use-for-its-files-and-layers.html">Define how much disk space a single container can use</a>
 </li>
 <li><a href="define-the-maximum-size-of-the-container-log-file-before-it-is-rotated-con_define-the-maximum-size-of-the-container-log-file-before-it-is-rotated.html">Define the maximum size of the container log file before it is rotated</a>
@@ -1185,7 +1151,7 @@ How to fix these errors:
 </li>
 <li><a href="about-kmm_manage-kernel-modules-across-cluster-nodes.html">About the Kernel Module Management Operator</a>
 </li>
-<li><a href="installation-oc-mirror-v2-about_mirror-container-images-to-a-local-registry.html">About oc-mirror plugin v2</a>
+<li><a href="installation-oc-mirror-v2-about_mirror-container-images-to-a-local-registry.html">Mirror images to a mirror registry using oc-mirror v2</a>
 </li>
 <li><a href="organize-image-versions-with-tags-con_organize-image-versions-with-tags.html">Organize image versions with tags</a>
 </li>
@@ -1211,11 +1177,13 @@ How to fix these errors:
 </li>
 <li><a href="cpmso-feat-auto-update_apply-configuration-changes-to-control-plane-machines-with-automation.html">Automatic updates to the control plane configuration</a>
 </li>
-<li><a href="change-the-configuration-of-compute-machines-by-updating-a-compute-machine-set-con_change-the-configuration-of-compute-machines-by-updating-a-compute-machine-set.html">Change the configuration of compute machines by updating a compute machine set</a>
+<li><a href="change-the-configuration-of-compute-machines-by-updating-compute-machine-resources-con_change-the-configuration-of-compute-machines-by-updating-compute-machine-resources.html">Change the configuration of compute machines by updating compute machine resources</a>
+</li>
+<li><a href="enable-automated-machine-management-on-user-provisioned-infrastructure-con_enable-automated-machine-management-on-user-provisioned-infrastructure.html">Enable automated machine management on user-provisioned infrastructure</a>
 </li>
 <li><a href="apply-configuration-changes-to-compute-machines-with-automation-con_apply-configuration-changes-to-compute-machines-with-automation.html">Apply configuration changes to compute machines with automation</a>
 </li>
-<li><a href="mapi-to-capi-migration-overview_change-the-authoritative-api-for-machine-management-resources.html">Machine API to Cluster API resource migration</a>
+<li><a href="change-the-authoritative-api-for-machine-management-resources-con_change-the-authoritative-api-for-machine-management-resources.html">Change the authoritative API for machine management resources</a>
 </li>
 <li><a href="private-clusters-about_configure-a-private-cluster.html">About private clusters</a>
 </li>
@@ -1304,7 +1272,31 @@ How to fix these errors:
 </li>
 <li><a href="configure-high-performance-networking-con_configure-high-performance-networking.html">Configure high-performance networking</a>
 </li>
+<li><a href="network-observability-operator_understand-network-observability-netobserv.html">Network Observability Operator</a>
+</li>
+<li><a href="evaluate-network-observability-prerequisites-and-requirements-con_evaluate-network-observability-prerequisites-and-requirements.html">Evaluate network observability prerequisites and requirements</a>
+</li>
+<li><a href="network-observability-deployment-and-management-con_network-observability-deployment-and-management.html">Network Observability deployment and management</a>
+</li>
+<li><a href="verify-network-observability-installation-intro_verify-network-observability-installation.html">Verify Network Observability installation</a>
+</li>
+<li><a href="configure-the-network-observability-operator-flowcollector-con_configure-the-network-observability-operator-flowcollector.html">Configure the Network Observability Operator FlowCollector</a>
+</li>
+<li><a href="control-network-policies-and-access-for-network-observability-operator-con_control-network-policies-and-access-for-network-observability-operator.html">Control network policies and access for the Network Observability Operator</a>
+</li>
+<li><a href="secure-network-observability-data-con_secure-network-observability-data.html">Secure network observability data</a>
+</li>
 <li><a href="network-observability-operator_network-flow-visibility.html">Network Observability Operator</a>
+</li>
+<li><a href="network-observability-network-traffic-overview-view_monitor-network-traffic-with-network-observability.html">Observe the network traffic from the Overview view</a>
+</li>
+<li><a href="network-observability-health-dashboard-overview_verify-security-and-network-observability-operator-health.html">Health dashboards</a>
+</li>
+<li><a href="configure-network-traffic-flowlogs-pipeline-kafka_troubleshoot-network-issues-136-diagnose-network-flow-issues-netobserv.html">Flowlogs-Pipeline does not consume network flows after installing Kafka</a>
+</li>
+<li><a href="network-observability-integration-intro_network-observability-integration.html">Network Observability integration</a>
+</li>
+<li><a href="upgrade-network-observability-operator-version-con_upgrade-network-observability-operator-version.html">Upgrade the Network Observability Operator version</a>
 </li>
 </ul>
 </li>
@@ -1461,6 +1453,18 @@ How to fix these errors:
 </li>
 <li><a href="configure-confidential-vms-con_configure-confidential-vms.html">Configure confidential VMs</a>
 </li>
+<li><a href="isolate-compute-machines-from-other-tenants-con_isolate-compute-machines-from-other-tenants.html">Isolate compute machines from other tenants</a>
+</li>
+<li><a href="protect-the-instance-metadata-endpoint-for-compute-machines-con_protect-the-instance-metadata-endpoint-for-compute-machines.html">Protect the instance metadata endpoint for compute machines</a>
+</li>
+<li><a href="harden-boot-integrity-for-compute-machines-con_harden-boot-integrity-for-compute-machines.html">Harden boot integrity for compute machines</a>
+</li>
+<li><a href="isolate-control-plane-machines-from-other-tenants-con_isolate-control-plane-machines-from-other-tenants.html">Isolate control plane machines from other tenants</a>
+</li>
+<li><a href="protect-the-instance-metadata-endpoint-for-control-plane-machines-con_protect-the-instance-metadata-endpoint-for-control-plane-machines.html">Protect the instance metadata endpoint for control plane machines</a>
+</li>
+<li><a href="harden-boot-integrity-for-control-plane-machines-con_harden-boot-integrity-for-control-plane-machines.html">Harden boot integrity for control plane machines</a>
+</li>
 <li><a href="connect-workloads-to-additional-networks-con_connect-workloads-to-additional-networks.html">Connect workloads to additional networks</a>
 </li>
 <li><a href="nw-multi-network-policy-differences_control-traffic-on-secondary-networks.html">Differences between multi-network policy and network policy</a>
@@ -1496,8 +1500,6 @@ How to fix these errors:
 </li>
 <li><a href="monitor-network-performance-con_monitor-network-performance.html">Monitor network performance</a>
 </li>
-<li><a href="network-observability-deployment-and-management-113-control-automatic-installation-during-cluster-creation-con_network-observability-deployment-and-management-113-control-automatic-installation-during-cluster-creation.html">Control automatic installation during cluster creation</a>
-</li>
 <li><a href="nw-networkpolicy-audit-concept_observe-audit-and-review-policy-enforcement.html">Audit logging</a>
 </li>
 <li><a href="performance-investigation-con_performance-investigation.html">Performance investigation</a>
@@ -1532,8 +1534,6 @@ How to fix these errors:
 <li><a href="configure-external-dns-integration-con_configure-external-dns-integration.html">Configure External DNS integration</a>
 </li>
 <li><a href="automate-cicd-with-image-streams-intro_automate-cicd-with-image-streams.html">Automate CI/CD with image streams</a>
-</li>
-<li><a href="network-observability-deployment-and-management-con_network-observability-deployment-and-management.html">Network Observability deployment and management</a>
 </li>
 </ul>
 </li>
@@ -1574,7 +1574,7 @@ How to fix these errors:
 </li>
 <li><a href="nodes-nodes-managing-max-pods-proc_adjust-maximum-number-of-pods-on-a-node.html">Configure the maximum number of pods per node</a>
 </li>
-<li><a href="machineset-manually-scaling_scale-compute-resources.html">Scale a compute machine set manually</a>
+<li><a href="scale-compute-resources-con_scale-compute-resources.html">Scale workloads to match demand</a>
 </li>
 <li><a href="nodes-cluster-resource-configure-about_configure-cluster-memory-to-meet-container-memory-and-risk-requirements.html">Understanding how to manage application memory</a>
 </li>
@@ -1614,7 +1614,7 @@ How to fix these errors:
 </li>
 <li><a href="infrastructure-components_separate-infrastructure-machines-from-machines-that-run-workloads.html">Red&#160;Hat OpenShift Container Platform infrastructure components</a>
 </li>
-<li><a href="machine-mgmt-intro-managing-compute_scale-the-number-of-compute-machines-that-use-a-specific-configuration.html">Compute machine management</a>
+<li><a href="scale-compute-capacity-con_scale-compute-capacity.html">Scale compute capacity</a>
 </li>
 <li><a href="machine-mgmt-intro-add-for-upi_add-compute-machines-manually.html">Compute machine creation on user-provisioned infrastructure</a>
 </li>
@@ -1622,11 +1622,25 @@ How to fix these errors:
 </li>
 <li><a href="machineset-label-gpu-autoscaler_label-gpu-machine-sets-for-autoscaler.html">Label GPU machine sets for the cluster autoscaler</a>
 </li>
-<li><a href="machineset-non-guaranteed-instance_creating-machineset-aws.html">Machine sets that deploy machines as Spot Instances</a>
+<li><a href="use-interruptible-capacity-for-lower-cost-machines-con_use-interruptible-capacity-for-lower-cost-machines.html">Use interruptible capacity for lower-cost machines</a>
 </li>
-<li><a href="machineset-capacity-reservation_creating-machineset-aws.html">Configure Capacity Reservations by using machine sets</a>
+<li><a href="reserve-capacity-for-planned-workloads-con_reserve-capacity-for-planned-workloads.html">Reserve capacity for planned workloads</a>
 </li>
-<li><a href="nvidia-gpu-aws-adding-a-gpu-node_add-gpu-nodes-to-machine-sets.html">Add a GPU node to an existing Red&#160;Hat OpenShift Container Platform cluster</a>
+<li><a href="reserve-capacity-for-planned-control-plane-workloads-con_reserve-capacity-for-planned-control-plane-workloads.html">Reserve capacity for planned control plane workloads</a>
+</li>
+<li><a href="accelerate-workloads-with-gpus-con_accelerate-workloads-with-gpus.html">Accelerate workloads with GPUs</a>
+</li>
+<li><a href="improve-network-performance-for-compute-machines-con_improve-network-performance-for-compute-machines.html">Improve network performance for compute machines</a>
+</li>
+<li><a href="improve-network-performance-for-control-plane-machines-con_improve-network-performance-for-control-plane-machines.html">Improve network performance for control plane machines</a>
+</li>
+<li><a href="improve-storage-performance-for-compute-machines-con_improve-storage-performance-for-compute-machines.html">Improve storage performance for compute machines</a>
+</li>
+<li><a href="improve-storage-performance-for-control-plane-machines-con_improve-storage-performance-for-control-plane-machines.html">Improve storage performance for control plane machines</a>
+</li>
+<li><a href="keep-data-off-the-root-volume-for-compute-machines-con_keep-data-off-the-root-volume-for-compute-machines.html">Keep data off the root volume for compute machines</a>
+</li>
+<li><a href="keep-data-off-the-root-volume-for-control-plane-machines-con_keep-data-off-the-root-volume-for-control-plane-machines.html">Keep data off the root volume for control plane machines</a>
 </li>
 </ul>
 </li>
@@ -1672,8 +1686,6 @@ How to fix these errors:
 </li>
 <li><a href="cnf-measuring-latency_validate-node-performance-with-latency-tests.html">Measuring latency</a>
 </li>
-<li><a href="verify-network-observability-installation-intro_verify-network-observability-installation.html">Verify Network Observability installation</a>
-</li>
 </ul>
 </li>
 <li><a href="_troubleshoot.html">Troubleshoot</a>
@@ -1690,6 +1702,8 @@ How to fix these errors:
 <li><a href="restart-hosted-control-plane-components-and-pause-reconciliation-con_restart-hosted-control-plane-components-and-pause-reconciliation.html">Restart hosted control plane components and pause reconciliation</a>
 </li>
 <li><a href="troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-bare-metal-con_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-bare-metal.html">Troubleshoot hosted clusters on bare metal</a>
+</li>
+<li><a href="troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-ibmz-con_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-ibmz.html">Troubleshoot hosted clusters on IBM Z</a>
 </li>
 <li><a href="troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-openshift-virtualization-con_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-openshift-virtualization.html">Troubleshoot hosted clusters on OpenShift Virtualization</a>
 </li>
@@ -1708,6 +1722,8 @@ How to fix these errors:
 <li><a href="hcp-backup-etcd-snapshot-restore_control-plane-disaster-recovery.html">Restoring etcd data by using the etcd snapshot method</a>
 </li>
 <li><a href="nw-pod-network-connectivity-checks_troubleshoot-network-issues.html">Connection health checks that are performed</a>
+</li>
+<li><a href="troubleshoot-network-issues-diagnose-node-networking-and-ovs-con_troubleshoot-network-issues-diagnose-node-networking-and-ovs.html">Diagnose node networking and Open vSwitch</a>
 </li>
 <li><a href="restore-replace-unhealthy-etcd-member_replace-unhealthy-etcd-members.html">Replacing the unhealthy etcd member</a>
 </li>
@@ -1737,7 +1753,7 @@ How to fix these errors:
 </li>
 <li><a href="nw-pod-network-connectivity-checks_troubleshoot-connectivity-and-internal-subnets.html">Connection health checks that are performed</a>
 </li>
-<li><a href="investigating-why-windows-machine-compute-node_troubleshoot-machine-management.html">Investigating why Windows Machine does not become compute node</a>
+<li><a href="troubleshoot-machine-management-con_troubleshoot-machine-management.html">Troubleshoot machine management</a>
 </li>
 <li><a href="control-plane-backup-restore-operations-overview_investigate-an-active-cluster-issue.html">Control plane backup and restore operations</a>
 </li>
@@ -1747,21 +1763,15 @@ How to fix these errors:
 </li>
 <li><a href="oadp-performance-network-requirements_troubleshoot-node-performance-issues-collect-node-profiling-data.html">OADP network requirements</a>
 </li>
-<li><a href="network-observability-operator-stub_troubleshoot-network-issues-1362-execute-localized-network-diagnostics-using-the-oc-netobserv-cli.html">Network Observability Operator features</a>
-</li>
 <li><a href="adminnetworkpolicy_troubleshoot-network-issues-132-troubleshoot-network-policies.html">AdminNetworkPolicy</a>
 </li>
 <li><a href="nw-ingress-sharding-route-labels_troubleshoot-network-issues-133-troubleshoot-ingress-and-routes.html">Configure Ingress Controller sharding by using route labels</a>
-</li>
-<li><a href="configure-network-traffic-flowlogs-pipeline-kafka_troubleshoot-network-issues-136-diagnose-network-flow-issues-netobserv.html">Flowlogs-Pipeline does not consume network flows after installing Kafka</a>
 </li>
 <li><a href="investigating-master-node-installation-issues_troubleshoot-network-issues-131-access-cluster-nodes-for-diagnostics.html">Investigating control plane node installation issues</a>
 </li>
 <li><a href="troubleshoot-ovn-kubernetes-networking-issues-con_troubleshoot-ovn-kubernetes-networking-issues.html">Troubleshoot OVN-Kubernetes networking issues</a>
 </li>
 <li><a href="adding-network-attachment-definition-to-pods_troubleshoot-network-issues-135-trace-openflow-with-ovnkube-trace.html">Add the network attachment definition to your pods</a>
-</li>
-<li><a href="network-observability-health-rules-and-performance_troubleshoot-network-issues-1361-investigate-packet-drops-netobserv.html">Identify network issues with automated health rules</a>
 </li>
 <li><a href="nw-pod-network-connectivity-checks_configure-and-maintain-the-pod-network-cni-225-diagnose-and-resolve-node-network-configuration-errors.html">Connection health checks that are performed</a>
 </li>
@@ -1772,6 +1782,8 @@ How to fix these errors:
 <li><a href="control-plane-backup-restore-operations-overview_high-availability-and-disaster-recovery-for-hosted-control-planes-automated-disaster-recovery-for-a-hosted-cluster-by-using-oadp.html">Control plane backup and restore operations</a>
 </li>
 <li><a href="investigating-master-node-installation-issues_manage-kernel-modules-across-cluster-nodes-troubleshoot-kernel-module-loading-issues.html">Investigating control plane node installation issues</a>
+</li>
+<li><a href="troubleshoot-operating-system-issues-con_troubleshoot-operating-system-issues.html">Troubleshoot operating system issues</a>
 </li>
 <li><a href="nw-ovn-kubernetes-pod-connectivity-checks_connectivity-troubleshooting-11-diagnose-failed-connections-between-pods-and-services.html">Checking the OVN-Kubernetes pod network connectivity</a>
 </li>
@@ -1799,7 +1811,13 @@ How to fix these errors:
 </li>
 <li><a href="gathering-operator-logs_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools.html">Gathering Operator logs</a>
 </li>
-<li><a href="oadp-running-must-gather_investigate-an-active-cluster-issue-collect-comprehensive-data-for-vendor-support.html">Using the must-gather tool</a>
+<li><a href="collect-comprehensive-data-for-vendor-support-con_investigate-an-active-cluster-issue-collect-comprehensive-data-for-vendor-support.html">Collect comprehensive data for vendor support</a>
+</li>
+<li><a href="collect-host-sosreports-and-journal-logs-con_investigate-an-active-cluster-issue-collect-host-sosreports-and-journal-logs.html">Collect host sosreports and journal logs</a>
+</li>
+<li><a href="capture-network-traces-for-support-con_investigate-an-active-cluster-issue-capture-network-traces-for-support.html">Capture network traces for support</a>
+</li>
+<li><a href="use-host-toolbox-for-diagnostics-con_investigate-an-active-cluster-issue-use-host-toolbox-for-diagnostics.html">Use the host toolbox for diagnostics</a>
 </li>
 <li><a href="understanding-oc-log-levels_investigate-an-active-cluster-issue-summarize-cluster-specifications.html">Understanding OpenShift CLI (<code>oc</code>) log levels</a>
 </li>
@@ -1829,6 +1847,12 @@ How to fix these errors:
 </li>
 <li><a href="control-plane-backup-restore-operations-overview_encrypt-etcd-test-restore-procedures.html">Control plane backup and restore operations</a>
 </li>
+<li><a href="troubleshoot-clusters-that-use-the-cluster-api-con_troubleshoot-clusters-that-use-the-cluster-api.html">Troubleshoot clusters that use the Cluster API</a>
+</li>
+<li><a href="troubleshoot-the-control-plane-machine-set-con_troubleshoot-the-control-plane-machine-set.html">Troubleshoot the control plane machine set</a>
+</li>
+<li><a href="collect-console-logs-from-machines-that-fail-to-boot-con_collect-console-logs-from-machines-that-fail-to-boot.html">Collect console logs from machines that fail to boot</a>
+</li>
 </ul>
 </li>
 <li><a href="_reference.html">Reference</a>
@@ -1843,7 +1867,7 @@ How to fix these errors:
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#security-network-namespaces_secure-network-traffic">Use network namespaces</a></li><li class="level-4"><a href="#security-network-policies_secure-network-traffic">Isolate pods with network policies</a></li><li class="level-4"><a href="#security-network-multiple-pod_secure-network-traffic">Use multiple pod networks</a></li><li class="level-4"><a href="#security-network-isolating_secure-network-traffic">Isolate applications</a></li><li class="level-4"><a href="#security-network-ingress_secure-network-traffic">Secure ingress traffic</a></li><li class="level-4"><a href="#security-network-egress_secure-network-traffic">Secure egress traffic</a></li><li class="level-4"><a href="#configure-tls-for-ingress-con_configure-tls-for-ingress">Configure TLS for ingress</a></li><li class="level-5"><a href="#nw-ingress-creating-an-edge-route-with-a-custom-certificate_configure-tls-for-ingress">Create an edge route with a custom certificate</a></li><li class="level-5"><a href="#nw-ingress-creating-a-reencrypt-route-with-a-custom-certificate_configure-tls-for-ingress">Create a re-encrypt route with a custom certificate</a></li><li class="level-5"><a href="#nw-ingress-creating-a-passthrough-route_configure-tls-for-ingress">Create a passthrough route</a></li><li class="level-5"><a href="#nw-ingress-route-secret-load-external-cert_configure-tls-for-ingress">Create a route with externally managed certificates</a></li><li class="level-5"><a href="#nw-enabling-hsts_configure-tls-for-ingress">HTTP Strict Transport Security</a></li><li class="level-6"><a href="#nw-enabling-hsts-per-route_configure-tls-for-ingress">Enable HTTP Strict Transport Security per-route</a></li><li class="level-6"><a href="#nw-disabling-hsts_configure-tls-for-ingress">Disable HTTP Strict Transport Security per-route</a></li><li class="level-6"><a href="#nw-enforcing-hsts-per-domain_configure-tls-for-ingress">Enforce HTTP Strict Transport Security per-domain</a></li><li class="level-5"><a href="#understanding-default-ingress_configure-tls-for-ingress">Understand the default ingress certificate</a></li><li class="level-5"><a href="#replacing-default-ingress_configure-tls-for-ingress">Replace the default ingress certificate</a></li><li class="level-5"><a href="#tls-profiles-ingress-configuring_configure-tls-for-ingress">Configure the TLS security profile for the Ingress Controller</a></li><li class="level-4"><a href="#nw-egress-firewall-about_configure-egress-controls">How an egress firewall works in a project</a></li><li class="level-5"><a href="#limitations-of-an-egress-firewall-ovn-k_configure-egress-controls">Limitations of an egress firewall</a></li><li class="level-5"><a href="#policy-rule-order-ovn-k_configure-egress-controls">Matching order for egress firewall policy rules</a></li><li class="level-5"><a href="#domain-name-server-resolution-ovn-k_configure-egress-controls">How Domain Name Server (DNS) resolution works</a></li><li class="level-5"><a href="#nw-coredns-egress-firewall_configure-egress-controls">Improved DNS resolution and resolving wildcard domain names</a></li><li class="level-5"><a href="#nw-egress-firewall-object_configure-egress-controls">EgressFirewall custom resource (CR)</a></li><li class="level-6"><a href="#egress-firewall-rules_configure-egress-controls">EgressFirewall rules</a></li><li class="level-6"><a href="#egress-firewall-example_configure-egress-controls">Example EgressFirewall CR</a></li><li class="level-6"><a href="#configuring-NodeSelector-egfw-example_configure-egress-controls">Example EgressFirewall CR using nodeSelector</a></li><li class="level-5"><a href="#nw-egress-firewall-policy-create_configure-egress-controls">Create an EgressFirewall custom resource (CR)</a></li><li class="level-5"><a href="#nw-egress-firewall-view_configure-egress-controls">View an EgressFirewall custom resource (CR)</a></li><li class="level-5"><a href="#nw-egress-firewall-edit_configure-egress-controls">Edit an EgressFirewall custom resource (CR)</a></li><li class="level-5"><a href="#nw-egress-firewall-delete_configure-egress-controls">Remove an EgressFirewall CR</a></li><li class="level-5"><a href="#nw-egress-ips-about_configure-egress-controls">Egress IP address architectural design and implementation</a></li><li class="level-6"><a href="#nw-egress-ips-platform-support_configure-egress-controls">Platform support</a></li><li class="level-6"><a href="#nw-egress-ips-public-cloud-platform-considerations_configure-egress-controls">Public cloud platform considerations</a></li><li class="level-6"><a href="#nw-egress-ips-multi-nic-considerations_configure-egress-controls">Considerations for using an egress IP address on additional network interfaces</a></li><li class="level-6"><a href="#nw-egress-ips-node-architecture_configure-egress-controls">Architectural diagram of an egress IP address configuration</a></li><li class="level-5"><a href="#nw-egress-ips-object_configure-egress-controls">EgressIP object</a></li><li class="level-5"><a href="#nw-egress-ips-considerations_configure-egress-controls">Assignment of egress IPs to a namespace, nodes, and pods</a></li><li class="level-5"><a href="#nw-egress-ips-assign_configure-egress-controls">Assign an egress IP address to a namespace</a></li><li class="level-5"><a href="#egressip_failover_concept_configure-egress-controls">Understand EgressIP failover control</a></li><li class="level-6"><a href="#egressip_configure_failover_task_configure-egress-controls">Configure the EgressIP failover time limit</a></li><li class="level-6"><a href="#egressip_failover_reference_configure-egress-controls">EgressIP failover settings</a></li><li class="level-5"><a href="#nw-egress-ips-node_configure-egress-controls">Label a node to host egress IP addresses</a></li><li class="level-5"><a href="#nw-egress-ips-object-dual-stack_configure-egress-controls">Configure dual-stack networking for an EgressIP object</a></li><li class="level-5"><a href="#nw-egress-router-about_using-an-egress-router-ovn">About an egress router pod</a></li><li class="level-6"><a href="#nw-egress-router-about-modes_using-an-egress-router-ovn">Egress router modes</a></li><li class="level-6"><a href="#nw-egress-router-about-router-pod-implementation_using-an-egress-router-ovn">Egress router pod implementation</a></li><li class="level-6"><a href="#nw-egress-router-about-deployments_using-an-egress-router-ovn">Deployment considerations</a></li><li class="level-6"><a href="#nw-egress-router-about-failover_using-an-egress-router-ovn">Failover configuration</a></li><li class="level-5"><a href="#nw-egress-router-ovn-cr_deploying-egress-router-ovn-redirection">Egress router custom resource</a></li><li class="level-5"><a href="#nw-egress-router-redirect-mode-ovn_configure-egress-controls">Deploy an egress router in redirect mode</a></li><li class="level-5"><a href="#nw-egress-service-ovn-cr_configure-egress-controls">Egress service custom resource</a></li><li class="level-5"><a href="#nw-egress-service-ovn_configure-egress-controls">Deploy an egress service</a></li><li class="level-4"><a href="#adminnetworkpolicy_secure-network-traffic-configure-administrative-policy-anp-banp-and-northbound-egress-peers">AdminNetworkPolicy</a></li><li class="level-5"><a href="#adminnetworkpolicy-example_secure-network-traffic-configure-administrative-policy-anp-banp-and-northbound-egress-peers">AdminNetworkPolicy example</a></li><li class="level-5"><a href="#adminnetworkpolicy-actions-for-rules_secure-network-traffic-configure-administrative-policy-anp-banp-and-northbound-egress-peers">AdminNetworkPolicy actions for rules</a></li><li class="level-6"><a href="#adminnetworkpolicy-allow-example_secure-network-traffic-configure-administrative-policy-anp-banp-and-northbound-egress-peers">AdminNetworkPolicy Allow example</a></li><li class="level-6"><a href="#adminnetworkpolicy-deny-example_secure-network-traffic-configure-administrative-policy-anp-banp-and-northbound-egress-peers">AdminNetworkPolicy Deny example</a></li><li class="level-6"><a href="#adminnetworkpolicy-pass-example_secure-network-traffic-configure-administrative-policy-anp-banp-and-northbound-egress-peers">AdminNetworkPolicy Pass example</a></li><li class="level-5"><a href="#BaselineAdminNetworkPolicy_secure-network-traffic-configure-administrative-policy-anp-banp-and-northbound-egress-peers">BaselineAdminNetworkPolicy</a></li><li class="level-6"><a href="#baselineddminnetworkpolicy-example_secure-network-traffic-configure-administrative-policy-anp-banp-and-northbound-egress-peers">BaselineAdminNetworkPolicy example</a></li><li class="level-6"><a href="#BaselineAdminNetworkPolicy-default-deny-example_secure-network-traffic-configure-administrative-policy-anp-banp-and-northbound-egress-peers">BaselineAdminNetworkPolicy Deny example</a></li><li class="level-5"><a href="#nw-anp-egress_secure-network-traffic-configure-administrative-policy-anp-banp-and-northbound-egress-peers">Northbound traffic controls for AdminNetworkPolicy and BaselineAdminNetworkPolicy</a></li><li class="level-6"><a href="#egress-traffic-control-towards-cluster-nodes_secure-network-traffic-configure-administrative-policy-anp-banp-and-northbound-egress-peers">Using nodes peer to control egress traffic to cluster nodes</a></li><li class="level-6"><a href="#egress-traffic-control-networks-peer-external-destinations_secure-network-traffic-configure-administrative-policy-anp-banp-and-northbound-egress-peers">Using networks peer to control egress traffic towards external destinations</a></li><li class="level-6"><a href="#combined-nodes-peer-networks-peer-anp_secure-network-traffic-configure-administrative-policy-anp-banp-and-northbound-egress-peers">Using nodes peer and networks peer together</a></li><li class="level-5"><a href="#anp-troubleshooting_secure-network-traffic-configure-administrative-policy-anp-banp-and-northbound-egress-peers">Check creation of ANP</a></li><li class="level-5"><a href="#metrics-commands-anp_secure-network-traffic-configure-administrative-policy-anp-banp-and-northbound-egress-peers">Use nbctl commands for ANP and BANP</a></li><li class="level-5"><a href="#anp-banp-metrics_secure-network-traffic-configure-administrative-policy-anp-banp-and-northbound-egress-peers">Metrics for AdminNetworkPolicy</a></li><li class="level-4"><a href="#nw-ovn-ipsec-modes_configure-network-encryption">Modes of operation</a></li><li class="level-5"><a href="#nw-ovn-ipsec-prerequisites_configure-network-encryption">Prerequisites for IPsec encryption for external traffic</a></li><li class="level-5"><a href="#network-connectivity-requirements-ipsec_configure-network-encryption">Network connectivity requirements when IPsec is enabled</a></li><li class="level-5"><a href="#pod-to-pod-ipsec_configure-network-encryption">IPsec encryption for pod-to-pod traffic</a></li><li class="level-6"><a href="#nw-ovn-ipsec-traffic_configure-network-encryption">Types of network traffic flows encrypted by pod-to-pod IPsec</a></li><li class="level-6"><a href="#nw-ovn-ipsec-encryption_configure-network-encryption">Encryption protocol and IPsec mode</a></li><li class="level-6"><a href="#nw-ovn-ipsec-certificates_configure-network-encryption">Security certificate generation and rotation</a></li><li class="level-5"><a href="#nw-ovn-ipsec-external_configure-network-encryption">IPsec encryption for external traffic</a></li><li class="level-6"><a href="#supported-platforms_configure-network-encryption">Supported platforms</a></li><li class="level-6"><a href="#ipsec-external-limitations_configure-network-encryption">Limitations</a></li><li class="level-5"><a href="#nw-ovn-ipsec-enable_configure-network-encryption">Enable IPsec encryption</a></li><li class="level-5"><a href="#nw-ovn-ipsec-north-south-enable_configure-network-encryption">Configure IPsec encryption for external traffic</a></li><li class="level-5"><a href="#nw-ovn-ipsec-north-south-disable_configure-network-encryption">Disable IPsec encryption for an external IPsec endpoint</a></li><li class="level-5"><a href="#nw-ovn-ipsec-disable_configure-network-encryption">Disable IPsec encryption</a></li><li class="level-4"><a href="#secure-network-traffic-establish-tenant-boundaries-and-project-defaults-con_secure-network-traffic-establish-tenant-boundaries-and-project-defaults">Establish tenant boundaries and project defaults</a></li><li class="level-5"><a href="#modifying-template-for-new-projects_secure-network-traffic-establish-tenant-boundaries-and-project-defaults">Modify the template for new projects</a></li><li class="level-5"><a href="#nw-networkpolicy-project-defaults_secure-network-traffic-establish-tenant-boundaries-and-project-defaults">Add network policies to the new project template</a></li><li class="level-5"><a href="#nw-networkpolicy-multitenant-isolation_secure-network-traffic-establish-tenant-boundaries-and-project-defaults">Configure multitenant isolation by using network policy</a></li><li class="level-4"><a href="#proxy-cert-purpose_configure-cluster-wide-proxy-certificate-trust">Proxy certificate purpose</a></li><li class="level-5"><a href="#proxy-cert-manage-install_configure-cluster-wide-proxy-certificate-trust">Manage proxy certificates during installation</a></li><li class="level-5"><a href="#proxy-cert-location_configure-cluster-wide-proxy-certificate-trust">Proxy certificate location</a></li><li class="level-5"><a href="#proxy-cert-expiration_configure-cluster-wide-proxy-certificate-trust">Proxy certificate expiration</a></li><li class="level-5"><a href="#proxy-cert-services_configure-cluster-wide-proxy-certificate-trust">Services using proxy certificates</a></li><li class="level-5"><a href="#proxy-cert-customization_configure-cluster-wide-proxy-certificate-trust">Proxy certificate customization</a></li><li class="level-5"><a href="#proxy-cert-renewal_configure-cluster-wide-proxy-certificate-trust">Proxy certificate renewal</a></li><li class="level-5"><a href="#cluster-wide-proxy-prereqs_configure-cluster-wide-proxy-certificate-trust">Prerequisites for configuring a cluster-wide proxy</a></li><li class="level-6"><a href="#cluster-wide-proxy-general-prereqs_configure-cluster-wide-proxy-certificate-trust">General requirements</a></li><li class="level-6"><a href="#cluster-wide-proxy-network-prereqs_configure-cluster-wide-proxy-certificate-trust">Network requirements</a></li><li class="level-5"><a href="#configuring-a-proxy-trust-bundle-responsibilities_configure-cluster-wide-proxy-certificate-trust">Responsibilities for additional trust bundles</a></li><li class="level-5"><a href="#configuring-a-proxy-during-installation_configure-cluster-wide-proxy-certificate-trust">Configure a proxy during installation</a></li><li class="level-6"><a href="#configuring-a-proxy-during-installation-ocm_configure-cluster-wide-proxy-certificate-trust">Configure a proxy during installation using OpenShift Cluster Manager</a></li><li class="level-6"><a href="#configuring-a-proxy-during-installation-cli_configure-cluster-wide-proxy-certificate-trust">Configure a proxy during installation using the CLI</a></li><li class="level-5"><a href="#configuring-a-proxy-after-installation_configure-cluster-wide-proxy-certificate-trust">Configure a proxy after installation</a></li><li class="level-6"><a href="#configuring-a-proxy-after-installation-ocm_configure-cluster-wide-proxy-certificate-trust">Configure a proxy after installation using OpenShift Cluster Manager</a></li><li class="level-6"><a href="#configuring-a-proxy-after-installation-cli_configure-cluster-wide-proxy-certificate-trust">Configure a proxy after installation using the CLI</a></li><li class="level-6"><a href="#removing-cluster-wide-proxy_configure-cluster-wide-proxy-certificate-trust">Remove a cluster-wide proxy</a></li><li class="level-6"><a href="#configmap-removing-ca_configure-cluster-wide-proxy-certificate-trust">Remove certificate authorities on a Red Hat OpenShift Container Platform cluster</a></li><li class="level-5"><a href="#ca-bundle-understanding_configure-cluster-wide-proxy-certificate-trust">Understand the CA Bundle certificate</a></li><li class="level-5"><a href="#ca-bundle-replacing_configure-cluster-wide-proxy-certificate-trust">Replace the CA Bundle certificate</a></li><li class="level-4"><a href="#control-network-policies-and-access-for-network-observability-operator-con_control-network-policies-and-access-for-network-observability-operator">Control network policies and access for the Network Observability Operator</a></li><li class="level-5"><a href="#network-observability-deploy-network-policy_control-network-policies-and-access-for-network-observability-operator">Configure network policy by using the FlowCollector custom resource</a></li><li class="level-5"><a href="#network-observability-grant-permissions-custom-namespace-and-secret-access_control-network-policies-and-access-for-network-observability-operator">Grant permissions for custom namespace and secret access</a></li><li class="level-6"><a href="#network-observability-create-cluster-role-bindings-custom-namespace_control-network-policies-and-access-for-network-observability-operator">Create cluster role bindings for a custom namespace</a></li><li class="level-4"><a href="#secure-network-traffic-design-enterprise-baselines-and-recommended-patterns-con_secure-network-traffic-design-enterprise-baselines-and-recommended-patterns">Design enterprise baselines and recommended patterns</a></li><li class="level-5"><a href="#anp-best-practices_secure-network-traffic-design-enterprise-baselines-and-recommended-patterns">Design AdminNetworkPolicy</a></li><li class="level-6"><a href="#considerations-using-banp_secure-network-traffic-design-enterprise-baselines-and-recommended-patterns">Considerations for using BaselineAdminNetworkPolicy</a></li><li class="level-6"><a href="#differences-with-netpol_secure-network-traffic-design-enterprise-baselines-and-recommended-patterns">Differences to consider between AdminNetworkPolicy and NetworkPolicy</a></li><li class="level-5"><a href="#nw-anp-differences-networkpolicy_secure-network-traffic-design-enterprise-baselines-and-recommended-patterns">Key differences between AdminNetworkPolicy and NetworkPolicy custom resources</a></li><li class="level-4"><a href="#how-service-accounts-assume-aws-iam-roles-in-sre-owned-projects_configure-iam-roles-for-aws-operators">How service accounts assume AWS IAM roles in SRE-owned projects</a></li><li class="level-5"><a href="#workflow-for-assuming-aws-iam-roles-in-sre-owned-projects_configure-iam-roles-for-aws-operators">Workflow for assuming AWS IAM roles in Red Hat SRE-owned projects</a></li><li class="level-5"><a href="#how-service-accounts-assume-aws-iam-roles-in-user-defined-projects_configure-iam-roles-for-aws-operators">How service accounts assume AWS IAM roles in user-defined projects</a></li><li class="level-6"><a href="#pod-identity-webhook-workflow-in-user-defined-projects_configure-iam-roles-for-aws-operators">Pod identity webhook workflow in user-defined projects</a></li><li class="level-5"><a href="#assuming-an-aws-iam-role-in-your-own-pods_configure-iam-roles-for-aws-operators">About assuming AWS IAM roles in your own pods</a></li><li class="level-6"><a href="#setting-up-an-aws-iam-role-a-service-account_configure-iam-roles-for-aws-operators">Set up an AWS IAM role for a service account</a></li><li class="level-6"><a href="#creating-a-service-account-in-your-project_configure-iam-roles-for-aws-operators">Create a service account in your project</a></li><li class="level-6"><a href="#creating-an-example-aws-sdk-container-image_configure-iam-roles-for-aws-operators">Create an AWS SDK container image</a></li><li class="level-6"><a href="#deploying-a-pod-that-includes-an-aws-sdk_configure-iam-roles-for-aws-operators">Deploy a pod that includes an AWS SDK</a></li><li class="level-6"><a href="#verifying-the-assumed-iam-role-in-your-pod_configure-iam-roles-for-aws-operators">Verify the assumed IAM role in your pod</a></li><li class="level-5"><a href="#cco-short-term-creds-aws-sts_configure-iam-roles-for-aws-operators">About AWS Security Token Service</a></li><li class="level-6"><a href="#cco-short-term-creds-auth-flow-aws_configure-iam-roles-for-aws-operators">AWS Security Token Service authentication process</a></li><li class="level-6"><a href="#cco-short-term-creds-component-permissions-aws_configure-iam-roles-for-aws-operators">AWS component secret permissions requirements</a></li><li class="level-6"><a href="#cco-short-term-creds-aws-olm_configure-iam-roles-for-aws-operators">OLM-managed Operator support for authentication with AWS STS</a></li><li class="level-4"><a href="#secure-network-observability-data-con_secure-network-observability-data">Secure network observability data</a></li><li class="level-5"><a href="#network-observability-loki-secret_secure-network-observability-data">Create a secret for Loki storage</a></li><li class="level-6"><a href="#network-observability-role-based-access-control-for-loki-logs_secure-network-observability-data">Role-based access control for Loki logs</a></li><li class="level-5"><a href="#network-observability-multi-tenancy_secure-network-observability-data">Enable multi-tenancy in network observability</a></li><li class="level-6"><a href="#network-observability-grant-access-lokistack-secrets_secure-network-observability-data">Grant access to LokiStack secrets</a></li><li class="level-6"><a href="#network-observability-grant-access-kafka-secrets_secure-network-observability-data">Grant access to Kafka secrets</a></li><li class="level-4"><a href="#network-observability-health-dashboard-overview_verify-security-and-network-observability-operator-health">Health dashboards</a></li><li class="level-5"><a href="#network-observability-health-alert-overview_verify-security-and-network-observability-operator-health">Health alerts</a></li><li class="level-5"><a href="#network-observability-dashboard-view_verify-security-and-network-observability-operator-health">View health information</a></li><li class="level-6"><a href="#network-observability-disable-alerts_verify-security-and-network-observability-operator-health">Disable health alerts</a></li><li class="level-5"><a href="#network-observability-netobserv-dashboard-rate-limit-alerts_verify-security-and-network-observability-operator-health">Create Loki rate limit alerts for the NetObserv dashboard</a></li><li class="level-5"><a href="#network-observability-netobserv-dashboard-ebpf-agent-alerts_verify-security-and-network-observability-operator-health">Use the eBPF agent alert</a></li><li class="level-5"><a href="#network-observability-health-rules-and-performance_verify-security-and-network-observability-operator-health">Identify network issues with automated health rules</a></li><li class="level-6"><a href="#importance-of-network-health-monitoring_verify-security-and-network-observability-operator-health">Importance of network health monitoring</a></li><li class="level-6"><a href="#detection-of-network-issues_verify-security-and-network-observability-operator-health">Automated health monitoring</a></li><li class="level-6"><a href="#network-health-monitoring-workflow_verify-security-and-network-observability-operator-health">Network health monitoring workflow</a></li><li class="level-6"><a href="#network-observability-health-rules-monitoring-and-alerting_verify-security-and-network-observability-operator-health">Detect network issues with automated health rules</a></li><li class="level-5"><a href="#network-observability-health-rule-customization_verify-security-and-network-observability-operator-health">Health rule threshold and grouping customization</a></li><li class="level-6"><a href="#network-observability-health-rules-promql-expressions-metadata_verify-security-and-network-observability-operator-health">Health rule query and metadata reference</a></li><li class="level-6"><a href="#network-observability-configuring-custom-health-rules_verify-security-and-network-observability-operator-health">Configure custom health rules</a></li><li class="level-5"><a href="#network-observability-recording-rules-performance-optimization_verify-security-and-network-observability-operator-health">Performance optimization with recording rules</a></li><li class="level-6"><a href="#network-observability-recording-rules-benefits_verify-security-and-network-observability-operator-health">Optimization benefits</a></li><li class="level-6"><a href="#network-observability-alert-vs-recording-comparison_verify-security-and-network-observability-operator-health">Comparison of rule modes</a></li><li class="level-6"><a href="#network-observability-integrating-recording-rules-with-health-dashboard_verify-security-and-network-observability-operator-health">Integrating recording rules with the health dashboard</a></li><li class="level-6"><a href="#network-observability-configuring-custom-recording-rules_verify-security-and-network-observability-operator-health">Optimize dashboard metrics with recording rules</a></li><li class="level-5"><a href="#network-observability-disable-predefined-rules_verify-security-and-network-observability-operator-health">Disable default rules</a></li><li class="level-5"><a href="#network-observability-must-gather_verify-security-and-network-observability-operator-health">Use the must-gather tool</a></li><li class="level-5"><a href="#configure-network-traffic-console_verify-security-and-network-observability-operator-health">Configure network traffic menu entry in the Red Hat OpenShift Container Platform console</a></li><li class="level-5"><a href="#configure-network-traffic-flowlogs-pipeline-kafka_verify-security-and-network-observability-operator-health">Flowlogs-Pipeline does not consume network flows after installing Kafka</a></li><li class="level-5"><a href="#configure-network-traffic-interfaces_verify-security-and-network-observability-operator-health">Failing to see network flows from both br-int and br-ex interfaces</a></li><li class="level-5"><a href="#controller-manager-pod-runs-out-of-memory_verify-security-and-network-observability-operator-health">Network observability controller manager pod runs out of memory</a></li><li class="level-5"><a href="#troubleshooting-query-loki-manually_verify-security-and-network-observability-operator-health">Run custom queries to Loki</a></li><li class="level-5"><a href="#network-observability-troubleshooting-loki-resource-exhausted_verify-security-and-network-observability-operator-health">Troubleshoot Loki ResourceExhausted error</a></li><li class="level-5"><a href="#network-observability-troubleshooting-loki-empty-ring_verify-security-and-network-observability-operator-health">Loki empty ring error</a></li><li class="level-5"><a href="#network-observability-troubleshooting-loki-tenant-rate-limit_verify-security-and-network-observability-operator-health">LokiStack rate limit errors</a></li><li class="level-5"><a href="#network-observability-troubleshooting-large-query-timeout_verify-security-and-network-observability-operator-health">Running a large query results in Loki errors</a></li><li class="level-6"><a href="#_additional_resources_9">Additional resources</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#security-network-namespaces_secure-network-traffic">Use network namespaces</a></li><li class="level-4"><a href="#security-network-policies_secure-network-traffic">Isolate pods with network policies</a></li><li class="level-4"><a href="#security-network-multiple-pod_secure-network-traffic">Use multiple pod networks</a></li><li class="level-4"><a href="#security-network-isolating_secure-network-traffic">Isolate applications</a></li><li class="level-4"><a href="#security-network-ingress_secure-network-traffic">Secure ingress traffic</a></li><li class="level-4"><a href="#security-network-egress_secure-network-traffic">Secure egress traffic</a></li><li class="level-4"><a href="#configure-tls-for-ingress-con_configure-tls-for-ingress">Configure TLS for ingress</a></li><li class="level-5"><a href="#nw-ingress-creating-an-edge-route-with-a-custom-certificate_configure-tls-for-ingress">Create an edge route with a custom certificate</a></li><li class="level-5"><a href="#nw-ingress-creating-a-reencrypt-route-with-a-custom-certificate_configure-tls-for-ingress">Create a re-encrypt route with a custom certificate</a></li><li class="level-5"><a href="#nw-ingress-creating-a-passthrough-route_configure-tls-for-ingress">Create a passthrough route</a></li><li class="level-5"><a href="#nw-ingress-route-secret-load-external-cert_configure-tls-for-ingress">Create a route with externally managed certificates</a></li><li class="level-5"><a href="#nw-enabling-hsts_configure-tls-for-ingress">HTTP Strict Transport Security</a></li><li class="level-6"><a href="#nw-enabling-hsts-per-route_configure-tls-for-ingress">Enable HTTP Strict Transport Security per-route</a></li><li class="level-6"><a href="#nw-disabling-hsts_configure-tls-for-ingress">Disable HTTP Strict Transport Security per-route</a></li><li class="level-6"><a href="#nw-enforcing-hsts-per-domain_configure-tls-for-ingress">Enforce HTTP Strict Transport Security per-domain</a></li><li class="level-5"><a href="#understanding-default-ingress_configure-tls-for-ingress">Understand the default ingress certificate</a></li><li class="level-5"><a href="#replacing-default-ingress_configure-tls-for-ingress">Replace the default ingress certificate</a></li><li class="level-5"><a href="#tls-profiles-ingress-configuring_configure-tls-for-ingress">Configure the TLS security profile for the Ingress Controller</a></li><li class="level-4"><a href="#nw-egress-firewall-about_configure-egress-controls">How an egress firewall works in a project</a></li><li class="level-5"><a href="#limitations-of-an-egress-firewall-ovn-k_configure-egress-controls">Limitations of an egress firewall</a></li><li class="level-5"><a href="#policy-rule-order-ovn-k_configure-egress-controls">Matching order for egress firewall policy rules</a></li><li class="level-5"><a href="#domain-name-server-resolution-ovn-k_configure-egress-controls">How Domain Name Server (DNS) resolution works</a></li><li class="level-5"><a href="#nw-coredns-egress-firewall_configure-egress-controls">Improved DNS resolution and resolving wildcard domain names</a></li><li class="level-5"><a href="#nw-egress-firewall-object_configure-egress-controls">EgressFirewall custom resource (CR)</a></li><li class="level-6"><a href="#egress-firewall-rules_configure-egress-controls">EgressFirewall rules</a></li><li class="level-6"><a href="#egress-firewall-example_configure-egress-controls">Example EgressFirewall CR</a></li><li class="level-6"><a href="#configuring-NodeSelector-egfw-example_configure-egress-controls">Example EgressFirewall CR using nodeSelector</a></li><li class="level-5"><a href="#nw-egress-firewall-policy-create_configure-egress-controls">Create an EgressFirewall custom resource (CR)</a></li><li class="level-5"><a href="#nw-egress-firewall-view_configure-egress-controls">View an EgressFirewall custom resource (CR)</a></li><li class="level-5"><a href="#nw-egress-firewall-edit_configure-egress-controls">Edit an EgressFirewall custom resource (CR)</a></li><li class="level-5"><a href="#nw-egress-firewall-delete_configure-egress-controls">Remove an EgressFirewall CR</a></li><li class="level-5"><a href="#nw-egress-ips-about_configure-egress-controls">Egress IP address architectural design and implementation</a></li><li class="level-6"><a href="#nw-egress-ips-platform-support_configure-egress-controls">Platform support</a></li><li class="level-6"><a href="#nw-egress-ips-public-cloud-platform-considerations_configure-egress-controls">Public cloud platform considerations</a></li><li class="level-6"><a href="#nw-egress-ips-multi-nic-considerations_configure-egress-controls">Considerations for using an egress IP address on additional network interfaces</a></li><li class="level-6"><a href="#nw-egress-ips-node-architecture_configure-egress-controls">Architectural diagram of an egress IP address configuration</a></li><li class="level-5"><a href="#nw-egress-ips-object_configure-egress-controls">EgressIP object</a></li><li class="level-5"><a href="#nw-egress-ips-considerations_configure-egress-controls">Assignment of egress IPs to a namespace, nodes, and pods</a></li><li class="level-5"><a href="#nw-egress-ips-assign_configure-egress-controls">Assign an egress IP address to a namespace</a></li><li class="level-5"><a href="#egressip_failover_concept_configure-egress-controls">Understand EgressIP failover control</a></li><li class="level-6"><a href="#egressip_configure_failover_task_configure-egress-controls">Configure the EgressIP failover time limit</a></li><li class="level-6"><a href="#egressip_failover_reference_configure-egress-controls">EgressIP failover settings</a></li><li class="level-5"><a href="#nw-egress-ips-node_configure-egress-controls">Label a node to host egress IP addresses</a></li><li class="level-5"><a href="#nw-egress-ips-object-dual-stack_configure-egress-controls">Configure dual-stack networking for an EgressIP object</a></li><li class="level-5"><a href="#nw-egress-router-about_using-an-egress-router-ovn">About an egress router pod</a></li><li class="level-6"><a href="#nw-egress-router-about-modes_using-an-egress-router-ovn">Egress router modes</a></li><li class="level-6"><a href="#nw-egress-router-about-router-pod-implementation_using-an-egress-router-ovn">Egress router pod implementation</a></li><li class="level-6"><a href="#nw-egress-router-about-deployments_using-an-egress-router-ovn">Deployment considerations</a></li><li class="level-6"><a href="#nw-egress-router-about-failover_using-an-egress-router-ovn">Failover configuration</a></li><li class="level-5"><a href="#nw-egress-router-ovn-cr_deploying-egress-router-ovn-redirection">Egress router custom resource</a></li><li class="level-5"><a href="#nw-egress-router-redirect-mode-ovn_configure-egress-controls">Deploy an egress router in redirect mode</a></li><li class="level-5"><a href="#nw-egress-service-ovn-cr_configure-egress-controls">Egress service custom resource</a></li><li class="level-5"><a href="#nw-egress-service-ovn_configure-egress-controls">Deploy an egress service</a></li><li class="level-4"><a href="#adminnetworkpolicy_secure-network-traffic-configure-administrative-policy-anp-banp-and-northbound-egress-peers">AdminNetworkPolicy</a></li><li class="level-5"><a href="#adminnetworkpolicy-example_secure-network-traffic-configure-administrative-policy-anp-banp-and-northbound-egress-peers">AdminNetworkPolicy example</a></li><li class="level-5"><a href="#adminnetworkpolicy-actions-for-rules_secure-network-traffic-configure-administrative-policy-anp-banp-and-northbound-egress-peers">AdminNetworkPolicy actions for rules</a></li><li class="level-6"><a href="#adminnetworkpolicy-allow-example_secure-network-traffic-configure-administrative-policy-anp-banp-and-northbound-egress-peers">AdminNetworkPolicy Allow example</a></li><li class="level-6"><a href="#adminnetworkpolicy-deny-example_secure-network-traffic-configure-administrative-policy-anp-banp-and-northbound-egress-peers">AdminNetworkPolicy Deny example</a></li><li class="level-6"><a href="#adminnetworkpolicy-pass-example_secure-network-traffic-configure-administrative-policy-anp-banp-and-northbound-egress-peers">AdminNetworkPolicy Pass example</a></li><li class="level-5"><a href="#BaselineAdminNetworkPolicy_secure-network-traffic-configure-administrative-policy-anp-banp-and-northbound-egress-peers">BaselineAdminNetworkPolicy</a></li><li class="level-6"><a href="#baselineddminnetworkpolicy-example_secure-network-traffic-configure-administrative-policy-anp-banp-and-northbound-egress-peers">BaselineAdminNetworkPolicy example</a></li><li class="level-6"><a href="#BaselineAdminNetworkPolicy-default-deny-example_secure-network-traffic-configure-administrative-policy-anp-banp-and-northbound-egress-peers">BaselineAdminNetworkPolicy Deny example</a></li><li class="level-5"><a href="#nw-anp-egress_secure-network-traffic-configure-administrative-policy-anp-banp-and-northbound-egress-peers">Northbound traffic controls for AdminNetworkPolicy and BaselineAdminNetworkPolicy</a></li><li class="level-6"><a href="#egress-traffic-control-towards-cluster-nodes_secure-network-traffic-configure-administrative-policy-anp-banp-and-northbound-egress-peers">Using nodes peer to control egress traffic to cluster nodes</a></li><li class="level-6"><a href="#egress-traffic-control-networks-peer-external-destinations_secure-network-traffic-configure-administrative-policy-anp-banp-and-northbound-egress-peers">Using networks peer to control egress traffic towards external destinations</a></li><li class="level-6"><a href="#combined-nodes-peer-networks-peer-anp_secure-network-traffic-configure-administrative-policy-anp-banp-and-northbound-egress-peers">Using nodes peer and networks peer together</a></li><li class="level-5"><a href="#anp-troubleshooting_secure-network-traffic-configure-administrative-policy-anp-banp-and-northbound-egress-peers">Check creation of ANP</a></li><li class="level-5"><a href="#metrics-commands-anp_secure-network-traffic-configure-administrative-policy-anp-banp-and-northbound-egress-peers">Use nbctl commands for ANP and BANP</a></li><li class="level-5"><a href="#anp-banp-metrics_secure-network-traffic-configure-administrative-policy-anp-banp-and-northbound-egress-peers">Metrics for AdminNetworkPolicy</a></li><li class="level-4"><a href="#nw-ovn-ipsec-modes_configure-network-encryption">Modes of operation</a></li><li class="level-5"><a href="#nw-ovn-ipsec-prerequisites_configure-network-encryption">Prerequisites for IPsec encryption for external traffic</a></li><li class="level-5"><a href="#network-connectivity-requirements-ipsec_configure-network-encryption">Network connectivity requirements when IPsec is enabled</a></li><li class="level-5"><a href="#pod-to-pod-ipsec_configure-network-encryption">IPsec encryption for pod-to-pod traffic</a></li><li class="level-6"><a href="#nw-ovn-ipsec-traffic_configure-network-encryption">Types of network traffic flows encrypted by pod-to-pod IPsec</a></li><li class="level-6"><a href="#nw-ovn-ipsec-encryption_configure-network-encryption">Encryption protocol and IPsec mode</a></li><li class="level-6"><a href="#nw-ovn-ipsec-certificates_configure-network-encryption">Security certificate generation and rotation</a></li><li class="level-5"><a href="#nw-ovn-ipsec-external_configure-network-encryption">IPsec encryption for external traffic</a></li><li class="level-6"><a href="#supported-platforms_configure-network-encryption">Supported platforms</a></li><li class="level-6"><a href="#ipsec-external-limitations_configure-network-encryption">Limitations</a></li><li class="level-5"><a href="#nw-ovn-ipsec-enable_configure-network-encryption">Enable IPsec encryption</a></li><li class="level-5"><a href="#nw-ovn-ipsec-north-south-enable_configure-network-encryption">Configure IPsec encryption for external traffic</a></li><li class="level-5"><a href="#nw-ovn-ipsec-north-south-disable_configure-network-encryption">Disable IPsec encryption for an external IPsec endpoint</a></li><li class="level-5"><a href="#nw-ovn-ipsec-disable_configure-network-encryption">Disable IPsec encryption</a></li><li class="level-4"><a href="#secure-network-traffic-establish-tenant-boundaries-and-project-defaults-con_secure-network-traffic-establish-tenant-boundaries-and-project-defaults">Establish tenant boundaries and project defaults</a></li><li class="level-5"><a href="#modifying-template-for-new-projects_secure-network-traffic-establish-tenant-boundaries-and-project-defaults">Modify the template for new projects</a></li><li class="level-5"><a href="#nw-networkpolicy-project-defaults_secure-network-traffic-establish-tenant-boundaries-and-project-defaults">Add network policies to the new project template</a></li><li class="level-5"><a href="#nw-networkpolicy-multitenant-isolation_secure-network-traffic-establish-tenant-boundaries-and-project-defaults">Configure multitenant isolation by using network policy</a></li><li class="level-4"><a href="#proxy-cert-purpose_configure-cluster-wide-proxy-certificate-trust">Proxy certificate purpose</a></li><li class="level-5"><a href="#proxy-cert-manage-install_configure-cluster-wide-proxy-certificate-trust">Manage proxy certificates during installation</a></li><li class="level-5"><a href="#proxy-cert-location_configure-cluster-wide-proxy-certificate-trust">Proxy certificate location</a></li><li class="level-5"><a href="#proxy-cert-expiration_configure-cluster-wide-proxy-certificate-trust">Proxy certificate expiration</a></li><li class="level-5"><a href="#proxy-cert-services_configure-cluster-wide-proxy-certificate-trust">Services using proxy certificates</a></li><li class="level-5"><a href="#proxy-cert-customization_configure-cluster-wide-proxy-certificate-trust">Proxy certificate customization</a></li><li class="level-5"><a href="#proxy-cert-renewal_configure-cluster-wide-proxy-certificate-trust">Proxy certificate renewal</a></li><li class="level-5"><a href="#cluster-wide-proxy-prereqs_configure-cluster-wide-proxy-certificate-trust">Prerequisites for configuring a cluster-wide proxy</a></li><li class="level-6"><a href="#cluster-wide-proxy-general-prereqs_configure-cluster-wide-proxy-certificate-trust">General requirements</a></li><li class="level-6"><a href="#cluster-wide-proxy-network-prereqs_configure-cluster-wide-proxy-certificate-trust">Network requirements</a></li><li class="level-5"><a href="#configuring-a-proxy-trust-bundle-responsibilities_configure-cluster-wide-proxy-certificate-trust">Responsibilities for additional trust bundles</a></li><li class="level-5"><a href="#configuring-a-proxy-during-installation_configure-cluster-wide-proxy-certificate-trust">Configure a proxy during installation</a></li><li class="level-6"><a href="#configuring-a-proxy-during-installation-ocm_configure-cluster-wide-proxy-certificate-trust">Configure a proxy during installation using OpenShift Cluster Manager</a></li><li class="level-6"><a href="#configuring-a-proxy-during-installation-cli_configure-cluster-wide-proxy-certificate-trust">Configure a proxy during installation using the CLI</a></li><li class="level-5"><a href="#configuring-a-proxy-after-installation_configure-cluster-wide-proxy-certificate-trust">Configure a proxy after installation</a></li><li class="level-6"><a href="#configuring-a-proxy-after-installation-ocm_configure-cluster-wide-proxy-certificate-trust">Configure a proxy after installation using OpenShift Cluster Manager</a></li><li class="level-6"><a href="#configuring-a-proxy-after-installation-cli_configure-cluster-wide-proxy-certificate-trust">Configure a proxy after installation using the CLI</a></li><li class="level-6"><a href="#removing-cluster-wide-proxy_configure-cluster-wide-proxy-certificate-trust">Remove a cluster-wide proxy</a></li><li class="level-6"><a href="#configmap-removing-ca_configure-cluster-wide-proxy-certificate-trust">Remove certificate authorities on a Red Hat OpenShift Container Platform cluster</a></li><li class="level-5"><a href="#ca-bundle-understanding_configure-cluster-wide-proxy-certificate-trust">Understand the CA Bundle certificate</a></li><li class="level-5"><a href="#ca-bundle-replacing_configure-cluster-wide-proxy-certificate-trust">Replace the CA Bundle certificate</a></li><li class="level-4"><a href="#secure-network-traffic-design-enterprise-baselines-and-recommended-patterns-con_secure-network-traffic-design-enterprise-baselines-and-recommended-patterns">Design enterprise baselines and recommended patterns</a></li><li class="level-5"><a href="#anp-best-practices_secure-network-traffic-design-enterprise-baselines-and-recommended-patterns">Design AdminNetworkPolicy</a></li><li class="level-6"><a href="#considerations-using-banp_secure-network-traffic-design-enterprise-baselines-and-recommended-patterns">Considerations for using BaselineAdminNetworkPolicy</a></li><li class="level-6"><a href="#differences-with-netpol_secure-network-traffic-design-enterprise-baselines-and-recommended-patterns">Differences to consider between AdminNetworkPolicy and NetworkPolicy</a></li><li class="level-5"><a href="#nw-anp-differences-networkpolicy_secure-network-traffic-design-enterprise-baselines-and-recommended-patterns">Key differences between AdminNetworkPolicy and NetworkPolicy custom resources</a></li><li class="level-4"><a href="#how-service-accounts-assume-aws-iam-roles-in-sre-owned-projects_configure-iam-roles-for-aws-operators">How service accounts assume AWS IAM roles in SRE-owned projects</a></li><li class="level-5"><a href="#workflow-for-assuming-aws-iam-roles-in-sre-owned-projects_configure-iam-roles-for-aws-operators">Workflow for assuming AWS IAM roles in Red Hat SRE-owned projects</a></li><li class="level-5"><a href="#how-service-accounts-assume-aws-iam-roles-in-user-defined-projects_configure-iam-roles-for-aws-operators">How service accounts assume AWS IAM roles in user-defined projects</a></li><li class="level-6"><a href="#pod-identity-webhook-workflow-in-user-defined-projects_configure-iam-roles-for-aws-operators">Pod identity webhook workflow in user-defined projects</a></li><li class="level-5"><a href="#assuming-an-aws-iam-role-in-your-own-pods_configure-iam-roles-for-aws-operators">About assuming AWS IAM roles in your own pods</a></li><li class="level-6"><a href="#setting-up-an-aws-iam-role-a-service-account_configure-iam-roles-for-aws-operators">Set up an AWS IAM role for a service account</a></li><li class="level-6"><a href="#creating-a-service-account-in-your-project_configure-iam-roles-for-aws-operators">Create a service account in your project</a></li><li class="level-6"><a href="#creating-an-example-aws-sdk-container-image_configure-iam-roles-for-aws-operators">Create an AWS SDK container image</a></li><li class="level-6"><a href="#deploying-a-pod-that-includes-an-aws-sdk_configure-iam-roles-for-aws-operators">Deploy a pod that includes an AWS SDK</a></li><li class="level-6"><a href="#verifying-the-assumed-iam-role-in-your-pod_configure-iam-roles-for-aws-operators">Verify the assumed IAM role in your pod</a></li><li class="level-5"><a href="#cco-short-term-creds-aws-sts_configure-iam-roles-for-aws-operators">About AWS Security Token Service</a></li><li class="level-6"><a href="#cco-short-term-creds-auth-flow-aws_configure-iam-roles-for-aws-operators">AWS Security Token Service authentication process</a></li><li class="level-6"><a href="#cco-short-term-creds-component-permissions-aws_configure-iam-roles-for-aws-operators">AWS component secret permissions requirements</a></li><li class="level-6"><a href="#cco-short-term-creds-aws-olm_configure-iam-roles-for-aws-operators">OLM-managed Operator support for authentication with AWS STS</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="secure-network-traffic-con_secure-network-traffic">Secure network traffic</h3>
@@ -7101,7 +7125,7 @@ ports               : [5e75f289-8273-4f8a-8798-8c10f7318833, de7e1b71-6184-445d-
 <p>The following table describes the different modes of operation:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 659. IPsec modes of operation</caption>
+<caption class="title">Table 665. IPsec modes of operation</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 60%;">
@@ -7168,7 +7192,7 @@ ports               : [5e75f289-8273-4f8a-8798-8c10f7318833, de7e1b71-6184-445d-
 <p>When IPsec is enabled in Red&#160;Hat OpenShift Container Platform, you must configure the network connectivity between machines to allow cluster components to communicate. Each machine must be able to resolve the hostnames of all other machines in the cluster.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 660. Ports used for all-machine to all-machine communications</caption>
+<caption class="title">Table 666. Ports used for all-machine to all-machine communications</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -8747,7 +8771,7 @@ spec:
 <p>Your proxy must exclude re-encrypting the following OpenShift URLs:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 661. URLs to exclude from egress traffic re-encryption</caption>
+<caption class="title">Table 667. URLs to exclude from egress traffic re-encryption</caption>
 <colgroup>
 <col style="width: 46.1538%;">
 <col style="width: 7.6923%;">
@@ -9396,235 +9420,6 @@ data:
 </div>
 </div>
 <div class="sect3">
-<h4 id="control-network-policies-and-access-for-network-observability-operator-con_control-network-policies-and-access-for-network-observability-operator">Control network policies and access for the Network Observability Operator</h4>
-<div class="paragraph _abstract">
-<p>You can create a network policy for the <code>netobserv</code> namespace to secure inbound and outbound access to the Network Observability Operator. You can also grant the permissions the Operator needs to read secrets and to run in a custom namespace.</p>
-</div>
-<div class="sect4">
-<h5 id="network-observability-deploy-network-policy_control-network-policies-and-access-for-network-observability-operator">Configure network policy by using the FlowCollector custom resource</h5>
-<div class="paragraph _abstract">
-<p>You can set up ingress and egress network policies to control pod traffic. This enhances security and collects only the network flow data you need. This reduces noise, supports compliance, and improves visibility into network communication.</p>
-</div>
-<div class="paragraph">
-<p>You can configure the <code>FlowCollector</code> custom resource (CR) to deploy an egress and ingress network policy for network observability. By default, the <code>spec.NetworkPolicy.enable</code> specification is set to <code>true</code>.</p>
-</div>
-<div class="paragraph">
-<p>If you have installed Loki, Kafka or any exporter in a different namespace that also has a network policy, you must ensure that the network observability components can communicate with them. Consider the following about your setup:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Connection to Loki (as defined in the <code>FlowCollector</code> CR <code>spec.loki</code> parameter)</p>
-</li>
-<li>
-<p>Connection to Kafka (as defined in the <code>FlowCollector</code> CR <code>spec.kafka</code> parameter)</p>
-</li>
-<li>
-<p>Connection to any exporter (as defined in FlowCollector CR <code>spec.exporters</code> parameter)</p>
-</li>
-<li>
-<p>If you are using Loki and including it in the policy target, connection to an external object storage (as defined in your <code>LokiStack</code> related secret)</p>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>In the web console, go to <strong>Ecosystem</strong> &#8594; <strong>Installed Operators</strong> page.</p>
-</li>
-<li>
-<p>Under the <strong>Provided APIs</strong> heading for <strong>Network Observability</strong>, select <strong>Flow Collector</strong>.</p>
-</li>
-<li>
-<p>Select <strong>cluster</strong> then select the <strong>YAML</strong> tab.</p>
-</li>
-<li>
-<p>Configure the <code>FlowCollector</code> CR. A sample configuration is as follows:</p>
-<div id="network-observability-flowcollector-configuring-network-policy_control-network-policies-and-access-for-network-observability-operator" class="listingblock">
-<div class="title">Example <code>FlowCollector</code> CR for network policy</div>
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: flows.netobserv.io/v1beta2
-kind: FlowCollector
-metadata:
-  name: cluster
-spec:
-  namespace: netobserv
-  networkPolicy:
-    enable: true
-    additionalNamespaces: ["openshift-console", "openshift-monitoring"]
-# ...</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>where:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>spec.networkPolicy.enable</code></dt>
-<dd>
-<p>Specifies whether to enable network policy management. The default value is <code>true</code>.</p>
-</dd>
-<dt class="hdlist1"><code>spec.networkPolicy.additionalNamespaces</code></dt>
-<dd>
-<p>Specifies the namespaces to include in the network policy. The default values are <code>["openshift-console", "openshift-monitoring"]</code>.</p>
-</dd>
-</dl>
-</div>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect4">
-<h5 id="network-observability-grant-permissions-custom-namespace-and-secret-access_control-network-policies-and-access-for-network-observability-operator">Grant permissions for custom namespace and secret access</h5>
-<div class="paragraph _abstract">
-<p>Grant RBAC permissions to allow the Network Observability Operator to access secrets across custom or non-default namespaces.</p>
-</div>
-<div class="paragraph">
-<p>For security, the Network Observability Operator does not have cluster-wide permissions to read secrets. You must explicitly grant the required permissions when any of the following conditions apply:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>You configured <code>spec.namespace</code> in the <code>FlowCollector</code> resource to a namespace other than <code>netobserv</code>.</p>
-</li>
-<li>
-<p>You configured the <code>FlowCollector</code> resource with <code>spec.deploymentModel: Kafka</code> and TLS or mTLS enabled.</p>
-</li>
-<li>
-<p>You use the Loki Operator with <code>LokiStack</code> installed in a namespace other than <code>netobserv</code>.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Complete only the procedures that apply to your configuration. If you do not meet any of these conditions, no additional permissions are required.</p>
-</div>
-<div class="sect5">
-<h6 id="network-observability-create-cluster-role-bindings-custom-namespace_control-network-policies-and-access-for-network-observability-operator">Create cluster role bindings for a custom namespace</h6>
-<div class="paragraph _abstract">
-<p>Create cluster role bindings for the Network Observability Operator service accounts when you deploy in a namespace other than the default <code>netobserv</code> namespace.</p>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Important">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Do not modify the existing default bindings. They are overwritten during Operator upgrades. Create new bindings as shown.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>The Network Observability Operator is installed.</p>
-</li>
-<li>
-<p>You have <code>cluster-admin</code> privileges.</p>
-</li>
-<li>
-<p>You configured <code>spec.namespace</code> in the <code>FlowCollector</code> resource to a namespace other than <code>netobserv</code>.</p>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Replace <code>&lt;namespace&gt;</code> with the namespace you configured in <code>spec.namespace</code> of the <code>FlowCollector</code> resource.</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Create the <code>netobserv-informers-custom</code> cluster role binding by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create clusterrolebinding netobserv-informers-custom \
-  --clusterrole=netobserv-informers \
-  --serviceaccount=&lt;namespace&gt;:flowlogs-pipeline \
-  --serviceaccount=&lt;namespace&gt;:flowlogs-pipeline-transformer</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Create the <code>netobserv-lokiwriter-custom</code> cluster role binding by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create clusterrolebinding netobserv-lokiwriter-custom \
-  --clusterrole=netobserv-loki-writer \
-  --serviceaccount=&lt;namespace&gt;:flowlogs-pipeline \
-  --serviceaccount=&lt;namespace&gt;:flowlogs-pipeline-transformer</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Create the <code>netobserv-hostnetwork-custom</code> cluster role binding by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create clusterrolebinding netobserv-hostnetwork-custom \
-  --clusterrole=netobserv-hostnetwork \
-  --serviceaccount=&lt;namespace&gt;:flowlogs-pipeline</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Create the token review cluster role binding by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create clusterrolebinding netobserv-tokenreview-custom \
-  --clusterrole=netobserv-token-review \
-  --serviceaccount=&lt;namespace&gt;:netobserv-plugin</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</li>
-</ol>
-</div>
-<div class="olist arabic">
-<div class="title">Verification</div>
-<ol class="arabic">
-<li>
-<p>Check the <code>FlowCollector</code> status for errors by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get flowcollector cluster -o jsonpath='{.status.conditions}'</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Verify that no conditions report permission-related errors.</p>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>If the <code>FlowCollector</code> status continues to show permission errors after you grant the required permissions, restart the Network Observability Operator pod for faster reconciliation:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc delete pods -n openshift-netobserv-operator -l app=netobserv-operator</code></pre>
-</div>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</li>
-</ol>
-</div>
-</div>
-</div>
-</div>
-<div class="sect3">
 <h4 id="secure-network-traffic-design-enterprise-baselines-and-recommended-patterns-con_secure-network-traffic-design-enterprise-baselines-and-recommended-patterns">Design enterprise baselines and recommended patterns</h4>
 <div class="paragraph _abstract">
 <p>Cluster-wide network policy is easiest to maintain when it follows a consistent design. Recommended practices for <code>AdminNetworkPolicy</code> and <code>BaselineAdminNetworkPolicy</code> cover how to assign priorities, choose actions, and write selectors that do not accidentally capture system namespaces.</p>
@@ -9858,7 +9653,7 @@ cluster-specific Operator AWS Identity and Access Management (IAM) roles are cre
 <div class="content">
 <img src="data:image/png;base64," alt="Workflow for assuming AWS IAM roles in Red&#160;Hat SRE-owned projects">
 </div>
-<div class="title">Figure 68. Workflow for assuming AWS IAM roles in SRE-owned projects</div>
+<div class="title">Figure 69. Workflow for assuming AWS IAM roles in SRE-owned projects</div>
 </div>
 <div class="paragraph">
 <p>The workflow has the following stages:</p>
@@ -9951,7 +9746,7 @@ pod identity webhook resources are included by default.</p>
 <div class="content">
 <img src="data:image/png;base64," alt="Pod identity webhook workflow">
 </div>
-<div class="title">Figure 69. Pod identity webhook workflow in user-defined projects</div>
+<div class="title">Figure 70. Pod identity webhook workflow in user-defined projects</div>
 </div>
 <div class="paragraph">
 <p>The workflow has the following stages:</p>
@@ -10823,7 +10618,7 @@ Volumes:
 <div class="content">
 <img src="data:image/png;base64," alt="Detailed authentication flow between AWS and the cluster when using AWS STS">
 </div>
-<div class="title">Figure 70. AWS Security Token Service authentication flow</div>
+<div class="title">Figure 71. AWS Security Token Service authentication flow</div>
 </div>
 <div class="paragraph">
 <p>Requests for new and refreshed credentials are automated by using an appropriately configured AWS IAM OpenID Connect (OIDC) identity provider combined with AWS IAM roles. Service account tokens that are trusted by AWS IAM are signed by Red&#160;Hat OpenShift Container Platform and can be projected into a pod and used for authentication.</p>
@@ -11604,1996 +11399,6 @@ Volumes:
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="secure-network-observability-data-con_secure-network-observability-data">Secure network observability data</h4>
-<div class="paragraph _abstract">
-<p>Network flow data can reveal sensitive information about the workloads running in a cluster. Protecting it means controlling who can read stored flows, isolating tenants from one another, and securing the credentials that the collection pipeline uses to reach its storage backend.</p>
-</div>
-<div class="sect4">
-<h5 id="network-observability-loki-secret_secure-network-observability-data">Create a secret for Loki storage</h5>
-<div class="paragraph _abstract">
-<p>Create a secret with cloud storage credentials, such as for Amazon Web Services (AWS), to allow the Loki Operator to access the necessary object store for log persistence.</p>
-</div>
-<div class="paragraph">
-<p>The Loki Operator supports a few log storage options, such as AWS S3, Google Cloud Storage, Azure, Swift, Minio, OpenShift Data Foundation. The following example shows how to create a secret for AWS S3 storage. The secret created in this example, <code>loki-s3</code>, is referenced in "Creating a LokiStack custom resource". You can create this secret in the web console or CLI.</p>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Using the web console, navigate to the <strong>Project</strong> &#8594; <strong>All Projects</strong> dropdown and select <strong>Create Project</strong>.</p>
-</li>
-<li>
-<p>Name the project <code>netobserv-loki</code> and click <strong>Create</strong>.</p>
-</li>
-<li>
-<p>Navigate to the Import icon, <strong>+</strong>, in the top right corner. Paste your YAML file into the editor.</p>
-<div class="paragraph">
-<p>The following shows an example secret YAML file for S3 storage:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: v1
-kind: Secret
-metadata:
-  name: loki-s3
-  namespace: netobserv-loki
-stringData:
-  access_key_id: QUtJQUlPU0ZPRE5ON0VYQU1QTEUK
-  access_key_secret: d0phbHJYVXRuRkVNSS9LN01ERU5HL2JQeFJmaUNZRVhBTVBMRUtFWQo=
-  bucketnames: s3-bucket-name
-  endpoint: https://s3.eu-central-1.amazonaws.com
-  region: eu-central-1</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>where:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>metadata.namespace</code></dt>
-<dd>
-<p>Specifies the namespace for the Loki S3 secret. While this example uses <code>netobserv-loki</code>, you can use a different namespace for different components.</p>
-</dd>
-<dt class="hdlist1"><code>stringData.access_key_id</code></dt>
-<dd>
-<p>Specifies the access key ID for the S3 bucket.</p>
-</dd>
-<dt class="hdlist1"><code>stringData.access_key_secret</code></dt>
-<dd>
-<p>Specifies the secret access key for the S3 bucket.</p>
-</dd>
-<dt class="hdlist1"><code>stringData.bucketnames</code></dt>
-<dd>
-<p>Specifies the name of the S3 bucket.</p>
-</dd>
-<dt class="hdlist1"><code>stringData.endpoint</code></dt>
-<dd>
-<p>Specifies the endpoint URL for the S3 service.</p>
-</dd>
-<dt class="hdlist1"><code>stringData.region</code></dt>
-<dd>
-<p>Specifies the AWS region where the bucket is located.</p>
-</dd>
-</dl>
-</div>
-</li>
-</ol>
-</div>
-<div class="ulist">
-<div class="title">Verification</div>
-<ul>
-<li>
-<p>After you create the secret, you view the secret listed under <strong>Workloads</strong> &#8594; <strong>Secrets</strong> in the web console.</p>
-</li>
-</ul>
-</div>
-<div class="sect5">
-<h6 id="network-observability-role-based-access-control-for-loki-logs_secure-network-observability-data">Role-based access control for Loki logs</h6>
-<div class="paragraph _abstract">
-<p>Configure role-based access control to grant users permission to view application, infrastructure, or audit logs in Loki.</p>
-</div>
-<div class="paragraph">
-<p>By default, logging 5.8 and later does not grant users access to logs. You must configure role-based access control to grant users permission to view specific log types.</p>
-</div>
-<div class="paragraph">
-<p>For more information on access control for Loki logs, see: "Fine grained access for Loki logs" in the Red Hat OpenShift Logging Operator documentation.</p>
-</div>
-<div class="sect6">
-<h7 id="grant-non-admin-users-cluster-wide-log-access_secure-network-observability-data">Grant non-admin users cluster-wide log access</h7>
-<div class="paragraph">
-<p>Add users to a custom admin group to grant cluster-wide log access without making them cluster administrators. This is useful for senior engineers who need full log visibility but should not have cluster modification privileges.</p>
-</div>
-<div class="paragraph">
-<p>Users who are members of any group specified in the <code>adminGroups</code> field of the <code>LokiStack</code> custom resource (CR) have the same read access to logs as administrators.</p>
-</div>
-<div class="listingblock">
-<div class="title">Example LokiStack CR</div>
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: loki.grafana.com/v1
-kind: LokiStack
-metadata:
-  name: loki
-  namespace: netobserv-loki
-spec:
-  tenants:
-    mode: openshift-network
-    openshift:
-      adminGroups:
-      - cluster-admin
-      - custom-admin-group</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>where:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>spec.tenants.mode</code></dt>
-<dd>
-<p>Specifies the tenant mode. Must be <code>openshift-network</code> for network observability.</p>
-</dd>
-<dt class="hdlist1"><code>spec.tenants.openshift.adminGroups</code></dt>
-<dd>
-<p>Specifies the list of groups whose members have cluster-wide log access. Defaults to <code>system:cluster-admins</code>, <code>cluster-admin</code>, and <code>dedicated-admin</code>. Set to <code>[]</code> to disable.</p>
-</dd>
-</dl>
-</div>
-</div>
-</div>
-</div>
-<div class="sect4">
-<h5 id="network-observability-multi-tenancy_secure-network-observability-data">Enable multi-tenancy in network observability</h5>
-<div class="paragraph _abstract">
-<p>Enable multi-tenancy in network observability by configuring cluster roles and namespace roles to grant project administrators and developers granular, restricted access to flows and metrics in Loki and Prometheus.</p>
-</div>
-<div class="paragraph">
-<p>Access is enabled for project administrators. Project administrators who have limited access to some namespaces can access flows for only those namespaces.</p>
-</div>
-<div class="paragraph">
-<p>For Developers, multi-tenancy is available for both Loki and Prometheus but requires different access rights.</p>
-</div>
-<div class="ulist">
-<div class="title">Prerequisite</div>
-<ul>
-<li>
-<p>If you are using Loki, you have installed at least <a href="https://catalog.redhat.com/software/containers/openshift-logging/loki-rhel8-operator/622b46bcae289285d6fcda39">Loki Operator version 5.7</a>.</p>
-</li>
-<li>
-<p>You must be logged in as a project administrator.</p>
-</li>
-</ul>
-</div>
-<div class="ulist">
-<div class="title">Procedure</div>
-<ul>
-<li>
-<p>For per-tenant access, you must have the <code>netobserv-loki-reader</code> cluster role and the <code>netobserv-metrics-reader</code> namespace role to use the developer perspective. Run the following commands for this level of access:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc adm policy add-cluster-role-to-user netobserv-loki-reader &lt;user_group_or_name&gt;</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc adm policy add-role-to-user netobserv-metrics-reader &lt;user_group_or_name&gt; -n &lt;namespace&gt;</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>For cluster-wide access, non-cluster-administrators must have the <code>netobserv-loki-reader</code>, <code>cluster-monitoring-view</code>, and <code>netobserv-metrics-reader</code> cluster roles. In this scenario, you can use either the admin perspective or the developer perspective. Run the following commands for this level of access:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc adm policy add-cluster-role-to-user netobserv-loki-reader &lt;user_group_or_name&gt;</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc adm policy add-cluster-role-to-user cluster-monitoring-view &lt;user_group_or_name&gt;</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc adm policy add-cluster-role-to-user netobserv-metrics-reader &lt;user_group_or_name&gt;</code></pre>
-</div>
-</div>
-</li>
-</ul>
-</div>
-<div class="sect5">
-<h6 id="network-observability-grant-access-lokistack-secrets_secure-network-observability-data">Grant access to LokiStack secrets</h6>
-<div class="paragraph _abstract">
-<p>Grant the Network Observability Operator permission to access the <code>LokiStack</code> secret when <code>LokiStack</code> is installed in a namespace other than <code>netobserv</code>.</p>
-</div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>The Network Observability Operator is installed.</p>
-</li>
-<li>
-<p>You have <code>cluster-admin</code> privileges.</p>
-</li>
-<li>
-<p>You use the Loki Operator with <code>LokiStack</code> installed in a namespace other than <code>netobserv</code>.</p>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Replace <code>&lt;lokistack_namespace&gt;</code> with the namespace where <code>LokiStack</code> is installed and <code>&lt;namespace&gt;</code> with the namespace configured in <code>spec.namespace</code> of the <code>FlowCollector</code> resource.</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Create the <code>secret-watcher</code> role binding in the LokiStack namespace by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create rolebinding secret-watcher \
-  -n &lt;lokistack_namespace&gt; \
-  --clusterrole=netobserv-secret-watcher \
-  --serviceaccount=openshift-netobserv-operator:netobserv-controller-manager</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Create the <code>secret-creator</code> role binding by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create rolebinding secret-creator \
-  -n &lt;namespace&gt; \
-  --clusterrole=netobserv-secret-creator \
-  --serviceaccount=openshift-netobserv-operator:netobserv-controller-manager</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</li>
-</ol>
-</div>
-<div class="olist arabic">
-<div class="title">Verification</div>
-<ol class="arabic">
-<li>
-<p>Check the <code>FlowCollector</code> status for errors by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get flowcollector cluster -o jsonpath='{.status.conditions}'</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Verify that no conditions report permission-related errors.</p>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>If the <code>FlowCollector</code> status continues to show permission errors after you grant the required permissions, restart the Network Observability Operator pod for faster reconciliation:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc delete pods -n openshift-netobserv-operator -l app=netobserv-operator</code></pre>
-</div>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect5">
-<h6 id="network-observability-grant-access-kafka-secrets_secure-network-observability-data">Grant access to Kafka secrets</h6>
-<div class="paragraph _abstract">
-<p>Grant the Network Observability Operator permission to access Kafka secrets when you use the Kafka deployment model with TLS or mTLS enabled.</p>
-</div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>The Network Observability Operator is installed.</p>
-</li>
-<li>
-<p>You have <code>cluster-admin</code> privileges.</p>
-</li>
-<li>
-<p>You configured the <code>FlowCollector</code> resource with <code>spec.deploymentModel: Kafka</code> and TLS or mTLS enabled.</p>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Replace <code>&lt;namespace&gt;</code> with the namespace configured in <code>spec.namespace</code> of the <code>FlowCollector</code> resource. The default value is <code>netobserv</code>.</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>If Kafka is installed in the same namespace as the Network Observability components, create the secret watcher role binding by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create rolebinding secret-watcher \
-  -n &lt;namespace&gt; \
-  --clusterrole=netobserv-secret-watcher \
-  --serviceaccount=openshift-netobserv-operator:netobserv-controller-manager</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Create the secret creator role binding in the privileged namespace by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create rolebinding secret-creator \
-  -n &lt;namespace&gt;-privileged \
-  --clusterrole=netobserv-secret-creator \
-  --serviceaccount=openshift-netobserv-operator:netobserv-controller-manager</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>If Kafka is installed in a different namespace, create the secret watcher role binding in the Kafka namespace.</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Replace <code>&lt;kafka_namespace&gt;</code> with the namespace where Kafka is installed by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create rolebinding secret-watcher \
-  -n &lt;kafka_namespace&gt; \
-  --clusterrole=netobserv-secret-watcher \
-  --serviceaccount=openshift-netobserv-operator:netobserv-controller-manager</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Create the secret creator role binding by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create rolebinding secret-creator \
-  -n &lt;namespace&gt; \
-  --clusterrole=netobserv-secret-creator \
-  --serviceaccount=openshift-netobserv-operator:netobserv-controller-manager</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Create the secret creator role binding in the privileged namespace by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create rolebinding secret-creator \
-  -n &lt;namespace&gt;-privileged \
-  --clusterrole=netobserv-secret-creator \
-  --serviceaccount=openshift-netobserv-operator:netobserv-controller-manager</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</li>
-</ol>
-</div>
-<div class="olist arabic">
-<div class="title">Verification</div>
-<ol class="arabic">
-<li>
-<p>Check the <code>FlowCollector</code> status for errors by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get flowcollector cluster -o jsonpath='{.status.conditions}'</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Verify that no conditions report permission-related errors.</p>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>If the <code>FlowCollector</code> status continues to show permission errors after you grant the required permissions, restart the Network Observability Operator pod for faster reconciliation:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc delete pods -n openshift-netobserv-operator -l app=netobserv-operator</code></pre>
-</div>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</li>
-</ol>
-</div>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="network-observability-health-dashboard-overview_verify-security-and-network-observability-operator-health">Health dashboards</h4>
-<div class="paragraph _abstract">
-<p>View the Network Observability Operator health dashboards in the Red&#160;Hat OpenShift Container Platform web console to monitor the health status, resource usage, and internal statistics of the operator and its components.</p>
-</div>
-<div class="paragraph">
-<p>Metrics are located in the <strong>Observe</strong> &#8594; <strong>Dashboards</strong> page in the Red&#160;Hat OpenShift Container Platform web console. You can view metrics about the health of the Network Observability Operator in the following categories:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Flows per second</strong></p>
-</li>
-<li>
-<p><strong>Sampling</strong></p>
-</li>
-<li>
-<p><strong>Errors last minute</strong></p>
-</li>
-<li>
-<p><strong>Dropped flows per second</strong></p>
-</li>
-<li>
-<p><strong>Flowlogs-pipeline statistics</strong></p>
-</li>
-<li>
-<p><strong>Flowlogs-pipleine statistics views</strong></p>
-</li>
-<li>
-<p><strong>eBPF agent statistics views</strong></p>
-</li>
-<li>
-<p><strong>Operator statistics</strong></p>
-</li>
-<li>
-<p><strong>Resource usage</strong></p>
-</li>
-</ul>
-</div>
-<div class="sect4">
-<h5 id="network-observability-health-alert-overview_verify-security-and-network-observability-operator-health">Health alerts</h5>
-<div class="paragraph _abstract">
-<p>Understand the health alerts generated by the Network Observability Operator, which trigger banners when conditions like Loki ingestion errors, zero flow ingestion, or dropped eBPF flows occur.</p>
-</div>
-<div class="paragraph">
-<p>A health alert banner that directs you to the dashboard can appear on the <strong>Network Traffic</strong> and <strong>Home</strong> pages if an alert is triggered. Alerts are generated in the following cases:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>The <code>NetObservLokiError</code> alert occurs if the <code>flowlogs-pipeline</code> workload is dropping flows because of Loki errors, such as if the Loki ingestion rate limit has been reached.</p>
-</li>
-<li>
-<p>The <code>NetObservNoFlows</code> alert occurs if no flows are ingested for a certain amount of time.</p>
-</li>
-<li>
-<p>The <code>NetObservFlowsDropped</code> alert occurs if the Network Observability eBPF agent hashmap table is full, and the eBPF agent processes flows with degraded performance, or when the capacity limiter is triggered.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect4">
-<h5 id="network-observability-dashboard-view_verify-security-and-network-observability-operator-health">View health information</h5>
-<div class="paragraph _abstract">
-<p>View the <strong>Netobserv/Health</strong> dashboard within the Red&#160;Hat OpenShift Container Platform web console to monitor the health status and resource usage of the Network Observability Operator and its components.</p>
-</div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>You have the Network Observability Operator installed.</p>
-</li>
-<li>
-<p>You have access to the cluster as a user with the <code>cluster-admin</code> role or with view permissions for all projects.</p>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>From the <strong>Administrator</strong> perspective in the web console, navigate to <strong>Observe</strong> → <strong>Dashboards</strong>.</p>
-</li>
-<li>
-<p>From the <strong>Dashboards</strong> dropdown, select <strong>Netobserv/Health</strong>.</p>
-</li>
-<li>
-<p>View the metrics about the health of the Operator that are displayed on the page.</p>
-</li>
-</ol>
-</div>
-<div class="sect5">
-<h6 id="network-observability-disable-alerts_verify-security-and-network-observability-operator-health">Disable health alerts</h6>
-<div class="paragraph _abstract">
-<p>Disable specific health alerts, such as <code>NetObservLokiError</code> or <code>NetObservNoFlows</code>, by editing the <code>FlowCollector</code> resource and using the <code>spec.processor.metrics.disableAlerts</code> specification.</p>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>In the web console, navigate to <strong>Ecosystem</strong> &#8594; <strong>Installed Operators</strong>.</p>
-</li>
-<li>
-<p>Under the <strong>Provided APIs</strong> heading for the <strong>NetObserv Operator</strong>, select <strong>Flow Collector</strong>.</p>
-</li>
-<li>
-<p>Select <strong>cluster</strong> then select the <strong>YAML</strong> tab.</p>
-</li>
-<li>
-<p>Add <code>spec.processor.metrics.disableAlerts</code> to disable health alerts, as in the following YAML sample:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: flows.netobserv.io/v1beta2
-kind: FlowCollector
-metadata:
-  name: cluster
-spec:
-  processor:
-    metrics:
-      disableAlerts: [NetObservLokiError, NetObservNoFlows]</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>where:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>spec.processor.metrics.disableAlerts</code></dt>
-<dd>
-<p>Specifies one or more types of alerts to disable.</p>
-</dd>
-</dl>
-</div>
-</li>
-</ol>
-</div>
-</div>
-</div>
-<div class="sect4">
-<h5 id="network-observability-netobserv-dashboard-rate-limit-alerts_verify-security-and-network-observability-operator-health">Create Loki rate limit alerts for the NetObserv dashboard</h5>
-<div class="paragraph _abstract">
-<p>Create a custom <code>AlertingRule</code> resource based on Loki metrics to monitor for and trigger alerts when the Loki ingestion rate limits are reached, indicated by HTTP 429 errors.</p>
-</div>
-<div class="paragraph">
-<p>You can create custom alerting rules for the <strong>Netobserv</strong> dashboard metrics to trigger alerts when Loki rate limits have been reached.</p>
-</div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>You have access to the cluster as a user with the cluster-admin role or with view permissions for all projects.</p>
-</li>
-<li>
-<p>You have the Network Observability Operator installed.</p>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Create a YAML file by clicking the import icon, <strong>+</strong>.</p>
-</li>
-<li>
-<p>Add an alerting rule configuration to the YAML file. In the YAML sample that follows, an alert is created for when Loki rate limits have been reached:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: monitoring.openshift.io/v1
-kind: AlertingRule
-metadata:
-  name: loki-alerts
-  namespace: openshift-monitoring
-spec:
-  groups:
-  - name: LokiRateLimitAlerts
-    rules:
-    - alert: LokiTenantRateLimit
-      annotations:
-        message: |-
-          {{ $labels.job }} {{ $labels.route }} is experiencing 429 errors.
-        summary: "At any number of requests are responded with the rate limit error code."
-      expr: sum(irate(loki_request_duration_seconds_count{status_code="429"}[1m])) by (job, namespace, route) / sum(irate(loki_request_duration_seconds_count[1m])) by (job, namespace, route) * 100 &gt; 0
-      for: 10s
-      labels:
-        severity: warning</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Click <strong>Create</strong> to apply the configuration file to the cluster.</p>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect4">
-<h5 id="network-observability-netobserv-dashboard-ebpf-agent-alerts_verify-security-and-network-observability-operator-health">Use the eBPF agent alert</h5>
-<div class="paragraph _abstract">
-<p>Resolve the <code>NetObservAgentFlowsDropped</code> alert, which occurs when the eBPF agent hashmap is full, by increasing the <code>spec.agent.ebpf.cacheMaxFlows</code> value in the <code>FlowCollector</code> custom resource.</p>
-</div>
-<div class="paragraph">
-<p>An alert, <code>NetObservAgentFlowsDropped</code>, is also triggered when the capacity limiter is triggered. If you see this alert, consider increasing the <code>cacheMaxFlows</code> in the <code>FlowCollector</code>, as shown in the following example.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Increasing the <code>cacheMaxFlows</code> might increase the memory usage of the eBPF agent.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>In the web console, navigate to <strong>Ecosystem</strong> &#8594; <strong>Installed Operators</strong>.</p>
-</li>
-<li>
-<p>Under the <strong>Provided APIs</strong> heading for the <strong>Network Observability Operator</strong>, select <strong>Flow Collector</strong>.</p>
-</li>
-<li>
-<p>Select <strong>cluster</strong>, and then select the <strong>YAML</strong> tab.</p>
-</li>
-<li>
-<p>Increase the <code>spec.agent.ebpf.cacheMaxFlows</code> value, as shown in the following YAML sample:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: flows.netobserv.io/v1beta2
-kind: FlowCollector
-metadata:
-  name: cluster
-spec:
-  namespace: netobserv
-  deploymentModel: Service
-  agent:
-    type: eBPF
-    ebpf:
-      cacheMaxFlows: 200000</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>where:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>spec.agent.ebpf.cacheMaxFlows</code></dt>
-<dd>
-<p>Specifies the maximum number of flows to cache. If a <code>NetObservAgentFlowsDropped</code> alert occurs, increase this value from its current level.</p>
-</dd>
-</dl>
-</div>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect4">
-<h5 id="network-observability-health-rules-and-performance_verify-security-and-network-observability-operator-health">Identify network issues with automated health rules</h5>
-<div class="paragraph _abstract">
-<p>Network observability identifies network issues by using automated health rules to monitor metrics. These rules trigger alerts when anomalies occur, which assists in maintaining connectivity and responding to network degradation.</p>
-</div>
-<div class="paragraph">
-<p>The Network Observability Operator manages a system of Prometheus-based rules that detect network problems, and converts these rules into <code>PrometheusRule</code> resources. It supports the following rule types:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Alerting rules</dt>
-<dd>
-<p>Trigger notifications through the Prometheus <code>Alertmanager</code> when network anomalies or infrastructure failures are detected.</p>
-</dd>
-<dt class="hdlist1">Recording rules</dt>
-<dd>
-<p>Pre-compute complex Prometheus Query Language (PromQL) expressions into new time series to improve dashboard performance.</p>
-</dd>
-</dl>
-</div>
-<div class="sect5">
-<h6 id="importance-of-network-health-monitoring_verify-security-and-network-observability-operator-health">Importance of network health monitoring</h6>
-<div class="paragraph">
-<p>Maintaining reliable and secure network connectivity is critical for cluster administrators and security teams. Unresolved network issues can result in the following consequences:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Application downtime caused by packet drops or DNS failures.</p>
-</li>
-<li>
-<p>Security risks from undetected network policy violations.</p>
-</li>
-<li>
-<p>Performance degradation caused by latency spikes or bandwidth saturation.</p>
-</li>
-<li>
-<p>Compliance issues from unmonitored network traffic.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Early detection of these issues allows for resolution before service level objectives (SLOs) are affected.</p>
-</div>
-</div>
-<div class="sect5">
-<h6 id="detection-of-network-issues_verify-security-and-network-observability-operator-health">Automated health monitoring</h6>
-<div class="paragraph">
-<p>The Network Observability Operator provides automated health monitoring through the following features:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Pre-configured health rules: Detect common network problems by using default thresholds.</p>
-</li>
-<li>
-<p>Automated alerting: Integrates with the Red&#160;Hat OpenShift Container Platform monitoring stack.</p>
-</li>
-<li>
-<p>Health dashboards: Displays health status for clusters, nodes, namespaces, and workloads.</p>
-</li>
-<li>
-<p>Custom rules: Supports the creation of organization-specific monitoring rules.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Health rules monitor network flow metrics and trigger alerts when defined thresholds are exceeded. For example, the <code>PacketDropsByKernel</code> rule reports an alert when kernel packet drop rates exceed defined levels.</p>
-</div>
-</div>
-<div class="sect5">
-<h6 id="network-health-monitoring-workflow_verify-security-and-network-observability-operator-health">Network health monitoring workflow</h6>
-<div class="paragraph">
-<p>Monitoring network health involves the following phases:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Configuring the Network Observability Operator to collect required network health data for monitoring, such as packet drops or DNS tracking.</p>
-</li>
-<li>
-<p>Reviewing and customizing default health rules and thresholds in the <code>FlowCollector</code> custom resource.</p>
-</li>
-<li>
-<p>Monitoring alerts in the Red&#160;Hat OpenShift Container Platform web console in the <strong>Observe</strong> → <strong>Alerting</strong> and <strong>Observe</strong> → <strong>Network Health</strong> views.</p>
-</li>
-<li>
-<p>Creating custom health rules for specific requirements.</p>
-</li>
-<li>
-<p>Configuring recording rules to optimize performance for large-scale deployments.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>The <code>PrometheusRule</code> resource in the <code>netobserv</code> namespace can be viewed by running the following command:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get prometheusrules -n netobserv -o yaml</code></pre>
-</div>
-</div>
-</div>
-<div class="sect5">
-<h6 id="network-observability-health-rules-monitoring-and-alerting_verify-security-and-network-observability-operator-health">Detect network issues with automated health rules</h6>
-<div class="paragraph _abstract">
-<p>The Network Observability Operator includes a rule-based system to detect network anomalies and infrastructure failures. By converting configurations into alerting rules, the Operator provides automated monitoring and troubleshooting through the Red&#160;Hat OpenShift Container Platform web console.</p>
-</div>
-<div class="sect6">
-<h7 id="network-observability-health-outcomes_verify-security-and-network-observability-operator-health">Monitoring outcomes</h7>
-<div class="paragraph">
-<p>The Network Observability Operator displays network status in the following views:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><strong>Alerting</strong> UI</dt>
-<dd>
-<p>Specific alerts appear in <strong>Observe</strong> → <strong>Alerting</strong>. Notifications are managed through the Prometheus <code>Alertmanager</code>.</p>
-</dd>
-<dt class="hdlist1"><strong>Network Health</strong> dashboard</dt>
-<dd>
-<p>A specialized dashboard in <strong>Observe</strong> → <strong>Network Health</strong> provides a summary of cluster network status.</p>
-</dd>
-</dl>
-</div>
-<div class="paragraph">
-<p>The <strong>Network Health</strong> dashboard categorizes violations into tabs to isolate the scope of an issue:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Global</strong>: Aggregate health of the cluster.</p>
-</li>
-<li>
-<p><strong>Nodes</strong>: Violations specific to infrastructure nodes.</p>
-</li>
-<li>
-<p><strong>Namespaces</strong>: Violations specific to individual namespaces.</p>
-</li>
-<li>
-<p><strong>Workloads</strong>: Violations specific to resources, such as <code>Deployments</code> or <code>DaemonSets</code>.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect6">
-<h7 id="network-observability-default-rules_verify-security-and-network-observability-operator-health">Predefined health rules</h7>
-<div class="paragraph">
-<p>The Network Observability Operator provides default rules for common networking scenarios. These rules are active only if the corresponding feature is enabled in the <code>FlowCollector</code> custom resource (CR).</p>
-</div>
-<div class="paragraph">
-<p>The following list contains a subset of available default rules:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>PacketDropsByDevice</code></dt>
-<dd>
-<p>Reports a high percentage of packet drops from network devices. This rule is based on node-exporter metrics and does not require the <code>PacketDrop</code> agent feature.</p>
-</dd>
-<dt class="hdlist1"><code>PacketDropsByKernel</code></dt>
-<dd>
-<p>Reports a high percentage of packet drops by the kernel. This rule requires the <code>PacketDrop</code> agent feature.</p>
-</dd>
-<dt class="hdlist1"><code>IPsecErrors</code></dt>
-<dd>
-<p>Reports IPsec encryption errors. This rule requires the <code>IPSec</code> agent feature.</p>
-</dd>
-<dt class="hdlist1"><code>NetpolDenied</code></dt>
-<dd>
-<p>Reports traffic denied by network policies. This rule requires the <code>NetworkEvents</code> agent feature.</p>
-</dd>
-<dt class="hdlist1"><code>LatencyHighTrend</code></dt>
-<dd>
-<p>Reports a significant increase in TCP latency. This rule requires the <code>FlowRTT</code> agent feature.</p>
-</dd>
-<dt class="hdlist1"><code>DNSErrors</code></dt>
-<dd>
-<p>Reports DNS errors. This rule requires the <code>DNSTracking</code> agent feature.</p>
-</dd>
-</dl>
-</div>
-<div class="paragraph">
-<p>The following operational alerts apply to the Network Observability Operator:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>NetObservNoFlows</code></dt>
-<dd>
-<p>Reports when the pipeline is active but no flows are observed.</p>
-</dd>
-<dt class="hdlist1"><code>NetObservLokiError</code></dt>
-<dd>
-<p>Reports when flows are dropped because of Loki errors.</p>
-</dd>
-</dl>
-</div>
-<div class="paragraph">
-<p>For a complete list of rules and runbooks, see the <a href="https://github.com/openshift/runbooks/tree/master/alerts/network-observability-operator">Network Observability Operator runbooks</a>.</p>
-</div>
-</div>
-<div class="sect6">
-<h7 id="network-observability-enabling-features-for-health-monitoring_verify-security-and-network-observability-operator-health">Enabling features for health monitoring</h7>
-<div class="paragraph">
-<p>The Network Observability Operator creates rules based on the features enabled in the <code>FlowCollector</code> CR.</p>
-</div>
-<div class="paragraph">
-<p>For example, packet drop rules are created only if the <code>PacketDrop</code> agent feature is enabled. Rules depend on metrics; if the required metrics are unavailable, configuration warnings might appear. Configure metrics in the <code>spec.processor.metrics.includeList</code> field of the <code>FlowCollector</code> resource.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect4">
-<h5 id="network-observability-health-rule-customization_verify-security-and-network-observability-operator-health">Health rule threshold and grouping customization</h5>
-<div class="paragraph _abstract">
-<p>Health rules in the Network Observability Operator are defined by using rule templates and variants in the <code>spec.processor.metrics.healthRules</code> field of the <code>FlowCollector</code> custom resource (CR).</p>
-</div>
-<div class="paragraph">
-<p>Customizing these templates allows for flexible, fine-grained alerting tailored to specific environment needs.</p>
-</div>
-<div class="paragraph">
-<p>For each template, a list of variants can be defined, each with distinct thresholds and grouping configurations.</p>
-</div>
-<div class="paragraph">
-<p>The following example shows a <code>FlowCollector</code> configuration with custom health rules:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: flows.netobserv.io/v1beta1
-kind: FlowCollector
-metadata:
-  name: flow-collector
-spec:
-  processor:
-    metrics:
-      healthRules:
-      - template: PacketDropsByKernel
-        mode: Alert # or Recording
-        variants:
-        # Triggered when aggregate cluster traffic reaches 10% drops
-        - thresholds:
-            critical: "10"
-        # Triggered per-node with increasing severity levels
-        - thresholds:
-            critical: "15"
-            warning: "10"
-            info: "5"
-          groupBy: Node</code></pre>
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>spec.processor.metrics.healthRules.template</code></dt>
-<dd>
-<p>Specifies the name of the predefined rule template.</p>
-</dd>
-<dt class="hdlist1"><code>spec.processor.metrics.healthRules.mode</code></dt>
-<dd>
-<p>Specifies whether the rule functions as an <code>Alert</code> or a <code>Recording</code> rule.</p>
-</dd>
-<dt class="hdlist1"><code>spec.processor.metrics.healthRules.variants.thresholds</code></dt>
-<dd>
-<p>Specifies the numerical values that trigger the rule. Multiple severity levels, such as <code>critical</code>, <code>warning</code>, or <code>info</code>, can be defined within a single variant.</p>
-</dd>
-<dt class="hdlist1"><code>spec.processor.metrics.healthRules.variants.groupBy</code></dt>
-<dd>
-<p>Specifies the dimension used to aggregate the metric, such as <code>Node</code> or <code>Namespace</code>.</p>
-</dd>
-</dl>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Customizing a rule replaces the default configuration for that template. To retain default configurations, the default settings must be manually included in the custom resource.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="sect5">
-<h6 id="network-observability-health-rules-promql-expressions-metadata_verify-security-and-network-observability-operator-health">Health rule query and metadata reference</h6>
-<div class="paragraph _abstract">
-<p>The <code>FlowCollector</code> health rule API maps to the Prometheus Operator to generate <code>PrometheusRule</code> objects. Use these base Prometheus Query Language (PromQL) patterns and metadata configurations to create custom health rules for network observability.</p>
-</div>
-<div class="paragraph">
-<p>The <code>PrometheusRule</code> resource in the <code>netobserv</code> namespace can be viewed by running the following command:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get prometheusrules -n netobserv -o yaml</code></pre>
-</div>
-</div>
-<div class="sect6">
-<h7 id="example-query-surge-incoming-traffic_verify-security-and-network-observability-operator-health">Customizing alert logic with PromQL: Incoming traffic surge</h7>
-<div class="paragraph">
-<p>The following PromQL query calculates the byte rate from the <code>openshift-ingress</code> namespace to any workload namespace over a 30-minute interval:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-promql" data-lang="promql">sum(rate(netobserv_workload_ingress_bytes_total{SrcK8S_Namespace="openshift-ingress"}[30m])) by (DstK8S_Namespace)</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Queries can be customized to filter low-bandwidth data, compare time periods, and establish thresholds.</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Data filtering</dt>
-<dd>
-<p>Appending <code>&gt; 1000</code> to the query removes rates lower than <code>1 KB/s</code> to filter low-bandwidth traffic.</p>
-<div class="paragraph">
-<p><code>(sum(rate(netobserv_workload_ingress_bytes_total{SrcK8S_Namespace="openshift-ingress"}[30m])) by (DstK8S_Namespace) &gt; 1000)</code></p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>The byte rate is relative to the sampling interval in the <code>FlowCollector</code> CR. Normalizing byte rates with the <code>netobserv_agent_sampling_rate</code> metric decouples the PromQL expression from the sampling configuration.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</dd>
-<dt class="hdlist1">Time comparison</dt>
-<dd>
-<p>The <code>offset</code> modifier compares data across different time periods. For example, <code>offset 1d</code> retrieves data from the previous day.</p>
-<div class="paragraph">
-<p><code>sum(rate(netobserv_workload_ingress_bytes_total{SrcK8S_Namespace="openshift-ingress"}[30m] offset 1d)) by (DstK8S_Namespace))</code></p>
-</div>
-</dd>
-<dt class="hdlist1">Threshold application</dt>
-<dd>
-<p>A final threshold filters increases below a specific percentage. For example, <code>&gt; 100</code> removes increases lower than 100%.</p>
-</dd>
-</dl>
-</div>
-<div class="paragraph">
-<p>The following example shows a complete PromQL expression for a <code>PrometheusRule</code>:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-promql" data-lang="promql">expr: |-
-  (100 *
-    (
-      (sum(rate(netobserv_workload_ingress_bytes_total{SrcK8S_Namespace="openshift-ingress"}[30m])) by (DstK8S_Namespace) &gt; 1000)
-      - sum(rate(netobserv_workload_ingress_bytes_total{SrcK8S_Namespace="openshift-ingress"}[30m] offset 1d)) by (DstK8S_Namespace)
-    )
-    / sum(rate(netobserv_workload_ingress_bytes_total{SrcK8S_Namespace="openshift-ingress"}[30m] offset 1d)) by (DstK8S_Namespace))
-  &gt; 100</code></pre>
-</div>
-</div>
-</div>
-<div class="sect6">
-<h7 id="alert-metadata-fields_verify-security-and-network-observability-operator-health">Alert metadata fields</h7>
-<div class="paragraph">
-<p>Rule definitions require specific metadata for the Prometheus <code>Alertmanager</code> service and the <strong>Network Health</strong> dashboard. The following example shows an <code>AlertingRule</code> resource with configured metadata:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: monitoring.openshift.io/v1
-kind: AlertingRule
-metadata:
-  name: netobserv-alerts
-  namespace: openshift-monitoring
-spec:
-  groups:
-  - name: NetObservAlerts
-    rules:
-    - alert: NetObservIncomingBandwidth
-      annotations:
-        netobserv_io_network_health: '{"namespaceLabels":["DstK8S_Namespace"],"threshold":"100","unit":"%","upperBound":"500"}'
-        message: |-
-          Surge of incoming traffic detected: current traffic to {{ $labels.DstK8S_Namespace }} increased by more than 100% since yesterday.
-        summary: "Surge in incoming traffic"
-      expr: |-
-        # ... (PromQL expression)
-      for: 1m
-      labels:
-        app: netobserv
-        netobserv: "true"
-        severity: warning</code></pre>
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>spec.groups.rules.alert.labels.netobserv</code></dt>
-<dd>
-<p>Specifies that the <strong>Network Health</strong> dashboard must detect the alert when set to <code>true</code>.</p>
-</dd>
-<dt class="hdlist1"><code>spec.groups.rules.alert.labels.severity</code></dt>
-<dd>
-<p>Specifies the alert severity. Valid values are <code>critical</code>, <code>warning</code>, or <code>info</code>.</p>
-</dd>
-</dl>
-</div>
-</div>
-<div class="sect6">
-<h7 id="netobserv-io-network-health-annotation_verify-security-and-network-observability-operator-health">netobserv_io_network_health annotation fields</h7>
-<div class="paragraph">
-<p>The optional <code>netobserv_io_network_health</code> annotation is a JSON string that controls how the alert renders on the <strong>Network Health</strong> page.</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 662. Fields for the <code>netobserv_io_network_health</code> annotation</caption>
-<colgroup>
-<col style="width: 20%;">
-<col style="width: 20%;">
-<col style="width: 60%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Field</th>
-<th class="tableblock halign-left valign-top">Type</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>namespaceLabels</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">List of strings</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">One or more labels containing namespaces. Alerts appear under the <strong>Namespaces</strong> tab.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>nodeLabels</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">List of strings</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">One or more labels containing node names. Alerts appear under the <strong>Nodes</strong> tab.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>workloadLabels</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">List of strings</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">One or more labels containing owner or workload names. Alerts appear under the <strong>Owners</strong> tab when <code>kindLabels</code> is also provided.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>threshold</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The alert threshold. This value should match the threshold in the PromQL expression.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>unit</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The data unit for display purposes.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>upperBound</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">An upper bound value used to calculate scores on a closed scale. Metric values exceeding this bound are clamped.</p></td>
-</tr>
-</tbody>
-</table>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>The <code>namespaceLabels</code> and <code>nodeLabels</code> fields are mutually exclusive. If neither is provided, the alert appears under the <strong>Global</strong> tab.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-<div class="sect5">
-<h6 id="network-observability-configuring-custom-health-rules_verify-security-and-network-observability-operator-health">Configure custom health rules</h6>
-<div class="paragraph _abstract">
-<p>Create custom health rules by using Prometheus Query Language (PromQL) to define an <code>AlertingRule</code> resource. These rules trigger alerts based on specific network metrics, such as traffic surges.</p>
-</div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>Access to the cluster with <code>cluster-admin</code> privileges.</p>
-</li>
-<li>
-<p>The Network Observability Operator is installed.</p>
-</li>
-<li>
-<p>Red&#160;Hat OpenShift Container Platform 4.16 or later is installed.</p>
-</li>
-<li>
-<p>Familiarity with PromQL.</p>
-</li>
-</ul>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Important">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Custom <code>PrometheusRule</code> resources are not owned by the <code>FlowCollector</code> resource. Custom rules created in the <code>netobserv</code> namespace might be deleted if the Network Observability Operator is uninstalled. To prevent data loss, create custom rules in a different namespace, such as <code>openshift-monitoring</code>, and maintain a backup in version control.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Define an <code>AlertingRule</code> resource in a YAML file, for example, <code>custom-alert.yaml</code>.</p>
-</li>
-<li>
-<p>Apply the custom alert rule by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc apply -f custom-alert.yaml</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-<div class="olist arabic">
-<div class="title">Verification</div>
-<ol class="arabic">
-<li>
-<p>Confirm the <code>PrometheusRule</code> resource was created in the target namespace by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get prometheusrules -n &lt;namespace&gt; -o yaml</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Confirm the rule is active in the Red&#160;Hat OpenShift Container Platform web console:</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Navigate to <strong>Observe</strong> → <strong>Alerting</strong> to see the firing status.</p>
-</li>
-<li>
-<p>Navigate to <strong>Observe</strong> → <strong>Network Health</strong> to view the dashboard integration.</p>
-</li>
-</ol>
-</div>
-</li>
-</ol>
-</div>
-</div>
-</div>
-<div class="sect4">
-<h5 id="network-observability-recording-rules-performance-optimization_verify-security-and-network-observability-operator-health">Performance optimization with recording rules</h5>
-<div class="paragraph _abstract">
-<p>In large-scale clusters, recording rules optimize how Prometheus handles network data. Recording rules improve dashboard responsiveness and reduce the computational overhead of complex queries.</p>
-</div>
-<div class="sect5">
-<h6 id="network-observability-recording-rules-benefits_verify-security-and-network-observability-operator-health">Optimization benefits</h6>
-<div class="paragraph">
-<p>Recording rules pre-compute complex Prometheus Query Language (PromQL) expressions and save the results as new time series. Unlike alerting rules, recording rules do not monitor thresholds.</p>
-</div>
-<div class="paragraph">
-<p>Using recording rules provides the following advantages:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Improved performance</dt>
-<dd>
-<p>Pre-computing Prometheus queries allows dashboards to load faster by avoiding on-demand calculations for long-term trends.</p>
-</dd>
-<dt class="hdlist1">Resource efficiency</dt>
-<dd>
-<p>Calculating data at fixed intervals reduces CPU load on the Prometheus server compared to recalculating data on every dashboard refresh.</p>
-</dd>
-<dt class="hdlist1">Simplified queries</dt>
-<dd>
-<p>Using short metric names, such as <code>cluster:network_traffic:rate_5m</code>, simplifies complex aggregate calculations in custom dashboards.</p>
-</dd>
-</dl>
-</div>
-</div>
-<div class="sect5">
-<h6 id="network-observability-alert-vs-recording-comparison_verify-security-and-network-observability-operator-health">Comparison of rule modes</h6>
-<div class="paragraph">
-<p>The following table compares rule modes based on the expected outcome:</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 20%;">
-<col style="width: 40%;">
-<col style="width: 40%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Feature</th>
-<th class="tableblock halign-left valign-top">Alerting rules</th>
-<th class="tableblock halign-left valign-top">Recording rules</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Primary goal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Issue notification.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Persistent metric history.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Data output</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Alerting state.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">New time series metric.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UI visibility</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Alerting</strong> and <strong>Network Health</strong> views.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Metrics Explorer</strong> and <strong>Network Health</strong> views.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Notifications</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Triggers <code>Alertmanager</code> notifications.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Does not trigger notifications.</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect5">
-<h6 id="network-observability-integrating-recording-rules-with-health-dashboard_verify-security-and-network-observability-operator-health">Integrating recording rules with the health dashboard</h6>
-<div class="paragraph">
-<p>Custom recording rules that contribute to the <strong>Network Health</strong> dashboard must meet specific metadata requirements.</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Label requirements</dt>
-<dd>
-<p>Include the <code>netobserv: "true"</code> label in the <code>labels</code> field of the rule and the <code>PrometheusRule</code> metadata. The Network Observability Operator identifies <code>PrometheusRule</code> resources cluster-wide by using this label.</p>
-</dd>
-<dt class="hdlist1">Annotation requirements</dt>
-<dd>
-<p>Include the <code>netobserv.io/network-health</code> annotation in the <code>PrometheusRule</code> metadata. This annotation is required for recording rules to appear in the <strong>Network Health</strong> dashboard. The value is a JSON object where keys are the metric names (the <code>record</code> field of each rule). Each value consists of the following fields:</p>
-<div class="ulist">
-<ul>
-<li>
-<p><code>summary</code>: An optional short title. This field supports Prometheus template syntax, such as <code>{{ $labels.namespace }}</code>.</p>
-</li>
-<li>
-<p><code>description</code>: An optional description. This field supports Prometheus template syntax.</p>
-</li>
-<li>
-<p><code>netobserv_io_network_health</code>: A required JSON string. For recording rules, use the <code>recordingThresholds</code> field instead of <code>threshold</code>. This field determines the health score and UI coloring, such as <code>{"info":"10","warning":"25","critical":"50"}</code>.</p>
-</li>
-</ul>
-</div>
-</dd>
-</dl>
-</div>
-</div>
-<div class="sect5">
-<h6 id="network-observability-configuring-custom-recording-rules_verify-security-and-network-observability-operator-health">Optimize dashboard metrics with recording rules</h6>
-<div class="paragraph _abstract">
-<p>Create custom recording rules to pre-compute metrics for the <strong>Network Health</strong> dashboard. Recording rules require specific annotations and labels to integrate with the Network Observability Operator.</p>
-</div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>Access to the cluster with <code>cluster-admin</code> privileges.</p>
-</li>
-<li>
-<p>The Network Observability Operator is installed.</p>
-</li>
-<li>
-<p>Red&#160;Hat OpenShift Container Platform 4.16 or later is installed.</p>
-</li>
-<li>
-<p>Familiarity with PromQL.</p>
-</li>
-</ul>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Important">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Custom <code>PrometheusRule</code> resources are not owned by the <code>FlowCollector</code> resource. Custom rules created in the <code>netobserv</code> namespace might be deleted if the Network Observability Operator is uninstalled. To prevent data loss, create custom rules in a different namespace, such as <code>openshift-monitoring</code>, and maintain a backup in version control.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Define a <code>PrometheusRule</code> resource in a YAML file, such as <code>custom-recording-rule.yaml</code>, ensuring the <code>netobserv: "true"</code> label and <code>netobserv.io/network-health</code> annotation are included:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: monitoring.coreos.com/v1
-kind: PrometheusRule
-metadata:
-  name: my-recording-rules
-  namespace: openshift-monitoring
-  labels:
-    netobserv: "true"
-  annotations:
-    netobserv.io/network-health: |
-      {
-        "my_metric_per_namespace": {
-          "summary": "Custom metric is {{ $value }} in the namespace {{ $labels.namespace }}",
-          "description": "Custom metric is {{ $value }} in the namespace {{ $labels.namespace }}",
-          "netobserv_io_network_health": "{\"unit\":\"%\",\"upperBound\":\"100\",\"namespaceLabels\":[\"namespace\"],\"recordingThresholds\":{\"info\":\"10\",\"warning\":\"25\",\"critical\":\"50\"}}"
-        }
-      }
-spec:
-  groups:
-    - name: MyRecordingRules
-      interval: 30s
-      rules:
-        - record: my_metric_per_namespace
-          expr: (count by (namespace) (kube_pod_info) * 0 + 20)
-          labels:
-            netobserv: "true"</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Apply the custom recording rule by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc apply -f custom-recording-rule.yaml</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-<div class="olist arabic">
-<div class="title">Verification</div>
-<ol class="arabic">
-<li>
-<p>Confirm the <code>PrometheusRule</code> resource exists by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get prometheusrules my-recording-rules -n openshift-monitoring -o yaml</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Confirm the recording rule appears in the Red&#160;Hat OpenShift Container Platform web console by navigating to <strong>Observe</strong> → <strong>Network Health</strong>.</p>
-</li>
-</ol>
-</div>
-</div>
-</div>
-<div class="sect4">
-<h5 id="network-observability-disable-predefined-rules_verify-security-and-network-observability-operator-health">Disable default rules</h5>
-<div class="paragraph _abstract">
-<p>Rule templates can be disabled in the <code>spec.processor.metrics.disableAlerts</code> field of the <code>FlowCollector</code> custom resource (CR). This setting accepts a list of rule template names. For a list of alert template names, see "List of default rules".</p>
-</div>
-<div class="paragraph">
-<p>If a rule template is included in the <code>disableAlerts</code> list, it is not created, even if a custom override exists in the <code>spec.processor.metrics.healthRules</code> field. The <code>disableAlerts</code> configuration takes precedence over all other health rule settings.</p>
-</div>
-<div class="paragraph">
-<p>For a list of alert template names, see "List of default rules".</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="network-observability-must-gather_verify-security-and-network-observability-operator-health">Use the must-gather tool</h5>
-<div class="paragraph _abstract">
-<p>Use the must-gather tool to collect diagnostic information about Network Observability Operator resources, including pod logs and configuration details, to assist in troubleshooting cluster issues.</p>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Navigate to the directory where you want to store the must-gather data.</p>
-</li>
-<li>
-<p>Run the following command to collect cluster-wide must-gather resources:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc adm must-gather
- --image-stream=openshift/must-gather \
- --image=quay.io/netobserv/must-gather</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect4">
-<h5 id="configure-network-traffic-console_verify-security-and-network-observability-operator-health">Configure network traffic menu entry in the Red&#160;Hat OpenShift Container Platform console</h5>
-<div class="paragraph _abstract">
-<p>Restore a missing network traffic menu entry in the <strong>Observe</strong> menu of the Red&#160;Hat OpenShift Container Platform console by manually registering the console plugin in the <code>FlowCollector</code> resource and the console operator configuration.</p>
-</div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>You have installed Red&#160;Hat OpenShift Container Platform version 4.10 or newer.</p>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Check if the <code>spec.consolePlugin.register</code> field is set to <code>true</code> by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc -n netobserv get flowcollector cluster -o yaml</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre>apiVersion: flows.netobserv.io/v1alpha1
-kind: FlowCollector
-metadata:
-  name: cluster
-spec:
-  consolePlugin:
-    register: false</pre>
-</div>
-</div>
-</li>
-<li>
-<p>Optional: Add the <code>netobserv-plugin</code> plugin by manually editing the Console Operator config:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc edit console.operator.openshift.io cluster</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre>...
-spec:
-  plugins:
-  - netobserv-plugin
-...</pre>
-</div>
-</div>
-</li>
-<li>
-<p>Optional: Set the <code>spec.consolePlugin.register</code> field to <code>true</code> by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc -n netobserv edit flowcollector cluster -o yaml</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre>apiVersion: flows.netobserv.io/v1alpha1
-kind: FlowCollector
-metadata:
-  name: cluster
-spec:
-  consolePlugin:
-    register: true</pre>
-</div>
-</div>
-</li>
-<li>
-<p>Ensure the status of console pods is <code>running</code> by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get pods -n openshift-console -l app=console</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Restart the console pods by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc delete pods -n openshift-console -l app=console</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Clear your browser cache and history.</p>
-</li>
-<li>
-<p>Check the status of network observability plugin pods by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get pods -n netobserv -l app=netobserv-plugin</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre>NAME                                READY   STATUS    RESTARTS   AGE
-netobserv-plugin-68c7bbb9bb-b69q6   1/1     Running   0          21s</pre>
-</div>
-</div>
-</li>
-<li>
-<p>Check the logs of the network observability plugin pods by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc logs -n netobserv -l app=netobserv-plugin</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">time="2022-12-13T12:06:49Z" level=info msg="Starting netobserv-console-plugin [build version: , build date: 2022-10-21 15:15] at log level info" module=main
-time="2022-12-13T12:06:49Z" level=info msg="listening on https://:9001" module=server</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect4">
-<h5 id="configure-network-traffic-flowlogs-pipeline-kafka_verify-security-and-network-observability-operator-health">Flowlogs-Pipeline does not consume network flows after installing Kafka</h5>
-<div class="paragraph _abstract">
-<p>Resolve issues where the flow-pipeline fails to consume network flows from Kafka by manually restarting the flow-pipeline pods to restore the connection between the flow collector and your Kafka deployment.</p>
-</div>
-<div class="paragraph">
-<p>If you deployed the flow collector first with <code>deploymentModel: KAFKA</code> and then deployed Kafka, the flow collector might not connect correctly to Kafka. Manually restart the flow-pipeline pods where Flowlogs-pipeline does not consume network flows from Kafka.</p>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Delete the flow-pipeline pods to restart them by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc delete pods -n netobserv -l app=flowlogs-pipeline-transformer</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect4">
-<h5 id="configure-network-traffic-interfaces_verify-security-and-network-observability-operator-health">Failing to see network flows from both br-int and br-ex interfaces</h5>
-<div class="paragraph _abstract">
-<p>Resolve issues with missing network flows by removing interface restrictions on virtual bridge devices like <code>br-int</code> and <code>br-ex</code>, ensuring the eBPF agent can attach to the appropriate Layer 3 interfaces.</p>
-</div>
-<div class="paragraph">
-<p><code>br-ex</code> and <code>br-int</code> are virtual bridge devices operated at OSI layer 2. The eBPF agent works at the IP and TCP levels, layers 3 and 4 respectively. You can expect that the eBPF agent captures the network traffic passing through <code>br-ex</code> and <code>br-int</code>, when the network traffic is processed by other interfaces such as physical host or virtual pod interfaces. If you restrict the eBPF agent network interfaces to attach only to <code>br-ex</code> and <code>br-int</code>, you do not see any network flow.</p>
-</div>
-<div class="paragraph">
-<p>Manually remove the part in the <code>interfaces</code> or <code>excludeInterfaces</code> that restricts the network interfaces to <code>br-int</code> and <code>br-ex</code>.</p>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Remove the <code>interfaces: [ 'br-int', 'br-ex' ]</code> field. This allows the agent to fetch information from all the interfaces. Alternatively, you can specify the Layer-3 interface for example, <code>eth0</code>. Run the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc edit -n netobserv flowcollector.yaml -o yaml</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre>apiVersion: flows.netobserv.io/v1alpha1
-kind: FlowCollector
-metadata:
-  name: cluster
-spec:
-  agent:
-    type: EBPF
-    ebpf:
-      interfaces: [ 'br-int', 'br-ex' ]</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>where:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>spec.agent.ebpf.interfaces</code></dt>
-<dd>
-<p>Specifies the network interfaces.</p>
-</dd>
-</dl>
-</div>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect4">
-<h5 id="controller-manager-pod-runs-out-of-memory_verify-security-and-network-observability-operator-health">Network observability controller manager pod runs out of memory</h5>
-<div class="paragraph _abstract">
-<p>Resolve memory issues with the Network Observability Operator by increasing the memory limits in the <code>Subscription</code> object to prevent the controller manager pod from running out of memory.</p>
-</div>
-<div class="paragraph">
-<p>You can increase memory limits for the Network Observability Operator by editing the <code>spec.config.resources.limits.memory</code> specification in the <code>Subscription</code> object.</p>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>In the web console, navigate to <strong>Ecosystem</strong> &#8594; <strong>Installed Operators</strong></p>
-</li>
-<li>
-<p>Click <strong>Network Observability</strong> and then select <strong>Subscription</strong>.</p>
-</li>
-<li>
-<p>From the <strong>Actions</strong> menu, click <strong>Edit Subscription</strong>.</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Alternatively, you can use the CLI to open the YAML configuration for the <code>Subscription</code> object by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc edit subscription netobserv-operator -n openshift-netobserv-operator</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>Edit the <code>Subscription</code> object to add the <code>config.resources.limits.memory</code> specification and set the value to account for your memory requirements. See the Additional resources for more information about resource considerations:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: operators.coreos.com/v1alpha1
-kind: Subscription
-metadata:
-  name: netobserv-operator
-  namespace: openshift-netobserv-operator
-spec:
-  channel: stable
-  config:
-    resources:
-      limits:
-        memory: 800Mi
-      requests:
-        cpu: 100m
-        memory: 100Mi
-  installPlanApproval: Automatic
-  name: netobserv-operator
-  source: redhat-operators
-  sourceNamespace: openshift-marketplace
-  startingCSV: &lt;network_observability_operator_latest_version&gt;</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>where:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>spec.config.resources.limits.memory</code></dt>
-<dd>
-<p>Specifies the memory limit. For example, you can increase the memory limit to <code>800Mi</code>.</p>
-</dd>
-<dt class="hdlist1"><code>spec.startingCSV</code></dt>
-<dd>
-<p>Specifies the starting CSV. This value should not be edited, but note that it changes depending on the most current release of the Operator.</p>
-</dd>
-</dl>
-</div>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect4">
-<h5 id="troubleshooting-query-loki-manually_verify-security-and-network-observability-operator-health">Run custom queries to Loki</h5>
-<div class="paragraph _abstract">
-<p>Troubleshoot network flow data by running custom Loki queries to retrieve available labels or filter logs by specific criteria, such as source namespaces, using the command-line interface.</p>
-</div>
-<div class="paragraph">
-<p>There are two examples of ways to do this, which you can adapt according to your needs by replacing the &lt;api_token&gt; with your own.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>These examples use the <code>netobserv</code> namespace for the Network Observability Operator and Loki deployments. Additionally, the examples assume that the LokiStack is named <code>loki</code>. You can optionally use a different namespace and naming by adapting the examples, specifically the <code>-n netobserv</code> or the <code>loki-gateway</code> URL.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>Installed Loki Operator for use with Network Observability Operator.</p>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>To get all available labels, run the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc exec deployment/netobserv-plugin -n netobserv -- curl -G -s -H 'X-Scope-OrgID:network' -H 'Authorization: Bearer &lt;api_token&gt;' -k https://loki-gateway-http.netobserv.svc:8080/api/logs/v1/network/loki/api/v1/labels | jq</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>To get all flows from the source namespace, <code>my-namespace</code>, run the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc exec deployment/netobserv-plugin -n netobserv -- curl -G -s -H 'X-Scope-OrgID:network' -H 'Authorization: Bearer &lt;api_token&gt;' -k https://loki-gateway-http.netobserv.svc:8080/api/logs/v1/network/loki/api/v1/query --data-urlencode 'query={SrcK8S_Namespace="my-namespace"}' | jq</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect4">
-<h5 id="network-observability-troubleshooting-loki-resource-exhausted_verify-security-and-network-observability-operator-health">Troubleshoot Loki ResourceExhausted error</h5>
-<div class="paragraph _abstract">
-<p>Resolve Loki <code>ResourceExhausted</code> errors by adjusting the <code>batchSize</code> in the <code>FlowCollector</code> resource or the maximum message size settings in your Loki configuration to ensure flow data stays within memory limits.</p>
-</div>
-<div class="paragraph">
-<p>Loki may return a <code>ResourceExhausted</code> error when network flow data sent by network observability exceeds the configured maximum message size. If you are using the Red&#160;Hat Loki Operator, this maximum message size is configured to 100 MiB.</p>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Navigate to <strong>Ecosystem</strong> &#8594; <strong>Installed Operators</strong>, viewing <strong>All projects</strong> from the <strong>Project</strong> drop-down menu.</p>
-</li>
-<li>
-<p>In the <strong>Provided APIs</strong> list, select the Network Observability Operator.</p>
-</li>
-<li>
-<p>Click the <strong>Flow Collector</strong> then the <strong>YAML view</strong> tab.</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>If you are using the Loki Operator, check that the <code>spec.loki.batchSize</code> value does not exceed 98 MiB.</p>
-</li>
-<li>
-<p>If you are using a Loki installation method that is different from the Red&#160;Hat Loki Operator, such as Grafana Loki, verify that the <code>grpc_server_max_recv_msg_size</code> <a href="https://grafana.com/docs/loki/latest/configure/#server">Grafana Loki server setting</a> is higher than the <code>FlowCollector</code> resource <code>spec.loki.batchSize</code> value. If it is not, you must either increase the <code>grpc_server_max_recv_msg_size</code> value, or decrease the <code>spec.loki.batchSize</code> value so that it is lower than the limit.</p>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>Click <strong>Save</strong> if you edited the <strong>FlowCollector</strong>.</p>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect4">
-<h5 id="network-observability-troubleshooting-loki-empty-ring_verify-security-and-network-observability-operator-health">Loki empty ring error</h5>
-<div class="paragraph _abstract">
-<p>Investigate and resolve Loki "empty ring" errors by checking pod health, clearing old persistent volume claims, or restarting pods to restore connectivity and ensure network flows are properly stored and displayed.</p>
-</div>
-<div class="paragraph">
-<p>The Loki "empty ring" error results in flows not being stored in Loki and not showing up in the web console. This error might happen in various situations. A single workaround to address them all does not exist. There are some actions you can take to investigate the logs in your Loki pods, and verify that the <code>LokiStack</code> is healthy and ready.</p>
-</div>
-<div class="paragraph">
-<p>Some of the situations where this error is observed are as follows:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>After a <code>LokiStack</code> is uninstalled and reinstalled in the same namespace, old PVCs are not removed, which can cause this error.</p>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Action</strong>: You can try removing the <code>LokiStack</code> again, removing the PVC, then reinstalling the <code>LokiStack</code>.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>After a certificate rotation, this error can prevent communication with the <code>flowlogs-pipeline</code> and <code>console-plugin</code> pods.</p>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Action</strong>: You can restart the pods to restore the connectivity.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect4">
-<h5 id="network-observability-troubleshooting-loki-tenant-rate-limit_verify-security-and-network-observability-operator-health">LokiStack rate limit errors</h5>
-<div class="paragraph _abstract">
-<p>Resolve Loki rate limit errors and prevent data loss by updating the <code>LokiStack</code> resource to increase the ingestion rate and burst limits for your network observability data streams.</p>
-</div>
-<div class="paragraph">
-<p>A rate-limit placed on the Loki tenant can result in potential temporary loss of data and a 429 error: <code>Per stream rate limit exceeded (limit:xMB/sec) while attempting to ingest for stream</code>. You might consider having an alert set to notify you of this error. For more information, see "Creating Loki rate limit alerts for the NetObserv dashboard" in the Additional resources of this section.</p>
-</div>
-<div class="paragraph">
-<p>You can update the LokiStack CRD with the <code>perStreamRateLimit</code> and <code>perStreamRateLimitBurst</code> specifications, as shown in the following procedure.</p>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Navigate to <strong>Ecosystem</strong> &#8594; <strong>Installed Operators</strong>, viewing <strong>All projects</strong> from the <strong>Project</strong> dropdown.</p>
-</li>
-<li>
-<p>Look for <strong>Loki Operator</strong>, and select the <strong>LokiStack</strong> tab.</p>
-</li>
-<li>
-<p>Create or edit an existing <strong>LokiStack</strong> instance using the <strong>YAML view</strong> to add the <code>perStreamRateLimit</code> and <code>perStreamRateLimitBurst</code> specifications:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: loki.grafana.com/v1
-kind: LokiStack
-metadata:
-  name: loki
-  namespace: netobserv
-spec:
-  limits:
-    global:
-      ingestion:
-        perStreamRateLimit: 6
-        perStreamRateLimitBurst: 30
-  tenants:
-    mode: openshift-network
-  managementState: Managed</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>where:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>spec.limits.global.ingestion.perStreamRateLimit</code></dt>
-<dd>
-<p>Specifies the ingestion rate limit. The default value is <code>3</code>.</p>
-</dd>
-<dt class="hdlist1"><code>spec.limits.global.ingestion.perStreamRateLimitBurst</code></dt>
-<dd>
-<p>Specifies the ingestion rate limit burst. The default value is <code>15</code>.</p>
-</dd>
-</dl>
-</div>
-</li>
-<li>
-<p>Click <strong>Save</strong>.</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<div class="title">Verification</div>
-<p>Once you update the <code>perStreamRateLimit</code> and <code>perStreamRateLimitBurst</code> specifications, the pods in your cluster restart and the 429 rate-limit error no longer occurs.</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="network-observability-troubleshooting-large-query-timeout_verify-security-and-network-observability-operator-health">Running a large query results in Loki errors</h5>
-<div class="paragraph _abstract">
-<p>Understand how you can mitigate Loki timeout and request errors when running large queries by using indexed filters, leveraging Prometheus for long time ranges, creating custom metrics, or adjusting Loki and FlowCollector performance settings.</p>
-</div>
-<div class="paragraph">
-<p>When running large queries for a long time, Loki errors can occur, such as a <code>timeout</code> or <code>too many outstanding requests</code>. There is no complete corrective for this issue, but there are several ways to mitigate it:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Adapt your query to add an indexed filter</dt>
-<dd>
-<div class="paragraph">
-<p>With Loki queries, you can query on both indexed and non-indexed fields or labels. Queries that contain filters on labels perform better. For example, if you query for a particular Pod, which is not an indexed field, you can add its Namespace to the query. The list of indexed fields can be found in the "Network flows format reference", in the <code>Loki label</code> column.</p>
-</div>
-</dd>
-<dt class="hdlist1">Consider querying Prometheus rather than Loki</dt>
-<dd>
-<div class="paragraph">
-<p>Prometheus is a better fit than Loki to query on large time ranges. However, whether or not you can use Prometheus instead of Loki depends on the use case. For example, queries on Prometheus are much faster than on Loki, and large time ranges do not impact performance. But Prometheus metrics do not contain as much information as flow logs in Loki. The Network Observability OpenShift web console automatically favors Prometheus over Loki if the query is compatible; otherwise, it defaults to Loki. If your query does not run against Prometheus, you can change some filters or aggregations to make the switch. In the OpenShift web console, you can force the use of Prometheus. An error message is displayed when incompatible queries fail, which can help you figure out which labels to change to make the query compatible. For example, changing a filter or an aggregation from <strong>Resource</strong> or <strong>Pods</strong> to <strong>Owner</strong>.</p>
-</div>
-</dd>
-<dt class="hdlist1">Consider using the FlowMetrics API to create your own metric</dt>
-<dd>
-<p>If the data that you need isn&#8217;t available as a Prometheus metric, you can use the FlowMetrics API to create your own metric. For more information, see "FlowMetrics API Reference" and "Configuring custom metrics by using FlowMetric API".</p>
-</dd>
-<dt class="hdlist1">Configure Loki to improve the query performance</dt>
-<dd>
-<div class="paragraph">
-<p>If the problem persists, you can consider configuring Loki to improve the query performance. Some options depend on the installation mode you used for Loki, such as using the Operator and <code>LokiStack</code>, or <code>Monolithic</code> mode, or <code>Microservices</code> mode.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>In <code>LokiStack</code> or <code>Microservices</code> modes, try increasing the number of querier replicas. For more information, see "LokiComponentSpec".</p>
-</li>
-<li>
-<p>Increase the query timeout. You must also increase the Network Observability read timeout to Loki in the <code>FlowCollector</code> <code>spec.loki.readTimeout</code>. For more information, see "QueryLimitSpec".</p>
-</li>
-</ul>
-</div>
-</dd>
-</dl>
-</div>
-<div class="sect5 _additional-resources">
-<h6 id="_additional_resources_9">Additional resources</h6>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://loki-operator.dev/docs/api.md/#loki-grafana-com-v1-LokiComponentSpec">LokiComponentSpec</a></p>
-</li>
-<li>
-<p><a href="https://loki-operator.dev/docs/api.md/#loki-grafana-com-v1-QueryLimitSpec">QueryLimitSpec</a></p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
 </div>
 <div class="paragraph nav-footer">
 <p>← Previous: <a href="manage-user-authentication-and-identity-providers-con_manage-user-authentication-and-identity-providers.html">Manage user authentication and identity providers</a> | ↑ Up: <a href="_secure.html">Secure</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="monitor-platform-vulnerabilities-and-audit-security-incidents-con_monitor-platform-vulnerabilities-and-audit-security-incidents.html">Monitor platform vulnerabilities and audit security incidents</a> →</p>
@@ -13601,7 +11406,7 @@ spec:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-06 15:08:32 -0500
+Last updated 2026-10-08 18:28:01 -0500
 </div>
 </div>
 <style>
