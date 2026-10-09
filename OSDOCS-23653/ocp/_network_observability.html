@@ -1743,8 +1743,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="hcp-disaster-recovery-oadp-auto-con_automated-disaster-recovery-for-hosted-control-planes-using-oadp.html">Automated disaster recovery for a hosted cluster by using OADP</a>
 </li>
-<li><a href="replace-healthy-etcd-about_high-availability-and-disaster-recovery-for-hosted-control-planes-recover-an-unhealthy-etcd-cluster.html">About replacing a healthy etcd member</a>
-</li>
 <li><a href="control-plane-backup-restore-operations-overview_high-availability-and-disaster-recovery-for-hosted-control-planes-back-up-and-restore-etcd-and-hosted-clusters.html">Control plane backup and restore operations</a>
 </li>
 <li><a href="control-plane-backup-restore-operations-overview_high-availability-and-disaster-recovery-for-hosted-control-planes-automated-disaster-recovery-for-a-hosted-cluster-by-using-oadp.html">Control plane backup and restore operations</a>
@@ -1757,15 +1755,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="inspecting-pod-and-container-logs_troubleshoot-containers.html">Inspect pod and container logs</a>
 </li>
-<li><a href="update-backup-etcd-database-before-update_backup-and-restore-etcd-data.html">Backup the etcd database before you proceed with the update</a>
+<li><a href="backup-and-restore-etcd-data-con_backup-and-restore-etcd-data.html">Backing up and restoring etcd data</a>
 </li>
-<li><a href="control-plane-backup-restore-operations-overview_control-plane-disaster-recovery.html">Control plane backup and restore operations</a>
+<li><a href="disaster-recovery-for-control-planes-intro_control-plane-disaster-recovery.html">Control plane disaster recovery</a>
 </li>
 <li><a href="nw-pod-network-connectivity-checks_troubleshoot-network-issues.html">Connection health checks that are performed</a>
 </li>
 <li><a href="troubleshoot-network-issues-diagnose-node-networking-and-ovs-con_troubleshoot-network-issues-diagnose-node-networking-and-ovs.html">Diagnose node networking and Open vSwitch</a>
 </li>
-<li><a href="restore-replace-unhealthy-etcd-member_replace-unhealthy-etcd-members.html">Replacing the unhealthy etcd member</a>
+<li><a href="replace-unhealthy-etcd-member-intro_replace-unhealthy-etcd-members.html">Replacing an unhealthy etcd member</a>
 </li>
 <li><a href="collecting-windows-application-event-logs_view-cluster-events.html">Collecting Windows application event logs</a>
 </li>
@@ -1855,9 +1853,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="restore-identify-unhealthy-etcd-member_defragment-etcd-data-manually-defragment-etcd-data.html">Identifying an unhealthy etcd member</a>
 </li>
-<li><a href="backing-up-etcd-data_etcd-best-practices-create-single-automatic-etcd-backup.html">Backing up etcd data</a>
-</li>
 <li><a href="restore-identify-unhealthy-etcd-member_etcd-best-practices-restore-etcd-data.html">Identifying an unhealthy etcd member</a>
+</li>
+<li><a href="replace-healthy-etcd-member-intro_replace-healthy-etcd-member.html">Replacing a healthy etcd member</a>
 </li>
 <li><a href="removing-etcd-member_monitor-control-plane-nodes-identify-an-unhealthy-etcd-member.html">Removing the unhealthy etcd member</a>
 </li>
@@ -1893,7 +1891,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#network-observability-operator_understand-network-observability-netobserv">Network Observability Operator</a></li><li class="level-5"><a href="#network-observability-dependency-network-observability-operator_understand-network-observability-netobserv">Optional dependencies of the Network Observability Operator</a></li><li class="level-5"><a href="#network-observability-openshift-console-integration_understand-network-observability-netobserv">Red Hat OpenShift Container Platform console integration</a></li><li class="level-5"><a href="#network-observability-cli_understand-network-observability-netobserv">Network Observability CLI</a></li><li class="level-5"><a href="#understand-network-observability-architecture-con_understand-network-observability-architecture">Understand network observability architecture</a></li><li class="level-6"><a href="#nw-network-observability-operator_understand-network-observability-architecture">View statuses</a></li><li class="level-6"><a href="#network-observability-architecture_understand-network-observability-architecture">Network Observablity Operator architecture</a></li><li class="level-4"><a href="#network-flow-visibility-con_network-flow-visibility">Network flow visibility</a></li><li class="level-5"><a href="#network-observability-dashboards_network-flow-visibility">Network observability metrics dashboards</a></li><li class="level-5"><a href="#network-observability-topology-views_network-flow-visibility">Network observability topology views</a></li><li class="level-5"><a href="#traffic-flow-tables_network-flow-visibility">Traffic flow tables</a></li><li class="level-4"><a href="#evaluate-network-observability-prerequisites-and-requirements-con_evaluate-network-observability-prerequisites-and-requirements">Evaluate network observability prerequisites and requirements</a></li><li class="level-5"><a href="#network-observability-dependency-network-observability-operator_evaluate-network-observability-prerequisites-and-requirements">Optional dependencies of the Network Observability Operator</a></li><li class="level-5"><a href="#network-observability-without-loki_evaluate-network-observability-prerequisites-and-requirements">Network observability without Loki</a></li><li class="level-6"><a href="#network-observability-lokistack-configuring-ingestion_evaluate-network-observability-prerequisites-and-requirements">LokiStack ingestion limits and health alerts</a></li><li class="level-4"><a href="#network-observability-deployment-and-management-con_network-observability-deployment-and-management">Network Observability deployment and management</a></li><li class="level-5"><a href="#network-observability-operator-installation_network-observability-deployment-and-management">Install the Network Observability Operator</a></li><li class="level-5"><a href="#understand-network-observability-capabilities-and-limitations-con_understand-network-observability-capabilities-and-limitations">Understand Network Observability capabilities and limitations</a></li><li class="level-6"><a href="#network-observability-multi-tenancy_understand-network-observability-capabilities-and-limitations">Enable multi-tenancy in network observability</a></li><li class="level-5"><a href="#network-observability-config-FLP-sampling_optimize-collection-performance-and-resource-usage">Update the FlowCollector resource</a></li><li class="level-6"><a href="#network-observability-filter-network-flows-at-ingestion_optimize-collection-performance-and-resource-usage">Filter network flows at ingestion</a></li><li class="level-6"><a href="#network-observability-resource-recommendations_optimize-collection-performance-and-resource-usage">Resource management and performance considerations</a></li><li class="level-6"><a href="#network-observability-kafka-compression-benefits_optimize-collection-performance-and-resource-usage">Kafka compression benefits for network flow telemetry</a></li><li class="level-6"><a href="#network-observability-configuring-kafka-compression_optimize-collection-performance-and-resource-usage">Configure Kafka compression</a></li><li class="level-6"><a href="#network-observability-kafka-compression-codec-reference_optimize-collection-performance-and-resource-usage">Kafka compression codec reference</a></li><li class="level-6"><a href="#network-observability-recording-rules-performance-optimization_optimize-collection-performance-and-resource-usage">Performance optimization with recording rules</a></li><li class="level-5"><a href="#network-observability-resources-table_scale-components-based-on-cluster-size">Resource considerations</a></li><li class="level-6"><a href="#network-observability-total-resource-usage-table_scale-components-based-on-cluster-size">Total average memory and CPU usage</a></li><li class="level-6"><a href="#network-observability-resource-recommendations_scale-components-based-on-cluster-size">Resource management and performance considerations</a></li><li class="level-6"><a href="#network-observability-kafka-for-large-scale-environments_scale-components-based-on-cluster-size">Kafka deployment scenarios for network flows</a></li><li class="level-6"><a href="#network-observability-flowcollector-kafka-config_scale-components-based-on-cluster-size">Configure the FlowCollector resource with Kafka</a></li><li class="level-6"><a href="#network-observability-multi-tenancy_scale-components-based-on-cluster-size">Network observability deployment in specific nodes</a></li><li class="level-6"><a href="#network-observability-flowcollector-api-specifications_scale-components-based-on-cluster-size">FlowCollector API specifications</a></li><li class="level-5"><a href="#configure-prometheus-metrics-collection-con_configure-prometheus-metrics-collection">Configure Prometheus metrics collection</a></li><li class="level-6"><a href="#network-observability-viewing-dashboards_configure-prometheus-metrics-collection">View network observability metrics dashboards</a></li><li class="level-6"><a href="#network-observability-metrics_configure-prometheus-metrics-collection">Network observability metrics</a></li><li class="level-6"><a href="#network-observability-netobserv-dashboard-high-traffic-alert_configure-prometheus-metrics-collection">Create alerts</a></li><li class="level-6"><a href="#network-observability-custom-metrics_configure-prometheus-metrics-collection">Custom metrics</a></li><li class="level-6"><a href="#network-observability-configuring-custom-metrics_configure-prometheus-metrics-collection">Configure custom metrics by using FlowMetric API</a></li><li class="level-6"><a href="#network-observability-creating-metrics-network-events_configure-prometheus-metrics-collection">Create metrics from nested or array fields in the Traffic flows table</a></li><li class="level-6"><a href="#network-observability-custom-charts-flowmetrics_configure-prometheus-metrics-collection">Configure custom charts using FlowMetric API</a></li><li class="level-6"><a href="#network-observability-health-dashboard-overview_configure-prometheus-metrics-collection">Health dashboards</a></li><li class="level-5"><a href="#network-observability-deployment-and-management-113-control-automatic-installation-during-cluster-creation-con_network-observability-deployment-and-management-113-control-automatic-installation-during-cluster-creation">Control automatic installation during cluster creation</a></li><li class="level-6"><a href="#network-observability-operator-installation_network-observability-deployment-and-management-113-control-automatic-installation-during-cluster-creation">Install the Network Observability Operator</a></li><li class="level-4"><a href="#verify-network-observability-installation-intro_verify-network-observability-installation">Verify Network Observability installation</a></li><li class="level-5"><a href="#network-observability-operator-installation_verify-network-observability-installation">Install the Network Observability Operator</a></li><li class="level-5"><a href="#network-observability-loki-installation_verify-network-observability-installation">Install the Loki Operator</a></li><li class="level-5"><a href="#network-observability-lokistack-create_verify-network-observability-installation">Create a LokiStack custom resource</a></li><li class="level-4"><a href="#configure-the-network-observability-operator-flowcollector-con_configure-the-network-observability-operator-flowcollector">Configure the Network Observability Operator FlowCollector</a></li><li class="level-5"><a href="#network-observability-important-flowcollector-configuration-consideration_configure-the-network-observability-operator-flowcollector">Important FlowCollector configuration considerations</a></li><li class="level-5"><a href="#network-observability-flowcollector-view_configure-the-network-observability-operator-flowcollector">View the FlowCollector resource</a></li><li class="level-6"><a href="#network-observability-flowcollector-example_configure-the-network-observability-operator-flowcollector">Example of a FlowCollector resource</a></li><li class="level-5"><a href="#network-observability-config-FLP-sampling_configure-the-network-observability-operator-flowcollector">Update the FlowCollector resource</a></li><li class="level-5"><a href="#network-observability-filter-network-flows-at-ingestion_configure-the-network-observability-operator-flowcollector">Filter network flows at ingestion</a></li><li class="level-6"><a href="#ebpf-agent-filters_configure-the-network-observability-operator-flowcollector">eBPF agent filters</a></li><li class="level-6"><a href="#flowlogs-pipeline-filters_configure-the-network-observability-operator-flowcollector">Flowlogs-pipeline filters</a></li><li class="level-5"><a href="#network-observability-config-quick-filters_configure-the-network-observability-operator-flowcollector">Configure quick filters</a></li><li class="level-5"><a href="#network-observability-flowcollector-kafka-config_configure-the-network-observability-operator-flowcollector">Configure the FlowCollector resource with Kafka</a></li><li class="level-5"><a href="#network-observability-enriched-flows_configure-the-network-observability-operator-flowcollector">Export enriched network flow data</a></li><li class="level-5"><a href="#network-observability-SR-IOV-config_configure-the-network-observability-operator-flowcollector">Configure monitoring for SR-IOV interface traffic</a></li><li class="level-5"><a href="#network-observability-virtualization-config_configure-the-network-observability-operator-flowcollector">Configure virtual machine (VM) secondary network interfaces for Network Observability</a></li><li class="level-5"><a href="#network-observability-configuring-ipsec-with-flow-collector-resource_configure-the-network-observability-operator-flowcollector">Configuring IPsec with the FlowCollector custom resource</a></li><li class="level-5"><a href="#network-observability-ebpf-manager-operator_configure-the-network-observability-operator-flowcollector">Working with the eBPF Manager Operator</a></li><li class="level-5"><a href="#network-observability-packet-translation-overview_configure-the-network-observability-operator-flowcollector">Endpoint translation (xlat)</a></li><li class="level-6"><a href="#network-observability-packet-translation_configure-the-network-observability-operator-flowcollector">Working with endpoint translation (xlat)</a></li><li class="level-5"><a href="#network-observability-user-defined-networks_configure-the-network-observability-operator-flowcollector">User-defined networks</a></li><li class="level-6"><a href="#network-observability-working-with-udn_configure-the-network-observability-operator-flowcollector">Working with user-defined networks</a></li><li class="level-4"><a href="#control-network-policies-and-access-for-network-observability-operator-con_control-network-policies-and-access-for-network-observability-operator">Control network policies and access for the Network Observability Operator</a></li><li class="level-5"><a href="#network-observability-deploy-network-policy_control-network-policies-and-access-for-network-observability-operator">Configure network policy by using the FlowCollector custom resource</a></li><li class="level-5"><a href="#network-observability-grant-permissions-custom-namespace-and-secret-access_control-network-policies-and-access-for-network-observability-operator">Grant permissions for custom namespace and secret access</a></li><li class="level-6"><a href="#network-observability-create-cluster-role-bindings-custom-namespace_control-network-policies-and-access-for-network-observability-operator">Create cluster role bindings for a custom namespace</a></li><li class="level-4"><a href="#secure-network-observability-data-con_secure-network-observability-data">Secure network observability data</a></li><li class="level-5"><a href="#network-observability-loki-secret_secure-network-observability-data">Create a secret for Loki storage</a></li><li class="level-6"><a href="#network-observability-role-based-access-control-for-loki-logs_secure-network-observability-data">Role-based access control for Loki logs</a></li><li class="level-5"><a href="#network-observability-multi-tenancy_secure-network-observability-data">Enable multi-tenancy in network observability</a></li><li class="level-6"><a href="#network-observability-grant-access-lokistack-secrets_secure-network-observability-data">Grant access to LokiStack secrets</a></li><li class="level-6"><a href="#network-observability-grant-access-kafka-secrets_secure-network-observability-data">Grant access to Kafka secrets</a></li><li class="level-4"><a href="#monitor-network-traffic-with-network-observability-con_monitor-network-traffic-with-network-observability">Monitor network traffic with Network Observability</a></li><li class="level-5"><a href="#network-observability-network-traffic-overview-view_monitor-network-traffic-with-network-observability">Observe the network traffic from the Overview view</a></li><li class="level-6"><a href="#network-observability-working-with-overview_monitor-network-traffic-with-network-observability">Work with the Overview view</a></li><li class="level-6"><a href="#network-observability-configuring-options-overview_monitor-network-traffic-with-network-observability">Configure advanced options for the Overview view</a></li><li class="level-5"><a href="#network-observability-trafficflow_monitor-network-traffic-with-network-observability">Observe the network traffic from the Traffic flows view</a></li><li class="level-6"><a href="#network-observability-working-with-trafficflow_monitor-network-traffic-with-network-observability">Work with the Traffic flows view</a></li><li class="level-6"><a href="#network-observability-configuring-options-trafficflow_monitor-network-traffic-with-network-observability">Traffic flow display settings</a></li><li class="level-5"><a href="#network-observability-topology_monitor-network-traffic-with-network-observability">Observe the network traffic from the Topology view</a></li><li class="level-6"><a href="#network-observability-working-with-topology_monitor-network-traffic-with-network-observability">Work with the Topology view</a></li><li class="level-6"><a href="#network-observability-configuring-options-topology_monitor-network-traffic-with-network-observability">Configure the advanced options for the Topology view</a></li><li class="level-5"><a href="#network-observability-working-with-conversations_monitor-network-traffic-with-network-observability">Work with conversation tracking</a></li><li class="level-5"><a href="#network-observability-quickfilter_monitor-network-traffic-with-network-observability">Filter the network traffic</a></li><li class="level-5"><a href="#network-observability-health-dashboard-overview_monitor-network-observability-operator-health">Health dashboards</a></li><li class="level-6"><a href="#network-observability-health-alert-overview_monitor-network-observability-operator-health">Health alerts</a></li><li class="level-6"><a href="#network-observability-dashboard-view_monitor-network-observability-operator-health">View health information</a></li><li class="level-6"><a href="#network-observability-disable-alerts_monitor-network-observability-operator-health">Disable health alerts</a></li><li class="level-6"><a href="#network-observability-netobserv-dashboard-rate-limit-alerts_monitor-network-observability-operator-health">Create Loki rate limit alerts for the NetObserv dashboard</a></li><li class="level-6"><a href="#network-observability-netobserv-dashboard-ebpf-agent-alerts_monitor-network-observability-operator-health">Use the eBPF agent alert</a></li><li class="level-6"><a href="#nw-status-configuration-network-observability-operator_monitor-network-observability-operator-health">View Network Observability Operator status and configuration</a></li><li class="level-5"><a href="#detect-and-investigate-network-observability-issues-con_detect-and-investigate-network-observability-issues">Detect and investigate Network Observability issues</a></li><li class="level-6"><a href="#network-observability-must-gather_detect-and-investigate-network-observability-issues">Use the must-gather tool</a></li><li class="level-6"><a href="#configure-network-traffic-console_detect-and-investigate-network-observability-issues">Configure network traffic menu entry in the Red Hat OpenShift Container Platform console</a></li><li class="level-6"><a href="#configure-network-traffic-flowlogs-pipeline-kafka_detect-and-investigate-network-observability-issues">Flowlogs-Pipeline does not consume network flows after installing Kafka</a></li><li class="level-6"><a href="#configure-network-traffic-interfaces_detect-and-investigate-network-observability-issues">Failing to see network flows from both br-int and br-ex interfaces</a></li><li class="level-6"><a href="#controller-manager-pod-runs-out-of-memory_detect-and-investigate-network-observability-issues">Network observability controller manager pod runs out of memory</a></li><li class="level-6"><a href="#troubleshooting-query-loki-manually_detect-and-investigate-network-observability-issues">Run custom queries to Loki</a></li><li class="level-6"><a href="#network-observability-troubleshooting-loki-resource-exhausted_detect-and-investigate-network-observability-issues">Troubleshoot Loki ResourceExhausted error</a></li><li class="level-6"><a href="#network-observability-troubleshooting-loki-empty-ring_detect-and-investigate-network-observability-issues">Loki empty ring error</a></li><li class="level-6"><a href="#network-observability-troubleshooting-loki-tenant-rate-limit_detect-and-investigate-network-observability-issues">LokiStack rate limit errors</a></li><li class="level-6"><a href="#network-observability-troubleshooting-large-query-timeout_detect-and-investigate-network-observability-issues">Running a large query results in Loki errors</a></li><li class="level-4"><a href="#network-observability-health-dashboard-overview_verify-security-and-network-observability-operator-health">Health dashboards</a></li><li class="level-5"><a href="#network-observability-health-alert-overview_verify-security-and-network-observability-operator-health">Health alerts</a></li><li class="level-5"><a href="#network-observability-dashboard-view_verify-security-and-network-observability-operator-health">View health information</a></li><li class="level-6"><a href="#network-observability-disable-alerts_verify-security-and-network-observability-operator-health">Disable health alerts</a></li><li class="level-5"><a href="#network-observability-netobserv-dashboard-rate-limit-alerts_verify-security-and-network-observability-operator-health">Create Loki rate limit alerts for the NetObserv dashboard</a></li><li class="level-5"><a href="#network-observability-netobserv-dashboard-ebpf-agent-alerts_verify-security-and-network-observability-operator-health">Use the eBPF agent alert</a></li><li class="level-5"><a href="#network-observability-health-rules-and-performance_verify-security-and-network-observability-operator-health">Identify network issues with automated health rules</a></li><li class="level-6"><a href="#importance-of-network-health-monitoring_verify-security-and-network-observability-operator-health">Importance of network health monitoring</a></li><li class="level-6"><a href="#detection-of-network-issues_verify-security-and-network-observability-operator-health">Automated health monitoring</a></li><li class="level-6"><a href="#network-health-monitoring-workflow_verify-security-and-network-observability-operator-health">Network health monitoring workflow</a></li><li class="level-6"><a href="#network-observability-health-rules-monitoring-and-alerting_verify-security-and-network-observability-operator-health">Detect network issues with automated health rules</a></li><li class="level-5"><a href="#network-observability-health-rule-customization_verify-security-and-network-observability-operator-health">Health rule threshold and grouping customization</a></li><li class="level-6"><a href="#network-observability-health-rules-promql-expressions-metadata_verify-security-and-network-observability-operator-health">Health rule query and metadata reference</a></li><li class="level-6"><a href="#network-observability-configuring-custom-health-rules_verify-security-and-network-observability-operator-health">Configure custom health rules</a></li><li class="level-5"><a href="#network-observability-recording-rules-performance-optimization_verify-security-and-network-observability-operator-health">Performance optimization with recording rules</a></li><li class="level-6"><a href="#network-observability-recording-rules-benefits_verify-security-and-network-observability-operator-health">Optimization benefits</a></li><li class="level-6"><a href="#network-observability-alert-vs-recording-comparison_verify-security-and-network-observability-operator-health">Comparison of rule modes</a></li><li class="level-6"><a href="#network-observability-integrating-recording-rules-with-health-dashboard_verify-security-and-network-observability-operator-health">Integrating recording rules with the health dashboard</a></li><li class="level-6"><a href="#network-observability-configuring-custom-recording-rules_verify-security-and-network-observability-operator-health">Optimize dashboard metrics with recording rules</a></li><li class="level-5"><a href="#network-observability-disable-predefined-rules_verify-security-and-network-observability-operator-health">Disable default rules</a></li><li class="level-5"><a href="#network-observability-must-gather_verify-security-and-network-observability-operator-health">Use the must-gather tool</a></li><li class="level-5"><a href="#configure-network-traffic-console_verify-security-and-network-observability-operator-health">Configure network traffic menu entry in the Red Hat OpenShift Container Platform console</a></li><li class="level-5"><a href="#configure-network-traffic-flowlogs-pipeline-kafka_verify-security-and-network-observability-operator-health">Flowlogs-Pipeline does not consume network flows after installing Kafka</a></li><li class="level-5"><a href="#configure-network-traffic-interfaces_verify-security-and-network-observability-operator-health">Failing to see network flows from both br-int and br-ex interfaces</a></li><li class="level-5"><a href="#controller-manager-pod-runs-out-of-memory_verify-security-and-network-observability-operator-health">Network observability controller manager pod runs out of memory</a></li><li class="level-5"><a href="#troubleshooting-query-loki-manually_verify-security-and-network-observability-operator-health">Run custom queries to Loki</a></li><li class="level-5"><a href="#network-observability-troubleshooting-loki-resource-exhausted_verify-security-and-network-observability-operator-health">Troubleshoot Loki ResourceExhausted error</a></li><li class="level-5"><a href="#network-observability-troubleshooting-loki-empty-ring_verify-security-and-network-observability-operator-health">Loki empty ring error</a></li><li class="level-5"><a href="#network-observability-troubleshooting-loki-tenant-rate-limit_verify-security-and-network-observability-operator-health">LokiStack rate limit errors</a></li><li class="level-5"><a href="#network-observability-troubleshooting-large-query-timeout_verify-security-and-network-observability-operator-health">Running a large query results in Loki errors</a></li><li class="level-6"><a href="#_additional_resources_10">Additional resources</a></li><li class="level-4"><a href="#configure-network-traffic-flowlogs-pipeline-kafka_troubleshoot-network-issues-136-diagnose-network-flow-issues-netobserv">Flowlogs-Pipeline does not consume network flows after installing Kafka</a></li><li class="level-5"><a href="#configure-network-traffic-interfaces_troubleshoot-network-issues-136-diagnose-network-flow-issues-netobserv">Failing to see network flows from both br-int and br-ex interfaces</a></li><li class="level-5"><a href="#network-observability-health-rules-and-performance_troubleshoot-network-issues-136-diagnose-network-flow-issues-netobserv">Identify network issues with automated health rules</a></li><li class="level-6"><a href="#importance-of-network-health-monitoring_troubleshoot-network-issues-136-diagnose-network-flow-issues-netobserv">Importance of network health monitoring</a></li><li class="level-6"><a href="#detection-of-network-issues_troubleshoot-network-issues-136-diagnose-network-flow-issues-netobserv">Automated health monitoring</a></li><li class="level-6"><a href="#network-health-monitoring-workflow_troubleshoot-network-issues-136-diagnose-network-flow-issues-netobserv">Network health monitoring workflow</a></li><li class="level-5"><a href="#network-observability-health-rules-and-performance_troubleshoot-network-issues-1361-investigate-packet-drops-netobserv">Identify network issues with automated health rules</a></li><li class="level-6"><a href="#importance-of-network-health-monitoring_troubleshoot-network-issues-1361-investigate-packet-drops-netobserv">Importance of network health monitoring</a></li><li class="level-6"><a href="#detection-of-network-issues_troubleshoot-network-issues-1361-investigate-packet-drops-netobserv">Automated health monitoring</a></li><li class="level-6"><a href="#network-health-monitoring-workflow_troubleshoot-network-issues-1361-investigate-packet-drops-netobserv">Network health monitoring workflow</a></li><li class="level-6"><a href="#network-observability-health-rules-monitoring-and-alerting_troubleshoot-network-issues-1361-investigate-packet-drops-netobserv">Detect network issues with automated health rules</a></li><li class="level-6"><a href="#oadp-performance-network-requirements_troubleshoot-network-issues-1361-investigate-packet-drops-netobserv">OADP network requirements</a></li><li class="level-5"><a href="#network-observability-operator-stub_troubleshoot-network-issues-1362-execute-localized-network-diagnostics-using-the-oc-netobserv-cli">Network Observability Operator features</a></li><li class="level-6"><a href="#network-observability-operator-release-notes-1-12-2-fixed-issues_troubleshoot-network-issues-1362-execute-localized-network-diagnostics-using-the-oc-netobserv-cli">Network Observability Operator 1.12.2 fixed issues</a></li><li class="level-6"><a href="#network-observability-operator-release-notes-1-12-fixed-issues_troubleshoot-network-issues-1362-execute-localized-network-diagnostics-using-the-oc-netobserv-cli">Network Observability Operator 1.12 fixed issues</a></li><li class="level-6"><a href="#network-observability-netoberv-cli-about_troubleshoot-network-issues-1362-execute-localized-network-diagnostics-using-the-oc-netobserv-cli">About the Network Observability CLI</a></li><li class="level-6"><a href="#network-observability-cli-install_troubleshoot-network-issues-1362-execute-localized-network-diagnostics-using-the-oc-netobserv-cli">Install the Network Observability CLI</a></li><li class="level-6"><a href="#network-observability-cli-capturing-flows_troubleshoot-network-issues-1362-execute-localized-network-diagnostics-using-the-oc-netobserv-cli">Capture flows</a></li><li class="level-6"><a href="#network-observability-cli-capturing-metrics_troubleshoot-network-issues-1362-execute-localized-network-diagnostics-using-the-oc-netobserv-cli">Capture metrics</a></li><li class="level-6"><a href="#network-observability-cli-capturing-packets_troubleshoot-network-issues-1362-execute-localized-network-diagnostics-using-the-oc-netobserv-cli">Capture packets</a></li><li class="level-6"><a href="#network-observability-netobserv-cli-reference_troubleshoot-network-issues-1362-execute-localized-network-diagnostics-using-the-oc-netobserv-cli">Network Observability CLI usage</a></li><li class="level-6"><a href="#network-observability-cli-uninstall_troubleshoot-network-issues-1362-execute-localized-network-diagnostics-using-the-oc-netobserv-cli">Clean the Network Observability CLI</a></li><li class="level-4"><a href="#network-observability-integration-intro_network-observability-integration">Network Observability integration</a></li><li class="level-5"><a href="#network-observability-flowcollector-view_network-observability-integration">View the FlowCollector resource</a></li><li class="level-5"><a href="#network-observability-flowcollector-kafka-config_network-observability-integration">Configure the FlowCollector resource with Kafka</a></li><li class="level-5"><a href="#network-observability-enriched-flows_network-observability-integration">Export enriched network flow data</a></li><li class="level-5"><a href="#network-observability-enriched-flows_export-flow-data-to-kafka">Export enriched network flow data</a></li><li class="level-6"><a href="#network-observability-flowcollector-kafka-config_export-flow-data-to-kafka">Configure the FlowCollector resource with Kafka</a></li><li class="level-5"><a href="#network-observability-enriched-flows_export-flow-data-to-ipfix">Export enriched network flow data</a></li><li class="level-5"><a href="#network-observability-enriched-flows_export-flow-data-to-opentelemetry">Export enriched network flow data</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#network-observability-operator_understand-network-observability-netobserv">Network Observability Operator</a></li><li class="level-5"><a href="#network-observability-dependency-network-observability-operator_understand-network-observability-netobserv">Optional dependencies of the Network Observability Operator</a></li><li class="level-5"><a href="#network-observability-openshift-console-integration_understand-network-observability-netobserv">Red Hat OpenShift Container Platform console integration</a></li><li class="level-5"><a href="#network-observability-cli_understand-network-observability-netobserv">Network Observability CLI</a></li><li class="level-5"><a href="#understand-network-observability-architecture-con_understand-network-observability-architecture">Understand network observability architecture</a></li><li class="level-6"><a href="#nw-network-observability-operator_understand-network-observability-architecture">View statuses</a></li><li class="level-6"><a href="#network-observability-architecture_understand-network-observability-architecture">Network Observablity Operator architecture</a></li><li class="level-4"><a href="#network-flow-visibility-con_network-flow-visibility">Network flow visibility</a></li><li class="level-5"><a href="#network-observability-dashboards_network-flow-visibility">Network observability metrics dashboards</a></li><li class="level-5"><a href="#network-observability-topology-views_network-flow-visibility">Network observability topology views</a></li><li class="level-5"><a href="#traffic-flow-tables_network-flow-visibility">Traffic flow tables</a></li><li class="level-5"><a href="#network-observability-api-specifications-reference_network-flow-visibility">Network observability API specifications</a></li><li class="level-6"><a href="#flowcollector-api_network-flow-visibility">FlowCollector API</a></li><li class="level-6"><a href="#flowmetric-api_network-flow-visibility">FlowMetric API</a></li><li class="level-6"><a href="#flowcollector-slice-api_network-flow-visibility">FlowCollectorSlice API</a></li><li class="level-6"><a href="#network-flows-format_network-flow-visibility">Network flows format</a></li><li class="level-6"><a href="#network-observability-cli-usage_network-flow-visibility">Network Observability CLI usage</a></li><li class="level-4"><a href="#evaluate-network-observability-prerequisites-and-requirements-con_evaluate-network-observability-prerequisites-and-requirements">Evaluate network observability prerequisites and requirements</a></li><li class="level-5"><a href="#network-observability-dependency-network-observability-operator_evaluate-network-observability-prerequisites-and-requirements">Optional dependencies of the Network Observability Operator</a></li><li class="level-5"><a href="#network-observability-without-loki_evaluate-network-observability-prerequisites-and-requirements">Network observability without Loki</a></li><li class="level-6"><a href="#network-observability-lokistack-configuring-ingestion_evaluate-network-observability-prerequisites-and-requirements">LokiStack ingestion limits and health alerts</a></li><li class="level-4"><a href="#network-observability-deployment-and-management-con_network-observability-deployment-and-management">Network Observability deployment and management</a></li><li class="level-5"><a href="#network-observability-operator-installation_network-observability-deployment-and-management">Install the Network Observability Operator</a></li><li class="level-5"><a href="#understand-network-observability-capabilities-and-limitations-con_understand-network-observability-capabilities-and-limitations">Understand Network Observability capabilities and limitations</a></li><li class="level-6"><a href="#network-observability-multi-tenancy_understand-network-observability-capabilities-and-limitations">Enable multi-tenancy in network observability</a></li><li class="level-5"><a href="#network-observability-config-FLP-sampling_optimize-collection-performance-and-resource-usage">Update the FlowCollector resource</a></li><li class="level-6"><a href="#network-observability-filter-network-flows-at-ingestion_optimize-collection-performance-and-resource-usage">Filter network flows at ingestion</a></li><li class="level-6"><a href="#network-observability-resource-recommendations_optimize-collection-performance-and-resource-usage">Resource management and performance considerations</a></li><li class="level-6"><a href="#network-observability-kafka-compression-benefits_optimize-collection-performance-and-resource-usage">Kafka compression benefits for network flow telemetry</a></li><li class="level-6"><a href="#network-observability-configuring-kafka-compression_optimize-collection-performance-and-resource-usage">Configure Kafka compression</a></li><li class="level-6"><a href="#network-observability-kafka-compression-codec-reference_optimize-collection-performance-and-resource-usage">Kafka compression codec reference</a></li><li class="level-6"><a href="#network-observability-recording-rules-performance-optimization_optimize-collection-performance-and-resource-usage">Performance optimization with recording rules</a></li><li class="level-5"><a href="#network-observability-resources-table_scale-components-based-on-cluster-size">Resource considerations</a></li><li class="level-6"><a href="#network-observability-total-resource-usage-table_scale-components-based-on-cluster-size">Total average memory and CPU usage</a></li><li class="level-6"><a href="#network-observability-resource-recommendations_scale-components-based-on-cluster-size">Resource management and performance considerations</a></li><li class="level-6"><a href="#network-observability-kafka-for-large-scale-environments_scale-components-based-on-cluster-size">Kafka deployment scenarios for network flows</a></li><li class="level-6"><a href="#network-observability-flowcollector-kafka-config_scale-components-based-on-cluster-size">Configure the FlowCollector resource with Kafka</a></li><li class="level-6"><a href="#network-observability-multi-tenancy_scale-components-based-on-cluster-size">Network observability deployment in specific nodes</a></li><li class="level-6"><a href="#network-observability-flowcollector-api-specifications_scale-components-based-on-cluster-size">FlowCollector API specifications</a></li><li class="level-5"><a href="#configure-prometheus-metrics-collection-con_configure-prometheus-metrics-collection">Configure Prometheus metrics collection</a></li><li class="level-6"><a href="#network-observability-viewing-dashboards_configure-prometheus-metrics-collection">View network observability metrics dashboards</a></li><li class="level-6"><a href="#network-observability-metrics_configure-prometheus-metrics-collection">Network observability metrics</a></li><li class="level-6"><a href="#network-observability-netobserv-dashboard-high-traffic-alert_configure-prometheus-metrics-collection">Create alerts</a></li><li class="level-6"><a href="#network-observability-custom-metrics_configure-prometheus-metrics-collection">Custom metrics</a></li><li class="level-6"><a href="#network-observability-configuring-custom-metrics_configure-prometheus-metrics-collection">Configure custom metrics by using FlowMetric API</a></li><li class="level-6"><a href="#network-observability-creating-metrics-network-events_configure-prometheus-metrics-collection">Create metrics from nested or array fields in the Traffic flows table</a></li><li class="level-6"><a href="#network-observability-custom-charts-flowmetrics_configure-prometheus-metrics-collection">Configure custom charts using FlowMetric API</a></li><li class="level-6"><a href="#network-observability-health-dashboard-overview_configure-prometheus-metrics-collection">Health dashboards</a></li><li class="level-5"><a href="#network-observability-deployment-and-management-113-control-automatic-installation-during-cluster-creation-con_network-observability-deployment-and-management-113-control-automatic-installation-during-cluster-creation">Control automatic installation during cluster creation</a></li><li class="level-6"><a href="#network-observability-operator-installation_network-observability-deployment-and-management-113-control-automatic-installation-during-cluster-creation">Install the Network Observability Operator</a></li><li class="level-4"><a href="#verify-network-observability-installation-intro_verify-network-observability-installation">Verify Network Observability installation</a></li><li class="level-5"><a href="#network-observability-operator-installation_verify-network-observability-installation">Install the Network Observability Operator</a></li><li class="level-5"><a href="#network-observability-loki-installation_verify-network-observability-installation">Install the Loki Operator</a></li><li class="level-5"><a href="#network-observability-lokistack-create_verify-network-observability-installation">Create a LokiStack custom resource</a></li><li class="level-4"><a href="#configure-the-network-observability-operator-flowcollector-con_configure-the-network-observability-operator-flowcollector">Configure the Network Observability Operator FlowCollector</a></li><li class="level-5"><a href="#network-observability-important-flowcollector-configuration-consideration_configure-the-network-observability-operator-flowcollector">Important FlowCollector configuration considerations</a></li><li class="level-5"><a href="#network-observability-flowcollector-view_configure-the-network-observability-operator-flowcollector">View the FlowCollector resource</a></li><li class="level-6"><a href="#network-observability-flowcollector-example_configure-the-network-observability-operator-flowcollector">Example of a FlowCollector resource</a></li><li class="level-5"><a href="#network-observability-config-FLP-sampling_configure-the-network-observability-operator-flowcollector">Update the FlowCollector resource</a></li><li class="level-5"><a href="#network-observability-filter-network-flows-at-ingestion_configure-the-network-observability-operator-flowcollector">Filter network flows at ingestion</a></li><li class="level-6"><a href="#ebpf-agent-filters_configure-the-network-observability-operator-flowcollector">eBPF agent filters</a></li><li class="level-6"><a href="#flowlogs-pipeline-filters_configure-the-network-observability-operator-flowcollector">Flowlogs-pipeline filters</a></li><li class="level-5"><a href="#network-observability-config-quick-filters_configure-the-network-observability-operator-flowcollector">Configure quick filters</a></li><li class="level-5"><a href="#network-observability-flowcollector-kafka-config_configure-the-network-observability-operator-flowcollector">Configure the FlowCollector resource with Kafka</a></li><li class="level-5"><a href="#network-observability-enriched-flows_configure-the-network-observability-operator-flowcollector">Export enriched network flow data</a></li><li class="level-5"><a href="#network-observability-SR-IOV-config_configure-the-network-observability-operator-flowcollector">Configure monitoring for SR-IOV interface traffic</a></li><li class="level-5"><a href="#network-observability-virtualization-config_configure-the-network-observability-operator-flowcollector">Configure virtual machine (VM) secondary network interfaces for Network Observability</a></li><li class="level-5"><a href="#network-observability-configuring-ipsec-with-flow-collector-resource_configure-the-network-observability-operator-flowcollector">Configuring IPsec with the FlowCollector custom resource</a></li><li class="level-5"><a href="#network-observability-ebpf-manager-operator_configure-the-network-observability-operator-flowcollector">Working with the eBPF Manager Operator</a></li><li class="level-5"><a href="#network-observability-packet-translation-overview_configure-the-network-observability-operator-flowcollector">Endpoint translation (xlat)</a></li><li class="level-6"><a href="#network-observability-packet-translation_configure-the-network-observability-operator-flowcollector">Working with endpoint translation (xlat)</a></li><li class="level-5"><a href="#network-observability-user-defined-networks_configure-the-network-observability-operator-flowcollector">User-defined networks</a></li><li class="level-6"><a href="#network-observability-working-with-udn_configure-the-network-observability-operator-flowcollector">Working with user-defined networks</a></li><li class="level-4"><a href="#control-network-policies-and-access-for-network-observability-operator-con_control-network-policies-and-access-for-network-observability-operator">Control network policies and access for the Network Observability Operator</a></li><li class="level-5"><a href="#network-observability-deploy-network-policy_control-network-policies-and-access-for-network-observability-operator">Configure network policy by using the FlowCollector custom resource</a></li><li class="level-5"><a href="#network-observability-grant-permissions-custom-namespace-and-secret-access_control-network-policies-and-access-for-network-observability-operator">Grant permissions for custom namespace and secret access</a></li><li class="level-6"><a href="#network-observability-create-cluster-role-bindings-custom-namespace_control-network-policies-and-access-for-network-observability-operator">Create cluster role bindings for a custom namespace</a></li><li class="level-4"><a href="#secure-network-observability-data-con_secure-network-observability-data">Secure network observability data</a></li><li class="level-5"><a href="#network-observability-loki-secret_secure-network-observability-data">Create a secret for Loki storage</a></li><li class="level-6"><a href="#network-observability-role-based-access-control-for-loki-logs_secure-network-observability-data">Role-based access control for Loki logs</a></li><li class="level-5"><a href="#network-observability-multi-tenancy_secure-network-observability-data">Enable multi-tenancy in network observability</a></li><li class="level-6"><a href="#network-observability-grant-access-lokistack-secrets_secure-network-observability-data">Grant access to LokiStack secrets</a></li><li class="level-6"><a href="#network-observability-grant-access-kafka-secrets_secure-network-observability-data">Grant access to Kafka secrets</a></li><li class="level-4"><a href="#monitor-network-traffic-with-network-observability-con_monitor-network-traffic-with-network-observability">Monitor network traffic with Network Observability</a></li><li class="level-5"><a href="#network-observability-network-traffic-overview-view_monitor-network-traffic-with-network-observability">Observe the network traffic from the Overview view</a></li><li class="level-6"><a href="#network-observability-working-with-overview_monitor-network-traffic-with-network-observability">Work with the Overview view</a></li><li class="level-6"><a href="#network-observability-configuring-options-overview_monitor-network-traffic-with-network-observability">Configure advanced options for the Overview view</a></li><li class="level-5"><a href="#network-observability-trafficflow_monitor-network-traffic-with-network-observability">Observe the network traffic from the Traffic flows view</a></li><li class="level-6"><a href="#network-observability-working-with-trafficflow_monitor-network-traffic-with-network-observability">Work with the Traffic flows view</a></li><li class="level-6"><a href="#network-observability-configuring-options-trafficflow_monitor-network-traffic-with-network-observability">Traffic flow display settings</a></li><li class="level-5"><a href="#network-observability-topology_monitor-network-traffic-with-network-observability">Observe the network traffic from the Topology view</a></li><li class="level-6"><a href="#network-observability-working-with-topology_monitor-network-traffic-with-network-observability">Work with the Topology view</a></li><li class="level-6"><a href="#network-observability-configuring-options-topology_monitor-network-traffic-with-network-observability">Configure the advanced options for the Topology view</a></li><li class="level-5"><a href="#network-observability-working-with-conversations_monitor-network-traffic-with-network-observability">Work with conversation tracking</a></li><li class="level-5"><a href="#network-observability-quickfilter_monitor-network-traffic-with-network-observability">Filter the network traffic</a></li><li class="level-5"><a href="#network-observability-health-dashboard-overview_monitor-network-observability-operator-health">Health dashboards</a></li><li class="level-6"><a href="#network-observability-health-alert-overview_monitor-network-observability-operator-health">Health alerts</a></li><li class="level-6"><a href="#network-observability-dashboard-view_monitor-network-observability-operator-health">View health information</a></li><li class="level-6"><a href="#network-observability-disable-alerts_monitor-network-observability-operator-health">Disable health alerts</a></li><li class="level-6"><a href="#network-observability-netobserv-dashboard-rate-limit-alerts_monitor-network-observability-operator-health">Create Loki rate limit alerts for the NetObserv dashboard</a></li><li class="level-6"><a href="#network-observability-netobserv-dashboard-ebpf-agent-alerts_monitor-network-observability-operator-health">Use the eBPF agent alert</a></li><li class="level-6"><a href="#nw-status-configuration-network-observability-operator_monitor-network-observability-operator-health">View Network Observability Operator status and configuration</a></li><li class="level-5"><a href="#detect-and-investigate-network-observability-issues-con_detect-and-investigate-network-observability-issues">Detect and investigate Network Observability issues</a></li><li class="level-6"><a href="#network-observability-must-gather_detect-and-investigate-network-observability-issues">Use the must-gather tool</a></li><li class="level-6"><a href="#configure-network-traffic-console_detect-and-investigate-network-observability-issues">Configure network traffic menu entry in the Red Hat OpenShift Container Platform console</a></li><li class="level-6"><a href="#configure-network-traffic-flowlogs-pipeline-kafka_detect-and-investigate-network-observability-issues">Flowlogs-Pipeline does not consume network flows after installing Kafka</a></li><li class="level-6"><a href="#configure-network-traffic-interfaces_detect-and-investigate-network-observability-issues">Failing to see network flows from both br-int and br-ex interfaces</a></li><li class="level-6"><a href="#controller-manager-pod-runs-out-of-memory_detect-and-investigate-network-observability-issues">Network observability controller manager pod runs out of memory</a></li><li class="level-6"><a href="#troubleshooting-query-loki-manually_detect-and-investigate-network-observability-issues">Run custom queries to Loki</a></li><li class="level-6"><a href="#network-observability-troubleshooting-loki-resource-exhausted_detect-and-investigate-network-observability-issues">Troubleshoot Loki ResourceExhausted error</a></li><li class="level-6"><a href="#network-observability-troubleshooting-loki-empty-ring_detect-and-investigate-network-observability-issues">Loki empty ring error</a></li><li class="level-6"><a href="#network-observability-troubleshooting-loki-tenant-rate-limit_detect-and-investigate-network-observability-issues">LokiStack rate limit errors</a></li><li class="level-6"><a href="#network-observability-troubleshooting-large-query-timeout_detect-and-investigate-network-observability-issues">Running a large query results in Loki errors</a></li><li class="level-4"><a href="#network-observability-health-dashboard-overview_verify-security-and-network-observability-operator-health">Health dashboards</a></li><li class="level-5"><a href="#network-observability-health-alert-overview_verify-security-and-network-observability-operator-health">Health alerts</a></li><li class="level-5"><a href="#network-observability-dashboard-view_verify-security-and-network-observability-operator-health">View health information</a></li><li class="level-6"><a href="#network-observability-disable-alerts_verify-security-and-network-observability-operator-health">Disable health alerts</a></li><li class="level-5"><a href="#network-observability-netobserv-dashboard-rate-limit-alerts_verify-security-and-network-observability-operator-health">Create Loki rate limit alerts for the NetObserv dashboard</a></li><li class="level-5"><a href="#network-observability-netobserv-dashboard-ebpf-agent-alerts_verify-security-and-network-observability-operator-health">Use the eBPF agent alert</a></li><li class="level-5"><a href="#network-observability-health-rules-and-performance_verify-security-and-network-observability-operator-health">Identify network issues with automated health rules</a></li><li class="level-6"><a href="#importance-of-network-health-monitoring_verify-security-and-network-observability-operator-health">Importance of network health monitoring</a></li><li class="level-6"><a href="#detection-of-network-issues_verify-security-and-network-observability-operator-health">Automated health monitoring</a></li><li class="level-6"><a href="#network-health-monitoring-workflow_verify-security-and-network-observability-operator-health">Network health monitoring workflow</a></li><li class="level-6"><a href="#network-observability-health-rules-monitoring-and-alerting_verify-security-and-network-observability-operator-health">Detect network issues with automated health rules</a></li><li class="level-5"><a href="#network-observability-health-rule-customization_verify-security-and-network-observability-operator-health">Health rule threshold and grouping customization</a></li><li class="level-6"><a href="#network-observability-health-rules-promql-expressions-metadata_verify-security-and-network-observability-operator-health">Health rule query and metadata reference</a></li><li class="level-6"><a href="#network-observability-configuring-custom-health-rules_verify-security-and-network-observability-operator-health">Configure custom health rules</a></li><li class="level-5"><a href="#network-observability-recording-rules-performance-optimization_verify-security-and-network-observability-operator-health">Performance optimization with recording rules</a></li><li class="level-6"><a href="#network-observability-recording-rules-benefits_verify-security-and-network-observability-operator-health">Optimization benefits</a></li><li class="level-6"><a href="#network-observability-alert-vs-recording-comparison_verify-security-and-network-observability-operator-health">Comparison of rule modes</a></li><li class="level-6"><a href="#network-observability-integrating-recording-rules-with-health-dashboard_verify-security-and-network-observability-operator-health">Integrating recording rules with the health dashboard</a></li><li class="level-6"><a href="#network-observability-configuring-custom-recording-rules_verify-security-and-network-observability-operator-health">Optimize dashboard metrics with recording rules</a></li><li class="level-5"><a href="#network-observability-disable-predefined-rules_verify-security-and-network-observability-operator-health">Disable default rules</a></li><li class="level-5"><a href="#network-observability-must-gather_verify-security-and-network-observability-operator-health">Use the must-gather tool</a></li><li class="level-5"><a href="#configure-network-traffic-console_verify-security-and-network-observability-operator-health">Configure network traffic menu entry in the Red Hat OpenShift Container Platform console</a></li><li class="level-5"><a href="#configure-network-traffic-flowlogs-pipeline-kafka_verify-security-and-network-observability-operator-health">Flowlogs-Pipeline does not consume network flows after installing Kafka</a></li><li class="level-5"><a href="#configure-network-traffic-interfaces_verify-security-and-network-observability-operator-health">Failing to see network flows from both br-int and br-ex interfaces</a></li><li class="level-5"><a href="#controller-manager-pod-runs-out-of-memory_verify-security-and-network-observability-operator-health">Network observability controller manager pod runs out of memory</a></li><li class="level-5"><a href="#troubleshooting-query-loki-manually_verify-security-and-network-observability-operator-health">Run custom queries to Loki</a></li><li class="level-5"><a href="#network-observability-troubleshooting-loki-resource-exhausted_verify-security-and-network-observability-operator-health">Troubleshoot Loki ResourceExhausted error</a></li><li class="level-5"><a href="#network-observability-troubleshooting-loki-empty-ring_verify-security-and-network-observability-operator-health">Loki empty ring error</a></li><li class="level-5"><a href="#network-observability-troubleshooting-loki-tenant-rate-limit_verify-security-and-network-observability-operator-health">LokiStack rate limit errors</a></li><li class="level-5"><a href="#network-observability-troubleshooting-large-query-timeout_verify-security-and-network-observability-operator-health">Running a large query results in Loki errors</a></li><li class="level-6"><a href="#_additional_resources_10">Additional resources</a></li><li class="level-4"><a href="#configure-network-traffic-flowlogs-pipeline-kafka_troubleshoot-network-issues-136-diagnose-network-flow-issues-netobserv">Flowlogs-Pipeline does not consume network flows after installing Kafka</a></li><li class="level-5"><a href="#configure-network-traffic-interfaces_troubleshoot-network-issues-136-diagnose-network-flow-issues-netobserv">Failing to see network flows from both br-int and br-ex interfaces</a></li><li class="level-5"><a href="#network-observability-health-rules-and-performance_troubleshoot-network-issues-136-diagnose-network-flow-issues-netobserv">Identify network issues with automated health rules</a></li><li class="level-6"><a href="#importance-of-network-health-monitoring_troubleshoot-network-issues-136-diagnose-network-flow-issues-netobserv">Importance of network health monitoring</a></li><li class="level-6"><a href="#detection-of-network-issues_troubleshoot-network-issues-136-diagnose-network-flow-issues-netobserv">Automated health monitoring</a></li><li class="level-6"><a href="#network-health-monitoring-workflow_troubleshoot-network-issues-136-diagnose-network-flow-issues-netobserv">Network health monitoring workflow</a></li><li class="level-5"><a href="#network-observability-health-rules-and-performance_troubleshoot-network-issues-1361-investigate-packet-drops-netobserv">Identify network issues with automated health rules</a></li><li class="level-6"><a href="#importance-of-network-health-monitoring_troubleshoot-network-issues-1361-investigate-packet-drops-netobserv">Importance of network health monitoring</a></li><li class="level-6"><a href="#detection-of-network-issues_troubleshoot-network-issues-1361-investigate-packet-drops-netobserv">Automated health monitoring</a></li><li class="level-6"><a href="#network-health-monitoring-workflow_troubleshoot-network-issues-1361-investigate-packet-drops-netobserv">Network health monitoring workflow</a></li><li class="level-6"><a href="#network-observability-health-rules-monitoring-and-alerting_troubleshoot-network-issues-1361-investigate-packet-drops-netobserv">Detect network issues with automated health rules</a></li><li class="level-6"><a href="#oadp-performance-network-requirements_troubleshoot-network-issues-1361-investigate-packet-drops-netobserv">OADP network requirements</a></li><li class="level-5"><a href="#network-observability-operator-stub_troubleshoot-network-issues-1362-execute-localized-network-diagnostics-using-the-oc-netobserv-cli">Network Observability Operator features</a></li><li class="level-6"><a href="#network-observability-netoberv-cli-about_troubleshoot-network-issues-1362-execute-localized-network-diagnostics-using-the-oc-netobserv-cli">About the Network Observability CLI</a></li><li class="level-6"><a href="#network-observability-cli-install_troubleshoot-network-issues-1362-execute-localized-network-diagnostics-using-the-oc-netobserv-cli">Install the Network Observability CLI</a></li><li class="level-6"><a href="#network-observability-cli-capturing-flows_troubleshoot-network-issues-1362-execute-localized-network-diagnostics-using-the-oc-netobserv-cli">Capture flows</a></li><li class="level-6"><a href="#network-observability-cli-capturing-metrics_troubleshoot-network-issues-1362-execute-localized-network-diagnostics-using-the-oc-netobserv-cli">Capture metrics</a></li><li class="level-6"><a href="#network-observability-cli-capturing-packets_troubleshoot-network-issues-1362-execute-localized-network-diagnostics-using-the-oc-netobserv-cli">Capture packets</a></li><li class="level-6"><a href="#network-observability-netobserv-cli-reference_troubleshoot-network-issues-1362-execute-localized-network-diagnostics-using-the-oc-netobserv-cli">Network Observability CLI usage</a></li><li class="level-6"><a href="#network-observability-cli-uninstall_troubleshoot-network-issues-1362-execute-localized-network-diagnostics-using-the-oc-netobserv-cli">Clean the Network Observability CLI</a></li><li class="level-4"><a href="#network-observability-integration-intro_network-observability-integration">Network Observability integration</a></li><li class="level-5"><a href="#network-observability-flowcollector-view_network-observability-integration">View the FlowCollector resource</a></li><li class="level-5"><a href="#network-observability-flowcollector-kafka-config_network-observability-integration">Configure the FlowCollector resource with Kafka</a></li><li class="level-5"><a href="#network-observability-enriched-flows_network-observability-integration">Export enriched network flow data</a></li><li class="level-5"><a href="#network-observability-enriched-flows_export-flow-data-to-kafka">Export enriched network flow data</a></li><li class="level-6"><a href="#network-observability-flowcollector-kafka-config_export-flow-data-to-kafka">Configure the FlowCollector resource with Kafka</a></li><li class="level-5"><a href="#network-observability-enriched-flows_export-flow-data-to-ipfix">Export enriched network flow data</a></li><li class="level-5"><a href="#network-observability-enriched-flows_export-flow-data-to-opentelemetry">Export enriched network flow data</a></li><li class="level-4"><a href="#_network_observability_operator_release_notes">Network Observability Operator release notes</a></li><li class="level-5"><a href="#network-observability-operator-release-notes-1-12-3-advisory_network-observability-release-notes">Network Observability Operator 1.12.3 advisory</a></li><li class="level-5"><a href="#network-observability-operator-release-notes-1-12-3-fixed-issues_network-observability-release-notes">Network Observability Operator 1.12.3 fixed issues</a></li><li class="level-5"><a href="#network-observability-operator-release-notes-1-12-2-advisory_network-observability-release-notes">Network Observability Operator 1.12.2 advisory</a></li><li class="level-5"><a href="#network-observability-operator-release-notes-1-12-2-fixed-issues_network-observability-release-notes">Network Observability Operator 1.12.2 fixed issues</a></li><li class="level-5"><a href="#network-observability-operator-release-notes-1-12-1-advisory_network-observability-release-notes">Network Observability Operator 1.12.1 advisory</a></li><li class="level-5"><a href="#network-observability-operator-release-notes_network-observability-release-notes">Network Observability Operator 1.12 advisory</a></li><li class="level-5"><a href="#network-observability-operator-release-notes-1-12-new-features-enhancements_network-observability-release-notes">Network Observability Operator 1.12 new features and enhancements</a></li><li class="level-5"><a href="#network-observability-operator-release-notes-1-12-technology-preview_network-observability-release-notes">Network Observability Operator 1.12 Technology Preview features</a></li><li class="level-5"><a href="#network-observability-operator-release-notes-1-12-fixed-issues_network-observability-release-notes">Network Observability Operator 1.12 fixed issues</a></li><li class="level-5"><a href="#network-observability-operator-release-notes-1-12-known-issues_network-observability-release-notes">Network Observability Operator 1.12 known issues</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="_network_observability">Network Observability</h3>
@@ -2176,6 +2174,89 @@ lokistack-query-frontend-85c6db4fbd-jm94f           1/1     Running   0         
 </div>
 <div class="paragraph">
 <p>The <strong>Traffic flows</strong> tab in the Red&#160;Hat OpenShift Container Platform web console displays the data of the network flows and the amount of traffic.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="network-observability-api-specifications-reference_network-flow-visibility">Network observability API specifications</h5>
+<div class="paragraph _abstract">
+<p>Reference documentation for Network Observability custom resources and flow data formats.</p>
+</div>
+<div class="sect5">
+<h6 id="flowcollector-api_network-flow-visibility">FlowCollector API</h6>
+<div class="paragraph">
+<p>The <code>FlowCollector</code> resource configures the Network Observability Operator.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/openshift/network-observability-operator/blob/release-2.0/docs/flowcollector-flows-netobserv-io-v1beta2.adoc">FlowCollector API for network observability 2.0</a></p>
+</li>
+<li>
+<p><a href="https://github.com/openshift/network-observability-operator/blob/release-1.12/docs/flowcollector-flows-netobserv-io-v1beta2.adoc">FlowCollector API for network observability 1.12</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect5">
+<h6 id="flowmetric-api_network-flow-visibility">FlowMetric API</h6>
+<div class="paragraph">
+<p>The <code>FlowMetric</code> resource creates custom metrics from collected flow logs.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/openshift/network-observability-operator/blob/release-2.0/docs/flowmetric-flows-netobserv-io-v1alpha1.adoc">FlowMetric API for network observability 2.0</a></p>
+</li>
+<li>
+<p><a href="https://github.com/openshift/network-observability-operator/blob/release-1.12/docs/flowmetric-flows-netobserv-io-v1alpha1.adoc">FlowMetric API for network observability 1.12</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect5">
+<h6 id="flowcollector-slice-api_network-flow-visibility">FlowCollectorSlice API</h6>
+<div class="paragraph">
+<p>The <code>FlowCollectorSlice`</code> resource enables per-tenant flow collection configuration.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/openshift/network-observability-operator/blob/release-2.0/docs/FlowCollectorSlice.md">FlowCollectorSlice API for network observability 2.0</a></p>
+</li>
+<li>
+<p><a href="https://github.com/openshift/network-observability-operator/blob/release-1.12/docs/FlowCollectorSlice.md">FlowCollectorSlice API for network observability 1.12</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect5">
+<h6 id="network-flows-format_network-flow-visibility">Network flows format</h6>
+<div class="paragraph">
+<p>The network flows format reference describes the structure and fields of flow data.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/openshift/network-observability-operator/blob/release-2.0/docs/flows-format.adoc">Network flows format reference for network observability 2.0</a></p>
+</li>
+<li>
+<p><a href="https://github.com/openshift/network-observability-operator/blob/release-1.12/docs/flows-format.adoc">Network flows format reference for network observability 1.12</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect5">
+<h6 id="network-observability-cli-usage_network-flow-visibility">Network Observability CLI usage</h6>
+<div class="paragraph">
+<p>The Network Observability CLI (<code>oc netobserv</code>) provides feature and filtering parity with the Network Observability Operator. Use command-line arguments to dynamically toggle features and isolate specific cluster network traffic flows.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/netobserv/netobserv-cli/blob/main/docs/netobserv_cli.adoc">Network Observability CLI usage</a></p>
+</li>
+</ul>
+</div>
 </div>
 </div>
 </div>
@@ -17121,192 +17202,6 @@ spec:
 </table>
 </div>
 <div class="sect5">
-<h6 id="network-observability-operator-release-notes-1-12-2-fixed-issues_troubleshoot-network-issues-1362-execute-localized-network-diagnostics-using-the-oc-netobserv-cli">Network Observability Operator 1.12.2 fixed issues</h6>
-<div class="paragraph _abstract">
-<p>The Network Observability Operator 1.12.2 release contains several fixed issues that improve system status reporting and user experience.</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Narrowed Operator ClusterRole to least-privilege RBAC permissions</dt>
-<dd>
-<p>Before this update, the Network Observability Operator&#8217;s generated <code>ClusterRole</code> granted cluster-wide write access to core resources such as secrets and namespaces, and allowed creating <code>SecurityContextConstraints</code> and <code>ClusterRoleBindings</code> without resource-name scoping. As a consequence, the Network Observability Operator service account held broader permissions than required to manage its operands.</p>
-<div class="paragraph">
-<p>With this release, the Network Observability Operator&#8217;s RBAC permissions are scoped to only the namespaces it manages, the <code>securitycontextconstraints</code> rule is restricted by resource name, and <code>ClusterRoleBinding</code> permissions are constrained to the specific bindings the Operator creates. As a result, the Operator follows the principle of least privilege and reduces the attack surface of the service account.</p>
-</div>
-<div class="paragraph">
-<p>After upgrading to Network Observability Operator 1.12.2, you must manually grant RBAC permissions if any of the following conditions apply:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>You configured <code>spec.namespace</code> in the <code>FlowCollector</code> resource to a namespace other than <code>netobserv</code>.</p>
-</li>
-<li>
-<p>You configured the <code>FlowCollector</code> resource with <code>spec.deploymentModel: Kafka</code> and TLS or mTLS enabled.</p>
-</li>
-<li>
-<p>You use the Loki Operator with <code>LokiStack</code> installed in a namespace other than <code>netobserv</code>.</p>
-<div class="paragraph">
-<p>For instructions, see "Granting permissions for custom namespace and secret access".</p>
-</div>
-</li>
-</ul>
-</div>
-</dd>
-<dt class="hdlist1">Inherited scheduling configuration for the console plugin static deployment</dt>
-<dd>
-<p>Before this update, the <code>netobserv-plugin-static</code> deployment in the <code>openshift-netobserv-operator</code> namespace did not inherit <code>nodeSelector</code> and <code>tolerations</code> settings from the Operator Subscription. As a consequence, you could not schedule the static console plugin pod onto infrastructure nodes alongside the controller manager.</p>
-<div class="paragraph">
-<p>With this release, the <code>netobserv-plugin-static</code> deployment inherits the scheduling configuration set on the Operator Subscription. As a result, node placement for the static console plugin is consistent with the controller manager.</p>
-</div>
-<div class="paragraph">
-<p><a href="https://redhat.atlassian.net/browse/NETOBSERV-2575">NETOBSERV-2575</a></p>
-</div>
-</dd>
-<dt class="hdlist1">Resolved Operator startup failure with custom console logos</dt>
-<dd>
-<p>Before this update, the Network Observability Operator failed to start when the <code>Console.operator.openshift.io</code> resource had the <code>spec.customization.logos</code> field configured. The Operator incorrectly reported a validation conflict between <code>logos</code> and the deprecated <code>customLogoFile</code> field, even when only <code>logos</code> was set.</p>
-<div class="paragraph">
-<p>With this release, the Network Observability Operator correctly handles web console configurations that use the <code>spec.customization.logos</code> field. As a result, the Operator starts successfully on clusters with custom console branding.</p>
-</div>
-<div class="paragraph">
-<p><a href="https://redhat.atlassian.net/browse/NETOBSERV-2767">NETOBSERV-2767</a></p>
-</div>
-</dd>
-<dt class="hdlist1">Fixed controller crash when FlowCollector is on hold and ServiceAccount is absent</dt>
-<dd>
-<p>Before this update, the Operator controller panicked with a nil pointer dereference when the <code>FlowCollector</code> resource was in <code>OnHold</code> mode and the eBPF agent <code>ServiceAccount</code> did not exist. As a consequence, the controller manager pod entered a <code>CrashLoopBackOff</code> state and all reconciliation stopped.</p>
-<div class="paragraph">
-<p>With this release, the Network Observability Operator gracefully skips the deletion step when the <code>ServiceAccount</code> is absent during an <code>OnHold</code> reconciliation. As a result, the controller manager no longer crashes in this scenario.</p>
-</div>
-<div class="paragraph">
-<p><a href="https://redhat.atlassian.net/browse/NETOBSERV-2839">NETOBSERV-2839</a></p>
-</div>
-</dd>
-</dl>
-</div>
-</div>
-<div class="sect5">
-<h6 id="network-observability-operator-release-notes-1-12-fixed-issues_troubleshoot-network-issues-1362-execute-localized-network-diagnostics-using-the-oc-netobserv-cli">Network Observability Operator 1.12 fixed issues</h6>
-<div class="paragraph _abstract">
-<p>The Network Observability Operator 1.12 release contains several fixed issues that improve performance, system status reporting, and user experience.</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Consistent FlowCollector pipeline status</dt>
-<dd>
-<p>Before this update, changes to the sampling field caused an inconsistency in the <code>FlowCollector</code> resource status. As a consequence, you could see conflicting statuses across pipeline components.</p>
-<div class="paragraph">
-<p>With this release, status reporting is made consistent across all components. As a result, the reliability of the pipeline status indicator is improved.</p>
-</div>
-<div class="paragraph">
-<p><a href="https://issues.redhat.com/browse/NETOBSERV-2375">NETOBSERV-2375</a></p>
-</div>
-</dd>
-<dt class="hdlist1">Fixed <code>--help</code> flag processing in netobserv-cli</dt>
-<dd>
-<p>Before this update, the <code>--help</code> flag was ignored when placed after other command flags in the Network Observability CLI. As a consequence, running commands such as <code>oc netobserv flows --interfaces=br-ex --max-time=10s --help</code> executed the flow collection instead of displaying the help page.</p>
-<div class="paragraph">
-<p>With this release, the <code>--help</code> flag is recognized regardless of its position in the command. As a result, you can now display help information by placing the <code>--help</code> flag anywhere in your command arguments.</p>
-</div>
-<div class="paragraph">
-<p><a href="https://issues.redhat.com/browse/NETOBSERV-2617">NETOBSERV-2617</a></p>
-</div>
-</dd>
-<dt class="hdlist1">Improved visibility of DNS names warning messages</dt>
-<dd>
-<p>Before this update, the <strong>DNS names</strong> graph repeatedly displayed a warning message on every refresh when running in a Prometheus-only configuration. As a consequence, the persistent warning message covered other dashboard elements.</p>
-<div class="paragraph">
-<p>With this release, the warning message is only displayed during the initial data load and does not overlay other content. As a result, interface clarity is improved when navigating the dashboard.</p>
-</div>
-<div class="paragraph">
-<p><a href="https://issues.redhat.com/browse/NETOBSERV-2618">NETOBSERV-2618</a></p>
-</div>
-</dd>
-<dt class="hdlist1">Prometheus enabled by default in FlowCollector configurations</dt>
-<dd>
-<p>Before this update, the default setting for Prometheus metrics was unassigned during <code>FlowCollector</code> custom resource creation. As a consequence, you had to manually ensure that metrics collection was active to query accurate flow data.</p>
-<div class="paragraph">
-<p>With this release, the default value for Prometheus metrics collection in the <code>FlowCollector</code> configuration is set to <code>true</code>. As a result, the deployment process is simplified and flow metrics are collected automatically.</p>
-</div>
-<div class="paragraph">
-<p><a href="https://issues.redhat.com/browse/NETOBSERV-2620">NETOBSERV-2620</a></p>
-</div>
-</dd>
-<dt class="hdlist1">Usage examples added to CLI subcommand help text</dt>
-<dd>
-<p>Before this update, the <code>help</code> subcommands for the Network Observability CLI lacked syntax examples. As a consequence, understanding how to construct complex filtering and capture commands required additional research.</p>
-<div class="paragraph">
-<p>With this release, clear examples are included in the subcommand help outputs. As a result, the usability and discoverability of the CLI features are enhanced.</p>
-</div>
-<div class="paragraph">
-<p><a href="https://issues.redhat.com/browse/NETOBSERV-2646">NETOBSERV-2646</a></p>
-</div>
-</dd>
-<dt class="hdlist1">Corrected latency formatting for values above one second</dt>
-<dd>
-<p>Before this update, flow durations and network latencies greater than one second were improperly formatted as milliseconds. As a consequence, donut graphs and latency metrics displayed confusing or inaccurate time designations.</p>
-<div class="paragraph">
-<p>With this release, the duration formatting function handles values greater than one millisecond accurately using decimal seconds. As a result, you can view precise network latency values in console charts.</p>
-</div>
-<div class="paragraph">
-<p><a href="https://issues.redhat.com/browse/NETOBSERV-2669">NETOBSERV-2669</a></p>
-</div>
-</dd>
-<dt class="hdlist1">Improved FlowCollector status reporting when eBPF pods are absent</dt>
-<dd>
-<p>Before this update, the <code>FlowCollector</code> resource reported a status of <code>Ready</code> even when a restrictive <code>nodeSelector</code> prevented any eBPF agent pods from deploying. As a consequence, the system status misrepresented the health of the agent layer.</p>
-<div class="paragraph">
-<p>With this release, the Operator checks for a zero-pod deployment count. As a result, the <code>FlowCollector</code> CR now correctly identifies when zero eBPF pods are active, improving cluster error diagnostics.</p>
-</div>
-<div class="paragraph">
-<p><a href="https://issues.redhat.com/browse/NETOBSERV-2674">NETOBSERV-2674</a></p>
-</div>
-</dd>
-<dt class="hdlist1">Optimized field exports for OpenTelemetry exporters</dt>
-<dd>
-<p>Before this update, the OpenTelemetry exporter processed missing or null keys as non-null data. As a consequence, unpopulated <code>metadata</code> fields were exported to log streams, which increased storage usage and cluttered telemetry files.</p>
-<div class="paragraph">
-<p>With this release, the OpenTelemetry exporter filters out null or unrelated fields, exporting only keys that belong to explicitly enabled features. As a result, exported log sizes are reduced and data efficiency is improved.</p>
-</div>
-<div class="paragraph">
-<p><a href="https://issues.redhat.com/browse/NETOBSERV-2705">NETOBSERV-2705</a></p>
-</div>
-</dd>
-<dt class="hdlist1">Added sampling probability fields to IPFIX exports</dt>
-<dd>
-<p>Before this update, Internet Protocol Flow Information Export (IPFIX) record exports omitted per-flow sampling information. As a consequence, data exports failed to comply with the standard IPFIX specifications for <code>samplingProbability</code> usage.</p>
-<div class="paragraph">
-<p>With this release, the exporter includes sampling probability details within the IPFIX packet metadata. As a result, exported OpenTelemetry data matches industry compliance standards.</p>
-</div>
-<div class="paragraph">
-<p><a href="https://issues.redhat.com/browse/NETOBSERV-2706">NETOBSERV-2706</a></p>
-</div>
-</dd>
-<dt class="hdlist1">Fixed TLS volume name conflicts on OpenTelemetry exporters</dt>
-<dd>
-<p>Before this update, configuring TLS certificates on OpenTelemetry exporters generated an invalid volume name format. As a consequence, the <code>apiserver</code> rejected the underlying Flow-logs Pipeline deployment specification, causing the pipeline pod to fail during initialization.</p>
-<div class="paragraph">
-<p>With this release, the Operator ensures valid volume names are generated when handling TLS attributes. As a result, enabling TLS on your OpenTelemetry exporters no longer interferes with pipeline pod lifecycles.</p>
-</div>
-<div class="paragraph">
-<p><a href="https://issues.redhat.com/browse/NETOBSERV-2707">NETOBSERV-2707</a></p>
-</div>
-</dd>
-<dt class="hdlist1">Improved pod-to-pod flow filter rule matching for asymmetric CIDR rules</dt>
-<dd>
-<p>Before this update, the default flow filter action was not enforced when a network flow failed to match both a CIDR rule and its corresponding <code>peerCIDR</code> rule identically. As a consequence, unexpected acknowledgment-only, <code>ACK</code>, flows bypass filtering restrictions inside the pod network.</p>
-<div class="paragraph">
-<p>With this release, when a network flow matches a designated CIDR rule but fails the <code>peerCIDR</code> pairing, the default filtering action is correctly applied. As a result, traffic blocking and network rule isolation are handled more securely.</p>
-</div>
-<div class="paragraph">
-<p><a href="https://issues.redhat.com/browse/NETOBSERV-2755">NETOBSERV-2755</a></p>
-</div>
-</dd>
-</dl>
-</div>
-</div>
-<div class="sect5">
 <h6 id="network-observability-netoberv-cli-about_troubleshoot-network-issues-1362-execute-localized-network-diagnostics-using-the-oc-netobserv-cli">About the Network Observability CLI</h6>
 <div class="paragraph _abstract">
 <p>Use the Network Observability CLI (<code>oc netobserv</code>) to quickly debug and troubleshoot networking issues. This tool provides instant, live insight into flows and packets without installing the Network Observability Operator.</p>
@@ -19189,6 +19084,376 @@ spec:
 </div>
 </div>
 </div>
+<div class="sect3">
+<h4 id="_network_observability_operator_release_notes">Network Observability Operator release notes</h4>
+<div class="sect4">
+<h5 id="network-observability-operator-release-notes-1-12-3-advisory_network-observability-release-notes">Network Observability Operator 1.12.3 advisory</h5>
+<div class="paragraph _abstract">
+<p>Network Observability Operator 1.12.3 includes a security advisory.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://access.redhat.com/errata/RHSA-2026:70593">RHSA-2026:70593 Network Observability Operator 1.12.3</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="network-observability-operator-release-notes-1-12-3-fixed-issues_network-observability-release-notes">Network Observability Operator 1.12.3 fixed issues</h5>
+<div class="paragraph _abstract">
+<p>The Network Observability Operator 1.12.3 release contains several fixed issues that improve flow enrichment accuracy and system status reporting.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Surfaced missing RBAC permissions for customized namespaces in FlowCollector status</dt>
+<dd>
+<p>Previously, setting <code>spec.namespace</code> in the <code>FlowCollector</code> resource to a non-default namespace without manually creating the required <code>ClusterRoleBindings</code> caused <code>FlowLogsPipeline</code> pods to enter a <code>CrashLoopBackOff</code> state without an explicit error in the <code>FlowCollector</code> status. Additionally, unused <code>ClusterRoleBindings</code> remained active in the default <code>netobserv</code> namespace, creating a potential namespace-squatting risk.</p>
+<div class="paragraph">
+<p>With this release, missing RBAC permissions in custom namespaces are detected and surfaced directly in the <code>FlowCollector</code> status as actionable error messages. Unused <code>ClusterRoleBindings</code> are also cleanly removed.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://redhat.atlassian.net/browse/NETOBSERV-2945">NETOBSERV-2945</a></p>
+</div>
+</dd>
+<dt class="hdlist1">Resolved incorrect flow attribution to terminated pods after pod IP reuse</dt>
+<dd>
+<p>Previously, the flow enrichment process indexed pod IP addresses without filtering by lifecycle phase. If a pod reached a <code>Succeeded</code> or <code>Failed</code> phase and its IP was reassigned to a new pod, Prometheus metrics continued associating new network flows with the terminated pod&#8217;s name and namespace.</p>
+<div class="paragraph">
+<p>With this release, the flow enrichment process excludes <code>Succeeded</code> and <code>Failed</code> pods from IP-to-pod mapping, ensuring metrics accurately reflect active workloads.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://redhat.atlassian.net/browse/NETOBSERV-3001">NETOBSERV-3001</a></p>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect4">
+<h5 id="network-observability-operator-release-notes-1-12-2-advisory_network-observability-release-notes">Network Observability Operator 1.12.2 advisory</h5>
+<div class="paragraph _abstract">
+<p>Network Observability Operator 1.12.2 includes a product enhancement advisory.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://access.redhat.com/errata/RHEA-2026:56870">RHEA-2026:56870 Network Observability Operator 1.12.2</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="network-observability-operator-release-notes-1-12-2-fixed-issues_network-observability-release-notes">Network Observability Operator 1.12.2 fixed issues</h5>
+<div class="paragraph _abstract">
+<p>The Network Observability Operator 1.12.2 release contains several fixed issues that improve system status reporting and user experience.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Narrowed Operator ClusterRole to least-privilege RBAC permissions</dt>
+<dd>
+<p>Before this update, the Network Observability Operator&#8217;s generated <code>ClusterRole</code> granted cluster-wide write access to core resources such as secrets and namespaces, and allowed creating <code>SecurityContextConstraints</code> and <code>ClusterRoleBindings</code> without resource-name scoping. As a consequence, the Network Observability Operator service account held broader permissions than required to manage its operands.</p>
+<div class="paragraph">
+<p>With this release, the Network Observability Operator&#8217;s RBAC permissions are scoped to only the namespaces it manages, the <code>securitycontextconstraints</code> rule is restricted by resource name, and <code>ClusterRoleBinding</code> permissions are constrained to the specific bindings the Operator creates. As a result, the Operator follows the principle of least privilege and reduces the attack surface of the service account.</p>
+</div>
+<div class="paragraph">
+<p>After upgrading to Network Observability Operator 1.12.2, you must manually grant RBAC permissions if any of the following conditions apply:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>You configured <code>spec.namespace</code> in the <code>FlowCollector</code> resource to a namespace other than <code>netobserv</code>.</p>
+</li>
+<li>
+<p>You configured the <code>FlowCollector</code> resource with <code>spec.deploymentModel: Kafka</code> and TLS or mTLS enabled.</p>
+</li>
+<li>
+<p>You use the Loki Operator with <code>LokiStack</code> installed in a namespace other than <code>netobserv</code>.</p>
+<div class="paragraph">
+<p>For instructions, see "Granting permissions for custom namespace and secret access".</p>
+</div>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Inherited scheduling configuration for the console plugin static deployment</dt>
+<dd>
+<p>Before this update, the <code>netobserv-plugin-static</code> deployment in the <code>openshift-netobserv-operator</code> namespace did not inherit <code>nodeSelector</code> and <code>tolerations</code> settings from the Operator Subscription. As a consequence, you could not schedule the static console plugin pod onto infrastructure nodes alongside the controller manager.</p>
+<div class="paragraph">
+<p>With this release, the <code>netobserv-plugin-static</code> deployment inherits the scheduling configuration set on the Operator Subscription. As a result, node placement for the static console plugin is consistent with the controller manager.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://redhat.atlassian.net/browse/NETOBSERV-2575">NETOBSERV-2575</a></p>
+</div>
+</dd>
+<dt class="hdlist1">Resolved Operator startup failure with custom console logos</dt>
+<dd>
+<p>Before this update, the Network Observability Operator failed to start when the <code>Console.operator.openshift.io</code> resource had the <code>spec.customization.logos</code> field configured. The Operator incorrectly reported a validation conflict between <code>logos</code> and the deprecated <code>customLogoFile</code> field, even when only <code>logos</code> was set.</p>
+<div class="paragraph">
+<p>With this release, the Network Observability Operator correctly handles web console configurations that use the <code>spec.customization.logos</code> field. As a result, the Operator starts successfully on clusters with custom console branding.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://redhat.atlassian.net/browse/NETOBSERV-2767">NETOBSERV-2767</a></p>
+</div>
+</dd>
+<dt class="hdlist1">Fixed controller crash when FlowCollector is on hold and ServiceAccount is absent</dt>
+<dd>
+<p>Before this update, the Operator controller panicked with a nil pointer dereference when the <code>FlowCollector</code> resource was in <code>OnHold</code> mode and the eBPF agent <code>ServiceAccount</code> did not exist. As a consequence, the controller manager pod entered a <code>CrashLoopBackOff</code> state and all reconciliation stopped.</p>
+<div class="paragraph">
+<p>With this release, the Network Observability Operator gracefully skips the deletion step when the <code>ServiceAccount</code> is absent during an <code>OnHold</code> reconciliation. As a result, the controller manager no longer crashes in this scenario.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://redhat.atlassian.net/browse/NETOBSERV-2839">NETOBSERV-2839</a></p>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect4">
+<h5 id="network-observability-operator-release-notes-1-12-1-advisory_network-observability-release-notes">Network Observability Operator 1.12.1 advisory</h5>
+<div class="paragraph _abstract">
+<p>Network Observability Operator 1.12.1 includes a product enhancement advisory.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://access.redhat.com/errata/RHEA-2026:40244">RHEA-2026:40244 Network Observability Operator 1.12.1</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="network-observability-operator-release-notes_network-observability-release-notes">Network Observability Operator 1.12 advisory</h5>
+<div class="paragraph _abstract">
+<p>You can review the advisory for Network Observability Operator 1.12 release.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://access.redhat.com/errata/RHSA-2026:24473">RHSA-2026:24473 Network Observability Operator 1.12</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="network-observability-operator-release-notes-1-12-new-features-enhancements_network-observability-release-notes">Network Observability Operator 1.12 new features and enhancements</h5>
+<div class="paragraph _abstract">
+<p>The Network Observability Operator 1.12 release introduces non-decrypting TLS metadata tracking, Kafka message compression options, automated secondary network indexing, and expanded web console compatibility for Red&#160;Hat OpenShift Container Platform clusters.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Transport Layer Security traffic metadata tracking</dt>
+<dd>
+<p>The Network Observability Operator can now capture and analyze Transport Layer Security (TLS) metadata from network flows without decrypting traffic. By extracting handshake details from <code>ClientHello</code> and <code>ServerHello</code> messages, the Operator provides visibility into encryption protocols while maintaining data privacy.</p>
+<div class="paragraph">
+<p>The following key benefits include:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Security risk detection: Identify workloads using deprecated TLS versions (1.0, 1.1) or weak cipher suites.</p>
+</li>
+<li>
+<p>Compliance auditing: Audit TLS configurations to meet regulatory requirements through metric aggregation and dashboard visualization.</p>
+</li>
+<li>
+<p>Security posture assessment: Visualize encrypted network traffic with lock icons in the <strong>Topology</strong> view and identify unencrypted communications across your cluster.</p>
+</li>
+<li>
+<p>Configure Prometheus alerts to automatically report insecure or non-compliant TLS configurations.</p>
+<div class="paragraph">
+<p>To use this feature, enable <code>TLSTracking</code> in the <code>spec.agent.ebpf.features</code> list of the <code>FlowCollector</code> custom resource (CR).</p>
+</div>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Support for Kafka compression</dt>
+<dd>
+<p>Message compression configuration is now available when using Kafka to scale network flow collection. Enabling compression reduces the network bandwidth required to transport flows and decreases the storage footprint on Kafka brokers.</p>
+<div class="paragraph">
+<p>The following key benefits include:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Reduced network load: Compressing flow data minimizes the traffic volume between the eBPF agent or flowlogs-pipeline and your Kafka cluster.</p>
+</li>
+<li>
+<p>Storage efficiency: Smaller message sizes lead to improved disk space utilization on Kafka brokers.</p>
+</li>
+<li>
+<p>Tunable performance: Choose from several compression algorithms, such as <code>gzip</code>, <code>snappy</code>, <code>lz4</code>, or <code>zstd</code>, to balance CPU usage with compression ratios.</p>
+<div class="paragraph">
+<p>To enable this feature, configure the <code>spec.kafka.compression</code> and <code>spec.exporters.kafka.compression</code> fields in the <code>FlowCollector</code> custom resource.</p>
+</div>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Simplified secondary network indexing</dt>
+<dd>
+<p>The configuration process for secondary network indexing is now simplified.</p>
+<div class="paragraph">
+<p>The <code>name</code> field in the <code>spec.processor.advanced.secondaryNetworks</code> list is deprecated and ignored. The Network Observability Operator automatically evaluates all secondary networks regardless of their assigned names, removing the requirement for manual name-matching entries in the <code>FlowCollector</code> CR.</p>
+</div>
+</dd>
+<dt class="hdlist1">Red&#160;Hat OpenShift Container Platform web console compatibility</dt>
+<dd>
+<p>The Network Observability web console plugin is updated to support Red&#160;Hat OpenShift Container Platform 4.22 and later. Backward compatibility is maintained for Red&#160;Hat OpenShift Container Platform versions 4.14 through 4.21.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect4">
+<h5 id="network-observability-operator-release-notes-1-12-technology-preview_network-observability-release-notes">Network Observability Operator 1.12 Technology Preview features</h5>
+<div class="paragraph _abstract">
+<p>The Network Observability Operator is included by default as a Technology Preview feature in 1.12 and Red&#160;Hat OpenShift Container Platform 4.22. You can explore network traffic visualization and monitoring capabilities without performing a separate installation.</p>
+</div>
+<div class="paragraph">
+<p>To use this Technology Preview feature, you must enable the <code>NetworkObservabilityInstall</code> feature gate through a manifest file during cluster installation.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="network-observability-operator-release-notes-1-12-fixed-issues_network-observability-release-notes">Network Observability Operator 1.12 fixed issues</h5>
+<div class="paragraph _abstract">
+<p>The Network Observability Operator 1.12 release contains several fixed issues that improve performance, system status reporting, and user experience.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Consistent FlowCollector pipeline status</dt>
+<dd>
+<p>Before this update, changes to the sampling field caused an inconsistency in the <code>FlowCollector</code> resource status. As a consequence, you could see conflicting statuses across pipeline components.</p>
+<div class="paragraph">
+<p>With this release, status reporting is made consistent across all components. As a result, the reliability of the pipeline status indicator is improved.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://issues.redhat.com/browse/NETOBSERV-2375">NETOBSERV-2375</a></p>
+</div>
+</dd>
+<dt class="hdlist1">Fixed <code>--help</code> flag processing in netobserv-cli</dt>
+<dd>
+<p>Before this update, the <code>--help</code> flag was ignored when placed after other command flags in the Network Observability CLI. As a consequence, running commands such as <code>oc netobserv flows --interfaces=br-ex --max-time=10s --help</code> executed the flow collection instead of displaying the help page.</p>
+<div class="paragraph">
+<p>With this release, the <code>--help</code> flag is recognized regardless of its position in the command. As a result, you can now display help information by placing the <code>--help</code> flag anywhere in your command arguments.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://issues.redhat.com/browse/NETOBSERV-2617">NETOBSERV-2617</a></p>
+</div>
+</dd>
+<dt class="hdlist1">Improved visibility of DNS names warning messages</dt>
+<dd>
+<p>Before this update, the <strong>DNS names</strong> graph repeatedly displayed a warning message on every refresh when running in a Prometheus-only configuration. As a consequence, the persistent warning message covered other dashboard elements.</p>
+<div class="paragraph">
+<p>With this release, the warning message is only displayed during the initial data load and does not overlay other content. As a result, interface clarity is improved when navigating the dashboard.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://issues.redhat.com/browse/NETOBSERV-2618">NETOBSERV-2618</a></p>
+</div>
+</dd>
+<dt class="hdlist1">Prometheus enabled by default in FlowCollector configurations</dt>
+<dd>
+<p>Before this update, the default setting for Prometheus metrics was unassigned during <code>FlowCollector</code> custom resource creation. As a consequence, you had to manually ensure that metrics collection was active to query accurate flow data.</p>
+<div class="paragraph">
+<p>With this release, the default value for Prometheus metrics collection in the <code>FlowCollector</code> configuration is set to <code>true</code>. As a result, the deployment process is simplified and flow metrics are collected automatically.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://issues.redhat.com/browse/NETOBSERV-2620">NETOBSERV-2620</a></p>
+</div>
+</dd>
+<dt class="hdlist1">Usage examples added to CLI subcommand help text</dt>
+<dd>
+<p>Before this update, the <code>help</code> subcommands for the Network Observability CLI lacked syntax examples. As a consequence, understanding how to construct complex filtering and capture commands required additional research.</p>
+<div class="paragraph">
+<p>With this release, clear examples are included in the subcommand help outputs. As a result, the usability and discoverability of the CLI features are enhanced.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://issues.redhat.com/browse/NETOBSERV-2646">NETOBSERV-2646</a></p>
+</div>
+</dd>
+<dt class="hdlist1">Corrected latency formatting for values above one second</dt>
+<dd>
+<p>Before this update, flow durations and network latencies greater than one second were improperly formatted as milliseconds. As a consequence, donut graphs and latency metrics displayed confusing or inaccurate time designations.</p>
+<div class="paragraph">
+<p>With this release, the duration formatting function handles values greater than one millisecond accurately using decimal seconds. As a result, you can view precise network latency values in console charts.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://issues.redhat.com/browse/NETOBSERV-2669">NETOBSERV-2669</a></p>
+</div>
+</dd>
+<dt class="hdlist1">Improved FlowCollector status reporting when eBPF pods are absent</dt>
+<dd>
+<p>Before this update, the <code>FlowCollector</code> resource reported a status of <code>Ready</code> even when a restrictive <code>nodeSelector</code> prevented any eBPF agent pods from deploying. As a consequence, the system status misrepresented the health of the agent layer.</p>
+<div class="paragraph">
+<p>With this release, the Operator checks for a zero-pod deployment count. As a result, the <code>FlowCollector</code> CR now correctly identifies when zero eBPF pods are active, improving cluster error diagnostics.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://issues.redhat.com/browse/NETOBSERV-2674">NETOBSERV-2674</a></p>
+</div>
+</dd>
+<dt class="hdlist1">Optimized field exports for OpenTelemetry exporters</dt>
+<dd>
+<p>Before this update, the OpenTelemetry exporter processed missing or null keys as non-null data. As a consequence, unpopulated <code>metadata</code> fields were exported to log streams, which increased storage usage and cluttered telemetry files.</p>
+<div class="paragraph">
+<p>With this release, the OpenTelemetry exporter filters out null or unrelated fields, exporting only keys that belong to explicitly enabled features. As a result, exported log sizes are reduced and data efficiency is improved.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://issues.redhat.com/browse/NETOBSERV-2705">NETOBSERV-2705</a></p>
+</div>
+</dd>
+<dt class="hdlist1">Added sampling probability fields to IPFIX exports</dt>
+<dd>
+<p>Before this update, Internet Protocol Flow Information Export (IPFIX) record exports omitted per-flow sampling information. As a consequence, data exports failed to comply with the standard IPFIX specifications for <code>samplingProbability</code> usage.</p>
+<div class="paragraph">
+<p>With this release, the exporter includes sampling probability details within the IPFIX packet metadata. As a result, exported OpenTelemetry data matches industry compliance standards.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://issues.redhat.com/browse/NETOBSERV-2706">NETOBSERV-2706</a></p>
+</div>
+</dd>
+<dt class="hdlist1">Fixed TLS volume name conflicts on OpenTelemetry exporters</dt>
+<dd>
+<p>Before this update, configuring TLS certificates on OpenTelemetry exporters generated an invalid volume name format. As a consequence, the <code>apiserver</code> rejected the underlying Flow-logs Pipeline deployment specification, causing the pipeline pod to fail during initialization.</p>
+<div class="paragraph">
+<p>With this release, the Operator ensures valid volume names are generated when handling TLS attributes. As a result, enabling TLS on your OpenTelemetry exporters no longer interferes with pipeline pod lifecycles.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://issues.redhat.com/browse/NETOBSERV-2707">NETOBSERV-2707</a></p>
+</div>
+</dd>
+<dt class="hdlist1">Improved pod-to-pod flow filter rule matching for asymmetric CIDR rules</dt>
+<dd>
+<p>Before this update, the default flow filter action was not enforced when a network flow failed to match both a CIDR rule and its corresponding <code>peerCIDR</code> rule identically. As a consequence, unexpected acknowledgment-only, <code>ACK</code>, flows bypass filtering restrictions inside the pod network.</p>
+<div class="paragraph">
+<p>With this release, when a network flow matches a designated CIDR rule but fails the <code>peerCIDR</code> pairing, the default filtering action is correctly applied. As a result, traffic blocking and network rule isolation are handled more securely.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://issues.redhat.com/browse/NETOBSERV-2755">NETOBSERV-2755</a></p>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect4">
+<h5 id="network-observability-operator-release-notes-1-12-known-issues_network-observability-release-notes">Network Observability Operator 1.12 known issues</h5>
+<div class="paragraph _abstract">
+<p>The following known issues affect the Network Observability Operator 1.12 release.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Operator fails to start when custom web console logos are configured</dt>
+<dd>
+<p>When you configure custom product logos in the <code>Console.operator.openshift.io</code> resource using the <code>spec.customization.logos</code> field, the Network Observability Operator pod fails to start during installation. The Operator incorrectly reports a validation error indicating that both <code>logos</code> and the deprecated <code>customLogoFile</code> fields are set, even though only <code>logos</code> is configured.</p>
+<div class="paragraph">
+<p>To work around this problem, manually enable the Network Observability Operator Red&#160;Hat OpenShift Container Platform web console plugin by adding <code>netobserv-plugin-static</code> to the <code>spec.plugins</code> list in the <code>Console</code> cluster resource, or by enabling the plugin through the web console under <strong>Administration</strong> &#8594; <strong>Cluster Settings</strong> &#8594; <strong>Configuration</strong> &#8594; <strong>Console</strong> &#8594; <strong>Console plugins</strong>.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://issues.redhat.com/browse/NETOBSERV-2767">NETOBSERV-2767</a></p>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
 </div>
 <div class="paragraph nav-footer">
 <p>← Previous: <a href="configure-high-performance-networking-con_configure-high-performance-networking.html">Configure high-performance networking</a> | ↑ Up: <a href="_networking.html">Networking</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="_storage.html">Storage</a> →</p>
@@ -19196,7 +19461,7 @@ spec:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-09 13:56:02 -0500
+Last updated 2026-10-09 14:47:28 -0500
 </div>
 </div>
 <style>
