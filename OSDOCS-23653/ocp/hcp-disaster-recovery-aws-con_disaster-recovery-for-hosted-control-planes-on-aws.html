@@ -480,7 +480,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </style>
 <!-- navmap-right-toc-end -->
 </head>
-<body id="hcp-backup-etcd-snapshot-restore_encrypt-etcd-restore-to-a-previous-cluster-state" class="book toc2 toc-left navmap-has-right-toc">
+<body id="hcp-disaster-recovery-aws-con_disaster-recovery-for-hosted-control-planes-on-aws" class="book toc2 toc-left navmap-has-right-toc">
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -492,6 +492,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="about-kmm_review-kmm-releases-and-updates.html">About the Kernel Module Management Operator</a>
 </li>
 <li><a href="hosted-control-planes-release-notes_hosted-control-planes-release-notes.html">Hosted control planes release notes</a>
+</li>
+<li><a href="review-multiarch-tuning-operator-releases-con_review-multiarch-tuning-operator-releases.html">Review Multiarch Tuning Operator releases</a>
 </li>
 </ul>
 </li>
@@ -580,7 +582,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="networking-guidance-for-hosted-control-planes-con_networking-guidance-for-hosted-control-planes.html">Networking guidance for hosted control planes</a>
 </li>
-<li><a href="understanding-multiple-networks-con_plan-a-multiple-network-architecture.html">Multiple networks with the OVN-K CNI</a>
+<li><a href="plan-a-multiple-network-architecture-con_plan-a-multiple-network-architecture.html">Plan a multiple network architecture</a>
 </li>
 <li><a href="design-and-layer-network-policy-across-the-cluster-con_design-and-layer-network-policy-across-the-cluster.html">Design and layer network policy across the cluster</a>
 </li>
@@ -648,7 +650,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="install-single-node-openshift-intro_install-single-node-openshift.html">Install single-node OpenShift</a>
 </li>
+<li><a href="install-a-cluster-with-multi-architecture-support-con_install-a-cluster-with-multi-architecture-support.html">Install a cluster with multi-architecture support</a>
+</li>
 <li><a href="validate-an-installation-intro_validate-an-installation.html">Validate an installation</a>
+</li>
+<li><a href="prepare-your-cluster-for-workloads-con_prepare-your-cluster-for-workloads.html">Prepare your cluster for workloads</a>
 </li>
 <li><a href="troubleshoot-installation-issues-intro_troubleshoot-installation-issues.html">Troubleshoot installation issues</a>
 </li>
@@ -720,7 +726,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="installation-about-restricted-networks_installing-restricted-networks-nutanix-installer-provisioned.html">About installations in restricted networks</a>
 </li>
-<li><a href="bmaas-prerequisites_use-red-hat-bare-metal-as-a-service-for-openshift.html">Prerequisites for using Red&#160;Hat Bare Metal as a Service for OpenShift</a>
+<li><a href="bmaas-prerequisites_use-red-hat-bare-metal-as-a-service-for-openshift.html">Prerequisites for using Red&#160;Hat Bare-Metal-as-a-Service for OpenShift</a>
 </li>
 <li><a href="install-on-aws-upi-intro_install-on-aws-upi.html">Install on AWS with user-provisioned infrastructure</a>
 </li>
@@ -859,6 +865,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="installing-the-hosted-control-planes-command-line-interface-intro_installing-the-hosted-control-planes-command-line-interface.html">Installing the hosted control planes command-line interface</a>
 </li>
 <li><a href="deploying-hosted-control-planes-on-aws-intro_deploying-hosted-control-planes-on-aws.html">Deploying hosted control planes on AWS</a>
+</li>
+<li><a href="hcp-deploy-azure-con_deploying-hosted-control-planes-on-azure.html">Deploying hosted control planes on Azure</a>
 </li>
 <li><a href="hcp-bm-overview_deploying-hosted-control-planes-on-bare-metal-with-the-agent-platform.html">About hosted control planes on bare metal with the Agent platform</a>
 </li>
@@ -1051,7 +1059,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-registry-allowlists-and-blocks-con_configure-registry-allowlists-and-blocks.html">Configure registry allowlists and blocks</a>
 </li>
-<li><a href="images-configuration-shortname-con_configure-short-name-search-registries.html">About adding registries that allow image short names</a>
+<li><a href="images-configuration-shortname-con_configure-short-name-search-registries.html">Configure short-name search registries</a>
 </li>
 <li><a href="configure-trust-and-mirroring-con_configure-trust-and-mirroring.html">Configure trust and mirroring</a>
 </li>
@@ -1083,6 +1091,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="use-developer-workflows-in-the-console-con_use-developer-workflows-in-the-console.html">Use developer workflows in the console</a>
 </li>
 <li><a href="follow-plugin-development-guidelines-con_follow-plugin-development-guidelines.html">Follow plugin development guidelines</a>
+</li>
+<li><a href="kueue-ai-ml-workloads-intro_run-ai-and-ml-workloads-with-red-hat-build-of-kueue.html">Run AI and ML workloads with Red&#160;Hat build of Kueue</a>
 </li>
 </ul>
 </li>
@@ -1215,6 +1225,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="add-multi-architecture-compute-machine-set-to-azure-cluster-con_add-multi-architecture-compute-machine-set-to-azure-cluster.html">Add a multi-architecture compute machine set to an Azure cluster</a>
 </li>
+<li><a href="add-multi-architecture-compute-machine-set-to-aws-cluster-con_add-multi-architecture-compute-machine-set-to-aws-cluster.html">Add a multi-architecture compute machine set to an AWS cluster</a>
+</li>
 <li><a href="create-multi-architecture-compute-clusters-on-google-cloud-con_create-multi-architecture-compute-clusters-on-google-cloud.html">Create multi-architecture compute clusters on Google Cloud</a>
 </li>
 <li><a href="create-multi-architecture-compute-clusters-on-bare-metal-ibm-power-or-ibm-z-con_create-multi-architecture-compute-clusters-on-bare-metal-ibm-power-or-ibm-z.html">Create multi-architecture compute clusters on bare metal, IBM Power, or IBM Z</a>
@@ -1260,9 +1272,37 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel2">
 <li><a href="configure-and-maintain-the-pod-network-cni-con_configure-and-maintain-the-pod-network-cni.html">Configure and maintain the pod network</a>
 </li>
+<li><a href="plan-a-multiple-network-architecture-con_plan-a-multiple-network-architecture.html">Plan a multiple network architecture</a>
+</li>
+<li><a href="provision-user-defined-and-ovn-kubernetes-secondary-segments-con_provision-user-defined-and-ovn-kubernetes-secondary-segments.html">Provision user-defined and OVN-Kubernetes secondary segments</a>
+</li>
+<li><a href="install-multus-related-networking-components-con_install-multus-related-networking-components.html">Install Multus-related networking components</a>
+</li>
+<li><a href="provision-multus-secondary-networks-and-addressing-con_provision-multus-secondary-networks-and-addressing.html">Provision Multus secondary networks and addressing</a>
+</li>
+<li><a href="connect-workloads-to-additional-networks-con_connect-workloads-to-additional-networks.html">Connect workloads to additional networks</a>
+</li>
+<li><a href="control-traffic-on-secondary-networks-con_control-traffic-on-secondary-networks.html">Control traffic on secondary networks</a>
+</li>
 <li><a href="nw-networkpolicy-about_configure-network-policies.html">About network policy</a>
 </li>
+<li><a href="understand-network-policies-and-administrative-network-policies-con_understand-network-policies-and-administrative-network-policies.html">Network policies and administrative network policies</a>
+</li>
+<li><a href="design-and-layer-network-policy-across-the-cluster-con_design-and-layer-network-policy-across-the-cluster.html">Design and layer network policy across the cluster</a>
+</li>
+<li><a href="enforce-non-negotiable-platform-security-baselines-con_enforce-non-negotiable-platform-security-baselines.html">Enforce non-negotiable platform security baselines</a>
+</li>
 <li><a href="install-networking-operators-con_install-networking-operators.html">Install networking Operators</a>
+</li>
+<li><a href="nw-understanding-networking-managing-traffic-entering-leaving_understand-traffic-management-entering-and-leaving-the-cluster.html">Manage traffic entering and leaving the cluster</a>
+</li>
+<li><a href="monitor-networking-operator-health-con_monitor-networking-operator-health.html">Monitor networking operator health</a>
+</li>
+<li><a href="monitor-administrative-policy-health-con_monitor-administrative-policy-health.html">Monitor administrative policy health</a>
+</li>
+<li><a href="isolate-routing-domains-for-advanced-workloads-con_isolate-routing-domains-for-advanced-workloads.html">Isolate routing domains for advanced workloads</a>
+</li>
+<li><a href="configure-route-advertisements-con_configure-route-advertisements.html">Configure route advertisements</a>
 </li>
 <li><a href="configure-external-dns-integration-con_configure-external-dns-integration.html">Configure External DNS integration</a>
 </li>
@@ -1286,9 +1326,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="secure-network-observability-data-con_secure-network-observability-data.html">Secure network observability data</a>
 </li>
-<li><a href="network-observability-operator_network-flow-visibility.html">Network Observability Operator</a>
+<li><a href="network-flow-visibility-con_network-flow-visibility.html">Network flow visibility</a>
 </li>
-<li><a href="network-observability-network-traffic-overview-view_monitor-network-traffic-with-network-observability.html">Observe the network traffic from the Overview view</a>
+<li><a href="monitor-network-traffic-with-network-observability-con_monitor-network-traffic-with-network-observability.html">Monitor network traffic with Network Observability</a>
 </li>
 <li><a href="network-observability-health-dashboard-overview_verify-security-and-network-observability-operator-health.html">Health dashboards</a>
 </li>
@@ -1466,19 +1506,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="harden-boot-integrity-for-control-plane-machines-con_harden-boot-integrity-for-control-plane-machines.html">Harden boot integrity for control plane machines</a>
 </li>
-<li><a href="connect-workloads-to-additional-networks-con_connect-workloads-to-additional-networks.html">Connect workloads to additional networks</a>
-</li>
-<li><a href="nw-multi-network-policy-differences_control-traffic-on-secondary-networks.html">Differences between multi-network policy and network policy</a>
-</li>
-<li><a href="isolate-routing-domains-for-advanced-workloads-con_isolate-routing-domains-for-advanced-workloads.html">Isolate routing domains for advanced workloads</a>
-</li>
-<li><a href="provision-user-defined-and-ovn-kubernetes-secondary-segments-con_provision-user-defined-and-ovn-kubernetes-secondary-segments.html">Provision user-defined and OVN-Kubernetes secondary segments</a>
-</li>
-<li><a href="provision-multus-secondary-networks-and-addressing-con_provision-multus-secondary-networks-and-addressing.html">Provision Multus secondary networks and addressing</a>
-</li>
 <li><a href="security-network-egress_control-outbound-access-and-protect-data-in-transit.html">Secure egress traffic</a>
-</li>
-<li><a href="enforce-non-negotiable-platform-security-baselines-con_enforce-non-negotiable-platform-security-baselines.html">Enforce non-negotiable platform security baselines</a>
 </li>
 <li><a href="secure-individual-workloads-and-manage-namespace-policy-lifecycle-con_secure-individual-workloads-and-manage-namespace-policy-lifecycle.html">Secure individual workloads and manage namespace policy lifecycle</a>
 </li>
@@ -1672,6 +1700,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="olm-installing-operators-from-software-catalog_install-operators-from-the-software-catalog.html">About Operator installation from the software catalog</a>
 </li>
+<li><a href="cli-manager-about_manage-cli-plugins-with-the-cli-manager.html">About the CLI Manager Operator</a>
+</li>
 <li><a href="nodes-pods-plugins-about_manage-kernel-modules-across-cluster-nodes-deploy-device-plugins-alongside-kernel-modules.html">Understand device plugins</a>
 </li>
 <li><a href="resolve-catalog-content-con_resolve-catalog-content.html">Resolve catalog content</a>
@@ -1681,6 +1711,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="_validate.html">Validate</a>
 
 <ul class="sectlevel2">
+<li><a href="verify-node-state-after-installation-con_verify-node-state-after-installation.html">Verify node state after installation</a>
+</li>
 <li><a href="cluster-compare-overview_validate-telco-configuration-compliance.html">Overview of the cluster-compare plugin</a>
 </li>
 <li><a href="network-policy-validation-intro_network-policy-validation.html">Network policy validation</a>
@@ -1699,15 +1731,47 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="remediate-node-configuration-drift-to-return-the-node-to-ready-con_remediate-node-configuration-drift-to-return-the-node-to-ready.html">Remediate node configuration drift to return the node to ready</a>
 </li>
+<li><a href="collecting-windows-application-event-logs_gather-information-and-debugging-data-for-windows.html">Collecting Windows application event logs</a>
+</li>
 <li><a href="restart-hosted-control-plane-components-and-pause-reconciliation-con_restart-hosted-control-plane-components-and-pause-reconciliation.html">Restart hosted control plane components and pause reconciliation</a>
+</li>
+<li><a href="hcp-ts-internal-subnets_troubleshoot-hosted-clusters-internal-subnets.html">Known limitations for internal subnets for hosted clusters</a>
+</li>
+<li><a href="troubleshoot-hosted-clusters-by-platform-con_troubleshoot-hosted-clusters-by-platform.html">Troubleshoot hosted clusters by platform</a>
 </li>
 <li><a href="troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-bare-metal-con_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-bare-metal.html">Troubleshoot hosted clusters on bare metal</a>
 </li>
 <li><a href="troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-ibmz-con_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-ibmz.html">Troubleshoot hosted clusters on IBM Z</a>
 </li>
-<li><a href="troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-openshift-virtualization-con_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-openshift-virtualization.html">Troubleshoot hosted clusters on OpenShift Virtualization</a>
+<li><a href="hcp-ts-ocp-virt_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-openshift-virtualization.html">Troubleshooting hosted clusters on OpenShift Virtualization</a>
 </li>
-<li><a href="troubleshoot-hosted-clusters-by-platform-con_troubleshoot-hosted-clusters-by-platform.html">Troubleshoot hosted clusters by platform</a>
+<li><a href="recovering-unhealthy-etcd-cluster-for-hosted-control-planes-con_recovering-unhealthy-etcd-cluster-for-hosted-control-planes.html">Recovering an unhealthy etcd cluster for hosted control planes</a>
+</li>
+<li><a href="backup-and-restore-etcd-on-a-hosted-cluster-intro_backup-and-restore-etcd-on-a-hosted-cluster.html">Backing up and restoring etcd on a hosted cluster</a>
+</li>
+<li><a href="backup-and-restore-etcd-on-management-cluster-intro_backup-and-restore-etcd-on-management-cluster.html">Backing up and restoring etcd on the management cluster</a>
+</li>
+<li><a href="backup-etcd-data-for-hosted-control-planes-using-etcd-snapshot-intro_backup-etcd-data-for-hosted-control-planes-using-etcd-snapshot.html">Backing up etcd data for hosted control planes by using the etcd snapshot method</a>
+</li>
+<li><a href="backup-and-restore-hosted-cluster-on-openshift-virtualization-intro_backup-and-restore-hosted-cluster-on-openshift-virtualization.html">Backing up and restoring a hosted cluster on OpenShift Virtualization</a>
+</li>
+<li><a href="high-availability-for-hosted-control-planes-about_high-availability-and-disaster-recovery-for-hosted-control-planes.html">High availability and disaster recovery for hosted control planes</a>
+</li>
+<li><a href="hcp-disaster-recovery-aws-con_disaster-recovery-for-hosted-control-planes-on-aws.html"><span class="toc-current">Disaster recovery for a hosted cluster in AWS</span></a>
+</li>
+<li><a href="hcp-azure-automated-dr_disaster-recovery-for-hosted-control-planes-on-azure.html">Automated disaster recovery for hosted control planes on Azure</a>
+</li>
+<li><a href="hcp-azure-etcd-snapshot_backup-and-restore-for-hosted-control-planes-on-azure.html">Backup and restore for hosted control planes on Azure</a>
+</li>
+<li><a href="hcp-disaster-recovery-oadp-con_disaster-recovery-for-hosted-control-planes-using-oadp.html">Disaster recovery for a hosted cluster by using OADP</a>
+</li>
+<li><a href="hcp-disaster-recovery-oadp-auto-con_automated-disaster-recovery-for-hosted-control-planes-using-oadp.html">Automated disaster recovery for a hosted cluster by using OADP</a>
+</li>
+<li><a href="replace-healthy-etcd-about_high-availability-and-disaster-recovery-for-hosted-control-planes-recover-an-unhealthy-etcd-cluster.html">About replacing a healthy etcd member</a>
+</li>
+<li><a href="control-plane-backup-restore-operations-overview_high-availability-and-disaster-recovery-for-hosted-control-planes-back-up-and-restore-etcd-and-hosted-clusters.html">Control plane backup and restore operations</a>
+</li>
+<li><a href="control-plane-backup-restore-operations-overview_high-availability-and-disaster-recovery-for-hosted-control-planes-automated-disaster-recovery-for-a-hosted-cluster-by-using-oadp.html">Control plane backup and restore operations</a>
 </li>
 <li><a href="post-using-node-tuning-operator_troubleshoot-node-performance-issues.html">Using the Node Tuning Operator</a>
 </li>
@@ -1715,11 +1779,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="nw-network-flows-object_incident-investigation.html">Network object configuration for tracking network flows</a>
 </li>
-<li><a href="inspecting-pod-and-container-logs_troubleshoot-containers.html">Inspecting pod and container logs</a>
+<li><a href="inspecting-pod-and-container-logs_troubleshoot-containers.html">Inspect pod and container logs</a>
 </li>
-<li><a href="hosted-cluster-etcd-backup-restore-on-premise_backup-and-restore-etcd-data.html">Backing up etcd on a hosted cluster</a>
+<li><a href="update-backup-etcd-database-before-update_backup-and-restore-etcd-data.html">Backup the etcd database before you proceed with the update</a>
 </li>
-<li><a href="hcp-backup-etcd-snapshot-restore_control-plane-disaster-recovery.html">Restoring etcd data by using the etcd snapshot method</a>
+<li><a href="control-plane-backup-restore-operations-overview_control-plane-disaster-recovery.html">Control plane backup and restore operations</a>
 </li>
 <li><a href="nw-pod-network-connectivity-checks_troubleshoot-network-issues.html">Connection health checks that are performed</a>
 </li>
@@ -1731,7 +1795,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="nodes-containers-events-about_detect-and-resolve-node-issues.html">Understanding events</a>
 </li>
-<li><a href="inspecting-pod-and-container-logs_copy-files-to-or-from-containers.html">Inspecting pod and container logs</a>
+<li><a href="inspecting-pod-and-container-logs_copy-files-to-or-from-containers.html">Inspect pod and container logs</a>
 </li>
 <li><a href="enabling-etcd-quorum-guard_replace-failed-bare-metal-control-plane-nodes-without-bmc-credentials.html">Re-enabling the etcd quorum guard</a>
 </li>
@@ -1747,17 +1811,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="gathering-bootstrap-diagnostic-data_gather-data-about-a-cluster-update.html">Gathering bootstrap node diagnostic data</a>
 </li>
-<li><a href="control-plane-backup-restore-operations-overview_high-availability-and-disaster-recovery-for-hosted-control-planes.html">Control plane backup and restore operations</a>
-</li>
-<li><a href="collecting-windows-application-event-logs_gather-information-and-debugging-data-for-a-hosted-cluster.html">Collecting Windows application event logs</a>
-</li>
 <li><a href="nw-pod-network-connectivity-checks_troubleshoot-connectivity-and-internal-subnets.html">Connection health checks that are performed</a>
 </li>
 <li><a href="troubleshoot-machine-management-con_troubleshoot-machine-management.html">Troubleshoot machine management</a>
 </li>
 <li><a href="control-plane-backup-restore-operations-overview_investigate-an-active-cluster-issue.html">Control plane backup and restore operations</a>
 </li>
-<li><a href="understanding-oc-log-levels_identify-resource-limits-and-quotas-in-topology-view.html">Understanding OpenShift CLI (<code>oc</code>) log levels</a>
+<li><a href="understanding-oc-log-levels_identify-resource-limits-and-quotas-in-topology-view.html">Understand OpenShift CLI (<code>oc</code>) log levels</a>
 </li>
 <li><a href="nw-networkpolicy-project-defaults_troubleshoot-web-terminal-startup-failures.html">Add network policies to the new project template</a>
 </li>
@@ -1774,12 +1834,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="adding-network-attachment-definition-to-pods_troubleshoot-network-issues-135-trace-openflow-with-ovnkube-trace.html">Add the network attachment definition to your pods</a>
 </li>
 <li><a href="nw-pod-network-connectivity-checks_configure-and-maintain-the-pod-network-cni-225-diagnose-and-resolve-node-network-configuration-errors.html">Connection health checks that are performed</a>
-</li>
-<li><a href="replace-healthy-etcd-about_high-availability-and-disaster-recovery-for-hosted-control-planes-recover-an-unhealthy-etcd-cluster.html">About replacing a healthy etcd member</a>
-</li>
-<li><a href="control-plane-backup-restore-operations-overview_high-availability-and-disaster-recovery-for-hosted-control-planes-back-up-and-restore-etcd-and-hosted-clusters.html">Control plane backup and restore operations</a>
-</li>
-<li><a href="control-plane-backup-restore-operations-overview_high-availability-and-disaster-recovery-for-hosted-control-planes-automated-disaster-recovery-for-a-hosted-cluster-by-using-oadp.html">Control plane backup and restore operations</a>
 </li>
 <li><a href="investigating-master-node-installation-issues_manage-kernel-modules-across-cluster-nodes-troubleshoot-kernel-module-loading-issues.html">Investigating control plane node installation issues</a>
 </li>
@@ -1809,7 +1863,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="gathering-bootstrap-diagnostic-data_investigate-an-active-cluster-issue-troubleshoot-cluster-issues.html">Gathering bootstrap node diagnostic data</a>
 </li>
-<li><a href="gathering-operator-logs_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools.html">Gathering Operator logs</a>
+<li><a href="gathering-operator-logs_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools.html">Gather Operator logs</a>
 </li>
 <li><a href="collect-comprehensive-data-for-vendor-support-con_investigate-an-active-cluster-issue-collect-comprehensive-data-for-vendor-support.html">Collect comprehensive data for vendor support</a>
 </li>
@@ -1819,19 +1873,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="use-host-toolbox-for-diagnostics-con_investigate-an-active-cluster-issue-use-host-toolbox-for-diagnostics.html">Use the host toolbox for diagnostics</a>
 </li>
-<li><a href="understanding-oc-log-levels_investigate-an-active-cluster-issue-summarize-cluster-specifications.html">Understanding OpenShift CLI (<code>oc</code>) log levels</a>
+<li><a href="understanding-oc-log-levels_investigate-an-active-cluster-issue-summarize-cluster-specifications.html">Understand OpenShift CLI (<code>oc</code>) log levels</a>
 </li>
 <li><a href="post-install-etcd-tasks_defragment-etcd-data-automatically-defragment-etcd-data.html">etcd tasks</a>
 </li>
 <li><a href="restore-identify-unhealthy-etcd-member_defragment-etcd-data-manually-defragment-etcd-data.html">Identifying an unhealthy etcd member</a>
 </li>
-<li><a href="restoring-etcd-snapshot-hosted-cluster_etcd-best-practices-back-up-etcd-data.html">Restoring an etcd snapshot on a hosted cluster</a>
-</li>
 <li><a href="backing-up-etcd-data_etcd-best-practices-create-single-automatic-etcd-backup.html">Backing up etcd data</a>
 </li>
-<li><a href="hcp-backup-etcd-snapshot-about_etcd-best-practices-create-recurring-automatic-etcd-backup.html">Overview of the etcd snapshot method</a>
-</li>
-<li><a href="hcp-backup-etcd-snapshot-restore_etcd-best-practices-restore-etcd-data.html">Restoring etcd data by using the etcd snapshot method</a>
+<li><a href="restore-identify-unhealthy-etcd-member_etcd-best-practices-restore-etcd-data.html">Identifying an unhealthy etcd member</a>
 </li>
 <li><a href="removing-etcd-member_monitor-control-plane-nodes-identify-an-unhealthy-etcd-member.html">Removing the unhealthy etcd member</a>
 </li>
@@ -1841,7 +1891,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="restore-identify-unhealthy-etcd-member_encrypt-etcd-quorum-restoration-for-high-availability-clusters.html">Identifying an unhealthy etcd member</a>
 </li>
-<li><a href="hcp-backup-etcd-snapshot-restore_encrypt-etcd-restore-to-a-previous-cluster-state.html"><span class="toc-current">Restoring etcd data by using the etcd snapshot method</span></a>
+<li><a href="restore-identify-unhealthy-etcd-member_encrypt-etcd-restore-to-a-previous-cluster-state.html">Identifying an unhealthy etcd member</a>
 </li>
 <li><a href="enabling-etcd-quorum-guard_encrypt-etcd-recover-from-expired-control-plane-certificates.html">Re-enabling the etcd quorum guard</a>
 </li>
@@ -1867,311 +1917,954 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#restore-identify-unhealthy-etcd-member_encrypt-etcd-restore-to-a-previous-cluster-state">Identifying an unhealthy etcd member</a></li><li class="level-4"><a href="#restore-determine-state-etcd-member_encrypt-etcd-restore-to-a-previous-cluster-state">Determining the state of the unhealthy etcd member</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#hcp-backup-restore-aws-overview_disaster-recovery-for-hosted-control-planes-on-aws">Overview of the backup and restore process for hosted control planes on AWS</a></li><li class="level-4"><a href="#dr-hosted-cluster-within-aws-region-backup_disaster-recovery-for-hosted-control-planes-on-aws">Backing up a hosted cluster on AWS</a></li><li class="level-4"><a href="#dr-hosted-cluster-within-aws-region-restore_disaster-recovery-for-hosted-control-planes-on-aws">Restoring a hosted cluster</a></li><li class="level-4"><a href="#dr-hosted-cluster-within-aws-region-delete_disaster-recovery-for-hosted-control-planes-on-aws">Deleting a hosted cluster from your source management cluster</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
-<h3 id="hcp-backup-etcd-snapshot-restore_encrypt-etcd-restore-to-a-previous-cluster-state">Restoring etcd data by using the etcd snapshot method</h3>
+<h3 id="hcp-disaster-recovery-aws-con_disaster-recovery-for-hosted-control-planes-on-aws">Disaster recovery for a hosted cluster in AWS</h3>
 <div class="paragraph _abstract">
-<p>You can specify a backup to recover from or set a schedule to run the recovery process on.</p>
+<p>You can recover a hosted cluster to the same region within Amazon Web Services (AWS). For example, you need disaster recovery when the upgrade of a management cluster fails and the hosted cluster is in a read-only state.</p>
 </div>
 <div class="paragraph">
-<p>The process to recover a hosted control plane from an etcd snapshot backup involves the OADP <code>hypershift</code> plugin, the Control Plane Operator, and the etcd init container.</p>
-</div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>You completed the steps in "Configuring the etcd snapshot method".</p>
-</li>
-<li>
-<p>No running pods or persistent volume claims (PVCs) are in the hosted control plane namespace. If you are restoring on the same management cluster, delete the hosted cluster and node pools first.</p>
-</li>
-<li>
-<p>The status of the Velero backup is <code>status.phase: Completed</code>.</p>
-</li>
-<li>
-<p>The OADP components are running and the <code>DataProtectionApplication</code> (DPA) custom resource (CR) is reconciled.</p>
-</li>
-<li>
-<p>For hosted control planes on AWS, your backup storage location (BSL) credentials are valid and have permission to read the snapshot from S3.</p>
-</li>
-<li>
-<p>For bare metal on the Agent platform, your <code>InfraEnv</code> objects are preserved. Do not delete them.</p>
-</li>
-<li>
-<p>For hosted control planes on Azure, see <a href="../../hosted_control_planes/hcp-deploy/hcp-deploy-azure.html#hcp-azure-etcd-snapshot-restore_hcp-deploy-azure">Restoring a hosted cluster on Azure from an etcd snapshot</a>.</p>
-</li>
-</ul>
-</div>
-<div class="ulist">
-<div class="title">Procedure</div>
-<ul>
-<li>
-<p>Start the restore process by entering the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ hcp create oadp-restore \
-  --hc-name &lt;my_hosted_cluster&gt; \
-  --hc-namespace &lt;my_hosted_cluster_namespace&gt; \
-  --name &lt;my_restore&gt; \
-  --from-backup &lt;my_backup&gt;</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>where:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>&lt;my_backup&gt;</code></dt>
-<dd>
-<p>Specifies the name of the backup to use. If you run the restore process on a schedule, replace the <code>--from-backup</code> flag with the <code>--from-schedule</code> flag and specify the name of the schedule to use.</p>
-</dd>
-</dl>
+<p>The disaster recovery process involves the following steps:</p>
 </div>
 <div class="olist arabic">
-<div class="title">Verification</div>
 <ol class="arabic">
 <li>
-<p>Check that the etcd pods are running and that the cluster is functioning as expected by entering the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get pods -n &lt;my_hosted_cluster_namespace&gt;-&lt;my_hosted_cluster&gt; -l app=etcd</code></pre>
-</div>
-</div>
+<p>Backing up the hosted cluster on the source management cluster</p>
 </li>
 <li>
-<p>Check the restore conditions by entering the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get hostedcluster &lt;my_hosted_cluster&gt; -n &lt;my_hosted_cluster_namespace&gt; -o jsonpath='{.status.conditions}' | jq '.[] | select(.type | test("Restore|Etcd"))'</code></pre>
-</div>
-</div>
+<p>Restoring the hosted cluster on a destination management cluster</p>
 </li>
 <li>
-<p>On AWS deployments, when you restore to a different management cluster, the OIDC provider might need to be updated. Enter the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ hcp fix dr-oidc-iam --hc-name &lt;my_hosted_cluster&gt; --hc-namespace &lt;my_hosted_cluster_namespace&gt;</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Confirm that the API server of the hosted cluster is accessible by entering the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc --kubeconfig &lt;hosted_cluster_kubeconfig&gt; get nodes</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Confirm that workloads are running by entering the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc --kubeconfig &lt;hosted_cluster_kubeconfig&gt; get clusteroperators</code></pre>
-</div>
-</div>
+<p>Deleting the hosted cluster from the source management cluster</p>
 </li>
 </ol>
 </div>
-</li>
-</ul>
-</div>
-<div class="sect3">
-<h4 id="restore-identify-unhealthy-etcd-member_encrypt-etcd-restore-to-a-previous-cluster-state">Identifying an unhealthy etcd member</h4>
-<div class="paragraph _abstract">
-<p>You can identify an unhealthy etcd member by checking the <code>EtcdMembersAvailable</code> status condition to see how many members are available and which member is unhealthy.</p>
-</div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>You have access to the cluster as a user with the <code>cluster-admin</code> role.</p>
-</li>
-<li>
-<p>You created an etcd backup.</p>
-</li>
-</ul>
-</div>
-<div class="ulist">
-<div class="title">Procedure</div>
-<ul>
-<li>
-<p>Check the status of the <code>EtcdMembersAvailable</code> status condition by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get etcd -o=jsonpath='{range .items[0].status.conditions[?(@.type=="EtcdMembersAvailable")]}{.message}{"\n"}{end}'</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">2 of 3 members are available, ip-10-0-131-183.ec2.internal is unhealthy</code></pre>
-</div>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="restore-determine-state-etcd-member_encrypt-etcd-restore-to-a-previous-cluster-state">Determining the state of the unhealthy etcd member</h4>
-<div class="paragraph _abstract">
-<p>Determine whether the unhealthy etcd member has a stopped machine, an unready node, or a crashlooping etcd pod. Knowing the failure state enables you to follow the correct replacement procedure.</p>
-</div>
 <div class="paragraph">
-<p>Depending on the state of your unhealthy etcd member, use one of the following procedures:</p>
+<p>Your workloads remain running during the process. The Cluster API might be unavailable for a period, but that does not affect the services that are running on the worker nodes.</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>Machine not running or node not ready. For more information, see "Replacing an unhealthy etcd member whose machine is not running or whose node is not ready".</p>
-</li>
-<li>
-<p>Bare-metal machine not running or node not ready on installer-provisioned bare metal. For more information, see "Replacing an unhealthy bare metal etcd member whose machine is not running or whose node is not ready".</p>
-</li>
-<li>
-<p>Crashlooping etcd pod. For more information, see "Replacing an unhealthy etcd member whose etcd pod is crashlooping".</p>
-</li>
-</ul>
-</div>
-<div class="admonitionblock note">
+<div class="admonitionblock important">
 <table>
 <tr>
 <td class="icon">
-<img src="data:image/png;base64," alt="Note">
+<img src="data:image/png;base64," alt="Important">
 </td>
 <td class="content">
 <div class="paragraph">
-<p>If the machine is not running or the node is not ready, you might expect either to recover soon. In that case, you do not need to replace the etcd member. The etcd cluster Operator automatically syncs when the machine or node returns to a healthy state.</p>
+<p>Both the source management cluster and the destination management cluster must have the <code>--external-dns</code> flags to maintain the API server URL. See the following example:</p>
+</div>
+<div class="listingblock">
+<div class="title">Example: External DNS flags</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">--external-dns-provider=aws \
+--external-dns-credentials=&lt;path_to_aws_credentials_file&gt; \
+--external-dns-domain-filter=&lt;basedomain&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you do not include the <code>--external-dns</code> flags to maintain the API server URL, you cannot migrate the hosted cluster.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
+<div class="sect3">
+<h4 id="hcp-backup-restore-aws-overview_disaster-recovery-for-hosted-control-planes-on-aws">Overview of the backup and restore process for hosted control planes on AWS</h4>
+<div class="paragraph _abstract">
+<p>Get familiar with the backup and restore process for hosted control planes on Amazon Web Services (AWS).</p>
+</div>
+<div class="paragraph">
+<p>The backup and restore process works as follows:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
-<p>You confirmed access to the cluster as a user with the <code>cluster-admin</code> role.</p>
+<p>On management cluster 1, which you can think of as the source management cluster, the control plane and workers interact by using the external DNS API. The external DNS API is accessible, and a load balancer sits between the management clusters.</p>
+<div class="imageblock">
+<div class="content">
+<img src="data:image/png;base64," alt="Diagram that shows the workers accessing the external DNS API and the external DNS API pointing to the control plane through a load balancer">
+</div>
+</div>
 </li>
 <li>
-<p>You identified an unhealthy etcd member.</p>
+<p>You take a snapshot of the hosted cluster, which includes etcd, the control plane, and the worker nodes. During this process, the worker nodes continue to try to access the external DNS API even if it is not accessible, the workloads are running, the control plane is saved in a local manifest file, and etcd is backed up to an S3 bucket. The data plane is active and the control plane is paused.</p>
+<div class="imageblock">
+<div class="content">
+<img src="data:image/png;base64," alt="298 OpenShift Backup Restore 0123 01">
+</div>
+</div>
 </li>
-</ul>
+<li>
+<p>On management cluster 2, which you can think of as the destination management cluster, you restore etcd from the S3 bucket and restore the control plane from the local manifest file. During this process, the external DNS API is stopped, the hosted cluster API becomes inaccessible, and any workers that use the API are unable to update their manifest files, but the workloads are still running.</p>
+<div class="imageblock">
+<div class="content">
+<img src="data:image/png;base64," alt="298 OpenShift Backup Restore 0123 02">
+</div>
+</div>
+</li>
+<li>
+<p>The external DNS API is accessible again, and the worker nodes use it to move to management cluster 2. The external DNS API can access the load balancer that points to the control plane.</p>
+<div class="imageblock">
+<div class="content">
+<img src="data:image/png;base64," alt="298 OpenShift Backup Restore 0123 03">
+</div>
+</div>
+</li>
+<li>
+<p>On management cluster 2, the control plane and worker nodes interact by using the external DNS API. The resources are deleted from management cluster 1, except for the S3 backup of etcd. If you try to set up the hosted cluster again on management cluster 1, it will not work.</p>
+<div class="imageblock">
+<div class="content">
+<img src="data:image/png;base64," alt="298 OpenShift Backup Restore 0123 04">
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="dr-hosted-cluster-within-aws-region-backup_disaster-recovery-for-hosted-control-planes-on-aws">Backing up a hosted cluster on AWS</h4>
+<div class="paragraph _abstract">
+<p>To recover your hosted cluster in your target management cluster, you first need to back up all of the relevant data.</p>
 </div>
 <div class="olist arabic">
 <div class="title">Procedure</div>
 <ol class="arabic">
 <li>
-<p>Determine if the machine is not running by running the following command:</p>
+<p>Create a config map file to declare the source management cluster by entering the following command:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get machines -A -ojsonpath='{range .items[*]}{@.status.nodeRef.name}{"\t"}{@.status.providerStatus.instanceState}{"\n"}' | grep -v running</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create configmap mgmt-parent-cluster -n default \
+  --from-literal=from=${MGMT_CLUSTER_NAME}</code></pre>
 </div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">ip-10-0-131-183.ec2.internal  stopped</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>This output lists the node and the status of the machine of the node. If the status is anything other than <code>running</code>, then the machine is not running.</p>
 </div>
 </li>
 <li>
-<p>Determine if the status of the node is <code>NotReady</code>.</p>
-<div class="paragraph">
-<p>If either of the following scenarios are true, then the node is not ready.</p>
+<p>Shut down the reconciliation in the hosted cluster and in the node pools by entering the following commands:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ PAUSED_UNTIL="true"</code></pre>
 </div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc patch -n ${HC_CLUSTER_NS} hostedclusters/${HC_CLUSTER_NAME} \
+  -p '{"spec":{"pausedUntil":"'${PAUSED_UNTIL}'"}}' --type=merge</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc patch -n ${HC_CLUSTER_NS} nodepools/${NODEPOOLS} \
+  -p '{"spec":{"pausedUntil":"'${PAUSED_UNTIL}'"}}' --type=merge</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc scale deployment -n ${HC_CLUSTER_NS}-${HC_CLUSTER_NAME} --replicas=0 \
+  kube-apiserver openshift-apiserver openshift-oauth-apiserver control-plane-operator</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Back up etcd and upload the data to an S3 bucket by running the following bash script:</p>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Tip">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Wrap this script in a function and call it from the main function.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal"># ETCD Backup
+ETCD_PODS="etcd-0"
+if [ "${CONTROL_PLANE_AVAILABILITY_POLICY}" = "HighlyAvailable" ]; then
+  ETCD_PODS="etcd-0 etcd-1 etcd-2"
+fi
+
+for POD in ${ETCD_PODS}; do
+  # Create an etcd snapshot
+  oc exec -it ${POD} -n ${HC_CLUSTER_NS}-${HC_CLUSTER_NAME} -- env ETCDCTL_API=3 /usr/bin/etcdctl --cacert /etc/etcd/tls/client/etcd-client-ca.crt --cert /etc/etcd/tls/client/etcd-client.crt --key /etc/etcd/tls/client/etcd-client.key --endpoints=localhost:2379 snapshot save /var/lib/data/snapshot.db
+  oc exec -it ${POD} -n ${HC_CLUSTER_NS}-${HC_CLUSTER_NAME} -- env ETCDCTL_API=3 /usr/bin/etcdctl -w table snapshot status /var/lib/data/snapshot.db
+
+  FILEPATH="/${BUCKET_NAME}/${HC_CLUSTER_NAME}-${POD}-snapshot.db"
+  CONTENT_TYPE="application/x-compressed-tar"
+  DATE_VALUE=`date -R`
+  SIGNATURE_STRING="PUT\n\n${CONTENT_TYPE}\n${DATE_VALUE}\n${FILEPATH}"
+
+  set +x
+  ACCESS_KEY=$(grep aws_access_key_id ${AWS_CREDS} | head -n1 | cut -d= -f2 | sed "s/ //g")
+  SECRET_KEY=$(grep aws_secret_access_key ${AWS_CREDS} | head -n1 | cut -d= -f2 | sed "s/ //g")
+  SIGNATURE_HASH=$(echo -en ${SIGNATURE_STRING} | openssl sha1 -hmac "${SECRET_KEY}" -binary | base64)
+  set -x
+
+  # FIXME: this is pushing to the OIDC bucket
+  oc exec -it etcd-0 -n ${HC_CLUSTER_NS}-${HC_CLUSTER_NAME} -- curl -X PUT -T "/var/lib/data/snapshot.db" \
+    -H "Host: ${BUCKET_NAME}.s3.amazonaws.com" \
+    -H "Date: ${DATE_VALUE}" \
+    -H "Content-Type: ${CONTENT_TYPE}" \
+    -H "Authorization: AWS ${ACCESS_KEY}:${SIGNATURE_HASH}" \
+    https://${BUCKET_NAME}.s3.amazonaws.com/${HC_CLUSTER_NAME}-${POD}-snapshot.db
+done</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For more information about backing up etcd, see "Backing up and restoring etcd on a hosted cluster".</p>
+</div>
+</li>
+<li>
+<p>Back up Kubernetes and Red&#160;Hat OpenShift Container Platform objects by entering the following commands. You need to back up the following objects:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>HostedCluster</code> and <code>NodePool</code> objects from the HostedCluster namespace</p>
+</li>
+<li>
+<p><code>HostedCluster</code> secrets from the HostedCluster namespace</p>
+</li>
+<li>
+<p><code>HostedControlPlane</code> from the Hosted Control Plane namespace</p>
+</li>
+<li>
+<p><code>Cluster</code> from the Hosted Control Plane namespace</p>
+</li>
+<li>
+<p><code>AWSCluster</code>, <code>AWSMachineTemplate</code>, and <code>AWSMachine</code> from the Hosted Control Plane namespace</p>
+</li>
+<li>
+<p><code>MachineDeployments</code>, <code>MachineSets</code>, and <code>Machines</code> from the Hosted Control Plane namespace</p>
+</li>
+<li>
+<p><code>ControlPlane</code> secrets from the Hosted Control Plane namespace</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>If the machine is running, then check whether the node has an <code>unreachable</code> taint by running the following command:</p>
+<p>Enter the following commands:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get nodes -o jsonpath='{range .items[*]}{"\n"}{.metadata.name}{"\t"}{range .spec.taints[*]}{.key}{" "}' | grep unreachable</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ mkdir -p ${BACKUP_DIR}/namespaces/${HC_CLUSTER_NS} \
+  ${BACKUP_DIR}/namespaces/${HC_CLUSTER_NS}-${HC_CLUSTER_NAME}</code></pre>
 </div>
 </div>
 <div class="listingblock">
-<div class="title">Example output</div>
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">ip-10-0-131-183.ec2.internal	node-role.kubernetes.io/master node.kubernetes.io/unreachable node.kubernetes.io/unreachable</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ chmod 700 ${BACKUP_DIR}/namespaces/</code></pre>
 </div>
-</div>
-<div class="paragraph">
-<p>If the node is listed with an <code>unreachable</code> taint, then the node is not ready.</p>
 </div>
 </li>
 <li>
-<p>If the node is still reachable, then check whether the node is listed as <code>NotReady</code> by running the following command:</p>
+<p>Back up the <code>HostedCluster</code> objects from the <code>HostedCluster</code> namespace by entering the following commands:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get nodes -l node-role.kubernetes.io/master | grep "NotReady"</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ echo "Backing Up HostedCluster Objects:"</code></pre>
 </div>
 </div>
 <div class="listingblock">
-<div class="title">Example output</div>
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">ip-10-0-131-183.ec2.internal   NotReady   master   122m   v1.36.3</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get hc ${HC_CLUSTER_NAME} -n ${HC_CLUSTER_NS} -o yaml &gt; \
+  ${BACKUP_DIR}/namespaces/${HC_CLUSTER_NS}/hc-${HC_CLUSTER_NAME}.yaml</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>If the node is listed as <code>NotReady</code>, then the node is not ready.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ echo "--&gt; HostedCluster"</code></pre>
 </div>
-<div class="paragraph">
-<p>If the <strong>node is not ready</strong>, then follow the "Replacing an unhealthy etcd member whose machine is not running or whose node is not ready" procedure.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ sed -i '' -e '/^status:$/,$d' \
+  ${BACKUP_DIR}/namespaces/${HC_CLUSTER_NS}/hc-${HC_CLUSTER_NAME}.yaml</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Back up the <code>NodePool</code> objects from the <code>HostedCluster</code> namespace by entering the following commands:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get np ${NODEPOOLS} -n ${HC_CLUSTER_NS} -o yaml &gt; \
+  ${BACKUP_DIR}/namespaces/${HC_CLUSTER_NS}/np-${NODEPOOLS}.yaml</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ echo "--&gt; NodePool"</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ sed -i '' -e '/^status:$/,$ d' \
+  ${BACKUP_DIR}/namespaces/${HC_CLUSTER_NS}/np-${NODEPOOLS}.yaml</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Back up the secrets in the <code>HostedCluster</code> namespace by running the following shell script:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ echo "--&gt; HostedCluster Secrets:"
+for s in $(oc get secret -n ${HC_CLUSTER_NS} | grep "^${HC_CLUSTER_NAME}" | awk '{print $1}'); do
+    oc get secret -n ${HC_CLUSTER_NS} $s -o yaml &gt; ${BACKUP_DIR}/namespaces/${HC_CLUSTER_NS}/secret-${s}.yaml
+done</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Back up the secrets in the <code>HostedCluster</code> control plane namespace by running the following shell script:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ echo "--&gt; HostedCluster ControlPlane Secrets:"
+for s in $(oc get secret -n ${HC_CLUSTER_NS}-${HC_CLUSTER_NAME} | egrep -v "docker|service-account-token|oauth-openshift|NAME|token-${HC_CLUSTER_NAME}" | awk '{print $1}'); do
+    oc get secret -n ${HC_CLUSTER_NS}-${HC_CLUSTER_NAME} $s -o yaml &gt; ${BACKUP_DIR}/namespaces/${HC_CLUSTER_NS}-${HC_CLUSTER_NAME}/secret-${s}.yaml
+done</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Back up the hosted control plane by entering the following commands:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ echo "--&gt; HostedControlPlane:"</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get hcp ${HC_CLUSTER_NAME} -n ${HC_CLUSTER_NS}-${HC_CLUSTER_NAME} -o yaml &gt; \
+  ${BACKUP_DIR}/namespaces/${HC_CLUSTER_NS}-${HC_CLUSTER_NAME}/hcp-${HC_CLUSTER_NAME}.yaml</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Back up the cluster by entering the following commands:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ echo "--&gt; Cluster:"</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ CL_NAME=$(oc get hcp ${HC_CLUSTER_NAME} -n ${HC_CLUSTER_NS}-${HC_CLUSTER_NAME} \
+  -o jsonpath={.metadata.labels.\*} | grep ${HC_CLUSTER_NAME})</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get cluster ${CL_NAME} -n ${HC_CLUSTER_NS}-${HC_CLUSTER_NAME} -o yaml &gt; \
+  ${BACKUP_DIR}/namespaces/${HC_CLUSTER_NS}-${HC_CLUSTER_NAME}/cl-${HC_CLUSTER_NAME}.yaml</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Back up the AWS cluster by entering the following commands:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ echo "--&gt; AWS Cluster:"</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get awscluster ${HC_CLUSTER_NAME} -n ${HC_CLUSTER_NS}-${HC_CLUSTER_NAME} -o yaml &gt; \
+  ${BACKUP_DIR}/namespaces/${HC_CLUSTER_NS}-${HC_CLUSTER_NAME}/awscl-${HC_CLUSTER_NAME}.yaml</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Back up the AWS <code>MachineTemplate</code> objects by entering the following commands:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ echo "--&gt; AWS Machine Template:"</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get awsmachinetemplate ${NODEPOOLS} -n ${HC_CLUSTER_NS}-${HC_CLUSTER_NAME} -o yaml &gt; \
+  ${BACKUP_DIR}/namespaces/${HC_CLUSTER_NS}-${HC_CLUSTER_NAME}/awsmt-${HC_CLUSTER_NAME}.yaml</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Back up the AWS <code>Machines</code> objects by running the following shell script:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ echo "--&gt; AWS Machine:"</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ CL_NAME=$(oc get hcp ${HC_CLUSTER_NAME} -n ${HC_CLUSTER_NS}-${HC_CLUSTER_NAME} -o jsonpath={.metadata.labels.\*} | grep ${HC_CLUSTER_NAME})
+for s in $(oc get awsmachines -n ${HC_CLUSTER_NS}-${HC_CLUSTER_NAME} --no-headers | grep ${CL_NAME} | cut -f1 -d\ ); do
+    oc get -n ${HC_CLUSTER_NS}-${HC_CLUSTER_NAME} awsmachines $s -o yaml &gt; ${BACKUP_DIR}/namespaces/${HC_CLUSTER_NS}-${HC_CLUSTER_NAME}/awsm-${s}.yaml
+done</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Back up the <code>MachineDeployments</code> objects by running the following shell script:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ echo "--&gt; HostedCluster MachineDeployments:"
+for s in $(oc get machinedeployment -n ${HC_CLUSTER_NS}-${HC_CLUSTER_NAME} -o name); do
+    mdp_name=$(echo ${s} | cut -f 2 -d /)
+    oc get -n ${HC_CLUSTER_NS}-${HC_CLUSTER_NAME} $s -o yaml &gt; ${BACKUP_DIR}/namespaces/${HC_CLUSTER_NS}-${HC_CLUSTER_NAME}/machinedeployment-${mdp_name}.yaml
+done</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Back up the <code>MachineSets</code> objects by running the following shell script:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ echo "--&gt; HostedCluster MachineSets:"
+for s in $(oc get machineset -n ${HC_CLUSTER_NS}-${HC_CLUSTER_NAME} -o name); do
+    ms_name=$(echo ${s} | cut -f 2 -d /)
+    oc get -n ${HC_CLUSTER_NS}-${HC_CLUSTER_NAME} $s -o yaml &gt; ${BACKUP_DIR}/namespaces/${HC_CLUSTER_NS}-${HC_CLUSTER_NAME}/machineset-${ms_name}.yaml
+done</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Back up the <code>Machines</code> objects from the Hosted Control Plane namespace by running the following shell script:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ echo "--&gt; HostedCluster Machine:"
+for s in $(oc get machine -n ${HC_CLUSTER_NS}-${HC_CLUSTER_NAME} -o name); do
+    m_name=$(echo ${s} | cut -f 2 -d /)
+    oc get -n ${HC_CLUSTER_NS}-${HC_CLUSTER_NAME} $s -o yaml &gt; ${BACKUP_DIR}/namespaces/${HC_CLUSTER_NS}-${HC_CLUSTER_NAME}/machine-${m_name}.yaml
+done</code></pre>
+</div>
 </div>
 </li>
 </ol>
 </div>
 </li>
-<li>
-<p>Determine if the etcd pod is crashlooping.</p>
-<div class="paragraph">
-<p>If the machine is running and the node status is <code>Ready</code>, check the status of the etcd pod.</p>
-</div>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Verify that all control plane nodes are listed as <code>Ready</code> by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get nodes -l node-role.kubernetes.io/master</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">NAME                           STATUS   ROLES    AGE     VERSION
-ip-10-0-131-183.ec2.internal   Ready    master   6h13m   v1.36.3
-ip-10-0-164-97.ec2.internal    Ready    master   6h13m   v1.36.3
-ip-10-0-154-204.ec2.internal   Ready    master   6h13m   v1.36.3</code></pre>
-</div>
+</ul>
 </div>
 </li>
 <li>
-<p>Check whether the status of an etcd pod is either <code>Error</code> or <code>CrashloopBackoff</code> by running the following command:</p>
+<p>Clean up the <code>ControlPlane</code> routes by entering the following command:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc -n openshift-etcd get pods -l k8s-app=etcd</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">etcd-ip-10-0-131-183.ec2.internal                2/3     Error       7          6h9m
-etcd-ip-10-0-164-97.ec2.internal                 3/3     Running     0          6h6m
-etcd-ip-10-0-154-204.ec2.internal                3/3     Running     0          6h6m</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc delete routes -n ${HC_CLUSTER_NS}-${HC_CLUSTER_NAME} --all</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>The etcd pod crashloops because the <code>etcd-ip-10-0-131-183.ec2.internal</code> is <code>Error</code>.</p>
+<p>By entering that command, you enable the ExternalDNS Operator to delete the Route53 entries.</p>
 </div>
-<div class="paragraph">
-<p>If the <strong>etcd pod is crashlooping</strong>, then follow the steps in "Replacing an unhealthy etcd member whose etcd pod is crashlooping".</p>
+</li>
+<li>
+<p>Verify that the Route53 entries are clean by running the following script:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">function clean_routes() {
+
+    if [[ -z "${1}" ]];then
+        echo "Give me the NS where to clean the routes"
+        exit 1
+    fi
+
+    # Constants
+    if [[ -z "${2}" ]];then
+        echo "Give me the Route53 zone ID"
+        exit 1
+    fi
+
+    ZONE_ID=${2}
+    ROUTES=10
+    timeout=40
+    count=0
+
+    # This allows us to remove the ownership in the AWS for the API route
+    oc delete route -n ${1} --all
+
+    while [ ${ROUTES} -gt 2 ]
+    do
+        echo "Waiting for ExternalDNS Operator to clean the DNS Records in AWS Route53 where the zone id is: ${ZONE_ID}..."
+        echo "Try: (${count}/${timeout})"
+        sleep 10
+        if [[ $count -eq timeout ]];then
+            echo "Timeout waiting for cleaning the Route53 DNS records"
+            exit 1
+        fi
+        count=$((count+1))
+        ROUTES=$(aws route53 list-resource-record-sets --hosted-zone-id ${ZONE_ID} --max-items 10000 --output json | grep -c ${EXTERNAL_DNS_DOMAIN})
+    done
+}
+
+# SAMPLE: clean_routes "&lt;HC ControlPlane Namespace&gt;" "&lt;AWS_ZONE_ID&gt;"
+clean_routes "${HC_CLUSTER_NS}-${HC_CLUSTER_NAME}" "${AWS_ZONE_ID}"</code></pre>
+</div>
 </div>
 </li>
 </ol>
+</div>
+<div class="paragraph">
+<div class="title">Verification</div>
+<p>Check all of the Red&#160;Hat OpenShift Container Platform objects and the S3 bucket to verify that everything looks as expected.</p>
+</div>
+<div class="paragraph">
+<div class="title">Next steps</div>
+<p>Restore your hosted cluster.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="dr-hosted-cluster-within-aws-region-restore_disaster-recovery-for-hosted-control-planes-on-aws">Restoring a hosted cluster</h4>
+<div class="paragraph _abstract">
+<p>Gather all of the objects that you backed up and restore them in your destination management cluster.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You backed up the data from your source management cluster.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Tip">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Ensure that the <code>kubeconfig</code> file of the destination management cluster is placed as it is set in the <code>KUBECONFIG</code> variable or, if you use the script, in the <code>MGMT2_KUBECONFIG</code> variable. Use <code>export KUBECONFIG=&lt;Kubeconfig FilePath&gt;</code> or, if you use the script, use <code>export KUBECONFIG=${MGMT2_KUBECONFIG}</code>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Verify that the new management cluster does not contain any namespaces from the cluster that you are restoring by entering these commands:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ export KUBECONFIG=${MGMT2_KUBECONFIG}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ BACKUP_DIR=${HC_CLUSTER_DIR}/backup</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Namespace deletion in the destination Management cluster</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc delete ns ${HC_CLUSTER_NS} || true</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc delete ns ${HC_CLUSTER_NS}-{HC_CLUSTER_NAME} || true</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Re-create the deleted namespaces by entering these commands:</p>
+<div class="listingblock">
+<div class="title">Namespace creation commands</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc new-project ${HC_CLUSTER_NS}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc new-project ${HC_CLUSTER_NS}-${HC_CLUSTER_NAME}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Restore the secrets in the HC namespace by entering this command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc apply -f ${BACKUP_DIR}/namespaces/${HC_CLUSTER_NS}/secret-*</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Restore the objects in the <code>HostedCluster</code> control plane namespace by entering these commands:</p>
+<div class="listingblock">
+<div class="title">Restore secret command</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc apply -f ${BACKUP_DIR}/namespaces/${HC_CLUSTER_NS}-${HC_CLUSTER_NAME}/secret-*</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Cluster restore commands</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc apply -f ${BACKUP_DIR}/namespaces/${HC_CLUSTER_NS}-${HC_CLUSTER_NAME}/hcp-*</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc apply -f ${BACKUP_DIR}/namespaces/${HC_CLUSTER_NS}-${HC_CLUSTER_NAME}/cl-*</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>If you are recovering the nodes and the node pool to reuse AWS instances, restore the objects in the HC control plane namespace by entering these commands:</p>
+<div class="listingblock">
+<div class="title">Commands for AWS</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc apply -f ${BACKUP_DIR}/namespaces/${HC_CLUSTER_NS}-${HC_CLUSTER_NAME}/awscl-*</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc apply -f ${BACKUP_DIR}/namespaces/${HC_CLUSTER_NS}-${HC_CLUSTER_NAME}/awsmt-*</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc apply -f ${BACKUP_DIR}/namespaces/${HC_CLUSTER_NS}-${HC_CLUSTER_NAME}/awsm-*</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Commands for machines</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc apply -f ${BACKUP_DIR}/namespaces/${HC_CLUSTER_NS}-${HC_CLUSTER_NAME}/machinedeployment-*</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc apply -f ${BACKUP_DIR}/namespaces/${HC_CLUSTER_NS}-${HC_CLUSTER_NAME}/machineset-*</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc apply -f ${BACKUP_DIR}/namespaces/${HC_CLUSTER_NS}-${HC_CLUSTER_NAME}/machine-*</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Restore the etcd data and the hosted cluster by running this bash script:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">ETCD_PODS="etcd-0"
+if [ "${CONTROL_PLANE_AVAILABILITY_POLICY}" = "HighlyAvailable" ]; then
+  ETCD_PODS="etcd-0 etcd-1 etcd-2"
+fi
+
+HC_RESTORE_FILE=${BACKUP_DIR}/namespaces/${HC_CLUSTER_NS}/hc-${HC_CLUSTER_NAME}-restore.yaml
+HC_BACKUP_FILE=${BACKUP_DIR}/namespaces/${HC_CLUSTER_NS}/hc-${HC_CLUSTER_NAME}.yaml
+HC_NEW_FILE=${BACKUP_DIR}/namespaces/${HC_CLUSTER_NS}/hc-${HC_CLUSTER_NAME}-new.yaml
+cat ${HC_BACKUP_FILE} &gt; ${HC_NEW_FILE}
+cat &gt; ${HC_RESTORE_FILE} &lt;&lt;EOF
+    restoreSnapshotURL:
+EOF
+
+for POD in ${ETCD_PODS}; do
+  # Create a pre-signed URL for the etcd snapshot
+  ETCD_SNAPSHOT="s3://${BUCKET_NAME}/${HC_CLUSTER_NAME}-${POD}-snapshot.db"
+  ETCD_SNAPSHOT_URL=$(AWS_DEFAULT_REGION=${MGMT2_REGION} aws s3 presign ${ETCD_SNAPSHOT})
+
+  # FIXME no CLI support for restoreSnapshotURL yet
+  cat &gt;&gt; ${HC_RESTORE_FILE} &lt;&lt;EOF
+    - "${ETCD_SNAPSHOT_URL}"
+EOF
+done
+
+cat ${HC_RESTORE_FILE}
+
+if ! grep ${HC_CLUSTER_NAME}-snapshot.db ${HC_NEW_FILE}; then
+  sed -i '' -e "/type: PersistentVolume/r ${HC_RESTORE_FILE}" ${HC_NEW_FILE}
+  sed -i '' -e '/pausedUntil:/d' ${HC_NEW_FILE}
+fi
+
+HC=$(oc get hc -n ${HC_CLUSTER_NS} ${HC_CLUSTER_NAME} -o name || true)
+if [[ ${HC} == "" ]];then
+    echo "Deploying HC Cluster: ${HC_CLUSTER_NAME} in ${HC_CLUSTER_NS} namespace"
+    oc apply -f ${HC_NEW_FILE}
+else
+    echo "HC Cluster ${HC_CLUSTER_NAME} already exists, avoiding step"
+fi</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>If you are recovering the nodes and the node pool to reuse AWS instances, restore the node pool by entering this command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc apply -f ${BACKUP_DIR}/namespaces/${HC_CLUSTER_NS}/np-*</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="ulist">
+<div class="title">Verification</div>
+<ul>
+<li>
+<p>To verify that the nodes are fully restored, use this function:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">timeout=40
+count=0
+NODE_STATUS=$(oc get nodes --kubeconfig=${HC_KUBECONFIG} | grep -v NotReady | grep -c "worker") || NODE_STATUS=0
+
+while [ ${NODE_POOL_REPLICAS} != ${NODE_STATUS} ]
+do
+    echo "Waiting for Nodes to be Ready in the destination MGMT Cluster: ${MGMT2_CLUSTER_NAME}"
+    echo "Try: (${count}/${timeout})"
+    sleep 30
+    if [[ $count -eq timeout ]];then
+        echo "Timeout waiting for Nodes in the destination MGMT Cluster"
+        exit 1
+    fi
+    count=$((count+1))
+    NODE_STATUS=$(oc get nodes --kubeconfig=${HC_KUBECONFIG} | grep -v NotReady | grep -c "worker") || NODE_STATUS=0
+done</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<div class="title">Next steps</div>
+<p>Shut down and delete your cluster.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="dr-hosted-cluster-within-aws-region-delete_disaster-recovery-for-hosted-control-planes-on-aws">Deleting a hosted cluster from your source management cluster</h4>
+<div class="paragraph _abstract">
+<p>After you back up your hosted cluster and restore it to your destination management cluster, you shut down and delete the hosted cluster on your source management cluster.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You backed up your data and restored it to your source management cluster.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Tip">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Ensure that the <code>kubeconfig</code> file of the destination management cluster is placed as it is set in the <code>KUBECONFIG</code> variable or, if you use the script, in the <code>MGMT_KUBECONFIG</code> variable. Use <code>export KUBECONFIG=&lt;Kubeconfig FilePath&gt;</code> or, if you use the script, use <code>export KUBECONFIG=${MGMT_KUBECONFIG}</code>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Scale the <code>deployment</code> and <code>statefulset</code> objects by entering these commands:</p>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Do not scale the stateful set if the value of its <code>spec.persistentVolumeClaimRetentionPolicy.whenScaled</code> field is set to <code>Delete</code>, because this could lead to a loss of data.</p>
+</div>
+<div class="paragraph">
+<p>As a workaround, update the value of the <code>spec.persistentVolumeClaimRetentionPolicy.whenScaled</code> field to <code>Retain</code>. Ensure that no controllers exist that reconcile the stateful set and would return the value back to <code>Delete</code>, which could lead to a loss of data.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ export KUBECONFIG=${MGMT_KUBECONFIG}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Scale down deployment commands</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc scale deployment -n ${HC_CLUSTER_NS}-${HC_CLUSTER_NAME} --replicas=0 --all</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc scale statefulset.apps -n ${HC_CLUSTER_NS}-${HC_CLUSTER_NAME} --replicas=0 --all</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ sleep 15</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Delete the <code>NodePool</code> objects by entering these commands:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">NODEPOOLS=$(oc get nodepools -n ${HC_CLUSTER_NS} -o=jsonpath='{.items[?(@.spec.clusterName=="'${HC_CLUSTER_NAME}'")].metadata.name}')
+if [[ ! -z "${NODEPOOLS}" ]];then
+    oc patch -n "${HC_CLUSTER_NS}" nodepool ${NODEPOOLS} --type=json --patch='[ { "op":"remove", "path": "/metadata/finalizers" }]'
+    oc delete np -n ${HC_CLUSTER_NS} ${NODEPOOLS}
+fi</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Delete the <code>machine</code> and <code>machineset</code> objects by entering these commands:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal"># Machines
+for m in $(oc get machines -n ${HC_CLUSTER_NS}-${HC_CLUSTER_NAME} -o name); do
+    oc patch -n ${HC_CLUSTER_NS}-${HC_CLUSTER_NAME} ${m} --type=json --patch='[ { "op":"remove", "path": "/metadata/finalizers" }]' || true
+    oc delete -n ${HC_CLUSTER_NS}-${HC_CLUSTER_NAME} ${m} || true
+done</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc delete machineset -n ${HC_CLUSTER_NS}-${HC_CLUSTER_NAME} --all || true</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Delete the cluster object by entering these commands:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ C_NAME=$(oc get cluster -n ${HC_CLUSTER_NS}-${HC_CLUSTER_NAME} -o name)</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc patch -n ${HC_CLUSTER_NS}-${HC_CLUSTER_NAME} ${C_NAME} --type=json --patch='[ { "op":"remove", "path": "/metadata/finalizers" }]'</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc delete cluster.cluster.x-k8s.io -n ${HC_CLUSTER_NS}-${HC_CLUSTER_NAME} --all</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Delete the AWS machines (Kubernetes objects) by entering these commands. Do not worry about deleting the real AWS machines. The cloud instances will not be affected.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">for m in $(oc get awsmachine.infrastructure.cluster.x-k8s.io -n ${HC_CLUSTER_NS}-${HC_CLUSTER_NAME} -o name)
+do
+    oc patch -n ${HC_CLUSTER_NS}-${HC_CLUSTER_NAME} ${m} --type=json --patch='[ { "op":"remove", "path": "/metadata/finalizers" }]' || true
+    oc delete -n ${HC_CLUSTER_NS}-${HC_CLUSTER_NAME} ${m} || true
+done</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Delete the <code>HostedControlPlane</code> and <code>ControlPlane</code> HC namespace objects by entering these commands:</p>
+<div class="listingblock">
+<div class="title">Delete HostedControlPlane and ControlPlane HC NS commands</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc patch -n ${HC_CLUSTER_NS}-${HC_CLUSTER_NAME} hostedcontrolplane.hypershift.openshift.io ${HC_CLUSTER_NAME} --type=json --patch='[ { "op":"remove", "path": "/metadata/finalizers" }]'</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc delete hostedcontrolplane.hypershift.openshift.io -n ${HC_CLUSTER_NS}-${HC_CLUSTER_NAME} --all</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc delete ns ${HC_CLUSTER_NS}-${HC_CLUSTER_NAME} || true</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Delete the <code>HostedCluster</code> and HC namespace objects by entering these commands:</p>
+<div class="listingblock">
+<div class="title">Delete HC and HC Namespace commands</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc -n ${HC_CLUSTER_NS} patch hostedclusters ${HC_CLUSTER_NAME} -p '{"metadata":{"finalizers":null}}' --type merge || true</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc delete hc -n ${HC_CLUSTER_NS} ${HC_CLUSTER_NAME}  || true</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc delete ns ${HC_CLUSTER_NS} || true</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="ulist">
+<div class="title">Verification</div>
+<ul>
+<li>
+<p>To verify that everything works, enter these commands:</p>
+<div class="listingblock">
+<div class="title">Validations commands</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ export KUBECONFIG=${MGMT2_KUBECONFIG}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get hc -n ${HC_CLUSTER_NS}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get np -n ${HC_CLUSTER_NS}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get pod -n ${HC_CLUSTER_NS}-${HC_CLUSTER_NAME}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get machines -n ${HC_CLUSTER_NS}-${HC_CLUSTER_NAME}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Commands for inside the HostedCluster</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ export KUBECONFIG=${HC_KUBECONFIG}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get clusterversion</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get nodes</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<div class="title">Next steps</div>
+<p>Delete the OVN pods in the hosted cluster so that you can connect to the new OVN control plane that runs in the new management cluster:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Load the <code>KUBECONFIG</code> environment variable with the hosted cluster&#8217;s <code>kubeconfig</code> path.</p>
+</li>
+<li>
+<p>Enter this command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc delete pod -n openshift-ovn-kubernetes --all</code></pre>
+</div>
 </div>
 </li>
 </ol>
@@ -2179,12 +2872,12 @@ etcd-ip-10-0-154-204.ec2.internal                3/3     Running     0          
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="restore-identify-unhealthy-etcd-member_encrypt-etcd-quorum-restoration-for-high-availability-clusters.html">Identifying an unhealthy etcd member</a> | ↑ Up: <a href="_troubleshoot.html">Troubleshoot</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="enabling-etcd-quorum-guard_encrypt-etcd-recover-from-expired-control-plane-certificates.html">Re-enabling the etcd quorum guard</a> →</p>
+<p>← Previous: <a href="high-availability-for-hosted-control-planes-about_high-availability-and-disaster-recovery-for-hosted-control-planes.html">High availability and disaster recovery for hosted control planes</a> | ↑ Up: <a href="_troubleshoot.html">Troubleshoot</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="hcp-azure-automated-dr_disaster-recovery-for-hosted-control-planes-on-azure.html">Automated disaster recovery for hosted control planes on Azure</a> →</p>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-08 18:28:01 -0500
+Last updated 2026-10-09 12:29:46 -0500
 </div>
 </div>
 <style>

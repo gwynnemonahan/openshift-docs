@@ -480,7 +480,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </style>
 <!-- navmap-right-toc-end -->
 </head>
-<body id="restoring-etcd-snapshot-hosted-cluster_etcd-best-practices-back-up-etcd-data" class="book toc2 toc-left navmap-has-right-toc">
+<body id="hcp-ts-internal-subnets_troubleshoot-hosted-clusters-internal-subnets" class="book toc2 toc-left navmap-has-right-toc">
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -492,6 +492,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="about-kmm_review-kmm-releases-and-updates.html">About the Kernel Module Management Operator</a>
 </li>
 <li><a href="hosted-control-planes-release-notes_hosted-control-planes-release-notes.html">Hosted control planes release notes</a>
+</li>
+<li><a href="review-multiarch-tuning-operator-releases-con_review-multiarch-tuning-operator-releases.html">Review Multiarch Tuning Operator releases</a>
 </li>
 </ul>
 </li>
@@ -580,7 +582,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="networking-guidance-for-hosted-control-planes-con_networking-guidance-for-hosted-control-planes.html">Networking guidance for hosted control planes</a>
 </li>
-<li><a href="understanding-multiple-networks-con_plan-a-multiple-network-architecture.html">Multiple networks with the OVN-K CNI</a>
+<li><a href="plan-a-multiple-network-architecture-con_plan-a-multiple-network-architecture.html">Plan a multiple network architecture</a>
 </li>
 <li><a href="design-and-layer-network-policy-across-the-cluster-con_design-and-layer-network-policy-across-the-cluster.html">Design and layer network policy across the cluster</a>
 </li>
@@ -648,7 +650,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="install-single-node-openshift-intro_install-single-node-openshift.html">Install single-node OpenShift</a>
 </li>
+<li><a href="install-a-cluster-with-multi-architecture-support-con_install-a-cluster-with-multi-architecture-support.html">Install a cluster with multi-architecture support</a>
+</li>
 <li><a href="validate-an-installation-intro_validate-an-installation.html">Validate an installation</a>
+</li>
+<li><a href="prepare-your-cluster-for-workloads-con_prepare-your-cluster-for-workloads.html">Prepare your cluster for workloads</a>
 </li>
 <li><a href="troubleshoot-installation-issues-intro_troubleshoot-installation-issues.html">Troubleshoot installation issues</a>
 </li>
@@ -720,7 +726,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="installation-about-restricted-networks_installing-restricted-networks-nutanix-installer-provisioned.html">About installations in restricted networks</a>
 </li>
-<li><a href="bmaas-prerequisites_use-red-hat-bare-metal-as-a-service-for-openshift.html">Prerequisites for using Red&#160;Hat Bare Metal as a Service for OpenShift</a>
+<li><a href="bmaas-prerequisites_use-red-hat-bare-metal-as-a-service-for-openshift.html">Prerequisites for using Red&#160;Hat Bare-Metal-as-a-Service for OpenShift</a>
 </li>
 <li><a href="install-on-aws-upi-intro_install-on-aws-upi.html">Install on AWS with user-provisioned infrastructure</a>
 </li>
@@ -859,6 +865,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="installing-the-hosted-control-planes-command-line-interface-intro_installing-the-hosted-control-planes-command-line-interface.html">Installing the hosted control planes command-line interface</a>
 </li>
 <li><a href="deploying-hosted-control-planes-on-aws-intro_deploying-hosted-control-planes-on-aws.html">Deploying hosted control planes on AWS</a>
+</li>
+<li><a href="hcp-deploy-azure-con_deploying-hosted-control-planes-on-azure.html">Deploying hosted control planes on Azure</a>
 </li>
 <li><a href="hcp-bm-overview_deploying-hosted-control-planes-on-bare-metal-with-the-agent-platform.html">About hosted control planes on bare metal with the Agent platform</a>
 </li>
@@ -1051,7 +1059,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-registry-allowlists-and-blocks-con_configure-registry-allowlists-and-blocks.html">Configure registry allowlists and blocks</a>
 </li>
-<li><a href="images-configuration-shortname-con_configure-short-name-search-registries.html">About adding registries that allow image short names</a>
+<li><a href="images-configuration-shortname-con_configure-short-name-search-registries.html">Configure short-name search registries</a>
 </li>
 <li><a href="configure-trust-and-mirroring-con_configure-trust-and-mirroring.html">Configure trust and mirroring</a>
 </li>
@@ -1083,6 +1091,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="use-developer-workflows-in-the-console-con_use-developer-workflows-in-the-console.html">Use developer workflows in the console</a>
 </li>
 <li><a href="follow-plugin-development-guidelines-con_follow-plugin-development-guidelines.html">Follow plugin development guidelines</a>
+</li>
+<li><a href="kueue-ai-ml-workloads-intro_run-ai-and-ml-workloads-with-red-hat-build-of-kueue.html">Run AI and ML workloads with Red&#160;Hat build of Kueue</a>
 </li>
 </ul>
 </li>
@@ -1215,6 +1225,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="add-multi-architecture-compute-machine-set-to-azure-cluster-con_add-multi-architecture-compute-machine-set-to-azure-cluster.html">Add a multi-architecture compute machine set to an Azure cluster</a>
 </li>
+<li><a href="add-multi-architecture-compute-machine-set-to-aws-cluster-con_add-multi-architecture-compute-machine-set-to-aws-cluster.html">Add a multi-architecture compute machine set to an AWS cluster</a>
+</li>
 <li><a href="create-multi-architecture-compute-clusters-on-google-cloud-con_create-multi-architecture-compute-clusters-on-google-cloud.html">Create multi-architecture compute clusters on Google Cloud</a>
 </li>
 <li><a href="create-multi-architecture-compute-clusters-on-bare-metal-ibm-power-or-ibm-z-con_create-multi-architecture-compute-clusters-on-bare-metal-ibm-power-or-ibm-z.html">Create multi-architecture compute clusters on bare metal, IBM Power, or IBM Z</a>
@@ -1260,9 +1272,37 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel2">
 <li><a href="configure-and-maintain-the-pod-network-cni-con_configure-and-maintain-the-pod-network-cni.html">Configure and maintain the pod network</a>
 </li>
+<li><a href="plan-a-multiple-network-architecture-con_plan-a-multiple-network-architecture.html">Plan a multiple network architecture</a>
+</li>
+<li><a href="provision-user-defined-and-ovn-kubernetes-secondary-segments-con_provision-user-defined-and-ovn-kubernetes-secondary-segments.html">Provision user-defined and OVN-Kubernetes secondary segments</a>
+</li>
+<li><a href="install-multus-related-networking-components-con_install-multus-related-networking-components.html">Install Multus-related networking components</a>
+</li>
+<li><a href="provision-multus-secondary-networks-and-addressing-con_provision-multus-secondary-networks-and-addressing.html">Provision Multus secondary networks and addressing</a>
+</li>
+<li><a href="connect-workloads-to-additional-networks-con_connect-workloads-to-additional-networks.html">Connect workloads to additional networks</a>
+</li>
+<li><a href="control-traffic-on-secondary-networks-con_control-traffic-on-secondary-networks.html">Control traffic on secondary networks</a>
+</li>
 <li><a href="nw-networkpolicy-about_configure-network-policies.html">About network policy</a>
 </li>
+<li><a href="understand-network-policies-and-administrative-network-policies-con_understand-network-policies-and-administrative-network-policies.html">Network policies and administrative network policies</a>
+</li>
+<li><a href="design-and-layer-network-policy-across-the-cluster-con_design-and-layer-network-policy-across-the-cluster.html">Design and layer network policy across the cluster</a>
+</li>
+<li><a href="enforce-non-negotiable-platform-security-baselines-con_enforce-non-negotiable-platform-security-baselines.html">Enforce non-negotiable platform security baselines</a>
+</li>
 <li><a href="install-networking-operators-con_install-networking-operators.html">Install networking Operators</a>
+</li>
+<li><a href="nw-understanding-networking-managing-traffic-entering-leaving_understand-traffic-management-entering-and-leaving-the-cluster.html">Manage traffic entering and leaving the cluster</a>
+</li>
+<li><a href="monitor-networking-operator-health-con_monitor-networking-operator-health.html">Monitor networking operator health</a>
+</li>
+<li><a href="monitor-administrative-policy-health-con_monitor-administrative-policy-health.html">Monitor administrative policy health</a>
+</li>
+<li><a href="isolate-routing-domains-for-advanced-workloads-con_isolate-routing-domains-for-advanced-workloads.html">Isolate routing domains for advanced workloads</a>
+</li>
+<li><a href="configure-route-advertisements-con_configure-route-advertisements.html">Configure route advertisements</a>
 </li>
 <li><a href="configure-external-dns-integration-con_configure-external-dns-integration.html">Configure External DNS integration</a>
 </li>
@@ -1286,9 +1326,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="secure-network-observability-data-con_secure-network-observability-data.html">Secure network observability data</a>
 </li>
-<li><a href="network-observability-operator_network-flow-visibility.html">Network Observability Operator</a>
+<li><a href="network-flow-visibility-con_network-flow-visibility.html">Network flow visibility</a>
 </li>
-<li><a href="network-observability-network-traffic-overview-view_monitor-network-traffic-with-network-observability.html">Observe the network traffic from the Overview view</a>
+<li><a href="monitor-network-traffic-with-network-observability-con_monitor-network-traffic-with-network-observability.html">Monitor network traffic with Network Observability</a>
 </li>
 <li><a href="network-observability-health-dashboard-overview_verify-security-and-network-observability-operator-health.html">Health dashboards</a>
 </li>
@@ -1466,19 +1506,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="harden-boot-integrity-for-control-plane-machines-con_harden-boot-integrity-for-control-plane-machines.html">Harden boot integrity for control plane machines</a>
 </li>
-<li><a href="connect-workloads-to-additional-networks-con_connect-workloads-to-additional-networks.html">Connect workloads to additional networks</a>
-</li>
-<li><a href="nw-multi-network-policy-differences_control-traffic-on-secondary-networks.html">Differences between multi-network policy and network policy</a>
-</li>
-<li><a href="isolate-routing-domains-for-advanced-workloads-con_isolate-routing-domains-for-advanced-workloads.html">Isolate routing domains for advanced workloads</a>
-</li>
-<li><a href="provision-user-defined-and-ovn-kubernetes-secondary-segments-con_provision-user-defined-and-ovn-kubernetes-secondary-segments.html">Provision user-defined and OVN-Kubernetes secondary segments</a>
-</li>
-<li><a href="provision-multus-secondary-networks-and-addressing-con_provision-multus-secondary-networks-and-addressing.html">Provision Multus secondary networks and addressing</a>
-</li>
 <li><a href="security-network-egress_control-outbound-access-and-protect-data-in-transit.html">Secure egress traffic</a>
-</li>
-<li><a href="enforce-non-negotiable-platform-security-baselines-con_enforce-non-negotiable-platform-security-baselines.html">Enforce non-negotiable platform security baselines</a>
 </li>
 <li><a href="secure-individual-workloads-and-manage-namespace-policy-lifecycle-con_secure-individual-workloads-and-manage-namespace-policy-lifecycle.html">Secure individual workloads and manage namespace policy lifecycle</a>
 </li>
@@ -1672,6 +1700,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="olm-installing-operators-from-software-catalog_install-operators-from-the-software-catalog.html">About Operator installation from the software catalog</a>
 </li>
+<li><a href="cli-manager-about_manage-cli-plugins-with-the-cli-manager.html">About the CLI Manager Operator</a>
+</li>
 <li><a href="nodes-pods-plugins-about_manage-kernel-modules-across-cluster-nodes-deploy-device-plugins-alongside-kernel-modules.html">Understand device plugins</a>
 </li>
 <li><a href="resolve-catalog-content-con_resolve-catalog-content.html">Resolve catalog content</a>
@@ -1681,6 +1711,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="_validate.html">Validate</a>
 
 <ul class="sectlevel2">
+<li><a href="verify-node-state-after-installation-con_verify-node-state-after-installation.html">Verify node state after installation</a>
+</li>
 <li><a href="cluster-compare-overview_validate-telco-configuration-compliance.html">Overview of the cluster-compare plugin</a>
 </li>
 <li><a href="network-policy-validation-intro_network-policy-validation.html">Network policy validation</a>
@@ -1699,15 +1731,47 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="remediate-node-configuration-drift-to-return-the-node-to-ready-con_remediate-node-configuration-drift-to-return-the-node-to-ready.html">Remediate node configuration drift to return the node to ready</a>
 </li>
+<li><a href="collecting-windows-application-event-logs_gather-information-and-debugging-data-for-windows.html">Collecting Windows application event logs</a>
+</li>
 <li><a href="restart-hosted-control-plane-components-and-pause-reconciliation-con_restart-hosted-control-plane-components-and-pause-reconciliation.html">Restart hosted control plane components and pause reconciliation</a>
+</li>
+<li><a href="hcp-ts-internal-subnets_troubleshoot-hosted-clusters-internal-subnets.html"><span class="toc-current">Known limitations for internal subnets for hosted clusters</span></a>
+</li>
+<li><a href="troubleshoot-hosted-clusters-by-platform-con_troubleshoot-hosted-clusters-by-platform.html">Troubleshoot hosted clusters by platform</a>
 </li>
 <li><a href="troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-bare-metal-con_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-bare-metal.html">Troubleshoot hosted clusters on bare metal</a>
 </li>
 <li><a href="troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-ibmz-con_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-ibmz.html">Troubleshoot hosted clusters on IBM Z</a>
 </li>
-<li><a href="troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-openshift-virtualization-con_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-openshift-virtualization.html">Troubleshoot hosted clusters on OpenShift Virtualization</a>
+<li><a href="hcp-ts-ocp-virt_troubleshoot-hosted-clusters-by-platform-troubleshoot-hosted-clusters-on-openshift-virtualization.html">Troubleshooting hosted clusters on OpenShift Virtualization</a>
 </li>
-<li><a href="troubleshoot-hosted-clusters-by-platform-con_troubleshoot-hosted-clusters-by-platform.html">Troubleshoot hosted clusters by platform</a>
+<li><a href="recovering-unhealthy-etcd-cluster-for-hosted-control-planes-con_recovering-unhealthy-etcd-cluster-for-hosted-control-planes.html">Recovering an unhealthy etcd cluster for hosted control planes</a>
+</li>
+<li><a href="backup-and-restore-etcd-on-a-hosted-cluster-intro_backup-and-restore-etcd-on-a-hosted-cluster.html">Backing up and restoring etcd on a hosted cluster</a>
+</li>
+<li><a href="backup-and-restore-etcd-on-management-cluster-intro_backup-and-restore-etcd-on-management-cluster.html">Backing up and restoring etcd on the management cluster</a>
+</li>
+<li><a href="backup-etcd-data-for-hosted-control-planes-using-etcd-snapshot-intro_backup-etcd-data-for-hosted-control-planes-using-etcd-snapshot.html">Backing up etcd data for hosted control planes by using the etcd snapshot method</a>
+</li>
+<li><a href="backup-and-restore-hosted-cluster-on-openshift-virtualization-intro_backup-and-restore-hosted-cluster-on-openshift-virtualization.html">Backing up and restoring a hosted cluster on OpenShift Virtualization</a>
+</li>
+<li><a href="high-availability-for-hosted-control-planes-about_high-availability-and-disaster-recovery-for-hosted-control-planes.html">High availability and disaster recovery for hosted control planes</a>
+</li>
+<li><a href="hcp-disaster-recovery-aws-con_disaster-recovery-for-hosted-control-planes-on-aws.html">Disaster recovery for a hosted cluster in AWS</a>
+</li>
+<li><a href="hcp-azure-automated-dr_disaster-recovery-for-hosted-control-planes-on-azure.html">Automated disaster recovery for hosted control planes on Azure</a>
+</li>
+<li><a href="hcp-azure-etcd-snapshot_backup-and-restore-for-hosted-control-planes-on-azure.html">Backup and restore for hosted control planes on Azure</a>
+</li>
+<li><a href="hcp-disaster-recovery-oadp-con_disaster-recovery-for-hosted-control-planes-using-oadp.html">Disaster recovery for a hosted cluster by using OADP</a>
+</li>
+<li><a href="hcp-disaster-recovery-oadp-auto-con_automated-disaster-recovery-for-hosted-control-planes-using-oadp.html">Automated disaster recovery for a hosted cluster by using OADP</a>
+</li>
+<li><a href="replace-healthy-etcd-about_high-availability-and-disaster-recovery-for-hosted-control-planes-recover-an-unhealthy-etcd-cluster.html">About replacing a healthy etcd member</a>
+</li>
+<li><a href="control-plane-backup-restore-operations-overview_high-availability-and-disaster-recovery-for-hosted-control-planes-back-up-and-restore-etcd-and-hosted-clusters.html">Control plane backup and restore operations</a>
+</li>
+<li><a href="control-plane-backup-restore-operations-overview_high-availability-and-disaster-recovery-for-hosted-control-planes-automated-disaster-recovery-for-a-hosted-cluster-by-using-oadp.html">Control plane backup and restore operations</a>
 </li>
 <li><a href="post-using-node-tuning-operator_troubleshoot-node-performance-issues.html">Using the Node Tuning Operator</a>
 </li>
@@ -1715,11 +1779,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="nw-network-flows-object_incident-investigation.html">Network object configuration for tracking network flows</a>
 </li>
-<li><a href="inspecting-pod-and-container-logs_troubleshoot-containers.html">Inspecting pod and container logs</a>
+<li><a href="inspecting-pod-and-container-logs_troubleshoot-containers.html">Inspect pod and container logs</a>
 </li>
-<li><a href="hosted-cluster-etcd-backup-restore-on-premise_backup-and-restore-etcd-data.html">Backing up etcd on a hosted cluster</a>
+<li><a href="update-backup-etcd-database-before-update_backup-and-restore-etcd-data.html">Backup the etcd database before you proceed with the update</a>
 </li>
-<li><a href="hcp-backup-etcd-snapshot-restore_control-plane-disaster-recovery.html">Restoring etcd data by using the etcd snapshot method</a>
+<li><a href="control-plane-backup-restore-operations-overview_control-plane-disaster-recovery.html">Control plane backup and restore operations</a>
 </li>
 <li><a href="nw-pod-network-connectivity-checks_troubleshoot-network-issues.html">Connection health checks that are performed</a>
 </li>
@@ -1731,7 +1795,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="nodes-containers-events-about_detect-and-resolve-node-issues.html">Understanding events</a>
 </li>
-<li><a href="inspecting-pod-and-container-logs_copy-files-to-or-from-containers.html">Inspecting pod and container logs</a>
+<li><a href="inspecting-pod-and-container-logs_copy-files-to-or-from-containers.html">Inspect pod and container logs</a>
 </li>
 <li><a href="enabling-etcd-quorum-guard_replace-failed-bare-metal-control-plane-nodes-without-bmc-credentials.html">Re-enabling the etcd quorum guard</a>
 </li>
@@ -1747,17 +1811,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="gathering-bootstrap-diagnostic-data_gather-data-about-a-cluster-update.html">Gathering bootstrap node diagnostic data</a>
 </li>
-<li><a href="control-plane-backup-restore-operations-overview_high-availability-and-disaster-recovery-for-hosted-control-planes.html">Control plane backup and restore operations</a>
-</li>
-<li><a href="collecting-windows-application-event-logs_gather-information-and-debugging-data-for-a-hosted-cluster.html">Collecting Windows application event logs</a>
-</li>
 <li><a href="nw-pod-network-connectivity-checks_troubleshoot-connectivity-and-internal-subnets.html">Connection health checks that are performed</a>
 </li>
 <li><a href="troubleshoot-machine-management-con_troubleshoot-machine-management.html">Troubleshoot machine management</a>
 </li>
 <li><a href="control-plane-backup-restore-operations-overview_investigate-an-active-cluster-issue.html">Control plane backup and restore operations</a>
 </li>
-<li><a href="understanding-oc-log-levels_identify-resource-limits-and-quotas-in-topology-view.html">Understanding OpenShift CLI (<code>oc</code>) log levels</a>
+<li><a href="understanding-oc-log-levels_identify-resource-limits-and-quotas-in-topology-view.html">Understand OpenShift CLI (<code>oc</code>) log levels</a>
 </li>
 <li><a href="nw-networkpolicy-project-defaults_troubleshoot-web-terminal-startup-failures.html">Add network policies to the new project template</a>
 </li>
@@ -1774,12 +1834,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="adding-network-attachment-definition-to-pods_troubleshoot-network-issues-135-trace-openflow-with-ovnkube-trace.html">Add the network attachment definition to your pods</a>
 </li>
 <li><a href="nw-pod-network-connectivity-checks_configure-and-maintain-the-pod-network-cni-225-diagnose-and-resolve-node-network-configuration-errors.html">Connection health checks that are performed</a>
-</li>
-<li><a href="replace-healthy-etcd-about_high-availability-and-disaster-recovery-for-hosted-control-planes-recover-an-unhealthy-etcd-cluster.html">About replacing a healthy etcd member</a>
-</li>
-<li><a href="control-plane-backup-restore-operations-overview_high-availability-and-disaster-recovery-for-hosted-control-planes-back-up-and-restore-etcd-and-hosted-clusters.html">Control plane backup and restore operations</a>
-</li>
-<li><a href="control-plane-backup-restore-operations-overview_high-availability-and-disaster-recovery-for-hosted-control-planes-automated-disaster-recovery-for-a-hosted-cluster-by-using-oadp.html">Control plane backup and restore operations</a>
 </li>
 <li><a href="investigating-master-node-installation-issues_manage-kernel-modules-across-cluster-nodes-troubleshoot-kernel-module-loading-issues.html">Investigating control plane node installation issues</a>
 </li>
@@ -1809,7 +1863,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="gathering-bootstrap-diagnostic-data_investigate-an-active-cluster-issue-troubleshoot-cluster-issues.html">Gathering bootstrap node diagnostic data</a>
 </li>
-<li><a href="gathering-operator-logs_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools.html">Gathering Operator logs</a>
+<li><a href="gathering-operator-logs_investigate-an-active-cluster-issue-extract-diagnostic-data-using-remote-health-tools.html">Gather Operator logs</a>
 </li>
 <li><a href="collect-comprehensive-data-for-vendor-support-con_investigate-an-active-cluster-issue-collect-comprehensive-data-for-vendor-support.html">Collect comprehensive data for vendor support</a>
 </li>
@@ -1819,19 +1873,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="use-host-toolbox-for-diagnostics-con_investigate-an-active-cluster-issue-use-host-toolbox-for-diagnostics.html">Use the host toolbox for diagnostics</a>
 </li>
-<li><a href="understanding-oc-log-levels_investigate-an-active-cluster-issue-summarize-cluster-specifications.html">Understanding OpenShift CLI (<code>oc</code>) log levels</a>
+<li><a href="understanding-oc-log-levels_investigate-an-active-cluster-issue-summarize-cluster-specifications.html">Understand OpenShift CLI (<code>oc</code>) log levels</a>
 </li>
 <li><a href="post-install-etcd-tasks_defragment-etcd-data-automatically-defragment-etcd-data.html">etcd tasks</a>
 </li>
 <li><a href="restore-identify-unhealthy-etcd-member_defragment-etcd-data-manually-defragment-etcd-data.html">Identifying an unhealthy etcd member</a>
 </li>
-<li><a href="restoring-etcd-snapshot-hosted-cluster_etcd-best-practices-back-up-etcd-data.html"><span class="toc-current">Restoring an etcd snapshot on a hosted cluster</span></a>
-</li>
 <li><a href="backing-up-etcd-data_etcd-best-practices-create-single-automatic-etcd-backup.html">Backing up etcd data</a>
 </li>
-<li><a href="hcp-backup-etcd-snapshot-about_etcd-best-practices-create-recurring-automatic-etcd-backup.html">Overview of the etcd snapshot method</a>
-</li>
-<li><a href="hcp-backup-etcd-snapshot-restore_etcd-best-practices-restore-etcd-data.html">Restoring etcd data by using the etcd snapshot method</a>
+<li><a href="restore-identify-unhealthy-etcd-member_etcd-best-practices-restore-etcd-data.html">Identifying an unhealthy etcd member</a>
 </li>
 <li><a href="removing-etcd-member_monitor-control-plane-nodes-identify-an-unhealthy-etcd-member.html">Removing the unhealthy etcd member</a>
 </li>
@@ -1841,7 +1891,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="restore-identify-unhealthy-etcd-member_encrypt-etcd-quorum-restoration-for-high-availability-clusters.html">Identifying an unhealthy etcd member</a>
 </li>
-<li><a href="hcp-backup-etcd-snapshot-restore_encrypt-etcd-restore-to-a-previous-cluster-state.html">Restoring etcd data by using the etcd snapshot method</a>
+<li><a href="restore-identify-unhealthy-etcd-member_encrypt-etcd-restore-to-a-previous-cluster-state.html">Identifying an unhealthy etcd member</a>
 </li>
 <li><a href="enabling-etcd-quorum-guard_encrypt-etcd-recover-from-expired-control-plane-certificates.html">Re-enabling the etcd quorum guard</a>
 </li>
@@ -1867,454 +1917,93 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#hcp-backup-etcd-snapshot-about_etcd-best-practices-back-up-etcd-data">Overview of the etcd snapshot method</a></li><li class="level-4"><a href="#hcp-backup-etcd-snapshot-config_etcd-best-practices-back-up-etcd-data">Configuring the etcd snapshot method</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#hcp-ts-ovnkubernetes_troubleshoot-hosted-clusters-internal-subnets">Configuring the ovnKubernetesConfig object fails with an error</a></li><li class="level-4"><a href="#hcp-ts-identical-subnet-fields_troubleshoot-hosted-clusters-internal-subnets">Setting CIDR values in internal subnet fields</a></li><li class="level-4"><a href="#hcp-ts-subnet-cidr-format_troubleshoot-hosted-clusters-internal-subnets">Ensuring a valid IPv4 CIDR format</a></li><li class="level-4"><a href="#hcp-ts-cidr-overlap_troubleshoot-hosted-clusters-internal-subnets">Avoiding an overlap between OVN subnets and CIDR values</a></li><li class="level-4"><a href="#hcp-ts-nodes-not-ready_troubleshoot-hosted-clusters-internal-subnets">Resolving a stuck OVN rollout</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
-<h3 id="restoring-etcd-snapshot-hosted-cluster_etcd-best-practices-back-up-etcd-data">Restoring an etcd snapshot on a hosted cluster</h3>
+<h3 id="hcp-ts-internal-subnets_troubleshoot-hosted-clusters-internal-subnets">Known limitations for internal subnets for hosted clusters</h3>
 <div class="paragraph _abstract">
-<p>If you have a snapshot of etcd from your hosted cluster, you can restore it. Currently, you can restore an etcd snapshot only during cluster creation.</p>
-</div>
-<div class="paragraph">
-<p>To restore an etcd snapshot, you change the output from the <code>create cluster --render</code> command and define a <code>restoreSnapshotURL</code> value in the etcd section of the <code>HostedCluster</code> specification.</p>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Important">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>If the snapshot that you are restoring is from a hosted cluster with <code>LoadBalancer</code> services, the load balancer IPs might no longer be valid. In that case, you must delete and re-create the <code>LoadBalancer</code> services.</p>
-</div>
-</td>
-</tr>
-</table>
+<p>Several known limitations exist for internal subnets on hosted clusters.</p>
 </div>
 <div class="ulist">
-<div class="title">Prerequisites</div>
 <ul>
 <li>
-<p>You took an etcd snapshot on a hosted cluster.</p>
+<p>IPv6 subnets are not supported.</p>
+</li>
+<li>
+<p>The hosted control planes command-line interface, <code>hcp</code>, might not have native flags for the subnet fields. Manual YAML editing or <code>oc patch</code> is required.</p>
+</li>
+<li>
+<p>Modifying OVN subnets after you create a cluster triggers a rollout of OVN components, which might cause brief network disruptions.</p>
+</li>
+<li>
+<p>You cannot modify OVN subnet configuration while a cluster update is in progress or scheduled.</p>
 </li>
 </ul>
 </div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Delete the hosted cluster that you backed up in "Taking a snapshot of etcd for a hosted cluster" by entering the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ hcp destroy cluster &lt;cluster_infra&gt; \
-  --name &lt;hosted_cluster_name&gt; \
-  --namespace &lt;hosted_cluster_namespace&gt;</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>On the <code>aws</code> command-line interface (CLI), create a pre-signed URL so that you can download your etcd snapshot from S3 without passing credentials to the etcd deployment:</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Define the snapshot by entering the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ ETCD_SNAPSHOT=${ETCD_SNAPSHOT:-"s3://${BUCKET_NAME}/${CLUSTER_NAME}-snapshot.db"}</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Define the snapshot URL by entering the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ ETCD_SNAPSHOT_URL=$(aws s3 presign ${ETCD_SNAPSHOT})</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>Create the new hosted cluster by entering the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ hcp create cluster &lt;platform&gt; \
-  --name &lt;hosted_cluster_name&gt; \
-  --namespace &lt;hosted_cluster_namespace&gt; \
-  --node-pool-replicas=2 \
-  --node-upgrade-type=Replace \
-  --pull-secret &lt;path_to_pull_secret&gt; \
-  --memory &lt;value_for_memory&gt; \
-  --cores &lt;value_for_cpu&gt; \
-  --etcd-storage-class=gp3-csi \
-  --release-image=&lt;release_image_reference&gt; \
-  --etcd-storage-size=8Gi \
-  --fips=false \
-  --render \
-  --render-sensitive</code></pre>
-</div>
+<div class="sect3">
+<h4 id="hcp-ts-ovnkubernetes_troubleshoot-hosted-clusters-internal-subnets">Configuring the ovnKubernetesConfig object fails with an error</h4>
+<div class="paragraph _abstract">
+<p>When you try to configure the <code>ovnKubernetesConfig</code> object on a hosted cluster by using a different network type, such as <code>OpenShiftSDN</code>, an error occurs because hosted control planes works only with the <code>OVNKubernetes</code> network type.</p>
 </div>
 <div class="ulist">
+<div class="title">Procedure</div>
 <ul>
 <li>
-<p><code>&lt;hosted_cluster_name&gt;</code> specifies the name of the new hosted cluster. The name of the new cluster must be identical to the name of the cluster from which the etcd backup was taken.</p>
-</li>
-<li>
-<p><code>&lt;platform&gt;</code> specifies the platform you are creating the hosted cluster on, such as <code>kubevirt</code> or <code>aws</code>.</p>
-</li>
-<li>
-<p><code>&lt;hosted_cluster_namespace&gt;</code> specifies the namespace where you are creating the hosted cluster.</p>
-</li>
-<li>
-<p><code>&lt;path_to_pull_secret&gt;</code> specifies the path to your pull secret; for example, <code>/user/name/pullsecret</code>.</p>
-</li>
-<li>
-<p><code>&lt;value_for_memory&gt;</code> specifies the memory value, such as <code>8Gi</code>.</p>
-</li>
-<li>
-<p><code>&lt;value_for_cpu&gt;</code> specifies the CPU value, such as <code>2</code>.</p>
-</li>
-<li>
-<p><code>&lt;release_image_reference&gt;</code> specifies the Red&#160;Hat OpenShift Container Platform release image for the cluster, for example, <code>quay.io/openshift-release-dev/ocp-release:4.20.14-multi</code>. You can use the <code>--release-image</code> flag to set up the hosted cluster with a specific Red&#160;Hat OpenShift Container Platform release.</p>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>The <code>--render</code> flag in the <code>hcp create</code> command does not render the secrets. To render the secrets, you must use both the <code>--render</code> and the <code>--render-sensitive</code> flags in the <code>hcp create</code> command.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
+<p>Verify the network type of your hosted cluster by entering the following command:</p>
 <div class="listingblock">
-<div class="title">Example output</div>
 <div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: v1
-kind: Namespace
-metadata:
-  name: &lt;hosted_cluster_namespace&gt;
-spec: {}
-status: {}
----
-apiVersion: v1
-data:
-  .dockerconfigjson: &lt;path_to_pull_secret&gt;
-kind: Secret
-metadata:
-  labels:
-    hypershift.openshift.io/safe-to-delete-with-cluster: "true"
-  name: &lt;hosted_cluster_name_pull_secret&gt;
-  namespace: &lt;hosted_cluster_namespace&gt;
----
-apiVersion: hypershift.openshift.io/v1beta1
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get hostedcluster &lt;hosted_cluster_name&gt; -n &lt;hosted_control_plane_namespace&gt; \
+  -o jsonpath='{.spec.networking.networkType}'</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="hcp-ts-identical-subnet-fields_troubleshoot-hosted-clusters-internal-subnets">Setting CIDR values in internal subnet fields</h4>
+<div class="paragraph _abstract">
+<p>If the <code>internalJoinSubnet</code> field and the <code>internalTransitSwitchSubnet</code> field are set to the same classless inter-domain routing (CIDR) values, an error occurs.</p>
+</div>
+<div class="ulist">
+<div class="title">Procedure</div>
+<ul>
+<li>
+<p>Use different subnets for each field, as shown in the following example:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: hypershift.openshift.io/v1beta1
 kind: HostedCluster
 metadata:
-  name: &lt;hosted_cluster_name&gt;
-  namespace: &lt;hosted_cluster_namespace&gt;
+  # ...
 spec:
-  autoscaling: {}
-  capabilities: {}
-  configuration: {}
-  controllerAvailabilityPolicy: HighlyAvailable
-  dns:
-    baseDomain: ""
-  etcd:
-    managed:
-      storage:
-        persistentVolume:
-          size: 8Gi
-          storageClassName: gp3-csi
-        type: PersistentVolume
-    managementType: Managed
-  fips: false
-  infraID: &lt;hosted_cluster_name&gt;-68tlg
-  infrastructureAvailabilityPolicy: HighlyAvailable
-  networking:
-    clusterNetwork:
-    - cidr: 10.132.0.0/14
-    networkType: OVNKubernetes
-    serviceNetwork:
-    - cidr: 172.31.0.0/16
-  olmCatalogPlacement: guest
-  platform:
-    kubevirt:
-      baseDomainPassthrough: true
-    type: KubeVirt
-  pullSecret:
-    name: &lt;hosted_cluster_name_pull_secret&gt;
-  release:
-    image: quay.io/openshift-release-dev/ocp-release:4.21.12-multi
-  services:
-  - service: APIServer
-    servicePublishingStrategy:
-      type: LoadBalancer
-  - service: Ignition
-    servicePublishingStrategy:
-      type: Route
-  - service: Konnectivity
-    servicePublishingStrategy:
-      type: Route
-  - service: OAuthServer
-    servicePublishingStrategy:
-      type: Route
-  sshKey: {}
-status:
-  controlPlaneEndpoint:
-    host: ""
-    port: 0
----
-apiVersion: hypershift.openshift.io/v1beta1
-kind: NodePool
-metadata:
-  name: &lt;hosted_cluster_name&gt;
-  namespace: &lt;hosted_cluster_namespace&gt;
-spec:
-  arch: amd64
-  clusterName: &lt;hosted_cluster_name&gt;
-  management:
-    autoRepair: false
-    upgradeType: Replace
-  nodeDrainTimeout: 0s
-  nodeVolumeDetachTimeout: 0s
-  platform:
-    kubevirt:
-      attachDefaultNetwork: true
-      compute:
-        cores: 2
-        memory: 8Gi
-      networkInterfaceMultiqueue: Enable
-      rootVolume:
-        persistent:
-          size: 32Gi
-        type: Persistent
-    type: KubeVirt
-  release:
-    image: quay.io/openshift-release-dev/ocp-release:&lt;4.x.x&gt;-multi
-  replicas: 2
-status:
-  replicas: 0</code></pre>
+  #...
+  operatorConfiguration:
+    clusterNetworkOperator:
+      ovnKubernetesConfig:
+        ipv4:
+          internalJoinSubnet: "100.99.0.0/16"
+          internalTransitSwitchSubnet: "100.69.0.0/16"
+# ...</code></pre>
 </div>
 </div>
-</li>
-<li>
-<p><code>&lt;hosted_cluster_namespace&gt;</code> specifies the name of the hosted cluster namespace.</p>
-</li>
-<li>
-<p><code>&lt;path_to_pull_secret&gt;</code> specifies the path to the pull secret.</p>
-</li>
-<li>
-<p><code>&lt;hosted_cluster_name_pull_secret&gt;</code> specifies the name of the restored pull secret for the new hosted cluster.</p>
-</li>
-<li>
-<p><code>&lt;hosted_cluster_name&gt;</code> specifies the name of the new hosted cluster. The name of the new cluster must be identical to the name of the cluster from which the etcd backup was taken.</p>
-</li>
-<li>
-<p><code>&lt;4.x.x&gt;</code> specifies the version of the release image.</p>
 </li>
 </ul>
 </div>
-</li>
-<li>
-<p>Change the <code>HostedCluster</code> specification to refer to the URL:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">spec:
-  etcd:
-    managed:
-      storage:
-        persistentVolume:
-          size: 8Gi
-        type: PersistentVolume
-        restoreSnapshotURL:
-        - "${ETCD_SNAPSHOT_URL}"
-    managementType: Managed</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Change the <code>HostedCluster</code> specification to include the new etcd encryption key:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: v1
-data:
-  key: &lt;pre_generated_etcd_encryption_key&gt;
-kind: Secret
-metadata:
-  labels:
-    hypershift.openshift.io/safe-to-delete-with-cluster: "true"
-  name: &lt;new_hc_etcd_encryption_key&gt;
-  namespace: &lt;hosted_cluster_namespace&gt;
-type: Opaque
----
-spec:
-  secretEncryption:
-    aescbc:
-      activeKey:
-        name: &lt;new_hc_etcd_encryption_key&gt;
-    type: aescbc</code></pre>
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>&lt;pre_generated_etcd_encryption_key&gt;</code> specifies the etcd encryption key of original hosted cluster.</p>
-</li>
-<li>
-<p><code>&lt;new_hc_etcd_encryption_key&gt;</code> specifies the etcd encryption key of the new hosted cluster. Ensure that the secret that you referenced from the <code>spec.secretEncryption.aescbc</code> value has the same Advanced Encryption Standard (AES) key that you saved earlier.</p>
-</li>
-</ul>
-</div>
-</li>
-</ol>
-</div>
-<div class="ulist">
-<div class="title">Verification</div>
-<ul>
-<li>
-<p>To verify that the snapshot was restored, enter the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc logs -n &lt;hosted_control_plane_namespace&gt; etcd-0 -c etcd-init</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>If you use a high availability deployment, you can also check the <code>etcd-1</code> and <code>etcd-2</code> containers.</p>
-</div>
-</li>
-</ul>
 </div>
 <div class="sect3">
-<h4 id="hcp-backup-etcd-snapshot-about_etcd-best-practices-back-up-etcd-data">Overview of the etcd snapshot method</h4>
+<h4 id="hcp-ts-subnet-cidr-format_troubleshoot-hosted-clusters-internal-subnets">Ensuring a valid IPv4 CIDR format</h4>
 <div class="paragraph _abstract">
-<p>You can use the etcd snapshot method as an alternative to the default volume snapshot approach to back up etcd data for hosted control planes. The etcd snapshot method results in smaller backup artifacts.</p>
-</div>
-<div class="paragraph">
-<p>Instead of capturing persistent volume claim (PVC) content by using container storage interface (CSI) volume snapshots or a filesystem backup, you can take a snapshot of the etcd database and upload it to object storage.</p>
-</div>
-<div class="paragraph">
-<p>The etcd snapshot approach is driven by the <code>HCPEtcdBackup</code> custom resource and is orchestrated through the OpenShift API for Data Protection (OADP) <code>hypershift</code> plugin during Velero backup operations.</p>
-</div>
-<div class="paragraph">
-<p>For a more detailed comparison of the etcd snapshot method and the default volume snapshot method, see the following table.</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 813. Comparing the etcd snapshot and volume snapshot methods</caption>
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Aspect</th>
-<th class="tableblock halign-left valign-top">Volume snapshot (default)</th>
-<th class="tableblock halign-left valign-top">etcd snapshot</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Backup mechanism</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">CSI volume snapshots or a Kopia filesystem backup of etcd PVCs. One per replica; typically 3.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The <code>etcdctl snapshot save</code> mechanism produces a single snapshot file and uploads it to object storage.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Portability</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tied to the storage provider and the CSI driver.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Storage-agnostic.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Backup size</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Full PVC content. Highly available deployments have 3 PVCs.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A single etcd database snapshot.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Restore mechanism</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">PVC restore from snapshot.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>etcdutl snapshot restore</code> by using the init container.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Requirements</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A CSI driver with snapshot support or a Kopia node agent.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The <code>HCPEtcdBackup</code> feature gate must be enabled.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Encryption</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Depends on the storage provider.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Optional Key Management Service (KMS) encryption for hosted control planes on AWS.</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect3">
-<h4 id="hcp-backup-etcd-snapshot-config_etcd-best-practices-back-up-etcd-data">Configuring the etcd snapshot method</h4>
-<div class="paragraph _abstract">
-<p>Before you can use the etcd snapshot method to back up your etcd data for hosted control planes, you must meet a few prerequisites and configure a plugin.</p>
+<p>If you do not specify subnets in a valid classless inter-domain range (CIDR) format, an error occurs.</p>
 </div>
 <div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>The <code>HCPEtcdBackup</code> feature gate is enabled in the HyperShift Operator.</p>
-</li>
-<li>
-<p>The OpenShift API for Data Protection (OADP) Operator version 1.6 or later with the <code>hypershift</code> plugin is deployed. For more information, see "Configuring OADP" and "Automating the backup and restore process by using a DPA".</p>
-</li>
-<li>
-<p>Object storage is configured. Use a Velero backup storage location that points to AWS S3.</p>
-</li>
-<li>
-<p>Service publishing requirements:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>If you are restoring a hosted cluster to a different management cluster, use a fixed hostname that is configured through DNS so that you can update the DNS record to point to the endpoint of the new management cluster and make the migration transparent for existing nodes.</p>
-</li>
-<li>
-<p>For production environments, all services must have fixed hostnames.</p>
-</li>
-<li>
-<p>On AWS, the API server can also use a <code>Route</code> service publishing strategy with a fixed hostname.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Platform-specific requirements:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>For hosted control planes on AWS, ensure that the OIDC provider configuration is accessible for any fixes that are needed after the restore process. If you use AWS S3 for backup storage, ensure that IAM roles and policies are configured according to "About installing OADP".</p>
-</li>
-<li>
-<p>For hosted control planes on bare metal with the Agent provider, ensure that the <code>InfraEnv</code> resource is in a separate namespace from the hosted control plane namespace. Be careful to not delete the <code>InfraEnv</code> resource during the backup or restore processes.</p>
-</li>
-<li>
-<p>For hosted control planes on Microsoft Azure, see the requirements and steps in <a href="../../hosted_control_planes/hcp-deploy/hcp-deploy-azure.html#hcp-azure-etcd-snapshot_hcp-deploy-azure">Backup and restore for hosted control planes on Azure</a>.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
 <div class="title">Procedure</div>
-<ol class="arabic">
+<ul>
 <li>
-<p>Configure the OADP <code>hypershift</code> plugin by creating a config map in the OADP namespace and specifying the etcd backup method, as shown in the following example:</p>
+<p>Ensure that the CIDR format follows the following format:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: hypershift-oadp-plugin-config
-  namespace: openshift-adp
-data:
-  etcdBackupMethod: "etcdSnapshot"</code></pre>
+<pre class="highlight"><code class="language-text" data-lang="text">X.X.X.X/Y</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2322,27 +2011,96 @@ data:
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">metadata.name</dt>
+<dt class="hdlist1"><code>X</code></dt>
 <dd>
-<p>Specifies the name of the config map. Use <code>hypershift-oadp-plugin-config</code> as the name of the config map.</p>
+<p>is a value from <code>0</code> to <code>255</code>. The first octet must not be <code>0</code>.</p>
 </dd>
-<dt class="hdlist1">metadata.namespace</dt>
+<dt class="hdlist1"><code>Y</code></dt>
 <dd>
-<p>Specifies the OADP namespace.</p>
-</dd>
-<dt class="hdlist1">data.etcdBackupMethod</dt>
-<dd>
-<p>Specifies the etcd backup method. The default is <code>volumeSnapshot</code>. Use <code>etcdSnapshot</code> to enable the etcd snapshot method. If the <code>etcdBackupMethod</code> parameter is set to <code>etcdSnapshot</code> but the <code>HCPEtcdBackup</code> custom resource is not installed, the plugin fails.</p>
+<p>is a value from <code>0</code> to <code>30</code>.</p>
+<div class="listingblock">
+<div class="title">Valid examples</div>
+<div class="content">
+<pre class="highlight"><code class="language-text" data-lang="text">100.99.0.0/16
+192.168.1.0/24</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Invalid examples</div>
+<div class="content">
+<pre class="highlight"><code class="language-text" data-lang="text">100.99.0.0
+256.1.1.0/16
+0.99.0.0/16</code></pre>
+</div>
+</div>
 </dd>
 </dl>
 </div>
 </li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="hcp-ts-cidr-overlap_troubleshoot-hosted-clusters-internal-subnets">Avoiding an overlap between OVN subnets and CIDR values</h4>
+<div class="paragraph _abstract">
+<p>If the configured OVN subnets overlap with the machine classless inter-domain routing (CIDR), service CIDR, cluster network CIDR, or with each other, an error occurs.</p>
+</div>
+<div class="ulist">
+<div class="title">Procedure</div>
+<ul>
 <li>
-<p>Apply the configuration by entering the following command:</p>
+<p>Use subnets that do not overlap with any network CIDR. You can use a CIDR calculator to verify that no overlaps exist.</p>
+<div class="listingblock">
+<div class="title">Example of configuration with no overlaps</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">spec:
+  networking:
+    machineCIDR: 10.0.0.0/16
+    serviceCIDR: 172.30.0.0/16
+    clusterNetwork:
+    - cidr: 10.128.0.0/14
+
+  operatorConfiguration:
+    clusterNetworkOperator:
+      ovnKubernetesConfig:
+        ipv4:
+          internalJoinSubnet: "100.99.0.0/16"
+          internalTransitSwitchSubnet: "100.69.0.0/16"</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="hcp-ts-nodes-not-ready_troubleshoot-hosted-clusters-internal-subnets">Resolving a stuck OVN rollout</h4>
+<div class="paragraph _abstract">
+<p>After you change an existing configuration, the OVN component rollout might take a long time or encounter issues.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Check the status of the <code>ovnkube-node</code> DaemonSet rollout by entering the following command:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc apply -f hypershift-oadp-plugin-config.yaml</code></pre>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc rollout status daemonset/ovnkube-node \
+  -n openshift-ovn-kubernetes \
+  --kubeconfig=hosted-kubeconfig</code></pre>
 </div>
+</div>
+</li>
+<li>
+<p>Check the pod logs for errors by entering the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc logs -n openshift-ovn-kubernetes \
+  -l app=ovnkube-node \
+  --kubeconfig=hosted-kubeconfig</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If the rollout is stuck, you might need to revert the configuration change.</p>
 </div>
 </li>
 </ol>
@@ -2350,12 +2108,12 @@ data:
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="restore-identify-unhealthy-etcd-member_defragment-etcd-data-manually-defragment-etcd-data.html">Identifying an unhealthy etcd member</a> | ↑ Up: <a href="_troubleshoot.html">Troubleshoot</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="backing-up-etcd-data_etcd-best-practices-create-single-automatic-etcd-backup.html">Backing up etcd data</a> →</p>
+<p>← Previous: <a href="restart-hosted-control-plane-components-and-pause-reconciliation-con_restart-hosted-control-plane-components-and-pause-reconciliation.html">Restart hosted control plane components and pause reconciliation</a> | ↑ Up: <a href="_troubleshoot.html">Troubleshoot</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="troubleshoot-hosted-clusters-by-platform-con_troubleshoot-hosted-clusters-by-platform.html">Troubleshoot hosted clusters by platform</a> →</p>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-08 18:28:01 -0500
+Last updated 2026-10-09 12:29:46 -0500
 </div>
 </div>
 <style>
