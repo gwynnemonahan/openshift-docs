@@ -767,8 +767,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="allocate-gpu-resources-to-pods-con_allocate-gpu-resources-to-pods.html">Allocate GPU resources to pods</a>
 </li>
-<li><a href="allocate-gpus-to-pods-with-a-dra-driver-con_allocate-gpus-to-pods-with-a-dra-driver.html">Allocate GPUs to pods with a DRA driver</a>
-</li>
 <li><a href="nodes-cluster-resource-configure_allocate-resources-for-nodes.html">Configure cluster-level overcommit</a>
 </li>
 <li><a href="allow-containers-to-consume-api-objects-con_allow-containers-to-consume-api-objects.html">Allow containers to consume API objects</a>
@@ -844,6 +842,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="machineconfig-garbage-collect-removing_remove-no-longer-used-machine-config-objects.html">Remove unused rendered machine configs</a>
 </li>
 <li><a href="machine-health-checks-resource_review-sample-machinehealthcheck-resource.html">About the MachineHealthCheck custom resource</a>
+</li>
+<li><a href="remote-health-monitoring-overview_remote-health-monitoring.html">Remotely monitor the health of Red&#160;Hat OpenShift Container Platform clusters</a>
 </li>
 <li><a href="nodes-pods-daemonsets-about_run-background-tasks-on-a-node-with-daemonsets.html">Daemon set scheduling</a>
 </li>
@@ -1233,7 +1233,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-ingress-and-routes-con_configure-ingress-and-routes.html">Configure ingress and routes</a>
 </li>
+<li><a href="configure-sr-iov-network-devices-con_configure-sr-iov-network-devices.html">Configure SR-IOV network devices</a>
+</li>
 <li><a href="configure-high-performance-networking-con_configure-high-performance-networking.html">Configure high-performance networking</a>
+</li>
+<li><a href="configure-ptp-clock-synchronization-intro_configure-ptp-clock-synchronization.html">Configure PTP clock synchronization</a>
 </li>
 <li><a href="network-observability-operator_understand-network-observability-netobserv.html">Network Observability Operator</a>
 </li>
@@ -1245,11 +1249,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="restrict-the-api-server-to-private-for-aws-con_restrict-the-api-server-to-private-for-aws.html">Restrict the API server to private for AWS</a>
 </li>
-<li><a href="configure-ptp-clock-synchronization-intro_configure-ptp-clock-synchronization.html">Configure PTP clock synchronization</a>
-</li>
 <li><a href="reconfigure-sno-cluster-networking-intro_reconfigure-sno-cluster-networking.html">Reconfigure single-node OpenShift cluster networking</a>
-</li>
-<li><a href="assign-sriov-networks-to-vrf-intro_assign-sriov-networks-to-vrf.html">Assign SR-IOV networks to a VRF</a>
 </li>
 </ul>
 </li>
@@ -1590,8 +1590,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-node-resource-limits-con_configure-node-resource-limits.html">Configure node resource limits</a>
 </li>
-<li><a href="reserve-cpus-for-ovs-dpdk-workloads-intro_reserve-cpus-for-ovs-dpdk-workloads.html">Reserve CPUs for OVS-DPDK workloads</a>
-</li>
 </ul>
 </li>
 <li><a href="_extend.html">Extend</a>
@@ -1681,8 +1679,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="validate-cluster-health-after-installation-intro_validate-cluster-health-after-installation.html">Validate cluster health after installation</a>
 </li>
 <li><a href="verify-node-state-after-installation-con_verify-node-state-after-installation.html">Verify node state after installation</a>
-</li>
-<li><a href="validate-telco-configuration-compliance-intro_validate-telco-configuration-compliance.html">Validate telco configuration compliance</a>
 </li>
 <li><a href="network-policy-validation-intro_network-policy-validation.html">Network policy validation</a>
 </li>
@@ -1875,12 +1871,26 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#cnf-about-ptp-fast-event-notifications-framework-{ptp-events-rest-api}_consume-ptp-fast-event-notifications">About the PTP fast event notifications framework</a></li><li class="level-4"><a href="#cnf-about-ptp-events-using-ptp-event-producer-with-o-ran-api_consume-ptp-fast-event-notifications">Retrieving PTP events with the PTP events REST API v2</a></li><li class="level-4"><a href="#cnf-configuring-the-ptp-fast-event-publisher-{ptp-events-rest-api}_consume-ptp-fast-event-notifications">Configuring the PTP fast event notifications publisher</a></li><li class="level-4"><a href="#ptp-subscribing-consumer-app-to-events-{ptp-events-rest-api}_consume-ptp-fast-event-notifications">Subscribing to PTP events with the REST API {ptp-events-rest-api}</a></li><li class="level-4"><a href="#ptp-events-consumer-application-v2_consume-ptp-fast-event-notifications">PTP events REST API v2 consumer application reference</a></li><li class="level-4"><a href="#ptp-reference-deployment-and-service-crs-v2_consume-ptp-fast-event-notifications">Reference event consumer deployment and service CRs using PTP events REST API v2</a></li><li class="level-4"><a href="#ptp-verifying-events-consumer-app-is-receiving-events-v2_consume-ptp-fast-event-notifications">Verifying that the PTP events REST API v2 consumer application is receiving events</a></li><li class="level-4"><a href="#cnf-monitoring-fast-events-metrics-{ptp-events-rest-api}_consume-ptp-fast-event-notifications">Monitoring PTP fast event metrics</a></li><li class="level-4"><a href="#nw-ptp-operator-metrics-reference-{ptp-events-rest-api}_consume-ptp-fast-event-notifications">PTP fast event metrics reference</a></li><li class="level-5"><a href="#_ptp_fast_event_metrics_only_when_t_gm_is_enabled">PTP fast event metrics only when T-GM is enabled</a></li><li class="level-4"><a href="#cnf-fast-event-notifications-v2-api-refererence_consume-ptp-fast-event-notifications">PTP events REST API v2 endpoints</a></li><li class="level-5"><a href="#api-ocloud-notifications-v2-subscriptions_consume-ptp-fast-event-notifications">api/ocloudNotifications/v2/subscriptions</a></li><li class="level-5"><a href="#_http_method">HTTP method</a></li><li class="level-5"><a href="#_description">Description</a></li><li class="level-5"><a href="#_http_method_2">HTTP method</a></li><li class="level-5"><a href="#_description_2">Description</a></li><li class="level-5"><a href="#_http_method_3">HTTP method</a></li><li class="level-5"><a href="#_description_3">Description</a></li><li class="level-5"><a href="#api-ocloud-notifications-v2-subscriptions-subscription_id_consume-ptp-fast-event-notifications">api/ocloudNotifications/v2/subscriptions/{subscription_id}</a></li><li class="level-5"><a href="#_http_method_4">HTTP method</a></li><li class="level-5"><a href="#_description_4">Description</a></li><li class="level-5"><a href="#_http_method_5">HTTP method</a></li><li class="level-5"><a href="#_description_5">Description</a></li><li class="level-5"><a href="#api-ocloudnotifications-v2-health_consume-ptp-fast-event-notifications">api/ocloudNotifications/v2/health</a></li><li class="level-5"><a href="#_http_method_6">HTTP method</a></li><li class="level-5"><a href="#_description_6">Description</a></li><li class="level-5"><a href="#api-ocloudnotifications-v2-publishers_consume-ptp-fast-event-notifications">api/ocloudNotifications/v2/publishers</a></li><li class="level-5"><a href="#_http_method_7">HTTP method</a></li><li class="level-5"><a href="#_description_7">Description</a></li><li class="level-5"><a href="#resource-address-current-state-v2_consume-ptp-fast-event-notifications">api/ocloudNotifications/v2/{resource_address}/CurrentState</a></li><li class="level-5"><a href="#_http_method_8">HTTP method</a></li><li class="level-5"><a href="#_description_8">Description</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#cnf-about-ptp-fast-event-notifications-framework-{ptp-events-rest-api}_consume-ptp-fast-event-notifications">About the PTP fast event notifications framework</a></li><li class="level-4"><a href="#cnf-about-ptp-events-using-ptp-event-producer-with-o-ran-api_consume-ptp-fast-event-notifications">Retrieving PTP events with the PTP events REST API v2</a></li><li class="level-4"><a href="#cnf-configuring-the-ptp-fast-event-publisher-{ptp-events-rest-api}_consume-ptp-fast-event-notifications">Configuring the PTP fast event notifications publisher</a></li><li class="level-4"><a href="#ptp-subscribing-consumer-app-to-events-{ptp-events-rest-api}_consume-ptp-fast-event-notifications">Subscribing to PTP events with the REST API {ptp-events-rest-api}</a></li><li class="level-4"><a href="#ptp-events-consumer-application-v2_consume-ptp-fast-event-notifications">PTP events REST API v2 consumer application reference</a></li><li class="level-4"><a href="#ptp-reference-deployment-and-service-crs-v2_consume-ptp-fast-event-notifications">Reference event consumer deployment and service CRs using PTP events REST API v2</a></li><li class="level-4"><a href="#ptp-verifying-events-consumer-app-is-receiving-events-v2_consume-ptp-fast-event-notifications">Verifying that the PTP events REST API v2 consumer application is receiving events</a></li><li class="level-4"><a href="#cnf-monitoring-fast-events-metrics-{ptp-events-rest-api}_consume-ptp-fast-event-notifications">Monitoring PTP fast event metrics</a></li><li class="level-4"><a href="#nw-ptp-operator-metrics-reference-{ptp-events-rest-api}_consume-ptp-fast-event-notifications">PTP fast event metrics reference</a></li><li class="level-5"><a href="#_ptp_fast_event_metrics_only_when_t_gm_is_enabled">PTP fast event metrics only when T-GM is enabled</a></li><li class="level-4"><a href="#cnf-fast-event-notifications-v2-api-refererence_ptp-events-rest-api-reference">PTP events REST API v2 endpoints</a></li><li class="level-5"><a href="#api-ocloud-notifications-v2-subscriptions_ptp-events-rest-api-reference">api/ocloudNotifications/v2/subscriptions</a></li><li class="level-5"><a href="#_http_method">HTTP method</a></li><li class="level-5"><a href="#_description">Description</a></li><li class="level-5"><a href="#_http_method_2">HTTP method</a></li><li class="level-5"><a href="#_description_2">Description</a></li><li class="level-5"><a href="#_http_method_3">HTTP method</a></li><li class="level-5"><a href="#_description_3">Description</a></li><li class="level-5"><a href="#api-ocloud-notifications-v2-subscriptions-subscription_id_ptp-events-rest-api-reference">api/ocloudNotifications/v2/subscriptions/{subscription_id}</a></li><li class="level-5"><a href="#_http_method_4">HTTP method</a></li><li class="level-5"><a href="#_description_4">Description</a></li><li class="level-5"><a href="#_http_method_5">HTTP method</a></li><li class="level-5"><a href="#_description_5">Description</a></li><li class="level-5"><a href="#api-ocloudnotifications-v2-health_ptp-events-rest-api-reference">api/ocloudNotifications/v2/health</a></li><li class="level-5"><a href="#_http_method_6">HTTP method</a></li><li class="level-5"><a href="#_description_6">Description</a></li><li class="level-5"><a href="#api-ocloudnotifications-v2-publishers_ptp-events-rest-api-reference">api/ocloudNotifications/v2/publishers</a></li><li class="level-5"><a href="#_http_method_7">HTTP method</a></li><li class="level-5"><a href="#_description_7">Description</a></li><li class="level-5"><a href="#resource-address-current-state-v2_ptp-events-rest-api-reference">api/ocloudNotifications/v2/{resource_address}/CurrentState</a></li><li class="level-5"><a href="#_http_method_8">HTTP method</a></li><li class="level-5"><a href="#_description_8">Description</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="consume-ptp-fast-event-notifications-intro_consume-ptp-fast-event-notifications">Consume PTP fast event notifications</h3>
 <div class="paragraph _abstract">
 <p>You can configure applications to consume PTP fast event notifications to react to changes in clock synchronization status with minimal latency.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>The PTP Operator is installed and the PTP fast event publisher is configured on the cluster.</p>
+</li>
+<li>
+<p>Complete the "Configure PTP clock synchronization" job in the Networking category before consuming events from the publisher.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For the full list of publisher endpoints, see the "PTP events REST API v2 endpoints" section of this job.</p>
 </div>
 <div class="sect3">
 <h4 id="cnf-about-ptp-fast-event-notifications-framework-{ptp-events-rest-api}_consume-ptp-fast-event-notifications">About the PTP fast event notifications framework</h4>
@@ -2449,7 +2459,7 @@ For example, run the following command:</p>
 <p>The following table describes the PTP fast events metrics that are available from cluster nodes where the <code>linuxptp-daemon</code> service is running.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 739. PTP fast event metrics</caption>
+<caption class="title">Table 741. PTP fast event metrics</caption>
 <colgroup>
 <col style="width: 12.5%;">
 <col style="width: 50%;">
@@ -2552,7 +2562,7 @@ For example, between the upstream GNSS clock and the NIC (<code>ts2phc</code>), 
 <p>The following table describes the PTP fast event metrics that are available only when PTP grandmaster clock (T-GM) is enabled.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 740. PTP fast event metrics when T-GM is enabled</caption>
+<caption class="title">Table 742. PTP fast event metrics when T-GM is enabled</caption>
 <colgroup>
 <col style="width: 12.5%;">
 <col style="width: 50%;">
@@ -2604,12 +2614,12 @@ Possible values are 0 (<code>NOFIX</code>), 1 (<code>DEAD RECKONING ONLY</code>)
 </div>
 </div>
 <div class="sect3">
-<h4 id="cnf-fast-event-notifications-v2-api-refererence_consume-ptp-fast-event-notifications">PTP events REST API v2 endpoints</h4>
+<h4 id="cnf-fast-event-notifications-v2-api-refererence_ptp-events-rest-api-reference">PTP events REST API v2 endpoints</h4>
 <div class="paragraph _abstract">
 <p>Use the PTP events REST API v2 endpoints to create and manage event subscriptions and to poll the current state of PTP events on cluster nodes.</p>
 </div>
 <div class="sect4">
-<h5 id="api-ocloud-notifications-v2-subscriptions_consume-ptp-fast-event-notifications">api/ocloudNotifications/v2/subscriptions</h5>
+<h5 id="api-ocloud-notifications-v2-subscriptions_ptp-events-rest-api-reference">api/ocloudNotifications/v2/subscriptions</h5>
 
 </div>
 <div class="sect4">
@@ -2695,7 +2705,7 @@ Possible values are 0 (<code>NOFIX</code>), 1 (<code>DEAD RECKONING ONLY</code>)
 </ul>
 </div>
 <table class="tableblock frame-all grid-all" style="width: 60%;">
-<caption class="title">Table 741. Query parameters</caption>
+<caption class="title">Table 743. Query parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -2773,7 +2783,7 @@ Possible values are 0 (<code>NOFIX</code>), 1 (<code>DEAD RECKONING ONLY</code>)
 <p>The following subscription status events are possible:</p>
 </div>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
-<caption class="title">Table 742. PTP events REST API v2 subscription status codes</caption>
+<caption class="title">Table 744. PTP events REST API v2 subscription status codes</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 66.6667%;">
@@ -2825,7 +2835,7 @@ Possible values are 0 (<code>NOFIX</code>), 1 (<code>DEAD RECKONING ONLY</code>)
 </div>
 </div>
 <div class="sect4">
-<h5 id="api-ocloud-notifications-v2-subscriptions-subscription_id_consume-ptp-fast-event-notifications">api/ocloudNotifications/v2/subscriptions/{subscription_id}</h5>
+<h5 id="api-ocloud-notifications-v2-subscriptions-subscription_id_ptp-events-rest-api-reference">api/ocloudNotifications/v2/subscriptions/{subscription_id}</h5>
 
 </div>
 <div class="sect4">
@@ -2840,7 +2850,7 @@ Possible values are 0 (<code>NOFIX</code>), 1 (<code>DEAD RECKONING ONLY</code>)
 <p>Returns details for the subscription with ID <code>subscription_id</code>.</p>
 </div>
 <table class="tableblock frame-all grid-all" style="width: 60%;">
-<caption class="title">Table 743. Global path parameters</caption>
+<caption class="title">Table 745. Global path parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -2882,7 +2892,7 @@ Possible values are 0 (<code>NOFIX</code>), 1 (<code>DEAD RECKONING ONLY</code>)
 <p>Deletes the subscription with ID <code>subscription_id</code>.</p>
 </div>
 <table class="tableblock frame-all grid-all" style="width: 60%;">
-<caption class="title">Table 744. Global path parameters</caption>
+<caption class="title">Table 746. Global path parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -2901,7 +2911,7 @@ Possible values are 0 (<code>NOFIX</code>), 1 (<code>DEAD RECKONING ONLY</code>)
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all" style="width: 60%;">
-<caption class="title">Table 745. HTTP response codes</caption>
+<caption class="title">Table 747. HTTP response codes</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -2921,7 +2931,7 @@ Possible values are 0 (<code>NOFIX</code>), 1 (<code>DEAD RECKONING ONLY</code>)
 </table>
 </div>
 <div class="sect4">
-<h5 id="api-ocloudnotifications-v2-health_consume-ptp-fast-event-notifications">api/ocloudNotifications/v2/health</h5>
+<h5 id="api-ocloudnotifications-v2-health_ptp-events-rest-api-reference">api/ocloudNotifications/v2/health</h5>
 
 </div>
 <div class="sect4">
@@ -2936,7 +2946,7 @@ Possible values are 0 (<code>NOFIX</code>), 1 (<code>DEAD RECKONING ONLY</code>)
 <p>Returns the health status for the <code>ocloudNotifications</code> REST API.</p>
 </div>
 <table class="tableblock frame-all grid-all" style="width: 60%;">
-<caption class="title">Table 746. HTTP response codes</caption>
+<caption class="title">Table 748. HTTP response codes</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -2956,7 +2966,7 @@ Possible values are 0 (<code>NOFIX</code>), 1 (<code>DEAD RECKONING ONLY</code>)
 </table>
 </div>
 <div class="sect4">
-<h5 id="api-ocloudnotifications-v2-publishers_consume-ptp-fast-event-notifications">api/ocloudNotifications/v2/publishers</h5>
+<h5 id="api-ocloudnotifications-v2-publishers_ptp-events-rest-api-reference">api/ocloudNotifications/v2/publishers</h5>
 
 </div>
 <div class="sect4">
@@ -3012,7 +3022,7 @@ The system generates notifications when the relevant equipment state changes.</p
 </div>
 </div>
 <table class="tableblock frame-all grid-all" style="width: 60%;">
-<caption class="title">Table 747. HTTP response codes</caption>
+<caption class="title">Table 749. HTTP response codes</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -3032,7 +3042,7 @@ The system generates notifications when the relevant equipment state changes.</p
 </table>
 </div>
 <div class="sect4">
-<h5 id="resource-address-current-state-v2_consume-ptp-fast-event-notifications">api/ocloudNotifications/v2/{resource_address}/CurrentState</h5>
+<h5 id="resource-address-current-state-v2_ptp-events-rest-api-reference">api/ocloudNotifications/v2/{resource_address}/CurrentState</h5>
 
 </div>
 <div class="sect4">
@@ -3079,7 +3089,7 @@ The system generates notifications when the relevant equipment state changes.</p
 </ul>
 </div>
 <table class="tableblock frame-all grid-all" style="width: 60%;">
-<caption class="title">Table 748. Global path parameters</caption>
+<caption class="title">Table 750. Global path parameters</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -3249,7 +3259,7 @@ The system generates notifications when the relevant equipment state changes.</p
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-30 09:01:02 -0500
+Last updated 2026-10-30 09:47:16 -0500
 </div>
 </div>
 <style>

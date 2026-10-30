@@ -767,8 +767,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="allocate-gpu-resources-to-pods-con_allocate-gpu-resources-to-pods.html">Allocate GPU resources to pods</a>
 </li>
-<li><a href="allocate-gpus-to-pods-with-a-dra-driver-con_allocate-gpus-to-pods-with-a-dra-driver.html">Allocate GPUs to pods with a DRA driver</a>
-</li>
 <li><a href="nodes-cluster-resource-configure_allocate-resources-for-nodes.html">Configure cluster-level overcommit</a>
 </li>
 <li><a href="allow-containers-to-consume-api-objects-con_allow-containers-to-consume-api-objects.html">Allow containers to consume API objects</a>
@@ -844,6 +842,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="machineconfig-garbage-collect-removing_remove-no-longer-used-machine-config-objects.html">Remove unused rendered machine configs</a>
 </li>
 <li><a href="machine-health-checks-resource_review-sample-machinehealthcheck-resource.html">About the MachineHealthCheck custom resource</a>
+</li>
+<li><a href="remote-health-monitoring-overview_remote-health-monitoring.html">Remotely monitor the health of Red&#160;Hat OpenShift Container Platform clusters</a>
 </li>
 <li><a href="nodes-pods-daemonsets-about_run-background-tasks-on-a-node-with-daemonsets.html">Daemon set scheduling</a>
 </li>
@@ -1233,7 +1233,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-ingress-and-routes-con_configure-ingress-and-routes.html">Configure ingress and routes</a>
 </li>
+<li><a href="configure-sr-iov-network-devices-con_configure-sr-iov-network-devices.html">Configure SR-IOV network devices</a>
+</li>
 <li><a href="configure-high-performance-networking-con_configure-high-performance-networking.html">Configure high-performance networking</a>
+</li>
+<li><a href="configure-ptp-clock-synchronization-intro_configure-ptp-clock-synchronization.html">Configure PTP clock synchronization</a>
 </li>
 <li><a href="network-observability-operator_understand-network-observability-netobserv.html">Network Observability Operator</a>
 </li>
@@ -1245,11 +1249,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="restrict-the-api-server-to-private-for-aws-con_restrict-the-api-server-to-private-for-aws.html">Restrict the API server to private for AWS</a>
 </li>
-<li><a href="configure-ptp-clock-synchronization-intro_configure-ptp-clock-synchronization.html">Configure PTP clock synchronization</a>
-</li>
 <li><a href="reconfigure-sno-cluster-networking-intro_reconfigure-sno-cluster-networking.html">Reconfigure single-node OpenShift cluster networking</a>
-</li>
-<li><a href="assign-sriov-networks-to-vrf-intro_assign-sriov-networks-to-vrf.html">Assign SR-IOV networks to a VRF</a>
 </li>
 </ul>
 </li>
@@ -1590,8 +1590,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-node-resource-limits-con_configure-node-resource-limits.html">Configure node resource limits</a>
 </li>
-<li><a href="reserve-cpus-for-ovs-dpdk-workloads-intro_reserve-cpus-for-ovs-dpdk-workloads.html">Reserve CPUs for OVS-DPDK workloads</a>
-</li>
 </ul>
 </li>
 <li><a href="_extend.html">Extend</a>
@@ -1681,8 +1679,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="validate-cluster-health-after-installation-intro_validate-cluster-health-after-installation.html">Validate cluster health after installation</a>
 </li>
 <li><a href="verify-node-state-after-installation-con_verify-node-state-after-installation.html">Verify node state after installation</a>
-</li>
-<li><a href="validate-telco-configuration-compliance-intro_validate-telco-configuration-compliance.html">Validate telco configuration compliance</a>
 </li>
 <li><a href="network-policy-validation-intro_network-policy-validation.html">Network policy validation</a>
 </li>
@@ -2209,7 +2205,7 @@ offending file, however, and should continue to operate in a <code>degraded</cod
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-30 09:01:02 -0500
+Last updated 2026-10-30 09:47:16 -0500
 </div>
 </div>
 <style>

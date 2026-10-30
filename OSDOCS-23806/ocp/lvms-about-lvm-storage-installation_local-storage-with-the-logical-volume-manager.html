@@ -767,8 +767,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="allocate-gpu-resources-to-pods-con_allocate-gpu-resources-to-pods.html">Allocate GPU resources to pods</a>
 </li>
-<li><a href="allocate-gpus-to-pods-with-a-dra-driver-con_allocate-gpus-to-pods-with-a-dra-driver.html">Allocate GPUs to pods with a DRA driver</a>
-</li>
 <li><a href="nodes-cluster-resource-configure_allocate-resources-for-nodes.html">Configure cluster-level overcommit</a>
 </li>
 <li><a href="allow-containers-to-consume-api-objects-con_allow-containers-to-consume-api-objects.html">Allow containers to consume API objects</a>
@@ -844,6 +842,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="machineconfig-garbage-collect-removing_remove-no-longer-used-machine-config-objects.html">Remove unused rendered machine configs</a>
 </li>
 <li><a href="machine-health-checks-resource_review-sample-machinehealthcheck-resource.html">About the MachineHealthCheck custom resource</a>
+</li>
+<li><a href="remote-health-monitoring-overview_remote-health-monitoring.html">Remotely monitor the health of Red&#160;Hat OpenShift Container Platform clusters</a>
 </li>
 <li><a href="nodes-pods-daemonsets-about_run-background-tasks-on-a-node-with-daemonsets.html">Daemon set scheduling</a>
 </li>
@@ -1234,7 +1234,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-ingress-and-routes-con_configure-ingress-and-routes.html">Configure ingress and routes</a>
 </li>
+<li><a href="configure-sr-iov-network-devices-con_configure-sr-iov-network-devices.html">Configure SR-IOV network devices</a>
+</li>
 <li><a href="configure-high-performance-networking-con_configure-high-performance-networking.html">Configure high-performance networking</a>
+</li>
+<li><a href="configure-ptp-clock-synchronization-intro_configure-ptp-clock-synchronization.html">Configure PTP clock synchronization</a>
 </li>
 <li><a href="network-observability-operator_understand-network-observability-netobserv.html">Network Observability Operator</a>
 </li>
@@ -1246,11 +1250,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="restrict-the-api-server-to-private-for-aws-con_restrict-the-api-server-to-private-for-aws.html">Restrict the API server to private for AWS</a>
 </li>
-<li><a href="configure-ptp-clock-synchronization-intro_configure-ptp-clock-synchronization.html">Configure PTP clock synchronization</a>
-</li>
 <li><a href="reconfigure-sno-cluster-networking-intro_reconfigure-sno-cluster-networking.html">Reconfigure single-node OpenShift cluster networking</a>
-</li>
-<li><a href="assign-sriov-networks-to-vrf-intro_assign-sriov-networks-to-vrf.html">Assign SR-IOV networks to a VRF</a>
 </li>
 </ul>
 </li>
@@ -1590,8 +1590,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-node-resource-limits-con_configure-node-resource-limits.html">Configure node resource limits</a>
 </li>
-<li><a href="reserve-cpus-for-ovs-dpdk-workloads-intro_reserve-cpus-for-ovs-dpdk-workloads.html">Reserve CPUs for OVS-DPDK workloads</a>
-</li>
 </ul>
 </li>
 <li><a href="_extend.html">Extend</a>
@@ -1681,8 +1679,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="validate-cluster-health-after-installation-intro_validate-cluster-health-after-installation.html">Validate cluster health after installation</a>
 </li>
 <li><a href="verify-node-state-after-installation-con_verify-node-state-after-installation.html">Verify node state after installation</a>
-</li>
-<li><a href="validate-telco-configuration-compliance-intro_validate-telco-configuration-compliance.html">Validate telco configuration compliance</a>
 </li>
 <li><a href="network-policy-validation-intro_network-policy-validation.html">Network policy validation</a>
 </li>
@@ -2502,7 +2498,7 @@ spec:
 <p>The cluster status reports the effective policy by using <code>DeviceDiscoveryPolicyStatus</code>, which distinguishes three runtime states:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 955. Effective policy status values</caption>
+<caption class="title">Table 956. Effective policy status values</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 66.6667%;">
@@ -2532,7 +2528,7 @@ spec:
 <p>The following table shows the behavior matrix:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 956. Device discovery behavior by configuration</caption>
+<caption class="title">Table 957. Device discovery behavior by configuration</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -2586,7 +2582,7 @@ spec:
 <p>The discovery policy also controls whether the controller re-queues for periodic device scanning:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 957. Requeue behavior by configuration</caption>
+<caption class="title">Table 958. Requeue behavior by configuration</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -2646,7 +2642,7 @@ spec:
 <p>The following table shows how the device discovery policy feature interacts with other features:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 958. Device discovery policy feature interactions</caption>
+<caption class="title">Table 959. Device discovery policy feature interactions</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 66.6667%;">
@@ -2858,7 +2854,7 @@ spec:
 <p>The <code>LVMCluster</code> CR fields are described in the following table:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 959. <code>LVMCluster</code> CR fields</caption>
+<caption class="title">Table 960. <code>LVMCluster</code> CR fields</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -3328,7 +3324,7 @@ You can modify this field after the LVM cluster has been created.</p>
 <p>The following tables describe the chunk size and volume size limits for static and host configurations:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 960. Tested configuration</caption>
+<caption class="title">Table 961. Tested configuration</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -3351,7 +3347,7 @@ You can modify this field after the LVM cluster has been created.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 961. Theoretical size limits for static configuration</caption>
+<caption class="title">Table 962. Theoretical size limits for static configuration</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -3378,7 +3374,7 @@ You can modify this field after the LVM cluster has been created.</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 962. Theoretical size limits for a host configuration</caption>
+<caption class="title">Table 963. Theoretical size limits for a host configuration</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -4969,7 +4965,7 @@ lvm-block-1   Bound    pvc-e90169a8-fd71-4eea-93b8-817155f60e47   1Gi        RWO
 <p>If you set an empty configuration (storageClassOptions: {}) or omit the field entirely, the Operator uses the following default settings:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 963. StorageClass Options Reference</caption>
+<caption class="title">Table 964. StorageClass Options Reference</caption>
 <colgroup>
 <col style="width: 12.5%;">
 <col style="width: 12.5%;">
@@ -6165,7 +6161,7 @@ spec:
 <p>Use the available RAID configuration parameters to choose the right balance of redundancy, capacity, and performance for your specific use case.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 964. raidConfig fields in LVMCluster CR</caption>
+<caption class="title">Table 965. raidConfig fields in LVMCluster CR</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -6209,7 +6205,7 @@ For RAID10: required with stripes.</p></td>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 965. Supported RAID levels and characteristics</caption>
+<caption class="title">Table 966. Supported RAID levels and characteristics</caption>
 <colgroup>
 <col style="width: 14.2857%;">
 <col style="width: 14.2857%;">
@@ -7080,7 +7076,7 @@ lvm-block-1-clone   Bound    pvc-e90169a8-fd71-4eea-93b8-817155f60e47   1Gi     
 <p>The following table describes the <code>topolvm</code> metrics:</p>
 </div>
 <table class="tableblock frame-all grid-all fit-content">
-<caption class="title">Table 966. <code>topolvm</code> metrics</caption>
+<caption class="title">Table 967. <code>topolvm</code> metrics</caption>
 <colgroup>
 <col>
 <col>
@@ -7142,7 +7138,7 @@ lvm-block-1-clone   Bound    pvc-e90169a8-fd71-4eea-93b8-817155f60e47   1Gi     
 <p>LVM Storage sends the following alerts when the usage of the thin pool and volume group exceeds a certain value:</p>
 </div>
 <table class="tableblock frame-all grid-all fit-content">
-<caption class="title">Table 967. LVM Storage alerts</caption>
+<caption class="title">Table 968. LVM Storage alerts</caption>
 <colgroup>
 <col>
 <col>
@@ -7715,7 +7711,7 @@ vg-manager-an118                      1/1     Running   0             66m</code>
 <p>The following table describes the volume failure error messages:</p>
 </div>
 <table class="tableblock frame-all grid-all fit-content">
-<caption class="title">Table 968. Volume failure error messages</caption>
+<caption class="title">Table 969. Volume failure error messages</caption>
 <colgroup>
 <col>
 <col>
@@ -7936,7 +7932,7 @@ vg-manager-an118                      1/1     Running   0             66m</code>
 <p>The following table compares the support for storage types and filesystems provided by LVM Storage, Local Storage Operator (LSO), and HostPath Provisioner (HPP) to provision local storage:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 969. Comparison of the support for storage types and filesystems</caption>
+<caption class="title">Table 970. Comparison of the support for storage types and filesystems</caption>
 <colgroup>
 <col style="width: 28.5714%;">
 <col style="width: 23.8095%;">
@@ -8140,7 +8136,7 @@ vg-manager-an118                      1/1     Running   0             66m</code>
 <p>The following table compares how LVM Storage, Local Storage Operator (LSO), and HostPath Provisioner (HPP) support core functionalities for provisioning local storage:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 970. Comparison of the support for core functionalities</caption>
+<caption class="title">Table 971. Comparison of the support for core functionalities</caption>
 <colgroup>
 <col style="width: 28.5714%;">
 <col style="width: 23.8095%;">
@@ -8606,7 +8602,7 @@ vg-manager-an118                      1/1     Running   0             66m</code>
 <p>The following table compares the performance and isolation capabilities of LVM Storage, Local Storage Operator (LSO), and HostPath Provisioner (HPP) in provisioning local storage.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 971. Comparison of performance and isolation capabilities</caption>
+<caption class="title">Table 972. Comparison of performance and isolation capabilities</caption>
 <colgroup>
 <col style="width: 21.7391%;">
 <col style="width: 26.0869%;">
@@ -8747,7 +8743,7 @@ vg-manager-an118                      1/1     Running   0             66m</code>
 <p>The following table compares the additional features provided by LVM Storage, Local Storage Operator (LSO), and HostPath Provisioner (HPP) to provision local storage:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 972. Comparison of the support for additional functionalities</caption>
+<caption class="title">Table 973. Comparison of the support for additional functionalities</caption>
 <colgroup>
 <col style="width: 28.5714%;">
 <col style="width: 23.8095%;">
@@ -8965,7 +8961,7 @@ vg-manager-an118                      1/1     Running   0             66m</code>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-30 09:01:02 -0500
+Last updated 2026-10-30 09:47:16 -0500
 </div>
 </div>
 <style>

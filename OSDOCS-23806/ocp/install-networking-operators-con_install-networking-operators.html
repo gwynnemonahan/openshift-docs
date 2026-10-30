@@ -767,8 +767,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="allocate-gpu-resources-to-pods-con_allocate-gpu-resources-to-pods.html">Allocate GPU resources to pods</a>
 </li>
-<li><a href="allocate-gpus-to-pods-with-a-dra-driver-con_allocate-gpus-to-pods-with-a-dra-driver.html">Allocate GPUs to pods with a DRA driver</a>
-</li>
 <li><a href="nodes-cluster-resource-configure_allocate-resources-for-nodes.html">Configure cluster-level overcommit</a>
 </li>
 <li><a href="allow-containers-to-consume-api-objects-con_allow-containers-to-consume-api-objects.html">Allow containers to consume API objects</a>
@@ -844,6 +842,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="machineconfig-garbage-collect-removing_remove-no-longer-used-machine-config-objects.html">Remove unused rendered machine configs</a>
 </li>
 <li><a href="machine-health-checks-resource_review-sample-machinehealthcheck-resource.html">About the MachineHealthCheck custom resource</a>
+</li>
+<li><a href="remote-health-monitoring-overview_remote-health-monitoring.html">Remotely monitor the health of Red&#160;Hat OpenShift Container Platform clusters</a>
 </li>
 <li><a href="nodes-pods-daemonsets-about_run-background-tasks-on-a-node-with-daemonsets.html">Daemon set scheduling</a>
 </li>
@@ -1233,7 +1233,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-ingress-and-routes-con_configure-ingress-and-routes.html">Configure ingress and routes</a>
 </li>
+<li><a href="configure-sr-iov-network-devices-con_configure-sr-iov-network-devices.html">Configure SR-IOV network devices</a>
+</li>
 <li><a href="configure-high-performance-networking-con_configure-high-performance-networking.html">Configure high-performance networking</a>
+</li>
+<li><a href="configure-ptp-clock-synchronization-intro_configure-ptp-clock-synchronization.html">Configure PTP clock synchronization</a>
 </li>
 <li><a href="network-observability-operator_understand-network-observability-netobserv.html">Network Observability Operator</a>
 </li>
@@ -1245,11 +1249,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="restrict-the-api-server-to-private-for-aws-con_restrict-the-api-server-to-private-for-aws.html">Restrict the API server to private for AWS</a>
 </li>
-<li><a href="configure-ptp-clock-synchronization-intro_configure-ptp-clock-synchronization.html">Configure PTP clock synchronization</a>
-</li>
 <li><a href="reconfigure-sno-cluster-networking-intro_reconfigure-sno-cluster-networking.html">Reconfigure single-node OpenShift cluster networking</a>
-</li>
-<li><a href="assign-sriov-networks-to-vrf-intro_assign-sriov-networks-to-vrf.html">Assign SR-IOV networks to a VRF</a>
 </li>
 </ul>
 </li>
@@ -1590,8 +1590,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-node-resource-limits-con_configure-node-resource-limits.html">Configure node resource limits</a>
 </li>
-<li><a href="reserve-cpus-for-ovs-dpdk-workloads-intro_reserve-cpus-for-ovs-dpdk-workloads.html">Reserve CPUs for OVS-DPDK workloads</a>
-</li>
 </ul>
 </li>
 <li><a href="_extend.html">Extend</a>
@@ -1681,8 +1679,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="validate-cluster-health-after-installation-intro_validate-cluster-health-after-installation.html">Validate cluster health after installation</a>
 </li>
 <li><a href="verify-node-state-after-installation-con_verify-node-state-after-installation.html">Verify node state after installation</a>
-</li>
-<li><a href="validate-telco-configuration-compliance-intro_validate-telco-configuration-compliance.html">Validate telco configuration compliance</a>
 </li>
 <li><a href="network-policy-validation-intro_network-policy-validation.html">Network policy validation</a>
 </li>
@@ -1875,7 +1871,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#metallb-installing-using-web-console_install-networking-operators">Install the MetalLB Operator from the software catalog by using the web console</a></li><li class="level-4"><a href="#nw-metallb-installing-operator-cli_install-networking-operators">Install from the software catalog using the CLI</a></li><li class="level-4"><a href="#nw-metallb-operator-initial-config_install-networking-operators">Start MetalLB on your cluster</a></li><li class="level-4"><a href="#nw-metallb-operator-deployment-specifications-for-metallb_install-networking-operators">Deployment specifications for MetalLB</a></li><li class="level-5"><a href="#nw-metallb-operator-limit-speaker-to-nodes_install-networking-operators">Limit speaker pods to specific nodes</a></li><li class="level-5"><a href="#nw-metallb-operator-setting-pod-priority-affinity_install-networking-operators">Configuring pod priority and pod affinity in a MetalLB deployment</a></li><li class="level-5"><a href="#nw-metallb-operator-setting-pod-CPU-limits_install-networking-operators">Configuring pod CPU limits in a MetalLB deployment</a></li><li class="level-4"><a href="#nw-installing-external-dns-operator_install-networking-operators">Install the External DNS Operator with the Software Catalog</a></li><li class="level-4"><a href="#nw-installing-external-dns-operator-cli_install-networking-operators">Install the External DNS Operator by using the CLI</a></li><li class="level-4"><a href="#nw-installing-aws-load-balancer-operator_install-networking-operators">Install the AWS Load Balancer Operator by using the web console</a></li><li class="level-4"><a href="#nw-installing-aws-load-balancer-operator-cli_install-networking-operators">Install the AWS Load Balancer Operator by using the CLI</a></li><li class="level-5"><a href="#installing-the-kubernetes-nmstate-operator-web-console_install-networking-operators">Install the Kubernetes NMState Operator by using the web console</a></li><li class="level-5"><a href="#installing-the-kubernetes-nmstate-operator-CLI_install-networking-operators">Install the Kubernetes NMState Operator by using the CLI</a></li><li class="level-4"><a href="#network-observability-operator-uninstall_install-networking-operators">Uninstall the Network Observability Operator</a></li><li class="level-5"><a href="#k8s-nmstate-uninstall-operator_install-networking-operators">Uninstalling the Kubernetes NMState Operator</a></li><li class="level-4"><a href="#install-sr-iov-network-operator-con_install-sr-iov-network-operator">Install the SR-IOV Network Operator</a></li><li class="level-5"><a href="#install-operator-cli_install-sr-iov-network-operator">Use the CLI to install the SR-IOV Network Operator</a></li><li class="level-5"><a href="#nw-sriov-installing-operator-web-console_install-sr-iov-network-operator">Use the web console to install the SR-IOV Network Operator</a></li><li class="level-5"><a href="#nw-sriov-operator-uninstall_install-sr-iov-network-operator">Uninstall the SR-IOV Network Operator</a></li><li class="level-5"><a href="#nw-sriov-configuring-operator_install-sr-iov-network-operator">Configure the SR-IOV Network Operator</a></li><li class="level-5"><a href="#nw-sriov-operator-cr_install-sr-iov-network-operator">SR-IOV Network Operator config custom resource</a></li><li class="level-5"><a href="#nw-sriov-about-k8s-conditions_install-sr-iov-network-operator">About Ready conditions for the SR-IOV Network Operator</a></li><li class="level-5"><a href="#nw-sriov-monitoring-conditions-proc_install-sr-iov-network-operator">Check SR-IOV Network Operator status with Ready conditions</a></li><li class="level-5"><a href="#about-network-resource-injector_install-sr-iov-network-operator">About the Network Resources Injector</a></li><li class="level-5"><a href="#disable-enable-network-resource-injector_install-sr-iov-network-operator">Disable or enable the Network Resources Injector</a></li><li class="level-5"><a href="#about-sr-iov-operator-admission-control-webhook_install-sr-iov-network-operator">About the SR-IOV Network Operator admission controller webhook</a></li><li class="level-5"><a href="#disable-enable-sr-iov-operator-admission-control-webhook_install-sr-iov-network-operator">Disable or enable the SR-IOV Network Operator admission controller webhook</a></li><li class="level-5"><a href="#configuring-custom-nodeselector_install-sr-iov-network-operator">Configure a custom NodeSelector for the SR-IOV Network Config daemon</a></li><li class="level-5"><a href="#configure-sr-iov-operator-single-node_install-sr-iov-network-operator">Configure the SR-IOV Network Operator for single node installations</a></li><li class="level-6"><a href="#sriov-operator-hosted-control-planes_install-sr-iov-network-operator">Deploy the SR-IOV Operator for hosted control planes</a></li><li class="level-5"><a href="#sriov-network-metrics-exporter_install-sr-iov-network-operator">About the SR-IOV network metrics exporter</a></li><li class="level-6"><a href="#sriov-operator-metrics_install-sr-iov-network-operator">Enable the SR-IOV network metrics exporter</a></li><li class="level-4"><a href="#install-ebpf-manager-operator-con_install-ebpf-manager-operator">Install the eBPF Manager Operator</a></li><li class="level-5"><a href="#nw-bpfman-operator-installing-cli_install-ebpf-manager-operator">Install the eBPF Manager Operator using the CLI</a></li><li class="level-5"><a href="#nw-bpfman-operator-installing-console_install-ebpf-manager-operator">Install the eBPF Manager Operator using the web console</a></li><li class="level-5"><a href="#nw-bpfman-operator-deploy_install-ebpf-manager-operator">Deploy a containerized eBPF program</a></li><li class="level-4"><a href="#install-ingress-node-firewall-operator-con_install-ingress-node-firewall-operator">Install the Ingress Node Firewall Operator</a></li><li class="level-5"><a href="#nw-infw-operator-cr_install-ingress-node-firewall-operator">Ingress Node Firewall Operator</a></li><li class="level-5"><a href="#installing-infw-operator_install-ingress-node-firewall-operator">Install the Ingress Node Firewall Operator</a></li><li class="level-5"><a href="#install-operator-web-console_install-ingress-node-firewall-operator">Install the Ingress Node Firewall Operator using the web console</a></li><li class="level-5"><a href="#nw-infw-operator-deploying_install-ingress-node-firewall-operator">Deploy Ingress Node Firewall Operator</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#metallb-installing-using-web-console_install-networking-operators">Install the MetalLB Operator from the software catalog by using the web console</a></li><li class="level-4"><a href="#nw-metallb-installing-operator-cli_install-networking-operators">Install from the software catalog using the CLI</a></li><li class="level-4"><a href="#nw-metallb-operator-initial-config_install-networking-operators">Start MetalLB on your cluster</a></li><li class="level-4"><a href="#nw-metallb-operator-deployment-specifications-for-metallb_install-networking-operators">Deployment specifications for MetalLB</a></li><li class="level-5"><a href="#nw-metallb-operator-limit-speaker-to-nodes_install-networking-operators">Limit speaker pods to specific nodes</a></li><li class="level-5"><a href="#nw-metallb-operator-setting-pod-priority-affinity_install-networking-operators">Configuring pod priority and pod affinity in a MetalLB deployment</a></li><li class="level-5"><a href="#nw-metallb-operator-setting-pod-CPU-limits_install-networking-operators">Configuring pod CPU limits in a MetalLB deployment</a></li><li class="level-4"><a href="#nw-installing-external-dns-operator_install-networking-operators">Install the External DNS Operator with the Software Catalog</a></li><li class="level-4"><a href="#nw-installing-external-dns-operator-cli_install-networking-operators">Install the External DNS Operator by using the CLI</a></li><li class="level-4"><a href="#nw-installing-aws-load-balancer-operator_install-networking-operators">Install the AWS Load Balancer Operator by using the web console</a></li><li class="level-4"><a href="#nw-installing-aws-load-balancer-operator-cli_install-networking-operators">Install the AWS Load Balancer Operator by using the CLI</a></li><li class="level-5"><a href="#installing-the-kubernetes-nmstate-operator-web-console_install-networking-operators">Install the Kubernetes NMState Operator by using the web console</a></li><li class="level-5"><a href="#installing-the-kubernetes-nmstate-operator-CLI_install-networking-operators">Install the Kubernetes NMState Operator by using the CLI</a></li><li class="level-4"><a href="#network-observability-operator-uninstall_install-networking-operators">Uninstall the Network Observability Operator</a></li><li class="level-5"><a href="#k8s-nmstate-uninstall-operator_install-networking-operators">Uninstalling the Kubernetes NMState Operator</a></li><li class="level-4"><a href="#install-sr-iov-network-operator-con_install-sr-iov-network-operator">Install the SR-IOV Network Operator</a></li><li class="level-5"><a href="#install-operator-cli_install-sr-iov-network-operator">Use the CLI to install the SR-IOV Network Operator</a></li><li class="level-5"><a href="#nw-sriov-installing-operator-web-console_install-sr-iov-network-operator">Use the web console to install the SR-IOV Network Operator</a></li><li class="level-5"><a href="#nw-sriov-operator-uninstall_install-sr-iov-network-operator">Uninstall the SR-IOV Network Operator</a></li><li class="level-5"><a href="#nw-sriov-configuring-operator_install-sr-iov-network-operator">Configure the SR-IOV Network Operator</a></li><li class="level-5"><a href="#nw-sriov-operator-cr_install-sr-iov-network-operator">SR-IOV Network Operator config custom resource</a></li><li class="level-5"><a href="#nw-sriov-about-k8s-conditions_install-sr-iov-network-operator">About Ready conditions for the SR-IOV Network Operator</a></li><li class="level-5"><a href="#nw-sriov-monitoring-conditions-proc_install-sr-iov-network-operator">Check SR-IOV Network Operator status with Ready conditions</a></li><li class="level-4"><a href="#tune-sr-iov-network-operator-components-intro_tune-sr-iov-network-operator-components">Tune SR-IOV Network Operator components</a></li><li class="level-5"><a href="#about-network-resource-injector_tune-sr-iov-network-operator-components">About the Network Resources Injector</a></li><li class="level-5"><a href="#disable-enable-network-resource-injector_tune-sr-iov-network-operator-components">Disable or enable the Network Resources Injector</a></li><li class="level-5"><a href="#about-sr-iov-operator-admission-control-webhook_tune-sr-iov-network-operator-components">About the SR-IOV Network Operator admission controller webhook</a></li><li class="level-5"><a href="#disable-enable-sr-iov-operator-admission-control-webhook_tune-sr-iov-network-operator-components">Disable or enable the SR-IOV Network Operator admission controller webhook</a></li><li class="level-5"><a href="#configuring-custom-nodeselector_tune-sr-iov-network-operator-components">Configure a custom NodeSelector for the SR-IOV Network Config daemon</a></li><li class="level-5"><a href="#configure-sr-iov-operator-single-node_tune-sr-iov-network-operator-components">Configure the SR-IOV Network Operator for single node installations</a></li><li class="level-6"><a href="#sriov-operator-hosted-control-planes_tune-sr-iov-network-operator-components">Deploy the SR-IOV Operator for hosted control planes</a></li><li class="level-5"><a href="#sriov-network-metrics-exporter_tune-sr-iov-network-operator-components">About the SR-IOV network metrics exporter</a></li><li class="level-6"><a href="#sriov-operator-metrics_tune-sr-iov-network-operator-components">Enable the SR-IOV network metrics exporter</a></li><li class="level-4"><a href="#install-ebpf-manager-operator-con_install-ebpf-manager-operator">Install the eBPF Manager Operator</a></li><li class="level-5"><a href="#nw-bpfman-operator-installing-cli_install-ebpf-manager-operator">Install the eBPF Manager Operator using the CLI</a></li><li class="level-5"><a href="#nw-bpfman-operator-installing-console_install-ebpf-manager-operator">Install the eBPF Manager Operator using the web console</a></li><li class="level-5"><a href="#nw-bpfman-operator-deploy_install-ebpf-manager-operator">Deploy a containerized eBPF program</a></li><li class="level-4"><a href="#install-ingress-node-firewall-operator-con_install-ingress-node-firewall-operator">Install the Ingress Node Firewall Operator</a></li><li class="level-5"><a href="#nw-infw-operator-cr_install-ingress-node-firewall-operator">Ingress Node Firewall Operator</a></li><li class="level-5"><a href="#installing-infw-operator_install-ingress-node-firewall-operator">Install the Ingress Node Firewall Operator</a></li><li class="level-5"><a href="#install-operator-web-console_install-ingress-node-firewall-operator">Install the Ingress Node Firewall Operator using the web console</a></li><li class="level-5"><a href="#nw-infw-operator-deploying_install-ingress-node-firewall-operator">Deploy Ingress Node Firewall Operator</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="install-networking-operators-con_install-networking-operators">Install networking Operators</h3>
@@ -3851,7 +3847,7 @@ spec:
 <p>The following table describes the <code>sriovoperatorconfig</code> CR fields:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 827. SR-IOV Network Operator config custom resource</caption>
+<caption class="title">Table 829. SR-IOV Network Operator config custom resource</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -4036,7 +4032,7 @@ spec:
 <p>The following table describes the possible <code>Ready</code> condition values for each object.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 828. SR-IOV Network Operator Ready condition</caption>
+<caption class="title">Table 830. SR-IOV Network Operator Ready condition</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 37.5%;">
@@ -4140,7 +4136,7 @@ spec:
 <p>When the <code>Ready</code> condition is <code>False</code>, the condition <code>reason</code> and <code>message</code> fields identify the failure. The following reasons are commonly reported:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 829. Common Ready condition reasons</caption>
+<caption class="title">Table 831. Common Ready condition reasons</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 37.5%;">
@@ -4381,8 +4377,24 @@ default   1d    True</code></pre>
 </ul>
 </div>
 </div>
+</div>
+<div class="sect3">
+<h4 id="tune-sr-iov-network-operator-components-intro_tune-sr-iov-network-operator-components">Tune SR-IOV Network Operator components</h4>
+<div class="paragraph _abstract">
+<p>You can adjust the SR-IOV Network Operator components that control how pods interact with SR-IOV resources.
+These components include the network resource injector, the admission control webhook, and the operator&#8217;s deployment scope and metrics.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>The SR-IOV Network Operator is installed.
+Complete the "Install the SR-IOV Network Operator" section of this job.</p>
+</li>
+</ul>
+</div>
 <div class="sect4">
-<h5 id="about-network-resource-injector_install-sr-iov-network-operator">About the Network Resources Injector</h5>
+<h5 id="about-network-resource-injector_tune-sr-iov-network-operator-components">About the Network Resources Injector</h5>
 <div class="paragraph _abstract">
 <p>You can use the Network Resources Injector, a Kubernetes Dynamic Admission Controller application, to mutate resource requests and limits in a pod specification and mutate a pod specification with a Downward API volume.</p>
 </div>
@@ -4445,7 +4457,7 @@ spec:
 </div>
 </div>
 <div class="sect4">
-<h5 id="disable-enable-network-resource-injector_install-sr-iov-network-operator">Disable or enable the Network Resources Injector</h5>
+<h5 id="disable-enable-network-resource-injector_tune-sr-iov-network-operator-components">Disable or enable the Network Resources Injector</h5>
 <div class="paragraph _abstract">
 <p>To control the automatic configuration of your cluster workloads, enable or disable the Network Resources Injector.</p>
 </div>
@@ -4506,7 +4518,7 @@ spec:
 </div>
 </div>
 <div class="sect4">
-<h5 id="about-sr-iov-operator-admission-control-webhook_install-sr-iov-network-operator">About the SR-IOV Network Operator admission controller webhook</h5>
+<h5 id="about-sr-iov-operator-admission-control-webhook_tune-sr-iov-network-operator-components">About the SR-IOV Network Operator admission controller webhook</h5>
 <div class="paragraph _abstract">
 <p>You can use the SR-IOV Network Operator Admission Controller webhook to mutate or validate the <code>SriovNetworkNodePolicy</code> CR.</p>
 </div>
@@ -4556,7 +4568,7 @@ operator-webhook-rpfrl                    1/1     Running   0          16m</code
 </div>
 </div>
 <div class="sect4">
-<h5 id="disable-enable-sr-iov-operator-admission-control-webhook_install-sr-iov-network-operator">Disable or enable the SR-IOV Network Operator admission controller webhook</h5>
+<h5 id="disable-enable-sr-iov-operator-admission-control-webhook_tune-sr-iov-network-operator-components">Disable or enable the SR-IOV Network Operator admission controller webhook</h5>
 <div class="paragraph _abstract">
 <p>To manage validation of your network configurations, enable or disable the SR-IOV Network Operator admission controller webhook.</p>
 </div>
@@ -4617,7 +4629,7 @@ spec:
 </div>
 </div>
 <div class="sect4">
-<h5 id="configuring-custom-nodeselector_install-sr-iov-network-operator">Configure a custom NodeSelector for the SR-IOV Network Config daemon</h5>
+<h5 id="configuring-custom-nodeselector_tune-sr-iov-network-operator-components">Configure a custom NodeSelector for the SR-IOV Network Config daemon</h5>
 <div class="paragraph _abstract">
 <p>The SR-IOV Network Config daemon discovers and configures the SR-IOV network devices on cluster nodes. By default, the daemon is deployed to all the compute nodes in the cluster. You can use node labels to specify on which nodes the SR-IOV Network Config daemon runs.</p>
 </div>
@@ -4688,7 +4700,7 @@ spec:
 </div>
 </div>
 <div class="sect4">
-<h5 id="configure-sr-iov-operator-single-node_install-sr-iov-network-operator">Configure the SR-IOV Network Operator for single node installations</h5>
+<h5 id="configure-sr-iov-operator-single-node_tune-sr-iov-network-operator-components">Configure the SR-IOV Network Operator for single node installations</h5>
 <div class="paragraph _abstract">
 <p>By default, the SR-IOV Network Operator drains workloads from a node before every policy change.</p>
 </div>
@@ -4768,7 +4780,7 @@ spec:
 </ul>
 </div>
 <div class="sect5">
-<h6 id="sriov-operator-hosted-control-planes_install-sr-iov-network-operator">Deploy the SR-IOV Operator for hosted control planes</h6>
+<h6 id="sriov-operator-hosted-control-planes_tune-sr-iov-network-operator-components">Deploy the SR-IOV Operator for hosted control planes</h6>
 <div class="paragraph _abstract">
 <p>After you configure and deploy your hosting service cluster, you can create a subscription to the SR-IOV Operator on a hosted cluster. The SR-IOV pod runs on worker machines rather than the control plane.</p>
 </div>
@@ -4852,7 +4864,7 @@ sriov-network-operator.{product-version}.0-202211021237   SR-IOV Network Operato
 </div>
 </div>
 <div class="sect4">
-<h5 id="sriov-network-metrics-exporter_install-sr-iov-network-operator">About the SR-IOV network metrics exporter</h5>
+<h5 id="sriov-network-metrics-exporter_tune-sr-iov-network-operator-components">About the SR-IOV network metrics exporter</h5>
 <div class="paragraph _abstract">
 <p>The SR-IOV network metrics exporter reads metrics for SR-IOV virtual functions (VFs) and exposes them in Prometheus format. You can query these metrics by using the Red&#160;Hat OpenShift Container Platform web console to monitor SR-IOV pod networking activity.</p>
 </div>
@@ -4863,7 +4875,7 @@ sriov-network-operator.{product-version}.0-202211021237   SR-IOV Network Operato
 <p>The following table describes the SR-IOV VF metrics that the metrics exporter reads and exposes in Prometheus format:</p>
 </div>
 <table class="tableblock frame-all grid-all fit-content">
-<caption class="title">Table 830. SR-IOV VF metrics</caption>
+<caption class="title">Table 832. SR-IOV VF metrics</caption>
 <colgroup>
 <col>
 <col>
@@ -4933,7 +4945,7 @@ sriov-network-operator.{product-version}.0-202211021237   SR-IOV Network Operato
 </div>
 </div>
 <div class="sect5">
-<h6 id="sriov-operator-metrics_install-sr-iov-network-operator">Enable the SR-IOV network metrics exporter</h6>
+<h6 id="sriov-operator-metrics_tune-sr-iov-network-operator-components">Enable the SR-IOV network metrics exporter</h6>
 <div class="paragraph _abstract">
 <p>To enable the SR-IOV network metrics exporter, set the <code>spec.featureGates.metricsExporter</code> field to <code>true</code>. Because the exporter is disabled by default, you must explicitly enable the SR-IOV network metrics exporter.</p>
 </div>
@@ -5623,7 +5635,7 @@ If the installation later succeeds with an <strong>InstallSucceeded</strong> mes
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-30 09:01:02 -0500
+Last updated 2026-10-30 09:47:16 -0500
 </div>
 </div>
 <style>

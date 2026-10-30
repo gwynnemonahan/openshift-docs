@@ -766,8 +766,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="allocate-gpu-resources-to-pods-con_allocate-gpu-resources-to-pods.html">Allocate GPU resources to pods</a>
 </li>
-<li><a href="allocate-gpus-to-pods-with-a-dra-driver-con_allocate-gpus-to-pods-with-a-dra-driver.html">Allocate GPUs to pods with a DRA driver</a>
-</li>
 <li><a href="nodes-cluster-resource-configure_allocate-resources-for-nodes.html">Configure cluster-level overcommit</a>
 </li>
 <li><a href="allow-containers-to-consume-api-objects-con_allow-containers-to-consume-api-objects.html">Allow containers to consume API objects</a>
@@ -843,6 +841,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="machineconfig-garbage-collect-removing_remove-no-longer-used-machine-config-objects.html">Remove unused rendered machine configs</a>
 </li>
 <li><a href="machine-health-checks-resource_review-sample-machinehealthcheck-resource.html">About the MachineHealthCheck custom resource</a>
+</li>
+<li><a href="remote-health-monitoring-overview_remote-health-monitoring.html">Remotely monitor the health of Red&#160;Hat OpenShift Container Platform clusters</a>
 </li>
 <li><a href="nodes-pods-daemonsets-about_run-background-tasks-on-a-node-with-daemonsets.html">Daemon set scheduling</a>
 </li>
@@ -1233,7 +1233,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-ingress-and-routes-con_configure-ingress-and-routes.html">Configure ingress and routes</a>
 </li>
+<li><a href="configure-sr-iov-network-devices-con_configure-sr-iov-network-devices.html">Configure SR-IOV network devices</a>
+</li>
 <li><a href="configure-high-performance-networking-con_configure-high-performance-networking.html">Configure high-performance networking</a>
+</li>
+<li><a href="configure-ptp-clock-synchronization-intro_configure-ptp-clock-synchronization.html">Configure PTP clock synchronization</a>
 </li>
 <li><a href="network-observability-operator_understand-network-observability-netobserv.html">Network Observability Operator</a>
 </li>
@@ -1245,11 +1249,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="restrict-the-api-server-to-private-for-aws-con_restrict-the-api-server-to-private-for-aws.html">Restrict the API server to private for AWS</a>
 </li>
-<li><a href="configure-ptp-clock-synchronization-intro_configure-ptp-clock-synchronization.html">Configure PTP clock synchronization</a>
-</li>
 <li><a href="reconfigure-sno-cluster-networking-intro_reconfigure-sno-cluster-networking.html">Reconfigure single-node OpenShift cluster networking</a>
-</li>
-<li><a href="assign-sriov-networks-to-vrf-intro_assign-sriov-networks-to-vrf.html">Assign SR-IOV networks to a VRF</a>
 </li>
 </ul>
 </li>
@@ -1590,8 +1590,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-node-resource-limits-con_configure-node-resource-limits.html">Configure node resource limits</a>
 </li>
-<li><a href="reserve-cpus-for-ovs-dpdk-workloads-intro_reserve-cpus-for-ovs-dpdk-workloads.html">Reserve CPUs for OVS-DPDK workloads</a>
-</li>
 </ul>
 </li>
 <li><a href="_extend.html">Extend</a>
@@ -1681,8 +1679,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="validate-cluster-health-after-installation-intro_validate-cluster-health-after-installation.html">Validate cluster health after installation</a>
 </li>
 <li><a href="verify-node-state-after-installation-con_verify-node-state-after-installation.html">Verify node state after installation</a>
-</li>
-<li><a href="validate-telco-configuration-compliance-intro_validate-telco-configuration-compliance.html">Validate telco configuration compliance</a>
 </li>
 <li><a href="network-policy-validation-intro_network-policy-validation.html">Network policy validation</a>
 </li>
@@ -1875,7 +1871,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#telco-hub-architecture-overview_plan-telco-hub-cluster-deployment">Hub cluster architecture overview</a></li><li class="level-4"><a href="#telco-hub-telco-management-cluster-use-model_plan-telco-hub-cluster-deployment">Telco management hub cluster use model</a></li><li class="level-4"><a href="#telco-hub-cluster-topology_plan-telco-hub-cluster-deployment">Hub cluster topology</a></li><li class="level-4"><a href="#review-telco-hub-reference-design-specification-con_review-telco-hub-reference-design-specification">Review the telco hub reference design specification</a></li><li class="level-5"><a href="#telco-ran-core-ref-design-spec_review-telco-hub-reference-design-specification">Reference design scope</a></li><li class="level-5"><a href="#telco-deviations-from-the-ref-design_review-telco-hub-reference-design-specification">Deviations from the reference design</a></li><li class="level-5"><a href="#telco-hub-scaling-targets_review-telco-hub-reference-design-specification">Hub cluster scaling target</a></li><li class="level-5"><a href="#telco-hub-resource-utilization_review-telco-hub-reference-design-specification">Hub cluster resource utilization</a></li><li class="level-5"><a href="#telco-hub-memory-and-cpu-requirements_review-telco-hub-reference-design-specification">Hub cluster memory and CPU requirements</a></li><li class="level-5"><a href="#telco-hub-storage-requirements_review-telco-hub-reference-design-specification">Hub cluster storage requirements</a></li><li class="level-6"><a href="#telco-hub-assisted-service_review-telco-hub-reference-design-specification">Assisted Service</a></li><li class="level-6"><a href="#telco-hub-acm-observability_review-telco-hub-reference-design-specification">RHACM Observability</a></li><li class="level-6"><a href="#telco-hub-storage-considerations_review-telco-hub-reference-design-specification">Storage considerations</a></li><li class="level-5"><a href="#telco-hub-networking_review-telco-hub-reference-design-specification">Hub cluster networking</a></li><li class="level-5"><a href="#telco-hub-git-repository_review-telco-hub-reference-design-specification">Git repository</a></li><li class="level-5"><a href="#telco-hub-hub-cluster-openshift-deployment_review-telco-hub-reference-design-specification">Red Hat OpenShift Container Platform installation on the hub cluster</a></li><li class="level-5"><a href="#telco-hub-hub-cluster-day-2-operators_review-telco-hub-reference-design-specification">Day 2 Operators in the hub cluster</a></li><li class="level-5"><a href="#telco-hub-observability_review-telco-hub-reference-design-specification">Observability</a></li><li class="level-5"><a href="#telco-hub-managed-clusters-lifecycle-management_review-telco-hub-reference-design-specification">Managed cluster lifecycle management</a></li><li class="level-6"><a href="#telco-hub-managed-cluster-deployment_review-telco-hub-reference-design-specification">Managed cluster deployment</a></li><li class="level-6"><a href="#telco-hub-managed-cluster-updates-and-upgrades_review-telco-hub-reference-design-specification">Managed cluster updates</a></li><li class="level-6"><a href="#telco-hub-hub-disaster-recovery_review-telco-hub-reference-design-specification">Hub cluster disaster recovery</a></li><li class="level-5"><a href="#telco-hub-hub-components_review-telco-hub-reference-design-specification">Hub cluster components</a></li><li class="level-6"><a href="#telco-hub-red-hat-advanced-cluster-management-rhacm_review-telco-hub-reference-design-specification">Red Hat Advanced Cluster Management (RHACM)</a></li><li class="level-6"><a href="#telco-hub-topology-aware-lifecycle-manager-talm_review-telco-hub-reference-design-specification">Topology Aware Lifecycle Manager</a></li><li class="level-6"><a href="#telco-hub-gitops-operator-and-ztp-plugins_review-telco-hub-reference-design-specification">GitOps Operator and GitOps ZTP</a></li><li class="level-6"><a href="#telco-hub-local-storage-operator_review-telco-hub-reference-design-specification">Local Storage Operator</a></li><li class="level-6"><a href="#telco-hub-openshift-data-foundation_review-telco-hub-reference-design-specification">Red Hat OpenShift Data Foundation</a></li><li class="level-6"><a href="#telco-hub-logging_review-telco-hub-reference-design-specification">Logging</a></li><li class="level-6"><a href="#telco-hub-oadp-operator_review-telco-hub-reference-design-specification">OpenShift API for Data Protection</a></li><li class="level-6"><a href="#telco-hub-cert-manager-operator_review-telco-hub-reference-design-specification">cert-manager Operator</a></li><li class="level-5"><a href="#telco-hub-rds-container_review-telco-hub-reference-design-specification">Extracting the telco hub reference design configuration CRs</a></li><li class="level-5"><a href="#using-cluster-compare-telco_hub_review-telco-hub-reference-design-specification">Comparing a cluster with the {rds} reference configuration</a></li><li class="level-5"><a href="#hub-cluster-ref-config-crs_review-telco-hub-reference-design-specification">Hub cluster reference configuration CRs</a></li><li class="level-6"><a href="#advanced-cluster-management-crs_review-telco-hub-reference-design-specification">Red Hat Advanced Cluster Management (RHACM) CRs</a></li><li class="level-6"><a href="#storage-crs_review-telco-hub-reference-design-specification">Storage reference CRs</a></li><li class="level-6"><a href="#gitops-ztp-crs_review-telco-hub-reference-design-specification">GitOps Zero Touch Provisioning (ZTP) reference CRs</a></li><li class="level-6"><a href="#logging-crs_review-telco-hub-reference-design-specification">Logging reference CRs</a></li><li class="level-6"><a href="#container-registry-crs_review-telco-hub-reference-design-specification">Container registry reference CRs</a></li><li class="level-6"><a href="#image-mirroring-crs_review-telco-hub-reference-design-specification">Image mirroring reference CRs</a></li><li class="level-6"><a href="#installation-crs_review-telco-hub-reference-design-specification">Installation reference CRs</a></li><li class="level-6"><a href="#security-crs_review-telco-hub-reference-design-specification">Security reference CRs</a></li><li class="level-6"><a href="#backup-recovery-crs_review-telco-hub-reference-design-specification">Backup Recovery reference CRs</a></li><li class="level-5"><a href="#telco-hub-software-stack_review-telco-hub-reference-design-specification">Telco hub reference configuration software specifications</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#telco-hub-architecture-overview_plan-telco-hub-cluster-deployment">Review how the hub cluster manages the fleet</a></li><li class="level-4"><a href="#telco-hub-telco-management-cluster-use-model_plan-telco-hub-cluster-deployment">Review the services the hub cluster provides</a></li><li class="level-4"><a href="#telco-hub-cluster-topology_plan-telco-hub-cluster-deployment">Plan the hub cluster node layout</a></li><li class="level-4"><a href="#review-telco-hub-reference-design-specification-con_review-telco-hub-reference-design-specification">Review the telco hub reference design specification</a></li><li class="level-5"><a href="#telco-ran-core-ref-design-spec_review-telco-hub-reference-design-specification">Reference design scope</a></li><li class="level-5"><a href="#telco-deviations-from-the-ref-design_review-telco-hub-reference-design-specification">Deviations from the reference design</a></li><li class="level-5"><a href="#telco-hub-scaling-targets_review-telco-hub-reference-design-specification">Hub cluster scaling target</a></li><li class="level-5"><a href="#telco-hub-resource-utilization_review-telco-hub-reference-design-specification">Hub cluster resource utilization</a></li><li class="level-5"><a href="#telco-hub-memory-and-cpu-requirements_review-telco-hub-reference-design-specification">Hub cluster memory and CPU requirements</a></li><li class="level-5"><a href="#telco-hub-storage-requirements_review-telco-hub-reference-design-specification">Hub cluster storage requirements</a></li><li class="level-6"><a href="#telco-hub-assisted-service_review-telco-hub-reference-design-specification">Assisted Service</a></li><li class="level-6"><a href="#telco-hub-acm-observability_review-telco-hub-reference-design-specification">RHACM Observability</a></li><li class="level-6"><a href="#telco-hub-storage-considerations_review-telco-hub-reference-design-specification">Storage considerations</a></li><li class="level-5"><a href="#telco-hub-networking_review-telco-hub-reference-design-specification">Hub cluster networking</a></li><li class="level-5"><a href="#telco-hub-git-repository_review-telco-hub-reference-design-specification">Git repository</a></li><li class="level-5"><a href="#telco-hub-hub-cluster-openshift-deployment_review-telco-hub-reference-design-specification">Red Hat OpenShift Container Platform installation on the hub cluster</a></li><li class="level-5"><a href="#telco-hub-hub-cluster-day-2-operators_review-telco-hub-reference-design-specification">Day 2 Operators in the hub cluster</a></li><li class="level-5"><a href="#telco-hub-observability_review-telco-hub-reference-design-specification">Observability</a></li><li class="level-5"><a href="#telco-hub-managed-clusters-lifecycle-management_review-telco-hub-reference-design-specification">Managed cluster lifecycle management</a></li><li class="level-6"><a href="#telco-hub-managed-cluster-deployment_review-telco-hub-reference-design-specification">Managed cluster deployment</a></li><li class="level-6"><a href="#telco-hub-managed-cluster-updates-and-upgrades_review-telco-hub-reference-design-specification">Managed cluster updates</a></li><li class="level-6"><a href="#telco-hub-hub-disaster-recovery_review-telco-hub-reference-design-specification">Hub cluster disaster recovery</a></li><li class="level-5"><a href="#telco-hub-hub-components_review-telco-hub-reference-design-specification">Hub cluster components</a></li><li class="level-6"><a href="#telco-hub-red-hat-advanced-cluster-management-rhacm_review-telco-hub-reference-design-specification">Red Hat Advanced Cluster Management (RHACM)</a></li><li class="level-6"><a href="#telco-hub-topology-aware-lifecycle-manager-talm_review-telco-hub-reference-design-specification">Topology Aware Lifecycle Manager</a></li><li class="level-6"><a href="#telco-hub-gitops-operator-and-ztp-plugins_review-telco-hub-reference-design-specification">GitOps Operator and GitOps ZTP</a></li><li class="level-6"><a href="#telco-hub-local-storage-operator_review-telco-hub-reference-design-specification">Local Storage Operator</a></li><li class="level-6"><a href="#telco-hub-openshift-data-foundation_review-telco-hub-reference-design-specification">Red Hat OpenShift Data Foundation</a></li><li class="level-6"><a href="#telco-hub-logging_review-telco-hub-reference-design-specification">Logging</a></li><li class="level-6"><a href="#telco-hub-oadp-operator_review-telco-hub-reference-design-specification">OpenShift API for Data Protection</a></li><li class="level-6"><a href="#telco-hub-cert-manager-operator_review-telco-hub-reference-design-specification">cert-manager Operator</a></li><li class="level-5"><a href="#telco-hub-rds-container_review-telco-hub-reference-design-specification">Extracting the telco hub reference design configuration CRs</a></li><li class="level-5"><a href="#using-cluster-compare-telco_hub_review-telco-hub-reference-design-specification">Comparing a cluster with the telco hub reference configuration</a></li><li class="level-5"><a href="#hub-cluster-ref-config-crs_review-telco-hub-reference-design-specification">Hub cluster reference configuration CRs</a></li><li class="level-6"><a href="#advanced-cluster-management-crs_review-telco-hub-reference-design-specification">Red Hat Advanced Cluster Management (RHACM) CRs</a></li><li class="level-6"><a href="#storage-crs_review-telco-hub-reference-design-specification">Storage reference CRs</a></li><li class="level-6"><a href="#gitops-ztp-crs_review-telco-hub-reference-design-specification">GitOps Zero Touch Provisioning (ZTP) reference CRs</a></li><li class="level-6"><a href="#logging-crs_review-telco-hub-reference-design-specification">Logging reference CRs</a></li><li class="level-6"><a href="#container-registry-crs_review-telco-hub-reference-design-specification">Container registry reference CRs</a></li><li class="level-6"><a href="#image-mirroring-crs_review-telco-hub-reference-design-specification">Image mirroring reference CRs</a></li><li class="level-6"><a href="#installation-crs_review-telco-hub-reference-design-specification">Installation reference CRs</a></li><li class="level-6"><a href="#security-crs_review-telco-hub-reference-design-specification">Security reference CRs</a></li><li class="level-6"><a href="#backup-recovery-crs_review-telco-hub-reference-design-specification">Backup Recovery reference CRs</a></li><li class="level-5"><a href="#telco-hub-software-stack_review-telco-hub-reference-design-specification">Telco hub reference configuration software specifications</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="plan-telco-hub-cluster-deployment-intro_plan-telco-hub-cluster-deployment">Plan telco hub cluster deployment</h3>
@@ -1883,7 +1879,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>You can plan the architecture and resource requirements for a hub cluster that manages your fleet of telco workload clusters.</p>
 </div>
 <div class="sect3">
-<h4 id="telco-hub-architecture-overview_plan-telco-hub-cluster-deployment">Hub cluster architecture overview</h4>
+<h4 id="telco-hub-architecture-overview_plan-telco-hub-cluster-deployment">Review how the hub cluster manages the fleet</h4>
 <div class="paragraph _abstract">
 <p>Use the features and components running on the management hub cluster to manage many other clusters in a hub-and-spoke topology.
 The hub cluster provides a highly available and centralized interface for managing the configuration, lifecycle, and observability of the fleet of deployed clusters.</p>
@@ -1941,13 +1937,13 @@ The reference configuration includes the installation and configuration of the h
 </div>
 </div>
 <div class="sect3">
-<h4 id="telco-hub-telco-management-cluster-use-model_plan-telco-hub-cluster-deployment">Telco management hub cluster use model</h4>
+<h4 id="telco-hub-telco-management-cluster-use-model_plan-telco-hub-cluster-deployment">Review the services the hub cluster provides</h4>
 <div class="paragraph _abstract">
 <p>The hub cluster provides managed cluster installation, configuration, observability and ongoing lifecycle management for telco application and workload clusters.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="telco-hub-cluster-topology_plan-telco-hub-cluster-deployment">Hub cluster topology</h4>
+<h4 id="telco-hub-cluster-topology_plan-telco-hub-cluster-deployment">Plan the hub cluster node layout</h4>
 <div class="paragraph _abstract">
 <p>In production environments, the Red&#160;Hat OpenShift Container Platform hub cluster must be highly available to maintain high availability of the management functions.</p>
 </div>
@@ -3259,7 +3255,7 @@ For more information, see "Observability".</p>
 <div class="ulist">
 <ul>
 <li>
-<p>For more information about limits on number of clusters managed by a single hub cluster, see "Telco management hub cluster use model".</p>
+<p>For more information about limits on number of clusters managed by a single hub cluster, see "Hub cluster scaling target".</p>
 </li>
 <li>
 <p>The number of managed clusters that can be effectively managed by the hub depends on various factors, including:</p>
@@ -3829,21 +3825,21 @@ The container image has both the required CRs, and the optional CRs, for the tel
 </div>
 </div>
 <div class="sect4">
-<h5 id="using-cluster-compare-telco_hub_review-telco-hub-reference-design-specification">Comparing a cluster with the {rds} reference configuration</h5>
+<h5 id="using-cluster-compare-telco_hub_review-telco-hub-reference-design-specification">Comparing a cluster with the telco hub reference configuration</h5>
 <div class="paragraph _abstract">
-<p>After you deploy a {rds} cluster, you can use the <code>cluster-compare</code> plugin to assess the cluster&#8217;s compliance with the {rds} reference design specifications (RDS).</p>
+<p>After you deploy a telco hub cluster, you can use the <code>cluster-compare</code> plugin to assess the cluster&#8217;s compliance with the telco hub reference design specifications (RDS).</p>
 </div>
 <div class="paragraph">
-<p>The <code>cluster-compare</code> plugin is an OpenShift CLI (<code>oc</code>) plugin. The plugin uses a {rds} reference configuration to validate the cluster with the {rds} custom resources (CRs).</p>
+<p>The <code>cluster-compare</code> plugin is an OpenShift CLI (<code>oc</code>) plugin. The plugin uses a telco hub reference configuration to validate the cluster with the telco hub custom resources (CRs).</p>
 </div>
 <div class="paragraph">
-<p>The plugin-specific reference configuration for {rds} is packaged in a container image with the {rds} CRs.</p>
+<p>The plugin-specific reference configuration for telco hub is packaged in a container image with the telco hub CRs.</p>
 </div>
 <div class="paragraph">
 <p>For further information about the <code>cluster-compare</code> plugin, see "Understanding the cluster-compare plugin".</p>
 </div>
 <div class="paragraph">
-<p>The following example shows how to compare the configuration of a cluster to the {rds} reference configuration by using <code>must-gather</code> data.</p>
+<p>The following example shows how to compare the configuration of a cluster to the telco hub reference configuration by using <code>must-gather</code> data.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -3853,7 +3849,7 @@ The container image has both the required CRs, and the optional CRs, for the tel
 </td>
 <td class="content">
 <div class="paragraph">
-<p>When comparing a cluster to the {rds} reference configuration by using <code>must-gather</code> data, you must use the <code>--all-images</code> flag when generating the <code>must-gather</code> data. You must also collect cluster-scoped resource information, as well as Operator and registry configurations. Without this data, the plugin might report false positives.</p>
+<p>When comparing a cluster to the telco hub reference configuration by using <code>must-gather</code> data, you must use the <code>--all-images</code> flag when generating the <code>must-gather</code> data. You must also collect cluster-scoped resource information and Operator and registry configurations. Without this data, the plugin might report false positives.</p>
 </div>
 </td>
 </tr>
@@ -3872,7 +3868,7 @@ The container image has both the required CRs, and the optional CRs, for the tel
 <p>You installed the <code>cluster-compare</code> plugin.</p>
 </li>
 <li>
-<p>You extracted the {rds} reference configuration from the <code>openshift-telco-hub-rds-rhel9</code> container image.</p>
+<p>You extracted the telco hub reference configuration from the <code>openshift-telco-hub-rds-rhel9</code> container image.</p>
 </li>
 </ul>
 </div>
@@ -3889,7 +3885,7 @@ The container image has both the required CRs, and the optional CRs, for the tel
 <div class="ulist">
 <ul>
 <li>
-<p>The <code>--all-images</code> flag ensures that the <code>must-gather</code> command collects all the data required by the {rds} reference configuration.</p>
+<p>The <code>--all-images</code> flag ensures that the <code>must-gather</code> command collects all the data required by the telco hub reference configuration.</p>
 </li>
 </ul>
 </div>
@@ -4869,7 +4865,7 @@ For support lifecycle details for platform agnostic operators, see <a href="http
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-30 09:01:02 -0500
+Last updated 2026-10-30 09:47:16 -0500
 </div>
 </div>
 <style>

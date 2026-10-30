@@ -767,8 +767,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="allocate-gpu-resources-to-pods-con_allocate-gpu-resources-to-pods.html">Allocate GPU resources to pods</a>
 </li>
-<li><a href="allocate-gpus-to-pods-with-a-dra-driver-con_allocate-gpus-to-pods-with-a-dra-driver.html">Allocate GPUs to pods with a DRA driver</a>
-</li>
 <li><a href="nodes-cluster-resource-configure_allocate-resources-for-nodes.html">Configure cluster-level overcommit</a>
 </li>
 <li><a href="allow-containers-to-consume-api-objects-con_allow-containers-to-consume-api-objects.html">Allow containers to consume API objects</a>
@@ -844,6 +842,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="machineconfig-garbage-collect-removing_remove-no-longer-used-machine-config-objects.html">Remove unused rendered machine configs</a>
 </li>
 <li><a href="machine-health-checks-resource_review-sample-machinehealthcheck-resource.html">About the MachineHealthCheck custom resource</a>
+</li>
+<li><a href="remote-health-monitoring-overview_remote-health-monitoring.html">Remotely monitor the health of Red&#160;Hat OpenShift Container Platform clusters</a>
 </li>
 <li><a href="nodes-pods-daemonsets-about_run-background-tasks-on-a-node-with-daemonsets.html">Daemon set scheduling</a>
 </li>
@@ -1233,7 +1233,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-ingress-and-routes-con_configure-ingress-and-routes.html">Configure ingress and routes</a>
 </li>
+<li><a href="configure-sr-iov-network-devices-con_configure-sr-iov-network-devices.html">Configure SR-IOV network devices</a>
+</li>
 <li><a href="configure-high-performance-networking-con_configure-high-performance-networking.html">Configure high-performance networking</a>
+</li>
+<li><a href="configure-ptp-clock-synchronization-intro_configure-ptp-clock-synchronization.html">Configure PTP clock synchronization</a>
 </li>
 <li><a href="network-observability-operator_understand-network-observability-netobserv.html"><span class="toc-current">Network Observability Operator</span></a>
 </li>
@@ -1245,11 +1249,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="restrict-the-api-server-to-private-for-aws-con_restrict-the-api-server-to-private-for-aws.html">Restrict the API server to private for AWS</a>
 </li>
-<li><a href="configure-ptp-clock-synchronization-intro_configure-ptp-clock-synchronization.html">Configure PTP clock synchronization</a>
-</li>
 <li><a href="reconfigure-sno-cluster-networking-intro_reconfigure-sno-cluster-networking.html">Reconfigure single-node OpenShift cluster networking</a>
-</li>
-<li><a href="assign-sriov-networks-to-vrf-intro_assign-sriov-networks-to-vrf.html">Assign SR-IOV networks to a VRF</a>
 </li>
 </ul>
 </li>
@@ -1590,8 +1590,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-node-resource-limits-con_configure-node-resource-limits.html">Configure node resource limits</a>
 </li>
-<li><a href="reserve-cpus-for-ovs-dpdk-workloads-intro_reserve-cpus-for-ovs-dpdk-workloads.html">Reserve CPUs for OVS-DPDK workloads</a>
-</li>
 </ul>
 </li>
 <li><a href="_extend.html">Extend</a>
@@ -1681,8 +1679,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="validate-cluster-health-after-installation-intro_validate-cluster-health-after-installation.html">Validate cluster health after installation</a>
 </li>
 <li><a href="verify-node-state-after-installation-con_verify-node-state-after-installation.html">Verify node state after installation</a>
-</li>
-<li><a href="validate-telco-configuration-compliance-intro_validate-telco-configuration-compliance.html">Validate telco configuration compliance</a>
 </li>
 <li><a href="network-policy-validation-intro_network-policy-validation.html">Network policy validation</a>
 </li>
@@ -1875,7 +1871,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#network-observability-openshift-console-integration_understand-network-observability-netobserv">Red Hat OpenShift Container Platform console integration</a></li><li class="level-4"><a href="#network-observability-cli_understand-network-observability-netobserv">Network Observability CLI</a></li><li class="level-4"><a href="#understand-network-observability-architecture-con_understand-network-observability-architecture">Understand network observability architecture</a></li><li class="level-5"><a href="#nw-network-observability-operator_understand-network-observability-architecture">View statuses</a></li><li class="level-5"><a href="#network-observability-architecture_understand-network-observability-architecture">Network Observability Operator architecture</a></li><li class="level-4"><a href="#understand-network-observability-capabilities-and-limitations-con_understand-network-observability-capabilities-and-limitations">Understand Network Observability capabilities and limitations</a></li><li class="level-4"><a href="#evaluate-network-observability-prerequisites-and-requirements-con_evaluate-network-observability-prerequisites-and-requirements">Evaluate network observability prerequisites and requirements</a></li><li class="level-5"><a href="#network-observability-dependency-network-observability-operator_evaluate-network-observability-prerequisites-and-requirements">Optional dependencies of the Network Observability Operator</a></li><li class="level-5"><a href="#network-observability-without-loki_evaluate-network-observability-prerequisites-and-requirements">Network observability without Loki</a></li><li class="level-4"><a href="#network-observability-deployment-and-management-con_install-network-observability-operator">Network Observability deployment and management</a></li><li class="level-5"><a href="#network-observability-operator-installation_install-network-observability-operator">Install the Network Observability Operator</a></li><li class="level-5"><a href="#network-observability-loki-installation_install-network-observability-operator">Install the Loki Operator</a></li><li class="level-5"><a href="#network-observability-loki-secret_install-network-observability-operator">Create a secret for Loki storage</a></li><li class="level-5"><a href="#network-observability-lokistack-create_install-network-observability-operator">Create a LokiStack custom resource</a></li><li class="level-5"><a href="#network-observability-automatic-installation-overview_install-network-observability-during-cluster-creation">Automatic network observability installation</a></li><li class="level-6"><a href="#prerequisites-for-network-observability-automatic-installation_install-network-observability-during-cluster-creation">Prerequisites for automatic network observability installation (Technology Preview)</a></li><li class="level-6"><a href="#when-network-observability-is-enabled_install-network-observability-during-cluster-creation">When network observability is enabled</a></li><li class="level-6"><a href="#accessing-network-observability-features_install-network-observability-during-cluster-creation">Accessing network observability features</a></li><li class="level-6"><a href="#resource-impact_install-network-observability-during-cluster-creation">Resource impact</a></li><li class="level-6"><a href="#deployment-lifecycle_install-network-observability-during-cluster-creation">Deployment lifecycle</a></li><li class="level-6"><a href="#network-observability-automatic-installation-process_install-network-observability-during-cluster-creation">Network observability automatic installation process</a></li><li class="level-6"><a href="#network-observability-prevent-automatic-installation_install-network-observability-during-cluster-creation">Prevent automatic network observability installation</a></li><li class="level-6"><a href="#network-observability-automatic-installation-verification_install-network-observability-during-cluster-creation">Verify automatic network observability installation</a></li><li class="level-6"><a href="#network-observability-automatic-installation-upgrades_install-network-observability-during-cluster-creation">Network observability and cluster upgrades</a></li><li class="level-4"><a href="#verify-network-observability-installation-intro_verify-network-observability-installation">Verify Network Observability installation</a></li><li class="level-4"><a href="#network-observability-resources-table_scale-components-based-on-cluster-size">Resource considerations</a></li><li class="level-5"><a href="#network-observability-total-resource-usage-table_scale-components-based-on-cluster-size">Total average memory and CPU usage</a></li><li class="level-5"><a href="#network-observability-resource-recommendations_scale-components-based-on-cluster-size">Resource management and performance considerations</a></li><li class="level-5"><a href="#network-observability-lokistack-configuring-ingestion_scale-components-based-on-cluster-size">LokiStack ingestion limits and health alerts</a></li><li class="level-5"><a href="#network-observability-kafka-for-large-scale-environments_scale-components-based-on-cluster-size">Kafka deployment scenarios for network flows</a></li><li class="level-6"><a href="#when-to-use-kafka-for-network-flow-collection_scale-components-based-on-cluster-size">When to use Kafka for network flow collection</a></li><li class="level-5"><a href="#network-observability-flowcollector-kafka-config_scale-components-based-on-cluster-size">Configure the FlowCollector resource with Kafka</a></li><li class="level-5"><a href="#network-observability-multi-tenancy_scale-components-based-on-cluster-size">Network observability deployment in specific nodes</a></li><li class="level-5"><a href="#network-observability-kafka-compression-benefits_optimize-collection-performance-and-resource-usage">Kafka compression benefits for network flow telemetry</a></li><li class="level-6"><a href="#network-observability-configuring-kafka-compression_optimize-collection-performance-and-resource-usage">Configure Kafka compression</a></li><li class="level-6"><a href="#network-observability-kafka-compression-codec-reference_optimize-collection-performance-and-resource-usage">Kafka compression codec reference</a></li><li class="level-4"><a href="#configure-the-network-observability-operator-flowcollector-con_configure-the-network-observability-operator-flowcollector">Configure the Network Observability Operator FlowCollector</a></li><li class="level-5"><a href="#network-observability-important-flowcollector-configuration-consideration_configure-the-network-observability-operator-flowcollector">Important FlowCollector configuration considerations</a></li><li class="level-5"><a href="#network-observability-flowcollector-view_configure-the-network-observability-operator-flowcollector">View the FlowCollector resource</a></li><li class="level-6"><a href="#network-observability-flowcollector-example_configure-the-network-observability-operator-flowcollector">Example of a FlowCollector resource</a></li><li class="level-5"><a href="#network-observability-config-FLP-sampling_configure-the-network-observability-operator-flowcollector">Update the FlowCollector resource</a></li><li class="level-5"><a href="#network-observability-filter-network-flows-at-ingestion_configure-the-network-observability-operator-flowcollector">Filter network flows at ingestion</a></li><li class="level-6"><a href="#ebpf-agent-filters_configure-the-network-observability-operator-flowcollector">eBPF agent filters</a></li><li class="level-6"><a href="#flowlogs-pipeline-filters_configure-the-network-observability-operator-flowcollector">Flowlogs-pipeline filters</a></li><li class="level-6"><a href="#network-observability-ebpf-flow-rule-filter_configure-the-network-observability-operator-flowcollector">eBPF flow rule filter</a></li><li class="level-6"><a href="#network-observability-filtering-ebpf-rule_configure-the-network-observability-operator-flowcollector">Filter eBPF flow data using multiple rules</a></li><li class="level-6"><a href="#network-observability-ebpf-flow-data-filtering-examples_configure-the-network-observability-operator-flowcollector">eBPF flow data filtering examples</a></li><li class="level-5"><a href="#network-observability-config-quick-filters_configure-the-network-observability-operator-flowcollector">Configure quick filters</a></li><li class="level-5"><a href="#network-observability-SR-IOV-config_configure-the-network-observability-operator-flowcollector">Configure monitoring for SR-IOV interface traffic</a></li><li class="level-5"><a href="#network-observability-virtualization-config_configure-the-network-observability-operator-flowcollector">Configure virtual machine (VM) secondary network interfaces for Network Observability</a></li><li class="level-5"><a href="#network-observability-configuring-ipsec-with-flow-collector-resource_configure-the-network-observability-operator-flowcollector">Configure IPsec with the FlowCollector custom resource</a></li><li class="level-5"><a href="#network-observability-ebpf-manager-operator_configure-the-network-observability-operator-flowcollector">Work with the eBPF Manager Operator</a></li><li class="level-5"><a href="#network-observability-packet-translation-overview_configure-the-network-observability-operator-flowcollector">Endpoint translation (xlat)</a></li><li class="level-6"><a href="#network-observability-packet-translation_configure-the-network-observability-operator-flowcollector">Work with endpoint translation (xlat)</a></li><li class="level-5"><a href="#network-observability-user-defined-networks_configure-the-network-observability-operator-flowcollector">User-defined networks</a></li><li class="level-6"><a href="#network-observability-working-with-udn_configure-the-network-observability-operator-flowcollector">Work with user-defined networks</a></li><li class="level-4"><a href="#configure-prometheus-metrics-collection-con_configure-prometheus-metrics-collection">Configure Prometheus metrics collection</a></li><li class="level-5"><a href="#network-observability-metrics_configure-prometheus-metrics-collection">Network observability metrics</a></li><li class="level-5"><a href="#network-observability-netobserv-dashboard-high-traffic-alert_configure-prometheus-metrics-collection">Create alerts</a></li><li class="level-5"><a href="#network-observability-custom-metrics_configure-prometheus-metrics-collection">Custom metrics</a></li><li class="level-5"><a href="#network-observability-configuring-custom-metrics_configure-prometheus-metrics-collection">Configure custom metrics by using FlowMetric API</a></li><li class="level-6"><a href="#network-observability-configuring-custom-metrics-examples_configure-prometheus-metrics-collection">Custom metrics configuration examples</a></li><li class="level-5"><a href="#network-observability-creating-metrics-network-events_configure-prometheus-metrics-collection">Create metrics from nested fields in Traffic flows</a></li><li class="level-5"><a href="#network-observability-custom-charts-flowmetrics_configure-prometheus-metrics-collection">Configure custom charts using FlowMetric API</a></li><li class="level-6"><a href="#network-observability-flowmetrics-charts-examples_configure-prometheus-metrics-collection">Flowmetric chart configuration examples</a></li><li class="level-4"><a href="#control-network-policies-and-access-for-network-observability-operator-con_control-network-policies-and-access-for-network-observability-operator">Control network policies and access for the Network Observability Operator</a></li><li class="level-5"><a href="#network-observability-deploy-network-policy_control-network-policies-and-access-for-network-observability-operator">Configure network policy by using the FlowCollector custom resource</a></li><li class="level-5"><a href="#network-observability-network-policy_control-network-policies-and-access-for-network-observability-operator">Create a network policy for network observability</a></li><li class="level-6"><a href="#network-observability-network-policy-examples_control-network-policies-and-access-for-network-observability-operator">Example NetworkPolicy manifests for network observability</a></li><li class="level-5"><a href="#network-observability-grant-permissions-custom-namespace-and-secret-access_control-network-policies-and-access-for-network-observability-operator">Grant permissions for custom namespace and secret access</a></li><li class="level-6"><a href="#network-observability-create-cluster-role-bindings-custom-namespace_control-network-policies-and-access-for-network-observability-operator">Create cluster role bindings for a custom namespace</a></li><li class="level-4"><a href="#network-observability-per-tenant-hierarchical-governance-and-tenant-autonomy_configure-per-tenant-network-observability">Per-tenant hierarchical governance and tenant autonomy</a></li><li class="level-5"><a href="#network-observability-multi-tenancy_configure-per-tenant-network-observability">Enable multi-tenancy in network observability</a></li><li class="level-5"><a href="#network-observability-per-tenant-flowcollector-slice-enable_configure-per-tenant-network-observability">Enable the Network Observability Operator FlowCollectorSlice</a></li><li class="level-5"><a href="#network-observability-per-tenant-flowcollector-slice-configure-project-administrator_configure-per-tenant-network-observability">Configure FlowCollectorSlice as a project administrator</a></li><li class="level-5"><a href="#network-observability-per-tenant-flowcollector-slice-granular-flow-collection_configure-per-tenant-network-observability">FlowCollectorSlice resource for granular flow collection</a></li><li class="level-6"><a href="#benefits-of-flowcollector-slice_configure-per-tenant-network-observability">Benefits of FlowCollectorSlice</a></li><li class="level-6"><a href="#relationship-flowcollector-flowcollector-slice_configure-per-tenant-network-observability">Relationship between FlowCollector and FlowCollectorSlice</a></li><li class="level-6"><a href="#collection-modes_configure-per-tenant-network-observability">Collection modes</a></li><li class="level-6"><a href="#flowcollector-slice-status_configure-per-tenant-network-observability">FlowCollectorSlice status</a></li><li class="level-6"><a href="#network-observability-per-tenant-flowcollector-slice-disable_configure-per-tenant-network-observability">Disable the Network Observability Operator FlowCollectorSlice</a></li><li class="level-4"><a href="#secure-network-observability-data-con_secure-network-observability-data">Secure network observability data</a></li><li class="level-5"><a href="#network-observability-security-architecture_secure-network-observability-data">Network observability security architecture</a></li><li class="level-6"><a href="#components-and-security-boundaries_secure-network-observability-data">Components and security boundaries</a></li><li class="level-6"><a href="#network-traffic-flows_secure-network-observability-data">Network traffic flows</a></li><li class="level-6"><a href="#security-model_secure-network-observability-data">Security model</a></li><li class="level-6"><a href="#network-policy-integration-considerations_secure-network-observability-data">Network policy integration considerations</a></li><li class="level-5"><a href="#network-observability-agent-flp-tls_secure-network-observability-data">Configure secure communications between the agent and the FlowLogs Pipeline</a></li><li class="level-5"><a href="#network-observability-openshift-tls-security-profile-support_secure-network-observability-data">OpenShift TLS security profile support</a></li><li class="level-6"><a href="#network-observability-tls-profile-affected-components_secure-network-observability-data">Affected components</a></li><li class="level-6"><a href="#network-observability-tls-profile-rollout-behavior_secure-network-observability-data">Expected behavior during TLS profile changes</a></li><li class="level-5"><a href="#network-observability-role-based-access-control-for-loki-logs_secure-network-observability-data">Role-based access control for Loki logs</a></li><li class="level-6"><a href="#grant-non-admin-users-cluster-wide-log-access_secure-network-observability-data">Grant non-admin users cluster-wide log access</a></li><li class="level-5"><a href="#network-observability-grant-access-lokistack-secrets_secure-network-observability-data">Grant access to LokiStack secrets</a></li><li class="level-5"><a href="#network-observability-grant-access-kafka-secrets_secure-network-observability-data">Grant access to Kafka secrets</a></li><li class="level-4"><a href="#monitor-network-traffic-with-network-observability-con_monitor-network-traffic-with-network-observability">Monitor network traffic with Network Observability</a></li><li class="level-5"><a href="#network-observability-network-traffic-overview-view_monitor-network-traffic-with-network-observability">Observe the network traffic from the Overview view</a></li><li class="level-6"><a href="#network-observability-working-with-overview_monitor-network-traffic-with-network-observability">Work with the Overview view</a></li><li class="level-6"><a href="#network-observability-configuring-options-overview_monitor-network-traffic-with-network-observability">Advanced options for the Overview view</a></li><li class="level-5"><a href="#network-observability-trafficflow_monitor-network-traffic-with-network-observability">Observe the network traffic from the Traffic flows view</a></li><li class="level-6"><a href="#network-observability-working-with-trafficflow_monitor-network-traffic-with-network-observability">Work with the Traffic flows view</a></li><li class="level-6"><a href="#network-observability-configuring-options-trafficflow_monitor-network-traffic-with-network-observability">Traffic flow display settings</a></li><li class="level-5"><a href="#network-observability-topology_monitor-network-traffic-with-network-observability">Observe the network traffic from the Topology view</a></li><li class="level-6"><a href="#network-observability-working-with-topology_monitor-network-traffic-with-network-observability">Work with the Topology view</a></li><li class="level-6"><a href="#network-observability-configuring-options-topology_monitor-network-traffic-with-network-observability">Configure the advanced options for the Topology view</a></li><li class="level-5"><a href="#network-observability-working-with-conversations_monitor-network-traffic-with-network-observability">Work with conversation tracking</a></li><li class="level-5"><a href="#network-observability-quickfilter_monitor-network-traffic-with-network-observability">Filter the network traffic</a></li><li class="level-5"><a href="#network-observability-viewing-dashboards_monitor-network-traffic-with-network-observability">View network observability metrics dashboards</a></li><li class="level-5"><a href="#network-observability-health-dashboard-overview_monitor-network-observability-operator-health">Health dashboards</a></li><li class="level-6"><a href="#network-observability-health-alert-overview_monitor-network-observability-operator-health">Health alerts</a></li><li class="level-6"><a href="#network-observability-dashboard-view_monitor-network-observability-operator-health">View health information</a></li><li class="level-6"><a href="#network-observability-disable-alerts_monitor-network-observability-operator-health">Disable health alerts</a></li><li class="level-6"><a href="#network-observability-netobserv-dashboard-rate-limit-alerts_monitor-network-observability-operator-health">Create Loki rate limit alerts for the NetObserv dashboard</a></li><li class="level-6"><a href="#network-observability-netobserv-dashboard-ebpf-agent-alerts_monitor-network-observability-operator-health">Use the eBPF agent alert</a></li><li class="level-6"><a href="#nw-status-configuration-network-observability-operator_monitor-network-observability-operator-health">View Network Observability Operator status and configuration</a></li><li class="level-5"><a href="#detect-and-investigate-network-observability-issues-con_detect-and-investigate-network-observability-issues">Detect and investigate Network Observability issues</a></li><li class="level-6"><a href="#network-observability-must-gather_detect-and-investigate-network-observability-issues">Use the must-gather tool</a></li><li class="level-6"><a href="#configure-network-traffic-console_detect-and-investigate-network-observability-issues">Configure network traffic menu entry in the Red Hat OpenShift Container Platform console</a></li><li class="level-6"><a href="#configure-network-traffic-flowlogs-pipeline-kafka_detect-and-investigate-network-observability-issues">Flowlogs-Pipeline does not consume network flows after installing Kafka</a></li><li class="level-6"><a href="#configure-network-traffic-interfaces_detect-and-investigate-network-observability-issues">Failing to see network flows from both br-int and br-ex interfaces</a></li><li class="level-6"><a href="#controller-manager-pod-runs-out-of-memory_detect-and-investigate-network-observability-issues">Network observability controller manager pod runs out of memory</a></li><li class="level-6"><a href="#troubleshooting-query-loki-manually_detect-and-investigate-network-observability-issues">Run custom queries to Loki</a></li><li class="level-6"><a href="#network-observability-troubleshooting-loki-resource-exhausted_detect-and-investigate-network-observability-issues">Troubleshoot Loki ResourceExhausted error</a></li><li class="level-6"><a href="#network-observability-troubleshooting-loki-empty-ring_detect-and-investigate-network-observability-issues">Loki empty ring error</a></li><li class="level-6"><a href="#network-observability-troubleshooting-loki-tenant-rate-limit_detect-and-investigate-network-observability-issues">LokiStack rate limit errors</a></li><li class="level-6"><a href="#network-observability-troubleshooting-large-query-timeout_detect-and-investigate-network-observability-issues">Running a large query results in Loki errors</a></li><li class="level-4"><a href="#network-observability-health-dashboard-overview_verify-security-and-network-observability-operator-health">Health dashboards</a></li><li class="level-5"><a href="#network-observability-health-alert-overview_verify-security-and-network-observability-operator-health">Health alerts</a></li><li class="level-5"><a href="#network-observability-dashboard-view_verify-security-and-network-observability-operator-health">View health information</a></li><li class="level-6"><a href="#network-observability-disable-alerts_verify-security-and-network-observability-operator-health">Disable health alerts</a></li><li class="level-5"><a href="#network-observability-netobserv-dashboard-rate-limit-alerts_verify-security-and-network-observability-operator-health">Create Loki rate limit alerts for the NetObserv dashboard</a></li><li class="level-5"><a href="#network-observability-netobserv-dashboard-ebpf-agent-alerts_verify-security-and-network-observability-operator-health">Use the eBPF agent alert</a></li><li class="level-5"><a href="#network-observability-health-rules-and-performance_verify-security-and-network-observability-operator-health">Identify network issues with automated health rules</a></li><li class="level-6"><a href="#importance-of-network-health-monitoring_verify-security-and-network-observability-operator-health">Importance of network health monitoring</a></li><li class="level-6"><a href="#detection-of-network-issues_verify-security-and-network-observability-operator-health">Automated health monitoring</a></li><li class="level-6"><a href="#network-health-monitoring-workflow_verify-security-and-network-observability-operator-health">Network health monitoring workflow</a></li><li class="level-6"><a href="#network-observability-health-rules-monitoring-and-alerting_verify-security-and-network-observability-operator-health">Detect network issues with automated health rules</a></li><li class="level-5"><a href="#network-observability-health-rule-customization_verify-security-and-network-observability-operator-health">Health rule threshold and grouping customization</a></li><li class="level-6"><a href="#network-observability-health-rules-promql-expressions-metadata_verify-security-and-network-observability-operator-health">Health rule query and metadata reference</a></li><li class="level-6"><a href="#network-observability-configuring-custom-health-rules_verify-security-and-network-observability-operator-health">Configure custom health rules</a></li><li class="level-5"><a href="#network-observability-recording-rules-performance-optimization_verify-security-and-network-observability-operator-health">Performance optimization with recording rules</a></li><li class="level-6"><a href="#network-observability-recording-rules-benefits_verify-security-and-network-observability-operator-health">Optimization benefits</a></li><li class="level-6"><a href="#network-observability-alert-vs-recording-comparison_verify-security-and-network-observability-operator-health">Comparison of rule modes</a></li><li class="level-6"><a href="#network-observability-integrating-recording-rules-with-health-dashboard_verify-security-and-network-observability-operator-health">Integrate recording rules with the health dashboard</a></li><li class="level-6"><a href="#network-observability-configuring-custom-recording-rules_verify-security-and-network-observability-operator-health">Optimize dashboard metrics with recording rules</a></li><li class="level-5"><a href="#network-observability-disable-predefined-rules_verify-security-and-network-observability-operator-health">Disable default rules</a></li><li class="level-4"><a href="#network-observability-operator_network-flow-visibility">Network Observability Operator</a></li><li class="level-5"><a href="#network-observability-openshift-console-integration_network-flow-visibility">Red Hat OpenShift Container Platform console integration</a></li><li class="level-6"><a href="#network-observability-dashboards_network-flow-visibility">Network observability metrics dashboards</a></li><li class="level-6"><a href="#network-observability-topology-views_network-flow-visibility">Network observability topology views</a></li><li class="level-6"><a href="#traffic-flow-tables_network-flow-visibility">Traffic flow tables</a></li><li class="level-5"><a href="#network-observability-network-traffic-overview-view_network-flow-visibility">Observe the network traffic from the Overview view</a></li><li class="level-6"><a href="#network-observability-working-with-overview_network-flow-visibility">Work with the Overview view</a></li><li class="level-5"><a href="#network-observability-trafficflow_network-flow-visibility">Observe the network traffic from the Traffic flows view</a></li><li class="level-6"><a href="#network-observability-working-with-trafficflow_network-flow-visibility">Work with the Traffic flows view</a></li><li class="level-5"><a href="#network-observability-topology_network-flow-visibility">Observe the network traffic from the Topology view</a></li><li class="level-6"><a href="#network-observability-working-with-topology_network-flow-visibility">Work with the Topology view</a></li><li class="level-6"><a href="#network-observability-configuring-options-topology_network-flow-visibility">Configure the advanced options for the Topology view</a></li><li class="level-6"><a href="#network-observability-working-with-conversations_network-flow-visibility">Work with conversation tracking</a></li><li class="level-5"><a href="#network-observability-quickfilter_network-flow-visibility">Filter the network traffic</a></li><li class="level-5"><a href="#network-observability-flowlogs-pipeline-scaling-large-scale-deployment-challenges_network-flow-visibility">Performance challenges in large-scale deployments</a></li><li class="level-6"><a href="#api-server-load-at-scale_network-flow-visibility">API server load at scale</a></li><li class="level-6"><a href="#resource-consumption-patterns_network-flow-visibility">Resource consumption patterns</a></li><li class="level-6"><a href="#network-observability-flowlogs-pipeline-scaling-shared-cache-cluster-stability_network-flow-visibility">How the shared cache improves cluster stability</a></li><li class="level-6"><a href="#network-observability-flowlogs-pipeline-reducing-api-server-load-in-large-clusters_network-flow-visibility">Reduce API server load in large clusters</a></li><li class="level-6"><a href="#network-observability-flowlogs-pipeline-shared-cache-parameters_network-flow-visibility">Shared cache configuration parameters</a></li><li class="level-6"><a href="#network-observability-flowlogs-pipeline-resolving-shared-cache-performance-issues_network-flow-visibility">Resolve shared cache performance issues</a></li><li class="level-5"><a href="#dependency-discovery-61-map-which-services-communicate-with-each-other-con_map-service-communication-dependencies">Map which services communicate with each other</a></li><li class="level-6"><a href="#network-observability-topology_map-service-communication-dependencies">Observe the network traffic from the Topology view</a></li><li class="level-4"><a href="#traffic-analysis-con_traffic-analysis">Traffic analysis</a></li><li class="level-5"><a href="#network-observability-working-with-trafficflow_traffic-analysis">Work with the Traffic flows view</a></li><li class="level-5"><a href="#identify-workloads-generating-highest-traffic-volume-con_identify-workloads-generating-highest-traffic-volume">Identify workloads generating the highest traffic volume</a></li><li class="level-6"><a href="#network-observability-working-with-topology_identify-workloads-generating-highest-traffic-volume">Work with the Topology view</a></li><li class="level-6"><a href="#network-observability-working-with-conversations_identify-workloads-generating-highest-traffic-volume">Work with conversation tracking</a></li><li class="level-6"><a href="#network-observability-metrics_identify-workloads-generating-highest-traffic-volume">Network observability metrics</a></li><li class="level-5"><a href="#network-observability-histogram-trafficflow_detect-sudden-increases-in-bandwidth-utilization">Use the histogram</a></li><li class="level-5"><a href="#analyze-traffic-distribution-across-namespaces-con_analyze-traffic-distribution-across-namespaces">Analyze traffic distribution across namespaces</a></li><li class="level-6"><a href="#network-observability-zones_analyze-traffic-distribution-across-namespaces">Work with availability zones</a></li><li class="level-6"><a href="#network-observability-working-with-topology_analyze-traffic-distribution-across-namespaces">Work with the Topology view</a></li><li class="level-5"><a href="#network-observability-histogram-trafficflow_track-traffic-patterns-over-time-to-identify-trends">Use the histogram</a></li><li class="level-6"><a href="#network-observability-custom-charts-flowmetrics_track-traffic-patterns-over-time-to-identify-trends">Configure custom charts using FlowMetric API</a></li><li class="level-5"><a href="#network-observability-custom-metrics_create-custom-metrics-for-traffic-volume-monitoring">Custom metrics</a></li><li class="level-6"><a href="#network-observability-configuring-custom-metrics_create-custom-metrics-for-traffic-volume-monitoring">Configure custom metrics by using FlowMetric API</a></li><li class="level-6"><a href="#network-observability-configuring-custom-metrics-examples_create-custom-metrics-for-traffic-volume-monitoring">Custom metrics configuration examples</a></li><li class="level-6"><a href="#network-observability-creating-metrics-network-events_create-custom-metrics-for-traffic-volume-monitoring">Create metrics from nested fields in Traffic flows</a></li><li class="level-6"><a href="#network-observability-netobserv-dashboard-high-traffic-alert_create-custom-metrics-for-traffic-volume-monitoring">Create alerts</a></li><li class="level-5"><a href="#build-dashboards-for-traffic-trend-visualization-con_build-dashboards-for-traffic-trend-visualization">Build dashboards for traffic trend visualization</a></li><li class="level-6"><a href="#network-observability-viewing-dashboards_build-dashboards-for-traffic-trend-visualization">View network observability metrics dashboards</a></li><li class="level-6"><a href="#network-observability-custom-charts-flowmetrics_build-dashboards-for-traffic-trend-visualization">Configure custom charts using FlowMetric API</a></li><li class="level-6"><a href="#network-observability-flowmetrics-charts-examples_build-dashboards-for-traffic-trend-visualization">Flowmetric chart configuration examples</a></li><li class="level-5"><a href="#alert-on-unexpected-traffic-surges-or-anomalies-con_alert-on-unexpected-traffic-surges-or-anomalies">Alert on unexpected traffic surges or anomalies</a></li><li class="level-6"><a href="#network-observability-tcp-flag-syn-flood_alert-on-unexpected-traffic-surges-or-anomalies">Detect SYN flooding using the FlowMetric API and TCP flags</a></li><li class="level-6"><a href="#creating-new-alerting-rules_alert-on-unexpected-traffic-surges-or-anomalies">Create new alerting rules</a></li><li class="level-4"><a href="#east-west-traffic-monitoring-con_east-west-traffic-monitoring">East-west traffic monitoring</a></li><li class="level-5"><a href="#network-observability-working-with-conversations_east-west-traffic-monitoring">Work with conversation tracking</a></li><li class="level-5"><a href="#network-observability-zones_east-west-traffic-monitoring">Work with availability zones</a></li><li class="level-5"><a href="#monitor-inter-namespace-communication-patterns-con_monitor-inter-namespace-communication-patterns">Monitor inter-namespace communication patterns</a></li><li class="level-6"><a href="#network-observability-working-with-topology_monitor-inter-namespace-communication-patterns">Work with the Topology view</a></li><li class="level-6"><a href="#network-observability-zones_monitor-inter-namespace-communication-patterns">Work with availability zones</a></li><li class="level-5"><a href="#network-observability-RTT-overview_measure-internal-latency-between-services">Round-Trip Time</a></li><li class="level-6"><a href="#network-observability-RTT_measure-internal-latency-between-services">Work with RTT tracing</a></li><li class="level-5"><a href="#verify-expected-pod-to-pod-connectivity-con_verify-expected-pod-to-pod-connectivity">Verify expected pod-to-pod connectivity</a></li><li class="level-6"><a href="#network-observability-working-with-topology_verify-expected-pod-to-pod-connectivity">Work with the Topology view</a></li><li class="level-6"><a href="#network-observability-working-with-trafficflow_verify-expected-pod-to-pod-connectivity">Work with the Traffic flows view</a></li><li class="level-5"><a href="#identify-cross-namespace-traffic-bottlenecks-con_identify-cross-namespace-traffic-bottlenecks">Identify cross-namespace traffic bottlenecks</a></li><li class="level-6"><a href="#network-observability-zones_identify-cross-namespace-traffic-bottlenecks">Work with availability zones</a></li><li class="level-6"><a href="#network-observability-RTT_identify-cross-namespace-traffic-bottlenecks">Work with RTT tracing</a></li><li class="level-5"><a href="#monitor-internal-traffic-for-security-anomalies-con_monitor-internal-traffic-for-security-anomalies">Monitor internal traffic for security anomalies</a></li><li class="level-6"><a href="#network-observability-tcp-flag-syn-flood_monitor-internal-traffic-for-security-anomalies">Detect SYN flooding using the FlowMetric API and TCP flags</a></li><li class="level-6"><a href="#network-observability-tls-monitoring-overview_monitor-internal-traffic-for-security-anomalies">Transport Layer Security traffic monitoring</a></li><li class="level-6"><a href="#network-observability-enable-tls-tracking_monitor-internal-traffic-for-security-anomalies">Enable Transport Layer Security tracking</a></li><li class="level-6"><a href="#network-observability-analyze-tls-traffic_monitor-internal-traffic-for-security-anomalies">Analyze Transport Layer Security traffic data</a></li><li class="level-6"><a href="#tls-tracking-fields_monitor-internal-traffic-for-security-anomalies">Transport Layer Security tracking fields reference</a></li><li class="level-4"><a href="#egress-monitoring-con_egress-monitoring">Egress monitoring</a></li><li class="level-5"><a href="#identify-external-destination-ip-addresses-and-domains-con_identify-external-destination-ip-addresses-and-domains">Identify external destination IP addresses and domains</a></li><li class="level-6"><a href="#network-observability-working-with-trafficflow_identify-external-destination-ip-addresses-and-domains">Work with the Traffic flows view</a></li><li class="level-6"><a href="#network-observability-dns-tracking_identify-external-destination-ip-addresses-and-domains">Work with DNS tracking</a></li><li class="level-6"><a href="#network-observability-zones_identify-external-destination-ip-addresses-and-domains">Work with availability zones</a></li><li class="level-5"><a href="#track-egress-traffic-volume-by-destination-con_track-egress-traffic-volume-by-destination">Track egress traffic volume by destination</a></li><li class="level-6"><a href="#network-observability-metrics_track-egress-traffic-volume-by-destination">Network observability metrics</a></li><li class="level-6"><a href="#network-observability-working-with-conversations_track-egress-traffic-volume-by-destination">Work with conversation tracking</a></li><li class="level-5"><a href="#monitor-compliance-with-egress-security-policies-con_monitor-compliance-with-egress-security-policies">Monitor compliance with egress security policies</a></li><li class="level-6"><a href="#nw-egress-firewall-view_monitor-compliance-with-egress-security-policies">View an EgressFirewall custom resource (CR)</a></li><li class="level-6"><a href="#network-observability-viewing-network-events_monitor-compliance-with-egress-security-policies">View network events</a></li><li class="level-6"><a href="#network-observability-networking-events-overview_monitor-compliance-with-egress-security-policies">OVN-Kubernetes networking events</a></li><li class="level-5"><a href="#audit-external-data-transfers-for-compliance-con_audit-external-data-transfers-for-compliance">Audit external data transfers for compliance</a></li><li class="level-6"><a href="#network-observability-exporting-traffic-flow-data_audit-external-data-transfers-for-compliance">Export traffic flow data</a></li><li class="level-4"><a href="#network-observability-dns-overview_analyze-dns-resolution-patterns-and-errors">DNS tracking</a></li><li class="level-5"><a href="#network-observability-dns-feature-view_analyze-dns-resolution-patterns-and-errors">DNS feature view</a></li><li class="level-5"><a href="#network-observability-dns-tracking_analyze-dns-resolution-patterns-and-errors">Work with DNS tracking</a></li><li class="level-5"><a href="#network-observability-dns-resolution-analysis-strategic-benefits_analyze-dns-resolution-patterns-and-errors">Strategic benefits of DNS resolution analysis</a></li><li class="level-6"><a href="#dns-flow-enrichment_analyze-dns-resolution-patterns-and-errors">DNS flow enrichment</a></li><li class="level-5"><a href="#network-observability-dns-resolution-analysis-configure_analyze-dns-resolution-patterns-and-errors">Configure DNS domain tracking for network observability</a></li><li class="level-5"><a href="#network-observability-dns-resolution-analysis-reference_analyze-dns-resolution-patterns-and-errors">DNS flow enrichment and analysis reference</a></li><li class="level-6"><a href="#leverage-dns-data-optimization_analyze-dns-resolution-patterns-and-errors">Leverage DNS data for network optimization</a></li><li class="level-6"><a href="#identify-misconfiguration-errors_analyze-dns-resolution-patterns-and-errors">Identify misconfiguration errors</a></li><li class="level-6"><a href="#loki-storage-considerations_analyze-dns-resolution-patterns-and-errors">Loki storage considerations</a></li><li class="level-4"><a href="#anomaly-detection-con_anomaly-detection">Anomaly detection</a></li><li class="level-5"><a href="#network-observability-tcp-flag-syn-flood_anomaly-detection">Detect SYN flooding using the FlowMetric API and TCP flags</a></li><li class="level-5"><a href="#network-observability-health-alert-overview_anomaly-detection">Health alerts</a></li><li class="level-5"><a href="#network-observability-dashboard-view_anomaly-detection">View health information</a></li><li class="level-5"><a href="#network-observability-networking-events-overview_anomaly-detection">OVN-Kubernetes networking events</a></li><li class="level-6"><a href="#network-observability-networking-events-feature-view_anomaly-detection">Network Events feature view</a></li><li class="level-5"><a href="#network-observability-viewing-network-events_anomaly-detection">View network events</a></li><li class="level-5"><a href="#network-observability-working-with-topology_anomaly-detection">Work with the Topology view</a></li><li class="level-4"><a href="#performance-investigation-con_performance-investigation">Performance investigation</a></li><li class="level-5"><a href="#network-observability-RTT-overview_performance-investigation">Round-Trip Time</a></li><li class="level-5"><a href="#network-observability-RTT_performance-investigation">Work with RTT tracing</a></li><li class="level-5"><a href="#network-observability-pktdrop-overview_performance-investigation">Packet drop tracking</a></li><li class="level-6"><a href="#network-observability-pktdrop-feature-view_performance-investigation">Packet Drops feature view</a></li><li class="level-6"><a href="#types-of-packet-drops_performance-investigation">Types of packet drops</a></li><li class="level-5"><a href="#network-observability-packet-drops_performance-investigation">Work with packet drops</a></li><li class="level-5"><a href="#network-observability-histogram-trafficflow_performance-investigation">Use the histogram</a></li><li class="level-5"><a href="#network-observability-RTT-overview_measure-tcp-round-trip-time-rtt-and-latency-trends">Round-Trip Time</a></li><li class="level-6"><a href="#network-observability-RTT_measure-tcp-round-trip-time-rtt-and-latency-trends">Work with RTT tracing</a></li><li class="level-5"><a href="#identify-high-latency-connections-and-slow-endpoints-con_identify-high-latency-connections-and-slow-endpoints">Identify high-latency connections and slow endpoints</a></li><li class="level-6"><a href="#network-observability-RTT_identify-high-latency-connections-and-slow-endpoints">Work with RTT tracing</a></li><li class="level-6"><a href="#network-observability-working-with-conversations_identify-high-latency-connections-and-slow-endpoints">Work with conversation tracking</a></li><li class="level-5"><a href="#network-observability-pktdrop-overview_detect-retransmissions-and-packet-loss-patterns">Packet drop tracking</a></li><li class="level-6"><a href="#network-observability-pktdrop-feature-view_detect-retransmissions-and-packet-loss-patterns">Packet Drops feature view</a></li><li class="level-6"><a href="#types-of-packet-drops_detect-retransmissions-and-packet-loss-patterns">Types of packet drops</a></li><li class="level-6"><a href="#network-observability-packet-drops_detect-retransmissions-and-packet-loss-patterns">Work with packet drops</a></li><li class="level-4"><a href="#network-observability-must-gather_diagnose-network-flow-issues">Use the must-gather tool</a></li><li class="level-5"><a href="#configure-network-traffic-console_diagnose-network-flow-issues">Configure network traffic menu entry in the Red Hat OpenShift Container Platform console</a></li><li class="level-5"><a href="#configure-network-traffic-flowlogs-pipeline-kafka_diagnose-network-flow-issues">Flowlogs-Pipeline does not consume network flows after installing Kafka</a></li><li class="level-6"><a href="#configure-network-traffic-interfaces_diagnose-network-flow-issues">Failing to see network flows from both br-int and br-ex interfaces</a></li><li class="level-6"><a href="#network-observability-health-rules-and-performance_diagnose-network-flow-issues">Identify network issues with automated health rules</a></li><li class="level-5"><a href="#controller-manager-pod-runs-out-of-memory_diagnose-network-flow-issues">Network observability controller manager pod runs out of memory</a></li><li class="level-5"><a href="#troubleshooting-query-loki-manually_diagnose-network-flow-issues">Run custom queries to Loki</a></li><li class="level-5"><a href="#network-observability-troubleshooting-loki-resource-exhausted_diagnose-network-flow-issues">Troubleshoot Loki ResourceExhausted error</a></li><li class="level-5"><a href="#network-observability-troubleshooting-loki-empty-ring_diagnose-network-flow-issues">Loki empty ring error</a></li><li class="level-5"><a href="#network-observability-troubleshooting-loki-tenant-rate-limit_diagnose-network-flow-issues">LokiStack rate limit errors</a></li><li class="level-5"><a href="#network-observability-troubleshooting-large-query-timeout_diagnose-network-flow-issues">Running a large query results in Loki errors</a></li><li class="level-6"><a href="#_additional_resources_12">Additional resources</a></li><li class="level-5"><a href="#network-observability-health-rules-monitoring-and-alerting_investigate-packet-drops">Detect network issues with automated health rules</a></li><li class="level-6"><a href="#network-observability-health-outcomes_investigate-packet-drops">Monitoring outcomes</a></li><li class="level-6"><a href="#network-observability-health-context-tabs_investigate-packet-drops">Network health context tabs</a></li><li class="level-6"><a href="#network-observability-default-rules_investigate-packet-drops">Predefined health rules</a></li><li class="level-6"><a href="#network-observability-enabling-features-for-health-monitoring_investigate-packet-drops">Enable features for health monitoring</a></li><li class="level-5"><a href="#network-observability-operator-stub_run-network-diagnostics-with-netobserv-cli">Network Observability Operator features</a></li><li class="level-6"><a href="#network-observability-netoberv-cli-about_run-network-diagnostics-with-netobserv-cli">Network Observability CLI overview</a></li><li class="level-6"><a href="#network-observability-cli-install_run-network-diagnostics-with-netobserv-cli">Install the Network Observability CLI</a></li><li class="level-6"><a href="#network-observability-cli-capturing-flows_run-network-diagnostics-with-netobserv-cli">Capture flows</a></li><li class="level-6"><a href="#network-observability-cli-capturing-metrics_run-network-diagnostics-with-netobserv-cli">Capture metrics</a></li><li class="level-6"><a href="#network-observability-cli-capturing-packets_run-network-diagnostics-with-netobserv-cli">Capture packets</a></li><li class="level-6"><a href="#network-observability-cli-plaintext-capture-overview_run-network-diagnostics-with-netobserv-cli">Plain text packet capture for OpenSSL encrypted traffic</a></li><li class="level-6"><a href="#network-observability-netobserv-cli-reference_run-network-diagnostics-with-netobserv-cli">Network Observability CLI usage</a></li><li class="level-6"><a href="#network-observability-cli-uninstall_run-network-diagnostics-with-netobserv-cli">Clean the Network Observability CLI</a></li><li class="level-4"><a href="#network-observability-integration-intro_network-observability-integration">Network Observability integration</a></li><li class="level-5"><a href="#network-observability-flowcollector-view_network-observability-integration">View the FlowCollector resource</a></li><li class="level-5"><a href="#network-observability-kafka-option_network-observability-integration">Install Kafka (optional)</a></li><li class="level-5"><a href="#network-observability-flowcollector-kafka-config_network-observability-integration">Configure the FlowCollector resource with Kafka</a></li><li class="level-5"><a href="#network-observability-enriched-flows_network-observability-integration">Export enriched network flow data</a></li><li class="level-5"><a href="#network-observability-exporting-traffic-flow-data_network-observability-integration">Export traffic flow data</a></li><li class="level-5"><a href="#network-observability-enriched-flows_export-flow-data-to-kafka">Export enriched network flow data</a></li><li class="level-6"><a href="#network-observability-flowcollector-kafka-config_export-flow-data-to-kafka">Configure the FlowCollector resource with Kafka</a></li><li class="level-5"><a href="#network-observability-enriched-flows_export-flow-data-to-ipfix">Export enriched network flow data</a></li><li class="level-5"><a href="#network-observability-enriched-flows_export-flow-data-to-opentelemetry">Export enriched network flow data</a></li><li class="level-5"><a href="#network-observability-operator-uninstall_export-flow-data-to-opentelemetry">Uninstall the Network Observability Operator</a></li><li class="level-4"><a href="#network-observability-api-specifications-reference_reference-network-observability-api-specifications">Network observability API specifications</a></li><li class="level-5"><a href="#flowcollector-api_reference-network-observability-api-specifications">FlowCollector API</a></li><li class="level-5"><a href="#flowmetric-api_reference-network-observability-api-specifications">FlowMetric API</a></li><li class="level-5"><a href="#flowcollector-slice-api_reference-network-observability-api-specifications">FlowCollectorSlice API</a></li><li class="level-5"><a href="#network-flows-format_reference-network-observability-api-specifications">Network flows format</a></li><li class="level-5"><a href="#network-observability-cli-usage_reference-network-observability-api-specifications">Network Observability CLI usage</a></li><li class="level-4"><a href="#network-observability-release-notes-con_network-observability-release-notes">Network Observability Operator release notes</a></li><li class="level-5"><a href="#network-observability-operator-release-notes-2-0_network-observability-release-notes">Network Observability Operator 2.0 advisory</a></li><li class="level-5"><a href="#network-observability-operator-release-notes-2-0-new-features-enhancements_network-observability-release-notes">Network Observability Operator 2.0 new features and enhancements</a></li><li class="level-5"><a href="#network-observability-operator-release-notes-2-0-technology-preview_network-observability-release-notes">Network Observability Operator 2.0 Technology Preview features</a></li><li class="level-5"><a href="#network-observability-operator-release-notes-2-0-fixed-issues_network-observability-release-notes">Network Observability Operator 2.0 fixed issues</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#network-observability-openshift-console-integration_understand-network-observability-netobserv">Red Hat OpenShift Container Platform console integration</a></li><li class="level-5"><a href="#network-observability-dashboards_understand-network-observability-netobserv">Network observability metrics dashboards</a></li><li class="level-5"><a href="#network-observability-topology-views_understand-network-observability-netobserv">Network observability topology views</a></li><li class="level-5"><a href="#traffic-flow-tables_understand-network-observability-netobserv">Traffic flow tables</a></li><li class="level-4"><a href="#network-observability-cli_understand-network-observability-netobserv">Network Observability CLI</a></li><li class="level-4"><a href="#understand-network-observability-architecture-con_understand-network-observability-architecture">Understand network observability architecture</a></li><li class="level-5"><a href="#nw-network-observability-operator_understand-network-observability-architecture">View statuses</a></li><li class="level-5"><a href="#network-observability-architecture_understand-network-observability-architecture">Network Observability Operator architecture</a></li><li class="level-4"><a href="#understand-network-observability-capabilities-and-limitations-con_understand-network-observability-capabilities-and-limitations">Understand Network Observability capabilities and limitations</a></li><li class="level-4"><a href="#evaluate-network-observability-prerequisites-and-requirements-con_evaluate-network-observability-prerequisites-and-requirements">Evaluate network observability prerequisites and requirements</a></li><li class="level-5"><a href="#network-observability-dependency-network-observability-operator_evaluate-network-observability-prerequisites-and-requirements">Optional dependencies of the Network Observability Operator</a></li><li class="level-5"><a href="#network-observability-without-loki_evaluate-network-observability-prerequisites-and-requirements">Network observability without Loki</a></li><li class="level-4"><a href="#network-observability-deployment-and-management-con_install-network-observability-operator">Network Observability deployment and management</a></li><li class="level-5"><a href="#network-observability-operator-installation_install-network-observability-operator">Install the Network Observability Operator</a></li><li class="level-5"><a href="#network-observability-loki-installation_install-network-observability-operator">Install the Loki Operator</a></li><li class="level-5"><a href="#network-observability-loki-secret_install-network-observability-operator">Create a secret for Loki storage</a></li><li class="level-5"><a href="#network-observability-lokistack-create_install-network-observability-operator">Create a LokiStack custom resource</a></li><li class="level-5"><a href="#network-observability-automatic-installation-overview_install-network-observability-during-cluster-creation">Automatic network observability installation</a></li><li class="level-6"><a href="#prerequisites-for-network-observability-automatic-installation_install-network-observability-during-cluster-creation">Prerequisites for automatic network observability installation (Technology Preview)</a></li><li class="level-6"><a href="#when-network-observability-is-enabled_install-network-observability-during-cluster-creation">When network observability is enabled</a></li><li class="level-6"><a href="#accessing-network-observability-features_install-network-observability-during-cluster-creation">Accessing network observability features</a></li><li class="level-6"><a href="#resource-impact_install-network-observability-during-cluster-creation">Resource impact</a></li><li class="level-6"><a href="#deployment-lifecycle_install-network-observability-during-cluster-creation">Deployment lifecycle</a></li><li class="level-6"><a href="#network-observability-automatic-installation-process_install-network-observability-during-cluster-creation">Network observability automatic installation process</a></li><li class="level-6"><a href="#network-observability-prevent-automatic-installation_install-network-observability-during-cluster-creation">Prevent automatic network observability installation</a></li><li class="level-6"><a href="#network-observability-automatic-installation-verification_install-network-observability-during-cluster-creation">Verify automatic network observability installation</a></li><li class="level-6"><a href="#network-observability-automatic-installation-upgrades_install-network-observability-during-cluster-creation">Network observability and cluster upgrades</a></li><li class="level-4"><a href="#verify-network-observability-installation-intro_verify-network-observability-installation">Verify Network Observability installation</a></li><li class="level-4"><a href="#network-observability-resources-table_scale-components-based-on-cluster-size">Resource considerations</a></li><li class="level-5"><a href="#network-observability-total-resource-usage-table_scale-components-based-on-cluster-size">Total average memory and CPU usage</a></li><li class="level-5"><a href="#network-observability-resource-recommendations_scale-components-based-on-cluster-size">Resource management and performance considerations</a></li><li class="level-5"><a href="#network-observability-lokistack-configuring-ingestion_scale-components-based-on-cluster-size">LokiStack ingestion limits and health alerts</a></li><li class="level-5"><a href="#network-observability-kafka-for-large-scale-environments_scale-components-based-on-cluster-size">Kafka deployment scenarios for network flows</a></li><li class="level-6"><a href="#when-to-use-kafka-for-network-flow-collection_scale-components-based-on-cluster-size">When to use Kafka for network flow collection</a></li><li class="level-5"><a href="#network-observability-flowcollector-kafka-config_scale-components-based-on-cluster-size">Configure the FlowCollector resource with Kafka</a></li><li class="level-5"><a href="#network-observability-multi-tenancy_scale-components-based-on-cluster-size">Network observability deployment in specific nodes</a></li><li class="level-5"><a href="#network-observability-flowlogs-pipeline-scaling-large-scale-deployment-challenges_optimize-collection-performance-and-resource-usage">Performance challenges in large-scale deployments</a></li><li class="level-6"><a href="#api-server-load-at-scale_optimize-collection-performance-and-resource-usage">API server load at scale</a></li><li class="level-6"><a href="#resource-consumption-patterns_optimize-collection-performance-and-resource-usage">Resource consumption patterns</a></li><li class="level-6"><a href="#network-observability-flowlogs-pipeline-scaling-shared-cache-cluster-stability_optimize-collection-performance-and-resource-usage">How the shared cache improves cluster stability</a></li><li class="level-6"><a href="#network-observability-flowlogs-pipeline-reducing-api-server-load-in-large-clusters_optimize-collection-performance-and-resource-usage">Reduce API server load in large clusters</a></li><li class="level-6"><a href="#network-observability-flowlogs-pipeline-shared-cache-parameters_optimize-collection-performance-and-resource-usage">Shared cache configuration parameters</a></li><li class="level-6"><a href="#network-observability-flowlogs-pipeline-resolving-shared-cache-performance-issues_optimize-collection-performance-and-resource-usage">Resolve shared cache performance issues</a></li><li class="level-5"><a href="#network-observability-kafka-compression-benefits_optimize-collection-performance-and-resource-usage">Kafka compression benefits for network flow telemetry</a></li><li class="level-6"><a href="#network-observability-configuring-kafka-compression_optimize-collection-performance-and-resource-usage">Configure Kafka compression</a></li><li class="level-6"><a href="#network-observability-kafka-compression-codec-reference_optimize-collection-performance-and-resource-usage">Kafka compression codec reference</a></li><li class="level-4"><a href="#configure-the-network-observability-operator-flowcollector-con_configure-the-network-observability-operator-flowcollector">Configure the Network Observability Operator FlowCollector</a></li><li class="level-5"><a href="#network-observability-important-flowcollector-configuration-consideration_configure-the-network-observability-operator-flowcollector">Important FlowCollector configuration considerations</a></li><li class="level-5"><a href="#network-observability-flowcollector-view_configure-the-network-observability-operator-flowcollector">View the FlowCollector resource</a></li><li class="level-6"><a href="#network-observability-flowcollector-example_configure-the-network-observability-operator-flowcollector">Example of a FlowCollector resource</a></li><li class="level-5"><a href="#network-observability-config-FLP-sampling_configure-the-network-observability-operator-flowcollector">Update the FlowCollector resource</a></li><li class="level-5"><a href="#network-observability-filter-network-flows-at-ingestion_configure-the-network-observability-operator-flowcollector">Filter network flows at ingestion</a></li><li class="level-6"><a href="#ebpf-agent-filters_configure-the-network-observability-operator-flowcollector">eBPF agent filters</a></li><li class="level-6"><a href="#flowlogs-pipeline-filters_configure-the-network-observability-operator-flowcollector">Flowlogs-pipeline filters</a></li><li class="level-6"><a href="#network-observability-ebpf-flow-rule-filter_configure-the-network-observability-operator-flowcollector">eBPF flow rule filter</a></li><li class="level-6"><a href="#network-observability-filtering-ebpf-rule_configure-the-network-observability-operator-flowcollector">Filter eBPF flow data using multiple rules</a></li><li class="level-6"><a href="#network-observability-ebpf-flow-data-filtering-examples_configure-the-network-observability-operator-flowcollector">eBPF flow data filtering examples</a></li><li class="level-5"><a href="#network-observability-config-quick-filters_configure-the-network-observability-operator-flowcollector">Configure quick filters</a></li><li class="level-5"><a href="#network-observability-SR-IOV-config_configure-the-network-observability-operator-flowcollector">Configure monitoring for SR-IOV interface traffic</a></li><li class="level-5"><a href="#network-observability-virtualization-config_configure-the-network-observability-operator-flowcollector">Configure virtual machine (VM) secondary network interfaces for Network Observability</a></li><li class="level-5"><a href="#network-observability-configuring-ipsec-with-flow-collector-resource_configure-the-network-observability-operator-flowcollector">Configure IPsec with the FlowCollector custom resource</a></li><li class="level-5"><a href="#network-observability-ebpf-manager-operator_configure-the-network-observability-operator-flowcollector">Work with the eBPF Manager Operator</a></li><li class="level-5"><a href="#network-observability-packet-translation-overview_configure-the-network-observability-operator-flowcollector">Endpoint translation (xlat)</a></li><li class="level-6"><a href="#network-observability-packet-translation_configure-the-network-observability-operator-flowcollector">Work with endpoint translation (xlat)</a></li><li class="level-5"><a href="#network-observability-user-defined-networks_configure-the-network-observability-operator-flowcollector">User-defined networks</a></li><li class="level-6"><a href="#network-observability-working-with-udn_configure-the-network-observability-operator-flowcollector">Work with user-defined networks</a></li><li class="level-4"><a href="#configure-prometheus-metrics-collection-con_configure-prometheus-metrics-collection">Configure Prometheus metrics collection</a></li><li class="level-5"><a href="#network-observability-metrics_configure-prometheus-metrics-collection">Network observability metrics</a></li><li class="level-5"><a href="#network-observability-netobserv-dashboard-high-traffic-alert_configure-prometheus-metrics-collection">Create alerts</a></li><li class="level-5"><a href="#network-observability-custom-metrics_configure-prometheus-metrics-collection">Custom metrics</a></li><li class="level-5"><a href="#network-observability-configuring-custom-metrics_configure-prometheus-metrics-collection">Configure custom metrics by using FlowMetric API</a></li><li class="level-6"><a href="#network-observability-configuring-custom-metrics-examples_configure-prometheus-metrics-collection">Custom metrics configuration examples</a></li><li class="level-5"><a href="#network-observability-creating-metrics-network-events_configure-prometheus-metrics-collection">Create metrics from nested fields in Traffic flows</a></li><li class="level-5"><a href="#network-observability-custom-charts-flowmetrics_configure-prometheus-metrics-collection">Configure custom charts using FlowMetric API</a></li><li class="level-6"><a href="#network-observability-flowmetrics-charts-examples_configure-prometheus-metrics-collection">Flowmetric chart configuration examples</a></li><li class="level-4"><a href="#control-network-policies-and-access-for-network-observability-operator-con_control-network-policies-and-access-for-network-observability-operator">Control network policies and access for the Network Observability Operator</a></li><li class="level-5"><a href="#network-observability-deploy-network-policy_control-network-policies-and-access-for-network-observability-operator">Configure network policy by using the FlowCollector custom resource</a></li><li class="level-5"><a href="#network-observability-network-policy_control-network-policies-and-access-for-network-observability-operator">Create a network policy for network observability</a></li><li class="level-6"><a href="#network-observability-network-policy-examples_control-network-policies-and-access-for-network-observability-operator">Example NetworkPolicy manifests for network observability</a></li><li class="level-5"><a href="#network-observability-grant-permissions-custom-namespace-and-secret-access_control-network-policies-and-access-for-network-observability-operator">Grant permissions for custom namespace and secret access</a></li><li class="level-6"><a href="#network-observability-create-cluster-role-bindings-custom-namespace_control-network-policies-and-access-for-network-observability-operator">Create cluster role bindings for a custom namespace</a></li><li class="level-4"><a href="#network-observability-per-tenant-hierarchical-governance-and-tenant-autonomy_configure-per-tenant-network-observability">Per-tenant hierarchical governance and tenant autonomy</a></li><li class="level-5"><a href="#network-observability-multi-tenancy_configure-per-tenant-network-observability">Enable multi-tenancy in network observability</a></li><li class="level-5"><a href="#network-observability-per-tenant-flowcollector-slice-enable_configure-per-tenant-network-observability">Enable the Network Observability Operator FlowCollectorSlice</a></li><li class="level-5"><a href="#network-observability-per-tenant-flowcollector-slice-configure-project-administrator_configure-per-tenant-network-observability">Configure FlowCollectorSlice as a project administrator</a></li><li class="level-5"><a href="#network-observability-per-tenant-flowcollector-slice-granular-flow-collection_configure-per-tenant-network-observability">FlowCollectorSlice resource for granular flow collection</a></li><li class="level-6"><a href="#benefits-of-flowcollector-slice_configure-per-tenant-network-observability">Benefits of FlowCollectorSlice</a></li><li class="level-6"><a href="#relationship-flowcollector-flowcollector-slice_configure-per-tenant-network-observability">Relationship between FlowCollector and FlowCollectorSlice</a></li><li class="level-6"><a href="#collection-modes_configure-per-tenant-network-observability">Collection modes</a></li><li class="level-6"><a href="#flowcollector-slice-status_configure-per-tenant-network-observability">FlowCollectorSlice status</a></li><li class="level-6"><a href="#network-observability-per-tenant-flowcollector-slice-disable_configure-per-tenant-network-observability">Disable the Network Observability Operator FlowCollectorSlice</a></li><li class="level-4"><a href="#secure-network-observability-data-con_secure-network-observability-data">Secure network observability data</a></li><li class="level-5"><a href="#network-observability-security-architecture_secure-network-observability-data">Network observability security architecture</a></li><li class="level-6"><a href="#components-and-security-boundaries_secure-network-observability-data">Components and security boundaries</a></li><li class="level-6"><a href="#network-traffic-flows_secure-network-observability-data">Network traffic flows</a></li><li class="level-6"><a href="#security-model_secure-network-observability-data">Security model</a></li><li class="level-6"><a href="#network-policy-integration-considerations_secure-network-observability-data">Network policy integration considerations</a></li><li class="level-5"><a href="#network-observability-agent-flp-tls_secure-network-observability-data">Configure secure communications between the agent and the FlowLogs Pipeline</a></li><li class="level-5"><a href="#network-observability-openshift-tls-security-profile-support_secure-network-observability-data">OpenShift TLS security profile support</a></li><li class="level-6"><a href="#network-observability-tls-profile-affected-components_secure-network-observability-data">Affected components</a></li><li class="level-6"><a href="#network-observability-tls-profile-rollout-behavior_secure-network-observability-data">Expected behavior during TLS profile changes</a></li><li class="level-5"><a href="#network-observability-role-based-access-control-for-loki-logs_secure-network-observability-data">Role-based access control for Loki logs</a></li><li class="level-6"><a href="#grant-non-admin-users-cluster-wide-log-access_secure-network-observability-data">Grant non-admin users cluster-wide log access</a></li><li class="level-5"><a href="#network-observability-grant-access-lokistack-secrets_secure-network-observability-data">Grant access to LokiStack secrets</a></li><li class="level-5"><a href="#network-observability-grant-access-kafka-secrets_secure-network-observability-data">Grant access to Kafka secrets</a></li><li class="level-4"><a href="#monitor-network-traffic-with-network-observability-con_monitor-network-traffic-with-network-observability">Monitor network traffic with Network Observability</a></li><li class="level-5"><a href="#network-observability-network-traffic-overview-view_monitor-network-traffic-with-network-observability">Observe the network traffic from the Overview view</a></li><li class="level-6"><a href="#network-observability-working-with-overview_monitor-network-traffic-with-network-observability">Work with the Overview view</a></li><li class="level-6"><a href="#network-observability-configuring-options-overview_monitor-network-traffic-with-network-observability">Advanced options for the Overview view</a></li><li class="level-5"><a href="#network-observability-trafficflow_monitor-network-traffic-with-network-observability">Observe the network traffic from the Traffic flows view</a></li><li class="level-6"><a href="#network-observability-working-with-trafficflow_monitor-network-traffic-with-network-observability">Work with the Traffic flows view</a></li><li class="level-6"><a href="#network-observability-configuring-options-trafficflow_monitor-network-traffic-with-network-observability">Traffic flow display settings</a></li><li class="level-5"><a href="#network-observability-topology_monitor-network-traffic-with-network-observability">Observe the network traffic from the Topology view</a></li><li class="level-6"><a href="#network-observability-working-with-topology_monitor-network-traffic-with-network-observability">Work with the Topology view</a></li><li class="level-6"><a href="#network-observability-configuring-options-topology_monitor-network-traffic-with-network-observability">Configure the advanced options for the Topology view</a></li><li class="level-5"><a href="#network-observability-working-with-conversations_monitor-network-traffic-with-network-observability">Work with conversation tracking</a></li><li class="level-5"><a href="#network-observability-quickfilter_monitor-network-traffic-with-network-observability">Filter the network traffic</a></li><li class="level-5"><a href="#network-observability-viewing-dashboards_monitor-network-traffic-with-network-observability">View network observability metrics dashboards</a></li><li class="level-5"><a href="#network-observability-health-dashboard-overview_monitor-network-observability-operator-health">Health dashboards</a></li><li class="level-6"><a href="#network-observability-health-alert-overview_monitor-network-observability-operator-health">Health alerts</a></li><li class="level-6"><a href="#network-observability-dashboard-view_monitor-network-observability-operator-health">View health information</a></li><li class="level-6"><a href="#network-observability-disable-alerts_monitor-network-observability-operator-health">Disable health alerts</a></li><li class="level-6"><a href="#network-observability-netobserv-dashboard-rate-limit-alerts_monitor-network-observability-operator-health">Create Loki rate limit alerts for the NetObserv dashboard</a></li><li class="level-6"><a href="#network-observability-netobserv-dashboard-ebpf-agent-alerts_monitor-network-observability-operator-health">Use the eBPF agent alert</a></li><li class="level-6"><a href="#nw-status-configuration-network-observability-operator_monitor-network-observability-operator-health">View Network Observability Operator status and configuration</a></li><li class="level-5"><a href="#detect-and-investigate-network-observability-issues-con_detect-and-investigate-network-observability-issues">Detect and investigate Network Observability issues</a></li><li class="level-6"><a href="#network-observability-must-gather_detect-and-investigate-network-observability-issues">Use the must-gather tool</a></li><li class="level-6"><a href="#configure-network-traffic-console_detect-and-investigate-network-observability-issues">Configure network traffic menu entry in the Red Hat OpenShift Container Platform console</a></li><li class="level-6"><a href="#configure-network-traffic-flowlogs-pipeline-kafka_detect-and-investigate-network-observability-issues">Flowlogs-Pipeline does not consume network flows after installing Kafka</a></li><li class="level-6"><a href="#configure-network-traffic-interfaces_detect-and-investigate-network-observability-issues">Failing to see network flows from both br-int and br-ex interfaces</a></li><li class="level-6"><a href="#controller-manager-pod-runs-out-of-memory_detect-and-investigate-network-observability-issues">Network observability controller manager pod runs out of memory</a></li><li class="level-6"><a href="#troubleshooting-query-loki-manually_detect-and-investigate-network-observability-issues">Run custom queries to Loki</a></li><li class="level-6"><a href="#network-observability-troubleshooting-loki-resource-exhausted_detect-and-investigate-network-observability-issues">Troubleshoot Loki ResourceExhausted error</a></li><li class="level-6"><a href="#network-observability-troubleshooting-loki-empty-ring_detect-and-investigate-network-observability-issues">Loki empty ring error</a></li><li class="level-6"><a href="#network-observability-troubleshooting-loki-tenant-rate-limit_detect-and-investigate-network-observability-issues">LokiStack rate limit errors</a></li><li class="level-6"><a href="#network-observability-troubleshooting-large-query-timeout_detect-and-investigate-network-observability-issues">Running a large query results in Loki errors</a></li><li class="level-4"><a href="#network-observability-health-dashboard-overview_verify-security-and-network-observability-operator-health">Health dashboards</a></li><li class="level-5"><a href="#network-observability-health-alert-overview_verify-security-and-network-observability-operator-health">Health alerts</a></li><li class="level-5"><a href="#network-observability-dashboard-view_verify-security-and-network-observability-operator-health">View health information</a></li><li class="level-6"><a href="#network-observability-disable-alerts_verify-security-and-network-observability-operator-health">Disable health alerts</a></li><li class="level-5"><a href="#network-observability-netobserv-dashboard-rate-limit-alerts_verify-security-and-network-observability-operator-health">Create Loki rate limit alerts for the NetObserv dashboard</a></li><li class="level-5"><a href="#network-observability-netobserv-dashboard-ebpf-agent-alerts_verify-security-and-network-observability-operator-health">Use the eBPF agent alert</a></li><li class="level-5"><a href="#network-observability-health-rules-and-performance_verify-security-and-network-observability-operator-health">Identify network issues with automated health rules</a></li><li class="level-6"><a href="#importance-of-network-health-monitoring_verify-security-and-network-observability-operator-health">Importance of network health monitoring</a></li><li class="level-6"><a href="#detection-of-network-issues_verify-security-and-network-observability-operator-health">Automated health monitoring</a></li><li class="level-6"><a href="#network-health-monitoring-workflow_verify-security-and-network-observability-operator-health">Network health monitoring workflow</a></li><li class="level-6"><a href="#network-observability-health-rules-monitoring-and-alerting_verify-security-and-network-observability-operator-health">Detect network issues with automated health rules</a></li><li class="level-5"><a href="#network-observability-health-rule-customization_verify-security-and-network-observability-operator-health">Health rule threshold and grouping customization</a></li><li class="level-6"><a href="#network-observability-health-rules-promql-expressions-metadata_verify-security-and-network-observability-operator-health">Health rule query and metadata reference</a></li><li class="level-6"><a href="#network-observability-configuring-custom-health-rules_verify-security-and-network-observability-operator-health">Configure custom health rules</a></li><li class="level-5"><a href="#network-observability-recording-rules-performance-optimization_verify-security-and-network-observability-operator-health">Performance optimization with recording rules</a></li><li class="level-6"><a href="#network-observability-recording-rules-benefits_verify-security-and-network-observability-operator-health">Optimization benefits</a></li><li class="level-6"><a href="#network-observability-alert-vs-recording-comparison_verify-security-and-network-observability-operator-health">Comparison of rule modes</a></li><li class="level-6"><a href="#network-observability-integrating-recording-rules-with-health-dashboard_verify-security-and-network-observability-operator-health">Integrate recording rules with the health dashboard</a></li><li class="level-6"><a href="#network-observability-configuring-custom-recording-rules_verify-security-and-network-observability-operator-health">Optimize dashboard metrics with recording rules</a></li><li class="level-5"><a href="#network-observability-disable-predefined-rules_verify-security-and-network-observability-operator-health">Disable default rules</a></li><li class="level-4"><a href="#dependency-discovery-61-map-which-services-communicate-with-each-other-con_map-service-communication-dependencies">Map which services communicate with each other</a></li><li class="level-5"><a href="#network-observability-topology_map-service-communication-dependencies">Observe the network traffic from the Topology view</a></li><li class="level-4"><a href="#traffic-analysis-con_traffic-analysis">Traffic analysis</a></li><li class="level-5"><a href="#network-observability-working-with-trafficflow_traffic-analysis">Work with the Traffic flows view</a></li><li class="level-5"><a href="#identify-workloads-generating-highest-traffic-volume-con_identify-workloads-generating-highest-traffic-volume">Identify workloads generating the highest traffic volume</a></li><li class="level-6"><a href="#network-observability-working-with-topology_identify-workloads-generating-highest-traffic-volume">Work with the Topology view</a></li><li class="level-6"><a href="#network-observability-working-with-conversations_identify-workloads-generating-highest-traffic-volume">Work with conversation tracking</a></li><li class="level-6"><a href="#network-observability-metrics_identify-workloads-generating-highest-traffic-volume">Network observability metrics</a></li><li class="level-5"><a href="#network-observability-histogram-trafficflow_detect-sudden-increases-in-bandwidth-utilization">Use the histogram</a></li><li class="level-5"><a href="#analyze-traffic-distribution-across-namespaces-con_analyze-traffic-distribution-across-namespaces">Analyze traffic distribution across namespaces</a></li><li class="level-6"><a href="#network-observability-zones_analyze-traffic-distribution-across-namespaces">Work with availability zones</a></li><li class="level-6"><a href="#network-observability-working-with-topology_analyze-traffic-distribution-across-namespaces">Work with the Topology view</a></li><li class="level-5"><a href="#network-observability-histogram-trafficflow_track-traffic-patterns-over-time-to-identify-trends">Use the histogram</a></li><li class="level-6"><a href="#network-observability-custom-charts-flowmetrics_track-traffic-patterns-over-time-to-identify-trends">Configure custom charts using FlowMetric API</a></li><li class="level-5"><a href="#network-observability-custom-metrics_create-custom-metrics-for-traffic-volume-monitoring">Custom metrics</a></li><li class="level-6"><a href="#network-observability-configuring-custom-metrics_create-custom-metrics-for-traffic-volume-monitoring">Configure custom metrics by using FlowMetric API</a></li><li class="level-6"><a href="#network-observability-configuring-custom-metrics-examples_create-custom-metrics-for-traffic-volume-monitoring">Custom metrics configuration examples</a></li><li class="level-6"><a href="#network-observability-creating-metrics-network-events_create-custom-metrics-for-traffic-volume-monitoring">Create metrics from nested fields in Traffic flows</a></li><li class="level-6"><a href="#network-observability-netobserv-dashboard-high-traffic-alert_create-custom-metrics-for-traffic-volume-monitoring">Create alerts</a></li><li class="level-5"><a href="#build-dashboards-for-traffic-trend-visualization-con_build-dashboards-for-traffic-trend-visualization">Build dashboards for traffic trend visualization</a></li><li class="level-6"><a href="#network-observability-viewing-dashboards_build-dashboards-for-traffic-trend-visualization">View network observability metrics dashboards</a></li><li class="level-6"><a href="#network-observability-custom-charts-flowmetrics_build-dashboards-for-traffic-trend-visualization">Configure custom charts using FlowMetric API</a></li><li class="level-6"><a href="#network-observability-flowmetrics-charts-examples_build-dashboards-for-traffic-trend-visualization">Flowmetric chart configuration examples</a></li><li class="level-5"><a href="#alert-on-unexpected-traffic-surges-or-anomalies-con_alert-on-unexpected-traffic-surges-or-anomalies">Alert on unexpected traffic surges or anomalies</a></li><li class="level-6"><a href="#network-observability-tcp-flag-syn-flood_alert-on-unexpected-traffic-surges-or-anomalies">Detect SYN flooding using the FlowMetric API and TCP flags</a></li><li class="level-6"><a href="#creating-new-alerting-rules_alert-on-unexpected-traffic-surges-or-anomalies">Create new alerting rules</a></li><li class="level-4"><a href="#east-west-traffic-monitoring-con_east-west-traffic-monitoring">East-west traffic monitoring</a></li><li class="level-5"><a href="#network-observability-working-with-conversations_east-west-traffic-monitoring">Work with conversation tracking</a></li><li class="level-5"><a href="#network-observability-zones_east-west-traffic-monitoring">Work with availability zones</a></li><li class="level-5"><a href="#monitor-inter-namespace-communication-patterns-con_monitor-inter-namespace-communication-patterns">Monitor inter-namespace communication patterns</a></li><li class="level-6"><a href="#network-observability-working-with-topology_monitor-inter-namespace-communication-patterns">Work with the Topology view</a></li><li class="level-6"><a href="#network-observability-zones_monitor-inter-namespace-communication-patterns">Work with availability zones</a></li><li class="level-5"><a href="#network-observability-RTT-overview_measure-internal-latency-between-services">Round-Trip Time</a></li><li class="level-6"><a href="#network-observability-RTT_measure-internal-latency-between-services">Work with RTT tracing</a></li><li class="level-5"><a href="#verify-expected-pod-to-pod-connectivity-con_verify-expected-pod-to-pod-connectivity">Verify expected pod-to-pod connectivity</a></li><li class="level-6"><a href="#network-observability-working-with-topology_verify-expected-pod-to-pod-connectivity">Work with the Topology view</a></li><li class="level-6"><a href="#network-observability-working-with-trafficflow_verify-expected-pod-to-pod-connectivity">Work with the Traffic flows view</a></li><li class="level-5"><a href="#identify-cross-namespace-traffic-bottlenecks-con_identify-cross-namespace-traffic-bottlenecks">Identify cross-namespace traffic bottlenecks</a></li><li class="level-6"><a href="#network-observability-zones_identify-cross-namespace-traffic-bottlenecks">Work with availability zones</a></li><li class="level-6"><a href="#network-observability-RTT_identify-cross-namespace-traffic-bottlenecks">Work with RTT tracing</a></li><li class="level-5"><a href="#monitor-internal-traffic-for-security-anomalies-con_monitor-internal-traffic-for-security-anomalies">Monitor internal traffic for security anomalies</a></li><li class="level-6"><a href="#network-observability-tcp-flag-syn-flood_monitor-internal-traffic-for-security-anomalies">Detect SYN flooding using the FlowMetric API and TCP flags</a></li><li class="level-6"><a href="#network-observability-tls-monitoring-overview_monitor-internal-traffic-for-security-anomalies">Transport Layer Security traffic monitoring</a></li><li class="level-6"><a href="#network-observability-enable-tls-tracking_monitor-internal-traffic-for-security-anomalies">Enable Transport Layer Security tracking</a></li><li class="level-6"><a href="#network-observability-analyze-tls-traffic_monitor-internal-traffic-for-security-anomalies">Analyze Transport Layer Security traffic data</a></li><li class="level-6"><a href="#tls-tracking-fields_monitor-internal-traffic-for-security-anomalies">Transport Layer Security tracking fields reference</a></li><li class="level-4"><a href="#egress-monitoring-con_egress-monitoring">Egress monitoring</a></li><li class="level-5"><a href="#identify-external-destination-ip-addresses-and-domains-con_identify-external-destination-ip-addresses-and-domains">Identify external destination IP addresses and domains</a></li><li class="level-6"><a href="#network-observability-working-with-trafficflow_identify-external-destination-ip-addresses-and-domains">Work with the Traffic flows view</a></li><li class="level-6"><a href="#network-observability-dns-tracking_identify-external-destination-ip-addresses-and-domains">Work with DNS tracking</a></li><li class="level-6"><a href="#network-observability-zones_identify-external-destination-ip-addresses-and-domains">Work with availability zones</a></li><li class="level-5"><a href="#track-egress-traffic-volume-by-destination-con_track-egress-traffic-volume-by-destination">Track egress traffic volume by destination</a></li><li class="level-6"><a href="#network-observability-metrics_track-egress-traffic-volume-by-destination">Network observability metrics</a></li><li class="level-6"><a href="#network-observability-working-with-conversations_track-egress-traffic-volume-by-destination">Work with conversation tracking</a></li><li class="level-5"><a href="#monitor-compliance-with-egress-security-policies-con_monitor-compliance-with-egress-security-policies">Monitor compliance with egress security policies</a></li><li class="level-6"><a href="#nw-egress-firewall-view_monitor-compliance-with-egress-security-policies">View an EgressFirewall custom resource (CR)</a></li><li class="level-6"><a href="#network-observability-viewing-network-events_monitor-compliance-with-egress-security-policies">View network events</a></li><li class="level-6"><a href="#network-observability-networking-events-overview_monitor-compliance-with-egress-security-policies">OVN-Kubernetes networking events</a></li><li class="level-5"><a href="#audit-external-data-transfers-for-compliance-con_audit-external-data-transfers-for-compliance">Audit external data transfers for compliance</a></li><li class="level-6"><a href="#network-observability-exporting-traffic-flow-data_audit-external-data-transfers-for-compliance">Export traffic flow data</a></li><li class="level-4"><a href="#network-observability-dns-overview_analyze-dns-resolution-patterns-and-errors">DNS tracking</a></li><li class="level-5"><a href="#network-observability-dns-feature-view_analyze-dns-resolution-patterns-and-errors">DNS feature view</a></li><li class="level-5"><a href="#network-observability-dns-tracking_analyze-dns-resolution-patterns-and-errors">Work with DNS tracking</a></li><li class="level-5"><a href="#network-observability-dns-resolution-analysis-strategic-benefits_analyze-dns-resolution-patterns-and-errors">Strategic benefits of DNS resolution analysis</a></li><li class="level-6"><a href="#dns-flow-enrichment_analyze-dns-resolution-patterns-and-errors">DNS flow enrichment</a></li><li class="level-5"><a href="#network-observability-dns-resolution-analysis-configure_analyze-dns-resolution-patterns-and-errors">Configure DNS domain tracking for network observability</a></li><li class="level-5"><a href="#network-observability-dns-resolution-analysis-reference_analyze-dns-resolution-patterns-and-errors">DNS flow enrichment and analysis reference</a></li><li class="level-6"><a href="#leverage-dns-data-optimization_analyze-dns-resolution-patterns-and-errors">Leverage DNS data for network optimization</a></li><li class="level-6"><a href="#identify-misconfiguration-errors_analyze-dns-resolution-patterns-and-errors">Identify misconfiguration errors</a></li><li class="level-6"><a href="#loki-storage-considerations_analyze-dns-resolution-patterns-and-errors">Loki storage considerations</a></li><li class="level-4"><a href="#anomaly-detection-con_anomaly-detection">Anomaly detection</a></li><li class="level-5"><a href="#network-observability-tcp-flag-syn-flood_anomaly-detection">Detect SYN flooding using the FlowMetric API and TCP flags</a></li><li class="level-5"><a href="#network-observability-health-alert-overview_anomaly-detection">Health alerts</a></li><li class="level-5"><a href="#network-observability-dashboard-view_anomaly-detection">View health information</a></li><li class="level-5"><a href="#network-observability-networking-events-overview_anomaly-detection">OVN-Kubernetes networking events</a></li><li class="level-6"><a href="#network-observability-networking-events-feature-view_anomaly-detection">Network Events feature view</a></li><li class="level-5"><a href="#network-observability-viewing-network-events_anomaly-detection">View network events</a></li><li class="level-5"><a href="#network-observability-working-with-topology_anomaly-detection">Work with the Topology view</a></li><li class="level-4"><a href="#performance-investigation-con_performance-investigation">Performance investigation</a></li><li class="level-5"><a href="#network-observability-RTT-overview_performance-investigation">Round-Trip Time</a></li><li class="level-5"><a href="#network-observability-RTT_performance-investigation">Work with RTT tracing</a></li><li class="level-5"><a href="#network-observability-pktdrop-overview_performance-investigation">Packet drop tracking</a></li><li class="level-6"><a href="#network-observability-pktdrop-feature-view_performance-investigation">Packet Drops feature view</a></li><li class="level-6"><a href="#types-of-packet-drops_performance-investigation">Types of packet drops</a></li><li class="level-5"><a href="#network-observability-packet-drops_performance-investigation">Work with packet drops</a></li><li class="level-5"><a href="#network-observability-histogram-trafficflow_performance-investigation">Use the histogram</a></li><li class="level-5"><a href="#network-observability-RTT-overview_measure-tcp-round-trip-time-rtt-and-latency-trends">Round-Trip Time</a></li><li class="level-6"><a href="#network-observability-RTT_measure-tcp-round-trip-time-rtt-and-latency-trends">Work with RTT tracing</a></li><li class="level-5"><a href="#identify-high-latency-connections-and-slow-endpoints-con_identify-high-latency-connections-and-slow-endpoints">Identify high-latency connections and slow endpoints</a></li><li class="level-6"><a href="#network-observability-RTT_identify-high-latency-connections-and-slow-endpoints">Work with RTT tracing</a></li><li class="level-6"><a href="#network-observability-working-with-conversations_identify-high-latency-connections-and-slow-endpoints">Work with conversation tracking</a></li><li class="level-5"><a href="#network-observability-pktdrop-overview_detect-retransmissions-and-packet-loss-patterns">Packet drop tracking</a></li><li class="level-6"><a href="#network-observability-pktdrop-feature-view_detect-retransmissions-and-packet-loss-patterns">Packet Drops feature view</a></li><li class="level-6"><a href="#types-of-packet-drops_detect-retransmissions-and-packet-loss-patterns">Types of packet drops</a></li><li class="level-6"><a href="#network-observability-packet-drops_detect-retransmissions-and-packet-loss-patterns">Work with packet drops</a></li><li class="level-4"><a href="#network-observability-must-gather_diagnose-network-flow-issues">Use the must-gather tool</a></li><li class="level-5"><a href="#configure-network-traffic-console_diagnose-network-flow-issues">Configure network traffic menu entry in the Red Hat OpenShift Container Platform console</a></li><li class="level-5"><a href="#configure-network-traffic-flowlogs-pipeline-kafka_diagnose-network-flow-issues">Flowlogs-Pipeline does not consume network flows after installing Kafka</a></li><li class="level-6"><a href="#configure-network-traffic-interfaces_diagnose-network-flow-issues">Failing to see network flows from both br-int and br-ex interfaces</a></li><li class="level-6"><a href="#network-observability-health-rules-and-performance_diagnose-network-flow-issues">Identify network issues with automated health rules</a></li><li class="level-5"><a href="#controller-manager-pod-runs-out-of-memory_diagnose-network-flow-issues">Network observability controller manager pod runs out of memory</a></li><li class="level-5"><a href="#troubleshooting-query-loki-manually_diagnose-network-flow-issues">Run custom queries to Loki</a></li><li class="level-5"><a href="#network-observability-troubleshooting-loki-resource-exhausted_diagnose-network-flow-issues">Troubleshoot Loki ResourceExhausted error</a></li><li class="level-5"><a href="#network-observability-troubleshooting-loki-empty-ring_diagnose-network-flow-issues">Loki empty ring error</a></li><li class="level-5"><a href="#network-observability-troubleshooting-loki-tenant-rate-limit_diagnose-network-flow-issues">LokiStack rate limit errors</a></li><li class="level-5"><a href="#network-observability-troubleshooting-large-query-timeout_diagnose-network-flow-issues">Running a large query results in Loki errors</a></li><li class="level-6"><a href="#_additional_resources_12">Additional resources</a></li><li class="level-5"><a href="#network-observability-health-rules-monitoring-and-alerting_investigate-packet-drops">Detect network issues with automated health rules</a></li><li class="level-6"><a href="#network-observability-health-outcomes_investigate-packet-drops">Monitoring outcomes</a></li><li class="level-6"><a href="#network-observability-health-context-tabs_investigate-packet-drops">Network health context tabs</a></li><li class="level-6"><a href="#network-observability-default-rules_investigate-packet-drops">Predefined health rules</a></li><li class="level-6"><a href="#network-observability-enabling-features-for-health-monitoring_investigate-packet-drops">Enable features for health monitoring</a></li><li class="level-5"><a href="#network-observability-operator-stub_run-network-diagnostics-with-netobserv-cli">Network Observability Operator features</a></li><li class="level-6"><a href="#network-observability-netoberv-cli-about_run-network-diagnostics-with-netobserv-cli">Network Observability CLI overview</a></li><li class="level-6"><a href="#network-observability-cli-install_run-network-diagnostics-with-netobserv-cli">Install the Network Observability CLI</a></li><li class="level-6"><a href="#network-observability-cli-capturing-flows_run-network-diagnostics-with-netobserv-cli">Capture flows</a></li><li class="level-6"><a href="#network-observability-cli-capturing-metrics_run-network-diagnostics-with-netobserv-cli">Capture metrics</a></li><li class="level-6"><a href="#network-observability-cli-capturing-packets_run-network-diagnostics-with-netobserv-cli">Capture packets</a></li><li class="level-6"><a href="#network-observability-cli-plaintext-capture-overview_run-network-diagnostics-with-netobserv-cli">Plain text packet capture for OpenSSL encrypted traffic</a></li><li class="level-6"><a href="#network-observability-netobserv-cli-reference_run-network-diagnostics-with-netobserv-cli">Network Observability CLI usage</a></li><li class="level-6"><a href="#network-observability-cli-uninstall_run-network-diagnostics-with-netobserv-cli">Clean the Network Observability CLI</a></li><li class="level-4"><a href="#network-observability-integration-intro_network-observability-integration">Network Observability integration</a></li><li class="level-5"><a href="#network-observability-flowcollector-view_network-observability-integration">View the FlowCollector resource</a></li><li class="level-5"><a href="#network-observability-kafka-option_network-observability-integration">Install Kafka (optional)</a></li><li class="level-5"><a href="#network-observability-flowcollector-kafka-config_network-observability-integration">Configure the FlowCollector resource with Kafka</a></li><li class="level-5"><a href="#network-observability-enriched-flows_network-observability-integration">Export enriched network flow data</a></li><li class="level-5"><a href="#network-observability-exporting-traffic-flow-data_network-observability-integration">Export traffic flow data</a></li><li class="level-5"><a href="#network-observability-enriched-flows_export-flow-data-to-kafka">Export enriched network flow data</a></li><li class="level-6"><a href="#network-observability-flowcollector-kafka-config_export-flow-data-to-kafka">Configure the FlowCollector resource with Kafka</a></li><li class="level-5"><a href="#network-observability-enriched-flows_export-flow-data-to-ipfix">Export enriched network flow data</a></li><li class="level-5"><a href="#network-observability-enriched-flows_export-flow-data-to-opentelemetry">Export enriched network flow data</a></li><li class="level-5"><a href="#network-observability-operator-uninstall_export-flow-data-to-opentelemetry">Uninstall the Network Observability Operator</a></li><li class="level-4"><a href="#network-observability-api-specifications-reference_reference-network-observability-api-specifications">Network observability API specifications</a></li><li class="level-5"><a href="#flowcollector-api_reference-network-observability-api-specifications">FlowCollector API</a></li><li class="level-5"><a href="#flowmetric-api_reference-network-observability-api-specifications">FlowMetric API</a></li><li class="level-5"><a href="#flowcollector-slice-api_reference-network-observability-api-specifications">FlowCollectorSlice API</a></li><li class="level-5"><a href="#network-flows-format_reference-network-observability-api-specifications">Network flows format</a></li><li class="level-5"><a href="#network-observability-cli-usage_reference-network-observability-api-specifications">Network Observability CLI usage</a></li><li class="level-4"><a href="#network-observability-release-notes-con_network-observability-release-notes">Network Observability Operator release notes</a></li><li class="level-5"><a href="#network-observability-operator-release-notes-2-0_network-observability-release-notes">Network Observability Operator 2.0 advisory</a></li><li class="level-5"><a href="#network-observability-operator-release-notes-2-0-new-features-enhancements_network-observability-release-notes">Network Observability Operator 2.0 new features and enhancements</a></li><li class="level-5"><a href="#network-observability-operator-release-notes-2-0-technology-preview_network-observability-release-notes">Network Observability Operator 2.0 Technology Preview features</a></li><li class="level-5"><a href="#network-observability-operator-release-notes-2-0-fixed-issues_network-observability-release-notes">Network Observability Operator 2.0 fixed issues</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="network-observability-operator_understand-network-observability-netobserv">Network Observability Operator</h3>
@@ -1909,6 +1905,36 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </td>
 </tr>
 </table>
+</div>
+<div class="sect4">
+<h5 id="network-observability-dashboards_understand-network-observability-netobserv">Network observability metrics dashboards</h5>
+<div class="paragraph _abstract">
+<p>The network observability dashboards in the Red&#160;Hat OpenShift Container Platform console provide cluster traffic pattern monitoring, metric filtering, and Network Observability Operator health tracking.</p>
+</div>
+<div class="paragraph">
+<p>In the Red&#160;Hat OpenShift Container Platform console on the <strong>Overview</strong> tab, you can view the overall aggregated metrics of the network traffic flow on the cluster. You can choose to display the information by cluster, node, namespace, owner, pod, and service. Filters and display options can further refine the metrics. For more information, see "Observing the network traffic from the Overview view".</p>
+</div>
+<div class="paragraph">
+<p>In <strong>Observe</strong> &#8594; <strong>Dashboards</strong>, the <strong>Netobserv</strong> dashboards provide a quick overview of the network flows in your Red&#160;Hat OpenShift Container Platform cluster. The <strong>Netobserv/Health</strong> dashboard provides metrics about the health of the Operator. For more information, see "Network observability metrics" and "Viewing health information".</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="network-observability-topology-views_understand-network-observability-netobserv">Network observability topology views</h5>
+<div class="paragraph _abstract">
+<p>The network observability topology view in the Red&#160;Hat OpenShift Container Platform console displays a graphical representation of traffic flow between components, which you can refine using various filters and display options.</p>
+</div>
+<div class="paragraph">
+<p>The Red&#160;Hat OpenShift Container Platform console offers the <strong>Topology</strong> tab which represents traffic between the Red&#160;Hat OpenShift Container Platform components as a network graph. You can refine the graph by using the filters and display options. You can access the information for cluster, zone, udn, node, namespace, owner, pod, and service.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="traffic-flow-tables_understand-network-observability-netobserv">Traffic flow tables</h5>
+<div class="paragraph _abstract">
+<p>The <strong>Traffic flow</strong> tables in the Red&#160;Hat OpenShift Container Platform console provide detailed network flow data with filtering options, customizable columns, and tools to analyze connection patterns and troubleshoot issues.</p>
+</div>
+<div class="paragraph">
+<p>The <strong>Traffic flows</strong> tab in the Red&#160;Hat OpenShift Container Platform web console displays the data of the network flows and the amount of traffic.</p>
+</div>
 </div>
 </div>
 <div class="sect3">
@@ -2142,7 +2168,7 @@ lokistack-query-frontend-85c6db4fbd-jm94f           1/1     Running   0         
 <p>If you only want to export flows to a Kafka consumer or IPFIX collector, or you only need dashboard metrics, then you do not need to install Loki or provide storage for Loki. The following table compares available features with and without Loki.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 893. Comparison of feature availability with and without Loki</caption>
+<caption class="title">Table 912. Comparison of feature availability with and without Loki</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -3241,7 +3267,7 @@ spec:
 </ul>
 </div>
 <table id="network-observability-resource-recommendations-table_scale-components-based-on-cluster-size" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 894. Resource recommendations for cluster sizes</caption>
+<caption class="title">Table 913. Resource recommendations for cluster sizes</caption>
 <colgroup>
 <col style="width: 40%;">
 <col style="width: 20%;">
@@ -3349,7 +3375,7 @@ spec:
 </table>
 </div>
 <table class="tableblock frame-all grid-all fit-content">
-<caption class="title">Table 895. Total average resource usage</caption>
+<caption class="title">Table 914. Total average resource usage</caption>
 <colgroup>
 <col>
 <col>
@@ -3659,6 +3685,456 @@ advanced:
 </div>
 </div>
 <div class="sect4">
+<h5 id="network-observability-flowlogs-pipeline-scaling-large-scale-deployment-challenges_optimize-collection-performance-and-resource-usage">Performance challenges in large-scale deployments</h5>
+<div class="paragraph _abstract">
+<p>In large-scale deployments, each <code>flowlogs-pipeline</code> instance independently queries the Kubernetes API server to enrich flows with metadata, resulting in a linear increase in API queries as instances scale.</p>
+</div>
+<div class="paragraph">
+<p>The <code>flowlogs-pipeline</code> component enriches network flow data with Kubernetes metadata, such as pod names, labels, and namespace information. To retrieve this metadata, each <code>flowlogs-pipeline</code> instance independently queries the Kubernetes API server using informers that watch for resource changes.</p>
+</div>
+<div class="sect5">
+<h6 id="api-server-load-at-scale_optimize-collection-performance-and-resource-usage">API server load at scale</h6>
+<div class="paragraph">
+<p>In the default deployment model, the number of API queries increases linearly with the number of <code>flowlogs-pipeline</code> instances:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Each <code>flowlogs-pipeline</code> pod maintains separate informers for pods, nodes, services, and other Kubernetes resources.</p>
+</li>
+<li>
+<p>Every informer establishes a watch connection to the API server.</p>
+</li>
+<li>
+<p>Resource updates are sent independently to each <code>flowlogs-pipeline</code> instance.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For example, in a cluster with 10 <code>flowlogs-pipeline</code> processor pods, the API server handles 10 times the watch connections and update notifications compared to a single instance. As you scale <code>flowlogs-pipeline</code> horizontally to handle increased network traffic, the API server load multiplies accordingly.</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="resource-consumption-patterns_optimize-collection-performance-and-resource-usage">Resource consumption patterns</h6>
+<div class="paragraph">
+<p>This architecture creates several performance challenges:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Memory footprint</dt>
+<dd>
+<p>Each <code>flowlogs-pipeline</code> instance maintains a full in-memory cache of all watched Kubernetes resources. In large clusters with thousands of pods and services, this cache can consume significant memory per instance.</p>
+</dd>
+<dt class="hdlist1">CPU utilization</dt>
+<dd>
+<p>Processing redundant API server updates and maintaining separate caches increases CPU usage across all <code>flowlogs-pipeline</code> pods.</p>
+</dd>
+<dt class="hdlist1">API server impact</dt>
+<dd>
+<p>The cumulative load from multiple <code>flowlogs-pipeline</code> instances can degrade API server performance, potentially affecting other cluster components that depend on the API server for critical operations.</p>
+</dd>
+<dt class="hdlist1">Network bandwidth</dt>
+<dd>
+<p>Duplicate resource updates consume network bandwidth between the API server and <code>flowlogs-pipeline</code> instances.</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>These resource consumption patterns become particularly pronounced in clusters with:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>High pod churn rates where applications frequently scale up and down</p>
+</li>
+<li>
+<p>Large numbers of namespaces and services</p>
+</li>
+<li>
+<p>Multiple <code>flowlogs-pipeline</code> instances deployed to handle high network traffic volumes</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect5">
+<h6 id="network-observability-flowlogs-pipeline-scaling-shared-cache-cluster-stability_optimize-collection-performance-and-resource-usage">How the shared cache improves cluster stability</h6>
+<div class="paragraph _abstract">
+<p>The <code>flowlogs-pipeline</code> shared cache architecture improves cluster stability and performance in large-scale deployments by centralizing metadata retrieval.</p>
+</div>
+<div class="paragraph">
+<p>In the default deployment model, each <code>flowlogs-pipeline</code> (<code>flowlogs-pipeline</code>) instance independently queries the Kubernetes API server to enrich network flows with cluster metadata, such as pod names and labels. At scale, this can result in a high volume of redundant requests that impact the API server performance.</p>
+</div>
+<div class="paragraph">
+<p>When you enable the shared cache, a centralized component queries the API server and shares the cached metadata with all <code>flowlogs-pipeline</code> instances.</p>
+</div>
+<div class="sect6">
+<h7 id="shared-cache-high-availability_optimize-collection-performance-and-resource-usage">High availability with leader election</h7>
+<div class="paragraph">
+<p>The shared cache architecture uses leader election to ensure continuous operation when multiple replicas are deployed. Among the cache replicas, one pod is elected as the active leader that queries the Kubernetes API server and distributes updates. The remaining replicas remain on standby.</p>
+</div>
+<div class="paragraph">
+<p>If the leader pod fails or is terminated, the remaining replicas automatically elect a new leader, typically within seconds. During this change, flow enrichment continues using cached metadata, though new resource changes might not be reflected until the new leader is established.</p>
+</div>
+<div class="paragraph">
+<p>The Operator enforces a minimum of 2 replicas to ensure high availability. Deploying only a single replica creates a single point of failure where flow enrichment would be lost if that pod becomes unavailable.</p>
+</div>
+</div>
+<div class="sect6">
+<h7 id="when-to-use-shared-cache_optimize-collection-performance-and-resource-usage">When to use the shared cache</h7>
+<div class="paragraph">
+<p>Enable the shared cache architecture in environments with any of the following characteristics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>High pod churn rates where applications scale often.</p>
+</li>
+<li>
+<p>Large numbers of namespaces and services.</p>
+</li>
+<li>
+<p>Many <code>flowlogs-pipeline</code> instances deployed to handle high network traffic volumes.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect6">
+<h7 id="shared-cache-considerations_optimize-collection-performance-and-resource-usage">Considerations</h7>
+<div class="paragraph">
+<p>Before modifying the shared cache configuration, consider the following trade-offs:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Data freshness: There might be a minor delay in flow enrichment updates as metadata propagates from the API server through the cache to the <code>flowlogs-pipeline</code> instances.</p>
+</li>
+<li>
+<p>Cluster-wide memory: While individual <code>flowlogs-pipeline</code> pods consume fewer resources, the addition of shared cache replicas increases the total memory allocated to the network observability namespace.</p>
+</li>
+<li>
+<p>Port allocation: The shared cache uses port <code>9402</code> for internal gRPC communication between the informer cache proxy and <code>flowlogs-pipeline</code> instances.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="network-observability-flowlogs-pipeline-reducing-api-server-load-in-large-clusters_optimize-collection-performance-and-resource-usage">Reduce API server load in large clusters</h6>
+<div class="paragraph _abstract">
+<p>To reduce Kubernetes API server load and optimize resource consumption in large clusters, enable the <code>flowlogs-pipeline</code> shared cache. The shared cache is recommended for clusters with more than 3 <code>flowlogs-pipeline</code> replicas, especially when API server load becomes a performance concern.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>The Network Observability Operator is installed.</p>
+</li>
+<li>
+<p>Access to the cluster as a user with the <code>cluster-admin</code> role.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>In the Red&#160;Hat OpenShift Container Platform web console, navigate to <strong>Operators</strong> → <strong>Installed Operators</strong>.</p>
+</li>
+<li>
+<p>Select the <strong>Network Observability Operator</strong>, and then click the <strong><code>FlowCollector</code></strong> tab.</p>
+</li>
+<li>
+<p>Click the <code>cluster</code> instance, and then click the <strong>YAML</strong> tab.</p>
+</li>
+<li>
+<p>In the <code>spec.processor</code> section, set the <code>informerCacheProxy</code> configuration to enable the shared cache by using the following example:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: flows.netobserv.io/v1beta2
+kind: FlowCollector
+metadata:
+  name: cluster
+spec:
+  processor:
+    informerCacheProxy:
+      enabled: true
+      replicas: 2</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>spec.processor.informerCacheProxy.enabled</code></dt>
+<dd>
+<p>Set to <code>true</code> to enable the informer cache proxy. The default value is <code>false</code>.</p>
+</dd>
+<dt class="hdlist1"><code>spec.processor.informerCacheProxy.replicas</code></dt>
+<dd>
+<p>Specifies the number of replicas. For high availability in production environments, the minimum is <code>2</code>. The Operator enforces this requirement with leader election to prevent a single point of failure.</p>
+</dd>
+</dl>
+</div>
+</li>
+<li>
+<p>Click <strong>Save</strong>.</p>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<div class="title">Verification</div>
+<ol class="arabic">
+<li>
+<p>Navigate to <strong>Workloads</strong> → <strong>Pods</strong>.</p>
+</li>
+<li>
+<p>Ensure that the pods beginning with <code>flowlogs-pipeline-informers</code> are in the <strong>Running</strong> state.</p>
+</li>
+<li>
+<p>Verify that one pod shows as the active leader by checking the pod logs for leader election messages.</p>
+</li>
+<li>
+<p>Confirm that the <code>flowlogs-pipeline</code> pods remain <strong>Running</strong> and show decreased CPU and memory use in the <strong>Metrics</strong> tab.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect5">
+<h6 id="network-observability-flowlogs-pipeline-shared-cache-parameters_optimize-collection-performance-and-resource-usage">Shared cache configuration parameters</h6>
+<div class="paragraph _abstract">
+<p>Use the <code>FlowCollector</code> informer parameters to configure how the <code>flowlogs-pipeline</code> queries metadata from the Kubernetes API server, including cache settings and resource selection.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The shared cache feature uses centralized Kubernetes informers. Configure this feature in the <code>spec.processor.informerCacheProxy</code> field of the <code>FlowCollector</code> custom resource.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 915. Shared cache parameters</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 41.6668%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Default</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>enabled</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Boolean</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enables the shared cache architecture to centralize Kubernetes API metadata retrieval. When enabled, a dedicated <code>flowlogs-pipeline-informers</code> deployment queries the Kubernetes API server and distributes cached metadata to all <code>flowlogs-pipeline</code> instances through gRPC on port <code>9402</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>replicas</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>2</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The number of shared cache pods to deploy. The minimum value is <code>2</code> to ensure high availability with leader election. The Operator enforces this requirement.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>resources</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Object</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">See <code>FlowCollector</code> API</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Configures CPU and memory resource requests and limits for the shared cache pods. Specify <code>requests.cpu</code>, <code>requests.memory</code>, <code>limits.cpu</code>, and <code>limits.memory</code> according to your cluster size and performance requirements.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>advanced.resyncInterval</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Duration</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>60</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The interval, in seconds, at which the informer cache proxy rediscovers <code>flowlogs-pipeline</code> processor pods and synchronizes their state.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>advanced.batchSize</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>100</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The number of cache update events to batch together before sending to <code>flowlogs-pipeline</code> instances. Larger batches improve efficiency but increase latency for metadata updates.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>advanced.sendTimeout</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Duration</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>10</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The maximum time to wait when sending cache updates to <code>flowlogs-pipeline</code> instances. If a send operation exceeds this timeout, the system retries the update.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>advanced.updateBufferSize</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>100</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The size of the internal buffer queue for cache updates. Increase this value in high-churn environments where Kubernetes resources change often.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect5">
+<h6 id="network-observability-flowlogs-pipeline-resolving-shared-cache-performance-issues_optimize-collection-performance-and-resource-usage">Resolve shared cache performance issues</h6>
+<div class="paragraph _abstract">
+<p>Troubleshoot shared cache component failures by verifying pod health, reviewing system logs, and confirming leader election status to restore cluster performance.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You have installed the Network Observability Operator.</p>
+</li>
+<li>
+<p>You have access to the cluster as a user with the <code>cluster-admin</code> role.</p>
+</li>
+<li>
+<p>The shared cache architecture is enabled in your <code>FlowCollector</code> configuration.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Check the status of the shared cache pods by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get pods -n netobserv -l app=flowlogs-pipeline-informers</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">NAME                             READY   STATUS    RESTARTS   AGE
+flowlogs-pipeline-informers-7d9f8b5c4d-abc12   1/1     Running   0          5m
+flowlogs-pipeline-informers-7d9f8b5c4d-xyz34   1/1     Running   0          5m</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Ensure all pods show <code>Running</code> status. If pods are in <code>CrashLoopBackOff</code> or <code>Error</code> status, proceed to examine the logs.</p>
+</div>
+</li>
+<li>
+<p>Identify the current leader pod:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc logs -n netobserv -l app=flowlogs-pipeline-informers --tail=50 | grep -i "leader"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Look for log entries indicating leader election status. Ensure that only one pod reports itself as the active leader.</p>
+</div>
+</li>
+<li>
+<p>View detailed logs from the leader pod to diagnose issues:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc logs -n netobserv &lt;flowlogs_pipeline_informers_pod_name&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Common issues to look for:</p>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p><strong>API server connection failures</strong>: Error messages indicating inability to connect to the Kubernetes API server suggest network or RBAC permission issues.</p>
+</li>
+<li>
+<p><strong>gRPC communication errors</strong>: Messages about failed connections on port <code>9402</code> indicate <code>flowlogs-pipeline</code> instances cannot reach the shared cache.</p>
+</li>
+<li>
+<p><strong>Leader election conflicts</strong>: If multiple pods claim to be the leader, there might be a configuration issue with leader election.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>Verify that <code>flowlogs-pipeline</code> instances are receiving cache updates:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc logs -n netobserv -l app=flowlogs-pipeline --tail=100 | grep -i "k8scache"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>flowlogs-pipeline</code> pods show successful connection messages to the shared cache on port <code>9402</code>.</p>
+</div>
+</li>
+<li>
+<p>Check the shared cache service:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get svc -n netobserv flowlogs-pipeline-k8scache</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Verify that the service exists and is routing to the correct pods.</p>
+</div>
+</li>
+<li>
+<p>If the shared cache is not functioning correctly, check for RBAC permission issues:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc describe clusterrolebinding netobserv-informers</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>ClusterRoleBinding</code> grants the <code>flowlogs-pipeline-informers</code> <code>ServiceAccount</code> the necessary permissions to watch Kubernetes resources.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<div class="title">Verification</div>
+<ol class="arabic">
+<li>
+<p>After you resolve issues, complete the following verification steps:</p>
+<div class="openblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Confirm all shared cache pods are running and healthy.</p>
+</li>
+<li>
+<p>Verify that one pod shows as the active leader in the logs.</p>
+</li>
+<li>
+<p>Check that <code>flowlogs-pipeline</code> pods successfully connect to the shared cache.</p>
+</li>
+<li>
+<p>Monitor flow enrichment in the network observability console to ensure metadata is displayed correctly on network flows.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="ulist _additional-resources">
+<div class="title">Additional resources</div>
+<ul>
+<li>
+<p><a href="https://kubernetes.io/docs/concepts/architecture/leases/">Kubernetes leader election and leases</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect4">
 <h5 id="network-observability-kafka-compression-benefits_optimize-collection-performance-and-resource-usage">Kafka compression benefits for network flow telemetry</h5>
 <div class="paragraph _abstract">
 <p>Enable Kafka compression for flow records to optimize network traffic. This configuration reduces network bandwidth consumption while increasing the CPU load on the eBPF agent.</p>
@@ -3804,7 +4280,7 @@ spec:
 <p>This reference applies to compression configured in both <code>spec.kafka.compression</code> for flow collection and <code>spec.exporters</code> for flow export.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 896. Kafka compression codec comparison</caption>
+<caption class="title">Table 916. Kafka compression codec comparison</caption>
 <colgroup>
 <col style="width: 14.2857%;">
 <col style="width: 14.2857%;">
@@ -4058,7 +4534,7 @@ spec:
 <p>The query language uses the following syntax:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 897. Query language syntax</caption>
+<caption class="title">Table 917. Query language syntax</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -4157,7 +4633,7 @@ spec:
 <p>Reference the required and optional parameters for configuring flow filter rules in the <code>FlowCollector</code> resource, including CIDR ranges, filter actions, protocols, and specific port configurations.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 898. Required configuration parameters</caption>
+<caption class="title">Table 918. Required configuration parameters</caption>
 <colgroup>
 <col style="width: 27.2727%;">
 <col style="width: 72.7273%;">
@@ -4251,7 +4727,7 @@ spec:
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 899. Optional configuration parameters</caption>
+<caption class="title">Table 919. Optional configuration parameters</caption>
 <colgroup>
 <col style="width: 27.2727%;">
 <col style="width: 72.7273%;">
@@ -4658,7 +5134,7 @@ spec:
 <p>Here is a list of all available filter keys:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 900. Filter keys</caption>
+<caption class="title">Table 920. Filter keys</caption>
 <colgroup>
 <col style="width: 9.0909%;">
 <col style="width: 9.0909%;">
@@ -7529,24 +8005,7 @@ spec:
 <dl>
 <dt class="hdlist1"><code>spec.processor.service.tlsType</code></dt>
 <dd>
-<p>Specifies the TLS configuration mode:</p>
-<div class="openblock">
-<div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p><code>Auto</code> (default): Communications are automatically secured by using OpenShift service CA annotations. This provides TLS encryption with zero configuration.</p>
-</li>
-<li>
-<p><code>Disabled</code>: TLS is disabled. Communications between agents and FLP are not encrypted. Use this option only in development or testing environments.</p>
-</li>
-<li>
-<p><code>Provided</code>: You provide your own certificates for TLS or mutual TLS. This option requires additional configuration by using the <code>caFile</code>, <code>serverCert</code>, and <code>clientCert</code> fields. When <code>clientCert</code> is omitted, TLS is configured rather than mTLS.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
+<p>Specifies the TLS configuration mode. The default value, <code>Auto</code>, secures communications automatically by using OpenShift service CA annotations with zero configuration required. <code>Disabled</code> turns off TLS encryption; use only in development or testing environments. <code>Provided</code> lets you supply your own certificates for TLS or mutual TLS by using the <code>caFile</code>, <code>serverCert</code>, and <code>clientCert</code> fields. When <code>clientCert</code> is omitted, TLS is configured rather than mTLS</p>
 </dd>
 <dt class="hdlist1"><code>spec.processor.service.providedCertificates.caFile.type</code></dt>
 <dd>
@@ -10069,7 +10528,7 @@ spec:
 <p>The optional <code>netobserv_io_network_health</code> annotation is a JSON string that controls how the alert renders on the <strong>Network Health</strong> page.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 901. Fields for the <code>netobserv_io_network_health</code> annotation</caption>
+<caption class="title">Table 921. Fields for the <code>netobserv_io_network_health</code> annotation</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -10325,7 +10784,7 @@ spec:
 <div class="openblock">
 <div class="content">
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 902. Fields for the <code>netobserv_io_network_health</code> annotation in recording rules</caption>
+<caption class="title">Table 922. Fields for the <code>netobserv_io_network_health</code> annotation in recording rules</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -10522,893 +10981,12 @@ spec:
 </div>
 </div>
 <div class="sect3">
-<h4 id="network-observability-operator_network-flow-visibility">Network Observability Operator</h4>
-<div class="paragraph _abstract">
-<p>The Network Observability Operator monitors and analyzes cluster network traffic by deploying eBPF-based flow collection that captures, enriches, and stores network data for troubleshooting and performance analysis.</p>
-</div>
-<div class="paragraph">
-<p>A <code>FlowCollector</code> instance deploys pods and services that form a monitoring pipeline.</p>
-</div>
-<div class="paragraph">
-<p>The <code>eBPF</code> agent is deployed as a <code>daemonset</code> object and creates the network flows. The pipeline collects and enriches network flows with Kubernetes metadata before storing them in Loki or generating Prometheus metrics.</p>
-</div>
-<div class="sect4">
-<h5 id="network-observability-openshift-console-integration_network-flow-visibility">Red&#160;Hat OpenShift Container Platform console integration</h5>
-<div class="paragraph _abstract">
-<p>The Network Observability Operator integrates with the Red&#160;Hat OpenShift Container Platform console to visualize and analyze network traffic through views that display traffic overviews, topology graphs, and detailed flow tables for troubleshooting connectivity issues.</p>
-</div>
-<div class="paragraph">
-<p>The Network observability metrics dashboards in <strong>Observe</strong> &#8594; <strong>Dashboards</strong> are available only to users with administrator access.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>To enable multi-tenancy for developer access and for administrators with limited access to namespaces, you must specify permissions by defining roles. For more information, see "Enabling multi-tenancy in network observability".</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="sect5">
-<h6 id="network-observability-dashboards_network-flow-visibility">Network observability metrics dashboards</h6>
-<div class="paragraph _abstract">
-<p>The network observability dashboards in the Red&#160;Hat OpenShift Container Platform console provide cluster traffic pattern monitoring, metric filtering, and Network Observability Operator health tracking.</p>
-</div>
-<div class="paragraph">
-<p>In the Red&#160;Hat OpenShift Container Platform console on the <strong>Overview</strong> tab, you can view the overall aggregated metrics of the network traffic flow on the cluster. You can choose to display the information by cluster, node, namespace, owner, pod, and service. Filters and display options can further refine the metrics. For more information, see "Observing the network traffic from the Overview view".</p>
-</div>
-<div class="paragraph">
-<p>In <strong>Observe</strong> &#8594; <strong>Dashboards</strong>, the <strong>Netobserv</strong> dashboards provide a quick overview of the network flows in your Red&#160;Hat OpenShift Container Platform cluster. The <strong>Netobserv/Health</strong> dashboard provides metrics about the health of the Operator. For more information, see "Network observability metrics" and "Viewing health information".</p>
-</div>
-</div>
-<div class="sect5">
-<h6 id="network-observability-topology-views_network-flow-visibility">Network observability topology views</h6>
-<div class="paragraph _abstract">
-<p>The network observability topology view in the Red&#160;Hat OpenShift Container Platform console displays a graphical representation of traffic flow between components, which you can refine using various filters and display options.</p>
-</div>
-<div class="paragraph">
-<p>The Red&#160;Hat OpenShift Container Platform console offers the <strong>Topology</strong> tab which represents traffic between the Red&#160;Hat OpenShift Container Platform components as a network graph. You can refine the graph by using the filters and display options. You can access the information for cluster, zone, udn, node, namespace, owner, pod, and service.</p>
-</div>
-</div>
-<div class="sect5">
-<h6 id="traffic-flow-tables_network-flow-visibility">Traffic flow tables</h6>
-<div class="paragraph _abstract">
-<p>The <strong>Traffic flow</strong> tables in the Red&#160;Hat OpenShift Container Platform console provide detailed network flow data with filtering options, customizable columns, and tools to analyze connection patterns and troubleshoot issues.</p>
-</div>
-<div class="paragraph">
-<p>The <strong>Traffic flows</strong> tab in the Red&#160;Hat OpenShift Container Platform web console displays the data of the network flows and the amount of traffic.</p>
-</div>
-</div>
-</div>
-<div class="sect4">
-<h5 id="network-observability-network-traffic-overview-view_network-flow-visibility">Observe the network traffic from the Overview view</h5>
-<div class="paragraph _abstract">
-<p>Use the Network Traffic <strong>Overview</strong> view to monitor aggregated flow metrics, troubleshoot cluster connectivity, and detect unusual traffic patterns.</p>
-</div>
-<div class="paragraph">
-<p>The <strong>Overview</strong> view shows aggregate network traffic in your Red&#160;Hat OpenShift Container Platform cluster, allowing you to see which applications are communicating and the volume of data being transferred. It provides detailed insights by source, destination, and flow type, along with the top traffic flows and average byte rates.</p>
-</div>
-<div class="paragraph">
-<p>As an administrator, you can troubleshoot connectivity issues, detect unusual traffic patterns, and optimize application performance. It provides a quick overview of network behavior, making it easier to prioritize actions and ensure efficient resource usage.</p>
-</div>
-<div class="sect5">
-<h6 id="network-observability-working-with-overview_network-flow-visibility">Work with the Overview view</h6>
-<div class="paragraph _abstract">
-<p>Navigate to the network traffic <strong>Overview</strong> view in the Red&#160;Hat OpenShift Container Platform console to visualize flow rate statistics and customize the display scope for monitoring cluster network activity.</p>
-</div>
-<div class="ulist">
-<div class="title">Prerequisite</div>
-<ul>
-<li>
-<p>Access to the cluster with administrator rights.</p>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Navigate to <strong>Observe</strong> → <strong>Network Traffic</strong>.</p>
-</li>
-<li>
-<p>In the <strong>Network Traffic</strong> page, click the <strong>Overview</strong> tab.</p>
-</li>
-<li>
-<p>Optional: When analyzing specific network features, select a preconfigured feature view from the view selector to instantly display feature-specific panels and columns.</p>
-</li>
-<li>
-<p>Click the menu icon to configure the scope of each flow rate data.</p>
-</li>
-</ol>
-</div>
-</div>
-</div>
-<div class="sect4">
-<h5 id="network-observability-trafficflow_network-flow-visibility">Observe the network traffic from the Traffic flows view</h5>
-<div class="paragraph _abstract">
-<p>Use the <strong>Traffic flows</strong> view to monitor cluster network communication, audit eBPF flow data, validate network policies, and export metrics for external analysis.</p>
-</div>
-<div class="paragraph">
-<p>The <strong>Traffic flows</strong> view in the Network Observability Operator provides a granular, tabular representation of network activity across a Red&#160;Hat OpenShift Container Platform cluster. By leveraging eBPF technology to collect flow data, this view allows administrators to monitor real-time and historical communication between pods, services, and nodes. This visibility is essential for auditing network traffic, validating network policies, and identifying unexpected communication patterns within the cluster infrastructure.</p>
-</div>
-<div class="paragraph">
-<p>In the <strong>Traffic flows</strong> interface, you can analyze specific connection details by interacting with individual rows to retrieve detailed flow information. The view supports advanced customization through the <strong>Display options</strong> menu, where you can adjust row density and manage columns. By selecting and reordering specific columns, you can tailor the table to highlight the most relevant data points for your environment, such as source and destination endpoints or traffic volume.</p>
-</div>
-<div class="paragraph">
-<p>To support external analysis and reporting, the <strong>Traffic flows</strong> view includes data export capabilities. You can export the entire dataset or select specific fields to generate a targeted report of network activity. This functionality ensures that network flow data is accessible for long-term auditing or for use in third-party monitoring tools, providing a flexible way to document and analyze the network health of your Red&#160;Hat OpenShift Container Platform environment.</p>
-</div>
-<div class="sect5">
-<h6 id="network-observability-working-with-trafficflow_network-flow-visibility">Work with the Traffic flows view</h6>
-<div class="paragraph _abstract">
-<p>View and analyze detailed network flow information in the <strong>Traffic flows</strong> table to troubleshoot connectivity issues and monitor traffic patterns between cluster components.</p>
-</div>
-<div class="paragraph">
-<p>As an administrator, you can navigate to <strong>Traffic flows</strong> table to see network flow information.</p>
-</div>
-<div class="ulist">
-<div class="title">Prerequisite</div>
-<ul>
-<li>
-<p>You have administrator access.</p>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Navigate to <strong>Observe</strong> → <strong>Network Traffic</strong>.</p>
-</li>
-<li>
-<p>In the <strong>Network Traffic</strong> page, click the <strong>Traffic flows</strong> tab.</p>
-</li>
-<li>
-<p>Click on each row to get the corresponding flow information.</p>
-</li>
-</ol>
-</div>
-</div>
-</div>
-<div class="sect4">
-<h5 id="network-observability-topology_network-flow-visibility">Observe the network traffic from the Topology view</h5>
-<div class="paragraph _abstract">
-<p>Use the <strong>Topology</strong> view in the <strong>Network Traffic</strong> page to visualize network flows, track traffic volume, and monitor relationships across cluster components.</p>
-</div>
-<div class="paragraph">
-<p>The visualization represents network entities as nodes and traffic flows as edges. By selecting individual components within the graph, you can access a side panel containing specific metrics and health details for that resource. This interactive approach allows for rapid identification of traffic patterns and connectivity issues within the cluster.</p>
-</div>
-<div class="paragraph">
-<p>To manage complex environments, the <strong>Topology</strong> view includes advanced configuration options that allow you to customize the layout and data density. You can adjust the <strong>Scope</strong> of the view, apply <strong>Groups</strong> to represent resource ownership, and choose different <strong>Layout</strong> algorithms to optimize the graphical display. Additionally, you can enable <strong>Edge labels</strong> to show real-time measurements, such as the average byte rate, directly on the flow lines.</p>
-</div>
-<div class="paragraph">
-<p>For reporting or external analysis, the <strong>Topology</strong> view provides an export feature. You can download the current graphical representation as a PNG image or generate a direct link to the specific view configuration to share with other administrators. These tools ensure that network insights are both accessible and easily documented.</p>
-</div>
-<div class="sect5">
-<h6 id="network-observability-working-with-topology_network-flow-visibility">Work with the Topology view</h6>
-<div class="paragraph _abstract">
-<p>Access the <strong>Topology</strong> view to visually inspect cluster network relationships and select individual components to view detailed traffic metrics and metadata.</p>
-</div>
-<div class="paragraph">
-<p>As an administrator, you can navigate to the <strong>Topology</strong> view to see the details and metrics of the component.</p>
-</div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>You have administrator access.</p>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Navigate to <strong>Observe</strong> → <strong>Network Traffic</strong>.</p>
-</li>
-<li>
-<p>In the <strong>Network Traffic</strong> page, click the <strong>Topology</strong> tab.</p>
-</li>
-<li>
-<p>Click each component in the <strong>Topology</strong> tab to view its details and metrics.</p>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect5">
-<h6 id="network-observability-configuring-options-topology_network-flow-visibility">Configure the advanced options for the Topology view</h6>
-<div class="paragraph _abstract">
-<p>The <strong>Topology</strong> view provides advanced options that let you customize display settings, configure component grouping and layouts, and export the network graph as an image.</p>
-</div>
-<div class="paragraph">
-<p>You can customize and export the view by using <strong>Show advanced options</strong>. The advanced options view has the following features:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Find in view</strong>: To search the required components in the view.</p>
-</li>
-<li>
-<p><strong>Display options</strong>: To configure the following options:</p>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Edge labels</strong>: To show the specified measurements as edge labels. The default is to show the <strong>Average rate</strong> in <strong>Bytes</strong>.</p>
-</li>
-<li>
-<p><strong>Scope</strong>: To select the scope of components between which the network traffic flows. The default value is <strong>Namespace</strong>.</p>
-</li>
-<li>
-<p><strong>Groups</strong>: To enhance the understanding of ownership by grouping the components. The default value is <strong>None</strong>.</p>
-</li>
-<li>
-<p><strong>Layout</strong>: To select the layout of the graphical representation. The default value is <strong>ColaNoForce</strong>.</p>
-</li>
-<li>
-<p><strong>Show</strong>: To select the details that need to be displayed. All the options are checked by default. The options available are: <strong>Edges</strong>, <strong>Edges label</strong>, and <strong>Badges</strong>.</p>
-</li>
-<li>
-<p><strong>Truncate labels</strong>: To select the required width of the label from the drop-down list. The default value is <strong>M</strong>.</p>
-</li>
-<li>
-<p><strong>Collapse groups</strong>: To expand or collapse the groups. The groups are expanded by default. This option is disabled if <strong>Groups</strong> has the value of <strong>None</strong>.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="sect6">
-<h7 id="network-observability-cao-export-topology_network-flow-visibility">Exporting the topology view</h7>
-<div class="paragraph">
-<p>To export the view, click <strong>Export topology view</strong>. The view is downloaded in PNG format.</p>
-</div>
-</div>
-</div>
-<div class="sect5">
-<h6 id="network-observability-working-with-conversations_network-flow-visibility">Work with conversation tracking</h6>
-<div class="paragraph _abstract">
-<p>Configure the <code>FlowCollector</code> custom resource to enable conversation tracking for grouping and analyzing related network flows in the web console.</p>
-</div>
-<div class="paragraph">
-<p>As an administrator, you can group network flows that are part of the same conversation. A conversation is defined as a grouping of peers that are identified by their IP addresses, ports, and protocols, resulting in an unique <strong>Conversation Id</strong>. You can query conversation events in the web console. These events are represented in the web console as follows:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Conversation start</strong>: This event happens when a connection is starting or TCP flag intercepted</p>
-</li>
-<li>
-<p><strong>Conversation tick</strong>: This event happens at each specified interval defined in the <code>FlowCollector</code> <code>spec.processor.conversationHeartbeatInterval</code> parameter while the connection is active.</p>
-</li>
-<li>
-<p><strong>Conversation end</strong>: This event happens when the <code>FlowCollector</code> <code>spec.processor.conversationEndTimeout</code> parameter is reached or  the TCP flag is intercepted.</p>
-</li>
-<li>
-<p><strong>Flow</strong>: This is the network traffic flow that occurs within the specified interval.</p>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>In the web console, navigate to <strong>Ecosystem</strong> &#8594; <strong>Installed Operators</strong>.</p>
-</li>
-<li>
-<p>Under the <strong>Provided APIs</strong> heading for the <strong>NetObserv Operator</strong>, select <strong>Flow Collector</strong>.</p>
-</li>
-<li>
-<p>Select <strong>cluster</strong> then select the <strong>YAML</strong> tab.</p>
-</li>
-<li>
-<p>Configure the <code>FlowCollector</code> custom resource so that <code>spec.processor.logTypes</code>, <code>conversationEndTimeout</code>, and <code>conversationHeartbeatInterval</code> parameters are set according to your observation needs. A sample configuration is as follows:</p>
-<div class="listingblock">
-<div class="title">Configure <code>FlowCollector</code> for conversation tracking</div>
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: flows.netobserv.io/v1beta2
-kind: FlowCollector
-metadata:
-  name: cluster
-spec:
- processor:
-  logTypes: Flows
-  advanced:
-   conversationEndTimeout: 10s
-   conversationHeartbeatInterval: 30s</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>where:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>spec.processor.logTypes</code></dt>
-<dd>
-<p>Specifies the types of events to export. When set to <code>Flows</code>, only the Flow event is exported. When set to <code>All</code>, both conversation and flow events are exported and visible in the <strong>Network Traffic</strong> page. To focus only on conversation events, specify <code>Conversations</code> to export <strong>Conversation start</strong>, <strong>Conversation tick</strong>, and <strong>Conversation end</strong> events. To export only the <strong>Conversation end</strong> events, specify <code>EndedConversations</code>. Storage requirements are highest for <code>All</code> and lowest for <code>EndedConversations</code>.</p>
-</dd>
-<dt class="hdlist1"><code>spec.processor.advanced.conversationEndTimeout</code></dt>
-<dd>
-<p>Specifies the duration at which a <strong>Conversation end</strong> event is triggered once the timeout is reached or a TCP flag is intercepted.</p>
-</dd>
-<dt class="hdlist1"><code>spec.processor.advanced.conversationHeartbeatInterval</code></dt>
-<dd>
-<p>Specifies the interval for the <strong>Conversation tick</strong> event while the network connection is active.</p>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>If you update the <code>logType</code> option, the flows from the previous selection do not clear from the console plugin. For example, if you initially set <code>logType</code> to <code>Conversations</code> for a span of time until 10 AM and then move to <code>EndedConversations</code>, the console plugin shows all conversation events before 10 AM and only ended conversations after 10 AM.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</dd>
-</dl>
-</div>
-</li>
-<li>
-<p>Refresh the <strong>Network Traffic</strong> page on the <strong>Traffic flows</strong> tab. Notice there are two new columns, <strong>Event/Type</strong> and <strong>Conversation Id</strong>. All the <strong>Event/Type</strong> fields are <code>Flow</code> when <strong>Flow</strong> is the selected query option.</p>
-</li>
-<li>
-<p>Select <strong>Query Options</strong> and choose the <strong>Log Type</strong>, <strong>Conversation</strong>. Now the <strong>Event/Type</strong> shows all of the desired conversation events.</p>
-</li>
-<li>
-<p>Next you can filter on a specific conversation ID or switch between the <strong>Conversation</strong> and <strong>Flow</strong> log type options from the side panel.</p>
-</li>
-</ol>
-</div>
-</div>
-</div>
-<div class="sect4">
-<h5 id="network-observability-quickfilter_network-flow-visibility">Filter the network traffic</h5>
-<div class="paragraph _abstract">
-<p>The <strong>Network Traffic</strong> view provides query options and filtering parameters that let you optimize data searches, analyze specific log types, and manage directional traffic visibility.</p>
-</div>
-<div class="paragraph">
-<p>By default, the <strong>Network Traffic</strong> page displays the traffic flow data in the cluster based on the default filters configured in the <code>FlowCollector</code> instance. You can use the filter options to observe the required data by changing the preset filter.</p>
-</div>
-<div class="paragraph">
-<p>Alternatively, you can access the traffic flow data in the <strong>Network Traffic</strong> tab of the <strong>Namespaces</strong>, <strong>Services</strong>, <strong>Routes</strong>, <strong>Nodes</strong>, and <strong>Workloads</strong> pages which provide the filtered data of the corresponding aggregations.</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Query Options</dt>
-<dd>
-<p>You can use <strong>Query Options</strong> to optimize the search results, as listed below:</p>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Log Type</strong>: The available options <strong>Conversation</strong> and <strong>Flows</strong> provide the ability to query flows by log type, such as flow log, new conversation, completed conversation, and a heartbeat, which is a periodic record with updates for long conversations. A conversation is an aggregation of flows between the same peers.</p>
-</li>
-<li>
-<p><strong>Match filters</strong>: You can determine the relation between different filter parameters selected in the advanced filter. The available options are <strong>Match all</strong> and <strong>Match any</strong>. <strong>Match all</strong>  provides results that match all the values, and <strong>Match any</strong> provides results that match any of the values entered. The default value is <strong>Match all</strong>.</p>
-</li>
-<li>
-<p><strong>Datasource</strong>: You can choose the datasource to use for queries: <strong>Loki</strong>, <strong>Prometheus</strong>, or <strong>Auto</strong>. Notable performance improvements can be realized when using Prometheus as a datasource rather than Loki, but Prometheus supports a limited set of filters and aggregations. The default datasource is <strong>Auto</strong>, which uses Prometheus on supported queries or uses Loki if the query does not support Prometheus.</p>
-</li>
-<li>
-<p><strong>Drops filter</strong>: You can view different levels of dropped packets with the following query options:</p>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Fully dropped</strong> shows flow records with fully dropped packets.</p>
-</li>
-<li>
-<p><strong>Containing drops</strong> shows flow records that contain drops but can be sent.</p>
-</li>
-<li>
-<p><strong>Without drops</strong> shows records that contain sent packets.</p>
-</li>
-<li>
-<p><strong>All</strong> shows all the aforementioned records.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><strong>Limit</strong>: The data limit for internal backend queries. Depending upon the matching and the filter settings, the number of traffic flow data is displayed within the specified limit.</p>
-</li>
-</ul>
-</div>
-</dd>
-<dt class="hdlist1">Quick filters</dt>
-<dd>
-<p>The default values in <strong>Quick filters</strong> drop-down menu are defined in the <code>FlowCollector</code> configuration. You can modify the options from console.</p>
-</dd>
-<dt class="hdlist1">Advanced filters</dt>
-<dd>
-<p>You can set the advanced filters, <strong>Common</strong>, <strong>Source</strong>, or <strong>Destination</strong>, by selecting the parameter to be filtered from the dropdown list. The flow data is filtered based on the selection. To enable or disable the applied filter, you can click on the applied filter listed below the filter options.</p>
-</dd>
-</dl>
-</div>
-<div class="paragraph">
-<p>You can toggle between <span class="image"><img src="data:image/png;base64," alt="arrow up long solid" width="10"></span> <strong>One way</strong> and <span class="image"><img src="data:image/png;base64," alt="arrow up long solid" width="10"></span> <span class="image"><img src="data:image/png;base64," alt="arrow down long solid" width="10"></span> <strong>Back and forth</strong> filtering. The <span class="image"><img src="data:image/png;base64," alt="arrow up long solid" width="10"></span> <strong>One way</strong> filter shows only <strong>Source</strong> and <strong>Destination</strong> traffic according to your filter selections. You can use <strong>Swap</strong> to change the directional view of the <strong>Source</strong> and <strong>Destination</strong> traffic. The <span class="image"><img src="data:image/png;base64," alt="arrow up long solid" width="10"></span> <span class="image"><img src="data:image/png;base64," alt="arrow down long solid" width="10"></span> <strong>Back and forth</strong> filter includes return traffic with the <strong>Source</strong> and <strong>Destination</strong> filters. The directional flow of network traffic is shown in the <strong>Direction</strong> column in the Traffic flows table as <code>Ingress`or `Egress</code> for inter-node traffic and `Inner`for traffic inside a single node.</p>
-</div>
-<div class="paragraph">
-<p>You can click <strong>Reset defaults</strong> to remove the existing filters, and apply the filter defined in <code>FlowCollector</code> configuration.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>To understand the rules of specifying the text value, click <strong>Learn More</strong>.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</div>
-<div class="sect4">
-<h5 id="network-observability-flowlogs-pipeline-scaling-large-scale-deployment-challenges_network-flow-visibility">Performance challenges in large-scale deployments</h5>
-<div class="paragraph _abstract">
-<p>In large-scale deployments, each <code>flowlogs-pipeline</code> instance independently queries the Kubernetes API server to enrich flows with metadata, resulting in a linear increase in API queries as instances scale.</p>
-</div>
-<div class="paragraph">
-<p>The <code>flowlogs-pipeline</code> component enriches network flow data with Kubernetes metadata, such as pod names, labels, and namespace information. To retrieve this metadata, each <code>flowlogs-pipeline</code> instance independently queries the Kubernetes API server using informers that watch for resource changes.</p>
-</div>
-<div class="sect5">
-<h6 id="api-server-load-at-scale_network-flow-visibility">API server load at scale</h6>
-<div class="paragraph">
-<p>In the default deployment model, the number of API queries increases linearly with the number of <code>flowlogs-pipeline</code> instances:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Each <code>flowlogs-pipeline</code> pod maintains separate informers for pods, nodes, services, and other Kubernetes resources.</p>
-</li>
-<li>
-<p>Every informer establishes a watch connection to the API server.</p>
-</li>
-<li>
-<p>Resource updates are sent independently to each <code>flowlogs-pipeline</code> instance.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>For example, in a cluster with 10 <code>flowlogs-pipeline</code> processor pods, the API server handles 10 times the watch connections and update notifications compared to a single instance. As you scale <code>flowlogs-pipeline</code> horizontally to handle increased network traffic, the API server load multiplies accordingly.</p>
-</div>
-</div>
-<div class="sect5">
-<h6 id="resource-consumption-patterns_network-flow-visibility">Resource consumption patterns</h6>
-<div class="paragraph">
-<p>This architecture creates several performance challenges:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Memory footprint</dt>
-<dd>
-<p>Each <code>flowlogs-pipeline</code> instance maintains a full in-memory cache of all watched Kubernetes resources. In large clusters with thousands of pods and services, this cache can consume significant memory per instance.</p>
-</dd>
-<dt class="hdlist1">CPU utilization</dt>
-<dd>
-<p>Processing redundant API server updates and maintaining separate caches increases CPU usage across all <code>flowlogs-pipeline</code> pods.</p>
-</dd>
-<dt class="hdlist1">API server impact</dt>
-<dd>
-<p>The cumulative load from multiple <code>flowlogs-pipeline</code> instances can degrade API server performance, potentially affecting other cluster components that depend on the API server for critical operations.</p>
-</dd>
-<dt class="hdlist1">Network bandwidth</dt>
-<dd>
-<p>Duplicate resource updates consume network bandwidth between the API server and <code>flowlogs-pipeline</code> instances.</p>
-</dd>
-</dl>
-</div>
-<div class="paragraph">
-<p>These resource consumption patterns become particularly pronounced in clusters with:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>High pod churn rates where applications frequently scale up and down</p>
-</li>
-<li>
-<p>Large numbers of namespaces and services</p>
-</li>
-<li>
-<p>Multiple <code>flowlogs-pipeline</code> instances deployed to handle high network traffic volumes</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect5">
-<h6 id="network-observability-flowlogs-pipeline-scaling-shared-cache-cluster-stability_network-flow-visibility">How the shared cache improves cluster stability</h6>
-<div class="paragraph _abstract">
-<p>The <code>flowlogs-pipeline</code> shared cache architecture improves cluster stability and performance in large-scale deployments by centralizing metadata retrieval.</p>
-</div>
-<div class="paragraph">
-<p>In the default deployment model, each <code>flowlogs-pipeline</code> (<code>flowlogs-pipeline</code>) instance independently queries the Kubernetes API server to enrich network flows with cluster metadata, such as pod names and labels. At scale, this can result in a high volume of redundant requests that impact the API server performance.</p>
-</div>
-<div class="paragraph">
-<p>When you enable the shared cache, a centralized component queries the API server and shares the cached metadata with all <code>flowlogs-pipeline</code> instances.</p>
-</div>
-<div class="sect6">
-<h7 id="shared-cache-high-availability_network-flow-visibility">High availability with leader election</h7>
-<div class="paragraph">
-<p>The shared cache architecture uses leader election to ensure continuous operation when multiple replicas are deployed. Among the cache replicas, one pod is elected as the active leader that queries the Kubernetes API server and distributes updates. The remaining replicas remain on standby.</p>
-</div>
-<div class="paragraph">
-<p>If the leader pod fails or is terminated, the remaining replicas automatically elect a new leader, typically within seconds. During this change, flow enrichment continues using cached metadata, though new resource changes might not be reflected until the new leader is established.</p>
-</div>
-<div class="paragraph">
-<p>The Operator enforces a minimum of 2 replicas to ensure high availability. Deploying only a single replica creates a single point of failure where flow enrichment would be lost if that pod becomes unavailable.</p>
-</div>
-</div>
-<div class="sect6">
-<h7 id="when-to-use-shared-cache_network-flow-visibility">When to use the shared cache</h7>
-<div class="paragraph">
-<p>Enable the shared cache architecture in environments with any of the following characteristics:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>High pod churn rates where applications scale often.</p>
-</li>
-<li>
-<p>Large numbers of namespaces and services.</p>
-</li>
-<li>
-<p>Many <code>flowlogs-pipeline</code> instances deployed to handle high network traffic volumes.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect6">
-<h7 id="shared-cache-considerations_network-flow-visibility">Considerations</h7>
-<div class="paragraph">
-<p>Before modifying the shared cache configuration, consider the following trade-offs:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Data freshness: There might be a minor delay in flow enrichment updates as metadata propagates from the API server through the cache to the <code>flowlogs-pipeline</code> instances.</p>
-</li>
-<li>
-<p>Cluster-wide memory: While individual <code>flowlogs-pipeline</code> pods consume fewer resources, the addition of shared cache replicas increases the total memory allocated to the network observability namespace.</p>
-</li>
-<li>
-<p>Port allocation: The shared cache uses port <code>9402</code> for internal gRPC communication between the informer cache proxy and <code>flowlogs-pipeline</code> instances.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect5">
-<h6 id="network-observability-flowlogs-pipeline-reducing-api-server-load-in-large-clusters_network-flow-visibility">Reduce API server load in large clusters</h6>
-<div class="paragraph _abstract">
-<p>To reduce Kubernetes API server load and optimize resource consumption in large clusters, enable the <code>flowlogs-pipeline</code> shared cache. The shared cache is recommended for clusters with more than 3 <code>flowlogs-pipeline</code> replicas, especially when API server load becomes a performance concern.</p>
-</div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>The Network Observability Operator is installed.</p>
-</li>
-<li>
-<p>Access to the cluster as a user with the <code>cluster-admin</code> role.</p>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>In the Red&#160;Hat OpenShift Container Platform web console, navigate to <strong>Operators</strong> → <strong>Installed Operators</strong>.</p>
-</li>
-<li>
-<p>Select the <strong>Network Observability Operator</strong>, and then click the <strong><code>FlowCollector</code></strong> tab.</p>
-</li>
-<li>
-<p>Click the <code>cluster</code> instance, and then click the <strong>YAML</strong> tab.</p>
-</li>
-<li>
-<p>In the <code>spec.processor</code> section, set the <code>informerCacheProxy</code> configuration to enable the shared cache by using the following example:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: flows.netobserv.io/v1beta2
-kind: FlowCollector
-metadata:
-  name: cluster
-spec:
-  processor:
-    informerCacheProxy:
-      enabled: true
-      replicas: 2</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>where:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>spec.processor.informerCacheProxy.enabled</code></dt>
-<dd>
-<p>Set to <code>true</code> to enable the informer cache proxy. The default value is <code>false</code>.</p>
-</dd>
-<dt class="hdlist1"><code>spec.processor.informerCacheProxy.replicas</code></dt>
-<dd>
-<p>Specifies the number of replicas. For high availability in production environments, the minimum is <code>2</code>. The Operator enforces this requirement with leader election to prevent a single point of failure.</p>
-</dd>
-</dl>
-</div>
-</li>
-<li>
-<p>Click <strong>Save</strong>.</p>
-</li>
-</ol>
-</div>
-<div class="olist arabic">
-<div class="title">Verification</div>
-<ol class="arabic">
-<li>
-<p>Navigate to <strong>Workloads</strong> → <strong>Pods</strong>.</p>
-</li>
-<li>
-<p>Ensure that the pods beginning with <code>flowlogs-pipeline-informers</code> are in the <strong>Running</strong> state.</p>
-</li>
-<li>
-<p>Verify that one pod shows as the active leader by checking the pod logs for leader election messages.</p>
-</li>
-<li>
-<p>Confirm that the <code>flowlogs-pipeline</code> pods remain <strong>Running</strong> and show decreased CPU and memory use in the <strong>Metrics</strong> tab.</p>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect5">
-<h6 id="network-observability-flowlogs-pipeline-shared-cache-parameters_network-flow-visibility">Shared cache configuration parameters</h6>
-<div class="paragraph _abstract">
-<p>Use the <code>FlowCollector</code> informer parameters to configure how the <code>flowlogs-pipeline</code> queries metadata from the Kubernetes API server, including cache settings and resource selection.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>The shared cache feature uses centralized Kubernetes informers. Configure this feature in the <code>spec.processor.informerCacheProxy</code> field of the <code>FlowCollector</code> custom resource.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 903. Shared cache parameters</caption>
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 16.6666%;">
-<col style="width: 16.6666%;">
-<col style="width: 41.6668%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Parameter</th>
-<th class="tableblock halign-left valign-top">Type</th>
-<th class="tableblock halign-left valign-top">Default</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>enabled</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Boolean</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Enables the shared cache architecture to centralize Kubernetes API metadata retrieval. When enabled, a dedicated <code>flowlogs-pipeline-informers</code> deployment queries the Kubernetes API server and distributes cached metadata to all <code>flowlogs-pipeline</code> instances through gRPC on port <code>9402</code>.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>replicas</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>2</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The number of shared cache pods to deploy. The minimum value is <code>2</code> to ensure high availability with leader election. The Operator enforces this requirement.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>resources</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Object</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">See <code>FlowCollector</code> API</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Configures CPU and memory resource requests and limits for the shared cache pods. Specify <code>requests.cpu</code>, <code>requests.memory</code>, <code>limits.cpu</code>, and <code>limits.memory</code> according to your cluster size and performance requirements.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>advanced.resyncInterval</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Duration</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>60</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The interval, in seconds, at which the informer cache proxy rediscovers <code>flowlogs-pipeline</code> processor pods and synchronizes their state.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>advanced.batchSize</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>100</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The number of cache update events to batch together before sending to <code>flowlogs-pipeline</code> instances. Larger batches improve efficiency but increase latency for metadata updates.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>advanced.sendTimeout</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Duration</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>10</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The maximum time to wait when sending cache updates to <code>flowlogs-pipeline</code> instances. If a send operation exceeds this timeout, the system retries the update.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>advanced.updateBufferSize</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>100</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The size of the internal buffer queue for cache updates. Increase this value in high-churn environments where Kubernetes resources change often.</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect5">
-<h6 id="network-observability-flowlogs-pipeline-resolving-shared-cache-performance-issues_network-flow-visibility">Resolve shared cache performance issues</h6>
-<div class="paragraph _abstract">
-<p>Troubleshoot shared cache component failures by verifying pod health, reviewing system logs, and confirming leader election status to restore cluster performance.</p>
-</div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>You have installed the Network Observability Operator.</p>
-</li>
-<li>
-<p>You have access to the cluster as a user with the <code>cluster-admin</code> role.</p>
-</li>
-<li>
-<p>The shared cache architecture is enabled in your <code>FlowCollector</code> configuration.</p>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Check the status of the shared cache pods by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get pods -n netobserv -l app=flowlogs-pipeline-informers</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">NAME                             READY   STATUS    RESTARTS   AGE
-flowlogs-pipeline-informers-7d9f8b5c4d-abc12   1/1     Running   0          5m
-flowlogs-pipeline-informers-7d9f8b5c4d-xyz34   1/1     Running   0          5m</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Ensure all pods show <code>Running</code> status. If pods are in <code>CrashLoopBackOff</code> or <code>Error</code> status, proceed to examine the logs.</p>
-</div>
-</li>
-<li>
-<p>Identify the current leader pod:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc logs -n netobserv -l app=flowlogs-pipeline-informers --tail=50 | grep -i "leader"</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Look for log entries indicating leader election status. Ensure that only one pod reports itself as the active leader.</p>
-</div>
-</li>
-<li>
-<p>View detailed logs from the leader pod to diagnose issues:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc logs -n netobserv &lt;flowlogs_pipeline_informers_pod_name&gt;</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Common issues to look for:</p>
-</div>
-<div class="openblock">
-<div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p><strong>API server connection failures</strong>: Error messages indicating inability to connect to the Kubernetes API server suggest network or RBAC permission issues.</p>
-</li>
-<li>
-<p><strong>gRPC communication errors</strong>: Messages about failed connections on port <code>9402</code> indicate <code>flowlogs-pipeline</code> instances cannot reach the shared cache.</p>
-</li>
-<li>
-<p><strong>Leader election conflicts</strong>: If multiple pods claim to be the leader, there might be a configuration issue with leader election.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</li>
-<li>
-<p>Verify that <code>flowlogs-pipeline</code> instances are receiving cache updates:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc logs -n netobserv -l app=flowlogs-pipeline --tail=100 | grep -i "k8scache"</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><code>flowlogs-pipeline</code> pods show successful connection messages to the shared cache on port <code>9402</code>.</p>
-</div>
-</li>
-<li>
-<p>Check the shared cache service:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get svc -n netobserv flowlogs-pipeline-k8scache</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Verify that the service exists and is routing to the correct pods.</p>
-</div>
-</li>
-<li>
-<p>If the shared cache is not functioning correctly, check for RBAC permission issues:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc describe clusterrolebinding netobserv-informers</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The <code>ClusterRoleBinding</code> grants the <code>flowlogs-pipeline-informers</code> <code>ServiceAccount</code> the necessary permissions to watch Kubernetes resources.</p>
-</div>
-</li>
-</ol>
-</div>
-<div class="olist arabic">
-<div class="title">Verification</div>
-<ol class="arabic">
-<li>
-<p>After you resolve issues, complete the following verification steps:</p>
-<div class="openblock">
-<div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>Confirm all shared cache pods are running and healthy.</p>
-</li>
-<li>
-<p>Verify that one pod shows as the active leader in the logs.</p>
-</li>
-<li>
-<p>Check that <code>flowlogs-pipeline</code> pods successfully connect to the shared cache.</p>
-</li>
-<li>
-<p>Monitor flow enrichment in the network observability console to ensure metadata is displayed correctly on network flows.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</li>
-</ol>
-</div>
-<div class="ulist _additional-resources">
-<div class="title">Additional resources</div>
-<ul>
-<li>
-<p><a href="https://kubernetes.io/docs/concepts/architecture/leases/">Kubernetes leader election and leases</a></p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect4">
-<h5 id="dependency-discovery-61-map-which-services-communicate-with-each-other-con_map-service-communication-dependencies">Map which services communicate with each other</h5>
+<h4 id="dependency-discovery-61-map-which-services-communicate-with-each-other-con_map-service-communication-dependencies">Map which services communicate with each other</h4>
 <div class="paragraph _abstract">
 <p>The Network Observability Topology view draws the observed traffic between workloads as a graph, so you can see which services actually talk to each other rather than which ones are supposed to.</p>
 </div>
-<div class="sect5">
-<h6 id="network-observability-topology_map-service-communication-dependencies">Observe the network traffic from the Topology view</h6>
+<div class="sect4">
+<h5 id="network-observability-topology_map-service-communication-dependencies">Observe the network traffic from the Topology view</h5>
 <div class="paragraph _abstract">
 <p>Use the <strong>Topology</strong> view in the <strong>Network Traffic</strong> page to visualize network flows, track traffic volume, and monitor relationships across cluster components.</p>
 </div>
@@ -11420,7 +10998,6 @@ flowlogs-pipeline-informers-7d9f8b5c4d-xyz34   1/1     Running   0          5m</
 </div>
 <div class="paragraph">
 <p>For reporting or external analysis, the <strong>Topology</strong> view provides an export feature. You can download the current graphical representation as a PNG image or generate a direct link to the specific view configuration to share with other administrators. These tools ensure that network insights are both accessible and easily documented.</p>
-</div>
 </div>
 </div>
 </div>
@@ -13839,7 +13416,7 @@ netobserv-ebpf-agent-abc12              1/1     Running   0          2m</code></
 <p>Transport Layer Security (TLS) metadata fields track and define encryption protocols, protocol versions, and cipher suite data to help you analyze secure network flows.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 904. TLS tracking fields</caption>
+<caption class="title">Table 923. TLS tracking fields</caption>
 <colgroup>
 <col style="width: 14.2857%;">
 <col style="width: 28.5714%;">
@@ -15010,7 +14587,7 @@ spec:
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 905. DNS flow metadata</caption>
+<caption class="title">Table 924. DNS flow metadata</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -17917,7 +17494,7 @@ $ podman rm netobserv-cli</code></pre>
 <div class="sect6">
 <h7 id="cli-basic-commands_run-network-diagnostics-with-netobserv-cli">Basic commands</h7>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 906. Basic commands</caption>
+<caption class="title">Table 925. Basic commands</caption>
 <colgroup>
 <col style="width: 27.2727%;">
 <col style="width: 72.7273%;">
@@ -20002,7 +19579,7 @@ spec:
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="configure-high-performance-networking-con_configure-high-performance-networking.html">Configure high-performance networking</a> | ↑ Up: <a href="_networking.html">Networking</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="private-clusters-about_configure-a-private-cluster.html">About private clusters</a> →</p>
+<p>← Previous: <a href="configure-ptp-clock-synchronization-intro_configure-ptp-clock-synchronization.html">Configure PTP clock synchronization</a> | ↑ Up: <a href="_networking.html">Networking</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="private-clusters-about_configure-a-private-cluster.html">About private clusters</a> →</p>
 </div>
 </div>
 <div id="footnotes">
@@ -20013,7 +19590,7 @@ spec:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-30 09:01:02 -0500
+Last updated 2026-10-30 09:47:16 -0500
 </div>
 </div>
 <style>

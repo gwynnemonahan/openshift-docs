@@ -767,8 +767,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="allocate-gpu-resources-to-pods-con_allocate-gpu-resources-to-pods.html">Allocate GPU resources to pods</a>
 </li>
-<li><a href="allocate-gpus-to-pods-with-a-dra-driver-con_allocate-gpus-to-pods-with-a-dra-driver.html">Allocate GPUs to pods with a DRA driver</a>
-</li>
 <li><a href="nodes-cluster-resource-configure_allocate-resources-for-nodes.html">Configure cluster-level overcommit</a>
 </li>
 <li><a href="allow-containers-to-consume-api-objects-con_allow-containers-to-consume-api-objects.html">Allow containers to consume API objects</a>
@@ -844,6 +842,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="machineconfig-garbage-collect-removing_remove-no-longer-used-machine-config-objects.html">Remove unused rendered machine configs</a>
 </li>
 <li><a href="machine-health-checks-resource_review-sample-machinehealthcheck-resource.html">About the MachineHealthCheck custom resource</a>
+</li>
+<li><a href="remote-health-monitoring-overview_remote-health-monitoring.html">Remotely monitor the health of Red&#160;Hat OpenShift Container Platform clusters</a>
 </li>
 <li><a href="nodes-pods-daemonsets-about_run-background-tasks-on-a-node-with-daemonsets.html">Daemon set scheduling</a>
 </li>
@@ -1234,7 +1234,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-ingress-and-routes-con_configure-ingress-and-routes.html">Configure ingress and routes</a>
 </li>
+<li><a href="configure-sr-iov-network-devices-con_configure-sr-iov-network-devices.html">Configure SR-IOV network devices</a>
+</li>
 <li><a href="configure-high-performance-networking-con_configure-high-performance-networking.html">Configure high-performance networking</a>
+</li>
+<li><a href="configure-ptp-clock-synchronization-intro_configure-ptp-clock-synchronization.html">Configure PTP clock synchronization</a>
 </li>
 <li><a href="network-observability-operator_understand-network-observability-netobserv.html">Network Observability Operator</a>
 </li>
@@ -1246,11 +1250,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="restrict-the-api-server-to-private-for-aws-con_restrict-the-api-server-to-private-for-aws.html">Restrict the API server to private for AWS</a>
 </li>
-<li><a href="configure-ptp-clock-synchronization-intro_configure-ptp-clock-synchronization.html">Configure PTP clock synchronization</a>
-</li>
 <li><a href="reconfigure-sno-cluster-networking-intro_reconfigure-sno-cluster-networking.html">Reconfigure single-node OpenShift cluster networking</a>
-</li>
-<li><a href="assign-sriov-networks-to-vrf-intro_assign-sriov-networks-to-vrf.html">Assign SR-IOV networks to a VRF</a>
 </li>
 </ul>
 </li>
@@ -1591,8 +1591,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-node-resource-limits-con_configure-node-resource-limits.html">Configure node resource limits</a>
 </li>
-<li><a href="reserve-cpus-for-ovs-dpdk-workloads-intro_reserve-cpus-for-ovs-dpdk-workloads.html">Reserve CPUs for OVS-DPDK workloads</a>
-</li>
 </ul>
 </li>
 <li><a href="_extend.html">Extend</a>
@@ -1681,8 +1679,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="validate-cluster-health-after-installation-intro_validate-cluster-health-after-installation.html">Validate cluster health after installation</a>
 </li>
 <li><a href="verify-node-state-after-installation-con_verify-node-state-after-installation.html">Verify node state after installation</a>
-</li>
-<li><a href="validate-telco-configuration-compliance-intro_validate-telco-configuration-compliance.html">Validate telco configuration compliance</a>
 </li>
 <li><a href="network-policy-validation-intro_network-policy-validation.html">Network policy validation</a>
 </li>
@@ -1875,7 +1871,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#cnf-performing-end-to-end-tests-running-the-tests_validate-node-performance-with-latency-tests">Run the latency tests</a></li><li class="level-4"><a href="#cnf-performing-end-to-end-tests-test-failure-report_validate-node-performance-with-latency-tests">Generate a latency test failure report</a></li><li class="level-4"><a href="#cnf-performing-end-to-end-tests-junit-test-output_validate-node-performance-with-latency-tests">Generate a JUnit latency test report</a></li><li class="level-4"><a href="#cnf-performing-end-to-end-tests-running-in-single-node-cluster_validate-node-performance-with-latency-tests">Run latency tests on a single-node OpenShift cluster</a></li><li class="level-4"><a href="#cnf-performing-end-to-end-tests-disconnected-mode_validate-node-performance-with-latency-tests">Running latency tests in a disconnected cluster</a></li><li class="level-4"><a href="#cnf-performing-end-to-end-tests-troubleshooting_validate-node-performance-with-latency-tests">Troubleshoot errors with the cnf-tests container</a></li><li class="level-4"><a href="#run-cnf-latency-test-suite-intro_run-cnf-latency-test-suite">Run CNF latency test suite</a></li><li class="level-5"><a href="#cnf-performing-end-to-end-tests-running-hwlatdetect_run-cnf-latency-test-suite">Run hwlatdetect</a></li><li class="level-5"><a href="#cnf-performing-end-to-end-tests-example-results-hwlatdetect_run-cnf-latency-test-suite">Example hwlatdetect test results</a></li><li class="level-5"><a href="#cnf-performing-end-to-end-tests-running-cyclictest_run-cnf-latency-test-suite">Run cyclictest</a></li><li class="level-5"><a href="#cnf-performing-end-to-end-tests-example-results-cyclictest_run-cnf-latency-test-suite">Example cyclictest results</a></li><li class="level-5"><a href="#cnf-performing-end-to-end-tests-running-oslat_run-cnf-latency-test-suite">Run oslat</a></li><li class="level-4"><a href="#execute-sequential-latency-tests-intro_execute-sequential-latency-tests">Execute sequential latency tests</a></li><li class="level-5"><a href="#cnf-performing-end-to-end-tests-running-hwlatdetect_execute-sequential-latency-tests">Run hwlatdetect</a></li><li class="level-5"><a href="#cnf-performing-end-to-end-tests-running-cyclictest_execute-sequential-latency-tests">Run cyclictest</a></li><li class="level-5"><a href="#cnf-performing-end-to-end-tests-running-oslat_execute-sequential-latency-tests">Run oslat</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#cnf-performing-end-to-end-tests-running-the-tests_validate-node-performance-with-latency-tests">Run the latency tests</a></li><li class="level-4"><a href="#cnf-performing-end-to-end-tests-test-failure-report_validate-node-performance-with-latency-tests">Generate a latency test failure report</a></li><li class="level-4"><a href="#cnf-performing-end-to-end-tests-junit-test-output_validate-node-performance-with-latency-tests">Generate a JUnit latency test report</a></li><li class="level-4"><a href="#cnf-performing-end-to-end-tests-running-in-single-node-cluster_validate-node-performance-with-latency-tests">Run latency tests on a single-node OpenShift cluster</a></li><li class="level-4"><a href="#cnf-performing-end-to-end-tests-disconnected-mode_validate-node-performance-with-latency-tests">Running latency tests in a disconnected cluster</a></li><li class="level-5"><a href="#cnf-performing-end-to-end-tests-mirroring-images-to-custom-registry_validate-node-performance-with-latency-tests">Mirroring the images to a custom registry accessible from the cluster</a></li><li class="level-5"><a href="#cnf-performing-end-to-end-tests-image-parameters_validate-node-performance-with-latency-tests">Configuring the tests to consume images from a custom registry</a></li><li class="level-5"><a href="#cnf-performing-end-to-end-tests-mirroring-to-cluster-internal-registry_validate-node-performance-with-latency-tests">Mirroring images to the cluster OpenShift image registry</a></li><li class="level-5"><a href="#mirroring-different-set-of-images_validate-node-performance-with-latency-tests">Mirroring a different set of test images</a></li><li class="level-4"><a href="#cnf-performing-end-to-end-tests-troubleshooting_validate-node-performance-with-latency-tests">Troubleshoot errors with the cnf-tests container</a></li><li class="level-4"><a href="#run-cnf-latency-test-suite-intro_run-cnf-latency-test-suite">Run CNF latency test suite</a></li><li class="level-5"><a href="#cnf-performing-end-to-end-tests-running-hwlatdetect_run-cnf-latency-test-suite">Run hwlatdetect</a></li><li class="level-5"><a href="#cnf-performing-end-to-end-tests-example-results-hwlatdetect_run-cnf-latency-test-suite">Example hwlatdetect test results</a></li><li class="level-5"><a href="#cnf-performing-end-to-end-tests-running-cyclictest_run-cnf-latency-test-suite">Run cyclictest</a></li><li class="level-5"><a href="#cnf-performing-end-to-end-tests-example-results-cyclictest_run-cnf-latency-test-suite">Example cyclictest results</a></li><li class="level-5"><a href="#cnf-performing-end-to-end-tests-running-oslat_run-cnf-latency-test-suite">Run oslat</a></li><li class="level-4"><a href="#execute-sequential-latency-tests-intro_execute-sequential-latency-tests">Execute sequential latency tests</a></li><li class="level-5"><a href="#cnf-performing-end-to-end-tests-running-hwlatdetect_execute-sequential-latency-tests">Run hwlatdetect</a></li><li class="level-5"><a href="#cnf-performing-end-to-end-tests-running-cyclictest_execute-sequential-latency-tests">Run cyclictest</a></li><li class="level-5"><a href="#cnf-performing-end-to-end-tests-running-oslat_execute-sequential-latency-tests">Run oslat</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="cnf-measuring-latency_validate-node-performance-with-latency-tests">Measuring latency</h3>
@@ -2354,6 +2350,227 @@ registry.redhat.io/openshift4/cnf-tests-rhel9:v{product-version} /usr/bin/test-r
 <p>Instructing the tests to consume the images from the custom disconnected registry.</p>
 </li>
 </ol>
+</div>
+<div class="sect4">
+<h5 id="cnf-performing-end-to-end-tests-mirroring-images-to-custom-registry_validate-node-performance-with-latency-tests">Mirroring the images to a custom registry accessible from the cluster</h5>
+<div class="paragraph _abstract">
+<p>To make required images accessible from your cluster, mirror them to a custom registry. Performing this synchronization ensures that your deployment has the necessary container files, which is particularly useful in restricted or disconnected network environments.</p>
+</div>
+<div class="paragraph">
+<p>A <code>mirror</code> executable is shipped in the image to provide the input required by <code>oc</code> to mirror the test image to a local registry.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Run the following command from an intermediate machine that has access to the cluster and registry.redhat.io:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ podman run -v $(pwd)/:/kubeconfig:Z -e KUBECONFIG=/kubeconfig/kubeconfig \
+registry.redhat.io/openshift4/cnf-tests-rhel9:v{product-version} \
+/usr/bin/mirror -registry &lt;disconnected_registry&gt; | oc image mirror -f -</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>&lt;disconnected_registry&gt;</code></dt>
+<dd>
+<p>Specifies the disconnected mirror registry you have configured, such as <code>my.local.registry:5000/</code>.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>When you have mirrored the <code>cnf-tests</code> image into the disconnected registry, you must override the original registry used to fetch the images when running the tests by a command similar to the following example:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ podman run -v $(pwd)/:/kubeconfig:Z -e KUBECONFIG=/kubeconfig/kubeconfig \
+-e IMAGE_REGISTRY="&lt;disconnected_registry&gt;" \
+-e CNF_TESTS_IMAGE="cnf-tests-rhel9:v{product-version}" \
+-e LATENCY_TEST_RUNTIME=&lt;time_in_seconds&gt; \
+&lt;disconnected_registry&gt;/cnf-tests-rhel9:v{product-version} /usr/bin/test-run.sh --ginkgo.v --ginkgo.timeout="24h"</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="cnf-performing-end-to-end-tests-image-parameters_validate-node-performance-with-latency-tests">Configuring the tests to consume images from a custom registry</h5>
+<div class="paragraph _abstract">
+<p>You can run the latency tests by using a custom test image and image registry using <code>CNF_TESTS_IMAGE</code> and <code>IMAGE_REGISTRY</code> variables.</p>
+</div>
+<div class="ulist">
+<div class="title">Procedure</div>
+<ul>
+<li>
+<p>To configure the latency tests to use a custom test image and image registry, run a command similar to the following example:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ podman run -v $(pwd)/:/kubeconfig:Z -e KUBECONFIG=/kubeconfig/kubeconfig \
+-e IMAGE_REGISTRY="&lt;custom_image_registry&gt;" \
+-e CNF_TESTS_IMAGE="&lt;custom_cnf-tests_image&gt;" \
+-e LATENCY_TEST_RUNTIME=&lt;time_in_seconds&gt; \
+registry.redhat.io/openshift4/cnf-tests-rhel9:v{product-version} /usr/bin/test-run.sh --ginkgo.v --ginkgo.timeout="24h"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>&lt;custom_image_registry&gt;</code></dt>
+<dd>
+<p>Specifies the custom image registry, for example, <code>custom.registry:5000/</code>.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;custom_cnf-tests_image&gt;</code></dt>
+<dd>
+<p>Specifies the custom cnf-tests image, for example, <code>custom-cnf-tests-image:latest</code>.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="cnf-performing-end-to-end-tests-mirroring-to-cluster-internal-registry_validate-node-performance-with-latency-tests">Mirroring images to the cluster OpenShift image registry</h5>
+<div class="paragraph _abstract">
+<p>To make container images locally available for your deployment, mirror them to the built-in OpenShift image registry. This integrated component runs as a standard workload on your Red&#160;Hat OpenShift Container Platform cluster to ensure continuous access to required files.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Gain external access to the registry by exposing the registry with a route. You can do this task by running a command similar to the following example:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc patch configs.imageregistry.operator.openshift.io/cluster --patch '{"spec":{"defaultRoute":true}}' --type=merge</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Fetch the registry endpoint by running a command similar to the following example:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ REGISTRY=$(oc get route default-route -n openshift-image-registry --template='{{ .spec.host }}')</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Create a namespace for exposing the images by running a command similar to the following example:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create ns cnftests</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Make the image stream available to all the namespaces used for tests. This is required to allow the tests namespaces to fetch the images from the <code>cnf-tests</code> image stream. Run commands similar to the following examples:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc policy add-role-to-user system:image-puller system:serviceaccount:cnf-features-testing:default --namespace=cnftests</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc policy add-role-to-user system:image-puller system:serviceaccount:performance-addon-operators-testing:default --namespace=cnftests</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Retrieve the docker secret name by running a command similar to the following example:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ SECRET=$(oc -n cnftests get secret | grep builder-docker | awk {'print $1'}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Retrieve the docker auth token by running a command similar to the following example:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ TOKEN=$(oc -n cnftests get secret $SECRET -o jsonpath="{.data['\.dockercfg']}" | base64 --decode | jq '.["image-registry.openshift-image-registry.svc:5000"].auth')</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Create a <code>dockerauth.json</code> file, for example:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">$ echo "{\"auths\": { \"$REGISTRY\": { \"auth\": $TOKEN } }}" &gt; dockerauth.json</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Mirror the image by running a command similar to the following example:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ podman run -v $(pwd)/:/kubeconfig:Z -e KUBECONFIG=/kubeconfig/kubeconfig \
+registry.redhat.io/openshift4/cnf-tests-rhel9:v{product-version} \
+/usr/bin/mirror -registry $REGISTRY/cnftests |  oc image mirror --insecure=true \
+-a=$(pwd)/dockerauth.json -f -</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Run the tests by running a command similar to the following example:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ podman run -v $(pwd)/:/kubeconfig:Z -e KUBECONFIG=/kubeconfig/kubeconfig \
+-e LATENCY_TEST_RUNTIME=&lt;time_in_seconds&gt; \
+-e IMAGE_REGISTRY=image-registry.openshift-image-registry.svc:5000/cnftests cnf-tests-local:latest /usr/bin/test-run.sh --ginkgo.v --ginkgo.timeout="24h"</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="mirroring-different-set-of-images_validate-node-performance-with-latency-tests">Mirroring a different set of test images</h5>
+<div class="paragraph _abstract">
+<p>You can optionally change the default upstream images that are mirrored for the latency tests.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>The <code>mirror</code> command tries to mirror the upstream images by default. This can be overridden by passing a file with the following format to the image:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">[
+    {
+        "registry": "public.registry.io:5000",
+        "image": "imageforcnftests:{product-version}"
+    }
+]</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Pass the file to the <code>mirror</code> command, for example saving it locally as <code>images.json</code>. With the following command, the local path is mounted in <code>/kubeconfig</code> inside the container and that can be passed to the mirror command.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ podman run -v $(pwd)/:/kubeconfig:Z -e KUBECONFIG=/kubeconfig/kubeconfig \
+registry.redhat.io/openshift4/cnf-tests-rhel9:v{product-version} /usr/bin/mirror \
+--registry "my.local.registry:5000/" --images "/kubeconfig/images.json" \
+|  oc image mirror -f -</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
 </div>
 </div>
 <div class="sect3">
@@ -3300,7 +3517,7 @@ FAIL</code></pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-30 09:01:02 -0500
+Last updated 2026-10-30 09:47:16 -0500
 </div>
 </div>
 <style>

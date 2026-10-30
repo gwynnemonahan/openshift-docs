@@ -767,8 +767,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="allocate-gpu-resources-to-pods-con_allocate-gpu-resources-to-pods.html">Allocate GPU resources to pods</a>
 </li>
-<li><a href="allocate-gpus-to-pods-with-a-dra-driver-con_allocate-gpus-to-pods-with-a-dra-driver.html">Allocate GPUs to pods with a DRA driver</a>
-</li>
 <li><a href="nodes-cluster-resource-configure_allocate-resources-for-nodes.html">Configure cluster-level overcommit</a>
 </li>
 <li><a href="allow-containers-to-consume-api-objects-con_allow-containers-to-consume-api-objects.html">Allow containers to consume API objects</a>
@@ -844,6 +842,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="machineconfig-garbage-collect-removing_remove-no-longer-used-machine-config-objects.html">Remove unused rendered machine configs</a>
 </li>
 <li><a href="machine-health-checks-resource_review-sample-machinehealthcheck-resource.html">About the MachineHealthCheck custom resource</a>
+</li>
+<li><a href="remote-health-monitoring-overview_remote-health-monitoring.html">Remotely monitor the health of Red&#160;Hat OpenShift Container Platform clusters</a>
 </li>
 <li><a href="nodes-pods-daemonsets-about_run-background-tasks-on-a-node-with-daemonsets.html">Daemon set scheduling</a>
 </li>
@@ -1233,7 +1233,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-ingress-and-routes-con_configure-ingress-and-routes.html">Configure ingress and routes</a>
 </li>
+<li><a href="configure-sr-iov-network-devices-con_configure-sr-iov-network-devices.html">Configure SR-IOV network devices</a>
+</li>
 <li><a href="configure-high-performance-networking-con_configure-high-performance-networking.html">Configure high-performance networking</a>
+</li>
+<li><a href="configure-ptp-clock-synchronization-intro_configure-ptp-clock-synchronization.html">Configure PTP clock synchronization</a>
 </li>
 <li><a href="network-observability-operator_understand-network-observability-netobserv.html">Network Observability Operator</a>
 </li>
@@ -1245,11 +1249,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="restrict-the-api-server-to-private-for-aws-con_restrict-the-api-server-to-private-for-aws.html">Restrict the API server to private for AWS</a>
 </li>
-<li><a href="configure-ptp-clock-synchronization-intro_configure-ptp-clock-synchronization.html">Configure PTP clock synchronization</a>
-</li>
 <li><a href="reconfigure-sno-cluster-networking-intro_reconfigure-sno-cluster-networking.html">Reconfigure single-node OpenShift cluster networking</a>
-</li>
-<li><a href="assign-sriov-networks-to-vrf-intro_assign-sriov-networks-to-vrf.html">Assign SR-IOV networks to a VRF</a>
 </li>
 </ul>
 </li>
@@ -1590,8 +1590,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="configure-node-resource-limits-con_configure-node-resource-limits.html">Configure node resource limits</a>
 </li>
-<li><a href="reserve-cpus-for-ovs-dpdk-workloads-intro_reserve-cpus-for-ovs-dpdk-workloads.html">Reserve CPUs for OVS-DPDK workloads</a>
-</li>
 </ul>
 </li>
 <li><a href="_extend.html">Extend</a>
@@ -1681,8 +1679,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="validate-cluster-health-after-installation-intro_validate-cluster-health-after-installation.html">Validate cluster health after installation</a>
 </li>
 <li><a href="verify-node-state-after-installation-con_verify-node-state-after-installation.html">Verify node state after installation</a>
-</li>
-<li><a href="validate-telco-configuration-compliance-intro_validate-telco-configuration-compliance.html">Validate telco configuration compliance</a>
 </li>
 <li><a href="network-policy-validation-intro_network-policy-validation.html">Network policy validation</a>
 </li>
@@ -1875,7 +1871,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#cnf-about-virtual-routing-and-forwarding_isolate-routing-domains-for-advanced-workloads">About virtual routing and forwarding</a></li><li class="level-5"><a href="#cnf-benefits-secondary-networks-telco-ops_isolate-routing-domains-for-advanced-workloads">Benefits of secondary networks for pods for telecommunications operators</a></li><li class="level-4"><a href="#understand-virtual-routing-and-forwarding-con_understand-virtual-routing-and-forwarding">Understand virtual routing and forwarding</a></li><li class="level-5"><a href="#cnf-about-virtual-routing-and-forwarding_understand-virtual-routing-and-forwarding">About virtual routing and forwarding</a></li><li class="level-5"><a href="#cnf-benefits-secondary-networks-telco-ops_understand-virtual-routing-and-forwarding">Benefits of secondary networks for pods for telecommunications operators</a></li><li class="level-4"><a href="#assign-secondary-networks-to-vrf-and-chain-cni-plugins-con_assign-secondary-networks-to-vrf-and-chain-cni-plugins">Assign secondary networks to VRF and chain CNI plugins</a></li><li class="level-5"><a href="#cnf-creating-an-additional-network-attachment-with-the-cni-vrf-plug-in_assign-secondary-networks-to-vrf-and-chain-cni-plugins">Create a secondary network attachment with the CNI VRF plugin</a></li><li class="level-5"><a href="#cnf-about-cni-chaining_assign-secondary-networks-to-vrf-and-chain-cni-plugins">About CNI chaining</a></li><li class="level-5"><a href="#configuring-plugin-chaining-with-multus-cni_assign-secondary-networks-to-vrf-and-chain-cni-plugins">Configure plugin chaining with the route-override CNI plugin</a></li><li class="level-5"><a href="#nw-route-override-cni_assign-secondary-networks-to-vrf-and-chain-cni-plugins">Configure routes using the route-override plugin on a secondary network</a></li><li class="level-6"><a href="#nw-route-override-config-example_assign-secondary-networks-to-vrf-and-chain-cni-plugins">Route-override plugin configuration example</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#cnf-about-virtual-routing-and-forwarding_isolate-routing-domains-for-advanced-workloads">About virtual routing and forwarding</a></li><li class="level-5"><a href="#cnf-benefits-secondary-networks-telco-ops_isolate-routing-domains-for-advanced-workloads">Benefits of secondary networks for pods for telecommunications operators</a></li><li class="level-4"><a href="#understand-virtual-routing-and-forwarding-con_understand-virtual-routing-and-forwarding">Understand virtual routing and forwarding</a></li><li class="level-5"><a href="#cnf-about-virtual-routing-and-forwarding_understand-virtual-routing-and-forwarding">About virtual routing and forwarding</a></li><li class="level-5"><a href="#cnf-benefits-secondary-networks-telco-ops_understand-virtual-routing-and-forwarding">Benefits of secondary networks for pods for telecommunications operators</a></li><li class="level-4"><a href="#assign-secondary-networks-to-vrf-and-chain-cni-plugins-con_assign-secondary-networks-to-vrf-and-chain-cni-plugins">Assign secondary networks to VRF and chain CNI plugins</a></li><li class="level-5"><a href="#cnf-creating-an-additional-network-attachment-with-the-cni-vrf-plug-in_assign-secondary-networks-to-vrf-and-chain-cni-plugins">Create a secondary network attachment with the CNI VRF plugin</a></li><li class="level-5"><a href="#cnf-about-cni-chaining_assign-secondary-networks-to-vrf-and-chain-cni-plugins">About CNI chaining</a></li><li class="level-5"><a href="#configuring-plugin-chaining-with-multus-cni_assign-secondary-networks-to-vrf-and-chain-cni-plugins">Configure plugin chaining with the route-override CNI plugin</a></li><li class="level-5"><a href="#nw-route-override-cni_assign-secondary-networks-to-vrf-and-chain-cni-plugins">Configure routes using the route-override plugin on a secondary network</a></li><li class="level-6"><a href="#nw-route-override-config-example_assign-secondary-networks-to-vrf-and-chain-cni-plugins">Route-override plugin configuration example</a></li><li class="level-4"><a href="#assign-sriov-networks-to-vrf-intro_assign-sriov-networks-to-vrf">Assign SR-IOV networks to a VRF</a></li><li class="level-5"><a href="#cnf-assigning-a-sriov-network-to-a-vrf_assign-sriov-networks-to-vrf">Assigning an SR-IOV network to a VRF</a></li><li class="level-5"><a href="#cnf-creating-an-additional-sriov-network-with-vrf-plug-in_assign-sriov-networks-to-vrf">Creating an additional SR-IOV network attachment with the CNI VRF plugin</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="isolate-routing-domains-for-advanced-workloads-con_isolate-routing-domains-for-advanced-workloads">Isolate routing domains for advanced workloads</h3>
@@ -2636,6 +2632,215 @@ spec:
 </div>
 </div>
 </div>
+<div class="sect3">
+<h4 id="assign-sriov-networks-to-vrf-intro_assign-sriov-networks-to-vrf">Assign SR-IOV networks to a VRF</h4>
+<div class="paragraph _abstract">
+<p>You can assign SR-IOV network interfaces to a Virtual Routing and Forwarding (VRF) domain to isolate network traffic for your workloads.
+Use this job when your workloads run on SR-IOV virtual functions and each workload needs its own routing domain.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>The SR-IOV Network Operator is installed.</p>
+</li>
+<li>
+<p>The SR-IOV network devices are configured.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>To assign secondary networks that are not SR-IOV to a VRF, see the "Assign secondary networks to a VRF and chain CNI plugins" job.</p>
+</div>
+<div class="sect4">
+<h5 id="cnf-assigning-a-sriov-network-to-a-vrf_assign-sriov-networks-to-vrf">Assigning an SR-IOV network to a VRF</h5>
+<div class="paragraph _abstract">
+<p>As a cluster administrator, you can assign an SR-IOV network interface to your VRF domain by using the CNI VRF plugin.</p>
+</div>
+<div class="paragraph">
+<p>To do this, add the VRF configuration to the optional <code>metaPlugins</code> parameter of the <code>SriovNetwork</code> resource.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Applications that use VRF instances need to bind to a specific device. The common usage is to use the <code>SO_BINDTODEVICE</code> option for a socket. <code>SO_BINDTODEVICE</code> binds the socket to a device that is specified in the passed interface name, for example, <code>eth1</code>. To use <code>SO_BINDTODEVICE</code>, the application must have <code>CAP_NET_RAW</code> capabilities.</p>
+</div>
+<div class="paragraph">
+<p>Using a VRF through the <code>ip vrf exec</code> command is not supported in Red&#160;Hat OpenShift Container Platform pods. To use VRF, bind applications directly to the VRF interface.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect4">
+<h5 id="cnf-creating-an-additional-sriov-network-with-vrf-plug-in_assign-sriov-networks-to-vrf">Creating an additional SR-IOV network attachment with the CNI VRF plugin</h5>
+<div class="paragraph _abstract">
+<p>The SR-IOV Network Operator manages additional network definitions. When you specify an additional SR-IOV network to create, the SR-IOV Network Operator creates the <code>NetworkAttachmentDefinition</code> custom resource (CR) automatically.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Do not edit <code>NetworkAttachmentDefinition</code> custom resources that the SR-IOV Network Operator manages. Doing so might disrupt network traffic on your additional network.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>To create an additional SR-IOV network attachment with the CNI virtual routing and forwarding (VRF) plugin, perform the following procedure.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>Install the OpenShift CLI (<code>oc</code>).</p>
+</li>
+<li>
+<p>Log in to the Red&#160;Hat OpenShift Container Platform cluster as a user with cluster-admin privileges.</p>
+</li>
+<li>
+<p>The SR-IOV Network Operator is installed.</p>
+</li>
+<li>
+<p>The SR-IOV network devices are configured for the <code>resourceName</code> you specify.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Create the <code>SriovNetwork</code> custom resource (CR) for the additional SR-IOV network attachment and insert the <code>metaPlugins</code> configuration, as in the following example CR. Save the YAML as the file <code>sriov-network-attachment.yaml</code>.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: sriovnetwork.openshift.io/v1
+kind: SriovNetwork
+metadata:
+  name: example-network
+  namespace: additional-sriov-network-1
+spec:
+  ipam: |
+    {
+      "type": "host-local",
+      "subnet": "10.56.217.0/24",
+      "rangeStart": "10.56.217.171",
+      "rangeEnd": "10.56.217.181",
+      "routes": [{
+        "dst": "0.0.0.0/0"
+      }],
+      "gateway": "10.56.217.1"
+    }
+  vlan: 0
+  resourceName: intelnics
+  metaPlugins : |
+    {
+      "type": "vrf", <img src="data:image/png;base64," alt="1">
+      "vrfname": "example-vrf-name"
+    }</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>metaPlugins.type</code></dt>
+<dd>
+<p>Set the <code>type</code> parameter to <code>vrf</code>.</p>
+</dd>
+<dt class="hdlist1"><code>metaPlugins.vrfname</code></dt>
+<dd>
+<p>Specify a name for the VRF in the <code>vrfname</code> parameter. An interface gets assigned to the VRF. If you do not specify a name for the VRF in a pod, the SR-IOV Network Operator automatically generates a name for the VRF.</p>
+</dd>
+</dl>
+</div>
+</li>
+<li>
+<p>Create the <code>SriovNetwork</code> resource:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create -f sriov-network-attachment.yaml</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<div class="title">Verification</div>
+<ol class="arabic">
+<li>
+<p>Confirm that the SR-IOV Network Operator created the <code>NetworkAttachmentDefinition</code> CR by running the following command. The expected output shows the name of the NAD CR and the creation age in minutes.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get network-attachment-definitions -n &lt;namespace&gt;</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>&lt;namespace&gt;</code>: Replace <code>&lt;namespace&gt;</code> with the namespace that you specified when configuring the network attachment, for example, <code>additional-sriov-network-1</code>.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>There might be a delay before the SR-IOV Network Operator creates the CR.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>To verify that the VRF CNI is correctly configured and that the additional SR-IOV network attachment is attached, do the following:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Create an SR-IOV network that uses the VRF CNI.</p>
+</li>
+<li>
+<p>Assign the network to a pod.</p>
+</li>
+<li>
+<p>Verify that the pod network attachment connects to the SR-IOV additional network. Ensure that you remote shell login into the pod and run the following command. The expected output shows the name of the VRF interface and its unique ID in the routing table.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ ip vrf show</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Confirm that the VRF interface is <code>master</code> for the secondary interface by running the following command. Example output shows <code>5: net1: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc noqueue master red state UP mode</code>.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ ip link</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
 </div>
 <div class="paragraph nav-footer">
 <p>← Previous: <a href="configure-cluster-wide-pki-con_configure-cluster-wide-pki.html">Configure a cluster-wide PKI</a> | ↑ Up: <a href="_networking.html">Networking</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="configure-route-advertisements-con_configure-route-advertisements.html">Configure route advertisements</a> →</p>
@@ -2649,7 +2854,7 @@ spec:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-30 09:01:02 -0500
+Last updated 2026-10-30 09:47:16 -0500
 </div>
 </div>
 <style>
